@@ -14,7 +14,6 @@ class CfgPatches
 			"A3_Air_F_Heli",
 			"A3_Weapons_F",
 			"A3_CargoPoses_f",
-			"CCIP_Core",
 			"FIR_AirWeaponSystem_US",
 			"CUP_BaseData",
 			"CUP_BaseConfigs",
@@ -102,7 +101,7 @@ class CfgEditorSubcategories
 	{
 		displayName = "Specialist Equipment"; // Name visible in the list
 	};
-	class MODIFIERS: NO_CATEGORY
+	class MODIFIERS
 	{
 		displayName = "GOL Loadout Modules";
 	};
