@@ -5,7 +5,7 @@ _plane = _this select 0;
 _plane setVariable ["SEAD_SET","yes",true]; 
 
 //If (not Local _plane) ExitWith {};
-if (not(_plane iskindof "Helicopter")) ExitWith {player vehiclechat "You Must get in the Plane!";};
+if (not(_plane iskindof "Helicopter")) ExitWith {titleText ["You must get in the Chopper!", "PLAIN DOWN",0.5];};
 
 _htscount = {_x == "FIR_HTSPod_1rnd_M"} count magazines _plane;
 

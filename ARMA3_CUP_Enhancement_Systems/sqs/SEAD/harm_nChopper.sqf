@@ -4,7 +4,7 @@ _plane = _this select 1;
 _pilot = gunner _plane;
 
 //If (not Local _plane) ExitWith {};
-if (not(_plane iskindof "Helicopter")) ExitWith {_plane vehiclechat "You Must get in the Plane!";};
+if (not(_plane iskindof "Helicopter")) ExitWith {titleText ["You must get in the chopper!", "PLAIN DOWN",0.5];};
 
 if (_plane animationPhase "WWSwitch" >= 0.1 or _plane getvariable "SEAD_SET" == "yes") ExitWith {_plane vehiclechat "Use of Old SEAD System";};
 

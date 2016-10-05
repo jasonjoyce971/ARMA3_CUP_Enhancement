@@ -18,7 +18,6 @@ class CfgPatches
 			"CUP_BaseData",
 			"CUP_BaseConfigs",
 			"CUP_AirVehicles_Core",
-			"CUP_AirVehicles_F35",
 			"CUP_Weapons_Ammunition",
 			"CUP_Weapons_VehicleWeapons",
 			"CUP_Weapons_Pods",
@@ -384,7 +383,7 @@ class CfgHints
 			// Optional hint subtitle, filled by arguments from 'arguments' param
 			displayNameShort = "Laser Guided 'Paveway III' Bomb Family";
 			// Structured text, filled by arguments from 'arguments' param
-			description = "%2 GBU-24<br/><br/>The Paveway series was developed in the wake of Vietnam as a way to improve bomb drop accuracy. The guidance system traces a laser signal and uses built in vanes to 'fly' the bomb to the target. The GBU-24 is an upgrade on the GBU-10. Designed with improved aerodynamics, the GBU-24 is capable of much longer glide ranges than the GBU-10 making it a solid choice for a standoff bomb attack.<br/><br/>The Paveway system is reliant on a laser signal to track to target. The source of this signal however can be anything. FAC/JTAC, onboard laser guidance through I-TGT and buddy lase from another aircraft are all viable options.";
+			description = "%2 GBU-24<br/><br/>The Paveway series was developed in the wake of Vietnam as a way to improve bomb drop accuracy. The guidance system traces a laser signal and uses built in vanes to 'fly' the bomb to the target. The GBU-24 is an upgrade on the GBU-10. Designed with improved aerodynamics, the GBU-24 is capable of much longer glide ranges than the GBU-10 making it a solid choice for a standoff bomb attack.<br/><br/>The GBU-24A system fits the Paveway III guidance kit to the standard Mk84 2000lb bomb. The GBU-24B system fits the Paveway III guidance system to the BLU-109 penetration bomb. Finally the GBU-24/118 fits the Paveway III guidance system to the BLU-118 Thermobaric Penetrator bomb.<br/><br/>The Paveway system is reliant on a laser signal to track to target. The source of this signal however can be anything. FAC/JTAC, onboard laser guidance through I-TGT and buddy lase from another aircraft are all viable options.";
 			// Optional structured text, filled by arguments from 'arguments' param (first argument
 			// is %11, see notes bellow), grey color of text
 			tip = "";

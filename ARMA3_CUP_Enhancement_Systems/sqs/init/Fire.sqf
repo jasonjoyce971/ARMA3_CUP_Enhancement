@@ -108,7 +108,7 @@ switch (_ammoname) do
     };
 	case "JAS_AGM122":
     {
-		_harm_n = [_missobj,_plane] execVM "\jason_aircraft\sqs\SEAD\harm_nChopper.sqf";
+		_harm_n = [_missobj,_plane] execVM "\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\harm_nChopper.sqf";
     };
    
     default{};
