@@ -1839,6 +1839,99 @@ class cfgWeapons
 	class Missiles_Scalpel;
 	class Missile_AA_03_Plane_CAS_02_F;
 	class CannonCore;
+	class JAS_FIR_GBU24_118 : MissileLauncher
+	{
+		ballisticsComputer = 8;
+		scope = 2;
+		displayName = "GBU-24 PaveWay III";
+		displayNameMagazine = "Thermobaric GBU";
+		shortNameMagazine = "Thermobaric GBU";
+		cursoraim = "bomb";
+		sounds[] = {"StandardSound"};
+		class StandardSound
+		{
+			begin1[] = {"\FIR_AirWeaponSystem_US\sound\Release_Bomb",1.5848932,1.1,2100};
+			soundBegin[] = {"begin1",1};
+			weaponSoundEffect = "DefaultRifle";
+		};
+		initspeed = 10;
+		magazineReloadTime=0.5;
+		reloadTime = 0.500000;
+		aiDispersionCoefX=1.0; 
+		aiDispersionCoefY=1.0;
+		aiRateOfFire = 4.0;
+		aiRateOfFireDistance = 300;
+		minRange = 100;
+		minRangeProbab = 0.55;
+		midRange = 1000;
+		midRangeProbab = 0.85;
+		maxRange = 2000;
+		maxRangeProbab = 0.20;
+		maxLeadSpeed = 0;
+		magazines[] = {"FIR_GBU24A_BLU118_1rnd_M"};
+	};
+	class JAS_FIR_GBU24B : MissileLauncher
+	{
+		ballisticsComputer = 8;
+		scope = 2;
+		displayName = "GBU-24B PaveWay III";
+		displayNameMagazine = "Penetrator GBU";
+		shortNameMagazine = "Penetrator GBU";
+		cursoraim = "bomb";
+		sounds[] = {"StandardSound"};
+		class StandardSound
+		{
+			begin1[] = {"\FIR_AirWeaponSystem_US\sound\Release_Bomb",1.5848932,1.1,2100};
+			soundBegin[] = {"begin1",1};
+			weaponSoundEffect = "DefaultRifle";
+		};
+		initspeed = 10;
+		magazineReloadTime=0.5;
+		reloadTime = 0.500000;
+		aiDispersionCoefX=1.0; 
+		aiDispersionCoefY=1.0;
+		aiRateOfFire = 4.0;
+		aiRateOfFireDistance = 300;
+		minRange = 100;
+		minRangeProbab = 0.55;
+		midRange = 1000;
+		midRangeProbab = 0.85;
+		maxRange = 2000;
+		maxRangeProbab = 0.20;
+		maxLeadSpeed = 0;
+		magazines[] = {"FIR_GBU24B_1rnd_M"};
+	};
+	class JAS_FIR_GBU24A : MissileLauncher
+	{
+		ballisticsComputer = 8;
+		scope = 2;
+		displayName = "GBU-24A PaveWay III";
+		displayNameMagazine = "GPGBU";
+		shortNameMagazine = "GPGBU";
+		cursoraim = "bomb";
+		sounds[] = {"StandardSound"};
+		class StandardSound
+		{
+			begin1[] = {"\FIR_AirWeaponSystem_US\sound\Release_Bomb",1.5848932,1.1,2100};
+			soundBegin[] = {"begin1",1};
+			weaponSoundEffect = "DefaultRifle";
+		};
+		initspeed = 10;
+		magazineReloadTime=0.5;
+		reloadTime = 0.500000;
+		aiDispersionCoefX=1.0; 
+		aiDispersionCoefY=1.0;
+		aiRateOfFire = 4.0;
+		aiRateOfFireDistance = 300;
+		minRange = 100;
+		minRangeProbab = 0.55;
+		midRange = 1000;
+		midRangeProbab = 0.85;
+		maxRange = 2000;
+		maxRangeProbab = 0.20;
+		maxLeadSpeed = 0;
+		magazines[] = {"FIR_GBU24A_1rnd_M"};
+	};
 	class JAS_FIR_mk84 : MissileLauncher
 	{
 		ballisticsComputer = 8;

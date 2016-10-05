@@ -2,7 +2,7 @@ _plane = _this select 0;
 _pilot = driver _plane;
 
 If (not Local _plane) ExitWith {};
-if (not(_plane iskindof "Plane")) ExitWith {_plane vehiclechat "You Must get in the Plane!";};
+if (not(_plane iskindof "Plane")) ExitWith {titleText ["You must get in the plane!", "PLAIN DOWN",0.5];};
 
 _tgt = cursorTarget;
 
