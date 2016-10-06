@@ -5059,14 +5059,14 @@ class CfgVehicles
 		{
 			"JAS_CUP_Vacannon_GAU8_veh",
 			"FIR_MasterArm",
-			"FIR_CMLauncher",
-			"Laserdesignator_mounted"
+			"FIR_CMLauncher"
+			//"Laserdesignator_mounted"
 		};
 		magazines[] =
 		{
 			"CUP_1350Rnd_TE1_Red_Tracer_30mm_GAU8_M",
-			"FIR_240rnd_CMFlare_Chaff_Magazine",
-			"Laserbatteries"
+			"FIR_240rnd_CMFlare_Chaff_Magazine"
+			//"Laserbatteries"
 		};
 		hiddenSelectionsTextures[] =
 		{
@@ -5106,26 +5106,6 @@ class CfgVehicles
 				statement = "this execVM ""\FIR_AirWeaponSystem_US\Script\TGTSystem\FIR_AWS_MFD_N_Open.sqf""";
 				onlyforplayer = "false";
 			};
-			/*class ITGT_VT_1
-			{
-				displayName = "Visual Targeting ON";
-				position = "pos cano";
-				radius = 15;
-				condition = "player in this and isengineon this and this getvariable ""TGT_POD"" == ""yes"" and this getvariable ""ITGT_VT"" == ""no""";
-				statement = "this execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\FIR_AWS_VT.sqf"";this setvariable [""ITGT_VT"",""yes"",true]";
-				onlyforplayer = "false";
-				shortcut = "User9";
-			};
-			class ITGT_VT_2
-			{
-				displayName = "Visual Targeting OFF";
-				position = "pos cano";
-				radius = 15;
-				condition = "player in this and isengineon this and this getvariable ""TGT_POD"" == ""yes"" and this getvariable ""ITGT_VT"" == ""yes""";
-				statement = "this setvariable [""ITGT_VT"",""no"",true]";
-				onlyforplayer = "false";
-				shortcut = "User9";
-			};*/
 			class CUP_A10J_Eject
 			{
 				priority = 6;

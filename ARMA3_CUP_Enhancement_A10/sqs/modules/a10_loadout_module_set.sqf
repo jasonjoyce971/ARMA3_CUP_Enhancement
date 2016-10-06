@@ -2463,6 +2463,13 @@ if (_zunicount >= 1) then
 	};
 };
 
+_TGP = _plane getVariable "TGT_POD";
+if (_TGP == "yes") then
+{
+	_plane addmagazine "Laserbatteries";
+	_plane addweapon "Laserdesignator_mounted";
+};
+
 Switch (_skin) Do
 {
 	case 0: // black

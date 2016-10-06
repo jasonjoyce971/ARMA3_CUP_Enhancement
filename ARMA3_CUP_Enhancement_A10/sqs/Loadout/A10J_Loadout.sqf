@@ -97,6 +97,9 @@ _plane removeWeapon "JAS_HYDRA_SMKR_Launcher";
 _plane removeWeapon "JAS_HYDRA_SMKO_Launcher";
 _plane removeWeapon "JAS_HYDRA_SMKP_Launcher";
 
+_plane removeMagazines "Laserbatteries";
+_plane removeWeapon "Laserdesignator_mounted";
+
 //remove CUP ammo and weapons
 
 _plane removeMPEventHandler ["MPHit", 0]; 
@@ -2626,6 +2629,13 @@ if (_zunicount >= 1) then
 		_counter5 = _counter5 + 1;
 		_plane addmagazine "FIR_Zuni_4rnd_M";
 	};
+};
+
+_TGP = _plane getVariable "TGT_POD";
+if (_TGP == "yes") then
+{
+	_plane addmagazine "Laserbatteries";
+	_plane addweapon "Laserdesignator_mounted";
 };
 
 titleText ["Loading Complete", "PLAIN DOWN",0.5];
