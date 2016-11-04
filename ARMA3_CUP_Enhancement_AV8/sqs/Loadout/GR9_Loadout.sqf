@@ -21,6 +21,7 @@ _hardpoint9 = lbCurSel 2202;
 _hardpoint10 = lbCurSel 2107;
 
 _plane setVariable ["TGT_POD","no",true];
+_plane setVariable ["ECMJAMMER","no",true];
 
 /* Delete Weapon and Ammo Before */
 _plane removeMagazines "1000Rnd_Gatling_30mm_Plane_CAS_01_F";
@@ -77,7 +78,9 @@ _plane removeweapon "FIR_CBU87";
 _plane removeweapon "FIR_CBU89";
 _plane removeweapon "FIR_CBU97";
 _plane removeweapon "FIR_CBU103";
-_plane removeweapon "FIR_AGM65";
+_plane removeweapon "JAS_FIR_AGM65D";
+_plane removeweapon "JAS_FIR_AGM65G";
+_plane removeweapon "JAS_FIR_AGM65L";
 _plane removeweapon "FIR_AGM88";
 _plane removeweapon "FIR_GBU39";
 _plane removeweapon "FIR_GBU53";
@@ -87,6 +90,8 @@ _plane removeweapon "FIR_BLU107";
 _plane removeweapon "FIR_mk84";
 
 _plane removeMagazines "FIR_F15E_Fueltank_1rnd_M";
+
+_plane removeMagazines "CUP_1Rnd_CRV7_Pod_19_M";
 
 _plane removeMagazines "JAS_CUP_19Rnd_CRV7_FAT_M";
 _plane removeweapon "JAS_CUP_Vmlauncher_CRV7_FAT_veh";
@@ -419,6 +424,7 @@ if (_preset == -1 or _preset == 0) then
 		case 3:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M";
+			_plane setVariable ["ECMJAMMER","yes",true];
 		};
 		case 4:
 		{
@@ -450,6 +456,7 @@ sleep 0.3;
 		case 3:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M";
+			_plane setVariable ["ECMJAMMER","yes",true];
 		};
 		case 4:
 		{

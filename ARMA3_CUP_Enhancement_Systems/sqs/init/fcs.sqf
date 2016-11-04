@@ -25,6 +25,7 @@ _ARPB = 0; /* 1 is enable for Anti-Runway Penetration Bomb*/
 _HARM = 0; /* 1 is enable*/
 _Smoke = 0; /* 1 is enable*/
 _Smoke_C = ""; /* 1 is enable*/
+_FAEB = 0; /* 1 is enable*/
 
 _Lowdrag = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_LowDrag");
 _gps_bomb = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_GPS_Bomb_Guide");
@@ -38,7 +39,12 @@ _HARM = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_HARM");
 _Smoke = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_SMOKE_RKT");
 _FLR = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_FLARE");
 _Smoke_C = getText (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_SMOKE_RKT_COLOR");
+_FAEB = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_FAEB");
 
+if (_FAEB == 1) then
+{
+		_firecbu97 = [_missobj] execVM "\FIR_AirWeaponSystem_US\script\BLU118.sqf";
+};
 if (_Lowdrag == 1) then
 {
 	_firesnakeye = [_missobj] execVM "\FIR_AirWeaponSystem_US\script\Snakeye.sqf";

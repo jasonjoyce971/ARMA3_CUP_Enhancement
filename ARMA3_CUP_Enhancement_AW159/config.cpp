@@ -383,113 +383,6 @@ class RscInGameUI
 		};
 	};
 };
-
-class AAC_Texture_GUI
-{
-	idd=9914;
-	movingenable="false";
-	class controls
-	{
-		class RscFrame_1800: RscFrame
-		{
-			idc=1800;
-			x="0.22 * safezoneW + safezoneX";
-			y="0.206 * safezoneH + safezoneY";
-			w="0.525 * safezoneW";
-			h="0.504 * safezoneH";
-		};
-		class setskin_background: RscPicture
-		{
-			idc=1900;
-			x="0.22 * safezoneW + safezoneX";
-			y="0.206 * safezoneH + safezoneY";
-			w="0.525 * safezoneW";
-			h="0.504 * safezoneH";
-			text="FIR_AirWeaponSystem_US\ui\background_skin.paa";
-		};
-		class RscText_1000: RscText
-		{
-			idc=1000;
-			text="Select Texture";
-			x="0.22875 * safezoneW + safezoneX";
-			y="0.234 * safezoneH + safezoneY";
-			w="0.105 * safezoneW";
-			h="0.028 * safezoneH";
-		};
-		class Texture_Text: RscText
-		{
-			idc=1001;
-			text="";
-			x="0.59625 * safezoneW + safezoneX";
-			y="0.234 * safezoneH + safezoneY";
-			w="0.13125 * safezoneW";
-			h="0.028 * safezoneH";
-		};
-		class texture_preview: RscPicture
-		{
-			idc=1980;
-			text="#(argb,8,8,3)color(1,1,1,1)";
-			x="0.3425 * safezoneW + safezoneX";
-			y="0.262 * safezoneH + safezoneY";
-			w="0.385 * safezoneW";
-			h="0.336 * safezoneH";
-		};
-		class texture_combo: RscCombo
-		{
-			idc=2160;
-			x="0.2375 * safezoneW + safezoneX";
-			y="0.262 * safezoneH + safezoneY";
-			w="0.0875 * safezoneW";
-			h="0.028 * safezoneH";
-			onLBSelChanged="_changehandle = execVM ""\ARMA3_CUP_Enhancement_AW159\sqs\setskin\change_preview.sqf"";";
-		};
-		class apply_btn_pic: RscPicture
-		{
-			idc=1700;
-			text="FIR_AirWeaponSystem_US\ui\button_apply.paa";
-			x="0.57 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-		};
-		class apply_btn: RscButton
-		{
-			idc=1600;
-			text="";
-			x="0.57 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-			colorText[]={-1,-1,-1,-1};
-			colorBackground[]={-1,-1,-1,-1};
-			colorActive[]={-1,-1,-1,-1};
-			action="_applyhandle = execVM ""\ARMA3_CUP_Enhancement_AW159\sqs\setskin\change_skin.sqf"";";
-		};
-		class cancel_btn_pic: RscPicture
-		{
-			idc=1701;
-			text="FIR_AirWeaponSystem_US\ui\button_cancel.paa";
-			x="0.6575 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-		};
-		class cancel_btn: RscButton
-		{
-			idc=1601;
-			text="";
-			x="0.6575 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-			colorText[]={-1,-1,-1,-1};
-			colorBackground[]={-1,-1,-1,-1};
-			colorActive[]={-1,-1,-1,-1};
-			action="closeDialog 0";
-		};
-	};
-};
-
 class CfgVehicles
 {
 	class AllVehicles;
@@ -4158,7 +4051,7 @@ class CfgVehicles
 		slingLoadMemoryPoint = "slingLoad0";
 		slingLoadMaxCargoMass = 1500;
 		slingLoadOperator = 1;
-		liftForceCoef = 2.5;
+		liftForceCoef = 3.5;
 		class Exhausts
 		{
 			class Exhaust1
@@ -30440,6 +30333,52 @@ class CfgVehicles
 			};
 		};
 	};
+	class JAS_CUP_B_Wildcat_Unarmed_Green_AAF: JAS_CUP_B_Wildcat_Unarmed_Digital_AAF
+	{
+		author="$STR_CUP_AUTHOR_STRING";
+		scope=1;
+		scopeCurator=1;
+		displayname="AW159 AAF Green Wildcat (Unarmed)";
+		fir_lynxAAC_custom_skin=1;
+		fir_lynxAAC_custom_name="Wildcat Altis Armed Forces";
+		fir_lynxAAC_custom_code="JAS_CUP_B_Wildcat_Unarmed_Green_AAF";
+		fir_lynxAAC_custom_preview_pic="\ARMA3_CUP_Enhancement_AW159\UI\preview\WildcatAAFGreen.paa";
+		faction="IND_F";
+		crew="I_helipilot_F";
+		typicalCargo[]=
+		{
+			"I_Soldier_lite_F",
+			"I_Soldier_lite_F"
+		};
+		side=2;
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		model="\CUP\AirVehicles\CUP_AirVehicles_AW159\CUP_AW159_BAF_unarmed";
+		picture="\CUP\AirVehicles\CUP_AirVehicles_AW159\data\UI\picture_lynx_unarmed_ca.paa";
+		icon="\CUP\AirVehicles\CUP_AirVehicles_AW159\data\UI\icon_lynx_unarmed_ca.paa";
+		hiddenSelectionsTextures[]=
+		{
+			"\a3\air_f_epb\Heli_Light_03\data\heli_light_03_base_co.paa",
+			"\CUP\AirVehicles\CUP_AirVehicles_AW159\data\ah64d_details_co.paa"
+		};
+		_generalMacro="CUP_Wildcat_Unarmed_Green_AAF";
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+			};
+			class CargoTurret_01: CargoTurret_01
+			{
+			};
+			class CargoTurret_02: CargoTurret_02
+			{
+			};
+		};
+		editorPreview="CUP\AirVehicles\CUP_AirVehicles_AW159\Data\preview\CUP_B_Wildcat_Unarmed_Green_AAF.jpg";
+	};
 	class JAS_CUP_B_AW159_Unarmed_AAC : JAS_CUP_AW159_Unarmed_Base
 	{
 		author = "CUP/-{GOL}-Jason";
@@ -39144,25 +39083,18 @@ class CfgVehicles
 			};
 		};
 	};
-	class JAS_CUP_B_Wildcat_Unarmed_Green_AAF: JAS_CUP_B_Wildcat_Unarmed_Digital_AAF
+	class JAS_CUP_I_AW159_Unarmed_AAC : JAS_CUP_B_Wildcat_Unarmed_Digital_AAF
 	{
-		author="$STR_CUP_AUTHOR_STRING";
-		scope=1;
-		scopeCurator=1;
-		displayname="AW159 AAF Green Wildcat (Unarmed)";
-		fir_lynxAAC_custom_skin=1;
-		fir_lynxAAC_custom_name="Wildcat Altis Armed Forces";
-		fir_lynxAAC_custom_code="JAS_CUP_B_Wildcat_Unarmed_Green_AAF";
-		fir_lynxAAC_custom_preview_pic="\ARMA3_CUP_Enhancement_AW159\UI\preview\WildcatAAFGreen.paa";
-		faction="IND_F";
-		crew="I_helipilot_F";
-		typicalCargo[]=
-		{
-			"I_Soldier_lite_F",
-			"I_Soldier_lite_F"
-		};
-		side=2;
-		hiddenSelections[]=
+		author = "CUP/-{GOL}-Jason";
+		scope = 2;
+		scopeCurator = 2;
+		displayname = "AW159J AAC Clean";
+		fir_lynxAAC_custom_skin=2;
+		fir_lynxAAC_custom_name="Wildcat British Army Air Corps";
+		fir_lynxAAC_custom_code="JAS_CUP_B_AW159_Unarmed_AAC";
+		fir_lynxAAC_custom_preview_pic="\ARMA3_CUP_Enhancement_AW159\UI\preview\AV8USMCLIGHT.paa";
+		editorPreview = "\ARMA3_CUP_Enhancement_AW159\UI\editorpreview\WildcatAAF.jpg";
+		hiddenSelections[] =
 		{
 			"camo1",
 			"camo2"
@@ -39170,24 +39102,8455 @@ class CfgVehicles
 		model="\CUP\AirVehicles\CUP_AirVehicles_AW159\CUP_AW159_BAF_unarmed";
 		picture="\CUP\AirVehicles\CUP_AirVehicles_AW159\data\UI\picture_lynx_unarmed_ca.paa";
 		icon="\CUP\AirVehicles\CUP_AirVehicles_AW159\data\UI\icon_lynx_unarmed_ca.paa";
-		hiddenSelectionsTextures[]=
+		_generalMacro = "CUP_I_AW159_Unarmed_GB";
+		faction = "GOL_AAC_INDEP";
+		editorSubcategory="GOL_AAC_RAVEN";
+		class Turrets : Turrets
 		{
-			"\a3\air_f_epb\Heli_Light_03\data\heli_light_03_base_co.paa",
-			"\CUP\AirVehicles\CUP_AirVehicles_AW159\data\ah64d_details_co.paa"
-		};
-		_generalMacro="CUP_Wildcat_Unarmed_Green_AAF";
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
+			class MainTurret : MainTurret
 			{
 			};
-			class CargoTurret_01: CargoTurret_01
+			class CargoTurret_01 : CargoTurret_01
 			{
 			};
-			class CargoTurret_02: CargoTurret_02
+			class CargoTurret_02 : CargoTurret_02
 			{
 			};
 		};
-		editorPreview="CUP\AirVehicles\CUP_AirVehicles_AW159\Data\preview\CUP_B_Wildcat_Unarmed_Green_AAF.jpg";
+		class UserActions
+		{
+			class Pimfdpip1ON
+			{
+				displayName = "<t color='#ffff00'>Turn On FLIR MFD</t>";
+				displayNameDefault = "";
+				position = "";
+				radius = 3.5999999;
+				onlyForplayer = 1;
+				condition = "this animationPhase ""copip6"" < 0.5 AND (player == (driver this) && (alive this))";
+				statement = "this animate [""copip6"",1];";
+				priority = 9;
+			};
+			class Pimfdpip1OFF
+			{
+				displayName = "<t color='#ffff00'>Turn Off FLIR MFD</t>";
+				displayNameDefault = "";
+				position = "";
+				radius = 3.5999999;
+				onlyForplayer = 1;
+				condition = "this animationPhase ""copip6"" > 0.5 AND (player == (driver this) && (alive this))";
+				statement = "this animate [""copip6"",0];";
+				priority = 9;
+			};
+			class PimfdpipON
+			{
+				displayName = "<t color='#ffff00'>Turn On FLIR MFD</t>";
+				displayNameDefault = "";
+				position = "";
+				radius = 3.5999999;
+				onlyForplayer = 1;
+				condition = "this animationPhase ""copip4"" < 0.5 AND (player == (gunner this) && (alive this)) ";
+				statement = "this animate [""copip4"",1];";
+				priority = 9;
+			};
+			class PimfdpipOFF
+			{
+				displayName = "<t color='#ffff00'>Turn Off FLIR MFD</t>";
+				displayNameDefault = "";
+				position = "";
+				radius = 3.5999999;
+				onlyForplayer = 1;
+				condition = "this animationPhase ""copip4"" > 0.5 AND (player == (gunner this) && (alive this))";
+				statement = "this animate [""copip4"",0];";
+				priority = 9;
+			};
+			class OpenRdoor
+			{
+				displayName = "<t color='#FF0000'>Open Right Door</t>";
+				displayNameDefault = "";
+				position = "door_right_axis_beg";
+				radius = 3.7;
+				onlyForplayer = 0;
+				priority = 0;
+				condition = "this doorPhase ""CargoDoorR"" < 0.5 AND ((this getCargoIndex player) isEqualTo 0)";
+				statement = "this animateDoor [""CargoDoorR"",1];";
+			};
+			class CloseRdoor
+			{
+				displayName = "<t color='#FF0000'>Close Right Door</t>";
+				displayNameDefault = "";
+				position = "door_right_axis_beg";
+				radius = 3.7;
+				onlyForplayer = 0;
+				priority = 0;
+				condition = "this doorPhase ""CargoDoorR"" > 0.5 AND ((this getCargoIndex player) isEqualTo 0)";
+				statement = "this animateDoor [""CargoDoorR"",0];";
+			};
+			class OpenLdoor
+			{
+				displayName = "<t color='#FF0000'>Open Left Door</t>";
+				displayNameDefault = "";
+				position = "door_left_axis_beg";
+				radius = 3.7;
+				onlyForplayer = 0;
+				priority = 0;
+				condition = "this doorPhase ""CargoDoorL"" < 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
+				statement = "this animateDoor [""CargoDoorL"",1];";
+			};
+			class CloseLdoor
+			{
+				displayName = "<t color='#FF0000'>Close Left Door</t>";
+				displayNameDefault = "";
+				position = "door_left_axis_beg";
+				radius = 3.7;
+				onlyForplayer = 0;
+				priority = 0;
+				condition = "this doorPhase ""CargoDoorL"" > 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
+				statement = "this animateDoor [""CargoDoorL"",0];";
+			};
+			class Pack
+			{
+				displayName = "Pack";
+				displayNameDefault = "Pack";
+				position = "PackAction";
+				radius = 10;
+				onlyForPlayer = 1;
+				condition = "(!isEngineOn this) AND {(this animationphase 'mainRotor_unfolded' !=1) AND (driver this == player) AND (speed this < 1)}";
+				statement = "[this,1] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
+			};
+			class unPack
+			{
+				displayName = "UnPack";
+				displayNameDefault = "Unpack";
+				position = "PackAction";
+				radius = 10;
+				onlyForPlayer = 1;
+				condition = "this animationphase ""mainRotor_unfolded"" !=0 AND driver this == player";
+				statement = "[this,0] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
+			};
+			class Skin_Gui_Open
+			{
+				displayName = "<t color='#739eff'>Skin Selection</t>";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User6";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				statement = "this execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\setskin_open.sqf""";
+				onlyforplayer = "false";
+				priority = 6;
+			};
+		};
+		class eventhandlers
+		{
+			Init = "AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AAC',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
+		};
+	};
+	class JAS_CUP_I_AW159_Hellfire_AAC : JAS_CUP_I_AW159_Unarmed_AAC
+	{
+		author = "CUP/-{GOL}-Jason";
+		scope = 2;
+		scopeCurator = 2;
+		displayname = "AW159J AAC Anti-Tank";
+		model="\CUP\AirVehicles\CUP_AirVehicles_AW159\CUP_AW159_BAF_Hellfire_armed";
+		picture="\CUP\AirVehicles\CUP_AirVehicles_AW159\data\UI\picture_lynx_ca.paa";
+		icon="\CUP\AirVehicles\CUP_AirVehicles_AW159\data\UI\icon_lynx_ca.paa";
+		editorPreview = "\ARMA3_CUP_Enhancement_AW159\UI\editorpreview\WildcatAAFAT.jpg";
+		fir_lynxAAC_custom_skin=2;
+		fir_lynxAAC_custom_name="Wildcat British Army Air Corps";
+		fir_lynxAAC_custom_code="JAS_CUP_B_AW159_Hellfire_AAC";
+		fir_lynxAAC_custom_preview_pic="\ARMA3_CUP_Enhancement_AW159\UI\preview\AV8USMCLIGHT.paa";
+		class MFD
+		{
+			class AirplaneHUD
+			{
+				class Bones
+				{
+				};
+				class Draw
+				{
+				};
+				topLeft = "HUD_top_left";
+				topRight = "HUD_top_right";
+				bottomLeft = "HUD_bottom_left";
+				borderLeft = 0;
+				borderRight = 0;
+				borderTop = 0;
+				borderBottom = 0;
+				color[] = { 0.15000001, 1, 0.15000001, 1 };
+				enableParallax = 0;
+				helmetMountedDisplay = 1;
+				helmetPosition[] = { 0, 0, 0 };
+				helmetRight[] = { 0, 0, 0 };
+				helmetDown[] = { 0, 0, 0 };
+			};
+			class Kimi_HUD_1
+			{
+				topLeft = "HUD_top_left";
+				topRight = "HUD_top_right";
+				bottomLeft = "HUD_bottom_left";
+				borderLeft = 0;
+				borderRight = 0;
+				borderTop = 0;
+				borderBottom = 0;
+				color[] = { 0.15000001, 1, 0.15000001, 1 };
+				enableParallax = 0;
+				class Bones
+				{
+					class PlaneOrientation
+					{
+						type = "fixed";
+						pos[] = { 0.5, 0.5 };
+					};
+					class GunnerAim
+					{
+						type = "vector";
+						source = "weapon";
+						pos0[] =
+						{
+							0.5,
+							"0.9 - 0.04 + 0.02667"
+						};
+						pos10[] =
+						{
+							"0.5 + 0.0111",
+							"0.9 - 0.04 + 0.02667 + 0.0133"
+						};
+					};
+					class Target
+					{
+						source = "target";
+						type = "vector";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.85000002, 0.85000002 };
+					};
+					class Velocity
+					{
+						type = "vector";
+						source = "velocity";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.64999998, 0.64999998 };
+					};
+					class Velocity_slip
+					{
+						type = "vector";
+						source = "velocity";
+						pos0[] = { 0.5, 0.84500003 };
+						pos10[] = { 0.52999997, 0.84500003 };
+					};
+					class VspeedBone
+					{
+						type = "linear";
+						source = "vspeed";
+						sourceScale = 1;
+						min = -10;
+						max = 10;
+						minPos[] = { 0.93000001, 0.2 };
+						maxPos[] = { 0.93000001, 0.80000001 };
+					};
+					class RadarAltitudeBone
+					{
+						type = "linear";
+						source = "altitudeAGL";
+						sourceScale = 1;
+						min = 0;
+						max = 60;
+						minPos[] = { 0.96499997, 0.2 };
+						maxPos[] = { 0.96499997, 0.80000001 };
+					};
+					class HorizonBankRot
+					{
+						type = "rotational";
+						source = "horizonBank";
+						center[] = { 0.5, 0.5 };
+						min = -3.1415999;
+						max = 3.1415999;
+						minAngle = -180;
+						maxAngle = 180;
+						aspectRatio = 1;
+					};
+					class ForwardVec
+					{
+						type = "vector";
+						source = "forward";
+						pos0[] = { 0, 0 };
+						pos10[] = { 0.2193, 0.2193 };
+					};
+					class WeaponAim
+					{
+						type = "vector";
+						source = "weapon";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.75300002, 0.75300002 };
+					};
+					class Level0
+					{
+						type = "horizon";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.77999997, 0.77999997 };
+						angle = 0;
+					};
+				};
+				class Draw
+				{
+					color[] = { 0.18000001, 1, 0.18000001 };
+					alpha = 1;
+					condition = "on";
+					class Horizont
+					{
+						clipTL[] = { 0.15000001, 0.15000001 };
+						clipBR[] = { 0.85000002, 0.85000002 };
+						class Dimmed
+						{
+							class Level0
+							{
+								type = "line";
+								points[] =
+								{
+
+									{
+										"Level0",
+										{ -0.41999999, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.38, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ -0.37, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.33000001, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ -0.31999999, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.28, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ -0.27000001, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.23, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ -0.22, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.18000001, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ -0.17, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.13, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ -0.12, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.079999998, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.41999999, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.38, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.37, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.33000001, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.31999999, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.28, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.27000001, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.23, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.22, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.18000001, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.17, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.13, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.12, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.079999998, 0 },
+										1
+									}
+								};
+							};
+						};
+					};
+					class HorizonBankRot
+					{
+						type = "line";
+						width = 3;
+						points[] =
+						{
+
+							{
+								"HorizonBankRot",
+								{ 0, 0.25 },
+								1
+							},
+
+							{
+								"HorizonBankRot",
+								{ -0.0099999998, 0.23 },
+								1
+							},
+
+							{
+								"HorizonBankRot",
+								{ 0.0099999998, 0.23 },
+								1
+							},
+
+							{
+								"HorizonBankRot",
+								{ 0, 0.25 },
+								1
+							}
+						};
+					};
+					class Static_HAD_BOX
+					{
+						clipTL[] = { 0, 1 };
+						clipBR[] = { 1, 0 };
+						type = "line";
+						width = 5;
+						points[] =
+						{
+
+							{
+
+								{
+									"0.5-0.1",
+									"0.9-0.04"
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.5-0.1",
+									"0.9+0.04"
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.5+0.1",
+									"0.9+0.04"
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.5+0.1",
+									"0.9-0.04"
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.5-0.1",
+									"0.9-0.04"
+								},
+								1
+							},
+							{},
+
+							{
+
+								{
+									"0.5-0.1",
+									"0.9-0.04+0.02667"
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.5-0.092",
+									"0.9-0.04+0.02667"
+								},
+								1
+							},
+							{},
+
+							{
+
+								{
+									"0.5+0.1",
+									"0.9-0.04+0.02667"
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.5+0.092",
+									"0.9-0.04+0.02667"
+								},
+								1
+							},
+							{},
+
+							{
+
+								{
+									0.5,
+									"0.9-0.04"
+								},
+								1
+							},
+
+							{
+
+								{
+									0.5,
+									"0.9-0.032"
+								},
+								1
+							},
+							{},
+
+							{
+
+								{
+									0.5,
+									"0.9+0.04"
+								},
+								1
+							},
+
+							{
+
+								{
+									0.5,
+									"0.9+0.032"
+								},
+								1
+							},
+							{}
+						};
+					};
+					class Gunner_HAD
+					{
+						type = "line";
+						width = 6;
+						points[] =
+						{
+
+							{
+								"GunnerAim",
+								{ -0.015, -0.0080000004 },
+								1
+							},
+
+							{
+								"GunnerAim",
+								{ -0.015, 0.0080000004 },
+								1
+							},
+
+							{
+								"GunnerAim",
+								{ 0.015, 0.0080000004 },
+								1
+							},
+
+							{
+								"GunnerAim",
+								{ 0.015, -0.0080000004 },
+								1
+							},
+
+							{
+								"GunnerAim",
+								{ -0.015, -0.0080000004 },
+								1
+							}
+						};
+					};
+					class Centerline
+					{
+						type = "line";
+						width = 7;
+						points[] =
+						{
+
+							{
+								{ 0.5, 0.49000001 },
+								1
+							},
+
+							{
+								{ 0.5, 0.47 },
+								1
+							},
+							{},
+
+							{
+								{ 0.5, 0.50999999 },
+								1
+							},
+
+							{
+								{ 0.5, 0.52999997 },
+								1
+							},
+							{},
+
+							{
+								{ 0.49000001, 0.5 },
+								1
+							},
+
+							{
+								{ 0.47, 0.5 },
+								1
+							},
+							{},
+
+							{
+								{ 0.50999999, 0.5 },
+								1
+							},
+
+							{
+								{ 0.52999997, 0.5 },
+								1
+							},
+							{}
+						};
+					};
+					class Slip_ball_group
+					{
+						class Slip_bars
+						{
+							type = "line";
+							width = 4;
+							points[] =
+							{
+
+								{
+
+									{
+										"0.5-0.018",
+										"0.9-0.04"
+									},
+									1
+								},
+
+								{
+
+									{
+										"0.5-0.018",
+										"0.9-0.075"
+									},
+									1
+								},
+								{},
+
+								{
+
+									{
+										"0.5+0.018",
+										"0.9-0.04"
+									},
+									1
+								},
+
+								{
+
+									{
+										"0.5+0.018",
+										"0.9-0.075"
+									},
+									1
+								}
+							};
+						};
+						class Slip_ball
+						{
+							type = "line";
+							width = 6;
+							points[] =
+							{
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.75",
+										"-0.02 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.75",
+										"-0.01732 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.75",
+										"-0.0099999998 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.75",
+										"0 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.75",
+										"0.0099999998 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.75",
+										"0.01732 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.75",
+										"0.02 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.75",
+										"0.01732 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.75",
+										"0.0099999998 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.75",
+										"0 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.75",
+										"-0.0099999998 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.75",
+										"-0.01732 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.75",
+										"-0.02 * 0.75"
+									},
+									1
+								},
+								{},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.6",
+										"-0.02 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.6",
+										"-0.01732 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.6",
+										"-0.0099999998 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.6",
+										"0 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.6",
+										"0.0099999998 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.6",
+										"0.01732 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.6",
+										"0.02 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.6",
+										"0.01732 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.6",
+										"0.0099999998 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.6",
+										"0 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.6",
+										"-0.0099999998 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.6",
+										"-0.01732 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.6",
+										"-0.02 * 0.6"
+									},
+									1
+								},
+								{},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.5",
+										"-0.02 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.5",
+										"-0.01732 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.5",
+										"-0.0099999998 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.5",
+										"0 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.5",
+										"0.0099999998 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.5",
+										"0.01732 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.5",
+										"0.02 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.5",
+										"0.01732 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.5",
+										"0.0099999998 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.5",
+										"0 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.5",
+										"-0.0099999998 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.5",
+										"-0.01732 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.5",
+										"-0.02 * 0.5"
+									},
+									1
+								},
+								{},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.4",
+										"-0.02 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.4",
+										"-0.01732 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.4",
+										"-0.0099999998 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.4",
+										"0 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.4",
+										"0.0099999998 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.4",
+										"0.01732 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.4",
+										"0.02 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.4",
+										"0.01732 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.4",
+										"0.0099999998 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.4",
+										"0 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.4",
+										"-0.0099999998 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.4",
+										"-0.01732 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.4",
+										"-0.02 * 0.4"
+									},
+									1
+								},
+								{},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.30",
+										"-0.02 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.30",
+										"-0.01732 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.30",
+										"-0.0099999998 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.30",
+										"0 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.30",
+										"0.0099999998 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.30",
+										"0.01732 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.30",
+										"0.02 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.30",
+										"0.01732 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.30",
+										"0.0099999998 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.30",
+										"0 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.30",
+										"-0.0099999998 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.30",
+										"-0.01732 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.30",
+										"-0.02 * 0.30"
+									},
+									1
+								},
+								{},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.20",
+										"-0.02 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.20",
+										"-0.01732 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.20",
+										"-0.0099999998 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.20",
+										"0 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.20",
+										"0.0099999998 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.20",
+										"0.01732 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.20",
+										"0.02 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.20",
+										"0.01732 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.20",
+										"0.0099999998 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.20",
+										"0 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.20",
+										"-0.0099999998 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.20",
+										"-0.01732 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.20",
+										"-0.02 * 0.20"
+									},
+									1
+								},
+								{},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.1",
+										"-0.02 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.1",
+										"-0.01732 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.1",
+										"-0.0099999998 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.1",
+										"0 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.1",
+										"0.0099999998 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.1",
+										"0.01732 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.1",
+										"0.02 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.1",
+										"0.01732 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.1",
+										"0.0099999998 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.1",
+										"0 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.1",
+										"-0.0099999998 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.1",
+										"-0.01732 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.1",
+										"-0.02 * 0.1"
+									},
+									1
+								}
+							};
+						};
+					};
+					class GunCross_CIRCLE
+					{
+						type = "group";
+						class CCIP_circle
+						{
+							type = "line";
+							width = 4;
+							points[] =
+							{
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-1.2000 * 0.04",
+										"-0.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-1.0000 * 0.04",
+										"-0.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.9877 * 0.04",
+										"-0.1736 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.9397 * 0.04",
+										"-0.3420 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.8660 * 0.04",
+										"-0.5000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.7660 * 0.04",
+										"-0.6428 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.6428 * 0.04",
+										"-0.7660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.5000 * 0.04",
+										"-0.8660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.3420 * 0.04",
+										"-0.9397 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.1736 * 0.04",
+										"-0.9877 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.0000 * 0.04",
+										"-1.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.1736 * 0.04",
+										"-0.9877 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.3420 * 0.04",
+										"-0.9397 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.5000 * 0.04",
+										"-0.8660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.6428 * 0.04",
+										"-0.7660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.7660 * 0.04",
+										"-0.6428 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.8660 * 0.04",
+										"-0.5000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.9397 * 0.04",
+										"-0.3420 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.9877 * 0.04",
+										"-0.1736 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"1.0000 * 0.04",
+										"-0.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"1.2000 * 0.04",
+										"-0.0000 * 0.04"
+									},
+									1
+								},
+								{},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-1.2000 * 0.04",
+										"0.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-1.0000 * 0.04",
+										"0.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.9877 * 0.04",
+										"0.1736 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.9397 * 0.04",
+										"0.3420 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.8660 * 0.04",
+										"0.5000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.7660 * 0.04",
+										"0.6428 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.6428 * 0.04",
+										"0.7660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.5000 * 0.04",
+										"0.8660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.3420 * 0.04",
+										"0.9397 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.1736 * 0.04",
+										"0.9877 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.0000 * 0.04",
+										"1.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.1736 * 0.04",
+										"0.9877 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.3420 * 0.04",
+										"0.9397 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.5000 * 0.04",
+										"0.8660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.6428 * 0.04",
+										"0.7660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.7660 * 0.04",
+										"0.6428 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.8660 * 0.04",
+										"0.5000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.9397 * 0.04",
+										"0.3420 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.9877 * 0.04",
+										"0.1736 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"1.0000 * 0.04",
+										"0.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"1.2000 * 0.04",
+										"0.0000 * 0.04"
+									},
+									1
+								},
+								{},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.0000 * 0.04",
+										"-1.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.0000 * 0.04",
+										"-1.2000 * 0.04"
+									},
+									1
+								},
+								{},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.0000 * 0.04",
+										"1.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.0000 * 0.04",
+										"1.2000 * 0.04"
+									},
+									1
+								},
+								{},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+									{ 0.0049999999, 0 },
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+									{ -0.0049999999, 0 },
+									1
+								},
+								{},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+									{ 0, 0.0049999999 },
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+									{ 0, -0.0049999999 },
+									1
+								}
+							};
+						};
+					};
+					class WeaponName
+					{
+						type = "text";
+						source = "weapon";
+						sourceScale = 1;
+						align = "right";
+						scale = 1;
+						pos[] =
+						{
+							{ 0.61000001, 0.86000001 },
+							1
+						};
+						right[] =
+						{
+							{ 0.64999998, 0.86000001 },
+							1
+						};
+						down[] =
+						{
+							{ 0.61000001, 0.89999998 },
+							1
+						};
+					};
+					class Ammo_ALL
+					{
+						type = "group";
+						condition = "on";
+						class Ammo_count_ALL
+						{
+							type = "text";
+							source = "ammo";
+							sourceScale = 1;
+							align = "right";
+							scale = 1;
+							pos[] =
+							{
+								{ 0.61000001, 0.88999999 },
+								1
+							};
+							right[] =
+							{
+								{ 0.64999998, 0.88999999 },
+								1
+							};
+							down[] =
+							{
+								{ 0.61000001, 0.93000001 },
+								1
+							};
+						};
+					};
+					class LightsGroup
+					{
+						type = "group";
+						condition = "lights";
+						class LightsText
+						{
+							type = "text";
+							source = "static";
+							text = "LIGHTS";
+							align = "right";
+							scale = 1;
+							pos[] =
+							{
+
+								{
+									0.029999999,
+									"0.53 + 0.055"
+								},
+								1
+							};
+							right[] =
+							{
+
+								{
+									0.07,
+									"0.53 + 0.055"
+								},
+								1
+							};
+							down[] =
+							{
+
+								{
+									0.029999999,
+									"0.53 + 0.095"
+								},
+								1
+							};
+						};
+					};
+					class CollisionLightsGroup
+					{
+						type = "group";
+						condition = "collisionlights";
+						class CollisionLightsText
+						{
+							type = "text";
+							source = "static";
+							text = "A-COL";
+							align = "right";
+							scale = 1;
+							pos[] =
+							{
+
+								{
+									0.029999999,
+									"0.53 + 0.105"
+								},
+								1
+							};
+							right[] =
+							{
+
+								{
+									0.07,
+									"0.53 + 0.105"
+								},
+								1
+							};
+							down[] =
+							{
+
+								{
+									0.029999999,
+									"0.53 + 0.145"
+								},
+								1
+							};
+						};
+					};
+					class ATMissileTOFGroup
+					{
+						condition = "ATmissile";
+						type = "group";
+						class TOFtext
+						{
+							type = "text";
+							align = "right";
+							source = "static";
+							text = "TOF=";
+							scale = 1;
+							pos[] =
+							{
+								{ 0.61000001, 0.92000002 },
+								1
+							};
+							right[] =
+							{
+								{ 0.64999998, 0.92000002 },
+								1
+							};
+							down[] =
+							{
+								{ 0.61000001, 0.95999998 },
+								1
+							};
+						};
+						class TOFnumber
+						{
+							type = "text";
+							source = "targetDist";
+							sourcescale = 0.0024999999;
+							align = "right";
+							scale = 1;
+							pos[] =
+							{
+								{ 0.69, 0.92000002 },
+								1
+							};
+							right[] =
+							{
+								{ 0.73000002, 0.92000002 },
+								1
+							};
+							down[] =
+							{
+								{ 0.69, 0.95999998 },
+								1
+							};
+						};
+					};
+					class RangeNumber
+					{
+						type = "text";
+						source = "targetDist";
+						sourceScale = 1;
+						align = "left";
+						scale = 1;
+						pos[] =
+						{
+							{ 0.38999999, 0.88999999 },
+							1
+						};
+						right[] =
+						{
+							{ 0.43000001, 0.88999999 },
+							1
+						};
+						down[] =
+						{
+							{ 0.38999999, 0.93000001 },
+							1
+						};
+					};
+					class RangeText
+					{
+						type = "text";
+						source = "static";
+						text = "RNG";
+						align = "left";
+						scale = 1;
+						pos[] =
+						{
+							{ 0.38999999, 0.86000001 },
+							1
+						};
+						right[] =
+						{
+							{ 0.43000001, 0.86000001 },
+							1
+						};
+						down[] =
+						{
+							{ 0.38999999, 0.89999998 },
+							1
+						};
+					};
+					class SpeedNumber
+					{
+						type = "text";
+						align = "right";
+						scale = 1;
+						source = "speed";
+						sourceScale = 3.5999999;
+						pos[] =
+						{
+							{ 0.029999999, 0.47499999 },
+							1
+						};
+						right[] =
+						{
+							{ 0.079999998, 0.47499999 },
+							1
+						};
+						down[] =
+						{
+							{ 0.029999999, 0.52499998 },
+							1
+						};
+					};
+					class TorqueNumber
+					{
+						condition = "simulRTD";
+						class Torque_number
+						{
+							type = "text";
+							align = "left";
+							scale = 1;
+							source = "rtdRotorTorque";
+							sourceScale = 363;
+							pos[] =
+							{
+								{ 0.064999998, 0.175 },
+								1
+							};
+							right[] =
+							{
+								{ 0.115, 0.175 },
+								1
+							};
+							down[] =
+							{
+								{ 0.064999998, 0.22499999 },
+								1
+							};
+						};
+						class Torquetext
+						{
+							type = "text";
+							source = "static";
+							text = "%";
+							align = "right";
+							scale = 1;
+							pos[] =
+							{
+								{ 0.07, 0.175 },
+								1
+							};
+							right[] =
+							{
+								{ 0.12, 0.175 },
+								1
+							};
+							down[] =
+							{
+								{ 0.07, 0.22499999 },
+								1
+							};
+						};
+					};
+					class AltNumber : SpeedNumber
+					{
+						align = "right";
+						source = "altitudeAGL";
+						sourceScale = 1;
+						pos[] =
+						{
+							{ 0.82999998, 0.47499999 },
+							1
+						};
+						right[] =
+						{
+							{ 0.88, 0.47499999 },
+							1
+						};
+						down[] =
+						{
+							{ 0.82999998, 0.52499998 },
+							1
+						};
+					};
+					class ASLNumber
+					{
+						type = "text";
+						source = "altitudeASL";
+						sourceScale = 1;
+						align = "right";
+						scale = 1;
+						pos[] =
+						{
+							{ 0.83499998, 0.18000001 },
+							1
+						};
+						right[] =
+						{
+							{ 0.875, 0.18000001 },
+							1
+						};
+						down[] =
+						{
+							{ 0.83499998, 0.22 },
+							1
+						};
+					};
+					class VspeedScalePosta
+					{
+						type = "line";
+						width = 5;
+						points[] =
+						{
+
+							{
+								{ 0.98000002, 0.2 },
+								1
+							},
+
+							{
+								{ 1, 0.2 },
+								1
+							},
+							{},
+
+							{
+								{ 0.93000001, 0.2 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.2 },
+								1
+							},
+							{},
+
+							{
+								{ 0.98000002, 0.34999999 },
+								1
+							},
+
+							{
+								{ 1, 0.34999999 },
+								1
+							},
+							{},
+
+							{
+								{ 0.93000001, 0.34999999 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.34999999 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.38 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.38 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.41 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.41 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.44 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.44 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.47 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.47 },
+								1
+							},
+							{},
+
+							{
+								{ 0.98000002, 0.5 },
+								1
+							},
+
+							{
+								{ 1, 0.5 },
+								1
+							},
+							{},
+
+							{
+								{ 0.93000001, 0.5 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.5 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.52999997 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.52999997 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.56 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.56 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.58999997 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.58999997 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.62 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.62 },
+								1
+							},
+							{},
+
+							{
+								{ 0.98000002, 0.64999998 },
+								1
+							},
+
+							{
+								{ 1, 0.64999998 },
+								1
+							},
+							{},
+
+							{
+								{ 0.93000001, 0.64999998 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.64999998 },
+								1
+							},
+							{},
+
+							{
+								{ 0.99000001, 0.68000001 },
+								1
+							},
+
+							{
+								{ 0.98000002, 0.68000001 },
+								1
+							},
+							{},
+
+							{
+								{ 0.99000001, 0.70999998 },
+								1
+							},
+
+							{
+								{ 0.98000002, 0.70999998 },
+								1
+							},
+							{},
+
+							{
+								{ 0.99000001, 0.74000001 },
+								1
+							},
+
+							{
+								{ 0.98000002, 0.74000001 },
+								1
+							},
+							{},
+
+							{
+								{ 0.99000001, 0.76999998 },
+								1
+							},
+
+							{
+								{ 0.98000002, 0.76999998 },
+								1
+							},
+							{},
+
+							{
+								{ 0.98000002, 0.80000001 },
+								1
+							},
+
+							{
+								{ 1, 0.80000001 },
+								1
+							},
+							{},
+
+							{
+								{ 0.93000001, 0.80000001 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.80000001 },
+								1
+							},
+							{}
+						};
+					};
+					class RadarAltitudeBand
+					{
+						clipTL[] = { 0, 0.2 };
+						clipBR[] = { 1, 0.80000001 };
+						class radarbanda
+						{
+							type = "line";
+							width = 17;
+							points[] =
+							{
+
+								{
+									"RadarAltitudeBone",
+									{ 0, 0 },
+									1
+								},
+
+								{
+									"RadarAltitudeBone",
+									{ 0, 0.60000002 },
+									1
+								}
+							};
+						};
+					};
+					class VspeedBand
+					{
+						type = "line";
+						width = 3;
+						points[] =
+						{
+
+							{
+								"VspeedBone",
+								{ -0.0099999998, 0 },
+								1
+							},
+
+							{
+								"VspeedBone",
+								{ -0.025, -0.015 },
+								1
+							},
+
+							{
+								"VspeedBone",
+								{ -0.025, 0.015 },
+								1
+							},
+
+							{
+								"VspeedBone",
+								{ -0.0099999998, 0 },
+								1
+							},
+							{}
+						};
+					};
+					class HeadingNumber : SpeedNumber
+					{
+						source = "heading";
+						sourceScale = 1;
+						align = "center";
+						pos[] =
+						{
+							{ 0.5, 0.0099999998 },
+							1
+						};
+						right[] =
+						{
+							{ 0.56, 0.0099999998 },
+							1
+						};
+						down[] =
+						{
+							{ 0.5, 0.059999999 },
+							1
+						};
+					};
+					class Center_box
+					{
+						type = "line";
+						width = 3;
+						points[] =
+						{
+
+							{
+								{ 0.44, 0.0049999999 },
+								1
+							},
+
+							{
+
+								{
+									"0.44 + 0.12",
+									0.0049999999
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.44 + 0.12",
+									"0.005 + 0.06"
+								},
+								1
+							},
+
+							{
+
+								{
+									0.44,
+									"0.005 + 0.06"
+								},
+								1
+							},
+
+							{
+								{ 0.44, 0.0049999999 },
+								1
+							}
+						};
+					};
+					class HeadingArrow
+					{
+						type = "line";
+						width = 7;
+						points[] =
+						{
+
+							{
+
+								{
+									"0.5",
+									"0.128 + 0.03"
+								},
+								1
+							},
+
+							{
+								{ 0.5, 0.12800001 },
+								1
+							}
+						};
+					};
+					class HeadingScale
+					{
+						type = "scale";
+						horizontal = 1;
+						source = "heading";
+						sourceScale = 1;
+						width = 5;
+						top = 0.12;
+						center = 0.5;
+						bottom = 0.88;
+						lineXleft = "0.03 + 0.085";
+						lineYright = "0.02 + 0.085";
+						lineXleftMajor = "0.04 + 0.085";
+						lineYrightMajor = "0.02 + 0.085";
+						majorLineEach = 3;
+						numberEach = 3;
+						step = 10;
+						stepSize = "0.05";
+						align = "center";
+						scale = 1;
+						pos[] =
+						{
+							0.119,
+							"0.0 + 0.065"
+						};
+						right[] =
+						{
+							0.15899999,
+							"0.0 + 0.065"
+						};
+						down[] =
+						{
+							0.119,
+							"0.04 + 0.065"
+						};
+					};
+					class Fuel_Text
+					{
+						type = "text";
+						source = "static";
+						text = "Fuel";
+						align = "right";
+						scale = 1;
+						pos[] =
+						{
+							{ 0.029999999, 0.89999998 },
+							1
+						};
+						right[] =
+						{
+							{ 0.07, 0.89999998 },
+							1
+						};
+						down[] =
+						{
+							{ 0.029999999, 0.94 },
+							1
+						};
+					};
+					class Fuel_Number
+					{
+						type = "text";
+						source = "fuel";
+						sourceScale = 100;
+						align = "right";
+						scale = 1;
+						pos[] =
+						{
+							{ 0.1, 0.89999998 },
+							1
+						};
+						right[] =
+						{
+							{ 0.14, 0.89999998 },
+							1
+						};
+						down[] =
+						{
+							{ 0.1, 0.94 },
+							1
+						};
+					};
+				};
+				helmetMountedDisplay = 1;
+				helmetPosition[] = { -0.039999999, 0.039999999, 0.1 };
+				helmetRight[] = { 0.079999998, 0, 0 };
+				helmetDown[] = { 0, -0.079999998, 0 };
+			};
+			class Kimi_HUD_2
+			{
+				topLeft = "HUD_top_left";
+				topRight = "HUD_top_right";
+				bottomLeft = "HUD_bottom_left";
+				borderLeft = 0;
+				borderRight = 0;
+				borderTop = 0;
+				borderBottom = 0;
+				color[] = { 0.15000001, 1, 0.15000001, 1 };
+				enableParallax = 0;
+				class Bones
+				{
+					class Velocity
+					{
+						type = "vector";
+						source = "velocity";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.75, 0.75 };
+					};
+					class ForwardVec1
+					{
+						type = "vector";
+						source = "forward";
+						pos0[] = { 0, 0 };
+						pos10[] = { 0.25, 0.25 };
+					};
+					class ForwardVec
+					{
+						type = "vector";
+						source = "forward";
+						pos0[] = { 0, 0 };
+						pos10[] = { 0.25299999, 0.25299999 };
+					};
+					class WeaponAim
+					{
+						type = "vector";
+						source = "weapon";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.75300002, 0.75300002 };
+					};
+					class WeaponAim1
+					{
+						type = "vector";
+						source = "weapon";
+						pos0[] = { 0, 0 };
+						pos10[] = { 0.25299999, 0.23 };
+					};
+					class Target
+					{
+						type = "vector";
+						source = "target";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.75300002, 0.75300002 };
+					};
+					class RadarContact
+					{
+						type = "fixed";
+						pos[] = { 0, 0 };
+					};
+				};
+				class Draw
+				{
+					color[] = { 0.18000001, 1, 0.18000001 };
+					alpha = 1;
+					condition = "on";
+					class PlaneMovementCrosshair
+					{
+						type = "line";
+						width = 7;
+						points[] =
+						{
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0, -0.02 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.0099999998, -0.01732 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.01732, -0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.02, 0 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.01732, 0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.0099999998, 0.01732 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0, 0.02 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.0099999998, 0.01732 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.01732, 0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.02, 0 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.01732, -0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.0099999998, -0.01732 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0, -0.02 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.039999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.02, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.039999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.02, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0, -0.039999999 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0, -0.02 },
+								1
+							}
+						};
+					};
+					class Gunner_AIM
+					{
+						type = "line";
+						width = 7;
+						points[] =
+						{
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, -0.02 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, -0.0099999998 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, -0.022500001 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, -0.032499999 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, 0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, 0.02 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, 0.022500001 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, 0.032499999 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ -0.02, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ -0.0099999998, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ -0.022500001, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ -0.032499999, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0.0099999998, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0.02, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0.022500001, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0.032499999, 0 },
+								1
+							}
+						};
+					};
+					class TargetACQ
+					{
+						type = "line";
+						width = 2;
+						points[] =
+						{
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.059999999 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.055 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.050000001 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.045000002 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.039999999 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.035 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.029999999 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.025 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.02 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.015 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.0049999999 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.059999999 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.055 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.050000001 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.045000002 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.039999999 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.035 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.029999999 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.025 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.02 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.015 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.0049999999 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.059999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.055, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.050000001, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.045000002, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.039999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.035, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.029999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.025, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.02, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.015, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.0099999998, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.0049999999, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.059999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.055, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.050000001, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.045000002, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.039999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.035, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.029999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.025, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.02, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.015, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.0099999998, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.0049999999, 0 },
+								1
+							},
+							{}
+						};
+					};
+				};
+				helmetMountedDisplay = 1;
+				helmetPosition[] = { -0.035, 0.035, 0.1 };
+				helmetRight[] = { 0.07, 0, 0 };
+				helmetDown[] = { 0, -0.07, 0 };
+			};
+		};
+		_generalMacro = "CUP_I_AW159_Hellfire_GB";
+		faction = "GOL_AAC_INDEP";
+		editorSubcategory="GOL_AAC_ZEUS";
+		memoryPointLMissile = "missile_1";
+		memoryPointRMissile = "missile_2";
+		hiddenSelections[] =
+		{
+			"camo1",
+			"camo2"
+		};
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] =
+				{
+					"FIR_MasterArm",
+					"Laserdesignator_mounted",
+					"JAS_HellfireLauncher_K",
+					"JAS_HellfireLauncher_N"
+				};
+				magazines[] =
+				{
+					"Laserbatteries",
+					"JAS_AGM114K_1rnd_M",
+					"JAS_AGM114K_1rnd_M",
+					"JAS_AGM114K_1rnd_M",
+					"JAS_AGM114K_1rnd_M",
+					"JAS_AGM114N_1rnd_M",
+					"JAS_AGM114N_1rnd_M",
+					"JAS_AGM114N_1rnd_M",
+					"JAS_AGM114N_1rnd_M"
+				};
+			};
+			class CargoTurret_01 : CargoTurret_01
+			{
+			};
+			class CargoTurret_02 : CargoTurret_02
+			{
+			};
+		};
+		class UserActions
+		{
+			class Pimfdpip1ON
+			{
+				displayName = "<t color='#ffff00'>Turn On FLIR MFD</t>";
+				displayNameDefault = "";
+				position = "";
+				radius = 3.5999999;
+				onlyForplayer = 1;
+				condition = "this animationPhase ""copip6"" < 0.5 AND (player == (driver this) && (alive this))";
+				statement = "this animate [""copip6"",1];";
+				priority = 9;
+			};
+			class Pimfdpip1OFF
+			{
+				displayName = "<t color='#ffff00'>Turn Off FLIR MFD</t>";
+				displayNameDefault = "";
+				position = "";
+				radius = 3.5999999;
+				onlyForplayer = 1;
+				condition = "this animationPhase ""copip6"" > 0.5 AND (player == (driver this) && (alive this))";
+				statement = "this animate [""copip6"",0];";
+				priority = 9;
+			};
+			class PimfdpipON
+			{
+				displayName = "<t color='#ffff00'>Turn On FLIR MFD</t>";
+				displayNameDefault = "";
+				position = "";
+				radius = 3.5999999;
+				onlyForplayer = 1;
+				condition = "this animationPhase ""copip4"" < 0.5 AND (player == (gunner this) && (alive this)) ";
+				statement = "this animate [""copip4"",1];";
+				priority = 9;
+			};
+			class PimfdpipOFF
+			{
+				displayName = "<t color='#ffff00'>Turn Off FLIR MFD</t>";
+				displayNameDefault = "";
+				position = "";
+				radius = 3.5999999;
+				onlyForplayer = 1;
+				condition = "this animationPhase ""copip4"" > 0.5 AND (player == (gunner this) && (alive this))";
+				statement = "this animate [""copip4"",0];";
+				priority = 9;
+			};
+			class OpenRdoor
+			{
+				displayName = "<t color='#FF0000'>Open Right Door</t>";
+				displayNameDefault = "";
+				position = "door_right_axis_beg";
+				radius = 3.7;
+				onlyForplayer = 0;
+				priority = 0;
+				condition = "this doorPhase ""CargoDoorR"" < 0.5 AND ((this getCargoIndex player) isEqualTo 0)";
+				statement = "this animateDoor [""CargoDoorR"",1];";
+			};
+			class CloseRdoor
+			{
+				displayName = "<t color='#FF0000'>Close Right Door</t>";
+				displayNameDefault = "";
+				position = "door_right_axis_beg";
+				radius = 3.7;
+				onlyForplayer = 0;
+				priority = 0;
+				condition = "this doorPhase ""CargoDoorR"" > 0.5 AND ((this getCargoIndex player) isEqualTo 0)";
+				statement = "this animateDoor [""CargoDoorR"",0];";
+			};
+			class OpenLdoor
+			{
+				displayName = "<t color='#FF0000'>Open Left Door</t>";
+				displayNameDefault = "";
+				position = "door_left_axis_beg";
+				radius = 3.7;
+				onlyForplayer = 0;
+				priority = 0;
+				condition = "this doorPhase ""CargoDoorL"" < 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
+				statement = "this animateDoor [""CargoDoorL"",1];";
+			};
+			class CloseLdoor
+			{
+				displayName = "<t color='#FF0000'>Close Left Door</t>";
+				displayNameDefault = "";
+				position = "door_left_axis_beg";
+				radius = 3.7;
+				onlyForplayer = 0;
+				priority = 0;
+				condition = "this doorPhase ""CargoDoorL"" > 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
+				statement = "this animateDoor [""CargoDoorL"",0];";
+			};
+			class Pack
+			{
+				displayName = "Pack";
+				displayNameDefault = "Pack";
+				position = "PackAction";
+				radius = 10;
+				onlyForPlayer = 1;
+				condition = "(!isEngineOn this) AND {(this animationphase 'mainRotor_unfolded' !=1) AND (driver this == player) AND (speed this < 1)}";
+				statement = "[this,1] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
+			};
+			class unPack
+			{
+				displayName = "UnPack";
+				displayNameDefault = "Unpack";
+				position = "PackAction";
+				radius = 10;
+				onlyForPlayer = 1;
+				condition = "this animationphase ""mainRotor_unfolded"" !=0 AND driver this == player";
+				statement = "[this,0] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
+			};
+			class Skin_Gui_Open
+			{
+				displayName = "<t color='#739eff'>Skin Selection</t>";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User6";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				statement = "this execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\setskin_open.sqf""";
+				onlyforplayer = "false";
+				priority = 6;
+			};
+		};
+	};
+	class JAS_CUP_I_AW159_Cannon_AAC : JAS_CUP_I_AW159_Unarmed_AAC
+	{
+		author = "CUP/-{GOL}-Jason";
+		scope = 2;
+		scopeCurator = 2;
+		displayname = "AW159J AAC General Purpose";
+		model="\CUP\AirVehicles\CUP_AirVehicles_AW159\CUP_AW159_BAF_Cannon_armed";
+		picture="\CUP\AirVehicles\CUP_AirVehicles_AW159\data\UI\picture_lynx_ca.paa";
+		icon="\CUP\AirVehicles\CUP_AirVehicles_AW159\data\UI\icon_lynx_ca.paa";
+		fir_lynxAAC_custom_skin=2;
+		fir_lynxAAC_custom_name="Wildcat British Army Air Corps";
+		fir_lynxAAC_custom_code="JAS_CUP_B_AW159_Cannon_AAC";
+		fir_lynxAAC_custom_preview_pic="\ARMA3_CUP_Enhancement_AW159\UI\preview\AV8USMCLIGHT.paa";
+		editorPreview = "\ARMA3_CUP_Enhancement_AW159\UI\editorpreview\WildcatBAFAP.jpg";
+		class MFD
+		{
+			class AirplaneHUD
+			{
+				class Bones
+				{
+				};
+				class Draw
+				{
+				};
+				topLeft = "HUD_top_left";
+				topRight = "HUD_top_right";
+				bottomLeft = "HUD_bottom_left";
+				borderLeft = 0;
+				borderRight = 0;
+				borderTop = 0;
+				borderBottom = 0;
+				color[] = { 0.15000001, 1, 0.15000001, 1 };
+				enableParallax = 0;
+				helmetMountedDisplay = 1;
+				helmetPosition[] = { 0, 0, 0 };
+				helmetRight[] = { 0, 0, 0 };
+				helmetDown[] = { 0, 0, 0 };
+			};
+			class Kimi_HUD_1
+			{
+				topLeft = "HUD_top_left";
+				topRight = "HUD_top_right";
+				bottomLeft = "HUD_bottom_left";
+				borderLeft = 0;
+				borderRight = 0;
+				borderTop = 0;
+				borderBottom = 0;
+				color[] = { 0.15000001, 1, 0.15000001, 1 };
+				enableParallax = 0;
+				class Bones
+				{
+					class PlaneOrientation
+					{
+						type = "fixed";
+						pos[] = { 0.5, 0.5 };
+					};
+					class GunnerAim
+					{
+						type = "vector";
+						source = "weapon";
+						pos0[] =
+						{
+							0.5,
+							"0.9 - 0.04 + 0.02667"
+						};
+						pos10[] =
+						{
+							"0.5 + 0.0111",
+							"0.9 - 0.04 + 0.02667 + 0.0133"
+						};
+					};
+					class Target
+					{
+						source = "target";
+						type = "vector";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.85000002, 0.85000002 };
+					};
+					class Velocity
+					{
+						type = "vector";
+						source = "velocity";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.64999998, 0.64999998 };
+					};
+					class Velocity_slip
+					{
+						type = "vector";
+						source = "velocity";
+						pos0[] = { 0.5, 0.84500003 };
+						pos10[] = { 0.52999997, 0.84500003 };
+					};
+					class VspeedBone
+					{
+						type = "linear";
+						source = "vspeed";
+						sourceScale = 1;
+						min = -10;
+						max = 10;
+						minPos[] = { 0.93000001, 0.2 };
+						maxPos[] = { 0.93000001, 0.80000001 };
+					};
+					class RadarAltitudeBone
+					{
+						type = "linear";
+						source = "altitudeAGL";
+						sourceScale = 1;
+						min = 0;
+						max = 60;
+						minPos[] = { 0.96499997, 0.2 };
+						maxPos[] = { 0.96499997, 0.80000001 };
+					};
+					class HorizonBankRot
+					{
+						type = "rotational";
+						source = "horizonBank";
+						center[] = { 0.5, 0.5 };
+						min = -3.1415999;
+						max = 3.1415999;
+						minAngle = -180;
+						maxAngle = 180;
+						aspectRatio = 1;
+					};
+					class ForwardVec
+					{
+						type = "vector";
+						source = "forward";
+						pos0[] = { 0, 0 };
+						pos10[] = { 0.2193, 0.2193 };
+					};
+					class WeaponAim
+					{
+						type = "vector";
+						source = "weapon";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.75300002, 0.75300002 };
+					};
+					class Level0
+					{
+						type = "horizon";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.77999997, 0.77999997 };
+						angle = 0;
+					};
+				};
+				class Draw
+				{
+					color[] = { 0.18000001, 1, 0.18000001 };
+					alpha = 1;
+					condition = "on";
+					class Horizont
+					{
+						clipTL[] = { 0.15000001, 0.15000001 };
+						clipBR[] = { 0.85000002, 0.85000002 };
+						class Dimmed
+						{
+							class Level0
+							{
+								type = "line";
+								points[] =
+								{
+
+									{
+										"Level0",
+										{ -0.41999999, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.38, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ -0.37, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.33000001, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ -0.31999999, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.28, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ -0.27000001, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.23, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ -0.22, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.18000001, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ -0.17, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.13, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ -0.12, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ -0.079999998, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.41999999, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.38, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.37, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.33000001, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.31999999, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.28, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.27000001, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.23, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.22, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.18000001, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.17, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.13, 0 },
+										1
+									},
+									{},
+
+									{
+										"Level0",
+										{ 0.12, 0 },
+										1
+									},
+
+									{
+										"Level0",
+										{ 0.079999998, 0 },
+										1
+									}
+								};
+							};
+						};
+					};
+					class HorizonBankRot
+					{
+						type = "line";
+						width = 3;
+						points[] =
+						{
+
+							{
+								"HorizonBankRot",
+								{ 0, 0.25 },
+								1
+							},
+
+							{
+								"HorizonBankRot",
+								{ -0.0099999998, 0.23 },
+								1
+							},
+
+							{
+								"HorizonBankRot",
+								{ 0.0099999998, 0.23 },
+								1
+							},
+
+							{
+								"HorizonBankRot",
+								{ 0, 0.25 },
+								1
+							}
+						};
+					};
+					class Static_HAD_BOX
+					{
+						clipTL[] = { 0, 1 };
+						clipBR[] = { 1, 0 };
+						type = "line";
+						width = 5;
+						points[] =
+						{
+
+							{
+
+								{
+									"0.5-0.1",
+									"0.9-0.04"
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.5-0.1",
+									"0.9+0.04"
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.5+0.1",
+									"0.9+0.04"
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.5+0.1",
+									"0.9-0.04"
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.5-0.1",
+									"0.9-0.04"
+								},
+								1
+							},
+							{},
+
+							{
+
+								{
+									"0.5-0.1",
+									"0.9-0.04+0.02667"
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.5-0.092",
+									"0.9-0.04+0.02667"
+								},
+								1
+							},
+							{},
+
+							{
+
+								{
+									"0.5+0.1",
+									"0.9-0.04+0.02667"
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.5+0.092",
+									"0.9-0.04+0.02667"
+								},
+								1
+							},
+							{},
+
+							{
+
+								{
+									0.5,
+									"0.9-0.04"
+								},
+								1
+							},
+
+							{
+
+								{
+									0.5,
+									"0.9-0.032"
+								},
+								1
+							},
+							{},
+
+							{
+
+								{
+									0.5,
+									"0.9+0.04"
+								},
+								1
+							},
+
+							{
+
+								{
+									0.5,
+									"0.9+0.032"
+								},
+								1
+							},
+							{}
+						};
+					};
+					class Gunner_HAD
+					{
+						type = "line";
+						width = 6;
+						points[] =
+						{
+
+							{
+								"GunnerAim",
+								{ -0.015, -0.0080000004 },
+								1
+							},
+
+							{
+								"GunnerAim",
+								{ -0.015, 0.0080000004 },
+								1
+							},
+
+							{
+								"GunnerAim",
+								{ 0.015, 0.0080000004 },
+								1
+							},
+
+							{
+								"GunnerAim",
+								{ 0.015, -0.0080000004 },
+								1
+							},
+
+							{
+								"GunnerAim",
+								{ -0.015, -0.0080000004 },
+								1
+							}
+						};
+					};
+					class Centerline
+					{
+						type = "line";
+						width = 7;
+						points[] =
+						{
+
+							{
+								{ 0.5, 0.49000001 },
+								1
+							},
+
+							{
+								{ 0.5, 0.47 },
+								1
+							},
+							{},
+
+							{
+								{ 0.5, 0.50999999 },
+								1
+							},
+
+							{
+								{ 0.5, 0.52999997 },
+								1
+							},
+							{},
+
+							{
+								{ 0.49000001, 0.5 },
+								1
+							},
+
+							{
+								{ 0.47, 0.5 },
+								1
+							},
+							{},
+
+							{
+								{ 0.50999999, 0.5 },
+								1
+							},
+
+							{
+								{ 0.52999997, 0.5 },
+								1
+							},
+							{}
+						};
+					};
+					class Slip_ball_group
+					{
+						class Slip_bars
+						{
+							type = "line";
+							width = 4;
+							points[] =
+							{
+
+								{
+
+									{
+										"0.5-0.018",
+										"0.9-0.04"
+									},
+									1
+								},
+
+								{
+
+									{
+										"0.5-0.018",
+										"0.9-0.075"
+									},
+									1
+								},
+								{},
+
+								{
+
+									{
+										"0.5+0.018",
+										"0.9-0.04"
+									},
+									1
+								},
+
+								{
+
+									{
+										"0.5+0.018",
+										"0.9-0.075"
+									},
+									1
+								}
+							};
+						};
+						class Slip_ball
+						{
+							type = "line";
+							width = 6;
+							points[] =
+							{
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.75",
+										"-0.02 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.75",
+										"-0.01732 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.75",
+										"-0.0099999998 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.75",
+										"0 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.75",
+										"0.0099999998 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.75",
+										"0.01732 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.75",
+										"0.02 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.75",
+										"0.01732 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.75",
+										"0.0099999998 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.75",
+										"0 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.75",
+										"-0.0099999998 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.75",
+										"-0.01732 * 0.75"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.75",
+										"-0.02 * 0.75"
+									},
+									1
+								},
+								{},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.6",
+										"-0.02 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.6",
+										"-0.01732 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.6",
+										"-0.0099999998 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.6",
+										"0 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.6",
+										"0.0099999998 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.6",
+										"0.01732 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.6",
+										"0.02 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.6",
+										"0.01732 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.6",
+										"0.0099999998 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.6",
+										"0 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.6",
+										"-0.0099999998 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.6",
+										"-0.01732 * 0.6"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.6",
+										"-0.02 * 0.6"
+									},
+									1
+								},
+								{},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.5",
+										"-0.02 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.5",
+										"-0.01732 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.5",
+										"-0.0099999998 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.5",
+										"0 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.5",
+										"0.0099999998 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.5",
+										"0.01732 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.5",
+										"0.02 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.5",
+										"0.01732 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.5",
+										"0.0099999998 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.5",
+										"0 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.5",
+										"-0.0099999998 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.5",
+										"-0.01732 * 0.5"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.5",
+										"-0.02 * 0.5"
+									},
+									1
+								},
+								{},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.4",
+										"-0.02 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.4",
+										"-0.01732 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.4",
+										"-0.0099999998 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.4",
+										"0 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.4",
+										"0.0099999998 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.4",
+										"0.01732 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.4",
+										"0.02 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.4",
+										"0.01732 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.4",
+										"0.0099999998 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.4",
+										"0 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.4",
+										"-0.0099999998 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.4",
+										"-0.01732 * 0.4"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.4",
+										"-0.02 * 0.4"
+									},
+									1
+								},
+								{},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.30",
+										"-0.02 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.30",
+										"-0.01732 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.30",
+										"-0.0099999998 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.30",
+										"0 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.30",
+										"0.0099999998 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.30",
+										"0.01732 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.30",
+										"0.02 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.30",
+										"0.01732 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.30",
+										"0.0099999998 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.30",
+										"0 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.30",
+										"-0.0099999998 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.30",
+										"-0.01732 * 0.30"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.30",
+										"-0.02 * 0.30"
+									},
+									1
+								},
+								{},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.20",
+										"-0.02 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.20",
+										"-0.01732 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.20",
+										"-0.0099999998 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.20",
+										"0 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.20",
+										"0.0099999998 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.20",
+										"0.01732 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.20",
+										"0.02 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.20",
+										"0.01732 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.20",
+										"0.0099999998 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.20",
+										"0 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.20",
+										"-0.0099999998 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.20",
+										"-0.01732 * 0.20"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.20",
+										"-0.02 * 0.20"
+									},
+									1
+								},
+								{},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.1",
+										"-0.02 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.1",
+										"-0.01732 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.1",
+										"-0.0099999998 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.02 * 0.1",
+										"0 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.01732 * 0.1",
+										"0.0099999998 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0.0099999998 * 0.1",
+										"0.01732 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.1",
+										"0.02 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.1",
+										"0.01732 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.1",
+										"0.0099999998 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.02 * 0.1",
+										"0 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.01732 * 0.1",
+										"-0.0099999998 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"-0.0099999998 * 0.1",
+										"-0.01732 * 0.1"
+									},
+									1
+								},
+
+								{
+									"Velocity_slip",
+									1,
+
+									{
+										"0 * 0.1",
+										"-0.02 * 0.1"
+									},
+									1
+								}
+							};
+						};
+					};
+					class GunCross_CIRCLE
+					{
+						type = "group";
+						class CCIP_circle
+						{
+							type = "line";
+							width = 4;
+							points[] =
+							{
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-1.2000 * 0.04",
+										"-0.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-1.0000 * 0.04",
+										"-0.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.9877 * 0.04",
+										"-0.1736 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.9397 * 0.04",
+										"-0.3420 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.8660 * 0.04",
+										"-0.5000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.7660 * 0.04",
+										"-0.6428 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.6428 * 0.04",
+										"-0.7660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.5000 * 0.04",
+										"-0.8660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.3420 * 0.04",
+										"-0.9397 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.1736 * 0.04",
+										"-0.9877 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.0000 * 0.04",
+										"-1.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.1736 * 0.04",
+										"-0.9877 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.3420 * 0.04",
+										"-0.9397 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.5000 * 0.04",
+										"-0.8660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.6428 * 0.04",
+										"-0.7660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.7660 * 0.04",
+										"-0.6428 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.8660 * 0.04",
+										"-0.5000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.9397 * 0.04",
+										"-0.3420 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.9877 * 0.04",
+										"-0.1736 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"1.0000 * 0.04",
+										"-0.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"1.2000 * 0.04",
+										"-0.0000 * 0.04"
+									},
+									1
+								},
+								{},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-1.2000 * 0.04",
+										"0.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-1.0000 * 0.04",
+										"0.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.9877 * 0.04",
+										"0.1736 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.9397 * 0.04",
+										"0.3420 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.8660 * 0.04",
+										"0.5000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.7660 * 0.04",
+										"0.6428 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.6428 * 0.04",
+										"0.7660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.5000 * 0.04",
+										"0.8660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.3420 * 0.04",
+										"0.9397 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.1736 * 0.04",
+										"0.9877 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.0000 * 0.04",
+										"1.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.1736 * 0.04",
+										"0.9877 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.3420 * 0.04",
+										"0.9397 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.5000 * 0.04",
+										"0.8660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.6428 * 0.04",
+										"0.7660 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.7660 * 0.04",
+										"0.6428 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.8660 * 0.04",
+										"0.5000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.9397 * 0.04",
+										"0.3420 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"0.9877 * 0.04",
+										"0.1736 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"1.0000 * 0.04",
+										"0.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"1.2000 * 0.04",
+										"0.0000 * 0.04"
+									},
+									1
+								},
+								{},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.0000 * 0.04",
+										"-1.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.0000 * 0.04",
+										"-1.2000 * 0.04"
+									},
+									1
+								},
+								{},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.0000 * 0.04",
+										"1.0000 * 0.04"
+									},
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+
+									{
+										"-0.0000 * 0.04",
+										"1.2000 * 0.04"
+									},
+									1
+								},
+								{},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+									{ 0.0049999999, 0 },
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+									{ -0.0049999999, 0 },
+									1
+								},
+								{},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+									{ 0, 0.0049999999 },
+									1
+								},
+
+								{
+									"ForwardVec",
+									1,
+									"PlaneOrientation",
+									1,
+									{ 0, -0.0049999999 },
+									1
+								}
+							};
+						};
+					};
+					class WeaponName
+					{
+						type = "text";
+						source = "weapon";
+						sourceScale = 1;
+						align = "right";
+						scale = 1;
+						pos[] =
+						{
+							{ 0.61000001, 0.86000001 },
+							1
+						};
+						right[] =
+						{
+							{ 0.64999998, 0.86000001 },
+							1
+						};
+						down[] =
+						{
+							{ 0.61000001, 0.89999998 },
+							1
+						};
+					};
+					class Ammo_ALL
+					{
+						type = "group";
+						condition = "on";
+						class Ammo_count_ALL
+						{
+							type = "text";
+							source = "ammo";
+							sourceScale = 1;
+							align = "right";
+							scale = 1;
+							pos[] =
+							{
+								{ 0.61000001, 0.88999999 },
+								1
+							};
+							right[] =
+							{
+								{ 0.64999998, 0.88999999 },
+								1
+							};
+							down[] =
+							{
+								{ 0.61000001, 0.93000001 },
+								1
+							};
+						};
+					};
+					class LightsGroup
+					{
+						type = "group";
+						condition = "lights";
+						class LightsText
+						{
+							type = "text";
+							source = "static";
+							text = "LIGHTS";
+							align = "right";
+							scale = 1;
+							pos[] =
+							{
+
+								{
+									0.029999999,
+									"0.53 + 0.055"
+								},
+								1
+							};
+							right[] =
+							{
+
+								{
+									0.07,
+									"0.53 + 0.055"
+								},
+								1
+							};
+							down[] =
+							{
+
+								{
+									0.029999999,
+									"0.53 + 0.095"
+								},
+								1
+							};
+						};
+					};
+					class CollisionLightsGroup
+					{
+						type = "group";
+						condition = "collisionlights";
+						class CollisionLightsText
+						{
+							type = "text";
+							source = "static";
+							text = "A-COL";
+							align = "right";
+							scale = 1;
+							pos[] =
+							{
+
+								{
+									0.029999999,
+									"0.53 + 0.105"
+								},
+								1
+							};
+							right[] =
+							{
+
+								{
+									0.07,
+									"0.53 + 0.105"
+								},
+								1
+							};
+							down[] =
+							{
+
+								{
+									0.029999999,
+									"0.53 + 0.145"
+								},
+								1
+							};
+						};
+					};
+					class ATMissileTOFGroup
+					{
+						condition = "ATmissile";
+						type = "group";
+						class TOFtext
+						{
+							type = "text";
+							align = "right";
+							source = "static";
+							text = "TOF=";
+							scale = 1;
+							pos[] =
+							{
+								{ 0.61000001, 0.92000002 },
+								1
+							};
+							right[] =
+							{
+								{ 0.64999998, 0.92000002 },
+								1
+							};
+							down[] =
+							{
+								{ 0.61000001, 0.95999998 },
+								1
+							};
+						};
+						class TOFnumber
+						{
+							type = "text";
+							source = "targetDist";
+							sourcescale = 0.0024999999;
+							align = "right";
+							scale = 1;
+							pos[] =
+							{
+								{ 0.69, 0.92000002 },
+								1
+							};
+							right[] =
+							{
+								{ 0.73000002, 0.92000002 },
+								1
+							};
+							down[] =
+							{
+								{ 0.69, 0.95999998 },
+								1
+							};
+						};
+					};
+					class RangeNumber
+					{
+						type = "text";
+						source = "targetDist";
+						sourceScale = 1;
+						align = "left";
+						scale = 1;
+						pos[] =
+						{
+							{ 0.38999999, 0.88999999 },
+							1
+						};
+						right[] =
+						{
+							{ 0.43000001, 0.88999999 },
+							1
+						};
+						down[] =
+						{
+							{ 0.38999999, 0.93000001 },
+							1
+						};
+					};
+					class RangeText
+					{
+						type = "text";
+						source = "static";
+						text = "RNG";
+						align = "left";
+						scale = 1;
+						pos[] =
+						{
+							{ 0.38999999, 0.86000001 },
+							1
+						};
+						right[] =
+						{
+							{ 0.43000001, 0.86000001 },
+							1
+						};
+						down[] =
+						{
+							{ 0.38999999, 0.89999998 },
+							1
+						};
+					};
+					class SpeedNumber
+					{
+						type = "text";
+						align = "right";
+						scale = 1;
+						source = "speed";
+						sourceScale = 3.5999999;
+						pos[] =
+						{
+							{ 0.029999999, 0.47499999 },
+							1
+						};
+						right[] =
+						{
+							{ 0.079999998, 0.47499999 },
+							1
+						};
+						down[] =
+						{
+							{ 0.029999999, 0.52499998 },
+							1
+						};
+					};
+					class TorqueNumber
+					{
+						condition = "simulRTD";
+						class Torque_number
+						{
+							type = "text";
+							align = "left";
+							scale = 1;
+							source = "rtdRotorTorque";
+							sourceScale = 363;
+							pos[] =
+							{
+								{ 0.064999998, 0.175 },
+								1
+							};
+							right[] =
+							{
+								{ 0.115, 0.175 },
+								1
+							};
+							down[] =
+							{
+								{ 0.064999998, 0.22499999 },
+								1
+							};
+						};
+						class Torquetext
+						{
+							type = "text";
+							source = "static";
+							text = "%";
+							align = "right";
+							scale = 1;
+							pos[] =
+							{
+								{ 0.07, 0.175 },
+								1
+							};
+							right[] =
+							{
+								{ 0.12, 0.175 },
+								1
+							};
+							down[] =
+							{
+								{ 0.07, 0.22499999 },
+								1
+							};
+						};
+					};
+					class AltNumber : SpeedNumber
+					{
+						align = "right";
+						source = "altitudeAGL";
+						sourceScale = 1;
+						pos[] =
+						{
+							{ 0.82999998, 0.47499999 },
+							1
+						};
+						right[] =
+						{
+							{ 0.88, 0.47499999 },
+							1
+						};
+						down[] =
+						{
+							{ 0.82999998, 0.52499998 },
+							1
+						};
+					};
+					class ASLNumber
+					{
+						type = "text";
+						source = "altitudeASL";
+						sourceScale = 1;
+						align = "right";
+						scale = 1;
+						pos[] =
+						{
+							{ 0.83499998, 0.18000001 },
+							1
+						};
+						right[] =
+						{
+							{ 0.875, 0.18000001 },
+							1
+						};
+						down[] =
+						{
+							{ 0.83499998, 0.22 },
+							1
+						};
+					};
+					class VspeedScalePosta
+					{
+						type = "line";
+						width = 5;
+						points[] =
+						{
+
+							{
+								{ 0.98000002, 0.2 },
+								1
+							},
+
+							{
+								{ 1, 0.2 },
+								1
+							},
+							{},
+
+							{
+								{ 0.93000001, 0.2 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.2 },
+								1
+							},
+							{},
+
+							{
+								{ 0.98000002, 0.34999999 },
+								1
+							},
+
+							{
+								{ 1, 0.34999999 },
+								1
+							},
+							{},
+
+							{
+								{ 0.93000001, 0.34999999 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.34999999 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.38 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.38 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.41 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.41 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.44 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.44 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.47 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.47 },
+								1
+							},
+							{},
+
+							{
+								{ 0.98000002, 0.5 },
+								1
+							},
+
+							{
+								{ 1, 0.5 },
+								1
+							},
+							{},
+
+							{
+								{ 0.93000001, 0.5 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.5 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.52999997 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.52999997 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.56 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.56 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.58999997 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.58999997 },
+								1
+							},
+							{},
+
+							{
+								{ 0.94, 0.62 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.62 },
+								1
+							},
+							{},
+
+							{
+								{ 0.98000002, 0.64999998 },
+								1
+							},
+
+							{
+								{ 1, 0.64999998 },
+								1
+							},
+							{},
+
+							{
+								{ 0.93000001, 0.64999998 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.64999998 },
+								1
+							},
+							{},
+
+							{
+								{ 0.99000001, 0.68000001 },
+								1
+							},
+
+							{
+								{ 0.98000002, 0.68000001 },
+								1
+							},
+							{},
+
+							{
+								{ 0.99000001, 0.70999998 },
+								1
+							},
+
+							{
+								{ 0.98000002, 0.70999998 },
+								1
+							},
+							{},
+
+							{
+								{ 0.99000001, 0.74000001 },
+								1
+							},
+
+							{
+								{ 0.98000002, 0.74000001 },
+								1
+							},
+							{},
+
+							{
+								{ 0.99000001, 0.76999998 },
+								1
+							},
+
+							{
+								{ 0.98000002, 0.76999998 },
+								1
+							},
+							{},
+
+							{
+								{ 0.98000002, 0.80000001 },
+								1
+							},
+
+							{
+								{ 1, 0.80000001 },
+								1
+							},
+							{},
+
+							{
+								{ 0.93000001, 0.80000001 },
+								1
+							},
+
+							{
+								{ 0.94999999, 0.80000001 },
+								1
+							},
+							{}
+						};
+					};
+					class RadarAltitudeBand
+					{
+						clipTL[] = { 0, 0.2 };
+						clipBR[] = { 1, 0.80000001 };
+						class radarbanda
+						{
+							type = "line";
+							width = 17;
+							points[] =
+							{
+
+								{
+									"RadarAltitudeBone",
+									{ 0, 0 },
+									1
+								},
+
+								{
+									"RadarAltitudeBone",
+									{ 0, 0.60000002 },
+									1
+								}
+							};
+						};
+					};
+					class VspeedBand
+					{
+						type = "line";
+						width = 3;
+						points[] =
+						{
+
+							{
+								"VspeedBone",
+								{ -0.0099999998, 0 },
+								1
+							},
+
+							{
+								"VspeedBone",
+								{ -0.025, -0.015 },
+								1
+							},
+
+							{
+								"VspeedBone",
+								{ -0.025, 0.015 },
+								1
+							},
+
+							{
+								"VspeedBone",
+								{ -0.0099999998, 0 },
+								1
+							},
+							{}
+						};
+					};
+					class HeadingNumber : SpeedNumber
+					{
+						source = "heading";
+						sourceScale = 1;
+						align = "center";
+						pos[] =
+						{
+							{ 0.5, 0.0099999998 },
+							1
+						};
+						right[] =
+						{
+							{ 0.56, 0.0099999998 },
+							1
+						};
+						down[] =
+						{
+							{ 0.5, 0.059999999 },
+							1
+						};
+					};
+					class Center_box
+					{
+						type = "line";
+						width = 3;
+						points[] =
+						{
+
+							{
+								{ 0.44, 0.0049999999 },
+								1
+							},
+
+							{
+
+								{
+									"0.44 + 0.12",
+									0.0049999999
+								},
+								1
+							},
+
+							{
+
+								{
+									"0.44 + 0.12",
+									"0.005 + 0.06"
+								},
+								1
+							},
+
+							{
+
+								{
+									0.44,
+									"0.005 + 0.06"
+								},
+								1
+							},
+
+							{
+								{ 0.44, 0.0049999999 },
+								1
+							}
+						};
+					};
+					class HeadingArrow
+					{
+						type = "line";
+						width = 7;
+						points[] =
+						{
+
+							{
+
+								{
+									"0.5",
+									"0.128 + 0.03"
+								},
+								1
+							},
+
+							{
+								{ 0.5, 0.12800001 },
+								1
+							}
+						};
+					};
+					class HeadingScale
+					{
+						type = "scale";
+						horizontal = 1;
+						source = "heading";
+						sourceScale = 1;
+						width = 5;
+						top = 0.12;
+						center = 0.5;
+						bottom = 0.88;
+						lineXleft = "0.03 + 0.085";
+						lineYright = "0.02 + 0.085";
+						lineXleftMajor = "0.04 + 0.085";
+						lineYrightMajor = "0.02 + 0.085";
+						majorLineEach = 3;
+						numberEach = 3;
+						step = 10;
+						stepSize = "0.05";
+						align = "center";
+						scale = 1;
+						pos[] =
+						{
+							0.119,
+							"0.0 + 0.065"
+						};
+						right[] =
+						{
+							0.15899999,
+							"0.0 + 0.065"
+						};
+						down[] =
+						{
+							0.119,
+							"0.04 + 0.065"
+						};
+					};
+					class Fuel_Text
+					{
+						type = "text";
+						source = "static";
+						text = "Fuel";
+						align = "right";
+						scale = 1;
+						pos[] =
+						{
+							{ 0.029999999, 0.89999998 },
+							1
+						};
+						right[] =
+						{
+							{ 0.07, 0.89999998 },
+							1
+						};
+						down[] =
+						{
+							{ 0.029999999, 0.94 },
+							1
+						};
+					};
+					class Fuel_Number
+					{
+						type = "text";
+						source = "fuel";
+						sourceScale = 100;
+						align = "right";
+						scale = 1;
+						pos[] =
+						{
+							{ 0.1, 0.89999998 },
+							1
+						};
+						right[] =
+						{
+							{ 0.14, 0.89999998 },
+							1
+						};
+						down[] =
+						{
+							{ 0.1, 0.94 },
+							1
+						};
+					};
+				};
+				helmetMountedDisplay = 1;
+				helmetPosition[] = { -0.039999999, 0.039999999, 0.1 };
+				helmetRight[] = { 0.079999998, 0, 0 };
+				helmetDown[] = { 0, -0.079999998, 0 };
+			};
+			class Kimi_HUD_2
+			{
+				topLeft = "HUD_top_left";
+				topRight = "HUD_top_right";
+				bottomLeft = "HUD_bottom_left";
+				borderLeft = 0;
+				borderRight = 0;
+				borderTop = 0;
+				borderBottom = 0;
+				color[] = { 0.15000001, 1, 0.15000001, 1 };
+				enableParallax = 0;
+				class Bones
+				{
+					class Velocity
+					{
+						type = "vector";
+						source = "velocity";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.75, 0.75 };
+					};
+					class ForwardVec1
+					{
+						type = "vector";
+						source = "forward";
+						pos0[] = { 0, 0 };
+						pos10[] = { 0.25, 0.25 };
+					};
+					class ForwardVec
+					{
+						type = "vector";
+						source = "forward";
+						pos0[] = { 0, 0 };
+						pos10[] = { 0.25299999, 0.25299999 };
+					};
+					class WeaponAim
+					{
+						type = "vector";
+						source = "weapon";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.75300002, 0.75300002 };
+					};
+					class WeaponAim1
+					{
+						type = "vector";
+						source = "weapon";
+						pos0[] = { 0, 0 };
+						pos10[] = { 0.25299999, 0.23 };
+					};
+					class Target
+					{
+						type = "vector";
+						source = "target";
+						pos0[] = { 0.5, 0.5 };
+						pos10[] = { 0.75300002, 0.75300002 };
+					};
+					class RadarContact
+					{
+						type = "fixed";
+						pos[] = { 0, 0 };
+					};
+				};
+				class Draw
+				{
+					color[] = { 0.18000001, 1, 0.18000001 };
+					alpha = 1;
+					condition = "on";
+					class PlaneMovementCrosshair
+					{
+						type = "line";
+						width = 7;
+						points[] =
+						{
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0, -0.02 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.0099999998, -0.01732 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.01732, -0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.02, 0 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.01732, 0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.0099999998, 0.01732 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0, 0.02 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.0099999998, 0.01732 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.01732, 0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.02, 0 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.01732, -0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.0099999998, -0.01732 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0, -0.02 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.039999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0.02, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.039999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ -0.02, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0, -0.039999999 },
+								1
+							},
+
+							{
+								"ForwardVec1",
+								1,
+								"Velocity",
+								1,
+								{ 0, -0.02 },
+								1
+							}
+						};
+					};
+					class Gunner_AIM
+					{
+						type = "line";
+						width = 7;
+						points[] =
+						{
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, -0.02 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, -0.0099999998 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, -0.022500001 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, -0.032499999 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, 0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, 0.02 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, 0.022500001 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0, 0.032499999 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ -0.02, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ -0.0099999998, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ -0.022500001, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ -0.032499999, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0.0099999998, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0.02, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0.022500001, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"WeaponAim",
+								1,
+								{ 0.032499999, 0 },
+								1
+							}
+						};
+					};
+					class TargetACQ
+					{
+						type = "line";
+						width = 2;
+						points[] =
+						{
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.059999999 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.055 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.050000001 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.045000002 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.039999999 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.035 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.029999999 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.025 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.02 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.015 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, -0.0049999999 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.059999999 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.055 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.050000001 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.045000002 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.039999999 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.035 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.029999999 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.025 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.02 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.015 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.0099999998 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0, 0.0049999999 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.059999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.055, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.050000001, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.045000002, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.039999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.035, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.029999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.025, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.02, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.015, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.0099999998, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ -0.0049999999, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.059999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.055, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.050000001, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.045000002, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.039999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.035, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.029999999, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.025, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.02, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.015, 0 },
+								1
+							},
+							{},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.0099999998, 0 },
+								1
+							},
+
+							{
+								"ForwardVec",
+								1,
+								"target",
+								{ 0.0049999999, 0 },
+								1
+							},
+							{}
+						};
+					};
+				};
+				helmetMountedDisplay = 1;
+				helmetPosition[] = { -0.035, 0.035, 0.1 };
+				helmetRight[] = { 0.07, 0, 0 };
+				helmetDown[] = { 0, -0.07, 0 };
+			};
+		};
+		_generalMacro = "CUP_B_AW159_Cannon_GB";
+		faction = "GOL_AAC_INDEP";
+		editorSubcategory="GOL_AAC_ANGEL";
+		selectionFireAnim = "zasleh";
+		hiddenSelections[] =
+		{
+			"camo1",
+			"camo2"
+		};
+		class AnimationSources : AnimationSources
+		{
+			class ReloadMGAnim
+			{
+				source = "reload";
+				weapon = "M621";
+			};
+		};
+		weapons[] =
+		{
+			"FIR_MasterArm",
+			"M621",
+			"JAS_CUP_Vmlauncher_CRV7_FAT_veh",
+			"FIR_CMLauncher"
+		};
+		magazines[] =
+		{
+			"1200Rnd_20mm_M621",
+			"JAS_CUP_12Rnd_CRV7_FAT_M",
+			"FIR_240rnd_CMFlare_Chaff_Magazine"
+		};
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+			};
+			class CargoTurret_01 : CargoTurret_01
+			{
+			};
+			class CargoTurret_02 : CargoTurret_02
+			{
+			};
+		};
+		class UserActions
+		{
+			class Pimfdpip1ON
+			{
+				displayName = "<t color='#ffff00'>Turn On FLIR MFD</t>";
+				displayNameDefault = "";
+				position = "";
+				radius = 3.5999999;
+				onlyForplayer = 1;
+				condition = "this animationPhase ""copip6"" < 0.5 AND (player == (driver this) && (alive this))";
+				statement = "this animate [""copip6"",1];";
+				priority = 9;
+			};
+			class Pimfdpip1OFF
+			{
+				displayName = "<t color='#ffff00'>Turn Off FLIR MFD</t>";
+				displayNameDefault = "";
+				position = "";
+				radius = 3.5999999;
+				onlyForplayer = 1;
+				condition = "this animationPhase ""copip6"" > 0.5 AND (player == (driver this) && (alive this))";
+				statement = "this animate [""copip6"",0];";
+				priority = 9;
+			};
+			class PimfdpipON
+			{
+				displayName = "<t color='#ffff00'>Turn On FLIR MFD</t>";
+				displayNameDefault = "";
+				position = "";
+				radius = 3.5999999;
+				onlyForplayer = 1;
+				condition = "this animationPhase ""copip4"" < 0.5 AND (player == (gunner this) && (alive this)) ";
+				statement = "this animate [""copip4"",1];";
+				priority = 9;
+			};
+			class PimfdpipOFF
+			{
+				displayName = "<t color='#ffff00'>Turn Off FLIR MFD</t>";
+				displayNameDefault = "";
+				position = "";
+				radius = 3.5999999;
+				onlyForplayer = 1;
+				condition = "this animationPhase ""copip4"" > 0.5 AND (player == (gunner this) && (alive this))";
+				statement = "this animate [""copip4"",0];";
+				priority = 9;
+			};
+			class OpenRdoor
+			{
+				displayName = "<t color='#FF0000'>Open Right Door</t>";
+				displayNameDefault = "";
+				position = "door_right_axis_beg";
+				radius = 3.7;
+				onlyForplayer = 0;
+				priority = 0;
+				condition = "this doorPhase ""CargoDoorR"" < 0.5 AND ((this getCargoIndex player) isEqualTo 0)";
+				statement = "this animateDoor [""CargoDoorR"",1];";
+			};
+			class CloseRdoor
+			{
+				displayName = "<t color='#FF0000'>Close Right Door</t>";
+				displayNameDefault = "";
+				position = "door_right_axis_beg";
+				radius = 3.7;
+				onlyForplayer = 0;
+				priority = 0;
+				condition = "this doorPhase ""CargoDoorR"" > 0.5 AND ((this getCargoIndex player) isEqualTo 0)";
+				statement = "this animateDoor [""CargoDoorR"",0];";
+			};
+			class OpenLdoor
+			{
+				displayName = "<t color='#FF0000'>Open Left Door</t>";
+				displayNameDefault = "";
+				position = "door_left_axis_beg";
+				radius = 3.7;
+				onlyForplayer = 0;
+				priority = 0;
+				condition = "this doorPhase ""CargoDoorL"" < 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
+				statement = "this animateDoor [""CargoDoorL"",1];";
+			};
+			class CloseLdoor
+			{
+				displayName = "<t color='#FF0000'>Close Left Door</t>";
+				displayNameDefault = "";
+				position = "door_left_axis_beg";
+				radius = 3.7;
+				onlyForplayer = 0;
+				priority = 0;
+				condition = "this doorPhase ""CargoDoorL"" > 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
+				statement = "this animateDoor [""CargoDoorL"",0];";
+			};
+			class Pack
+			{
+				displayName = "Pack";
+				displayNameDefault = "Pack";
+				position = "PackAction";
+				radius = 10;
+				onlyForPlayer = 1;
+				condition = "(!isEngineOn this) AND {(this animationphase 'mainRotor_unfolded' !=1) AND (driver this == player) AND (speed this < 1)}";
+				statement = "[this,1] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
+			};
+			class unPack
+			{
+				displayName = "UnPack";
+				displayNameDefault = "Unpack";
+				position = "PackAction";
+				radius = 10;
+				onlyForPlayer = 1;
+				condition = "this animationphase ""mainRotor_unfolded"" !=0 AND driver this == player";
+				statement = "[this,0] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
+			};
+			class Skin_Gui_Open
+			{
+				displayName = "<t color='#739eff'>Skin Selection</t>";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User6";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				statement = "this execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\setskin_open.sqf""";
+				onlyforplayer = "false";
+				priority = 6;
+			};
+		};
 	};
 };

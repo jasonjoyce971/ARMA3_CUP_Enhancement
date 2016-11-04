@@ -754,14 +754,14 @@ _sidearmcount = {_x == "JAS_AGM122_1rnd_M"} count magazines _plane;
 
 if (_windercount >= 1) then
 {
-	_plane addweaponturret ["FIR_AIM9L",[-1]];
-	_counter9m = 0;
+	_plane addweaponturret ["FIR_AIM9L",[0]];
+	/* _counter9m = 1;
 
 	while {_counter9m < _windercount} do
 	{
 		_counter9m = _counter9m + 1;
-		_plane addmagazineturret ["FIR_AIM9L_1rnd_M",[-1]];
-	};
+		_plane addmagazineturret ["FIR_AIM9L_1rnd_M",[0]];
+	}; */
 	
 };
 

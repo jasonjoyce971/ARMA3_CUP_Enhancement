@@ -659,111 +659,6 @@ class AH6_GUI
 		};
 	};
 };
-class AAC_Texture_GUI
-{
-	idd=9914;
-	movingenable="false";
-	class controls
-	{
-		class RscFrame_1800: RscFrame
-		{
-			idc=1800;
-			x="0.22 * safezoneW + safezoneX";
-			y="0.206 * safezoneH + safezoneY";
-			w="0.525 * safezoneW";
-			h="0.504 * safezoneH";
-		};
-		class setskin_background: RscPicture
-		{
-			idc=1900;
-			x="0.22 * safezoneW + safezoneX";
-			y="0.206 * safezoneH + safezoneY";
-			w="0.525 * safezoneW";
-			h="0.504 * safezoneH";
-			text="FIR_AirWeaponSystem_US\ui\background_skin.paa";
-		};
-		class RscText_1000: RscText
-		{
-			idc=1000;
-			text="Select Texture";
-			x="0.22875 * safezoneW + safezoneX";
-			y="0.234 * safezoneH + safezoneY";
-			w="0.105 * safezoneW";
-			h="0.028 * safezoneH";
-		};
-		class Texture_Text: RscText
-		{
-			idc=1001;
-			text="";
-			x="0.59625 * safezoneW + safezoneX";
-			y="0.234 * safezoneH + safezoneY";
-			w="0.13125 * safezoneW";
-			h="0.028 * safezoneH";
-		};
-		class texture_preview: RscPicture
-		{
-			idc=1980;
-			text="#(argb,8,8,3)color(1,1,1,1)";
-			x="0.3425 * safezoneW + safezoneX";
-			y="0.262 * safezoneH + safezoneY";
-			w="0.385 * safezoneW";
-			h="0.336 * safezoneH";
-		};
-		class texture_combo: RscCombo
-		{
-			idc=2160;
-			x="0.2375 * safezoneW + safezoneX";
-			y="0.262 * safezoneH + safezoneY";
-			w="0.0875 * safezoneW";
-			h="0.028 * safezoneH";
-			onLBSelChanged="_changehandle = execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\change_preview.sqf"";";
-		};
-		class apply_btn_pic: RscPicture
-		{
-			idc=1700;
-			text="FIR_AirWeaponSystem_US\ui\button_apply.paa";
-			x="0.57 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-		};
-		class apply_btn: RscButton
-		{
-			idc=1600;
-			text="";
-			x="0.57 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-			colorText[]={-1,-1,-1,-1};
-			colorBackground[]={-1,-1,-1,-1};
-			colorActive[]={-1,-1,-1,-1};
-			action="_applyhandle = execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\change_skin.sqf"";";
-		};
-		class cancel_btn_pic: RscPicture
-		{
-			idc=1701;
-			text="FIR_AirWeaponSystem_US\ui\button_cancel.paa";
-			x="0.6575 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-		};
-		class cancel_btn: RscButton
-		{
-			idc=1601;
-			text="";
-			x="0.6575 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-			colorText[]={-1,-1,-1,-1};
-			colorBackground[]={-1,-1,-1,-1};
-			colorActive[]={-1,-1,-1,-1};
-			action="closeDialog 0";
-		};
-	};
-};
 class CfgVehicles
 {
 	class Logic;
@@ -890,7 +785,7 @@ class CfgVehicles
 		//faction = "CUP_B_US_Army";
 		slingLoadMemoryPoint = "slingLoad0";
 		slingLoadMaxCargoMass = 1400;
-		liftForceCoef = 1.5;
+		liftForceCoef = 2.5;
 		tf_RadioType_api = "tf_anarc210";
 		tf_hasLRradio_api = 1;
 		tf_isolatedAmount_api = 0.2;
@@ -2731,6 +2626,75 @@ class CfgVehicles
 			};
 		};
 	};
+	class JAS_CUP_I_AH6J_AAC : JAS_CUP_AH6_BASE
+	{
+		scope = 2;
+		side = 2;
+		faction="GOL_AAC_INDEP";
+		editorSubcategory="GOL_AAC_ANGEL";
+		displayName = "AH-6J/J";
+		crew = "CUP_I_RACS_Pilot";
+		fir_ah6US_custom_skin=0;
+		fir_ah6US_custom_name="AH-6 RACS";
+		fir_ah6US_custom_code="JAS_CUP_I_AH6J_RACS";
+		fir_ah6US_custom_preview_pic="\ARMA3_CUP_Enhancement_H6\UI\preview\AH6RACS.paa";
+		editorPreview = "\ARMA3_CUP_Enhancement_H6\UI\editorpreview\AH6RACS.jpg";
+		typicalCargo[] =
+		{
+			"CUP_I_RACS_Pilot"
+		};
+		author = "CUP/-{GOL}-Jason";
+		dlc = "CUP_Vehicles";
+		weapons[] =
+		{
+			"FIR_MasterArm",
+			"CUP_Vlmg_TwinM134_veh",
+			"FIR_CMLauncher"
+		};
+		magazines[] =
+		{
+			"CUP_2000Rnd_TE1_Red_Tracer_762x51_M134_M",
+			"FIR_240rnd_CMFlare_Chaff_Magazine"
+		};
+		class Turrets : Turrets
+		{
+			class CopilotTurret : CopilotTurret
+			{
+				weapons[] =
+				{
+					"Laserdesignator_mounted"
+				};
+				magazines[] =
+				{
+					"Laserbatteries"
+				};
+			};
+		};
+		hiddenSelections[] =
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"CUP\AirVehicles\CUP_AirVehicles_AH6\data\ah6_merge1_racs_co.paa",
+			"CUP\AirVehicles\CUP_AirVehicles_AH6\data\ah6_merge2racs_co.paa"
+		};
+		class UserActions
+		{
+			class AH6J_Gui_Open
+			{
+				displayName = "<t color='#739eff'>Open Dialog</t>";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User6";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				statement = "this execVM ""\ARMA3_CUP_Enhancement_H6\sqs\loadout\AH6_GUI_Open.sqf""";
+				onlyforplayer = "false";
+				priority = 6;
+			};
+		};
+	};
 	class JAS_CUP_B_MH6J_SOAR : JAS_CUP_AH6_BASE
 	{
 		author = "CUP/-{GOL}-Jason";
@@ -3254,6 +3218,178 @@ class CfgVehicles
 		faction = "CUP_I_RACS";
 		crew = "CUP_I_RACS_Pilot";
 		fir_ah6US_custom_skin=2;
+		fir_ah6US_custom_name="MH-6 RACS";
+		fir_ah6US_custom_code="JAS_CUP_I_MH6J_RACS";
+		fir_ah6US_custom_preview_pic="\ARMA3_CUP_Enhancement_H6\UI\preview\USGrey.paa";
+		editorPreview = "\ARMA3_CUP_Enhancement_H6\UI\editorpreview\MH6RACS.jpg";
+		typicalCargo[] =
+		{
+			"CUP_I_RACS_Pilot"
+		};
+		scope = 2;
+		displayName = "MH-6J/J Littlebird";
+		model = "\CUP\AirVehicles\CUP_AirVehicles_AH6\CUP_mh6j.p3d";
+		picture = "\CUP\AirVehicles\CUP_AirVehicles_AH6\data\UI\Picture_mh6j_CA.paa";
+		icon = "\CUP\AirVehicles\CUP_AirVehicles_AH6\data\UI\Icon_mh6j_CA.paa";
+		transportSoldier = 0;
+		weapons[] =
+		{
+			"FIR_CMLauncher"
+		};
+		magazines[] =
+		{
+			"FIR_240rnd_CMFlare_Chaff_Magazine"
+		};
+		class Turrets : Turrets
+		{
+			class CopilotTurret : CopilotTurret
+			{
+				weapons[] =
+				{
+					"Laserdesignator_mounted"
+				};
+				magazines[] =
+				{
+					"Laserbatteries"
+				};
+			};
+			class CargoTurret_01 : CargoTurret
+			{
+				gunnerAction = "passenger_bench_1";
+				gunnerCompartments = "Compartment8";
+				memoryPointsGetInGunner = "pos cargo right 1";
+				memoryPointsGetInGunnerDir = "pos cargo dir right 1";
+				gunnerName = "Passenger (Right Bench 1)";
+				proxyIndex = 1;
+				maxElev = 15;
+				minElev = -87;
+				maxTurn = 105;
+				minTurn = -60;
+				isPersonTurret = 1;
+				ejectDeadGunner = 0;
+				enabledByAnimationSource = "";
+			};
+			class CargoTurret_02 : CargoTurret_01
+			{
+				gunnerAction = "passenger_bench_1";
+				gunnerCompartments = "Compartment8";
+				memoryPointsGetInGunner = "pos cargo right 2";
+				memoryPointsGetInGunnerDir = "pos cargo dir right 2";
+				gunnerName = "Passenger (Right Bench 2)";
+				proxyIndex = 2;
+				maxElev = 15;
+				minElev = -87;
+				maxTurn = 60;
+				minTurn = -90;
+				isPersonTurret = 1;
+				ejectDeadGunner = 0;
+				enabledByAnimationSource = "";
+			};
+			class CargoTurret_03 : CargoTurret_01
+			{
+				gunnerAction = "passenger_bench_1";
+				gunnerCompartments = "Compartment8";
+				memoryPointsGetInGunner = "pos cargo right 3";
+				memoryPointsGetInGunnerDir = "pos cargo dir right 3";
+				gunnerName = "Passenger (Right Bench 3)";
+				proxyIndex = 3;
+				maxElev = 15;
+				minElev = -87;
+				maxTurn = 60;
+				minTurn = -90;
+				isPersonTurret = 1;
+				ejectDeadGunner = 0;
+				enabledByAnimationSource = "";
+			};
+			class CargoTurret_04 : CargoTurret_01
+			{
+				gunnerAction = "passenger_bench_1";
+				gunnerCompartments = "Compartment7";
+				memoryPointsGetInGunner = "pos cargo left 1";
+				memoryPointsGetInGunnerDir = "pos cargo dir left 1";
+				gunnerName = "Passenger (Left Bench 1)";
+				proxyIndex = 4;
+				maxElev = 15;
+				minElev = -87;
+				maxTurn = 60;
+				minTurn = -105;
+				isPersonTurret = 1;
+				ejectDeadGunner = 0;
+				enabledByAnimationSource = "";
+			};
+			class CargoTurret_05 : CargoTurret_01
+			{
+				gunnerAction = "passenger_bench_1";
+				gunnerCompartments = "Compartment7";
+				memoryPointsGetInGunner = "pos cargo left 2";
+				memoryPointsGetInGunnerDir = "pos cargo dir left 2";
+				gunnerName = "Passenger (Left Bench 2)";
+				proxyIndex = 5;
+				maxElev = 15;
+				minElev = -87;
+				maxTurn = 90;
+				minTurn = -60;
+				isPersonTurret = 1;
+				ejectDeadGunner = 0;
+				enabledByAnimationSource = "";
+			};
+			class CargoTurret_06 : CargoTurret_01
+			{
+				gunnerAction = "passenger_bench_1";
+				gunnerCompartments = "Compartment7";
+				memoryPointsGetInGunner = "pos cargo left 3";
+				memoryPointsGetInGunnerDir = "pos cargo dir left 3";
+				gunnerName = "Passenger (Left Bench 3)";
+				proxyIndex = 6;
+				maxElev = 15;
+				minElev = -87;
+				maxTurn = 90;
+				minTurn = -60;
+				isPersonTurret = 1;
+				ejectDeadGunner = 0;
+				enabledByAnimationSource = "";
+			};
+		};
+		hiddenSelections[] =
+		{
+			"camo1",
+			"camo2"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"CUP\AirVehicles\CUP_AirVehicles_AH6\data\ah6_merge1_racs_co.paa",
+			"CUP\AirVehicles\CUP_AirVehicles_AH6\data\ah6_merge2racs_co.paa"
+		};
+		ace_fastroping_enabled = 1;
+		ace_fastroping_ropeOrigins[] = {{1.15,1.0,0.25},{-1.15,1.0,0.25}};
+		class eventhandlers
+		{
+			Init = "AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_MH6J_RACS',[[1.15,1.0,0.25],[-1.15,1.0,0.25]]]];";
+		};
+		class UserActions
+		{
+			class Skin_Gui_Open
+			{
+				displayName = "<t color='#739eff'>Skin Selection</t>";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User6";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				statement = "this execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\setskin_open.sqf""";
+				onlyforplayer = "false";
+				priority = 6;
+			};
+		};
+	};
+	class JAS_CUP_I_MH6J_AAC : JAS_CUP_AH6_BASE
+	{
+		author = "CUP/-{GOL}-Jason";
+		dlc = "CUP_Vehicles";
+		side = 2;
+		faction="GOL_AAC_INDEP";
+		editorSubcategory="GOL_AAC_RAVEN";
+		crew = "CUP_I_RACS_Pilot";
+		fir_ah6US_custom_skin=0;
 		fir_ah6US_custom_name="MH-6 RACS";
 		fir_ah6US_custom_code="JAS_CUP_I_MH6J_RACS";
 		fir_ah6US_custom_preview_pic="\ARMA3_CUP_Enhancement_H6\UI\preview\USGrey.paa";

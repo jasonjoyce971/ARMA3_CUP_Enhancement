@@ -12,6 +12,90 @@ disableSerialization;
 _mydisplay = findDisplay 9914;
 _myctrl = _mydisplay displayCtrl 2160;
 
+if (_plane iskindof "JAS_CUP_Mi35_Base") then
+{
+	{
+		_num = getnumber (_x >> "fir_MI35_custom_skin");
+		if (_num == 1) then
+		{
+			_myctrl lbAdd getText (_x >> "fir_MI35_custom_code");
+			_myctrl lbSetData [_foreachindex, getText (_x >> "fir_MI35_custom_code")];
+		};
+
+	} forEach ("isClass _x" configClasses (configFile >> "CfgVehicles"));
+};
+if (_plane iskindof "JAS_CUP_Mi24_V_Base") then
+{
+	{
+		_num = getnumber (_x >> "fir_MI24V_custom_skin");
+		if (_num == 1) then
+		{
+			_myctrl lbAdd getText (_x >> "fir_MI24V_custom_code");
+			_myctrl lbSetData [_foreachindex, getText (_x >> "fir_MI24V_custom_code")];
+		};
+
+	} forEach ("isClass _x" configClasses (configFile >> "CfgVehicles"));
+};
+if (_plane iskindof "JAS_CUP_Mi24_P_Base") then
+{
+	{
+		_num = getnumber (_x >> "fir_MI24P_custom_skin");
+		if (_num == 1) then
+		{
+			_myctrl lbAdd getText (_x >> "fir_MI24P_custom_code");
+			_myctrl lbSetData [_foreachindex, getText (_x >> "fir_MI24P_custom_code")];
+		};
+
+	} forEach ("isClass _x" configClasses (configFile >> "CfgVehicles"));
+};
+if (_plane iskindof "JAS_CUP_Mi24_D_Base") then
+{
+	{
+		_num = getnumber (_x >> "fir_MI24D_custom_skin");
+		if (_num == 1) then
+		{
+			_myctrl lbAdd getText (_x >> "fir_MI24D_custom_code");
+			_myctrl lbSetData [_foreachindex, getText (_x >> "fir_MI24D_custom_code")];
+		};
+
+	} forEach ("isClass _x" configClasses (configFile >> "CfgVehicles"));
+};
+if (_plane iskindof "JAS_CUP_Mi171Sh_Base") then
+{
+	{
+		_num = getnumber (_x >> "fir_MI17_custom_skin");
+		if (_num == 1) then
+		{
+			_myctrl lbAdd getText (_x >> "fir_MI17_custom_code");
+			_myctrl lbSetData [_foreachindex, getText (_x >> "fir_MI17_custom_code")];
+		};
+
+	} forEach ("isClass _x" configClasses (configFile >> "CfgVehicles"));
+};
+if (_plane iskindof "JAS_CUP_Mi8_MTV3_base") then
+{
+	{
+		_num = getnumber (_x >> "fir_MI8_custom_skin");
+		if (_num == 1) then
+		{
+			_myctrl lbAdd getText (_x >> "fir_MI8_custom_code");
+			_myctrl lbSetData [_foreachindex, getText (_x >> "fir_MI8_custom_code")];
+		};
+
+	} forEach ("isClass _x" configClasses (configFile >> "CfgVehicles"));
+};
+if (_plane iskindof "JAS_CUP_L39_base") then
+{
+	{
+		_num = getnumber (_x >> "fir_L39_custom_skin");
+		if (_num == 1) then
+		{
+			_myctrl lbAdd getText (_x >> "fir_L39_custom_code");
+			_myctrl lbSetData [_foreachindex, getText (_x >> "fir_L39_custom_code")];
+		};
+
+	} forEach ("isClass _x" configClasses (configFile >> "CfgVehicles"));
+};
 if (_plane iskindof "JAS_CUP_KA50_Base") then
 {
 	{

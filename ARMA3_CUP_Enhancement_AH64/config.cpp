@@ -7,7 +7,9 @@ class CfgPatches
 			"JAS_CUP_B_AH64D_USA",
 			"JAS_CUP_B_AH1_BAF",
 			"JAS_CUP_B_AH64D_AAC",
-			"JAS_CUP_B_AH1_BAF_AAC"
+			"JAS_CUP_B_AH1_BAF_AAC",
+			"JAS_AH64_Loadout_Module",
+			"JAS_AH64UK_Loadout_Module"
 		};
 		weapons[]=
 		{
@@ -1017,111 +1019,6 @@ class AH64UK_GUI
 			y = "0.304 * safezoneH + safezoneY";
 			w = "0.0875 * safezoneW";
 			h = "0.028 * safezoneH";
-		};
-	};
-};
-class AAC_Texture_GUI
-{
-	idd=9914;
-	movingenable="false";
-	class controls
-	{
-		class RscFrame_1800: RscFrame
-		{
-			idc=1800;
-			x="0.22 * safezoneW + safezoneX";
-			y="0.206 * safezoneH + safezoneY";
-			w="0.525 * safezoneW";
-			h="0.504 * safezoneH";
-		};
-		class setskin_background: RscPicture
-		{
-			idc=1900;
-			x="0.22 * safezoneW + safezoneX";
-			y="0.206 * safezoneH + safezoneY";
-			w="0.525 * safezoneW";
-			h="0.504 * safezoneH";
-			text="FIR_AirWeaponSystem_US\ui\background_skin.paa";
-		};
-		class RscText_1000: RscText
-		{
-			idc=1000;
-			text="Select Texture";
-			x="0.22875 * safezoneW + safezoneX";
-			y="0.234 * safezoneH + safezoneY";
-			w="0.105 * safezoneW";
-			h="0.028 * safezoneH";
-		};
-		class Texture_Text: RscText
-		{
-			idc=1001;
-			text="";
-			x="0.59625 * safezoneW + safezoneX";
-			y="0.234 * safezoneH + safezoneY";
-			w="0.13125 * safezoneW";
-			h="0.028 * safezoneH";
-		};
-		class texture_preview: RscPicture
-		{
-			idc=1980;
-			text="#(argb,8,8,3)color(1,1,1,1)";
-			x="0.3425 * safezoneW + safezoneX";
-			y="0.262 * safezoneH + safezoneY";
-			w="0.385 * safezoneW";
-			h="0.336 * safezoneH";
-		};
-		class texture_combo: RscCombo
-		{
-			idc=2160;
-			x="0.2375 * safezoneW + safezoneX";
-			y="0.262 * safezoneH + safezoneY";
-			w="0.0875 * safezoneW";
-			h="0.028 * safezoneH";
-			onLBSelChanged="_changehandle = execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\change_preview.sqf"";";
-		};
-		class apply_btn_pic: RscPicture
-		{
-			idc=1700;
-			text="FIR_AirWeaponSystem_US\ui\button_apply.paa";
-			x="0.57 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-		};
-		class apply_btn: RscButton
-		{
-			idc=1600;
-			text="";
-			x="0.57 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-			colorText[]={-1,-1,-1,-1};
-			colorBackground[]={-1,-1,-1,-1};
-			colorActive[]={-1,-1,-1,-1};
-			action="_applyhandle = execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\change_skin.sqf"";";
-		};
-		class cancel_btn_pic: RscPicture
-		{
-			idc=1701;
-			text="FIR_AirWeaponSystem_US\ui\button_cancel.paa";
-			x="0.6575 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-		};
-		class cancel_btn: RscButton
-		{
-			idc=1601;
-			text="";
-			x="0.6575 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-			colorText[]={-1,-1,-1,-1};
-			colorBackground[]={-1,-1,-1,-1};
-			colorActive[]={-1,-1,-1,-1};
-			action="closeDialog 0";
 		};
 	};
 };
@@ -6252,7 +6149,7 @@ class CfgVehicles
 		radarType=4;
 		lockDetectionSystem="CM_Lock_Radar + CM_Lock_Laser + CM_Lock_IR";
 		incommingMisslieDetectionSystem="CM_Missile";
-		liftForceCoef=1;
+		liftForceCoef=2;
 		bodyFrictionCoef=1;
 		cyclicAsideForceCoef=0.80000001;
 		cyclicForwardForceCoef=1.8;

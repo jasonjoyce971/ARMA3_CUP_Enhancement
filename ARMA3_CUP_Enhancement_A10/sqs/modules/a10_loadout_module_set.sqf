@@ -62,6 +62,7 @@ _skin = _this select 12;
 		case 9:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M"; // ECM
+			_plane setVariable ["ECMJAMMER","yes",true];
 		};
 		case 10:
 		{
@@ -115,6 +116,7 @@ _skin = _this select 12;
 		case 9:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M"; // ECM
+			_plane setVariable ["ECMJAMMER","yes",true];
 		};
 		case 10:
 		{

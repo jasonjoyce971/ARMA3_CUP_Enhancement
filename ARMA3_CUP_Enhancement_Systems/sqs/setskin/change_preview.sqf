@@ -10,6 +10,41 @@ _plane = vehicle player;
 _get_code = lbCurSel 2160;
 _codename = lbText [2160, _get_code];
 
+if (_plane iskindof "JAS_CUP_Mi35_Base") then
+{
+	_texture_data = getText (configfile >> "CfgVehicles" >> _codename >> "fir_MI35_custom_preview_pic");
+	_texture_name = getText (configfile >> "CfgVehicles" >> _codename >> "fir_MI35_custom_name");
+};
+if (_plane iskindof "JAS_CUP_Mi24_V_Base") then
+{
+	_texture_data = getText (configfile >> "CfgVehicles" >> _codename >> "fir_MI24V_custom_preview_pic");
+	_texture_name = getText (configfile >> "CfgVehicles" >> _codename >> "fir_MI24V_custom_name");
+};
+if (_plane iskindof "JAS_CUP_Mi24_P_Base") then
+{
+	_texture_data = getText (configfile >> "CfgVehicles" >> _codename >> "fir_MI24P_custom_preview_pic");
+	_texture_name = getText (configfile >> "CfgVehicles" >> _codename >> "fir_MI24P_custom_name");
+};
+if (_plane iskindof "JAS_CUP_Mi24_D_Base") then
+{
+	_texture_data = getText (configfile >> "CfgVehicles" >> _codename >> "fir_MI24D_custom_preview_pic");
+	_texture_name = getText (configfile >> "CfgVehicles" >> _codename >> "fir_MI24D_custom_name");
+};
+if (_plane iskindof "JAS_CUP_Mi171Sh_Base") then
+{
+	_texture_data = getText (configfile >> "CfgVehicles" >> _codename >> "fir_MI17_custom_preview_pic");
+	_texture_name = getText (configfile >> "CfgVehicles" >> _codename >> "fir_MI17_custom_name");
+};
+if (_plane iskindof "JAS_CUP_Mi8_MTV3_base") then
+{
+	_texture_data = getText (configfile >> "CfgVehicles" >> _codename >> "fir_MI8_custom_preview_pic");
+	_texture_name = getText (configfile >> "CfgVehicles" >> _codename >> "fir_MI8_custom_name");
+};
+if (_plane iskindof "JAS_CUP_L39_base") then
+{
+	_texture_data = getText (configfile >> "CfgVehicles" >> _codename >> "fir_L39_custom_preview_pic");
+	_texture_name = getText (configfile >> "CfgVehicles" >> _codename >> "fir_L39_custom_name");
+};
 if (_plane iskindof "JAS_CUP_KA50_Base") then
 {
 	_texture_data = getText (configfile >> "CfgVehicles" >> _codename >> "fir_ka50_custom_preview_pic");

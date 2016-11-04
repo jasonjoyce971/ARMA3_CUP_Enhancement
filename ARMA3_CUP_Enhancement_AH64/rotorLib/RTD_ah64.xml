@@ -504,7 +504,7 @@
       <Geometry>
         <Position x="0.0" y="0.33" z="1.16" />
         <Tilt lateralTilt="0" longitudinalTilt="-3.0" />
-        <Blades radius="6.096" chord="0.42" rootCutout="2" count="5" hingeOffset="0.15" flappingHingeLowerLimit="-10" flappingHingeHigherLimit="10" />
+        <Blades radius="6.096" chord="0.42" rootCutout="2" count="4" hingeOffset="0.15" flappingHingeLowerLimit="-10" flappingHingeHigherLimit="10" />
         <Rotation clockwise="false" />
       </Geometry>
 

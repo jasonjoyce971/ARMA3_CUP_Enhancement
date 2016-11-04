@@ -110,6 +110,10 @@ switch (_ammoname) do
     {
 		_harm_n = [_missobj,_plane] execVM "\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\harm_nChopper.sqf";
     };
+	case "JAS_FIR_KH25":
+    {
+		_harm_n = [_missobj,_plane] execVM "\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\harm_nChopper.sqf";
+    };
    
     default{};
 };
