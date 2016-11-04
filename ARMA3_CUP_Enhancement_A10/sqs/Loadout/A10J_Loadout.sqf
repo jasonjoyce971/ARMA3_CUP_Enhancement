@@ -22,6 +22,7 @@ _hardpoint10 = lbCurSel 2107;
 _hardpoint11 = lbCurSel 21008;
 
 _plane setVariable ["TGT_POD","no",true];
+_plane setVariable ["ECMJAMMER","no",true];
 
 /* Delete Weapon and Ammo Before */
 // mags
@@ -180,6 +181,7 @@ if (_preset == -1 or _preset == 0) then
 		case 9:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M"; // ECM
+			_plane setVariable ["ECMJAMMER","yes",true];
 		};
 		case 10:
 		{
@@ -233,6 +235,7 @@ if (_preset == -1 or _preset == 0) then
 		case 9:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M"; // ECM
+			_plane setVariable ["ECMJAMMER","yes",true];
 		};
 		case 10:
 		{

@@ -33,10 +33,10 @@ _plane removeMagazines "JAS_AGM114N_1rnd_M";
 //_plane removeMagazinesTurret ["ProxyAGM114Hellfire",[0]];
 
 _plane removeMagazines "JAS_AGM122_1rnd_M";
-_plane removeMagazinesturret ["ProxyAGM122",[-1]];
+_plane removeMagazinesturret ["ProxyAGM122",[0]];
 
 _plane removeMagazines "FIR_AIM9L_1rnd_M";
-_plane removeMagazinesturret ["FIR_AIM9L_1rnd_M",[-1]];
+_plane removeMagazinesturret ["FIR_AIM9L_1rnd_M",[0]];
 _plane removeMagazinesturret ["FIR_JLAU_3_19rnd_M",[-1]];
 _plane removeMagazinesturret ["FIR_Hydra_7rnd_M",[-1]];
 
@@ -45,11 +45,11 @@ _plane removeMagazines "FIR_240rnd_CMFlare_Chaff_Magazine";
 _plane removeMagazines "FIR_Empty_1rnd_M";
 
 _plane removeweapon "FIR_CMLauncher";
-_plane removeweaponturret ["FIR_AIM9L",[-1]];
+_plane removeweaponturret ["FIR_AIM9L",[0]];
 _plane removeweaponturret ["FIR_RKT_Launcher",[-1]];
 _plane removeweaponturret ["JAS_HellfireLauncher_K",[0]];
 _plane removeweaponturret ["JAS_HellfireLauncher_N",[0]];
-_plane removeweaponturret ["JAS_AGM122",[-1]];
+_plane removeweaponturret ["JAS_AGM122",[0]];
 
 //remove CUP ammo and weapons
 
@@ -861,14 +861,14 @@ _sidearmcount = {_x == "JAS_AGM122_1rnd_M"} count magazines _plane;
 
 if (_windercount >= 1) then
 {
-	_plane addweaponturret ["FIR_AIM9L",[-1]];
-	_counter9m = 0;
+	_plane addweaponturret ["FIR_AIM9L",[0]];
+	/* _counter9m = 1;
 
 	while {_counter9m < _windercount} do
 	{
 		_counter9m = _counter9m + 1;
-		_plane addmagazineturret ["FIR_AIM9L_1rnd_M",[-1]];
-	};
+		_plane addmagazineturret ["FIR_AIM9L_1rnd_M",[0]];
+	}; */
 	
 };
 

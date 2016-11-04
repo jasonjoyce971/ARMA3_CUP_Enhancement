@@ -21,6 +21,7 @@ _hardpoint9 = lbCurSel 2202;
 _hardpoint10 = lbCurSel 2107;
 
 _plane setVariable ["TGT_POD","no",true];
+_plane setVariable ["ECMJAMMER","no",true];
 
 /* Delete Weapon and Ammo Before */
 _plane removeMagazines "1000Rnd_Gatling_30mm_Plane_CAS_01_F";
@@ -40,7 +41,7 @@ _plane removeMagazines "FIR_mk82_gp_1rnd_M";
 _plane removeMagazines "FIR_CBU87_1rnd_M";
 _plane removeMagazines "FIR_CBU89_1rnd_M";
 _plane removeMagazines "FIR_CBU97_1rnd_M";
-_plane removeMagazines "JAS_JAS_FIR_CBU103_1rnd_M";
+_plane removeMagazines "JAS_FIR_CBU103_1rnd_M";
 _plane removeMagazines "FIR_AGM65D_1rnd_M";
 _plane removeMagazines "FIR_AGM65G_1rnd_M";
 _plane removeMagazines "FIR_AGM65L_1rnd_M";
@@ -77,7 +78,9 @@ _plane removeweapon "FIR_CBU87";
 _plane removeweapon "FIR_CBU89";
 _plane removeweapon "FIR_CBU97";
 _plane removeweapon "JAS_FIR_CBU103";
-_plane removeweapon "FIR_AGM65";
+_plane removeweapon "JAS_FIR_AGM65D";
+_plane removeweapon "JAS_FIR_AGM65G";
+_plane removeweapon "JAS_FIR_AGM65L";
 _plane removeweapon "FIR_AGM88";
 _plane removeweapon "FIR_GBU39";
 _plane removeweapon "FIR_GBU53";
@@ -609,6 +612,7 @@ sleep 0.3;
 		case 3:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M";
+			_plane setVariable ["ECMJAMMER","yes",true];
 		};
 		case 4:
 		{
@@ -640,6 +644,7 @@ sleep 0.3;
 		case 3:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M";
+			_plane setVariable ["ECMJAMMER","yes",true];
 		};
 		case 4:
 		{
@@ -1501,7 +1506,9 @@ if (_CBU87count >= 1) then {_plane addweapon "FIR_CBU87";};
 if (_cbu89count >= 1) then {_plane addweapon "FIR_CBU89";};
 if (_cbu97count >= 1) then {_plane addweapon "FIR_CBU97";};
 if (_cbu103count >= 1) then {_plane addweapon "JAS_FIR_CBU103";};
-if ((_agm65dcount >= 1) or (_agm65gcount >= 1)or (_agm65lcount >= 1)) then {_plane addweapon "FIR_AGM65";};
+if (_agm65dcount >= 1) then {_plane addweapon "JAS_FIR_AGM65D";};
+if (_agm65gcount >= 1) then {_plane addweapon "JAS_FIR_AGM65G";};
+if (_agm65lcount >= 1) then {_plane addweapon "JAS_FIR_AGM65L";};
 if (_gbu39count >= 1) then {_plane addweapon "FIR_gbu39";};
 if (_gbu53count >= 1) then {_plane addweapon "FIR_gbu53";};
 if (_84count >= 1) then {_plane addweapon "FIR_mk84";};

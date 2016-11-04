@@ -24,6 +24,8 @@ class CfgPatches
 			"CUP_Weapons_WeaponsCore",
 			"A3_Modules_F"
 		};
+		versionDesc = "GOL ARMA 3 CUP Enhancement";
+		authors[]={"Jason"};
 	};
 };
 class CfgAddons
@@ -536,3 +538,4 @@ class CfgHints
 		};
 	};
 };
+#include "gui.hpp"

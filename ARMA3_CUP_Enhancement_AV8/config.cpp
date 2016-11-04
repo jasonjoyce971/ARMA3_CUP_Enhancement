@@ -11,11 +11,14 @@ class CfgPatches
 			"JAS_CUP_B_AV8B_USMC4",
 			"JAS_CUP_I_AV8B_AAF",
 			"JAS_CUP_AV8B_AAC",
+			"JAS_CUP_I_AV8B_AAC",
 			"JAS_CUP_B_GR9_GB",
 			"JAS_CUP_GR9_AAC",
 			"JAS_CUP_AV8B_Canopy",
 			"JAS_CUP_AV8B_EjectionSeat",
-			"JAS_CUP_AV8BWreck"
+			"JAS_CUP_AV8BWreck",
+			"JAS_AV8_Loadout_Module",
+			"JAS_GR9_Loadout_Module"
 		};
 		weapons[]=
 		{
@@ -1122,111 +1125,6 @@ class GR9_GUI
 			y = "0.304 * safezoneH + safezoneY";
 			w = "0.0875 * safezoneW";
 			h = "0.028 * safezoneH";
-		};
-	};
-};
-class AAC_Texture_GUI
-{
-	idd=9914;
-	movingenable="false";
-	class controls
-	{
-		class RscFrame_1800: RscFrame
-		{
-			idc=1800;
-			x="0.22 * safezoneW + safezoneX";
-			y="0.206 * safezoneH + safezoneY";
-			w="0.525 * safezoneW";
-			h="0.504 * safezoneH";
-		};
-		class setskin_background: RscPicture
-		{
-			idc=1900;
-			x="0.22 * safezoneW + safezoneX";
-			y="0.206 * safezoneH + safezoneY";
-			w="0.525 * safezoneW";
-			h="0.504 * safezoneH";
-			text="FIR_AirWeaponSystem_US\ui\background_skin.paa";
-		};
-		class RscText_1000: RscText
-		{
-			idc=1000;
-			text="Select Texture";
-			x="0.22875 * safezoneW + safezoneX";
-			y="0.234 * safezoneH + safezoneY";
-			w="0.105 * safezoneW";
-			h="0.028 * safezoneH";
-		};
-		class Texture_Text: RscText
-		{
-			idc=1001;
-			text="";
-			x="0.59625 * safezoneW + safezoneX";
-			y="0.234 * safezoneH + safezoneY";
-			w="0.13125 * safezoneW";
-			h="0.028 * safezoneH";
-		};
-		class texture_preview: RscPicture
-		{
-			idc=1980;
-			text="#(argb,8,8,3)color(1,1,1,1)";
-			x="0.3425 * safezoneW + safezoneX";
-			y="0.262 * safezoneH + safezoneY";
-			w="0.385 * safezoneW";
-			h="0.336 * safezoneH";
-		};
-		class texture_combo: RscCombo
-		{
-			idc=2160;
-			x="0.2375 * safezoneW + safezoneX";
-			y="0.262 * safezoneH + safezoneY";
-			w="0.0875 * safezoneW";
-			h="0.028 * safezoneH";
-			onLBSelChanged="_changehandle = execVM ""\ARMA3_CUP_Enhancement_AV8\sqs\setskin\change_preview.sqf"";";
-		};
-		class apply_btn_pic: RscPicture
-		{
-			idc=1700;
-			text="FIR_AirWeaponSystem_US\ui\button_apply.paa";
-			x="0.57 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-		};
-		class apply_btn: RscButton
-		{
-			idc=1600;
-			text="";
-			x="0.57 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-			colorText[]={-1,-1,-1,-1};
-			colorBackground[]={-1,-1,-1,-1};
-			colorActive[]={-1,-1,-1,-1};
-			action="_applyhandle = execVM ""\ARMA3_CUP_Enhancement_AV8\sqs\setskin\change_skin.sqf"";";
-		};
-		class cancel_btn_pic: RscPicture
-		{
-			idc=1701;
-			text="FIR_AirWeaponSystem_US\ui\button_cancel.paa";
-			x="0.6575 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-		};
-		class cancel_btn: RscButton
-		{
-			idc=1601;
-			text="";
-			x="0.6575 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-			colorText[]={-1,-1,-1,-1};
-			colorBackground[]={-1,-1,-1,-1};
-			colorActive[]={-1,-1,-1,-1};
-			action="closeDialog 0";
 		};
 	};
 };
@@ -9841,6 +9739,128 @@ class CfgVehicles
 				condition = "currentweapon this == ""FIR_AGM88"";";
 				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\Search_RDRTGT.sqf""; ";
 				onlyforplayer = "False";
+			};
+		};
+		class eventhandlers
+		{
+			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
+			fired="fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
+		};
+	};
+	class JAS_CUP_I_AV8B_AAC : JAS_CUP_B_AV8B_USMC
+	{
+		scope = 2;
+		model = "\cup\airvehicles\cup_airvehicles_av8b\cup_av8b";
+		fir_av8_custom_skin=2;
+		fir_av8_custom_name="AV-8 AAF";
+		fir_av8_custom_code="JAS_CUP_I_AV8B_AAF";
+		fir_av8_custom_preview_pic="\ARMA3_CUP_Enhancement_AV8\UI\preview\AV8AAF.paa";
+		editorPreview = "\ARMA3_CUP_Enhancement_AV8\UI\editorpreview\AV8BAAF.jpg";
+		displayName = "AV-8J Harrier II";
+		accuracy = 1000;
+		author = "CUP/-{GOL}-Jason";
+		dlc = "CUP_Vehicles";
+		faction = "GOL_AAC_INDEP";
+		editorSubcategory="GOL_AAC_PHANTOM";
+		crew = "I_pilot_F";
+		side = 2;
+		hiddenSelections[] =
+		{
+			"Camo1",
+			"Camo2",
+			"pip0"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"cup\airvehicles\cup_airvehicles_av8b\data\texture\CUP_av8b_aaf_1_co.paa",
+			"cup\airvehicles\cup_airvehicles_av8b\data\texture\CUP_av8b_aaf_1_co.paa",
+			"#(argb,512,512,1)r2t(rendertarget0,1.0)"
+		};
+		class UserActions
+		{
+			class CUP_AV8B_Eject
+			{
+				priority = 0.050000001;
+				shortcut = "Eject";
+				displayName = "<t color='#FF0000'>--Eject--</t>";
+				condition = "this animationPhase ""eject_switch"" < 0.1 and player in this and isengineon this";
+				statement = "[this, true, 'CUP_AV8B_Canopy', 'CUP_AV8B_EjectionSeat'] spawn CUP_fnc_ejectPlayerFromAircraft";
+				position = "pilotcontrol";
+				radius = 10;
+				onlyforplayer = 1;
+				showWindow = 0;
+				hideOnUse = 1;
+			};
+			class ECM_ON
+			{
+				displayName = "ECM JAMMER ON";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User4";
+				condition = "this getvariable ""ECMJAMMER"" == ""yes"";";
+				statement = "[this] execVM ""\FIR_AirWeaponSystem_US\Script\ECM\ECM_ON.sqf"";";
+				onlyforplayer = "False";
+			};
+			class Fueltank_Jettison
+			{
+				displayName = "Jettison Fueltanks";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User8";
+				condition = "player in this and isengineon this";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\Jettison\droptanks.sqf"";";
+				onlyforplayer = "False";
+			};
+			class A10J_Gui_Open
+			{
+				displayName = "<t color='#739eff'>Open Dialog</t>";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User6";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				statement = "this execVM ""\ARMA3_CUP_Enhancement_AV8\sqs\loadout\AV8_GUI_Open.sqf""";
+				onlyforplayer = "false";
+				priority = 6;
+			};
+			class FindRadarTGT
+			{
+				displayName = "Find Radar Target";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User5";
+				condition = "currentweapon this == ""FIR_AGM88"" and this getvariable ""SEAD_SET"" == ""no""; ";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\harm.sqf""; ";
+				onlyforplayer = "False";
+			};
+			class ClearRadarTGT
+			{
+				displayName = "Clear Radar Target";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User5";
+				condition = "currentweapon this == ""FIR_AGM88"" and this getvariable ""SEAD_SET"" == ""yes""; ";
+				statement = "[this] execVM ""\FIR_AirWeaponSystem_US\Script\SEAD\harmoff.sqf""; ";
+				onlyforplayer = "False";
+			};
+			class SearchRDRTGT
+			{
+				displayName = "QIT ON";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "";
+				condition = "currentweapon this == ""FIR_AGM88"";";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\Search_RDRTGT.sqf""; ";
+				onlyforplayer = "False";
+			};
+			class Aircraft_MFD_Open_N
+			{
+				displayName = "Open Targetting System";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "";
+				condition = "this getvariable ""TGT_POD"" == ""yes"" and player in this and isengineon this";
+				statement = "this execVM ""\FIR_AirWeaponSystem_US\Script\TGTSystem\FIR_AWS_MFD_N_Open.sqf""";
+				onlyforplayer = "false";
 			};
 		};
 		class eventhandlers

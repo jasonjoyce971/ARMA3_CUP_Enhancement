@@ -486,6 +486,7 @@ sleep 0.3;
 		case 3:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M";
+			_plane setVariable ["ECMJAMMER","yes",true];
 		};
 		case 4:
 		{
@@ -517,6 +518,7 @@ sleep 0.3;
 		case 3:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M";
+			_plane setVariable ["ECMJAMMER","yes",true];
 		};
 		case 4:
 		{

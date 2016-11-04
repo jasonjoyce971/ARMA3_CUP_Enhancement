@@ -27,6 +27,10 @@ or (_tgt isKindOf "pook_SNR75_radar") or (_tgt isKindOf "pook_SON50_BASE")
 or (_tgt isKindOf "CUP_O_2S6M_RU") or (_tgt isKindOf "CUP_I_M163_AAF")
 or (_tgt isKindOf "CUP_I_M163_RACS") or (_tgt isKindOf "CUP_O_ZSU23_ChDKZ")
 or (_tgt isKindOf "CUP_O_ZSU23_SLA") or (_tgt isKindOf "CUP_O_ZSU23_TK")
+or (_tgt isKindOf "CUP_B_ZSU23_CDF") or (_tgt isKindOf "B_APC_Tracked_01_AA_F")
+or (_tgt isKindOf "CUP_WV_B_CRAM") or (_tgt isKindOf "B_T_APC_Tracked_01_AA_F")
+or (_tgt isKindOf  "CUP_B_Frigate_ANZAC") or (_tgt isKindOf "CUP_B_M163_USA")
+or (_tgt isKindOf  "CUP_O_ZSU23_CSAT") or (_tgt isKindOf "O_T_APC_Tracked_02_AA_ghex_F")
 or (_tgt isKindOf "CUP_I_ZSU23_AAF") or (_tgt isKindOf "pook_SON9_base"))) ExitWith {_plane vehiclechat "NO AA TARGET FOUND";};
 
 _plane vehiclechat "Target Acquired, Magnum!";

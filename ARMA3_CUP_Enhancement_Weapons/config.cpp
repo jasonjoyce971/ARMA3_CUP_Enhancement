@@ -208,6 +208,36 @@ class cfgAmmo
 	class RocketBase;
 	class Bo_Mk82;
 	class SmokeShell;
+	class JAS_CUP_R_57mm_HE: RocketBase
+	{
+		SoundSetExplosion[]=
+		{
+			"RocketsLight_Exp_SoundSet",
+			"RocketsLight_Tail_SoundSet",
+			"Explosion_Debris_SoundSet"
+		};
+		model="\CUP\Weapons\CUP_Weapons_Ammunition\Generic_70mm_Rocket\CUP_70mmRocket.p3d";
+		proxyShape="\CUP\Weapons\CUP_Weapons_Ammunition\Generic_70mm_Rocket\CUP_70mmRocket.p3d";
+		hit=150;
+		indirectHit=40;
+		indirectHitRange=12;
+		cost=200;
+		maxSpeed=580;
+		thrustTime=1.1;
+		thrust=450;
+		sideAirFriction=0.15000001;
+		fuseDistance=40;
+		timeToLive=20;
+		whistleDist=24;
+	};
+	class JAS_CUP_S5_Pod_Small_Dummy: Bo_GBU12_LGB
+	{
+		hit=0;
+		indirectHit=0;
+		indirectHitRange=0;
+		model="\CUP\Weapons\CUP_Weapons_Pods\UB16\CUP_UB16.p3d";
+		proxyShape="\CUP\Weapons\CUP_Weapons_Pods\UB16\CUP_UB16.p3d";
+	};
 	class JAS_FIR_AWS_SmokeShell : SmokeShell
 	{
 		smokeColor[] = {1, 1, 1, 1};
@@ -349,7 +379,7 @@ class cfgAmmo
 		indirectHit=20;
 		indirectHitRange=2;
 		cost=10000;
-		irLock=0;
+		irLock=1;
 		airLock=0;
 		laserLock=1;
 		manualControl=1;
@@ -715,8 +745,8 @@ class cfgAmmo
 	};
 	class JAS_FIR_KH25: M_Air_AA
 	{
-		model="\CUP\Weapons\CUP_Weapons_Ammunition\Kh29\cup_kh29fly";
-		proxyShape="\CUP\Weapons\CUP_Weapons_Ammunition\Kh29\cup_kh29_proxy";
+		model="\A3\Weapons_F_EPC\Ammo\Missile_AGM_01_fly_F.p3d";
+		proxyShape="\A3\Weapons_F_EPC\Ammo\Missile_AGM_01_F.p3d";
 		hit=4000;
 		indirectHit=4000;
 		indirectHitRange=10;
@@ -1085,6 +1115,42 @@ class cfgMagazines
 	class 38Rnd_80mm_rockets;
 	class 2Rnd_LG_Scalpel;
 	class 2Rnd_Missile_AA_03_F;
+	class JAS_CUP_16Rnd_57mm: VehicleMagazine
+	{
+		scope=2;
+		displayName="16Rnd 57mm Rockets";
+		ammo="JAS_CUP_R_57mm_HE";
+		initSpeed=44;
+		maxLeadSpeed=200;
+		nameSound="rockets";
+		sound[]=
+		{
+			"CUP\Weapons\CUP_Weapons_VehicleWeapons\data\sound\rocketLauncher_Shot21",
+			3.1622777,
+			1
+		};
+		soundFly[]=
+		{
+			"A3\Sounds_F\weapons\Rockets\rocket_fly_1",
+			1,
+			1.1,
+			700
+		};
+		reloadSound[]=
+		{
+			"\A3\sounds_f\dummysound",
+			"db-70",
+			1
+		};
+		count=16;
+	};
+	class JAS_CUP_1Rnd_S5_Pod_Small_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="UB-16-57 Pods";
+		ammo="JAS_CUP_S5_Pod_Small_Dummy";
+		count=1;
+	};
 	class JAS_FIR_Hydra_Smoke_7rnd_M : VehicleMagazine
 	{
 		scope = 2;
@@ -2372,6 +2438,16 @@ class cfgWeapons
 			maxRange=1250;
 			maxRangeProbab=0.0099999998;
 		};
+	};
+	class JAS_CUP_Vacannon_GSh23L_onboard: JAS_CUP_Vacannon_GSh23L_in_veh
+	{
+		displayName="GSh-23L Internal Cannon";
+		ballisticsComputer=4;
+		magazines[]=
+		{
+			"CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M"
+		};
+		canLock=2;
 	};
 	class JAS_CUP_Vacannon_GSh302K_veh: CannonCore
 	{
@@ -3816,6 +3892,14 @@ class cfgWeapons
 			weaponSoundEffect="DefaultRifle";
 		};
 	};
+	class JAS_CUP_57mmLauncher: JAS_HYDRA_Launcher
+	{
+		magazines[]=
+		{
+			"JAS_CUP_16Rnd_57mm"
+		};
+		displayname="57mm Rockets";
+	};
 	class JAS_HYDRA_SMKW_Launcher: JAS_HYDRA_Launcher
 	{
 		displayName="Smoke Launcher (White)";
@@ -4062,6 +4146,7 @@ class cfgWeapons
 		cursorAim="rocket";
 		CanLock=2;
 		weaponLockSystem = "2+4";
+		ballisticsComputer = 8;
 		lockingTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.562341,1};
 		lockedTargetSound[] = {"\A3\Sounds_F\weapons\Rockets\locked_1",0.562341,4};
 		lockAcquire = 0;

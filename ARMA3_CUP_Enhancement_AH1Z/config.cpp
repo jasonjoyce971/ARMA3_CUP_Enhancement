@@ -7,7 +7,9 @@ class CfgPatches
 			"JAS_CUP_B_AH1Z_BASE",
 			"JAS_CUP_B_AH1Z_USMC",
 			"JAS_CUP_B_AH1Z_AAC",
-			"JAS_CUP_I_AH1Z_AAF"
+			"JAS_CUP_I_AH1Z_AAF",
+			"JAS_CUP_I_AH1Z_AAC",
+			"JAS_AH1Z_Loadout_Module"
 		};
 		weapons[]=
 		{
@@ -721,111 +723,6 @@ class AH1_GUI
 			y = "0.304 * safezoneH + safezoneY";
 			w = "0.0875 * safezoneW";
 			h = "0.028 * safezoneH";
-		};
-	};
-};
-class AAC_Texture_GUI
-{
-	idd=9914;
-	movingenable="false";
-	class controls
-	{
-		class RscFrame_1800: RscFrame
-		{
-			idc=1800;
-			x="0.22 * safezoneW + safezoneX";
-			y="0.206 * safezoneH + safezoneY";
-			w="0.525 * safezoneW";
-			h="0.504 * safezoneH";
-		};
-		class setskin_background: RscPicture
-		{
-			idc=1900;
-			x="0.22 * safezoneW + safezoneX";
-			y="0.206 * safezoneH + safezoneY";
-			w="0.525 * safezoneW";
-			h="0.504 * safezoneH";
-			text="FIR_AirWeaponSystem_US\ui\background_skin.paa";
-		};
-		class RscText_1000: RscText
-		{
-			idc=1000;
-			text="Select Texture";
-			x="0.22875 * safezoneW + safezoneX";
-			y="0.234 * safezoneH + safezoneY";
-			w="0.105 * safezoneW";
-			h="0.028 * safezoneH";
-		};
-		class Texture_Text: RscText
-		{
-			idc=1001;
-			text="";
-			x="0.59625 * safezoneW + safezoneX";
-			y="0.234 * safezoneH + safezoneY";
-			w="0.13125 * safezoneW";
-			h="0.028 * safezoneH";
-		};
-		class texture_preview: RscPicture
-		{
-			idc=1980;
-			text="#(argb,8,8,3)color(1,1,1,1)";
-			x="0.3425 * safezoneW + safezoneX";
-			y="0.262 * safezoneH + safezoneY";
-			w="0.385 * safezoneW";
-			h="0.336 * safezoneH";
-		};
-		class texture_combo: RscCombo
-		{
-			idc=2160;
-			x="0.2375 * safezoneW + safezoneX";
-			y="0.262 * safezoneH + safezoneY";
-			w="0.0875 * safezoneW";
-			h="0.028 * safezoneH";
-			onLBSelChanged="_changehandle = execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\change_preview.sqf"";";
-		};
-		class apply_btn_pic: RscPicture
-		{
-			idc=1700;
-			text="FIR_AirWeaponSystem_US\ui\button_apply.paa";
-			x="0.57 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-		};
-		class apply_btn: RscButton
-		{
-			idc=1600;
-			text="";
-			x="0.57 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-			colorText[]={-1,-1,-1,-1};
-			colorBackground[]={-1,-1,-1,-1};
-			colorActive[]={-1,-1,-1,-1};
-			action="_applyhandle = execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\change_skin.sqf"";";
-		};
-		class cancel_btn_pic: RscPicture
-		{
-			idc=1701;
-			text="FIR_AirWeaponSystem_US\ui\button_cancel.paa";
-			x="0.6575 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-		};
-		class cancel_btn: RscButton
-		{
-			idc=1601;
-			text="";
-			x="0.6575 * safezoneW + safezoneX";
-			y="0.626 * safezoneH + safezoneY";
-			w="0.07 * safezoneW";
-			h="0.056 * safezoneH";
-			colorText[]={-1,-1,-1,-1};
-			colorBackground[]={-1,-1,-1,-1};
-			colorActive[]={-1,-1,-1,-1};
-			action="closeDialog 0";
 		};
 	};
 };
@@ -5917,6 +5814,7 @@ class CfgVehicles
 			"flare_launcher1_dir",
 			"flare_launcher2_dir"
 		};
+		liftForceCoef = 2.5;
 		radarType = 4;
 		lockDetectionSystem = "CM_Lock_Radar + CM_Lock_Laser + CM_Lock_IR";
 		incommingMisslieDetectionSystem = "CM_Missile";
@@ -7773,6 +7671,115 @@ class CfgVehicles
 		scopeCurator = 2;
 		side = 2;
 		faction = "IND_F";
+		displayName = "AH1Z/J";
+		crew = "I_helipilot_F";
+		fir_ah1zUS_custom_skin=1;
+		fir_ah1zUS_custom_name="AH1Z AAF";
+		fir_ah1zUS_custom_code="JAS_CUP_I_AH1Z_AAF";
+		fir_ah1zUS_custom_preview_pic="\ARMA3_CUP_Enhancement_AH1Z\UI\preview\AH1ZAAF.paa";
+		editorPreview = "\ARMA3_CUP_Enhancement_AH1Z\UI\editorpreview\AH1ZAAF.jpg";
+		typicalCargo[] =
+		{
+			"I_helipilot_F"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"CUP\AirVehicles\CUP_AirVehicles_AH1Z\data\aaf_ah1z_body_co.paa",
+			"CUP\AirVehicles\CUP_AirVehicles_AH1Z\data\aaf_ah1z_engines_co.paa"
+		};
+		weapons[] =
+		{
+			"FIR_MasterArm",
+			"FIR_CMLauncher"
+		};
+		magazines[] =
+		{
+			"FIR_240rnd_CMFlare_Chaff_Magazine"
+		};
+		class AnimationSources : AnimationSources
+		{
+			class Addhydra19_in
+			{
+				source = "user";
+				animPeriod = 1e-006;
+				initPhase = 1;
+			};
+		};
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+				weapons[] =
+				{
+					"FIR_MasterArm",
+					"Laserdesignator_mounted",
+					"CUP_Vacannon_M197_veh"
+				};
+				magazines[] =
+				{
+					"CUP_750Rnd_TE2_Red_Tracer_M197_20mm_AP_M",
+					"Laserbatteries"
+				};
+			};
+		};
+		class UserActions
+		{
+			class AH1_Gui_Open
+			{
+				displayName = "<t color='#739eff'>Open Dialog</t>";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User6";
+				condition = "gunner this == player and ((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				statement = "this execVM ""\ARMA3_CUP_Enhancement_AH1Z\sqs\loadout\AH1_GUI_Open.sqf""";
+				onlyforplayer = "false";
+				priority = 6;
+			};
+			class FindRadarTGT
+			{
+				displayName = "Find Radar Target";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User5";
+				condition = "gunner this == player and currentweapon this == ""JAS_AGM122"" and this getvariable ""SEAD_SET"" == ""no""; ";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\harmChopper.sqf""; ";
+				onlyforplayer = "False";
+			};
+			class ClearRadarTGT
+			{
+				displayName = "Clear Radar Target";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User5";
+				condition = "gunner this == player and currentweapon this == ""JAS_AGM122"" and this getvariable ""SEAD_SET"" == ""yes""; ";
+				statement = "[this] execVM ""\FIR_AirWeaponSystem_US\Script\SEAD\harmoff.sqf""; ";
+				onlyforplayer = "False";
+			};
+			class SearchRDRTGT
+			{
+				displayName = "QIT ON";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "";
+				condition = "gunner this == player and currentweapon this == ""JAS_AGM122"";";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\Search_RDRTGTChopper.sqf""; ";
+				onlyforplayer = "False";
+			};
+		};
+		class eventhandlers
+		{
+			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
+			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
+		};
+	};
+	class JAS_CUP_I_AH1Z_AAC : JAS_CUP_B_AH1Z_BASE
+	{
+		author = "CUP/-{GOL}-Jason";
+		scope = 2;
+		scopeCurator = 2;
+		side = 2;
+		faction = "GOL_AAC_INDEP";
+		editorSubcategory="GOL_AAC_ZEUS";
 		displayName = "AH1Z/J";
 		crew = "I_helipilot_F";
 		fir_ah1zUS_custom_skin=1;

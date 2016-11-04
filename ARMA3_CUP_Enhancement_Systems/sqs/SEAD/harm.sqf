@@ -49,6 +49,14 @@ if (_htscount >= 1) then
 "CUP_O_ZSU23_ChDKZ",
 "CUP_O_ZSU23_SLA",
 "CUP_O_ZSU23_TK",
+"CUP_B_ZSU23_CDF",
+"B_APC_Tracked_01_AA_F",
+"CUP_WV_B_CRAM",
+"B_T_APC_Tracked_01_AA_F",
+"CUP_B_Frigate_ANZAC",
+"CUP_B_M163_USA",
+"CUP_O_ZSU23_CSAT",
+"O_T_APC_Tracked_02_AA_ghex_F",
 "CUP_I_ZSU23_AAF"],11000];
 	_CountAA = count _ArrayAA;
 }
@@ -91,6 +99,14 @@ else
 "CUP_O_ZSU23_ChDKZ",
 "CUP_O_ZSU23_SLA",
 "CUP_O_ZSU23_TK",
+"CUP_B_ZSU23_CDF",
+"B_APC_Tracked_01_AA_F",
+"CUP_WV_B_CRAM",
+"B_T_APC_Tracked_01_AA_F",
+"CUP_B_Frigate_ANZAC",
+"CUP_B_M163_USA",
+"CUP_O_ZSU23_CSAT",
+"O_T_APC_Tracked_02_AA_ghex_F",
 "CUP_I_ZSU23_AAF"],6000];
 	_CountAA = count _ArrayAA;
 };
