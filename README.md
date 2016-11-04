@@ -1,5 +1,8 @@
 # ARMA3_CUP_Enhancement
 
+V2.0:
+* Completed re-build from original Jason_Aircraft project
+
 V0.4:
 * AV-8 Module Added
 * AW-159 Module Added
