@@ -1215,12 +1215,12 @@ class CfgVehicles
 		weapons[] = 
 		{
 			"FIR_MasterArm",
-			"Twin_Cannon_20mm",
+			"JAS_gatling_20mm",
 			"FIR_CMLauncher"
 		};	
 		magazines[] = 
 		{
-			"300Rnd_20mm_shells",
+			"JAS_300Rnd_20mm_shells",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 	
@@ -1243,17 +1243,6 @@ class CfgVehicles
 		{
 			"ARMA3_CUP_Enhancement_Vanilla\skin\plane_fighter_03_body_1_aaf_co.paa",
 			"ARMA3_CUP_Enhancement_Vanilla\skin\plane_fighter_03_body_2_aaf_co.paa"
-		};
-		weapons[] = 
-		{
-			"FIR_MasterArm",
-			"Twin_Cannon_20mm",
-			"FIR_CMLauncher"
-		};	
-		magazines[] = 
-		{
-			"300Rnd_20mm_shells",
-			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 	
 		#include "UserAction.hpp"
@@ -2402,14 +2391,14 @@ class CfgVehicles
 		weapons[]=
 		{
 			"FIR_MasterArm",
-			"Gatling_30mm_Plane_CAS_01_F",
+			"JAS_Gatling_30mm_Plane_CAS_01_F",
 			"FIR_CMLauncher",
 			"Rocket_04_HE_Plane_CAS_01_F",
 			"Rocket_04_AP_Plane_CAS_01_F"
 		};
 		magazines[]=
 		{
-			"1000Rnd_Gatling_30mm_Plane_CAS_01_F",
+			"JAS_1000Rnd_Gatling_30mm_Plane_CAS_01_F",
 			"FIR_240rnd_CMFlare_Chaff_Magazine",
 			"7Rnd_Rocket_04_HE_F",
 			"7Rnd_Rocket_04_AP_F"
@@ -2485,12 +2474,12 @@ class CfgVehicles
 		weapons[]=
 		{
 			"FIR_MasterArm",
-			"Cannon_30mm_Plane_CAS_02_F",
+			"JAS_Cannon_30mm_Plane_CAS_02_F",
 			"FIR_CMLauncher"
 		};
 		magazines[]=
 		{
-			"500Rnd_Cannon_30mm_Plane_CAS_02_F",
+			"JAS_500Rnd_Gatling_30mm_Plane_CAS_02_F",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 		class UserActions

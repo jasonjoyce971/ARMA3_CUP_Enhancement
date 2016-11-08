@@ -9004,13 +9004,13 @@ class CfgVehicles
 		threat[] = { 1, 0.69999999, 1 };
 		weapons[] =
 		{
-			"FIR_GAU12",
+			"JAS_FIR_GAU12",
 			"FIR_MasterArm",
 			"FIR_CMLauncher"
 		};
 		magazines[] =
 		{
-			"FIR_GAU12_300rnd_M",
+			"JAS_FIR_GAU12_300rnd_M",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 		hiddenSelections[] =
@@ -9131,17 +9131,6 @@ class CfgVehicles
 		author = "CUP/-{GOL}-Jason";
 		dlc = "CUP_Vehicles";
 		threat[] = { 1, 0.69999999, 1 };
-		weapons[] =
-		{
-			"FIR_GAU12",
-			"FIR_MasterArm",
-			"FIR_CMLauncher"
-		};
-		magazines[] =
-		{
-			"FIR_GAU12_300rnd_M",
-			"FIR_240rnd_CMFlare_Chaff_Magazine"
-		};
 		hiddenSelections[] =
 		{
 			"Camo1",
@@ -9260,17 +9249,6 @@ class CfgVehicles
 		author = "CUP/-{GOL}-Jason";
 		dlc = "CUP_Vehicles";
 		threat[] = { 1, 0.69999999, 1 };
-		weapons[] =
-		{
-			"FIR_GAU12",
-			"FIR_MasterArm",
-			"FIR_CMLauncher"
-		};
-		magazines[] =
-		{
-			"FIR_GAU12_300rnd_M",
-			"FIR_240rnd_CMFlare_Chaff_Magazine"
-		};
 		hiddenSelections[] =
 		{
 			"Camo1",
@@ -9389,17 +9367,6 @@ class CfgVehicles
 		author = "CUP/-{GOL}-Jason";
 		dlc = "CUP_Vehicles";
 		threat[] = { 1, 0.69999999, 1 };
-		weapons[] =
-		{
-			"FIR_GAU12",
-			"FIR_MasterArm",
-			"FIR_CMLauncher"
-		};
-		magazines[] =
-		{
-			"FIR_GAU12_300rnd_M",
-			"FIR_240rnd_CMFlare_Chaff_Magazine"
-		};
 		hiddenSelections[] =
 		{
 			"Camo1",

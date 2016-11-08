@@ -39,7 +39,7 @@ _plane setVariable ["InternalBrimstone","no",true];
 
 /* Delete Weapon and Ammo Before */
 _plane removeMagazines "1000Rnd_Gatling_30mm_Plane_CAS_01_F";
-_plane removeMagazines "CUP_220Rnd_TE1_White_Tracer_30mm_GAU22_M";
+_plane removeMagazines "JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M";
 _plane removeMagazines "FIR_AIM120_1rnd_M";
 _plane removeMagazines "FIR_AIM9X_1rnd_M";
 _plane removeMagazines "FIR_GBU31_1rnd_M";
@@ -156,8 +156,8 @@ titleText ["Loading guns and Texture", "PLAIN DOWN",0.5];
 _plane addweapon "JAS_CUP_Vacannon_GAU22_veh";
 _plane addweapon "FIR_CMLauncher";
 
-_plane addmagazine "CUP_220Rnd_TE1_White_Tracer_30mm_GAU22_M";
 _plane addmagazine "FIR_240rnd_CMFlare_Chaff_Magazine";
+_plane addmagazine "JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M";
 
 
 /* -1 is Default Texture. -1 is not choose, mean blank in the combo box. */

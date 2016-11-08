@@ -40,7 +40,7 @@ _plane removeMagazines "JAS_CUP_1Rnd_KAB250_M";
 _plane removeMagazines "JAS_FIR_CBU250_1rnd_M";
 _plane removeMagazines "CUP_250Rnd_TE2_Red_Tracer_GSh23_23mm_APHE_M";
 _plane removeMagazines "JAS_CUP_6Rnd_AT16_M";
-_plane removeMagazines "CUP_750Rnd_TE1_30mm_GSh302K_HE_M";
+_plane removeMagazines "JAS_CUP_750Rnd_TE1_30mm_GSh302K_HE_M";
 
 //weapons
 _plane removeweapon "JAS_CUP_Vmlauncher_S8_veh";
@@ -72,7 +72,7 @@ titleText ["Loading guns and Texture", "PLAIN DOWN",0.5];
 _plane addmagazine "FIR_240rnd_CMFlare_Chaff_Magazine";
 _plane addweapon "FIR_CMLauncher";
 
-_plane addmagazine "CUP_750Rnd_TE1_30mm_GSh302K_HE_M";
+_plane addmagazine "JAS_CUP_750Rnd_TE1_30mm_GSh302K_HE_M";
 _plane addweapon "JAS_CUP_Vacannon_GSh302K_veh";
 
 _plane addmagazine "Laserbatteries";

@@ -40,7 +40,7 @@ _plane removeMagazinesTurret ["JAS_CUP_1Rnd_Kh29L_M",[0]];
 _plane removeMagazinesTurret ["JAS_CUP_1Rnd_FAB250_M",[0]];
 _plane removeMagazinesTurret ["JAS_CUP_1Rnd_KAB250_M",[0]];
 _plane removeMagazinesTurret ["JAS_FIR_CBU250_1rnd_M",[0]];
-_plane removeMagazinesTurret ["CUP_180Rnd_TE1_30mm_GSh301_HE_M",[-1]];
+_plane removeMagazinesTurret ["JAS_CUP_180Rnd_TE1_30mm_GSh302K_HE_M",[-1]];
 _plane removeMagazinesTurret ["JAS_CUP_6Rnd_AT16_M",[0]];
 _plane removeMagazinesTurret ["CUP_250Rnd_TE2_Red_Tracer_GSh23_23mm_APHE_M",[-1]];
 _plane removeMagazines "FIR_F15E_Fueltank_1rnd_M";
@@ -70,7 +70,7 @@ sleep 0.3;
 titleText ["Loading Guns and Texture", "PLAIN DOWN",0.5];
 
 _plane addmagazine "FIR_240rnd_CMFlare_Chaff_Magazine";
-_plane addmagazineturret ["CUP_180Rnd_TE1_30mm_GSh301_HE_M",[-1]];
+_plane addmagazineturret ["JAS_CUP_180Rnd_TE1_30mm_GSh302K_HE_M",[-1]];
 _plane addweapon "FIR_CMLauncher";
 _plane addweaponturret ["JAS_CUP_Vacannon_GSh301_veh",[-1]];
 

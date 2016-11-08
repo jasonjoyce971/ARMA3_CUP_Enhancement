@@ -20,7 +20,7 @@ _hardpoint6 = lbCurSel 2106;
 _plane setVariable ["TGT_POD","no",true];
 
 /* Delete Weapon and Ammo Before */
-_plane removeMagazines "300Rnd_20mm_shells";
+_plane removeMagazines "JAS_300Rnd_20mm_shells";
 _plane removeMagazines "FIR_AIM9L_1rnd_M";
 _plane removeMagazines "FIR_AIM9X_1rnd_M";
 _plane removeMagazines "FIR_AIM120_1rnd_M";
@@ -50,7 +50,7 @@ _plane removeMagazines "FIR_LITENING_1_1rnd_M";
 
 _plane removeMagazines "Laserbatteries";
 
-_plane removeweapon "Twin_Cannon_20mm";
+_plane removeweapon "JAS_gatling_20mm";
 _plane removeweapon "FIR_CMLauncher";
 _plane removeweapon "FIR_AIM9L";
 _plane removeweapon "FIR_AIM9X";
@@ -76,10 +76,10 @@ _plane removeMPEventHandler ["MPHit", 0];
 
 sleep 0.3;
 
-_plane addweapon "Twin_Cannon_20mm";
+_plane addweapon "JAS_gatling_20mm";
 _plane addweapon "FIR_CMLauncher";
 
-_plane addmagazine "300Rnd_20mm_shells";
+_plane addmagazine "JAS_300Rnd_20mm_shells";
 
 _plane addmagazine "FIR_240rnd_CMFlare_Chaff_Magazine";
 

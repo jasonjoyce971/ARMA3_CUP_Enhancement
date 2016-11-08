@@ -25,7 +25,7 @@ _plane setVariable ["ECMJAMMER","no",true];
 
 /* Delete Weapon and Ammo Before */
 _plane removeMagazines "1000Rnd_Gatling_30mm_Plane_CAS_01_F";
-_plane removeMagazines "FIR_GAU12_300rnd_M";
+_plane removeMagazines "JAS_FIR_GAU12_300rnd_M";
 _plane removeMagazines "FIR_AIM120_1rnd_M";
 _plane removeMagazines "FIR_AIM9L_1rnd_M";
 _plane removeMagazines "FIR_GBU31_1rnd_M";
@@ -60,7 +60,7 @@ _plane removeMagazines "FIR_SniperXRPod_2_1rnd_M";
 _plane removeMagazines "FIR_ECMPod_1rnd_M";
 
 _plane removeweapon "Gatling_30mm_Plane_CAS_01_F";
-_plane removeweapon "FIR_GAU12";
+_plane removeweapon "JAS_FIR_GAU12";
 _plane removeweapon "FIR_CMLauncher";
 _plane removeweapon "FIR_AIM120";
 _plane removeweapon "FIR_AIM9L";
@@ -102,8 +102,8 @@ sleep 0.3;
 
 titleText ["Loading guns and Texture", "PLAIN DOWN",0.5];
 
-_plane addmagazine "FIR_GAU12_300rnd_M";
-_plane addweapon "FIR_GAU12";
+_plane addmagazine "JAS_FIR_GAU12_300rnd_M";
+_plane addweapon "JAS_FIR_GAU12";
 
 _plane addweapon "FIR_CMLauncher";
 _plane addmagazine "FIR_240rnd_CMFlare_Chaff_Magazine";

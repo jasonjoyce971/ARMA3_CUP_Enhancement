@@ -21,7 +21,7 @@ _hardpoint10 = lbCurSel 2107;
 _plane setVariable ["TGT_POD","no",true];
 
 /* Delete Weapon and Ammo Before */
-_plane removeMagazines "1000Rnd_Gatling_30mm_Plane_CAS_01_F";
+_plane removeMagazines "JAS_1000Rnd_Gatling_30mm_Plane_CAS_01_F";
 _plane removeMagazines "1174Rnd_GAU8_30mm_Plane_CAS_01_F";
 _plane removeMagazines "FIR_AIM9L_1rnd_M";
 _plane removeMagazines "FIR_AIM9X_1rnd_M";
@@ -55,7 +55,7 @@ _plane removeMagazines "FIR_ECMPod_1rnd_M";
 _plane removeMagazines "FIR_SUU25_Pod_1rnd_M";
 _plane removeMagazines "Laserbatteries";
 
-_plane removeweapon "Gatling_30mm_Plane_CAS_01_F";
+_plane removeweapon "JAS_Gatling_30mm_Plane_CAS_01_F";
 _plane removeweapon "FIR_CMLauncher";
 _plane removeweapon "FIR_AIM9L";
 _plane removeweapon "FIR_AIM9X";
@@ -88,7 +88,7 @@ sleep 0.3;
 
 titleText ["Loading guns and Texture", "PLAIN DOWN",0.5];
 
-_plane addweapon "Gatling_30mm_Plane_CAS_01_F";
+_plane addweapon "JAS_Gatling_30mm_Plane_CAS_01_F";
 _plane addweapon "FIR_CMLauncher";
 
 if (isClass(configFile >> "CfgPatches" >> "AlZab_mighty_gau8_avenger")) then 
@@ -97,7 +97,7 @@ if (isClass(configFile >> "CfgPatches" >> "AlZab_mighty_gau8_avenger")) then
 }
 else
 {
-	_plane addmagazine "1000Rnd_Gatling_30mm_Plane_CAS_01_F";
+	_plane addmagazine "JAS_1000Rnd_Gatling_30mm_Plane_CAS_01_F";
 };
 
 

@@ -208,6 +208,600 @@ class cfgAmmo
 	class RocketBase;
 	class Bo_Mk82;
 	class SmokeShell;
+	class B_30mm_HE;
+	class JAS_B_20mm: BulletBase
+	{
+		hit=60;
+		indirectHit=6;
+		indirectHitRange=0.40000001;
+		explosive=0.40000001;
+		caliber=3.4000001;
+		cost=30;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_white";
+		tracerScale=1;
+		tracerStartTime=0.050000001;
+		tracerEndTime=1;
+		nvgOnly=0;
+		typicalSpeed=1030;
+		visibleFire=32;
+		audibleFire=200;
+		visibleFireTime=4;
+		dangerRadiusBulletClose=16;
+		dangerRadiusHit=40;
+		suppressionRadiusBulletClose=10;
+		suppressionRadiusHit=14;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\grenades\Explosion_mini_grenade_01",
+			1.7782794,
+			1,
+			1300
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\grenades\Explosion_mini_grenade_02",
+			1.7782794,
+			1,
+			1300
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\grenades\Explosion_mini_grenade_03",
+			1.7782794,
+			1,
+			1300
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\grenades\Explosion_mini_grenade_04",
+			1.7782794,
+			1,
+			1300
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.25,
+			"soundHit2",
+			0.25,
+			"soundHit3",
+			0.25,
+			"soundHit4",
+			0.25
+		};
+		explosionSoundEffect="DefaultExplosion";
+		airLock=2;
+		CraterEffects="ExploAmmoCrater";
+		explosionEffects="ExploAmmoExplosion";
+		airFriction=-0.00078;
+		muzzleEffect="";
+		class CamShakeExplode
+		{
+			power="(20*0.2)";
+			duration="((round (20^0.5))*0.2 max 0.2)";
+			frequency=20;
+			distance="((1 + 20^0.5)*8)";
+		};
+		class CamShakeHit
+		{
+			power=20;
+			duration="((round (20^0.25))*0.2 max 0.2)";
+			frequency=20;
+			distance=1;
+		};
+		class CamShakeFire
+		{
+			power="(20^0.25)";
+			duration="((round (20^0.5))*0.2 max 0.2)";
+			frequency=20;
+			distance="((20^0.5)*8)";
+		};
+		class CamShakePlayerFire
+		{
+			power=0.0099999998;
+			duration=0.1;
+			frequency=20;
+			distance=1;
+		};
+	};
+	class JAS_Gatling_30mm_HE_Plane_CAS_01_F: BulletBase
+	{
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red.p3d";
+		cost=20;
+		hit=180;
+		indirectHit=4;
+		indirectHitRange=3;
+		caliber=5;
+		explosive=0.40000001;
+		airlock=2;
+		deflecting=5;
+		airFriction=-0.00036000001;
+		typicalSpeed=960;
+		visibleFire=32;
+		audibleFire=250;
+		visibleFireTime=3;
+		fuseDistance=10;
+		dangerRadiusBulletClose=20;
+		dangerRadiusHit=60;
+		suppressionRadiusBulletClose=12;
+		suppressionRadiusHit=24;
+		tracerScale=2.5;
+		tracerStartTime=0.1;
+		tracerEndTime=4.6999998;
+		soundFly[]=
+		{
+			"",
+			1,
+			1,
+			50
+		};
+		explosionSoundEffect="DefaultExplosion";
+		explosionEffects="ExploAmmoExplosionPlaneCAS";
+		craterEffects="ExploAmmoCrater";
+		soundSetSonicCrack[]=
+		{
+			"BulletSonicCrack_Gatling_SoundSet"
+		};
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_01",
+			3.1622777,
+			1,
+			1300
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_02",
+			3.1622777,
+			1,
+			1300
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_03",
+			3.1622777,
+			1,
+			1300
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\Grenades\Explosion_gng_grenades_04",
+			3.1622777,
+			1,
+			1300
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.25,
+			"soundHit2",
+			0.25,
+			"soundHit3",
+			0.25,
+			"soundHit4",
+			0.25
+		};
+		class CamShakeExplode
+		{
+			power="(30*0.2)";
+			duration="((round (30^0.5))*0.2 max 0.2)";
+			frequency=20;
+			distance="((3 + 30^0.5)*8)";
+		};
+		class CamShakeHit
+		{
+			power=30;
+			duration="((round (30^0.25))*0.2 max 0.2)";
+			frequency=20;
+			distance=1;
+		};
+		class CamShakeFire
+		{
+			power="(25^0.25)";
+			duration="((round (25^0.5))*0.2 max 0.2)";
+			frequency=20;
+			distance="((25^0.5)*8)";
+		};
+		class CamShakePlayerFire
+		{
+			power=0.0099999998;
+			duration=0.1;
+			frequency=20;
+			distance=1;
+		};
+		class HitEffects
+		{
+			Hit_Foliage_green="ImpactLeavesGreen";
+			Hit_Foliage_Dead="ImpactLeavesDead";
+			Hit_Foliage_Green_big="ImpactLeavesGreenBig";
+			Hit_Foliage_Palm="ImpactLeavesPalm";
+			Hit_Foliage_Pine="ImpactLeavesPine";
+			hitFoliage="ImpactLeaves";
+			hitGlass="";
+			hitGlassArmored="";
+			hitWood="ImpactWood";
+			hitMetal="";
+			hitMetalPlate="";
+			hitBuilding="";
+			hitPlastic="";
+			hitRubber="";
+			hitConcrete="";
+			hitMan="";
+			hitGroundSoft="";
+			hitGroundHard="";
+			hitWater="ImpactEffectsWater";
+			hitVirtual="";
+		};
+	};
+	class JAS_Cannon_30mm_HE_Plane_CAS_02_F: JAS_Gatling_30mm_HE_Plane_CAS_01_F
+	{
+		model="\A3\Weapons_f\Data\bullettracer\tracer_green.p3d";
+		hit=150;
+		indirectHit=4;
+		indirectHitRange=4;
+		caliber=3;
+		explosive=0.60000002;
+	};
+	class JAS_CUP_B_30mm_HE_Red_Tracer: B_30mm_HE
+	{
+		airLock=2;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
+	};
+	class JAS_CUP_B_23mm_APHE_Tracer_Green: BulletBase
+	{
+		SoundSetExplosion[]=
+		{
+			"Shell19mm25mm_Exp_SoundSet"
+		};
+		hit=120;
+		indirectHit=80;
+		indirectHitRange=2;
+		visibleFire=32;
+		audibleFire=32;
+		visibleFireTime=4;
+		soundHit[]=
+		{
+			"CUP\Weapons\CUP_Weapons_Ammunition\23mm_AA\data\sounds\AZP85_explosion1",
+			"db10",
+			1,
+			1500
+		};
+		explosive=0.5;
+		airLock=2;
+		cost=150;
+		CraterEffects="ExploAmmoCrater";
+		explosionEffects="ExploAmmoExplosion";
+		model="\a3\weapons_f\data\bullettracer\tracer_green";
+		tracerScale=1.85;
+		tracerStartTime=0.050000001;
+		tracerEndTime=2;
+		airFriction=-0.00082399999;
+		muzzleEffect="BIS_Effects_HeavyCaliber";
+		caliber=3;
+	};
+	class JAS_B_25mm: BulletBase
+	{
+		hit=70;
+		indirectHit=6;
+		indirectHitRange=0.40000001;
+		explosive=0.40000001;
+		caliber=3.8;
+		cost=20;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_white";
+		tracerScale=1;
+		tracerStartTime=0.050000001;
+		tracerEndTime=1;
+		nvgOnly=1;
+		typicalSpeed=1030;
+		visibleFire=32;
+		audibleFire=200;
+		visibleFireTime=4;
+		dangerRadiusBulletClose=16;
+		dangerRadiusHit=40;
+		suppressionRadiusBulletClose=10;
+		suppressionRadiusHit=14;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_01",
+			1.7782794,
+			1,
+			1600
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_02",
+			1.7782794,
+			1,
+			1600
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_03",
+			1.7782794,
+			1,
+			1600
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\arsenal\explosives\shells\30mm40mm_shell_explosion_04",
+			1.7782794,
+			1,
+			1600
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.25,
+			"soundHit2",
+			0.25,
+			"soundHit3",
+			0.25,
+			"soundHit4",
+			0.25
+		};
+		explosionSoundEffect="DefaultExplosion";
+		airLock=2;
+		CraterEffects="ExploAmmoCrater";
+		explosionEffects="ExploAmmoExplosion";
+		airFriction=-0.00076000002;
+		muzzleEffect="";
+		class CamShakeExplode
+		{
+			power="(25*0.2)";
+			duration="((round (25^0.5))*0.2 max 0.2)";
+			frequency=20;
+			distance="((2 + 25^0.5)*8)";
+		};
+		class CamShakeHit
+		{
+			power=25;
+			duration="((round (25^0.25))*0.2 max 0.2)";
+			frequency=20;
+			distance=1;
+		};
+		class CamShakeFire
+		{
+			power="(25^0.25)";
+			duration="((round (25^0.5))*0.2 max 0.2)";
+			frequency=20;
+			distance="((25^0.5)*8)";
+		};
+		class CamShakePlayerFire
+		{
+			power=0.0099999998;
+			duration=0.1;
+			frequency=20;
+			distance=1;
+		};
+	};
+	class JAS_CUP_B_30mm_HE_Red_Tracer_GAU8: BulletBase
+	{
+		SoundSetExplosion[]=
+		{
+			"Shell30mm40mm_Exp_SoundSet",
+			"Shell30mm40mm_Tail_SoundSet",
+			"Explosion_Debris_SoundSet"
+		};
+		hit=90;
+		airlock=2
+		indirectHit=15;
+		indirectHitRange=4;
+		explosive=0.80000001;
+		caliber=2.5;
+		cost=20;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_red";
+		tracerScale=2.5;
+		tracerStartTime=0.1;
+		tracerEndTime=2;
+		nvgOnly=0;
+		typicalSpeed=1030;
+		visibleFire=32;
+		audibleFire=32;
+		visibleFireTime=4;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_1",
+			3.1622777,
+			1,
+			1800
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_2",
+			3.1622777,
+			1,
+			1800
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_3",
+			3.1622777,
+			1,
+			1800
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_4",
+			3.1622777,
+			1,
+			1800
+		};
+		soundHit5[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_5",
+			3.1622777,
+			1,
+			1800
+		};
+		soundHit6[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_6",
+			3.1622777,
+			1,
+			1800
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.2,
+			"soundHit2",
+			0.2,
+			"soundHit3",
+			0.2,
+			"soundHit4",
+			0.1,
+			"soundHit5",
+			0.15000001,
+			"soundHit6",
+			0.15000001
+		};
+		explosionSoundEffect="DefaultExplosion";
+		CraterEffects="ExploAmmoCrater";
+		explosionEffects="ExploAmmoExplosion";
+		airFriction=-0.00076000002;
+		muzzleEffect="";
+		class CamShakeExplode
+		{
+			power="(25 * 0.2)";
+			duration="((round (25^0.5))*0.2 max 0.2)";
+			frequency=20;
+			distance="((2 + 25^0.5)*8)";
+		};
+		class CamShakeHit
+		{
+			power=25;
+			duration="((round (25^0.25))*0.2 max 0.2)";
+			frequency=20;
+			distance=1;
+		};
+		class CamShakeFire
+		{
+			power="(25^0.25)";
+			duration="((round (25^0.5))*0.2 max 0.2)";
+			frequency=20;
+			distance="((25^0.5)*8)";
+		};
+		class CamShakePlayerFire
+		{
+			power=0.0099999998;
+			duration=0.1;
+			frequency=20;
+			distance=1;
+		};
+	};
+	class JAS_CUP_B_25mm_HE_White_Tracer: BulletBase
+	{
+		SoundSetExplosion[]=
+		{
+			"Shell19mm25mm_Exp_SoundSet"
+		};
+		hit=30;
+		indirectHit=8;
+		indirectHitRange=3;
+		explosive=0.80000001;
+		caliber=1.4;
+		cost=20;
+		model="\A3\Weapons_f\Data\bullettracer\tracer_white";
+		tracerScale=2.5;
+		tracerStartTime=0.1;
+		tracerEndTime=2;
+		nvgOnly=0;
+		typicalSpeed=1030;
+		visibleFire=32;
+		audibleFire=32;
+		visibleFireTime=4;
+		soundHit1[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_1",
+			3.1622777,
+			1,
+			1800
+		};
+		soundHit2[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_2",
+			3.1622777,
+			1,
+			1800
+		};
+		soundHit3[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_3",
+			3.1622777,
+			1,
+			1800
+		};
+		soundHit4[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_4",
+			3.1622777,
+			1,
+			1800
+		};
+		soundHit5[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_5",
+			3.1622777,
+			1,
+			1800
+		};
+		soundHit6[]=
+		{
+			"A3\Sounds_F\weapons\Explosion\gr_explosion_6",
+			3.1622777,
+			1,
+			1800
+		};
+		multiSoundHit[]=
+		{
+			"soundHit1",
+			0.2,
+			"soundHit2",
+			0.2,
+			"soundHit3",
+			0.2,
+			"soundHit4",
+			0.1,
+			"soundHit5",
+			0.15000001,
+			"soundHit6",
+			0.15000001
+		};
+		explosionSoundEffect="DefaultExplosion";
+		airLock=2;
+		CraterEffects="ExploAmmoCrater";
+		explosionEffects="ExploAmmoExplosion";
+		airFriction=-0.00076000002;
+		muzzleEffect="";
+		class CamShakeExplode
+		{
+			power="(25 * 0.2)";
+			duration="((round (25^0.5))*0.2 max 0.2)";
+			frequency=20;
+			distance="((2 + 25^0.5)*8)";
+		};
+		class CamShakeHit
+		{
+			power=25;
+			duration="((round (25^0.25))*0.2 max 0.2)";
+			frequency=20;
+			distance=1;
+		};
+		class CamShakeFire
+		{
+			power="(25^0.25)";
+			duration="((round (25^0.5))*0.2 max 0.2)";
+			frequency=20;
+			distance="((25^0.5)*8)";
+		};
+		class CamShakePlayerFire
+		{
+			power=0.0099999998;
+			duration=0.1;
+			frequency=20;
+			distance=1;
+		};
+	};
 	class JAS_CUP_R_57mm_HE: RocketBase
 	{
 		SoundSetExplosion[]=
@@ -1115,6 +1709,136 @@ class cfgMagazines
 	class 38Rnd_80mm_rockets;
 	class 2Rnd_LG_Scalpel;
 	class 2Rnd_Missile_AA_03_F;
+	class JAS_1000Rnd_Gatling_30mm_Plane_CAS_01_F: VehicleMagazine
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		scope=2;
+		displayNameShort="";
+		ammo="JAS_Gatling_30mm_HE_Plane_CAS_01_F";
+		count=1000;
+		initSpeed=1120;
+		maxLeadSpeed=300;
+		sound[]=
+		{
+			"",
+			1,
+			1
+		};
+		reloadSound[]=
+		{
+			"",
+			0.00031622773,
+			1
+		};
+		nameSound="cannon";
+		tracersEvery=1;
+	};
+	class JAS_300Rnd_20mm_shells: VehicleMagazine
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		scope=2;
+		displayName="$STR_A3_CfgMagazines_1000Rnd_20mm_shells0";
+		displayNameShort="$STR_A3_CfgMagazines_300Rnd_20mm_shells_dns";
+		ammo="JAS_B_20mm";
+		count=300;
+		initSpeed=1030;
+		maxLeadSpeed=300;
+		tracersEvery=5;
+		nameSound="cannon";
+	};
+	class JAS_500Rnd_Gatling_30mm_Plane_CAS_02_F: VehicleMagazine
+	{
+		author="$STR_A3_Bohemia_Interactive";
+		scope=2;
+		displayNameShort="";
+		ammo="JAS_Cannon_30mm_HE_Plane_CAS_02_F";
+		count=500;
+		initSpeed=1120;
+		maxLeadSpeed=300;
+		sound[]=
+		{
+			"",
+			1,
+			1
+		};
+		reloadSound[]=
+		{
+			"",
+			0.00031622773,
+			1
+		};
+		nameSound="cannon";
+		tracersEvery=1;
+	};
+	class JAS_CUP_180Rnd_TE1_30mm_GSh302K_HE_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="180Rnd GSh302K Mag";
+		ammo="JAS_CUP_B_30mm_HE_Red_Tracer";
+		count=180;
+		initSpeed=870;
+		maxLeadSpeed=600;
+		tracersEvery=1;
+		nameSound="cannon";
+	};
+	class JAS_CUP_750Rnd_TE1_30mm_GSh302K_HE_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="750Rnd GSh302K Mag";
+		ammo="JAS_CUP_B_30mm_HE_Red_Tracer";
+		count=750;
+		initSpeed=870;
+		maxLeadSpeed=600;
+		tracersEvery=1;
+		nameSound="cannon";
+	};
+	class JAS_CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="23mm APHE";
+		ammo="JAS_CUP_B_23mm_APHE_Tracer_Green";
+		count=150;
+		initSpeed=715;
+		maxLeadSpeed=200;
+		tracersEvery=2;
+		lastRoundTracers=1000;
+		nameSound="cannon";
+	};
+	class JAS_FIR_GAU12_300rnd_M : VehicleMagazine
+	{
+		scope = 2;
+		initSpeed = 1440;
+		maxLeadSpeed = 300;
+		tracersEvery = 1;
+		lastRoundsTracer = 5;
+		nameSound = "cannon";
+		displayName = "GAU12 Equalizer";
+		ammo = "JAS_B_25mm";
+		count = 300;		
+		displayNameShort = "25mm";
+	};
+	class JAS_CUP_1350Rnd_TE1_Red_Tracer_30mm_GAU8_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="GAU-8/A 30mm HE Magazine";
+		ammo="JAS_CUP_B_30mm_HE_Red_Tracer_GAU8";
+		count=1350;
+		initSpeed=1040;
+		maxLeadSpeed=300;
+		tracersEvery=1;
+		nameSound="cannon";
+	};
+	class JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="25mm Cannon";
+		ammo="JAS_CUP_B_25mm_HE_White_Tracer";
+		count=220;
+		initSpeed=1040;
+		maxLeadSpeed=300;
+		tracersEvery=1;
+		nameSound="cannon";
+	};
 	class JAS_CUP_16Rnd_57mm: VehicleMagazine
 	{
 		scope=2;
@@ -1905,6 +2629,418 @@ class cfgWeapons
 	class Missiles_Scalpel;
 	class Missile_AA_03_Plane_CAS_02_F;
 	class CannonCore;
+	class JAS_Gatling_30mm_Plane_CAS_01_F: CannonCore
+	{
+		scope=1;
+		displayName="$STR_A3_Gatling_30mm_Plane_CAS_01_F0";
+		magazines[]=
+		{
+			"JAS_1000Rnd_Gatling_30mm_Plane_CAS_01_F"
+		};
+		holdsterAnimValue=1;
+		ballisticsComputer="4 + 8";
+		canLock=2;
+		cursor="EmptyCursor";
+		cursorAim="mg";
+		modes[]=
+		{
+			"LowROF",
+			"close",
+			"near",
+			"short",
+			"medium",
+			"far"
+		};
+		nameSound="cannon";
+		shotFromTurret=0;
+		muzzlePos="Gatling_muzzleflash";
+		muzzleEnd="Gatling_barrels_end";
+		selectionFireAnim="Gatling_muzzleflash";
+		autoFire=0;
+		burst=20;
+		reloadTime=0.029999999;
+		class GunParticles
+		{
+			class Effect
+			{
+				effectName="MachineGun3";
+				positionName="Gatling_barrels_end";
+				directionName="Gatling_barrels_start";
+			};
+		};
+		class LowROF: Mode_FullAuto
+		{
+			displayName="$STR_A3_Gatling_30mm_Plane_CAS_01_F0";
+			reloadTime=0.029999999;
+			aiRateOfFire=0.25;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"A3\Sounds_F\arsenal\weapons_vehicles\gatling_30mm\30mm_01_burst",
+					5.6234136,
+					1,
+					1500,
+					{25704,32159}
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			soundContinuous=1;
+			autoFire=1;
+			flash="gunfire";
+			flashSize=0.1;
+			recoil="Empty";
+			aiDispersionCoefX=10;
+			aiDispersionCoefY=10;
+			ffMagnitude=0.5;
+			ffFrequency=11;
+			ffCount=6;
+			minRange=1;
+			minRangeProbab=0.059999999;
+			midRange=2;
+			midRangeProbab=0.059999999;
+			maxRange=3;
+			maxRangeProbab=0.0040000002;
+			dispersion=0.0049999999;
+			burst=20;
+			showToPlayer=1;
+		};
+		class close: LowROF
+		{
+			showToPlayer=0;
+			burst=25;
+			aiRateOfFire=0.25;
+			aiRateOfFireDistance=400;
+			minRange=1;
+			minRangeProbab=0.34999999;
+			midRange=200;
+			midRangeProbab=0.88;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+		};
+		class near: close
+		{
+			showToPlayer=0;
+			burst=20;
+			aiRateOfFire=0.25;
+			aiRateOfFireDistance=400;
+			minRange=1;
+			minRangeProbab=0.34999999;
+			midRange=150;
+			midRangeProbab=0.88;
+			maxRange=300;
+			maxRangeProbab=0.30000001;
+		};
+		class short: close
+		{
+			burst=15;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.30000001;
+			midRange=400;
+			midRangeProbab=0.88;
+			maxRange=600;
+			maxRangeProbab=0.30000001;
+		};
+		class medium: close
+		{
+			burst=10;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=900;
+			minRange=400;
+			minRangeProbab=0.30000001;
+			midRange=700;
+			midRangeProbab=0.77999997;
+			maxRange=900;
+			maxRangeProbab=0.2;
+		};
+		class far: close
+		{
+			burst=5;
+			aiRateOfFire=1.5;
+			aiRateOfFireDistance=1500;
+			minRange=800;
+			minRangeProbab=0.2;
+			midRange=1000;
+			midRangeProbab=0.60000002;
+			maxRange=1500;
+			maxRangeProbab=0.1;
+		};
+	};
+	class JAS_gatling_20mm: CannonCore
+	{
+		scope=1;
+		displayName="$STR_A3_GATLING_20MM0";
+		nameSound="cannon";
+		cursor="EmptyCursor";
+		cursorAim="mg";
+		magazines[]=
+		{
+			"JAS_300Rnd_20mm_shells"
+		};
+		canLock=2;
+		ballisticsComputer="4 + 8";
+		modes[]=
+		{
+			"manual",
+			"close",
+			"short",
+			"medium",
+			"far"
+		};
+		class GunParticles
+		{
+			class Effect
+			{
+				effectName="MachineGun1";
+				positionName="Usti hlavne";
+				directionName="Konec hlavne";
+			};
+		};
+		class manual: CannonCore
+		{
+			displayName="$STR_A3_twin_cannon_20mm";
+			autoFire=1;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"A3\Sounds_F\arsenal\weapons_vehicles\gatling_20mm\20mm_01_burst",
+					3.9810717,
+					1,
+					1300,
+					{2,35740}
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			reloadTime=0.039999999;
+			dispersion=0.0022;
+			soundContinuous=1;
+			soundBurst=0;
+			showToPlayer=1;
+			burst=5;
+			aiRateOfFire=0.25;
+			aiRateOfFireDistance=50;
+			minRange=1;
+			minRangeProbab=0.0099999998;
+			midRange=2;
+			midRangeProbab=0.0099999998;
+			maxRange=3;
+			maxRangeProbab=0.0099999998;
+			textureType="fullAuto";
+		};
+		class close: manual
+		{
+			showToPlayer=0;
+			burst=15;
+			aiRateOfFire=0.25;
+			aiRateOfFireDistance=400;
+			minRange=0;
+			minRangeProbab=0.050000001;
+			midRange=200;
+			midRangeProbab=0.69999999;
+			maxRange=400;
+			maxRangeProbab=0.2;
+		};
+		class short: close
+		{
+			burst=10;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=500;
+			minRange=300;
+			minRangeProbab=0.2;
+			midRange=400;
+			midRangeProbab=0.69999999;
+			maxRange=500;
+			maxRangeProbab=0.2;
+		};
+		class medium: close
+		{
+			burst=7;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=900;
+			minRange=400;
+			minRangeProbab=0.2;
+			midRange=700;
+			midRangeProbab=0.69999999;
+			maxRange=900;
+			maxRangeProbab=0.2;
+		};
+		class far: close
+		{
+			burst=4;
+			aiRateOfFire=1.5;
+			aiRateOfFireDistance=1500;
+			minRange=800;
+			minRangeProbab=0.2;
+			midRange=1000;
+			midRangeProbab=0.40000001;
+			maxRange=1500;
+			maxRangeProbab=0.0099999998;
+		};
+	};
+	class JAS_Cannon_30mm_Plane_CAS_02_F: CannonCore
+	{
+		scope=1;
+		displayName="$STR_A3_CFGWEAPONS_CANNON_30MM";
+		magazines[]=
+		{
+			"JAS_500Rnd_Gatling_30mm_Plane_CAS_02_F"
+		};
+		holdsterAnimValue=1;
+		ballisticsComputer="4 + 8";
+		canLock=2;
+		cursor="EmptyCursor";
+		cursorAim="mg";
+		modes[]=
+		{
+			"LowROF",
+			"close",
+			"near",
+			"short",
+			"medium",
+			"far"
+		};
+		nameSound="cannon";
+		shotFromTurret=0;
+		muzzlePos="Cannon_muzzleflash";
+		muzzleEnd="Cannon_barrel_end";
+		selectionFireAnim="Cannon_muzzleflash";
+		autoFire=1;
+		burst=10;
+		reloadTime=0.039999999;
+		class GunParticles
+		{
+			class Effect
+			{
+				effectName="MachineGun2";
+				positionName="Cannon_barrel_start";
+				directionName="Cannon_barrel_end";
+			};
+		};
+		class LowROF: Mode_FullAuto
+		{
+			displayName="$STR_A3_CFGWEAPONS_CANNON_30MM";
+			reloadTime=0.039999999;
+			aiRateOfFire=0.25;
+			sounds[]=
+			{
+				"StandardSound"
+			};
+			class StandardSound
+			{
+				begin1[]=
+				{
+					"A3\Sounds_F_epc\weapons\cas_02_cannon",
+					1.7782794,
+					1,
+					3800
+				};
+				soundBegin[]=
+				{
+					"begin1",
+					1
+				};
+			};
+			soundContinuous=0;
+			flash="gunfire";
+			flashSize=0.1;
+			recoil="Empty";
+			aiDispersionCoefX=8;
+			aiDispersionCoefY=8;
+			ffMagnitude=0.5;
+			ffFrequency=11;
+			ffCount=6;
+			minRange=1;
+			minRangeProbab=0.059999999;
+			midRange=2;
+			midRangeProbab=0.059999999;
+			maxRange=3;
+			maxRangeProbab=0.0040000002;
+			dispersion=0.0060000001;
+			burst=10;
+			showToPlayer=1;
+		};
+		class close: LowROF
+		{
+			showToPlayer=0;
+			burst=15;
+			aiRateOfFire=0.25;
+			aiRateOfFireDistance=400;
+			minRange=1;
+			minRangeProbab=0.34999999;
+			midRange=150;
+			midRangeProbab=0.88;
+			maxRange=300;
+			maxRangeProbab=0.30000001;
+		};
+		class near: close
+		{
+			showToPlayer=0;
+			burst=13;
+			aiRateOfFire=0.25;
+			aiRateOfFireDistance=400;
+			minRange=1;
+			minRangeProbab=0.34999999;
+			midRange=250;
+			midRangeProbab=0.88;
+			maxRange=400;
+			maxRangeProbab=0.30000001;
+		};
+		class short: close
+		{
+			burst=10;
+			aiRateOfFire=0.5;
+			aiRateOfFireDistance=600;
+			minRange=200;
+			minRangeProbab=0.30000001;
+			midRange=400;
+			midRangeProbab=0.88;
+			maxRange=600;
+			maxRangeProbab=0.30000001;
+		};
+		class medium: close
+		{
+			burst=7;
+			aiRateOfFire=1;
+			aiRateOfFireDistance=900;
+			minRange=400;
+			minRangeProbab=0.30000001;
+			midRange=700;
+			midRangeProbab=0.77999997;
+			maxRange=900;
+			maxRangeProbab=0.2;
+		};
+		class far: close
+		{
+			burst=5;
+			aiRateOfFire=1.5;
+			aiRateOfFireDistance=1500;
+			minRange=800;
+			minRangeProbab=0.2;
+			midRange=1000;
+			midRangeProbab=0.60000002;
+			maxRange=1500;
+			maxRangeProbab=0.1;
+		};
+	};
 	class JAS_FIR_GBU24_118 : MissileLauncher
 	{
 		ballisticsComputer = 8;
@@ -2442,10 +3578,10 @@ class cfgWeapons
 	class JAS_CUP_Vacannon_GSh23L_onboard: JAS_CUP_Vacannon_GSh23L_in_veh
 	{
 		displayName="GSh-23L Internal Cannon";
-		ballisticsComputer=4;
+		ballisticsComputer="4+8";
 		magazines[]=
 		{
-			"CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M"
+			"JAS_CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M"
 		};
 		canLock=2;
 	};
@@ -2455,11 +3591,11 @@ class cfgWeapons
 		displayName="GSh-30-2K 30mm Cannon";
 		magazines[]=
 		{
-			"CUP_750Rnd_TE1_30mm_GSh302K_HE_M"
+			"JAS_CUP_750Rnd_TE1_30mm_GSh302K_HE_M"
 		};
 		holdsterAnimValue=1;
-		ballisticsComputer=8;
-		canLock=0;
+		ballisticsComputer="4+8";
+		canLock=2;
 		cursor="EmptyCursor";
 		cursorAim="mg";
 		modes[]=
@@ -2599,7 +3735,7 @@ class cfgWeapons
 		displayName="Gsh-301 30mm Cannon";
 		magazines[]=
 		{
-			"CUP_180Rnd_TE1_30mm_GSh301_HE_M"
+			"JAS_CUP_180Rnd_TE1_30mm_GSh302K_HE_M"
 		};
 		class LowROF: LowROF
 		{
@@ -2673,6 +3809,47 @@ class cfgWeapons
 		canLock = 2;
 		ballisticsComputer = 1;
 	};
+	class JAS_FIR_GAU12 : CannonCore
+	{
+		scope = 1;
+		nameSound = "cannon";
+		cursor = "EmptyCursor";
+		cursoraim = "mg";
+		cursorSize = 1;
+		canLock = 2;
+		ballisticsComputer = "4 + 8";
+		displayName = "GAU-12 Equalizer";
+		displayNameMagazine = "GAU-12";
+		shortNameMagazine = "GAU12";
+		soundContinuous = 0;
+		reloadTime = 0.00010000;
+		burst = 6;
+		multiplier = 1;
+		autofire = 1;
+		flash = "gunfire";
+		flashSize = 0.100000;
+		recoil = "Empty";
+		aiRateOfFire=5.0;
+		aiRateOfFireDistance=100;
+		sounds[] = {"StandardSound"};
+		class StandardSound
+			{
+				begin1[] = {"FIR_AirWeaponSystem_US\Sound\M61_Vulcan.wss",2.5118864,1,4500,{ 25704,32159 }};
+				soundBegin[] = {"begin1",1};
+				weaponSoundEffect = "DefaultRifle";
+			};
+		dispersion = 0.006000;
+		magazines[] = {"JAS_FIR_GAU12_300rnd_M"};
+		class GunParticles 
+		{
+			class Effect 
+			{
+				effectName = "MachineGun1";
+				positionName = "kulomet";
+				directionName = "kulomet";
+			};
+		};
+	};
 	class JAS_CUP_Vacannon_GAU12_veh: CannonCore
 	{
 		author="$STR_CUP_AUTHOR_STRING";
@@ -2680,7 +3857,7 @@ class cfgWeapons
 		displayName="$STR_CUP_DN_GAU12";
 		nameSound="cannon";
 		cursor="EmptyCursor";
-		cursorAim="EmptyCursor";
+		cursorAim="mg";
 		cursorSize=1;
 		magazines[]=
 		{
@@ -2799,11 +3976,11 @@ class cfgWeapons
 	class JAS_CUP_Vacannon_GAU22_veh: JAS_CUP_Vacannon_GAU12_veh
 	{
 		author="CUP/-{GOL}-Jason";
-		ballisticsComputer = 8;
+		ballisticsComputer = "4+8";
 		displayName="$STR_CUP_DN_GAU22";
 		magazines[]=
 		{
-			"CUP_220Rnd_TE1_White_Tracer_30mm_GAU22_M"
+			"JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M"
 		};
 		class manual: manual
 		{
@@ -2850,10 +4027,19 @@ class cfgWeapons
 			};
 		};
 	};
+	class JAS_CUP_Vacannon_GAU22_veh_AA: JAS_CUP_Vacannon_GAU22_veh
+	{
+		author="-{GOL}-Jason";
+		canLock = 2;
+		ballisticsComputer = 4;
+		displayName="GAU-22 Air To Air Mode";
+		cursor="EmptyCursor";
+		cursorAim="mg";
+	};
 	class JAS_CUP_Vacannon_GAU8_veh: CannonCore
 	{
 		author="CUP/-{GOL}-Jason";
-		ballisticsComputer = 8;
+		ballisticsComputer = "4+8";
 		scope=1;
 		displayName="GAU-8/A Avenger";
 		nameSound="cannon";
@@ -2862,7 +4048,7 @@ class cfgWeapons
 		cursorSize=1;
 		magazines[]=
 		{
-			"CUP_1350Rnd_TE1_Red_Tracer_30mm_GAU8_M"
+			"JAS_CUP_1350Rnd_TE1_Red_Tracer_30mm_GAU8_M"
 		};
 		canLock=2;
 		modes[]=

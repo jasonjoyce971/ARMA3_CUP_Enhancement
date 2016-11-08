@@ -945,12 +945,13 @@ class CfgVehicles
 		hasCommander=0;
 		weapons[]=
 		{
+			"FIR_MasterArm",
 			"JAS_CUP_Vacannon_GSh301_veh",
 			"FIR_CMLauncher"
 		};
 		magazines[]=
 		{
-			"CUP_180Rnd_TE1_30mm_GSh301_HE_M",
+			"JAS_CUP_180Rnd_TE1_30mm_GSh302K_HE_M",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 		class Turrets
@@ -974,6 +975,7 @@ class CfgVehicles
 				viewGunnerShadow=1;
 				weapons[]=
 				{
+					"FIR_MasterArm",
 					"Laserdesignator_mounted"
 				};
 				magazines[]=
