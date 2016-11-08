@@ -936,7 +936,7 @@ class CfgVehicles
 		};
 		magazines[]=
 		{
-			"CUP_750Rnd_TE1_30mm_GSh302K_HE_M",
+			"JAS_CUP_750Rnd_TE1_30mm_GSh302K_HE_M",
 			"Laserbatteries",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};

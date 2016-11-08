@@ -27,7 +27,7 @@ _plane setVariable ["ECMJAMMER","no",true];
 /* Delete Weapon and Ammo Before */
 // mags
 _plane removeMagazines "FIR_240rnd_CMFlare_Chaff_Magazine";
-_plane removeMagazines "CUP_1350Rnd_TE1_Red_Tracer_30mm_GAU8_M";
+_plane removeMagazines "JAS_CUP_1350Rnd_TE1_Red_Tracer_30mm_GAU8_M";
 _plane removeMagazines "JAS_FIR_mk82_snakeye_1rnd_M";
 _plane removeMagazines "FIR_mk82_gp_1rnd_M";
 _plane removeMagazines "FIR_CBU87_1rnd_M";
@@ -118,7 +118,7 @@ if (isClass(configFile >> "CfgPatches" >> "AlZab_mighty_gau8_avenger")) then
 }
 else
 {
-	_plane addmagazine "CUP_1350Rnd_TE1_Red_Tracer_30mm_GAU8_M";
+	_plane addmagazine "JAS_CUP_1350Rnd_TE1_Red_Tracer_30mm_GAU8_M";
 };
 
 

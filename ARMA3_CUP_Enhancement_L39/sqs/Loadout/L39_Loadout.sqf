@@ -28,7 +28,7 @@ _plane removeMagazinesTurret ["JAS_CUP_16Rnd_57mm",[-1]];
 _plane removeMagazinesTurret ["JAS_CUP_40Rnd_S8_M",[-1]];
 _plane removeMagazinesTurret ["JAS_CUP_1Rnd_FAB250_M",[-1]];
 _plane removeMagazinesTurret ["JAS_FIR_CBU250_1rnd_M",[-1]];
-_plane removeMagazinesTurret ["CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M",[-1]]; // ONBOARD MAG
+_plane removeMagazinesTurret ["JAS_CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M",[-1]]; // ONBOARD MAG
 
 //gunner mags
 _plane removeMagazinesTurret ["1Rnd_Missile_AA_03_F",[0]];
@@ -43,7 +43,7 @@ _plane removeMagazines "JAS_CUP_40Rnd_S8_M";
 _plane removeMagazines "JAS_CUP_1Rnd_FAB250_M";
 _plane removeMagazines "JAS_CUP_1Rnd_KAB250_M";
 _plane removeMagazines "JAS_FIR_CBU250_1rnd_M";
-_plane removeMagazines "CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M"; // ONBOARD MAG
+_plane removeMagazines "JAS_CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M"; // ONBOARD MAG
 _plane removeMagazines "JAS_KH25_1rnd_M";
 
 //pilot weapons
@@ -80,7 +80,7 @@ sleep 0.3;
 titleText ["Loading Guns and Texture", "PLAIN DOWN",0.5];
 
 // add onboard cannon
-_plane addmagazineturret ["CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M",[-1]];
+_plane addmagazineturret ["JAS_CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M",[-1]];
 _plane addweaponturret ["JAS_CUP_Vacannon_GSh23L_onboard",[-1]];
 
 /* -1 is Default Texture. -1 is not choose, mean blank in the combo box. */

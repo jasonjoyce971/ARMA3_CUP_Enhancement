@@ -1271,7 +1271,7 @@ class CfgVehicles
 		};
 		magazines[] =
 		{
-			"CUP_220Rnd_TE1_White_Tracer_30mm_GAU22_M",
+			"JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 		hiddenSelectionsTextures[] =
@@ -1505,7 +1505,7 @@ class CfgVehicles
 		};
 		magazines[] =
 		{
-			"CUP_220Rnd_TE1_White_Tracer_30mm_GAU22_M",
+			"JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 		hiddenSelectionsTextures[] =

@@ -778,7 +778,7 @@ class CfgVehicles
 		};
 		magazines[] =
 		{
-			"CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M"
+			"JAS_CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M"
 		};
 		driveOnComponent[]=
 		{

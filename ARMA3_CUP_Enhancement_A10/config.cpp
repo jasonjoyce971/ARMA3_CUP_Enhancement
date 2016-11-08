@@ -4959,7 +4959,7 @@ class CfgVehicles
 		};
 		magazines[] =
 		{
-			"CUP_1350Rnd_TE1_Red_Tracer_30mm_GAU8_M",
+			"JAS_CUP_1350Rnd_TE1_Red_Tracer_30mm_GAU8_M",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
 			//"Laserbatteries"
 		};

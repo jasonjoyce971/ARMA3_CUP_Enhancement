@@ -39,7 +39,7 @@ _plane removeMagazines "JAS_CUP_1Rnd_KAB250_M";
 _plane removeMagazines "JAS_FIR_CBU250_1rnd_M";
 _plane removeMagazines "CUP_250Rnd_TE2_Red_Tracer_GSh23_23mm_APHE_M";
 _plane removeMagazines "JAS_CUP_6Rnd_AT16_M";
-_plane removeMagazines "500Rnd_Cannon_30mm_Plane_CAS_02_F";
+_plane removeMagazines "JAS_500Rnd_Gatling_30mm_Plane_CAS_02_F";
 
 //weapons
 _plane removeweapon "JAS_CUP_Vmlauncher_S8_veh";
@@ -52,7 +52,7 @@ _plane removeweapon "JAS_CUP_Vblauncher_KAB250_veh";
 _plane removeweapon "JAS_FIR_CBU250";
 _plane removeweapon "JAS_CUP_Vacannon_GSh23L_in_veh";
 _plane removeweapon "JAS_CUP_Vmlauncher_AT16_veh";
-_plane removeweapon "Cannon_30mm_Plane_CAS_02_F";
+_plane removeweapon "JAS_Cannon_30mm_Plane_CAS_02_F";
 
 //AWS
 _plane removeMagazines "FIR_240rnd_CMFlare_Chaff_Magazine";
@@ -71,8 +71,8 @@ titleText ["Loading guns and Texture", "PLAIN DOWN",0.5];
 _plane addmagazine "FIR_240rnd_CMFlare_Chaff_Magazine";
 _plane addweapon "FIR_CMLauncher";
 
-_plane addmagazine "500Rnd_Cannon_30mm_Plane_CAS_02_F";
-_plane addweapon "Cannon_30mm_Plane_CAS_02_F";
+_plane addmagazine "JAS_500Rnd_Gatling_30mm_Plane_CAS_02_F";
+_plane addweapon "JAS_Cannon_30mm_Plane_CAS_02_F";
 
 _plane addmagazine "Laserbatteries";
 _plane addweapon "Laserdesignator_mounted";
