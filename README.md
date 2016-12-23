@@ -1,5 +1,9 @@
 # ARMA3_CUP_Enhancement
 
+V2.1:
+* AW-159 Updated with adjustable payloads
+* Air to Air Gun Modes added
+
 V2.0.1:
 * Hotfix for CUP AW-159 Update
 
