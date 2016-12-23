@@ -54,6 +54,11 @@ class CfgAddons
 class CfgNonAIVehicles
 {
 	class ProxyWeapon;
+	class JAS_R77_proxy : ProxyWeapon
+	{
+		model = "\ARMA3_CUP_Enhancement_Weapons\R77\R77.p3d";
+		simulation = "maverickweapon";
+	};
 	class ProxySCALP_proxy : ProxyWeapon
 	{
 		displayName = "SCALP";
@@ -209,6 +214,33 @@ class cfgAmmo
 	class Bo_Mk82;
 	class SmokeShell;
 	class B_30mm_HE;
+	class JAS_R77 : M_Air_AA
+	{
+		model = "\ARMA3_CUP_Enhancement_Weapons\R77\R77.p3d";
+		proxyShape ="\ARMA3_CUP_Enhancement_Weapons\R77\R77.p3d";
+		hit = 400;
+		indirectHit = 300;
+		indirectHitRange = 10;
+		fuseDistance = 1000;
+		weaponLockSystem = "8 + 16";
+        timetoLive = 120;
+		maneuvrability = 20;
+		cmimmunity = 0.98;
+		lockType = 0;
+		airLock = 2;
+		irLock = "true";
+		laserLock = "false";
+		initTime = 0.5;
+        maxspeed = 880;
+		maxControlRange = 3800;
+		trackOversteer = 1;
+		trackLead = 1;
+		thrust = 450;
+		thrustTime = 30;
+		effectsMissile = "FIR_MissileEffect";
+		soundHit[] = {"A3\Sounds_F\weapons\Rockets\explosion_missile_01",3.1622777,1,1800};
+		holdsterAnimValue = 1;
+	};
 	class JAS_B_20mm: BulletBase
 	{
 		hit=60;
@@ -1709,6 +1741,17 @@ class cfgMagazines
 	class 38Rnd_80mm_rockets;
 	class 2Rnd_LG_Scalpel;
 	class 2Rnd_Missile_AA_03_F;
+	class JAS_R77_1rnd_M : VehicleMagazine
+	{
+		scope = 2;
+		displayName = "R-77";
+		displayNameShort = "Long-Range";
+		count = 1;
+		nameSound = "missiles";
+		ammo = "JAS_R77";
+		initSpeed = 0;
+		maxLeadSpeed = 300;
+	};
 	class JAS_1000Rnd_Gatling_30mm_Plane_CAS_01_F: VehicleMagazine
 	{
 		author="$STR_A3_Bohemia_Interactive";
@@ -2629,6 +2672,37 @@ class cfgWeapons
 	class Missiles_Scalpel;
 	class Missile_AA_03_Plane_CAS_02_F;
 	class CannonCore;
+	class JAS_R77_LAU : MissileLauncher
+	{
+		scope = 2;
+		weaponLockDelay = 0.5;
+		weaponLockSystem = 8;
+		cmImmunity = 1.0;
+		sounds[] = {"StandardSound"};
+		class StandardSound
+		{
+			begin1[] = {"A3\Sounds_F\weapons\Rockets\titan_1",2.5118864,1,1100};
+			soundBegin[] = {"begin1",1};
+			weaponSoundEffect = "DefaultRifle";
+		};
+		displayName = "Vympel R-77";
+		displayNameMagazine = "R-77";
+		shortNameMagazine = "R-77";
+		magazineReloadTime=0.5;
+		initspeed = 30;
+		reloadTime = 0.3;
+		aiDispersionCoefX=1.0; 
+		aiDispersionCoefY=1.0;
+		aiRateOfFire = 0.5;
+		aiRateOfFireDistance = 5000;
+		minRange = 1000;
+		minRangeProbab = 0.04;
+		midRange = 4000;
+		midRangeProbab = 0.70;
+		maxRange = 16000;
+		maxRangeProbab = 0.80;
+		magazines[] = {"JAS_R77_1rnd_M"};
+	};
 	class JAS_Gatling_30mm_Plane_CAS_01_F: CannonCore
 	{
 		scope=1;

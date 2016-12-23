@@ -7,6 +7,8 @@ if (!local _plane) exitwith{};
 
 _plane setVariable ["ECMJAMMER","yes",true];
 
+_plane setvariable ["Cam_Tracking","no",true];
+
 _plane setVariable ["ITGT_VT","no",true];
 _plane setVariable ["TGT_POD","yes",true];
 _plane setVariable ["ITGT_GRIDTYPE","8D",true];
