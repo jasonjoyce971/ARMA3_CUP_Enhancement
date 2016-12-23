@@ -2564,6 +2564,32 @@ class CfgVehicles
 		faction="GOL_AAC_OPFOR";
 		editorSubcategory="GOL_AAC_PHANTOM";
 	};
+	/*class JAS_O_Plane_CAS_02_F_AACX: JAS_O_Plane_CAS_02_F
+	{
+		author="Bohemia Interactive/-{GOL}-Jason";
+		scope=2;
+		displayName="YAK-131X Prototype";
+		side=0;
+		faction="GOL_AAC_OPFOR";
+		editorSubcategory="GOL_AAC_PHANTOM";
+		weapons[]=
+		{
+			"FIR_MasterArm",
+			"JAS_Gatling_30mm_Plane_CAS_01_F",
+			"FIR_CMLauncher",
+			"Rocket_04_HE_Plane_CAS_01_F",
+			"Rocket_04_AP_Plane_CAS_01_F",
+			"JAS_R77_LAU"
+		};
+		magazines[]=
+		{
+			"JAS_1000Rnd_Gatling_30mm_Plane_CAS_01_F",
+			"FIR_240rnd_CMFlare_Chaff_Magazine",
+			"7Rnd_Rocket_04_HE_F",
+			"7Rnd_Rocket_04_AP_F",
+			"JAS_R77_1rnd_M"
+		};
+	};*/
 	class JAS_A164_Loadout_Module: Module_F
 	{
 		scope=2;

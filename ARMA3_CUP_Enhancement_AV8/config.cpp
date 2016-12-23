@@ -9115,7 +9115,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
-			fired="fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
+			fired="fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";cam = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\mav_tracking.sqf"";";
 		};
 	};
 	class JAS_CUP_B_AV8B_USMC2 : JAS_CUP_B_AV8B_USMC
