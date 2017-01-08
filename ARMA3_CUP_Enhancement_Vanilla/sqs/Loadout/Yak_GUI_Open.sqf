@@ -122,4 +122,16 @@ _handle= CreateDialog "JAS_YAK_GUI";
 		"KAB-250",
 		"RBK-250"
     ];
+	//Add Rocket Selection 1
+	{lbAdd[2117,_x]} forEach 
+	[  
+		"HE Rockets",
+		"AP Rockets"
+    ];
+	//Add Rocket Selection 2
+	{lbAdd[2118,_x]} forEach 
+	[  
+		"HE Rockets",
+		"AP Rockets"
+    ];
 	

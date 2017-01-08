@@ -32,7 +32,7 @@ _handle= CreateDialog "f35_GUI";
 	[  
 		"Empty",
 		"AIM-9X",
-		"AIM-120"
+		"AIM-120",
 		"Sniper XR POD"
     ];
 	

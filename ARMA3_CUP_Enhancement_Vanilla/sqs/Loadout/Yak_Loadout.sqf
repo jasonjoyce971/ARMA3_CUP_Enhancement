@@ -6,7 +6,7 @@ _plane = vehicle Player;
 _twascount = 0;
 _twasredcount = 0;
 
-Private ["_texture","_preset","_hardpoint1","_hardpoint2","_hardpoint3","_hardpoint4","_hardpoint5","_hardpoint5A","_hardpoint6","_hardpoint7","_hardpoint8","_hardpoint9"];
+Private ["_texture","_preset","_hardpoint1","_hardpoint2","_hardpoint3","_hardpoint4","_hardpoint5","_hardpoint5A","_hardpoint6","_hardpoint7","_hardpoint8","_hardpoint9","_rocket1","_rocket2"];
 
 /* Pick up the number from Combo box */
 _preset = lbCurSel 2108;
@@ -18,6 +18,9 @@ _hardpoint5 = lbCurSel 2103; // Right Inboard
 _hardpoint6 = lbCurSel 2104; // Left Inboard
 _hardpoint7 = lbCurSel 2105; // Right Wingpit
 _hardpoint8 = lbCurSel 2106; // Left Wingpit
+
+_rocket1 = lbCurSel 2117; // Rocket Box 1
+_rocket2 = lbCurSel 2118; // Rocket Box 2
 
 _plane setVariable ["TGT_POD","no",true];
 
@@ -40,6 +43,8 @@ _plane removeMagazines "JAS_FIR_CBU250_1rnd_M";
 _plane removeMagazines "CUP_250Rnd_TE2_Red_Tracer_GSh23_23mm_APHE_M";
 _plane removeMagazines "JAS_CUP_6Rnd_AT16_M";
 _plane removeMagazines "JAS_500Rnd_Gatling_30mm_Plane_CAS_02_F";
+_plane removeMagazines "20Rnd_Rocket_03_HE_F";
+_plane removeMagazines "20Rnd_Rocket_03_AP_F";
 
 //weapons
 _plane removeweapon "JAS_CUP_Vmlauncher_S8_veh";
@@ -53,6 +58,8 @@ _plane removeweapon "JAS_FIR_CBU250";
 _plane removeweapon "JAS_CUP_Vacannon_GSh23L_in_veh";
 _plane removeweapon "JAS_CUP_Vmlauncher_AT16_veh";
 _plane removeweapon "JAS_Cannon_30mm_Plane_CAS_02_F";
+_plane removeweapon "Rocket_03_HE_Plane_CAS_02_F";
+_plane removeweapon "Rocket_03_AP_Plane_CAS_02_F";
 
 //AWS
 _plane removeMagazines "FIR_240rnd_CMFlare_Chaff_Magazine";
@@ -567,9 +574,41 @@ if (_vikcount >= 1) then
 	};
 };
 
-_plane addmagazine "20Rnd_Rocket_03_HE_F";
-_plane addmagazine "20Rnd_Rocket_03_AP_F";
-_plane addweapon "Rocket_03_HE_Plane_CAS_02_F";
-_plane addweapon "Rocket_03_AP_Plane_CAS_02_F";
+Switch (_rocket1) Do
+{	
+	case -1:
+	{
+		_plane addmagazine "20Rnd_Rocket_03_HE_F";
+	};
+	case 0:
+	{
+		_plane addmagazine "20Rnd_Rocket_03_HE_F";
+	};		
+	case 1:
+	{
+		_plane addmagazine "20Rnd_Rocket_03_AP_F";
+	};
+};
+Switch (_rocket2) Do
+{	
+	case -1:
+	{
+		_plane addmagazine "20Rnd_Rocket_03_HE_F";
+	};
+	case 0:
+	{
+		_plane addmagazine "20Rnd_Rocket_03_HE_F";
+	};		
+	case 1:
+	{
+		_plane addmagazine "20Rnd_Rocket_03_AP_F";
+	};
+};
+
+_BISHECount = {_x == "20Rnd_Rocket_03_HE_F"} count magazines _plane;
+_BISAPCount = {_x == "20Rnd_Rocket_03_AP_F"} count magazines _plane;
+
+if (_BISHECount >= 1) then {_plane addweapon "Rocket_03_HE_Plane_CAS_02_F";};
+if (_BISAPCount >= 1) then {_plane addweapon "Rocket_03_AP_Plane_CAS_02_F";};
 
 titleText ["Loading Complete", "PLAIN DOWN",0.5];

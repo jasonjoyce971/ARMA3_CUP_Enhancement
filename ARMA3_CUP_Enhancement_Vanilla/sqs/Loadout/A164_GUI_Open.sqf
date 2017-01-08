@@ -143,3 +143,16 @@ _handle= CreateDialog "JAS_A164_GUI";
 		"SUU-25 x8"
     ];
 
+//Rockets 1//
+	{lbAdd[2113,_x]} forEach 
+	[  
+		"HE Rockets",
+		"AP Rockets"
+    ];
+	
+	//Rockets 1//
+	{lbAdd[2114,_x]} forEach 
+	[  
+		"HE Rockets",
+		"AP Rockets"
+    ];

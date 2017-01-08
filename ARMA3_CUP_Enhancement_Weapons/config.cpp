@@ -54,7 +54,7 @@ class CfgAddons
 class CfgNonAIVehicles
 {
 	class ProxyWeapon;
-	class JAS_R77_proxy : ProxyWeapon
+	class ProxyJAS_R77 : ProxyWeapon
 	{
 		model = "\ARMA3_CUP_Enhancement_Weapons\R77\R77.p3d";
 		simulation = "maverickweapon";
@@ -218,25 +218,25 @@ class cfgAmmo
 	{
 		model = "\ARMA3_CUP_Enhancement_Weapons\R77\R77.p3d";
 		proxyShape ="\ARMA3_CUP_Enhancement_Weapons\R77\R77.p3d";
-		hit = 400;
-		indirectHit = 300;
-		indirectHitRange = 10;
-		fuseDistance = 1000;
+		hit = 300;
+		indirectHit = 250;
+		indirectHitRange = 5;
+		fuseDistance = 800;
 		weaponLockSystem = "8 + 16";
-        timetoLive = 120;
-		maneuvrability = 20;
+        timetoLive = 40;
+		maneuvrability = 35;
 		cmimmunity = 0.98;
 		lockType = 0;
 		airLock = 2;
 		irLock = "true";
 		laserLock = "false";
 		initTime = 0.5;
-        maxspeed = 880;
+		thrustTime = 20;
+        maxspeed = 820;
 		maxControlRange = 3800;
 		trackOversteer = 1;
 		trackLead = 1;
-		thrust = 450;
-		thrustTime = 30;
+		thrust = 400;
 		effectsMissile = "FIR_MissileEffect";
 		soundHit[] = {"A3\Sounds_F\weapons\Rockets\explosion_missile_01",3.1622777,1,1800};
 		holdsterAnimValue = 1;
@@ -1005,7 +1005,7 @@ class cfgAmmo
 		indirectHit=20;
 		indirectHitRange=2;
 		cost=10000;
-		irLock=1;
+		irLock=0;
 		airLock=0;
 		laserLock=1;
 		manualControl=1;
@@ -1105,7 +1105,7 @@ class cfgAmmo
 		indirectHitRange=4;
 		irLock=0;
 		laserLock=1;
-		manualControl = 1; // Titan AT missile
+		manualControl = 0; // Titan AT missile
 		trackLead = 1; // Missile intercepts
 		weaponLockSystem=4;
 		canLock = 2;
@@ -1127,7 +1127,7 @@ class cfgAmmo
 		indirectHitRange=7;
 		irLock=0;
 		laserLock=1;
-		manualControl = 1; // Titan AT missile
+		manualControl = 0; // Titan AT missile
 		trackLead = 1; // Missile intercepts
 		weaponLockSystem=4;
 		explosionEffects="BombExplosion";
@@ -2677,7 +2677,7 @@ class cfgWeapons
 		scope = 2;
 		weaponLockDelay = 0.5;
 		weaponLockSystem = 8;
-		cmImmunity = 1.0;
+		cmImmunity = 0.98;
 		sounds[] = {"StandardSound"};
 		class StandardSound
 		{
@@ -2694,13 +2694,13 @@ class cfgWeapons
 		aiDispersionCoefX=1.0; 
 		aiDispersionCoefY=1.0;
 		aiRateOfFire = 0.5;
-		aiRateOfFireDistance = 5000;
+		aiRateOfFireDistance = 4000;
 		minRange = 1000;
 		minRangeProbab = 0.04;
-		midRange = 4000;
-		midRangeProbab = 0.70;
-		maxRange = 16000;
-		maxRangeProbab = 0.80;
+		midRange = 2000;
+		midRangeProbab = 0.80;
+		maxRange = 4000;
+		maxRangeProbab = 0.65;
 		magazines[] = {"JAS_R77_1rnd_M"};
 	};
 	class JAS_Gatling_30mm_Plane_CAS_01_F: CannonCore

@@ -540,19 +540,19 @@ class JAS_A164_GUI
 		class RscText_1003: RscText
 		{
 			idc=1003;
-			text="5";
+			text="Rockets";
 			x="0.4825 * safezoneW + safezoneX";
-			y="0.766 * safezoneH + safezoneY";
-			w="0.0175 * safezoneW";
+			y="0.612 * safezoneH + safezoneY";
+			w="0.5 * safezoneW";
 			h="0.028 * safezoneH";
 		};
 		class RscText_1004: RscText
 		{
 			idc=1004;
-			text="6";
+			text="Rockets";
 			x="0.36875 * safezoneW + safezoneX";
-			y="0.766 * safezoneH + safezoneY";
-			w="0.0175 * safezoneW";
+			y="0.612 * safezoneH + safezoneY";
+			w="0.5 * safezoneW";
 			h="0.028 * safezoneH";
 		};
 		class RscText_1005: RscText
@@ -579,6 +579,24 @@ class JAS_A164_GUI
 			text="10";
 			x="0.1675 * safezoneW + safezoneX";
 			y="0.612 * safezoneH + safezoneY";
+			w="0.0175 * safezoneW";
+			h="0.028 * safezoneH";
+		};
+		class RscText_1103: RscText
+		{
+			idc=1103;
+			text="5";
+			x="0.4825 * safezoneW + safezoneX";
+			y="0.766 * safezoneH + safezoneY";
+			w="0.0175 * safezoneW";
+			h="0.028 * safezoneH";
+		};
+		class RscText_1104: RscText
+		{
+			idc=1104;
+			text="6";
+			x="0.36875 * safezoneW + safezoneX";
+			y="0.766 * safezoneH + safezoneY";
 			w="0.0175 * safezoneW";
 			h="0.028 * safezoneH";
 		};
@@ -642,6 +660,22 @@ class JAS_A164_GUI
 		{
 			idc=2107;
 			x="0.1675 * safezoneW + safezoneX";
+			y="0.64 * safezoneH + safezoneY";
+			w="0.0875 * safezoneW";
+			h="0.028 * safezoneH";
+		};
+		class hp11: RscCombo
+		{
+			idc=2113;
+			x="0.45625 * safezoneW + safezoneX";
+			y="0.64 * safezoneH + safezoneY";
+			w="0.0875 * safezoneW";
+			h="0.028 * safezoneH";
+		};
+		class hp12: RscCombo
+		{
+			idc=2114;
+			x="0.3425 * safezoneW + safezoneX";
 			y="0.64 * safezoneH + safezoneY";
 			w="0.0875 * safezoneW";
 			h="0.028 * safezoneH";
@@ -924,6 +958,24 @@ class JAS_YAK_GUI
 			w = "0.5 * safezoneW";
 			h = "0.028 * safezoneH";
 		};
+		class RscText_1112 : RscText
+		{
+			idc = 1112;
+			text = "Rockets";
+			x = "0.64 * safezoneW + safezoneX";
+			y = "0.52 * safezoneH + safezoneY";
+			w = "0.5 * safezoneW";
+			h = "0.028 * safezoneH";
+		};
+		class RscText_1122 : RscText
+		{
+			idc = 1122;
+			text = "Rockets";
+			x = "0.22 * safezoneW + safezoneX";
+			y = "0.52 * safezoneH + safezoneY";
+			w = "0.5 * safezoneW";
+			h = "0.028 * safezoneH";
+		};
 		class hp1 : RscCombo
 		{
 			idc = 2100;
@@ -985,6 +1037,22 @@ class JAS_YAK_GUI
 			idc = 2106;
 			x = "0.22 * safezoneW + safezoneX";
 			y = "0.438 * safezoneH + safezoneY";
+			w = "0.0875 * safezoneW";
+			h = "0.028 * safezoneH";
+		};
+		class hp11 : RscCombo
+		{
+			idc = 2117;
+			x = "0.64 * safezoneW + safezoneX";
+			y = "0.546 * safezoneH + safezoneY";
+			w = "0.0875 * safezoneW";
+			h = "0.028 * safezoneH";
+		};
+		class hp12 : RscCombo
+		{
+			idc = 2118;
+			x = "0.22 * safezoneW + safezoneX";
+			y = "0.546 * safezoneH + safezoneY";
 			w = "0.0875 * safezoneW";
 			h = "0.028 * safezoneH";
 		};
@@ -2564,7 +2632,7 @@ class CfgVehicles
 		faction="GOL_AAC_OPFOR";
 		editorSubcategory="GOL_AAC_PHANTOM";
 	};
-	/*class JAS_O_Plane_CAS_02_F_AACX: JAS_O_Plane_CAS_02_F
+	class JAS_O_Plane_CAS_02_F_AACX: JAS_O_Plane_CAS_02_F
 	{
 		author="Bohemia Interactive/-{GOL}-Jason";
 		scope=2;
@@ -2589,7 +2657,7 @@ class CfgVehicles
 			"7Rnd_Rocket_04_AP_F",
 			"JAS_R77_1rnd_M"
 		};
-	};*/
+	};
 	class JAS_A164_Loadout_Module: Module_F
 	{
 		scope=2;

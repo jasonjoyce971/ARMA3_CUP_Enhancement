@@ -6,7 +6,7 @@ _plane = vehicle Player;
 _twascount = 0;
 _twasredcount = 0;
 
-Private ["_texture","_preset","_hardpoint1","_hardpoint2","_hardpoint3","_hardpoint4","_hardpoint5","_hardpoint5A","_hardpoint6","_hardpoint7","_hardpoint8","_hardpoint9"];
+Private ["_texture","_preset","_hardpoint1","_hardpoint2","_hardpoint3","_hardpoint4","_hardpoint5","_hardpoint5A","_hardpoint6","_hardpoint7","_hardpoint8","_hardpoint9","_rocket1","_rocket2"];
 /* Pick up the number from Combo box */
 _preset = lbCurSel 2108;
 _hardpoint1 = lbCurSel 2100;
@@ -17,6 +17,9 @@ _hardpoint6 = lbCurSel 2104;
 _hardpoint7 = lbCurSel 2105;
 _hardpoint8 = lbCurSel 2106;
 _hardpoint10 = lbCurSel 2107;
+
+_rocket1 = lbCurSel 2113;
+_rocket2 = lbCurSel 2114;
 
 _plane setVariable ["TGT_POD","no",true];
 
@@ -54,6 +57,12 @@ _plane removeMagazines "FIR_SniperXRPod_2_1rnd_M";
 _plane removeMagazines "FIR_ECMPod_1rnd_M";
 _plane removeMagazines "FIR_SUU25_Pod_1rnd_M";
 _plane removeMagazines "Laserbatteries";
+
+_plane removeMagazines "7Rnd_Rocket_04_HE_F";
+_plane removeMagazines "7Rnd_Rocket_04_AP_F";
+
+_plane removeweapon "Rocket_04_HE_Plane_CAS_01_F";
+_plane removeweapon "Rocket_04_AP_Plane_CAS_01_F";
 
 _plane removeweapon "JAS_Gatling_30mm_Plane_CAS_01_F";
 _plane removeweapon "FIR_CMLauncher";
@@ -831,11 +840,41 @@ if (_suucount >= 1) then
 	};
 };
 
-_plane AddMagazine "7Rnd_Rocket_04_HE_F";
-_plane AddMagazine "7Rnd_Rocket_04_AP_F";
+Switch (_rocket1) Do
+{
+	case -1:
+	{
+		_plane addmagazine "7Rnd_Rocket_04_HE_F";
+	};
+	case 0:
+	{
+		_plane addmagazine "7Rnd_Rocket_04_HE_F";
+	};
+	case 1:
+	{
+		_plane addmagazine "7Rnd_Rocket_04_AP_F";
+	};
+};
+Switch (_rocket2) Do
+{
+	case -1:
+	{
+		_plane addmagazine "7Rnd_Rocket_04_HE_F";
+	};
+	case 0:
+	{
+		_plane addmagazine "7Rnd_Rocket_04_HE_F";
+	};
+	case 1:
+	{
+		_plane addmagazine "7Rnd_Rocket_04_AP_F";
+	};
+};
 
-_plane AddWeapon "Rocket_04_HE_Plane_CAS_01_F";
-_plane AddWeapon "Rocket_04_AP_Plane_CAS_01_F";
+_BISHECount = {_x == "7Rnd_Rocket_04_HE_F"} count magazines _plane;
+_BISAPCount = {_x == "7Rnd_Rocket_04_AP_F"} count magazines _plane;
+if (_BISHECount >= 1) then {_plane addweapon "Rocket_04_HE_Plane_CAS_01_F";};
+if (_BISAPCount >= 1) then {_plane addweapon "Rocket_04_AP_Plane_CAS_01_F";};
 
 _plane setfuel 1;
 
