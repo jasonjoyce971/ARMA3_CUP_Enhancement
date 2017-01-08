@@ -1,5 +1,12 @@
 # ARMA3_CUP_Enhancement
 
+V2.1.1:
+* Fixed Loadout Script Error on USMC F-35
+* Rockets on Vanilla Aircraft can be changed
+* Hellfire K now Laser Guided Only
+* Hellfire N now Laser Guided Only
+* AT-16 Scallion (VIKHIR) now Laser Guided Only
+
 V2.1:
 * AW-159 Updated with adjustable payloads
 * Air to Air Gun Modes added
