@@ -31,7 +31,8 @@ _hardpoint7 = _array select 5;
 _hardpoint8 = _array select 6;
 _hardpoint10 = _array select 7;
 
-
+_rocket1 = _array select 8;
+_rocket2 = _array select 9;
 
 sleep 0.01;
 
@@ -636,3 +637,34 @@ sleep 0.3;
 	};
 	
 sleep 0.3;
+
+Switch (_rocket1) Do
+{
+	case -1:
+	{
+		_plane addmagazine "7Rnd_Rocket_04_HE_F";
+	};
+	case 0:
+	{
+		_plane addmagazine "7Rnd_Rocket_04_HE_F";
+	};
+	case 1:
+	{
+		_plane addmagazine "7Rnd_Rocket_04_AP_F";
+	};
+};
+Switch (_rocket2) Do
+{
+	case -1:
+	{
+		_plane addmagazine "7Rnd_Rocket_04_HE_F";
+	};
+	case 0:
+	{
+		_plane addmagazine "7Rnd_Rocket_04_HE_F";
+	};
+	case 1:
+	{
+		_plane addmagazine "7Rnd_Rocket_04_AP_F";
+	};
+};

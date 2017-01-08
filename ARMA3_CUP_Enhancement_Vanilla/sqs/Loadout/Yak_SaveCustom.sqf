@@ -13,22 +13,24 @@ _hardpoint5 = lbCurSel 2103;
 _hardpoint6 = lbCurSel 2104;
 _hardpoint7 = lbCurSel 2105;
 _hardpoint8 = lbCurSel 2106;
+_rocket1 = lbCurSel 2117;
+_rocket2 = lbCurSel 2118;
 
 switch (_customslot) do
 {
 	case "custom_1":
 	{
-		profileNamespace setVariable ["YAK_Custom_slot1",[_hardpoint1,_hardpoint2,_hardpoint3,_hardpoint4,_hardpoint5,_hardpoint6,_hardpoint7,_hardpoint8]];
+		profileNamespace setVariable ["YAK_Custom_slot1",[_hardpoint1,_hardpoint2,_hardpoint3,_hardpoint4,_hardpoint5,_hardpoint6,_hardpoint7,_hardpoint8,_rocket1,_rocket2]];
 		titleText ["Custom Payload Saved to Slot 1", "PLAIN DOWN",0.5];
 	};
 	case "custom_2":
 	{
-		profileNamespace setVariable ["YAK_Custom_slot2",[_hardpoint1,_hardpoint2,_hardpoint3,_hardpoint4,_hardpoint5,_hardpoint6,_hardpoint7,_hardpoint8]];
+		profileNamespace setVariable ["YAK_Custom_slot2",[_hardpoint1,_hardpoint2,_hardpoint3,_hardpoint4,_hardpoint5,_hardpoint6,_hardpoint7,_hardpoint8,_rocket1,_rocket2]];
 		titleText ["Custom Payload Saved to Slot 2", "PLAIN DOWN",0.5];
 	};
 	case "custom_3":
 	{
-		profileNamespace setVariable ["YAK_Custom_slot3",[_hardpoint1,_hardpoint2,_hardpoint3,_hardpoint4,_hardpoint5,_hardpoint6,_hardpoint7,_hardpoint8]];
+		profileNamespace setVariable ["YAK_Custom_slot3",[_hardpoint1,_hardpoint2,_hardpoint3,_hardpoint4,_hardpoint5,_hardpoint6,_hardpoint7,_hardpoint8,_rocket1,_rocket2]];
 		titleText ["Custom Payload Saved to Slot 3", "PLAIN DOWN",0.5];
 	};
 };

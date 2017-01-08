@@ -445,7 +445,7 @@ class KA50_GUI
 		class rsc1 : RscText
 		{
 			idc = 1000;
-			text = "Right Outboard";
+			text = "Right Midline";
 			x = "0.64 * safezoneW + safezoneX";
 			y = "0.25 * safezoneH + safezoneY";
 			w = "0.5 * safezoneW";
@@ -454,7 +454,7 @@ class KA50_GUI
 		class RscText_1101 : RscText
 		{
 			idc = 1101;
-			text = "Left Outboard";
+			text = "Left Midline";
 			x = "0.22 * safezoneW + safezoneX";
 			y = "0.25 * safezoneH + safezoneY";
 			w = "0.5 * safezoneW";
@@ -463,7 +463,7 @@ class KA50_GUI
 		class RscText_1001 : RscText
 		{
 			idc = 1001;
-			text = "Right Midline";
+			text = "Right Outboard";
 			x = "0.64 * safezoneW + safezoneX";
 			y = "0.304 * safezoneH + safezoneY";
 			w = "0.5 * safezoneW";
@@ -472,7 +472,7 @@ class KA50_GUI
 		class RscText_1002 : RscText
 		{
 			idc = 1002;
-			text = "Left Midline";
+			text = "Left Outboard";
 			x = "0.22 * safezoneW + safezoneX";
 			y = "0.304 * safezoneH + safezoneY";
 			w = "0.5 * safezoneW";
