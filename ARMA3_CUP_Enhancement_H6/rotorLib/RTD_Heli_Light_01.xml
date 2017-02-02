@@ -396,7 +396,7 @@
       <DebugInfo printDebugInfo="false"/>
       <General inertia="0.15"/>
       <!-- <Performance emergencyPowerHP="375" takeOffPowerHP="375"  maximumContinuousPowerHP="375" maxTorque="777" rotationResistance="0.000009"/> -->
-      <Performance emergencyPowerHP="550" maxTorque="1000" rotationResistance="0.000009"/>
+      <Performance emergencyPowerHP="600" maxTorque="1000" rotationResistance="0.000009"/>
       <ControllerParams P="0.5" I="1.5" D="0.0" offset="150" targetRPM="4000"/>
     </Engine>
 
@@ -418,7 +418,7 @@
 
   <ControlSystem>
 
-		<CSComponent type="FCSAutoHoverTOH">
+	<CSComponent type="FCSAutoHoverTOH">
       <YawController P="0.0" D="0"/>
       <PitchController P="0.1" D="0.025"/>
       <RollController P="0.1" D="0.025"/>
@@ -427,7 +427,7 @@
     <CSComponent type="FCSHelicopterAutoTrim100" >
     	
       <YawRateAndSideslipController printDebugInfo="false">
-    		<YawRatePID P="0.18"  I="0.02" D="0.0" offset="0.0" integralMin="-50" integralMax="50" />
+    	<YawRatePID P="0.18"  I="0.02" D="0.0" offset="0.0" integralMin="-50" integralMax="50" />
         <SideslipPID P="0.05"  I="0.01" D="0.01" offset="0.0" integralMin="-50" integralMax="50" />
         <Transition speedLow="10" speedHigh="20" />
         <Maximums maxYawRate="180" maxSideslip="75" />
@@ -882,8 +882,8 @@
       <InfoPrint printControlInputs="false" printFlappingInfo="false"/>
       <Geometry>
         <Position x="-0.1" y="-4.9460" z="-0.0080"/>
-        <Tilt lateralTilt="-90.0" longitudinalTilt="0.0" />
-        <Blades radius="0.5" chord="0.050" count="4" hingeOffset="0.0" />
+        <Tilt lateralTilt="-105.0" longitudinalTilt="0.0" />
+        <Blades radius="0.71" chord="0.050" count="2" hingeOffset="0.0" />
         <Delta3 angle="0" />
       </Geometry>
       
