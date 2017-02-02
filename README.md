@@ -1,5 +1,8 @@
 # ARMA3_CUP_Enhancement
 
+V2.1.2:
+* H-6 Handling Update
+
 V2.1.1:
 * Fixed Loadout Script Error on USMC F-35
 * Rockets on Vanilla Aircraft can be changed
