@@ -4,10 +4,10 @@ V3.0.0:
 * AH-1Z Handling Update
 * Code Optimisation Milestone
 
-V2.1.2:
+V2.2.2:
 * H-6 Handling Update
 
-V2.1.1:
+V2.2:
 * Fixed Loadout Script Error on USMC F-35
 * Rockets on Vanilla Aircraft can be changed
 * Hellfire K now Laser Guided Only
