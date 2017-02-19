@@ -1,5 +1,9 @@
 # ARMA3_CUP_Enhancement
 
+V3.0.0:
+* AH-1Z Handling Update
+* Code Optimisation Milestone
+
 V2.1.2:
 * H-6 Handling Update
 
