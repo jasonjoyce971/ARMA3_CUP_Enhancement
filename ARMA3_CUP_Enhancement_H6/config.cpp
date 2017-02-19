@@ -68,90 +68,9 @@ class CfgFunctions
 		};
 	};
 };
-/* class CfgMissions
-{
-	// Campaigns
-	class Campaigns
-	{
-		class RootCampaign
-		{
-			// Each of these definitions are applied to the root campaign
-			briefingname = $STR_A3_CampaignName;
-			overviewText = $STR_A3_CampaignOverview;
-			author = $STR_A3_Bohemia_Interactive;
-			overviewPicture = "a3\Missions_F_EPA\data\img\Campaign_overview_CA.paa";
-			// Classes of episodes included
-			campaigns[] = {StageA, StageB, StageC};
-			class StageA
-			{
-				directory = "A3\Missions_F_EPA\Campaign";	
-				//include the campaign description.ext to make it's content re-usable outside of the campaign
-				#include "\A3\Missions_F_EPA\Campaign\description.ext"
-			};
-			class StageB
-			{
-				directory = "A3\Missions_F_EPA\CampaignDummy";
-			};
-			class StageC
-			{
-				directory = "A3\Missions_F_EPA\CampaignDummy2";
-			};
-		};
-	};
-	// Showcase missions
-	class Showcases
-	{
-		displayName = $STR_A3_CFGMISSIONS_SHOWCASES0;
-		briefingName = $STR_A3_CFGMISSIONS_SHOWCASES0;
-		author = $STR_A3_Bohemia_Interactive;
-		overviewPicture = "a3\Missions_F_Beta\data\img\Campaign_overview_CA.paa";
-		overviewText = $STR_A3_CFGMISSIONS_SHOWCASES0;
-		class Showcase_Ranges
-		{
-			briefingName = "-{GOL}- AAC Weapons Training";
-			directory = "ARMA3_CUP_Enhancement_H6\missions\AACFlightSchool.Stratis";
-			overviewText = "Coastal range complex for fixed wing weapons training";
-			overviewPicture = "\ARMA3_CUP_Enhancement_H6\presentation\picture.paa";
-			author = "-{GOL}-Jason";
-		};
-	};
-	// Multiplayer missions
-	class MPMissions
-	{
-		class MP_COOP_m01
-		{
-			briefingName="@STR_A3_MP_COOP_m01_briefingName";
-			directory = "A3\missions_f\mpscenarios\MP_COOP_m01.Stratis";
-		};
-	};
-	// Challenges
-	class Challenges
-	{
-		briefingName = $STR_A3_CHALLENGES_NAME;
-		overviewText = $STR_A3_CHALLENGES_OVERVIEW;
-		overviewPicture = "\a3\Missions_F_Beta\data\img\Challenges_overview_CA.paa";
-		// Firing Drills
-		author = $STR_A3_Bohemia_Interactive;
-		class Firing_Drills
-		{
-			briefingName = $STR_A3_FIRING_DRILLS_NAME;
-			overviewText = $STR_A3_FIRING_DRILLS_OVERVIEW;
-			overviewPicture = "\a3\Missions_F_Beta\data\img\FiringDrills_overview_CA.paa";
-			author = $STR_A3_Bohemia_Interactive;
-			class SP_FD04 //Green
-			{
-				directory = "a3\Missions_F_Beta\Challenges\firing_drills\sp_fd04.stratis";
-				briefingName = $STR_A3_FIRING_DRILLS_SP_FD04_NAME;
-				overviewText = $STR_A3_FIRING_DRILLS_SP_FD04_OVERVIEW;
-				overviewPicture = "\a3\Missions_F_Beta\data\img\SP_FD04_overview_CA.paa";
-				author = $STR_A3_Bohemia_Interactive;
-			};
-		};
-	};
-}; */
 class DefaultEventhandlers;
 class Eventhandlers;
-class CBA_Extended_EventHandlers;
+class CBA_Extended_EventHandlers_base;
 class IGUIBack;
 class RscControlsGroup;
 class RscText;
@@ -1379,988 +1298,6 @@ class CfgVehicles
 		driverLeftLegAnimName = "pedall";
 		driverRightLegAnimName = "pedalr";
 		attenuationEffectType = "HeliAttenuation";
-		/*emptySound[] =
-		{
-			"",
-			0,
-			1
-		};
-		soundGeneralCollision1[] =
-		{
-			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_1",
-			1,
-			1,
-			100
-		};
-		soundGeneralCollision2[] =
-		{
-			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_2",
-			1,
-			1,
-			100
-		};
-		soundGeneralCollision3[] =
-		{
-			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_3",
-			1,
-			1,
-			100
-		};
-		soundCrashes[] =
-		{
-			"soundGeneralCollision1",
-			0.33000001,
-			"soundGeneralCollision2",
-			0.33000001,
-			"soundGeneralCollision3",
-			0.33000001
-		};
-		soundLandCrashes[] =
-		{
-			"emptySound",
-			0
-		};
-		soundBuildingCrash[] =
-		{
-			"soundGeneralCollision1",
-			1,
-			"soundGeneralCollision2",
-			1,
-			"soundGeneralCollision3",
-			1
-		};
-		soundArmorCrash[] =
-		{
-			"soundGeneralCollision1",
-			1,
-			"soundGeneralCollision2",
-			1,
-			"soundGeneralCollision3",
-			1
-		};
-		soundWoodCrash[] =
-		{
-			"soundGeneralCollision1",
-			1,
-			"soundGeneralCollision2",
-			1,
-			"soundGeneralCollision3",
-			1
-		};
-		soundBushCollision1[] =
-		{
-			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_bush_int_1",
-			1,
-			1,
-			100
-		};
-		soundBushCollision2[] =
-		{
-			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_bush_int_2",
-			1,
-			1,
-			100
-		};
-		soundBushCollision3[] =
-		{
-			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_bush_int_3",
-			1,
-			1,
-			100
-		};
-		soundBushCrash[] =
-		{
-			"soundBushCollision1",
-			0.33000001,
-			"soundBushCollision2",
-			0.33000001,
-			"soundBushCollision3",
-			0.33000001
-		};
-		soundWaterCollision1[] =
-		{
-			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_water_ext_1",
-			1,
-			1,
-			100
-		};
-		soundWaterCollision2[] =
-		{
-			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_water_ext_2",
-			1,
-			1,
-			100
-		};
-		soundWaterCrashes[] =
-		{
-			"soundWaterCollision1",
-			0.5,
-			"soundWaterCollision2",
-			0.5
-		};
-		soundDammage[] =
-		{
-			"A3\Sounds_F\vehicles\crashes\helis\Heli_crash_default_int_1",
-			10,
-			1
-		};
-		soundGetIn[] =
-		{
-			"A3\Sounds_F\vehicles\air\Heli_Light_02\open",
-			0.56234133,
-			1
-		};
-		soundGetOut[] =
-		{
-			"A3\Sounds_F\vehicles\air\Heli_Light_02\close",
-			1,
-			1,
-			50
-		};
-		soundEngineOnInt[] =
-		{
-			"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_int_start_v2",
-			0.39810717,
-			1
-		};
-		soundEngineOnExt[] =
-		{
-			"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_ext_start_v2",
-			0.79432821,
-			1,
-			600
-		};
-		soundEngineOffInt[] =
-		{
-			"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_int_stop_v2",
-			0.39810717,
-			1
-		};
-		soundEngineOffExt[] =
-		{
-			"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_ext_stop_v2",
-			0.79432821,
-			1,
-			600
-		};
-		soundLocked[] =
-		{
-			"\A3\Sounds_F\weapons\Rockets\opfor_lock_1",
-			1,
-			1
-		};
-		soundIncommingMissile[] =
-		{
-			"\A3\Sounds_F\weapons\Rockets\opfor_lock_2",
-			1,
-			1
-		};
-		rotorDamageInt[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_int_1",
-			1,
-			1
-		};
-		rotorDamageOut[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\heli_damage_rotor_ext_1",
-			2.5118864,
-			1,
-			300
-		};
-		rotorDamage[] =
-		{
-			"rotorDamageInt",
-			"rotorDamageOut"
-		};
-		tailDamageInt[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\heli_damage_tail",
-			1,
-			1
-		};
-		tailDamageOut[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\heli_damage_tail",
-			1,
-			1,
-			300
-		};
-		tailDamage[] =
-		{
-			"tailDamageInt",
-			"tailDamageOut"
-		};
-		landingSoundInt0[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\landing_wheels_large_int1",
-			1,
-			1,
-			100
-		};
-		landingSoundInt1[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\landing_wheels_large_int2",
-			1,
-			1,
-			100
-		};
-		landingSoundInt[] =
-		{
-			"landingSoundInt0",
-			0.5,
-			"landingSoundInt1",
-			0.5
-		};
-		landingSoundOut0[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\landing_wheels_ext1",
-			1.7782794,
-			1,
-			100
-		};
-		landingSoundOut1[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\landing_wheels_ext2",
-			1.7782794,
-			1,
-			100
-		};
-		landingSoundOut[] =
-		{
-			"landingSoundOut0",
-			0.5,
-			"landingSoundOut1",
-			0.5
-		};
-		slingCargoAttach0[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\SL_engineUpEndINT",
-			1,
-			1
-		};
-		slingCargoAttach1[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\SL_1hookLock",
-			1,
-			1,
-			80
-		};
-		slingCargoAttach[] =
-		{
-			"slingCargoAttach0",
-			"slingCargoAttach1"
-		};
-		slingCargoDetach0[] =
-		{
-			"A3\Sounds_F\dummysound",
-			1,
-			1
-		};
-		slingCargoDetach1[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\SL_1hookUnlock",
-			1,
-			1,
-			80
-		};
-		slingCargoDetach[] =
-		{
-			"slingCargoDetach0",
-			"slingCargoDetach1"
-		};
-		slingCargoDetachAir0[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\SL_unhook_air_int",
-			1,
-			1
-		};
-		slingCargoDetachAir1[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\SL_unhook_air_ext",
-			1,
-			1,
-			80
-		};
-		slingCargoDetachAir[] =
-		{
-			"slingCargoDetach0",
-			"slingCargoDetach1"
-		};
-		slingCargoRopeBreak0[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\SL_rope_break_int",
-			1,
-			1
-		};
-		slingCargoRopeBreak1[] =
-		{
-			"A3\Sounds_F\vehicles\air\noises\SL_rope_break_ext",
-			1,
-			1,
-			80
-		};
-		slingCargoRopeBreak[] =
-		{
-			"slingCargoDetach0",
-			"slingCargoDetach1"
-		};
-		class Sounds
-		{
-			class EngineExt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_ext_engine_v2",
-					1.7782794,
-					1,
-					700
-				};
-				frequency = "rotorSpeed";
-				volume = "camPos*((rotorSpeed-0.72)*4)";
-			};
-			class RotorExt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_ext_rotor_normal",
-					1.4125376,
-					1,
-					1500
-				};
-				frequency = "rotorSpeed * (1-rotorThrust/5)";
-				volume = "camPos*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
-				cone[] = { 1.6, 3.1400001, 1.6, 0.94999999 };
-			};
-			class RotorNoiseExt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\Heli_Light_02\rotor_swist",
-					1,
-					1,
-					400
-				};
-				frequency = 1;
-				volume = "(camPos*(rotorThrust factor [0.6, 1]))";
-				cone[] = { 0.69999999, 1.3, 1, 0 };
-			};
-			class EngineInt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_int_engine_v2",
-					1,
-					1
-				};
-				frequency = "rotorSpeed";
-				volume = "2 * (1-camPos)*(rotorSpeed factor[0.4,1])";
-			};
-			class RotorInt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_int_rotor_normal",
-					0.70794576,
-					1
-				};
-				frequency = "rotorSpeed * (1-rotorThrust/5)";
-				volume = "(1-camPos) * (rotorSpeed factor[0.3, 1]) * (1 + rotorThrust)";
-			};
-			class TransmissionDamageExt_phase1
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1",
-					1,
-					1,
-					150
-				};
-				frequency = "0.66 + rotorSpeed / 3";
-				volume = "camPos * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
-			};
-			class TransmissionDamageExt_phase2
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2",
-					1,
-					1,
-					150
-				};
-				frequency = "0.66 + rotorSpeed / 3";
-				volume = "camPos * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
-			};
-			class TransmissionDamageInt_phase1
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1",
-					1,
-					1,
-					150
-				};
-				frequency = "0.66 + rotorSpeed / 3";
-				volume = "(1 - camPos) * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
-			};
-			class TransmissionDamageInt_phase2
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2",
-					1,
-					1,
-					150
-				};
-				frequency = "0.66 + rotorSpeed / 3";
-				volume = "(1 - camPos) * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
-			};
-			class damageAlarmInt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_alarm_opfor",
-					0.31622776,
-					1
-				};
-				frequency = 1;
-				volume = "engineOn * (1 - camPos) * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0.0, 0.001])";
-			};
-			class damageAlarmExt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_alarm_opfor",
-					0.2238721,
-					1,
-					20
-				};
-				frequency = 1;
-				volume = "engineOn * camPos * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0, 0.001])";
-			};
-			class rotorLowAlarmInt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
-					0.31622776,
-					1
-				};
-				frequency = 1;
-				volume = "engineOn * (1 - camPos) * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
-			};
-			class rotorLowAlarmExt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
-					0.2238721,
-					1,
-					20
-				};
-				frequency = 1;
-				volume = "engineOn * camPos * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
-			};
-			class scrubLandInt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\wheelsInt",
-					1,
-					1,
-					100
-				};
-				frequency = 1;
-				volume = "2 * (1-camPos) * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
-			};
-			class scrubLandExt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\dummysound",
-					1,
-					1,
-					100
-				};
-				frequency = 1;
-				volume = "camPos * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
-			};
-			class scrubBuildingInt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\wheelsInt",
-					1,
-					1,
-					100
-				};
-				frequency = 1;
-				volume = "(1-camPos) * (scrubBuilding factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
-			};
-			class scrubBuildingExt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\dummysound",
-					1,
-					1,
-					100
-				};
-				frequency = 1;
-				volume = "camPos * (scrubBuilding factor[0.02, 0.05])";
-			};
-			class scrubTreeInt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\scrubTreeInt",
-					1,
-					1,
-					100
-				};
-				frequency = 1;
-				volume = "(1 - camPos) * ((scrubTree) factor [0, 0.01])";
-			};
-			class scrubTreeExt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",
-					1,
-					1,
-					100
-				};
-				frequency = 1;
-				volume = "camPos * ((scrubTree) factor [0, 0.01])";
-			};
-			class RainExt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\noises\rain1_ext",
-					1,
-					1,
-					100
-				};
-				frequency = 1;
-				volume = "camPos * (rain - rotorSpeed/2) * 2";
-			};
-			class RainInt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\noises\rain1_int",
-					1,
-					1,
-					100
-				};
-				frequency = 1;
-				volume = "(1-camPos)*(rain - rotorSpeed/2)*2";
-			};
-			class SlingLoadDownExt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",
-					1,
-					1,
-					500
-				};
-				frequency = 1;
-				volume = "camPos*(slingLoadActive factor [0,-1])";
-			};
-			class SlingLoadUpExt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",
-					1,
-					1,
-					500
-				};
-				frequency = 1;
-				volume = "camPos*(slingLoadActive factor [0,1])";
-			};
-			class SlingLoadDownInt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",
-					1,
-					1,
-					500
-				};
-				frequency = 1;
-				volume = "(1-camPos)*(slingLoadActive factor [0,-1])";
-			};
-			class SlingLoadUpInt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",
-					1,
-					1,
-					500
-				};
-				frequency = 1;
-				volume = "(1-camPos)*(slingLoadActive factor [0,1])";
-			};
-			class WindInt
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\air\noises\wind_closed",
-					0.44668359,
-					1,
-					50
-				};
-				frequency = 1;
-				volume = "(1-camPos)*(speed factor[5, 60])*(speed factor[5, 60])";
-			};
-			class GStress
-			{
-				sound[] =
-				{
-					"A3\Sounds_F\vehicles\noises\vehicle_stress2e",
-					0.39810717,
-					1,
-					50
-				};
-				frequency = 1;
-				volume = "engineOn * (1-camPos) * ((gmeterZ factor[1.5, 2.5]) + (gmeterZ factor[0.5, -0.5]))";
-			};
-		};
-		class SoundsExt
-		{
-			class SoundEvents
-			{
-			};
-			class Sounds
-			{
-				class EngineExt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_ext_engine_v2",
-						1.7782794,
-						1,
-						700
-					};
-					frequency = "rotorSpeed";
-					volume = "camPos*((rotorSpeed-0.72)*4)";
-				};
-				class RotorExt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_ext_rotor_normal",
-						1.4125376,
-						1,
-						1500
-					};
-					frequency = "rotorSpeed * (1-rotorThrust/5)";
-					volume = "camPos*(0 max (rotorSpeed-0.1))*(1 + rotorThrust)";
-					cone[] = { 1.6, 3.1400001, 1.6, 0.94999999 };
-				};
-				class RotorNoiseExt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\Heli_Light_02\rotor_swist",
-						1,
-						1,
-						400
-					};
-					frequency = 1;
-					volume = "(camPos*(rotorThrust factor [0.6, 1]))";
-					cone[] = { 0.69999999, 1.3, 1, 0 };
-				};
-				class EngineInt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_int_engine_v2",
-						1,
-						1
-					};
-					frequency = "rotorSpeed";
-					volume = "2 * (1-camPos)*(rotorSpeed factor[0.4,1])";
-				};
-				class RotorInt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\Heli_Light_02\Heli_Light_02_int_rotor_normal",
-						0.70794576,
-						1
-					};
-					frequency = "rotorSpeed * (1-rotorThrust/5)";
-					volume = "(1-camPos) * (rotorSpeed factor[0.3, 1]) * (1 + rotorThrust)";
-				};
-				class TransmissionDamageExt_phase1
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_1",
-						1,
-						1,
-						150
-					};
-					frequency = "0.66 + rotorSpeed / 3";
-					volume = "camPos * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
-				};
-				class TransmissionDamageExt_phase2
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_ext_2",
-						1,
-						1,
-						150
-					};
-					frequency = "0.66 + rotorSpeed / 3";
-					volume = "camPos * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
-				};
-				class TransmissionDamageInt_phase1
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_1",
-						1,
-						1,
-						150
-					};
-					frequency = "0.66 + rotorSpeed / 3";
-					volume = "(1 - camPos) * (transmissionDamage factor [0.3, 0.35]) * (transmissionDamage factor [0.5, 0.45]) * (rotorSpeed factor [0.2, 0.5])";
-				};
-				class TransmissionDamageInt_phase2
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_damage_transmission_int_2",
-						1,
-						1,
-						150
-					};
-					frequency = "0.66 + rotorSpeed / 3";
-					volume = "(1 - camPos) * (transmissionDamage factor [0.45, 0.5]) * (rotorSpeed factor [0.2, 0.5])";
-				};
-				class damageAlarmInt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_opfor",
-						0.31622776,
-						1
-					};
-					frequency = 1;
-					volume = "engineOn * (1 - camPos) * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0.0, 0.001])";
-				};
-				class damageAlarmExt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_opfor",
-						0.2238721,
-						1,
-						20
-					};
-					frequency = 1;
-					volume = "engineOn * camPos * ( 1 - ((transmissionDamage factor [0.61, 0.60]) * (motorDamage factor [0.61, 0.60]) * (rotorDamage factor [0.51, 0.50]))) * (rotorSpeed factor [0, 0.001])";
-				};
-				class rotorLowAlarmInt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
-						0.31622776,
-						1
-					};
-					frequency = 1;
-					volume = "engineOn * (1 - camPos) * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
-				};
-				class rotorLowAlarmExt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\heli_alarm_rotor_low",
-						0.2238721,
-						1,
-						20
-					};
-					frequency = 1;
-					volume = "engineOn * camPos * (rotorSpeed factor [0.9, 0.8999]) * (rotorSpeed factor [-0.5, 1]) * (speed factor [3, 3.01])";
-				};
-				class scrubLandInt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\wheelsInt",
-						1,
-						1,
-						100
-					};
-					frequency = 1;
-					volume = "2 * (1-camPos) * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
-				};
-				class scrubLandExt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\dummysound",
-						1,
-						1,
-						100
-					};
-					frequency = 1;
-					volume = "camPos * (scrubLand factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
-				};
-				class scrubBuildingInt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\wheelsInt",
-						1,
-						1,
-						100
-					};
-					frequency = 1;
-					volume = "(1-camPos) * (scrubBuilding factor[0.02, 0.05]) * (1 - (lateralMovement factor [0.7,1]))";
-				};
-				class scrubBuildingExt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\dummysound",
-						1,
-						1,
-						100
-					};
-					frequency = 1;
-					volume = "camPos * (scrubBuilding factor[0.02, 0.05])";
-				};
-				class scrubTreeInt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\scrubTreeInt",
-						1,
-						1,
-						100
-					};
-					frequency = 1;
-					volume = "(1 - camPos) * ((scrubTree) factor [0, 0.01])";
-				};
-				class scrubTreeExt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\scrubTreeExt",
-						1,
-						1,
-						100
-					};
-					frequency = 1;
-					volume = "camPos * ((scrubTree) factor [0, 0.01])";
-				};
-				class RainExt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\noises\rain1_ext",
-						1,
-						1,
-						100
-					};
-					frequency = 1;
-					volume = "camPos * (rain - rotorSpeed/2) * 2";
-				};
-				class RainInt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\noises\rain1_int",
-						1,
-						1,
-						100
-					};
-					frequency = 1;
-					volume = "(1-camPos)*(rain - rotorSpeed/2)*2";
-				};
-				class SlingLoadDownExt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineDownEXT",
-						1,
-						1,
-						500
-					};
-					frequency = 1;
-					volume = "camPos*(slingLoadActive factor [0,-1])";
-				};
-				class SlingLoadUpExt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineUpEXT",
-						1,
-						1,
-						500
-					};
-					frequency = 1;
-					volume = "camPos*(slingLoadActive factor [0,1])";
-				};
-				class SlingLoadDownInt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineDownINT",
-						1,
-						1,
-						500
-					};
-					frequency = 1;
-					volume = "(1-camPos)*(slingLoadActive factor [0,-1])";
-				};
-				class SlingLoadUpInt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\SL_engineUpINT",
-						1,
-						1,
-						500
-					};
-					frequency = 1;
-					volume = "(1-camPos)*(slingLoadActive factor [0,1])";
-				};
-				class WindInt
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\air\noises\wind_closed",
-						0.44668359,
-						1,
-						50
-					};
-					frequency = 1;
-					volume = "(1-camPos)*(speed factor[5, 60])*(speed factor[5, 60])";
-				};
-				class GStress
-				{
-					sound[] =
-					{
-						"A3\Sounds_F\vehicles\noises\vehicle_stress2e",
-						0.39810717,
-						1,
-						50
-					};
-					frequency = 1;
-					volume = "engineOn * (1-camPos) * ((gmeterZ factor[1.5, 2.5]) + (gmeterZ factor[0.5, -0.5]))";
-				};
-			};
-		};*/
 		soundGeneralCollision1[]=
 		{
 			"A3\Sounds_F\vehicles\crashes\helis\Heli_coll_default_int_1",
@@ -3566,7 +2503,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_H6\sqs\loadout\AH6_GUI_Open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -3635,7 +2572,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_H6\sqs\loadout\AH6_GUI_Open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -3705,7 +2642,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_H6\sqs\loadout\AH6_GUI_Open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -3773,7 +2710,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_H6\sqs\loadout\AH6_GUI_Open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -3842,7 +2779,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_H6\sqs\loadout\AH6_GUI_Open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -4004,6 +2941,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			Init = "AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_MH6J_SOAR',[[1.15,1.0,0.25],[-1.15,1.0,0.25]]]];";
+			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		class UserActions
 		{
@@ -4013,7 +2951,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\setskin_open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -4175,6 +3113,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			Init = "AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_MH6J_USA',[[1.15,1.0,0.25],[-1.15,1.0,0.25]]]];";
+			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		class UserActions
 		{
@@ -4184,7 +3123,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\setskin_open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -4348,6 +3287,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			Init = "AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_MH6J_AAC',[[1.15,1.0,0.25],[-1.15,1.0,0.25]]]];";
+			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		class UserActions
 		{
@@ -4357,7 +3297,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\setskin_open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -4519,6 +3459,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			Init = "AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_MH6J_RACS',[[1.15,1.0,0.25],[-1.15,1.0,0.25]]]];";
+			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		class UserActions
 		{
@@ -4528,7 +3469,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\setskin_open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -4691,6 +3632,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			Init = "AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_MH6J_RACS',[[1.15,1.0,0.25],[-1.15,1.0,0.25]]]];";
+			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 		class UserActions
 		{
@@ -4700,7 +3642,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\setskin\setskin_open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;

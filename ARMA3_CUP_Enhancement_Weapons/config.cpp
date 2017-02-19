@@ -1,4 +1,3 @@
-//#include "BIS_AddonInfo.hpp"
 class CfgPatches
 {
 	class ARMA3_CUP_Enhancement_Weapons
@@ -54,11 +53,11 @@ class CfgAddons
 class CfgNonAIVehicles
 {
 	class ProxyWeapon;
-	class ProxyJAS_R77 : ProxyWeapon
+	/*class ProxyJAS_R77 : ProxyWeapon
 	{
 		model = "\ARMA3_CUP_Enhancement_Weapons\R77\R77.p3d";
 		simulation = "maverickweapon";
-	};
+	};*/
 	class ProxySCALP_proxy : ProxyWeapon
 	{
 		displayName = "SCALP";
@@ -107,7 +106,6 @@ class CfgCloudlets
 		colorCoef[] = {
 				"colorR", "colorG", "colorB", "colorA"
 		};
-		//sizeCoef = 1;
 		sizeCoef = 2;
 		position[] = {
 				0, 0, 0
@@ -131,14 +129,9 @@ class CfgCloudlets
 				0.200000, 0.100000, 0.100000
 		};
 		rotationVelocity = 1;
-		//weight = 1.277700;
 		weight = 6.4;
-		//volume = 1;
 		volume = 5;
 		rubbing = 0.050000;
-		/*size[] = {
-				2.500000, 3.5, 8.8
-		};*/
 		size[] = {
 				2.500000, 6.5, 18.8
 		};
@@ -615,7 +608,7 @@ class cfgAmmo
 			"Explosion_Debris_SoundSet"
 		};
 		hit=90;
-		airlock=2
+		airlock=2;
 		indirectHit=15;
 		indirectHitRange=4;
 		explosive=0.80000001;
@@ -970,10 +963,10 @@ class cfgAmmo
 		airFriction=-7;
 		sideAirFriction = 1;
 		cost = 400;
-		canlock = false;
-		airLock = false;
-		irLock = false;
-		laserLock = false;
+		canlock = 0;
+		airLock = 0;
+		irLock = 0;
+		laserLock = 0;
 		trackOversteer = 1;
 		trackLead = 0.950000;
 		maneuvrability = 20;
@@ -1378,9 +1371,9 @@ class cfgAmmo
 		indirectHitRange=10;
 		timetoLive=60;
 		maneuvrability=60;
-		airLock="false";
-		irLock="false";
-		laserLock="true";
+		airLock=0;
+		irLock=0;
+		laserLock=1;
 		initTime=0.1;
 		thrustTime=10;
 		maxspeed=500;

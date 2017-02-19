@@ -77,90 +77,9 @@ class CfgFunctions
 		};
 	};
 };
-/* class CfgMissions
-{
-	// Campaigns
-	class Campaigns
-	{
-		class RootCampaign
-		{
-			// Each of these definitions are applied to the root campaign
-			briefingname = $STR_A3_CampaignName;
-			overviewText = $STR_A3_CampaignOverview;
-			author = $STR_A3_Bohemia_Interactive;
-			overviewPicture = "a3\Missions_F_EPA\data\img\Campaign_overview_CA.paa";
-			// Classes of episodes included
-			campaigns[] = {StageA, StageB, StageC};
-			class StageA
-			{
-				directory = "A3\Missions_F_EPA\Campaign";	
-				//include the campaign description.ext to make it's content re-usable outside of the campaign
-				#include "\A3\Missions_F_EPA\Campaign\description.ext"
-			};
-			class StageB
-			{
-				directory = "A3\Missions_F_EPA\CampaignDummy";
-			};
-			class StageC
-			{
-				directory = "A3\Missions_F_EPA\CampaignDummy2";
-			};
-		};
-	};
-	// Showcase missions
-	class Showcases
-	{
-		displayName = $STR_A3_CFGMISSIONS_SHOWCASES0;
-		briefingName = $STR_A3_CFGMISSIONS_SHOWCASES0;
-		author = $STR_A3_Bohemia_Interactive;
-		overviewPicture = "a3\Missions_F_Beta\data\img\Campaign_overview_CA.paa";
-		overviewText = $STR_A3_CFGMISSIONS_SHOWCASES0;
-		class Showcase_Ranges
-		{
-			briefingName = "-{GOL}- AAC Weapons Training";
-			directory = "ARMA3_CUP_Enhancement_AH64\missions\AACFlightSchool.Stratis";
-			overviewText = "Coastal range complex for fixed wing weapons training";
-			overviewPicture = "\ARMA3_CUP_Enhancement_AH64\presentation\picture.paa";
-			author = "-{GOL}-Jason";
-		};
-	};
-	// Multiplayer missions
-	class MPMissions
-	{
-		class MP_COOP_m01
-		{
-			briefingName="@STR_A3_MP_COOP_m01_briefingName";
-			directory = "A3\missions_f\mpscenarios\MP_COOP_m01.Stratis";
-		};
-	};
-	// Challenges
-	class Challenges
-	{
-		briefingName = $STR_A3_CHALLENGES_NAME;
-		overviewText = $STR_A3_CHALLENGES_OVERVIEW;
-		overviewPicture = "\a3\Missions_F_Beta\data\img\Challenges_overview_CA.paa";
-		// Firing Drills
-		author = $STR_A3_Bohemia_Interactive;
-		class Firing_Drills
-		{
-			briefingName = $STR_A3_FIRING_DRILLS_NAME;
-			overviewText = $STR_A3_FIRING_DRILLS_OVERVIEW;
-			overviewPicture = "\a3\Missions_F_Beta\data\img\FiringDrills_overview_CA.paa";
-			author = $STR_A3_Bohemia_Interactive;
-			class SP_FD04 //Green
-			{
-				directory = "a3\Missions_F_Beta\Challenges\firing_drills\sp_fd04.stratis";
-				briefingName = $STR_A3_FIRING_DRILLS_SP_FD04_NAME;
-				overviewText = $STR_A3_FIRING_DRILLS_SP_FD04_OVERVIEW;
-				overviewPicture = "\a3\Missions_F_Beta\data\img\SP_FD04_overview_CA.paa";
-				author = $STR_A3_Bohemia_Interactive;
-			};
-		};
-	};
-}; */
 class DefaultEventhandlers;
 class Eventhandlers;
-class CBA_Extended_EventHandlers;
+class CBA_Extended_EventHandlers_base;
 class IGUIBack;
 class RscControlsGroup;
 class RscText;
@@ -7272,46 +7191,17 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_AH64\sqs\loadout\AH64_GUI_Open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
 			};
-			class FindRadarTGT
-			{
-				displayName = "Find Radar Target";
-				position = "pos cano";
-				radius = 15;
-				shortcut = "User5";
-				condition = "gunner this == player and currentweapon this == ""JAS_AGM122"" and this getvariable ""SEAD_SET"" == ""no""; ";
-				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\harmChopper.sqf""; ";
-				onlyforplayer = "False";
-			};
-			class ClearRadarTGT
-			{
-				displayName = "Clear Radar Target";
-				position = "pos cano";
-				radius = 15;
-				shortcut = "User5";
-				condition = "gunner this == player and currentweapon this == ""JAS_AGM122"" and this getvariable ""SEAD_SET"" == ""yes""; ";
-				statement = "[this] execVM ""\FIR_AirWeaponSystem_US\Script\SEAD\harmoff.sqf""; ";
-				onlyforplayer = "False";
-			};
-			class SearchRDRTGT
-			{
-				displayName = "QIT ON";
-				position = "pos cano";
-				radius = 15;
-				shortcut = "";
-				condition = "gunner this == player and currentweapon this == ""JAS_AGM122"";";
-				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\Search_RDRTGTChopper.sqf""; ";
-				onlyforplayer = "False";
-			};
 		};
-		class eventhandlers
+		class EventHandlers
 		{
 			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
 			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
+			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 	};
 	class JAS_CUP_B_AH1_BAF: JAS_CUP_AH64D_Base
@@ -7365,16 +7255,17 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_AH64\sqs\loadout\AH64UK_GUI_Open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
 			};
 		};
-		class eventhandlers
+		class EventHandlers
 		{
 			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
 			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
+			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 	};
 	class JAS_CUP_B_AH64D_AAC: JAS_CUP_B_AH64D_USA
@@ -7402,43 +7293,7 @@ class CfgVehicles
 		{
 			"CUP_B_US_Pilot"
 		};
-		class Turrets: Turrets
-		{
-			class MainTurret: MainTurret
-			{
-				weapons[]=
-				{
-					"CUP_weapon_mastersafe",
-					"Laserdesignator_mounted",
-					"CUP_Vacannon_M230_veh"
-				};
-				magazines[]=
-				{
-					"CUP_1200Rnd_TE1_Red_Tracer_30x113mm_M789_HEDP_M",
-					"Laserbatteries"
-				};
-			};
-		};
 		editorPreview = "\ARMA3_CUP_Enhancement_AH64\UI\editorpreview\AH64D.jpg";
-		class UserActions
-		{
-			class AH64_Gui_Open
-			{
-				displayName = "<t color='#739eff'>Open Dialog</t>";
-				position = "pos cano";
-				radius = 15;
-				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
-				statement = "this execVM ""\ARMA3_CUP_Enhancement_AH64\sqs\loadout\AH64_GUI_Open.sqf""";
-				onlyforplayer = "false";
-				priority = 6;
-			};
-		};
-		class eventhandlers
-		{
-			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
-			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
-		};
 	};
 	class JAS_CUP_B_AH1_BAF_AAC: JAS_CUP_B_AH1_BAF
 	{
@@ -7462,25 +7317,6 @@ class CfgVehicles
 			"\CUP\AirVehicles\CUP_AirVehicles_AH64\data\clear_empty.paa"
 		};
 		editorPreview = "\ARMA3_CUP_Enhancement_AH64\UI\editorpreview\AH1_BAF.jpg";
-		class UserActions
-		{
-			class AH64UK_Gui_Open
-			{
-				displayName = "<t color='#739eff'>Open Dialog</t>";
-				position = "pos cano";
-				radius = 15;
-				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
-				statement = "this execVM ""\ARMA3_CUP_Enhancement_AH64\sqs\loadout\AH64UK_GUI_Open.sqf""";
-				onlyforplayer = "false";
-				priority = 6;
-			};
-		};
-		class eventhandlers
-		{
-			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
-			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
-		};
 	};
 	class JAS_CUP_AH64DWreck: HelicopterWreck
 	{

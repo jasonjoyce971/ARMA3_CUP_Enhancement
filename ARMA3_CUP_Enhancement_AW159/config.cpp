@@ -72,90 +72,9 @@ class CfgFunctions
 		};
 	};
 };
-/* class CfgMissions
-{
-	// Campaigns
-	class Campaigns
-	{
-		class RootCampaign
-		{
-			// Each of these definitions are applied to the root campaign
-			briefingname = $STR_A3_CampaignName;
-			overviewText = $STR_A3_CampaignOverview;
-			author = $STR_A3_Bohemia_Interactive;
-			overviewPicture = "a3\Missions_F_EPA\data\img\Campaign_overview_CA.paa";
-			// Classes of episodes included
-			campaigns[] = {StageA, StageB, StageC};
-			class StageA
-			{
-				directory = "A3\Missions_F_EPA\Campaign";	
-				//include the campaign description.ext to make it's content re-usable outside of the campaign
-				#include "\A3\Missions_F_EPA\Campaign\description.ext"
-			};
-			class StageB
-			{
-				directory = "A3\Missions_F_EPA\CampaignDummy";
-			};
-			class StageC
-			{
-				directory = "A3\Missions_F_EPA\CampaignDummy2";
-			};
-		};
-	};
-	// Showcase missions
-	class Showcases
-	{
-		displayName = $STR_A3_CFGMISSIONS_SHOWCASES0;
-		briefingName = $STR_A3_CFGMISSIONS_SHOWCASES0;
-		author = $STR_A3_Bohemia_Interactive;
-		overviewPicture = "a3\Missions_F_Beta\data\img\Campaign_overview_CA.paa";
-		overviewText = $STR_A3_CFGMISSIONS_SHOWCASES0;
-		class Showcase_Ranges
-		{
-			briefingName = "-{GOL}- AAC Weapons Training";
-			directory = "ARMA3_CUP_Enhancement_AW159\missions\AACFlightSchool.Stratis";
-			overviewText = "Coastal range complex for fixed wing weapons training";
-			overviewPicture = "\ARMA3_CUP_Enhancement_AW159\presentation\picture.paa";
-			author = "-{GOL}-Jason";
-		};
-	};
-	// Multiplayer missions
-	class MPMissions
-	{
-		class MP_COOP_m01
-		{
-			briefingName="@STR_A3_MP_COOP_m01_briefingName";
-			directory = "A3\missions_f\mpscenarios\MP_COOP_m01.Stratis";
-		};
-	};
-	// Challenges
-	class Challenges
-	{
-		briefingName = $STR_A3_CHALLENGES_NAME;
-		overviewText = $STR_A3_CHALLENGES_OVERVIEW;
-		overviewPicture = "\a3\Missions_F_Beta\data\img\Challenges_overview_CA.paa";
-		// Firing Drills
-		author = $STR_A3_Bohemia_Interactive;
-		class Firing_Drills
-		{
-			briefingName = $STR_A3_FIRING_DRILLS_NAME;
-			overviewText = $STR_A3_FIRING_DRILLS_OVERVIEW;
-			overviewPicture = "\a3\Missions_F_Beta\data\img\FiringDrills_overview_CA.paa";
-			author = $STR_A3_Bohemia_Interactive;
-			class SP_FD04 //Green
-			{
-				directory = "a3\Missions_F_Beta\Challenges\firing_drills\sp_fd04.stratis";
-				briefingName = $STR_A3_FIRING_DRILLS_SP_FD04_NAME;
-				overviewText = $STR_A3_FIRING_DRILLS_SP_FD04_OVERVIEW;
-				overviewPicture = "\a3\Missions_F_Beta\data\img\SP_FD04_overview_CA.paa";
-				author = $STR_A3_Bohemia_Interactive;
-			};
-		};
-	};
-}; */
 class DefaultEventhandlers;
 class Eventhandlers;
-class CBA_Extended_EventHandlers;
+class CBA_Extended_EventHandlers_base;
 class IGUIBack;
 class RscControlsGroup;
 class RscText;
@@ -6398,7 +6317,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_AW159\sqs\loadout\AW159_GUI_Open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -6407,7 +6326,9 @@ class CfgVehicles
 		class eventhandlers
 		{
 			//Init = "[_this select 0,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
-			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
+			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf""; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
+			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
+			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 	};
 	class JAS_CUP_B_Wildcat_Unarmed_RN_Grey : JAS_CUP_B_AW159_Unarmed_GB
@@ -6469,133 +6390,6 @@ class CfgVehicles
 				initPhase = 1;
 			};
 		};
-		class UserActions
-		{
-			class Pimfdpip1ON
-			{
-				displayName = "<t color='#ffff00'>Turn On FLIR MFD</t>";
-				displayNameDefault = "";
-				position = "";
-				radius = 3.5999999;
-				onlyForplayer = 1;
-				condition = "this animationPhase ""copip6"" < 0.5 AND (player == (driver this) && (alive this))";
-				statement = "this animate [""copip6"",1];";
-				priority = 9;
-			};
-			class Pimfdpip1OFF
-			{
-				displayName = "<t color='#ffff00'>Turn Off FLIR MFD</t>";
-				displayNameDefault = "";
-				position = "";
-				radius = 3.5999999;
-				onlyForplayer = 1;
-				condition = "this animationPhase ""copip6"" > 0.5 AND (player == (driver this) && (alive this))";
-				statement = "this animate [""copip6"",0];";
-				priority = 9;
-			};
-			class PimfdpipON
-			{
-				displayName = "<t color='#ffff00'>Turn On FLIR MFD</t>";
-				displayNameDefault = "";
-				position = "";
-				radius = 3.5999999;
-				onlyForplayer = 1;
-				condition = "this animationPhase ""copip4"" < 0.5 AND (player == (gunner this) && (alive this)) ";
-				statement = "this animate [""copip4"",1];";
-				priority = 9;
-			};
-			class PimfdpipOFF
-			{
-				displayName = "<t color='#ffff00'>Turn Off FLIR MFD</t>";
-				displayNameDefault = "";
-				position = "";
-				radius = 3.5999999;
-				onlyForplayer = 1;
-				condition = "this animationPhase ""copip4"" > 0.5 AND (player == (gunner this) && (alive this))";
-				statement = "this animate [""copip4"",0];";
-				priority = 9;
-			};
-			class OpenRdoor
-			{
-				displayName = "<t color='#FF0000'>Open Right Door</t>";
-				displayNameDefault = "";
-				position = "door_right_axis_beg";
-				radius = 3.7;
-				onlyForplayer = 0;
-				priority = 0;
-				condition = "this doorPhase ""CargoDoorR"" < 0.5 AND ((this getCargoIndex player) isEqualTo 0)";
-				statement = "this animateDoor [""CargoDoorR"",1];";
-			};
-			class CloseRdoor
-			{
-				displayName = "<t color='#FF0000'>Close Right Door</t>";
-				displayNameDefault = "";
-				position = "door_right_axis_beg";
-				radius = 3.7;
-				onlyForplayer = 0;
-				priority = 0;
-				condition = "this doorPhase ""CargoDoorR"" > 0.5 AND ((this getCargoIndex player) isEqualTo 0)";
-				statement = "this animateDoor [""CargoDoorR"",0];";
-			};
-			class OpenLdoor
-			{
-				displayName = "<t color='#FF0000'>Open Left Door</t>";
-				displayNameDefault = "";
-				position = "door_left_axis_beg";
-				radius = 3.7;
-				onlyForplayer = 0;
-				priority = 0;
-				condition = "this doorPhase ""CargoDoorL"" < 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
-				statement = "this animateDoor [""CargoDoorL"",1];";
-			};
-			class CloseLdoor
-			{
-				displayName = "<t color='#FF0000'>Close Left Door</t>";
-				displayNameDefault = "";
-				position = "door_left_axis_beg";
-				radius = 3.7;
-				onlyForplayer = 0;
-				priority = 0;
-				condition = "this doorPhase ""CargoDoorL"" > 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
-				statement = "this animateDoor [""CargoDoorL"",0];";
-			};
-			class Pack
-			{
-				displayName = "Pack";
-				displayNameDefault = "Pack";
-				position = "PackAction";
-				radius = 10;
-				onlyForPlayer = 1;
-				condition = "(!isEngineOn this) AND {(this animationphase 'mainRotor_unfolded' !=1) AND (driver this == player) AND (speed this < 1)}";
-				statement = "[this,1] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
-			};
-			class unPack
-			{
-				displayName = "UnPack";
-				displayNameDefault = "Unpack";
-				position = "PackAction";
-				radius = 10;
-				onlyForPlayer = 1;
-				condition = "this animationphase ""mainRotor_unfolded"" !=0 AND driver this == player";
-				statement = "[this,0] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
-			};
-			class Gui_Open
-			{
-				displayName = "<t color='#739eff'>Open Dialog</t>";
-				position = "pos cano";
-				radius = 15;
-				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
-				statement = "this execVM ""\ARMA3_CUP_Enhancement_AW159\sqs\loadout\AW159_GUI_Open.sqf""";
-				onlyforplayer = "false";
-				priority = 6;
-			};
-		};
-		class eventhandlers
-		{
-			//Init = "[_this select 0,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
-			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
-		};
 	};
 	class JAS_CUP_B_Wildcat_Unarmed_RN_Blackcat: JAS_CUP_B_AW159_Unarmed_GB
 	{
@@ -6654,133 +6448,6 @@ class CfgVehicles
 				animPeriod=0;
 				initPhase=1;
 			};
-		};
-		class UserActions
-		{
-			class Pimfdpip1ON
-			{
-				displayName = "<t color='#ffff00'>Turn On FLIR MFD</t>";
-				displayNameDefault = "";
-				position = "";
-				radius = 3.5999999;
-				onlyForplayer = 1;
-				condition = "this animationPhase ""copip6"" < 0.5 AND (player == (driver this) && (alive this))";
-				statement = "this animate [""copip6"",1];";
-				priority = 9;
-			};
-			class Pimfdpip1OFF
-			{
-				displayName = "<t color='#ffff00'>Turn Off FLIR MFD</t>";
-				displayNameDefault = "";
-				position = "";
-				radius = 3.5999999;
-				onlyForplayer = 1;
-				condition = "this animationPhase ""copip6"" > 0.5 AND (player == (driver this) && (alive this))";
-				statement = "this animate [""copip6"",0];";
-				priority = 9;
-			};
-			class PimfdpipON
-			{
-				displayName = "<t color='#ffff00'>Turn On FLIR MFD</t>";
-				displayNameDefault = "";
-				position = "";
-				radius = 3.5999999;
-				onlyForplayer = 1;
-				condition = "this animationPhase ""copip4"" < 0.5 AND (player == (gunner this) && (alive this)) ";
-				statement = "this animate [""copip4"",1];";
-				priority = 9;
-			};
-			class PimfdpipOFF
-			{
-				displayName = "<t color='#ffff00'>Turn Off FLIR MFD</t>";
-				displayNameDefault = "";
-				position = "";
-				radius = 3.5999999;
-				onlyForplayer = 1;
-				condition = "this animationPhase ""copip4"" > 0.5 AND (player == (gunner this) && (alive this))";
-				statement = "this animate [""copip4"",0];";
-				priority = 9;
-			};
-			class OpenRdoor
-			{
-				displayName = "<t color='#FF0000'>Open Right Door</t>";
-				displayNameDefault = "";
-				position = "door_right_axis_beg";
-				radius = 3.7;
-				onlyForplayer = 0;
-				priority = 0;
-				condition = "this doorPhase ""CargoDoorR"" < 0.5 AND ((this getCargoIndex player) isEqualTo 0)";
-				statement = "this animateDoor [""CargoDoorR"",1];";
-			};
-			class CloseRdoor
-			{
-				displayName = "<t color='#FF0000'>Close Right Door</t>";
-				displayNameDefault = "";
-				position = "door_right_axis_beg";
-				radius = 3.7;
-				onlyForplayer = 0;
-				priority = 0;
-				condition = "this doorPhase ""CargoDoorR"" > 0.5 AND ((this getCargoIndex player) isEqualTo 0)";
-				statement = "this animateDoor [""CargoDoorR"",0];";
-			};
-			class OpenLdoor
-			{
-				displayName = "<t color='#FF0000'>Open Left Door</t>";
-				displayNameDefault = "";
-				position = "door_left_axis_beg";
-				radius = 3.7;
-				onlyForplayer = 0;
-				priority = 0;
-				condition = "this doorPhase ""CargoDoorL"" < 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
-				statement = "this animateDoor [""CargoDoorL"",1];";
-			};
-			class CloseLdoor
-			{
-				displayName = "<t color='#FF0000'>Close Left Door</t>";
-				displayNameDefault = "";
-				position = "door_left_axis_beg";
-				radius = 3.7;
-				onlyForplayer = 0;
-				priority = 0;
-				condition = "this doorPhase ""CargoDoorL"" > 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
-				statement = "this animateDoor [""CargoDoorL"",0];";
-			};
-			class Pack
-			{
-				displayName = "Pack";
-				displayNameDefault = "Pack";
-				position = "PackAction";
-				radius = 10;
-				onlyForPlayer = 1;
-				condition = "(!isEngineOn this) AND {(this animationphase 'mainRotor_unfolded' !=1) AND (driver this == player) AND (speed this < 1)}";
-				statement = "[this,1] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
-			};
-			class unPack
-			{
-				displayName = "UnPack";
-				displayNameDefault = "Unpack";
-				position = "PackAction";
-				radius = 10;
-				onlyForPlayer = 1;
-				condition = "this animationphase ""mainRotor_unfolded"" !=0 AND driver this == player";
-				statement = "[this,0] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
-			};
-			class Gui_Open
-			{
-				displayName = "<t color='#739eff'>Open Dialog</t>";
-				position = "pos cano";
-				radius = 15;
-				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
-				statement = "this execVM ""\ARMA3_CUP_Enhancement_AW159\sqs\loadout\AW159_GUI_Open.sqf""";
-				onlyforplayer = "false";
-				priority = 6;
-			};
-		};
-		class eventhandlers
-		{
-			//Init = "[_this select 0,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
-			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
 		};
 		editorPreview="CUP\AirVehicles\CUP_AirVehicles_AW159\Data\preview\CUP_B_Wildcat_Unarmed_RN_Blackcat.jpg";
 	};
@@ -6952,7 +6619,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_AW159\sqs\loadout\AW159_GUI_Open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -6961,7 +6628,9 @@ class CfgVehicles
 		class eventhandlers
 		{
 			//Init = "[_this select 0,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
-			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
+			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf""; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
+			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
+			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 	};
 	class JAS_CUP_B_Wildcat_Unarmed_Green_AAF: JAS_CUP_B_Wildcat_Unarmed_Digital_AAF
@@ -7216,7 +6885,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_AW159\sqs\loadout\AW159_GUI_Open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -7225,7 +6894,9 @@ class CfgVehicles
 		class eventhandlers
 		{
 			//Init = "[_this select 0,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
-			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
+			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf""; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
+			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
+			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 	};
 	class JAS_CUP_I_AW159_Unarmed_AAC : JAS_CUP_B_Wildcat_Unarmed_Digital_AAF
@@ -7268,133 +6939,6 @@ class CfgVehicles
 			class CargoTurret_02 : CargoTurret_02
 			{
 			};
-		};
-		class UserActions
-		{
-			class Pimfdpip1ON
-			{
-				displayName = "<t color='#ffff00'>Turn On FLIR MFD</t>";
-				displayNameDefault = "";
-				position = "";
-				radius = 3.5999999;
-				onlyForplayer = 1;
-				condition = "this animationPhase ""copip6"" < 0.5 AND (player == (driver this) && (alive this))";
-				statement = "this animate [""copip6"",1];";
-				priority = 9;
-			};
-			class Pimfdpip1OFF
-			{
-				displayName = "<t color='#ffff00'>Turn Off FLIR MFD</t>";
-				displayNameDefault = "";
-				position = "";
-				radius = 3.5999999;
-				onlyForplayer = 1;
-				condition = "this animationPhase ""copip6"" > 0.5 AND (player == (driver this) && (alive this))";
-				statement = "this animate [""copip6"",0];";
-				priority = 9;
-			};
-			class PimfdpipON
-			{
-				displayName = "<t color='#ffff00'>Turn On FLIR MFD</t>";
-				displayNameDefault = "";
-				position = "";
-				radius = 3.5999999;
-				onlyForplayer = 1;
-				condition = "this animationPhase ""copip4"" < 0.5 AND (player == (gunner this) && (alive this)) ";
-				statement = "this animate [""copip4"",1];";
-				priority = 9;
-			};
-			class PimfdpipOFF
-			{
-				displayName = "<t color='#ffff00'>Turn Off FLIR MFD</t>";
-				displayNameDefault = "";
-				position = "";
-				radius = 3.5999999;
-				onlyForplayer = 1;
-				condition = "this animationPhase ""copip4"" > 0.5 AND (player == (gunner this) && (alive this))";
-				statement = "this animate [""copip4"",0];";
-				priority = 9;
-			};
-			class OpenRdoor
-			{
-				displayName = "<t color='#FF0000'>Open Right Door</t>";
-				displayNameDefault = "";
-				position = "door_right_axis_beg";
-				radius = 3.7;
-				onlyForplayer = 0;
-				priority = 0;
-				condition = "this doorPhase ""CargoDoorR"" < 0.5 AND ((this getCargoIndex player) isEqualTo 0)";
-				statement = "this animateDoor [""CargoDoorR"",1];";
-			};
-			class CloseRdoor
-			{
-				displayName = "<t color='#FF0000'>Close Right Door</t>";
-				displayNameDefault = "";
-				position = "door_right_axis_beg";
-				radius = 3.7;
-				onlyForplayer = 0;
-				priority = 0;
-				condition = "this doorPhase ""CargoDoorR"" > 0.5 AND ((this getCargoIndex player) isEqualTo 0)";
-				statement = "this animateDoor [""CargoDoorR"",0];";
-			};
-			class OpenLdoor
-			{
-				displayName = "<t color='#FF0000'>Open Left Door</t>";
-				displayNameDefault = "";
-				position = "door_left_axis_beg";
-				radius = 3.7;
-				onlyForplayer = 0;
-				priority = 0;
-				condition = "this doorPhase ""CargoDoorL"" < 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
-				statement = "this animateDoor [""CargoDoorL"",1];";
-			};
-			class CloseLdoor
-			{
-				displayName = "<t color='#FF0000'>Close Left Door</t>";
-				displayNameDefault = "";
-				position = "door_left_axis_beg";
-				radius = 3.7;
-				onlyForplayer = 0;
-				priority = 0;
-				condition = "this doorPhase ""CargoDoorL"" > 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
-				statement = "this animateDoor [""CargoDoorL"",0];";
-			};
-			class Pack
-			{
-				displayName = "Pack";
-				displayNameDefault = "Pack";
-				position = "PackAction";
-				radius = 10;
-				onlyForPlayer = 1;
-				condition = "(!isEngineOn this) AND {(this animationphase 'mainRotor_unfolded' !=1) AND (driver this == player) AND (speed this < 1)}";
-				statement = "[this,1] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
-			};
-			class unPack
-			{
-				displayName = "UnPack";
-				displayNameDefault = "Unpack";
-				position = "PackAction";
-				radius = 10;
-				onlyForPlayer = 1;
-				condition = "this animationphase ""mainRotor_unfolded"" !=0 AND driver this == player";
-				statement = "[this,0] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
-			};
-			class Gui_Open
-			{
-				displayName = "<t color='#739eff'>Open Dialog</t>";
-				position = "pos cano";
-				radius = 15;
-				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1))";
-				statement = "this execVM ""\ARMA3_CUP_Enhancement_AW159\sqs\loadout\AW159_GUI_Open.sqf""";
-				onlyforplayer = "false";
-				priority = 6;
-			};
-		};
-		class eventhandlers
-		{
-			//Init = "[_this select 0,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
-			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
 		};
 	};
 	class JAS_AW159_Loadout_Module: Module_F
