@@ -30,6 +30,7 @@ _handle= CreateDialog "A10J_GUI";
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"GBU-12",
+		"EGBU-12 II",
 		"ECM POD",
 		"SUU-25 x8"
     ];
@@ -46,6 +47,7 @@ _handle= CreateDialog "A10J_GUI";
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"GBU-12",
+		"EGBU-12 II",
 		"ECM POD",
 		"SUU-25 x8"
     ];
@@ -60,6 +62,7 @@ _handle= CreateDialog "A10J_GUI";
 		"HYDRA SMK O x7",
 		"HYDRA SMK P x7",
 		"HYDRA HE x19",
+		"APKWS HYDRA x7",
 		"ZUNI x4",
 		"CRV7 x19",
 		"Mk82 Snakeye",
@@ -69,6 +72,7 @@ _handle= CreateDialog "A10J_GUI";
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"GBU-12",
+		"EGBU-12 II",
 		"Lightning II POD"
     ];
 //Add Hardpoint 4 - left midline
@@ -81,6 +85,7 @@ _handle= CreateDialog "A10J_GUI";
 		"HYDRA SMK O x7",
 		"HYDRA SMK P x7",
 		"HYDRA x19",
+		"APKWS HYDRA x7",
 		"ZUNI x4",
 		"CRV7 x19",
 		"Mk82 Snakeye",
@@ -90,6 +95,7 @@ _handle= CreateDialog "A10J_GUI";
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"GBU-12",
+		"EGBU-12 II",
 		"Lightning II POD"
     ];
 //Add Hardpoint 5 - right inboard
@@ -104,12 +110,16 @@ _handle= CreateDialog "A10J_GUI";
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
-		"CBU-103 WCMD",
+		"CBU-103 CEM WCMD",
+		"CBU-105 SFW WCMD",
 		"GBU-10",
 		"GBU-12",
 		"GBU-12 x3",
+		"EGBU-12 II",
+		"EGBU-12 II x3",
 		"GBU-31",
 		"GBU-38",
+		"GBU-54",
 		"HYDRA x7",
 		"HYDRA SMK W x7",
 		"HYDRA SMK R x7",
@@ -117,6 +127,8 @@ _handle= CreateDialog "A10J_GUI";
 		"HYDRA SMK P x7",
 		"HYDRA x19",
 		"HYDRA x21",
+		"APKWS HYDRA x7",
+		"APKWS HYDRA x21",
 		"ZUNI x4",
 		"CRV7 x19",
 		"AGM-65D",
@@ -138,12 +150,16 @@ _handle= CreateDialog "A10J_GUI";
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
-		"CBU-103 WCMD",
+		"CBU-103 CEM WCMD",
+		"CBU-105 SFW WCMD",
 		"GBU-10",
 		"GBU-12",
 		"GBU-12 x3",
+		"EGBU-12 II",
+		"EGBU-12 II x3",
 		"GBU-31",
 		"GBU-38",
+		"GBU-54",
 		"HYDRA x7",
 		"HYDRA SMK W x7",
 		"HYDRA SMK R x7",
@@ -151,6 +167,8 @@ _handle= CreateDialog "A10J_GUI";
 		"HYDRA SMK P x7",
 		"HYDRA x19",
 		"HYDRA x21",
+		"APKWS HYDRA x7",
+		"APKWS HYDRA x21",
 		"ZUNI x4",
 		"CRV7 x19",
 		"AGM-65D",
@@ -172,15 +190,21 @@ _handle= CreateDialog "A10J_GUI";
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
-		"CBU-103 WCMD",
+		"CBU-103 CEM WCMD",
+		"CBU-105 SFW WCMD",
 		"GBU-10",
 		"GBU-12",
 		"GBU-12 x3",
+		"EGBU-12 II",
+		"EGBU-12 II x3",
 		"GBU-31",
 		"GBU-38",
+		"GBU-54",
 		"HYDRA x7",
 		"HYDRA x19",
 		"HYDRA x21",
+		"APKWS HYDRA x7",
+		"APKWS HYDRA x21",
 		"ZUNI x4",
 		"CRV7 x19"
     ];
@@ -196,15 +220,21 @@ _handle= CreateDialog "A10J_GUI";
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
-		"CBU-103 WCMD",
+		"CBU-103 CEM WCMD",
+		"CBU-105 SFW WCMD",
 		"GBU-10",
 		"GBU-12",
 		"GBU-12 x3",
+		"EGBU-12 II",
+		"EGBU-12 II x3",
 		"GBU-31",
 		"GBU-38",
+		"GBU-54",
 		"HYDRA x7",
 		"HYDRA x19",
 		"HYDRA x21",
+		"APKWS HYDRA x7",
+		"APKWS HYDRA x21",
 		"ZUNI x4",
 		"CRV7 x19"
     ];
@@ -219,11 +249,14 @@ _handle= CreateDialog "A10J_GUI";
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
-		"CBU-103 WCMD",
+		"CBU-103 CEM WCMD",
+		"CBU-105 SFW WCMD",
 		"GBU-10",
 		"GBU-12",
+		"EGBU-12 II",
 		"GBU-31",
-		"GBU-38"
+		"GBU-38",
+		"GBU-54"
     ];
 	
 //Add Hardpoint 10 - left belly inner
@@ -236,11 +269,14 @@ _handle= CreateDialog "A10J_GUI";
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
-		"CBU-103 WCMD",
+		"CBU-103 CEM WCMD",
+		"CBU-105 SFW WCMD",
 		"GBU-10",
 		"GBU-12",
+		"EGBU-12 II",
 		"GBU-31",
-		"GBU-38"
+		"GBU-38",
+		"GBU-54"
     ];
 	
 	//Add Hardpoint 11 - belly centre
@@ -254,6 +290,7 @@ _handle= CreateDialog "A10J_GUI";
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"GBU-10",
-		"GBU-12"
+		"GBU-12",
+		"EGBU-12 II"
     ];
 

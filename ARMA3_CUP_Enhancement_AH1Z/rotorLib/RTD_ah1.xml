@@ -390,14 +390,16 @@
 		<Engine type="ConstantRPMEngine">
 			<DebugInfo printDebugInfo="false" />
       <General inertia="0.15" /> 
-      <Performance emergencyPowerHP="1300" maxTorque="1500" rotationResistance="0.000009"/>  
+      <!-- <Performance emergencyPowerHP="1300" maxTorque="1500" rotationResistance="0.000009"/>  -->
+	  <Performance emergencyPowerHP="1500" maxTorque="2500" rotationResistance="0.000009"/>
       <ControllerParams P="0.5" I="1.5" D="0.0" offset="150" targetRPM="6164" />
 		</Engine>
 
     <Engine type="ConstantRPMEngine">
       <DebugInfo printDebugInfo="false" />
 		 	<General inertia="0.15" />
-      <Performance emergencyPowerHP="1300" maxTorque="1500" rotationResistance="0.000009"/>
+      <!-- <Performance emergencyPowerHP="1300" maxTorque="1500" rotationResistance="0.000009"/> -->
+	  <Performance emergencyPowerHP="1500" maxTorque="2500" rotationResistance="0.000009"/>
       <ControllerParams P="0.5" I="1.5" D="0.0" offset="150" targetRPM="6164" />
 		</Engine>
 		

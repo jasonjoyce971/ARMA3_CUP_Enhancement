@@ -117,7 +117,7 @@ class CfgHints
 			// Optional hint subtitle, filled by arguments from 'arguments' param
 			displayNameShort = "Ground attack helicopter";
 			// Structured text, filled by arguments from 'arguments' param
-			description = "The AH-64 entered life as a replacement for the USAF AH-1 Cobra. Born to kill soviet tanks during the cold war, the Apache went through the same process as the A-10. It is a purpose built tank hunter and possibly the best helicopter in this role in the world. Nimble and fast with a huge capacity for damage output, the Apache is the epitome of the helicopter gunship.<br/><br/>Payload Options:<br/><br/>%2AIM-9L Sidewinder<br/>%2AGM-122 Sidearm (US Army Only)<br/>%2HYDRA Rockets<br/>%2CRV-7 Rockets<br/>%2AGM-114L 'Longbow' Hellfire II<br/>%2AGM-114N Hellfire II (Thermobaric Warhead)<br/>%2Brimstone (UK AAC Only)<br/><br/>Factions:<br/><br/>%2US Army<br/>%2UK AAC";
+			description = "The AH-64 entered life as a replacement for the USAF AH-1 Cobra. Born to kill soviet tanks during the cold war, the Apache went through the same process as the A-10. It is a purpose built tank hunter and possibly the best helicopter in this role in the world. Nimble and fast with a huge capacity for damage output, the Apache is the epitome of the helicopter gunship.<br/><br/>Payload Options:<br/><br/>%2AIM-9L Sidewinder<br/>%2AGM-122 Sidearm (US Army Only)<br/>%2HYDRA Rockets<br/>%2CRV-7 Rockets<br/>%2APKWS Rockets<br/>%2AGM-114L 'Longbow' Hellfire II<br/>%2AGM-114N Hellfire II (Thermobaric Warhead)<br/>%2Brimstone (UK AAC Only)<br/><br/>Factions:<br/><br/>%2US Army<br/>%2UK AAC";
 			// Optional structured text, filled by arguments from 'arguments' param (first argument
 			// is %11, see notes bellow), grey color of text
 			tip = "";
@@ -7432,20 +7432,25 @@ class CfgVehicles
 						name="CRV-7 x19";
 						value=3;
 					};
+					class hp3_APKWS
+					{
+						name="APKWS x7";
+						value=4;
+					};
 					class hp3_114L
 					{
 						name="AGM-114L";
-						value=4;
+						value=5;
 					};
 					class hp3_114N
 					{
 						name="AGM-114N";
-						value=5;
+						value=6;
 					};
 					class hp3_114C
 					{
 						name="AGM-114 Mixed";
-						value=6;
+						value=7;
 					};
 				};
 			};
@@ -7477,20 +7482,25 @@ class CfgVehicles
 						name="CRV-7 x19";
 						value=3;
 					};
+					class hp4_APKWS
+					{
+						name="APKWS x7";
+						value=4;
+					};
 					class hp4_114L
 					{
 						name="AGM-114L";
-						value=4;
+						value=5;
 					};
 					class hp4_114N
 					{
 						name="AGM-114N";
-						value=5;
+						value=6;
 					};
 					class hp4_114C
 					{
 						name="AGM-114 Mixed";
-						value=6;
+						value=7;
 					};
 				};
 			};
@@ -7522,20 +7532,25 @@ class CfgVehicles
 						name="CRV-7 x19";
 						value=3;
 					};
+					class hp5_APKWS
+					{
+						name="APKWS x7";
+						value=4;
+					};
 					class hp5_114L
 					{
 						name="AGM-114L";
-						value=4;
+						value=5;
 					};
 					class hp5_114N
 					{
 						name="AGM-114N";
-						value=5;
+						value=6;
 					};
 					class hp5_114C
 					{
 						name="AGM-114 Mixed";
-						value=6;
+						value=7;
 					};
 				};
 			};
@@ -7567,20 +7582,25 @@ class CfgVehicles
 						name="CRV-7 x19";
 						value=3;
 					};
+					class hp6_APKWS
+					{
+						name="APKWS x7";
+						value=4;
+					};
 					class hp6_114L
 					{
 						name="AGM-114L";
-						value=4;
+						value=5;
 					};
 					class hp6_114N
 					{
 						name="AGM-114N";
-						value=5;
+						value=6;
 					};
 					class hp6_114C
 					{
 						name="AGM-114 Mixed";
-						value=6;
+						value=7;
 					};
 				};
 			};
@@ -7695,25 +7715,30 @@ class CfgVehicles
 						name="CRV-7 x19";
 						value=3;
 					};
+					class hp3_APKWS
+					{
+						name="APKWS x7";
+						value=4;
+					};
 					class hp3_114L
 					{
 						name="AGM-114L";
-						value=4;
+						value=5;
 					};
 					class hp3_114N
 					{
 						name="AGM-114N";
-						value=5;
+						value=6;
 					};
 					class hp3_114C
 					{
 						name="AGM-114 Mixed";
-						value=6;
+						value=7;
 					};
 					class hp3_brim
 					{
 						name="Brimstone";
-						value=7;
+						value=8;
 					};
 				};
 			};
@@ -7745,25 +7770,30 @@ class CfgVehicles
 						name="CRV-7 x19";
 						value=3;
 					};
+					class hp4_APKWS
+					{
+						name="APKWS x7";
+						value=4;
+					};
 					class hp4_114L
 					{
 						name="AGM-114L";
-						value=4;
+						value=5;
 					};
 					class hp4_114N
 					{
 						name="AGM-114N";
-						value=5;
+						value=6;
 					};
 					class hp4_114C
 					{
 						name="AGM-114 Mixed";
-						value=6;
+						value=7;
 					};
 					class hp4_brim
 					{
 						name="Brimstone";
-						value=7;
+						value=8;
 					};
 				};
 			};
@@ -7795,25 +7825,30 @@ class CfgVehicles
 						name="CRV-7 x19";
 						value=3;
 					};
+					class hp4_APKWS
+					{
+						name="APKWS x7";
+						value=4;
+					};
 					class hp5_114L
 					{
 						name="AGM-114L";
-						value=4;
+						value=5;
 					};
 					class hp5_114N
 					{
 						name="AGM-114N";
-						value=5;
+						value=6;
 					};
 					class hp5_114C
 					{
 						name="AGM-114 Mixed";
-						value=6;
+						value=7;
 					};
 					class hp5_brim
 					{
 						name="Brimstone";
-						value=7;
+						value=8;
 					};
 				};
 			};
@@ -7845,25 +7880,30 @@ class CfgVehicles
 						name="CRV-7 x19";
 						value=3;
 					};
+					class hp6_APKWS
+					{
+						name="APKWS x7";
+						value=4;
+					};
 					class hp6_114L
 					{
 						name="AGM-114L";
-						value=4;
+						value=5;
 					};
 					class hp6_114N
 					{
 						name="AGM-114N";
-						value=5;
+						value=6;
 					};
 					class hp6_114C
 					{
 						name="AGM-114 Mixed";
-						value=6;
+						value=7;
 					};
 					class hp6_brim
 					{
 						name="Brimstone";
-						value=7;
+						value=8;
 					};
 				};
 			};

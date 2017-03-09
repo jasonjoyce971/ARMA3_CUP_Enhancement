@@ -26,6 +26,7 @@ _HARM = 0; /* 1 is enable*/
 _Smoke = 0; /* 1 is enable*/
 _Smoke_C = ""; /* 1 is enable*/
 _FAEB = 0; /* 1 is enable*/
+_APKWS = 0; /* 1 is enable */
 
 _Lowdrag = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_LowDrag");
 _gps_bomb = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_GPS_Bomb_Guide");
@@ -40,6 +41,7 @@ _Smoke = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_SMOKE_RKT")
 _FLR = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_FLARE");
 _Smoke_C = getText (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_SMOKE_RKT_COLOR");
 _FAEB = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_FAEB");
+_APKWS = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_APKWS");
 
 if (_FAEB == 1) then
 {
@@ -108,6 +110,16 @@ if (_HARM == 1) then
 if (_FLR == 1) then
 {
 		_flr = [_missobj] execVM "\FIR_AirWeaponSystem_US\script\SUU25.sqf";
+};
+
+if (_weapon == "FIR_M61A2" or _weapon == "FIR_GAU8") then
+{
+	_gunshake = [_weapon] execVM "\FIR_AirWeaponSystem_US\script\function\AWS_GunShake.sqf";
+};
+
+if (_APKWS == 1) then
+{
+	_apkws_guide = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\Guide_APKWS.sqf";
 };
 
 switch (_crater) do

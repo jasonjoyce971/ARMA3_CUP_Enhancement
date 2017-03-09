@@ -27,9 +27,13 @@ Switch (_hardpoint1) Do
 		};
 		case 3:
 		{
-			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
+		{
+			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+		};
+		case 5:
 		{
 			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
 		};
@@ -57,9 +61,13 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
+		{
+			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+		};
+		case 5:
 		{
 			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
 		};
@@ -87,9 +95,13 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 5:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
@@ -117,9 +129,13 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 5:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
@@ -147,9 +163,13 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 5:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
@@ -177,9 +197,13 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 5:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
@@ -195,6 +219,7 @@ _hydra7count = {_x == "FIR_Hydra_7_Pod_1rnd_M"} count magazines _plane;
 _hydra19count = {_x == "FIR_JLAU_3_Pod_1rnd_M"} count magazines _plane;
 _hellfireKcount = {_x == "JAS_AGM114K_1rnd_M"} count magazines _plane;
 _hellfireNcount = {_x == "JAS_AGM114N_1rnd_M"} count magazines _plane;
+_APKWS7count = {_x == "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"} count magazines _plane;
 
 if (_hydra7count >= 1) then 
 {
@@ -205,6 +230,17 @@ if (_hydra7count >= 1) then
 	{
 		_counter7 = _counter7 + 1;
 		_plane addmagazineturret ["FIR_Hydra_7rnd_M",[-1]];
+	};
+};
+if (_APKWS7count >= 1) then 
+{
+	_plane addweaponturret ["FIR_APKWS_Launcher",[-1]];
+	_counter7 = 0;
+
+	while {_counter7 < _APKWS7count} do
+	{
+		_counter7 = _counter7 + 1;
+		_plane addmagazineturret ["FIR_Hydra_APKWS_7rnd_M",[-1]];
 	};
 };
 if (_hydra19count >= 1) then

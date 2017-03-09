@@ -16,6 +16,10 @@ _GBU53 = _plane getVariable "InternalGBU53";
 _JSOWA = _plane getVariable "InternalJSOWA";
 _JSOWC = _plane getVariable "InternalJSOWC";
 _BRIMSTONE = _plane getVariable "InternalBrimstone";
+_GBU54 = _plane getVariable "InternalGBU54";
+_CBU105 = _plane getVariable "InternalCBU105";
+_EGBU12 = _plane getVariable "InternalEGBU12";
+_PAVE4 = _plane getVariable "InternalPAVE4";
 
 //Remove Weapons
 if(_GBU12 == "yes") then {_plane removeweapon "JAS_FIR_GBU12_int";};
@@ -31,6 +35,10 @@ if(_GBU53 == "yes") then {_plane removeweapon "JAS_FIR_GBU53_int"};
 if(_JSOWA == "yes") then {_plane removeweapon "JAS_FIR_AGM154A_int"};
 if(_JSOWC == "yes") then {_plane removeweapon "JAS_FIR_AGM154C_int"};
 if(_BRIMSTONE == "yes") then {_plane removeweapon "JAS_EAWS_Brimstone_Int"};
+if(_GBU54 == "yes") then {_plane removeweapon "JAS_FIR_GBU54_int";};
+if(_CBU105 == "yes") then {_plane removeweapon "JAS_FIR_CBU105_int"};
+if(_EGBU12 == "yes") then {_plane removeweapon "JAS_FIR_EGBU12_int";};
+if(_PAVE4 == "yes") then {_plane removeweapon "JAS_FIR_PAVEWAY_IV_int";};
 
 // Animate Doors
 _plane animate ['Hatch_Weaponbay_1_1',0];

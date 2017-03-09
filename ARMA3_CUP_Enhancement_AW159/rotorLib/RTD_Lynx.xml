@@ -1303,6 +1303,7 @@
   <GroundContacts>
     <GeneralConfiguration	gearExtensionTime="3"	maxSteerableGearDeflection="80" 	steerableGearSpeedCorrectionFactor="0.0"/>   
 
+	<!-- Nose Wheel -->
     <GroundContact type="FGGroundContact200" >
       <Features isBrakable="true" isRetractable="false" isSteerable="true"  />
       <Aerodynamics equivalentFlatPlateArea ="0.3" />
@@ -1320,6 +1321,7 @@
       <Damage thresholdLoad="20000000" />
     </GroundContact>
 
+	<!-- Tail wheels -->
     <GroundContact type="FGGroundContact200" >
       <Features isBrakable="true" isRetractable="false" isSteerable="false"  />
       <Aerodynamics equivalentFlatPlateArea ="0.3" />

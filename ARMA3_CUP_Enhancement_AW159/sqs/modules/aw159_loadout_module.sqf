@@ -12,17 +12,13 @@ if (_activated) then {
 		
 		_hp1 = _logic getVariable "HP1";
 		_hp2 = _logic getVariable "HP2";
-		_hp3 = _logic getVariable "HP3";
-		_hp4 = _logic getVariable "HP4";
-		_hp5 = _logic getVariable "HP5";
-		_hp6 = _logic getVariable "HP6";
 		_skin = _logic getVariable "skin";
 		
 		{
 			_plane = vehicle _x;
 			if (_plane iskindof "JAS_CUP_AW159_Unarmed_Base") then
 			{
-				[_plane,_hp1,_hp2,_hp3,_hp4,_hp5,_hp6,_skin] spawn JAS_fnc_mi24v_loadout_set;
+				[_plane,_hp1,_hp2,_skin] spawn JAS_fnc_AW159_loadout_set;
 			}
 			else 
 			{

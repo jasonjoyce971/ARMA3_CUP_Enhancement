@@ -124,25 +124,29 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_CUP_Vikhr_Rack_6Rnd_M";
+			_plane addmagazine "JAS_CUP_2Rnd_Igla_Rack_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_2Rnd_Igla_Rack_M";
+			_plane addmagazine "JAS_KH25_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "FIR_Kh29T_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_Khedge_Rack_6Rnd_M";
+			_plane addmagazine "FIR_Kh29_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+			_plane addmagazine "JAS_CUP_Vikhr_Rack_6Rnd_M";
 		};
 		case 8:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 9:
 		{
 			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
@@ -170,25 +174,29 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_CUP_Vikhr_Rack_6Rnd_M";
+			_plane addmagazine "JAS_CUP_2Rnd_Igla_Rack_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_2Rnd_Igla_Rack_M";
+			_plane addmagazine "JAS_KH25_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "FIR_Kh29T_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_Khedge_Rack_6Rnd_M";
+			_plane addmagazine "FIR_Kh29_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+			_plane addmagazine "JAS_CUP_Vikhr_Rack_6Rnd_M";
 		};
 		case 8:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 9:
 		{
 			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};

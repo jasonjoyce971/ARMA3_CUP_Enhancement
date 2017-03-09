@@ -45,11 +45,12 @@ _handle= CreateDialog "KA50_GUI";
 	[  
 		"Empty",
 		"S-8 Rockets",
-		"S-13 Rockets",
-		"Vikhr",		//Pod = JAS_CUP_Vikhr_Rack_6Rnd_M, mag = JAS_CUP_6Rnd_AT16_M, wpn = JAS_CUP_Vmlauncher_AT16_veh
+		"S-13 Rockets",		
 		"IGLA",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
 		"Kh-25",
-		"Kh-29",		//Pod = JAS_CUP_Vikhr_Rack_6Rnd_M, mag = JAS_CUP_1Rnd_Kh29L_M, wpn = JAS_CUP_Vmlauncher_Kh29L_veh
+		"Kh-29T",
+		"Kh-29L",
+		"Vikhr",
 		"FAB-250",
 		"RBK-250"
     ];
@@ -59,10 +60,11 @@ _handle= CreateDialog "KA50_GUI";
 		"Empty",
 		"S-8 Rockets",
 		"S-13 Rockets",
-		"Vikhr",
 		"IGLA",
 		"Kh-25",
-		"Kh-29",
+		"Kh-29T",
+		"Kh-29L",
+		"Vikhr",
 		"FAB-250",
 		"RBK-250"
     ];

@@ -106,7 +106,7 @@ class CfgHints
 			// Optional hint subtitle, filled by arguments from 'arguments' param
 			displayNameShort = "Attack Helicopter";
 			// Structured text, filled by arguments from 'arguments' param
-			description = "The AH-1Z is the culmination of successive upgrades to the original AH-1 Cobra. The Cobra saw action in Vietnam and throughout the Cold War era until it was eventually phased out of US Army use to make way for the AH-64. The USMC however, prefered the AH-1 since it was easier to stow, maintain and operate at sea. The USMC AH-1 fleet then was upgraded to the W variant Super Cobra and subsequently the Z variant Viper. The platform is comparable to the AH-64 in most aspects, but is still prefered by the USMC simply due to its size.<br/><br/>Payload Options:<br/><br/>%2AIM-9<br/>%2HYDRA Rockets<br/>%2AGM-114K<br/><br/>Factions:<br/><br/>%2USMC<br/>%2Altis Armed Forces";
+			description = "The AH-1Z is the culmination of successive upgrades to the original AH-1 Cobra. The Cobra saw action in Vietnam and throughout the Cold War era until it was eventually phased out of US Army use to make way for the AH-64. The USMC however, prefered the AH-1 since it was easier to stow, maintain and operate at sea. The USMC AH-1 fleet then was upgraded to the W variant Super Cobra and subsequently the Z variant Viper. The platform is comparable to the AH-64 in most aspects, but is still prefered by the USMC simply due to its size.<br/><br/>Payload Options:<br/><br/>%2AIM-9<br/>%2HYDRA Rockets<br/>%2APKWS Rockets<br/>%2AGM-114K<br/><br/>Factions:<br/><br/>%2USMC<br/>%2Altis Armed Forces";
 			// Optional structured text, filled by arguments from 'arguments' param (first argument
 			// is %11, see notes bellow), grey color of text
 			tip = "";
@@ -5733,7 +5733,8 @@ class CfgVehicles
 			"flare_launcher1_dir",
 			"flare_launcher2_dir"
 		};
-		liftForceCoef = 2.5;
+		//liftForceCoef = 2.5;
+		liftForceCoef = 3.5;
 		radarType = 4;
 		lockDetectionSystem = "CM_Lock_Radar + CM_Lock_Laser + CM_Lock_IR";
 		incommingMisslieDetectionSystem = "CM_Missile";
@@ -5881,7 +5882,8 @@ class CfgVehicles
 		ace_cargo_hasCargo = 0;
 		class RotorLibHelicopterProperties : RotorLibHelicopterProperties
 		{
-			RTDconfig = "CUP\AirVehicles\CUP_AirVehicles_AH1Z\RTD_CUP_AH1Z.xml";
+			//RTDconfig = "CUP\AirVehicles\CUP_AirVehicles_AH1Z\RTD_CUP_AH1Z.xml";
+			RTDconfig = "ARMA3_CUP_Enhancement_AH1Z\rotorLib\RTD_ah1.xml";
 			starterTime = 5;
 			throttleOffToIdle = 8;
 			throttleIdleToOff = 12;
@@ -7774,20 +7776,25 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
+					class hp3_APKWS
+					{
+						name="APKWS x7";
+						value=3;
+					};
 					class hp3_114K
 					{
 						name="AGM-114K";
-						value=3;
+						value=4;
 					};
 					class hp3_114N
 					{
 						name="AGM-114N";
-						value=4;
+						value=5;
 					};
 					class hp3_114C
 					{
 						name="AGM-114 Mixed";
-						value=5;
+						value=6;
 					};
 				};
 			};
@@ -7814,20 +7821,25 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
+					class hp4_APKWS
+					{
+						name="APKWS x7";
+						value=3;
+					};
 					class hp4_114k
 					{
 						name="AGM-114K";
-						value=3;
+						value=4;
 					};
 					class hp4_114N
 					{
 						name="AGM-114N";
-						value=4;
+						value=5;
 					};
 					class hp4_114C
 					{
 						name="AGM-114 Mixed";
-						value=5;
+						value=6;
 					};
 				};
 			};
@@ -7854,20 +7866,25 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
+					class hp5_APKWS
+					{
+						name="APKWS x7";
+						value=3;
+					};
 					class hp5_114k
 					{
 						name="AGM-114K";
-						value=3;
+						value=4;
 					};
 					class hp5_114N
 					{
 						name="AGM-114N";
-						value=4;
+						value=5;
 					};
 					class hp5_114C
 					{
 						name="AGM-114 Mixed";
-						value=5;
+						value=6;
 					};
 				};
 			};
@@ -7894,20 +7911,25 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
+					class hp6_APKWS
+					{
+						name="APKWS x7";
+						value=3;
+					};
 					class hp6_114k
 					{
 						name="AGM-114K";
-						value=3;
+						value=4;
 					};
 					class hp6_114N
 					{
 						name="AGM-114N";
-						value=4;
+						value=5;
 					};
 					class hp6_114C
 					{
 						name="AGM-114 Mixed";
-						value=5;
+						value=6;
 					};
 				};
 			};

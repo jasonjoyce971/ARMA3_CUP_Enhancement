@@ -36,9 +36,12 @@ _plane removeMagazinesTurret ["JAS_CUP_40Rnd_S8_M",[-1]];
 _plane removeMagazinesTurret ["JAS_S13_5rnd_M",[-1]];
 _plane removeMagazinesTurret ["1Rnd_Missile_AA_03_F",[0]];
 _plane removeMagazinesTurret ["JAS_KH25_1rnd_M",[0]];
-_plane removeMagazinesTurret ["JAS_CUP_1Rnd_Kh29L_M",[0]];
+_plane removeMagazinesTurret ["FIR_Kh29_1rnd_M",[0]];
+_plane removeMagazinesTurret ["FIR_Kh29T_1rnd_M",[0]];
 _plane removeMagazinesTurret ["JAS_CUP_1Rnd_FAB250_M",[0]];
-_plane removeMagazinesTurret ["JAS_CUP_1Rnd_KAB250_M",[0]];
+_plane removeMagazinesTurret ["FIR_KAB500KR_1rnd_M",[0]];
+_plane removeMagazinesTurret ["FIR_KAB500SE_1rnd_M",[0]];
+_plane removeMagazinesTurret ["FIR_KAB500L_1rnd_M",[0]];
 _plane removeMagazinesTurret ["JAS_FIR_CBU250_1rnd_M",[0]];
 _plane removeMagazinesTurret ["JAS_CUP_180Rnd_TE1_30mm_GSh302K_HE_M",[-1]];
 _plane removeMagazinesTurret ["JAS_CUP_6Rnd_AT16_M",[0]];
@@ -50,9 +53,12 @@ _plane removeweaponTurret ["JAS_CUP_Vmlauncher_S8_veh",[-1]];
 _plane removeweaponTurret ["JAS_CUP_Vmlauncher_S13_veh",[-1]];
 _plane removeweaponTurret ["JAS_R73_Launcher",[0]];
 _plane removeweaponTurret ["JAS_KH25_LAU",[0]];
-_plane removeweaponTurret ["JAS_CUP_Vmlauncher_Kh29L_veh",[0]];
+_plane removeweaponTurret ["FIR_Kh29L",[0]];
+_plane removeweaponTurret ["FIR_Kh29T",[0]];
 _plane removeweaponTurret ["JAS_CUP_Vblauncher_Fab250_veh",[0]];
-_plane removeweaponTurret ["JAS_CUP_Vblauncher_KAB250_veh",[0]];
+_plane removeweaponTurret ["FIR_KAB500KR",[0]];
+_plane removeweaponTurret ["FIR_KAB500SE",[0]];
+_plane removeweaponTurret ["FIR_KAB500L",[0]];
 _plane removeweaponTurret ["JAS_FIR_CBU250",[0]];
 _plane removeweaponTurret ["JAS_CUP_Vacannon_GSh301_veh",[-1]];
 _plane removeweaponTurret ["JAS_CUP_Vmlauncher_AT16_veh",[0]];
@@ -204,21 +210,33 @@ sleep 0.3;
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_Kh29L_M";
+			_plane addmagazine "FIR_Kh29_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "FIR_Kh29T_1rnd_M";
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+			_plane addmagazine "JAS_KH25_1rnd_M";
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_KAB250_M";
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
 		};
 		case 10:
+		{
+			_plane addmagazine "FIR_KAB500KR_1rnd_M";
+		};
+		case 11:
+		{
+			_plane addmagazine "FIR_KAB500SE_1rnd_M";
+		};
+		case 12:
+		{
+			_plane addmagazine "FIR_KAB500L_1rnd_M";
+		};
+		case 13:
 		{
 			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
@@ -258,21 +276,33 @@ sleep 0.3;
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_Kh29L_M";
+			_plane addmagazine "FIR_Kh29_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "FIR_Kh29T_1rnd_M";
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+			_plane addmagazine "JAS_KH25_1rnd_M";
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_KAB250_M";
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
 		};
 		case 10:
+		{
+			_plane addmagazine "FIR_KAB500KR_1rnd_M";
+		};
+		case 11:
+		{
+			_plane addmagazine "FIR_KAB500SE_1rnd_M";
+		};
+		case 12:
+		{
+			_plane addmagazine "FIR_KAB500L_1rnd_M";
+		};
+		case 13:
 		{
 			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
@@ -306,21 +336,33 @@ sleep 0.3;
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_Kh29L_M";
+			_plane addmagazine "FIR_Kh29_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "FIR_Kh29T_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+			_plane addmagazine "JAS_KH25_1rnd_M";
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_KAB250_M";
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
 		};
 		case 9:
+		{
+			_plane addmagazine "FIR_KAB500KR_1rnd_M";
+		};
+		case 10:
+		{
+			_plane addmagazine "FIR_KAB500SE_1rnd_M";
+		};
+		case 11:
+		{
+			_plane addmagazine "FIR_KAB500L_1rnd_M";
+		};
+		case 12:
 		{
 			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
@@ -356,21 +398,33 @@ sleep 0.3;
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_Kh29L_M";
+			_plane addmagazine "FIR_Kh29_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "FIR_Kh29T_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+			_plane addmagazine "JAS_KH25_1rnd_M";
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_KAB250_M";
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
 		};
 		case 9:
+		{
+			_plane addmagazine "FIR_KAB500KR_1rnd_M";
+		};
+		case 10:
+		{
+			_plane addmagazine "FIR_KAB500SE_1rnd_M";
+		};
+		case 11:
+		{
+			_plane addmagazine "FIR_KAB500L_1rnd_M";
+		};
+		case 12:
 		{
 			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
@@ -402,7 +456,15 @@ sleep 0.3;
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_KAB250_M";
+			_plane addmagazine "FIR_KAB500KR_1rnd_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "FIR_KAB500SE_1rnd_M";
+		};
+		case 6:
+		{
+			_plane addmagazine "FIR_KAB500L_1rnd_M";
 		};
 	};
 	
@@ -432,7 +494,15 @@ sleep 0.3;
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_KAB250_M";
+			_plane addmagazine "FIR_KAB500KR_1rnd_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "FIR_KAB500SE_1rnd_M";
+		};
+		case 6:
+		{
+			_plane addmagazine "FIR_KAB500L_1rnd_M";
 		};
 	};
 	
@@ -450,19 +520,31 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_Kh29L_M";
+			_plane addmagazine "FIR_Kh29_1rnd_M";
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "FIR_Kh29T_1rnd_M";
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+			_plane addmagazine "JAS_KH25_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_KAB250_M";
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "FIR_KAB500KR_1rnd_M";
+		};
+		case 6:
+		{
+			_plane addmagazine "FIR_KAB500SE_1rnd_M";
+		};
+		case 7:
+		{
+			_plane addmagazine "FIR_KAB500L_1rnd_M";
 		};
 	};
 	
@@ -480,19 +562,31 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_Kh29L_M";
+			_plane addmagazine "FIR_Kh29_1rnd_M";
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "FIR_Kh29T_1rnd_M";
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+			_plane addmagazine "JAS_KH25_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_KAB250_M";
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "FIR_KAB500KR_1rnd_M";
+		};
+		case 6:
+		{
+			_plane addmagazine "FIR_KAB500SE_1rnd_M";
+		};
+		case 7:
+		{
+			_plane addmagazine "FIR_KAB500L_1rnd_M";
 		};
 	};
 	
@@ -544,7 +638,7 @@ else
 			else
 			{
 				titleText ["Found custom loadout data. Loading..", "PLAIN DOWN",0.5];
-				_loadcustom1 = ["custom1"]execVM "jason_aircraft\sqs\Loadout\SU34_Custom_Apply.sqf";
+				_loadcustom1 = ["custom1"]execVM "ARMA3_CUP_Enhancement_SU34\sqs\Loadout\SU34_Custom_Apply.sqf";
 			};		
 		};
 
@@ -557,7 +651,7 @@ else
 			else
 			{
 				titleText ["Found custom loadout data. Loading..", "PLAIN DOWN",0.5];
-				_loadcustom1 = ["custom2"]execVM "jason_aircraft\sqs\Loadout\SU34_Custom_Apply.sqf";
+				_loadcustom1 = ["custom2"]execVM "ARMA3_CUP_Enhancement_SU34\sqs\Loadout\SU34_Custom_Apply.sqf";
 			};			
 		};
 
@@ -570,7 +664,7 @@ else
 			else
 			{
 				titleText ["Found custom loadout data. Loading..", "PLAIN DOWN",0.5];
-				_loadcustom1 = ["custom3"]execVM "jason_aircraft\sqs\Loadout\SU34_Custom_Apply.sqf";
+				_loadcustom1 = ["custom3"]execVM "ARMA3_CUP_Enhancement_SU34\sqs\Loadout\SU34_Custom_Apply.sqf";
 			};	
 		};
 	};
@@ -589,18 +683,24 @@ _S8count = {_x == "JAS_CUP_1Rnd_S8_Pod_Air_M"} count magazines _plane;
 _s13count = {_x == "JAS_CUP_S13_Pod_Heli_M"} count magazines _plane;
 _R73count = {_x == "1Rnd_Missile_AA_03_F"} count magazines _plane;
 _KH25count = {_x == "JAS_KH25_1rnd_M"} count magazines _plane;
-_KH29count = {_x == "JAS_CUP_1Rnd_Kh29L_M"} count magazines _plane;
+_KH29Lcount = {_x == "FIR_Kh29_1rnd_M"} count magazines _plane;
+_KH29Tcount = {_x == "FIR_Kh29T_1rnd_M"} count magazines _plane;
 _FABcount = {_x == "JAS_CUP_1Rnd_FAB250_M"} count magazines _plane;
-_KABcount = {_x == "JAS_CUP_1Rnd_KAB250_M"} count magazines _plane;
+_KABKRcount = {_x == "FIR_KAB500KR_1rnd_M"} count magazines _plane;
+_KABSEcount = {_x == "FIR_KAB500SE_1rnd_M"} count magazines _plane;
+_KABLcount = {_x == "FIR_KAB500L_1rnd_M"} count magazines _plane;
 _RBKcount = {_x == "JAS_FIR_CBU250_1rnd_M"} count magazines _plane;
 _gpodcount = {_x == "JAS_CUP_2Rnd_GSh23_Pod_Heli_M"} count magazines _plane;
 _vikcount = {_x == "JAS_CUP_Vikhr_Rack_6Rnd_M"} count magazines _plane;
 
 if (_R73count >= 1) then {_plane addweaponturret ["JAS_R73_Launcher",[0]];};
 if (_KH25count >= 1) then {_plane addweaponturret ["JAS_KH25_LAU",[0]];};
-if (_KH29count >= 1) then {_plane addweaponturret ["JAS_CUP_Vmlauncher_Kh29L_veh",[0]];};
+if (_KH29Lcount >= 1) then {_plane addweaponturret ["FIR_Kh29L",[0]];};
+if (_KH29Tcount >= 1) then {_plane addweaponturret ["FIR_Kh29T",[0]];};
 if (_FABcount >= 1) then {_plane addweaponturret ["JAS_CUP_Vblauncher_Fab250_veh",[0]];};
-if (_KABcount >= 1) then {_plane addweaponturret ["JAS_CUP_Vblauncher_KAB250_veh",[0]];};
+if (_KABKRcount >= 1) then {_plane addweaponturret ["FIR_KAB500KR",[0]];};
+if (_KABSEcount >= 1) then {_plane addweaponturret ["FIR_KAB500SE",[0]];};
+if (_KABLcount >= 1) then {_plane addweaponturret ["FIR_KAB500L",[0]];};
 if (_RBKcount >= 1) then {_plane addweaponturret ["JAS_FIR_CBU250",[0]];};
 
 if (_S8count >= 1) then 

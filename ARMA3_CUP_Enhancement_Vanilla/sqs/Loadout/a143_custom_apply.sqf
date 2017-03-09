@@ -97,24 +97,29 @@ sleep 0.01;
 		};
 		case 14:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_mk82_gp_1rnd_M";
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M";
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
 		};
 		case 18:
 		{
+			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M";
+		};
+		case 19:
+		{
 			_plane addmagazine "FIR_LITENING_1_1rnd_M";
 			_plane setVariable ["TGT_POD","yes",true];
+			//_plane addmagazine "Laserbatteries";
 		};
 	};
 
@@ -184,17 +189,21 @@ sleep 0.3;
 		};
 		case 14:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_mk82_gp_1rnd_M";
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
 		case 17:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+		};
+		case 18:
 		{
 			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M";
 		};
@@ -266,17 +275,21 @@ sleep 0.3;
 		};
 		case 14:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_mk82_gp_1rnd_M";
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
 		case 17:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+		};
+		case 18:
 		{
 			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M";
 		};
@@ -348,17 +361,21 @@ sleep 0.3;
 		};
 		case 14:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_mk82_gp_1rnd_M";
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
 		case 17:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+		};
+		case 18:
 		{
 			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M";
 		};

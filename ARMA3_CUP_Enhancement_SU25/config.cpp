@@ -2491,20 +2491,25 @@ class CfgVehicles
 						name="R-73 'Vympel''";
 						value=4;
 					};
-					class hp3_29
+					class hp3_29T
 					{
-						name="Kh-29 'Kedge'";
+						name="Kh-29T 'Kedge'";
 						value=5;
+					};
+					class hp3_29L
+					{
+						name="Kh-29L 'Kedge'";
+						value=6;
 					};
 					class hp3_fab
 					{
 						name="FAB-250";
-						value=6;
+						value=7;
 					};
 					class hp3_kab
 					{
-						name="KAB-250";
-						value=7;
+						name="KAB-500";
+						value=8;
 					};
 				};
 			};
@@ -2541,20 +2546,25 @@ class CfgVehicles
 						name="R-73 'Vympel''";
 						value=4;
 					};
-					class hp4_29
+					class hp4_29T
 					{
-						name="Kh-29 'Kedge'";
+						name="Kh-29T 'Kedge'";
 						value=5;
+					};
+					class hp4_29L
+					{
+						name="Kh-29L 'Kedge'";
+						value=6;
 					};
 					class hp4_fab
 					{
 						name="FAB-250";
-						value=6;
+						value=7;
 					};
 					class hp4_kab
 					{
-						name="KAB-250";
-						value=7;
+						name="KAB-500";
+						value=8;
 					};
 				};
 			};
@@ -2591,25 +2601,30 @@ class CfgVehicles
 						name="R-73 'Vympel''";
 						value=4;
 					};
-					class hp5_29
+					class hp5_29T
 					{
-						name="Kh-29 'Kedge'";
+						name="Kh-29T 'Kedge'";
 						value=5;
+					};
+					class hp5_29L
+					{
+						name="Kh-29L 'Kedge'";
+						value=6;
 					};
 					class hp5_fab
 					{
 						name="FAB-250";
-						value=6;
+						value=7;
 					};
 					class hp5_kab
 					{
-						name="KAB-250";
-						value=7;
+						name="KAB-500";
+						value=8;
 					};
 					class hp5_rbk
 					{
 						name="RBK-250";
-						value=8;
+						value=9;
 					};
 				};
 			};
@@ -2646,25 +2661,30 @@ class CfgVehicles
 						name="R-73 'Vympel''";
 						value=4;
 					};
-					class hp6_29
+					class hp6_29T
 					{
-						name="Kh-29 'Kedge'";
+						name="Kh-29T 'Kedge'";
 						value=5;
+					};
+					class hp6_29L
+					{
+						name="Kh-29L 'Kedge'";
+						value=6;
 					};
 					class hp6_fab
 					{
 						name="FAB-250";
-						value=6;
+						value=7;
 					};
 					class hp6_kab
 					{
-						name="KAB-250";
-						value=7;
+						name="KAB-500";
+						value=8;
 					};
 					class hp6_rbk
 					{
 						name="RBK-250";
-						value=8;
+						value=9;
 					};
 				};
 			};
@@ -2701,25 +2721,30 @@ class CfgVehicles
 						name="VIKHIR";
 						value=4;
 					};
-					class hp7_29
+					class hp7_29T
 					{
-						name="Kh-29 'Kedge'";
+						name="Kh-29T 'Kedge'";
 						value=5;
+					};
+					class hp7_29L
+					{
+						name="Kh-29L 'Kedge'";
+						value=6;
 					};
 					class hp7_fab
 					{
 						name="FAB-250";
-						value=6;
+						value=7;
 					};
 					class hp7_kab
 					{
-						name="KAB-250";
-						value=7;
+						name="KAB-500";
+						value=8;
 					};
 					class hp7_rbk
 					{
 						name="RBK-250";
-						value=8;
+						value=9;
 					};
 				};
 			};
@@ -2756,25 +2781,30 @@ class CfgVehicles
 						name="VIKHIR";
 						value=4;
 					};
-					class hp8_29
+					class hp8_29T
 					{
-						name="Kh-29 'Kedge'";
+						name="Kh-29T 'Kedge'";
 						value=5;
+					};
+					class hp8_29L
+					{
+						name="Kh-29L 'Kedge'";
+						value=6;
 					};
 					class hp8_fab
 					{
 						name="FAB-250";
-						value=6;
+						value=7;
 					};
 					class hp8_kab
 					{
-						name="KAB-250";
-						value=7;
+						name="KAB-500";
+						value=8;
 					};
 					class hp8_rbk
 					{
 						name="RBK-250";
-						value=8;
+						value=9;
 					};
 				};
 			};
@@ -2813,7 +2843,7 @@ class CfgVehicles
 					};
 					class hp9_kab
 					{
-						name="KAB-250";
+						name="KAB-500";
 						value=5;
 					};
 					class hp9_rbk
@@ -2858,7 +2888,7 @@ class CfgVehicles
 					};
 					class hp10_kab
 					{
-						name="KAB-250";
+						name="KAB-500";
 						value=5;
 					};
 					class hp10_rbk

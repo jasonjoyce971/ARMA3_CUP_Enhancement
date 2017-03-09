@@ -41,6 +41,7 @@ _handle= CreateDialog "AH64_GUI";
 		"HYDRA x7",
 		"HYDRA x19",
 		"CRV-7 x19",
+		"APKWS x7",
 		"AGM-114L x4",
 		"AGM-114N x4",
 		"AGM-114 Combi"
@@ -52,6 +53,7 @@ _handle= CreateDialog "AH64_GUI";
 		"HYDRA x7",
 		"HYDRA x19",
 		"CRV-7 x19",
+		"APKWS x7",
 		"AGM-114L x4",
 		"AGM-114N x4",
 		"AGM-114 Combi"
@@ -63,6 +65,7 @@ _handle= CreateDialog "AH64_GUI";
 		"HYDRA x7",
 		"HYDRA x19",
 		"CRV-7 x19",
+		"APKWS x7",
 		"AGM-114L x4",
 		"AGM-114N x4",
 		"AGM-114 Combi"
@@ -74,6 +77,7 @@ _handle= CreateDialog "AH64_GUI";
 		"HYDRA x7",
 		"HYDRA x19",
 		"CRV-7 x19",
+		"APKWS x7",
 		"AGM-114L x4",
 		"AGM-114N x4",
 		"AGM-114 Combi"

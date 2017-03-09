@@ -394,9 +394,13 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 16:
+		{
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+		};
+		case 17:
 		{
 			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
@@ -472,9 +476,13 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 16:
+		{
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+		};
+		case 17:
 		{
 			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
@@ -550,9 +558,13 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 16:
+		{
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+		};
+		case 17:
 		{
 			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
@@ -628,9 +640,13 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 16:
+		{
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+		};
+		case 17:
 		{
 			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};

@@ -32,6 +32,9 @@ class CfgPatches
 			"CUP_Weapons_WeaponsCore",
 			"A3_Modules_F"
 		};
+		name="A-10 Thunderbolt II";
+		author="-{GOL}-Jason";
+		url="https://github.com/jasonjoyce971/ARMA3_CUP_Enhancement#arma3_cup_enhancement";
 	};
 };
 class CfgAddons
@@ -103,7 +106,7 @@ class CfgHints
 			// Optional hint subtitle, filled by arguments from 'arguments' param
 			displayNameShort = "Ground attack craft";
 			// Structured text, filled by arguments from 'arguments' param
-			description = "Famous the world over for its performance and its ugly ass looks, the A-10 'Warthog' has been repeatedly touted as the greatest ground attack craft of modern times. Built from the ground up to kill tanks and ground emplacements, everything about the design is there to enhance its ground attack capabilities. This single mindedness of design however does mean that the A-10 is possibly the slowest jet in the game. When you're carrying more bombs than some bombers however, who cares how fast you are?<br/><br/>Payload Options:<br/><br/>%2AIM-9<br/>%2Mk82 GPB<br/>%2Mk82 SNAKE<br/>%2Mk84 GPB<br/>%2HYDRA Rockets<br/>%2ZUNI Rockets<br/>%2CRV-7 Rockets<br/>%2AGM-65D<br/>%2AGM-65G<br/>%2AGM-65L<br/>%2GBU-10<br/>%2GBU-12<br/>%2GBU-31<br/>%2GBU-38<br/>%2CBU-87<br/>%2CBU-89<br/>%2CBU-97<br/>%2CBU-103<br/>%2SUU-25<br/><br/>Factions:<br/><br/>%2US Army";
+			description = "Famous the world over for its performance and its ugly ass looks, the A-10 'Warthog' has been repeatedly touted as the greatest ground attack craft of modern times. Built from the ground up to kill tanks and ground emplacements, everything about the design is there to enhance its ground attack capabilities. This single mindedness of design however does mean that the A-10 is possibly the slowest jet in the game. When you're carrying more bombs than some bombers however, who cares how fast you are?<br/><br/>Payload Options:<br/><br/>%2AIM-9<br/>%2Mk82 GPB<br/>%2Mk82 SNAKE<br/>%2Mk84 GPB<br/>%2HYDRA Rockets<br/>%2APKWS Rockets<br/>%2ZUNI Rockets<br/>%2CRV-7 Rockets<br/>%2AGM-65D<br/>%2AGM-65G<br/>%2AGM-65L<br/>%2GBU-10<br/>%2GBU-12<br/>%2EGBU-12 II<br/>%2GBU-31<br/>%2GBU-38<br/>%2GBU-54<br/>%2CBU-87<br/>%2CBU-89<br/>%2CBU-97<br/>%2CBU-103<br/>%2CBU-105<br/>%2SUU-25<br/><br/>Factions:<br/><br/>%2US Army";
 			// Optional structured text, filled by arguments from 'arguments' param (first argument
 			// is %11, see notes bellow), grey color of text
 			tip = "";
@@ -984,15 +987,20 @@ class CfgVehicles
 						name="GBU-12";
 						value=8;
 					};
+					class hp1_E12
+					{
+						name="EGBU-12 II";
+						value=9;
+					};
 					class hp1_ALQ
 					{
 						name="ECM POD";
-						value=9;
+						value=10;
 					};
 					class hp1_SUU
 					{
 						name="SUU-25";
-						value=10;
+						value=11;
 					};
 				};
 			};
@@ -1049,15 +1057,20 @@ class CfgVehicles
 						name="GBU-12";
 						value=8;
 					};
+					class hp2_E12
+					{
+						name="EGBU-12 II";
+						value=9;
+					};
 					class hp2_ALQ
 					{
 						name="ECM POD";
-						value=9;
+						value=10;
 					};
 					class hp2_SUU
 					{
 						name="SUU-25";
-						value=10;
+						value=11;
 					};
 				};
 			};
@@ -1104,55 +1117,65 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=6;
 					};
+					class hp3_APKWS7
+					{
+						name="APKWS x7";
+						value=7;
+					};
 					class hp3_zuni4
 					{
 						name="ZUNI x4";
-						value=7;
+						value=8;
 					};
 					class hp3_crv7
 					{
 						name="CRV7 x19";
-						value=8;
+						value=9;
 					};
 					class hp3_82s
 					{
 						name="Mk82 Snakeye";
-						value=9;
+						value=10;
 					};
 					class hp3_82
 					{
 						name="Mk82 GPB";
-						value=10;
+						value=11;
 					};
 					class hp3_84
 					{
 						name="Mk84 GPB";
-						value=11;
+						value=12;
 					};
 					class hp3_87
 					{
 						name="CBU-87 CEM";
-						value=12;
+						value=13;
 					};
 					class hp3_89
 					{
 						name="CBU-89 GATOR";
-						value=13;
+						value=14;
 					};
 					class hp3_97
 					{
 						name="CBU-97 SFW";
-						value=14;
+						value=15;
 					};
 					class hp3_12
 					{
 						name="GBU-12";
-						value=15;
+						value=16;
+					};
+					class hp3_E12
+					{
+						name="EGBU-12 II";
+						value=17;
 					};
 					class hp3_tgp
 					{
 						name="Lightning II POD";
-						value=16;
+						value=18;
 					};
 				};
 			};
@@ -1199,55 +1222,65 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=6;
 					};
+					class hp4_APKWS7
+					{
+						name="APKWS x7";
+						value=7;
+					};
 					class hp4_zuni4
 					{
 						name="ZUNI x4";
-						value=7;
+						value=8;
 					};
 					class hp4_crv7
 					{
 						name="CRV7 x19";
-						value=8;
+						value=9;
 					};
 					class hp4_82s
 					{
 						name="Mk82 Snakeye";
-						value=9;
+						value=10;
 					};
 					class hp4_82
 					{
 						name="Mk82 GPB";
-						value=10;
+						value=11;
 					};
 					class hp4_84
 					{
 						name="Mk84 GPB";
-						value=11;
+						value=12;
 					};
 					class hp4_87
 					{
 						name="CBU-87 CEM";
-						value=12;
+						value=13;
 					};
 					class hp4_89
 					{
 						name="CBU-89 GATOR";
-						value=13;
+						value=14;
 					};
 					class hp4_97
 					{
 						name="CBU-97 SFW";
-						value=14;
+						value=15;
 					};
 					class hp4_12
 					{
 						name="GBU-12";
-						value=15;
+						value=16;
+					};
+					class hp4_E12
+					{
+						name="EGBU-12 II";
+						value=17;
 					};
 					class hp4_tgp
 					{
 						name="Lightning II POD";
-						value=16;
+						value=18;
 					};
 				};
 			};
@@ -1306,108 +1339,138 @@ class CfgVehicles
 					};
 					class hp5_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=9;
+					};
+					class hp5_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=10;
 					};
 					class hp5_10
 					{
 						name="GBU-10";
-						value=10;
+						value=11;
 					};
 					class hp5_12
 					{
 						name="GBU-12";
-						value=11;
+						value=12;
 					};
 					class hp5_12ter
 					{
 						name="GBU-12 x3";
-						value=12;
+						value=13;
+					};
+					class hp5_E12
+					{
+						name="EGBU-12 II";
+						value=14;
+					};
+					class hp5_E12ter
+					{
+						name="EGBU-12 II x3";
+						value=15;
 					};
 					class hp5_31
 					{
 						name="GBU-31";
-						value=13;
+						value=16;
 					};
 					class hp5_38
 					{
 						name="GBU-38";
-						value=14;
+						value=17;
+					};
+					class hp5_54
+					{
+						name="GBU-54";
+						value=18;
 					};
 					class hp5_hydra7
 					{
 						name="HYDRA x7";
-						value=15;
+						value=19;
 					};
 					class hp5_hydraW
 					{
 						name="HYDRA Smoke White";
-						value=16;
+						value=20;
 					};
 					class hp5_hydraR
 					{
 						name="HYDRA Smoke Red";
-						value=17;
+						value=21;
 					};
 					class hp5_hydraO
 					{
 						name="HYDRA Smoke Orange";
-						value=18;
+						value=22;
 					};
 					class hp5_hydraP
 					{
 						name="HYDRA Smoke Purple";
-						value=19;
+						value=23;
 					};
 					class hp5_hydra19
 					{
 						name="HYDRA x19";
-						value=20;
+						value=24;
 					};
 					class hp5_hydra21
 					{
 						name="HYDRA x21";
-						value=21;
+						value=25;
+					};
+					class hp5_APKWS7
+					{
+						name="APKWS x7";
+						value=26;
+					};
+					class hp5_APKWS21
+					{
+						name="APKWS x21";
+						value=27;
 					};
 					class hp5_zuni4
 					{
 						name="ZUNI x4";
-						value=22;
+						value=28;
 					};
 					class hp5_crv7
 					{
 						name="CRV7 x19";
-						value=23;
+						value=29;
 					};
 					class hp5_65D
 					{
 						name="AGM-65D";
-						value=24;
+						value=30;
 					};
 					class hp5_65Dter
 					{
 						name="AGM-65D x3";
-						value=25;
+						value=31;
 					};
 					class hp5_65G
 					{
 						name="AGM-65G";
-						value=26;
+						value=32;
 					};
 					class hp5_65Gter
 					{
 						name="AGM-65G x3";
-						value=27;
+						value=33;
 					};
 					class hp5_65L
 					{
 						name="AGM-65L";
-						value=28;
+						value=34;
 					};
 					class hp5_65Lter
 					{
 						name="AGM-65L x3";
-						value=29;
+						value=35;
 					};
 				};
 			};
@@ -1466,108 +1529,138 @@ class CfgVehicles
 					};
 					class hp6_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=9;
+					};
+					class hp6_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=10;
 					};
 					class hp6_10
 					{
 						name="GBU-10";
-						value=10;
+						value=11;
 					};
 					class hp6_12
 					{
 						name="GBU-12";
-						value=11;
+						value=12;
 					};
 					class hp6_12ter
 					{
 						name="GBU-12 x3";
-						value=12;
+						value=13;
+					};
+					class hp6_E12
+					{
+						name="EGBU-12 II";
+						value=14;
+					};
+					class hp6_E12ter
+					{
+						name="EGBU-12 II x3";
+						value=15;
 					};
 					class hp6_31
 					{
 						name="GBU-31";
-						value=13;
+						value=16;
 					};
 					class hp6_38
 					{
 						name="GBU-38";
-						value=14;
+						value=17;
+					};
+					class hp6_54
+					{
+						name="GBU-54";
+						value=18;
 					};
 					class hp6_hydra7
 					{
 						name="HYDRA x7";
-						value=15;
+						value=19;
 					};
 					class hp6_hydraW
 					{
 						name="HYDRA Smoke White";
-						value=16;
+						value=20;
 					};
 					class hp6_hydraR
 					{
 						name="HYDRA Smoke Red";
-						value=17;
+						value=21;
 					};
 					class hp6_hydraO
 					{
 						name="HYDRA Smoke Orange";
-						value=18;
+						value=22;
 					};
 					class hp6_hydraP
 					{
 						name="HYDRA Smoke Purple";
-						value=19;
+						value=23;
 					};
 					class hp6_hydra19
 					{
 						name="HYDRA x19";
-						value=20;
+						value=24;
 					};
 					class hp6_hydra21
 					{
 						name="HYDRA x21";
-						value=21;
+						value=25;
+					};
+					class hp6_APKWS7
+					{
+						name="APKWS x7";
+						value=26;
+					};
+					class hp6_APKWS21
+					{
+						name="APKWS x21";
+						value=27;
 					};
 					class hp6_zuni4
 					{
 						name="ZUNI x4";
-						value=22;
+						value=28;
 					};
 					class hp6_crv7
 					{
 						name="CRV7 x19";
-						value=23;
+						value=29;
 					};
 					class hp6_65D
 					{
 						name="AGM-65D";
-						value=24;
+						value=30;
 					};
 					class hp6_65Dter
 					{
 						name="AGM-65D x3";
-						value=25;
+						value=31;
 					};
 					class hp6_65G
 					{
 						name="AGM-65G";
-						value=26;
+						value=32;
 					};
 					class hp6_65Gter
 					{
 						name="AGM-65G x3";
-						value=27;
+						value=33;
 					};
 					class hp6_65L
 					{
 						name="AGM-65L";
-						value=28;
+						value=34;
 					};
 					class hp6_65Lter
 					{
 						name="AGM-65L x3";
-						value=29;
+						value=35;
 					};
 				};
 			};
@@ -1626,58 +1719,88 @@ class CfgVehicles
 					};
 					class hp7_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=9;
+					};
+					class hp7_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=10;
 					};
 					class hp7_10
 					{
 						name="GBU-10";
-						value=10;
+						value=11;
 					};
 					class hp7_12
 					{
 						name="GBU-12";
-						value=11;
+						value=12;
 					};
 					class hp7_12ter
 					{
 						name="GBU-12 x3";
-						value=12;
+						value=13;
+					};
+					class hp7_E12
+					{
+						name="EGBU-12 II";
+						value=14;
+					};
+					class hp7_E12ter
+					{
+						name="EGBU-12 II x3";
+						value=15;
 					};
 					class hp7_31
 					{
 						name="GBU-31";
-						value=13;
+						value=16;
 					};
 					class hp7_38
 					{
 						name="GBU-38";
-						value=14;
+						value=17;
+					};
+					class hp7_54
+					{
+						name="GBU-54";
+						value=18;
 					};
 					class hp7_hydra7
 					{
 						name="HYDRA x7";
-						value=15;
+						value=19;
 					};
 					class hp7_hydra19
 					{
 						name="HYDRA x19";
-						value=16;
+						value=20;
 					};
 					class hp7_hydra21
 					{
 						name="HYDRA x21";
-						value=17;
+						value=21;
+					};
+					class hp7_APKWS7
+					{
+						name="APKWS x7";
+						value=22;
+					};
+					class hp7_APKWS21
+					{
+						name="APKWS x21";
+						value=23;
 					};
 					class hp7_zuni4
 					{
 						name="ZUNI x4";
-						value=18;
+						value=24;
 					};
 					class hp7_crv7
 					{
 						name="CRV7 x19";
-						value=19;
+						value=25;
 					};
 				};
 			};
@@ -1736,58 +1859,88 @@ class CfgVehicles
 					};
 					class hp8_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=9;
+					};
+					class hp8_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=10;
 					};
 					class hp8_10
 					{
 						name="GBU-10";
-						value=10;
+						value=11;
 					};
 					class hp8_12
 					{
 						name="GBU-12";
-						value=11;
+						value=12;
 					};
 					class hp8_12ter
 					{
 						name="GBU-12 x3";
-						value=12;
+						value=13;
+					};
+					class hp8_E12
+					{
+						name="EGBU-12 II";
+						value=14;
+					};
+					class hp8_E12ter
+					{
+						name="EGBU-12 II x3";
+						value=15;
 					};
 					class hp8_31
 					{
 						name="GBU-31";
-						value=13;
+						value=16;
 					};
 					class hp8_38
 					{
 						name="GBU-38";
-						value=14;
+						value=17;
+					};
+					class hp8_54
+					{
+						name="GBU-54";
+						value=18;
 					};
 					class hp8_hydra7
 					{
 						name="HYDRA x7";
-						value=15;
+						value=19;
 					};
 					class hp8_hydra19
 					{
 						name="HYDRA x19";
-						value=16;
+						value=20;
 					};
 					class hp8_hydra21
 					{
 						name="HYDRA x21";
-						value=17;
+						value=21;
+					};
+					class hp8_APKWS7
+					{
+						name="APKWS x7";
+						value=22;
+					};
+					class hp8_APKWS21
+					{
+						name="APKWS x21";
+						value=23;
 					};
 					class hp8_zuni4
 					{
 						name="ZUNI x4";
-						value=18;
+						value=24;
 					};
 					class hp8_crv7
 					{
 						name="CRV7 x19";
-						value=19;
+						value=25;
 					};
 				};
 			};
@@ -1836,28 +1989,43 @@ class CfgVehicles
 					};
 					class hp9_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=7;
+					};
+					class hp9_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=8;
 					};
 					class hp9_10
 					{
 						name="GBU-10";
-						value=8;
+						value=9;
 					};
 					class hp9_12
 					{
 						name="GBU-12";
-						value=9;
+						value=10;
+					};
+					class hp9_E12
+					{
+						name="EGBU-12 II";
+						value=11;
 					};
 					class hp9_31
 					{
 						name="GBU-31";
-						value=10;
+						value=12;
 					};
 					class hp9_38
 					{
 						name="GBU-38";
-						value=11;
+						value=13;
+					};
+					class hp9_54
+					{
+						name="GBU-54";
+						value=14;
 					};
 				};
 			};
@@ -1906,28 +2074,43 @@ class CfgVehicles
 					};
 					class hp10_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=7;
+					};
+					class hp10_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=8;
 					};
 					class hp10_10
 					{
 						name="GBU-10";
-						value=8;
+						value=9;
 					};
 					class hp10_12
 					{
 						name="GBU-12";
-						value=9;
+						value=10;
+					};
+					class hp10_E12
+					{
+						name="EGBU-12 II";
+						value=11;
 					};
 					class hp10_31
 					{
 						name="GBU-31";
-						value=10;
+						value=12;
 					};
 					class hp10_38
 					{
 						name="GBU-38";
-						value=11;
+						value=13;
+					};
+					class hp10_54
+					{
+						name="GBU-54";
+						value=14;
 					};
 				};
 			};
@@ -1983,6 +2166,11 @@ class CfgVehicles
 					{
 						name="GBU-12";
 						value=8;
+					};
+					class hp11_E12
+					{
+						name="EGBU-12 II";
+						value=9;
 					};
 				};
 			};

@@ -98,25 +98,29 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_CUP_Vikhr_Rack_6Rnd_M";
+			_plane addmagazine "JAS_CUP_2Rnd_Igla_Rack_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_2Rnd_Igla_Rack_M";
+			_plane addmagazine "JAS_KH25_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "FIR_Kh29T_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_Khedge_Rack_6Rnd_M";
+			_plane addmagazine "FIR_Kh29_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+			_plane addmagazine "JAS_CUP_Vikhr_Rack_6Rnd_M";
 		};
 		case 8:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 9:
 		{
 			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
@@ -144,25 +148,29 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_CUP_Vikhr_Rack_6Rnd_M";
+			_plane addmagazine "JAS_CUP_2Rnd_Igla_Rack_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_2Rnd_Igla_Rack_M";
+			_plane addmagazine "JAS_KH25_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "FIR_Kh29T_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_Khedge_Rack_6Rnd_M";
+			_plane addmagazine "FIR_Kh29_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+			_plane addmagazine "JAS_CUP_Vikhr_Rack_6Rnd_M";
 		};
 		case 8:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 9:
 		{
 			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
@@ -182,7 +190,8 @@ _kab250count = {_x == "JAS_FIR_CBU250_1rnd_M"} count magazines _plane;
 _iglacount = {_x == "JAS_CUP_2Rnd_Igla_Rack_M"} count magazines _plane;
 _vikcount = {_x == "JAS_CUP_Vikhr_Rack_6Rnd_M"} count magazines _plane;
 _KH25count = {_x == "JAS_KH25_1rnd_M"} count magazines _plane;
-_khedgecount = {_x == "JAS_CUP_Khedge_Rack_6Rnd_M"} count magazines _plane;
+_khedgeTcount = {_x == "FIR_Kh29T_1rnd_M"} count magazines _plane;
+_khedgeLcount = {_x == "FIR_Kh29_1rnd_M"} count magazines _plane;
 _gpodcount = {_x == "JAS_CUP_2Rnd_GSh23_Pod_Heli_M"} count magazines _plane;
 
 if (_s8count >= 1) then 
@@ -232,7 +241,9 @@ if (_vikcount >= 1) then
 	};
 };
 if (_KH25count >= 1) then {_plane addweapon "JAS_KH25_LAU";};
-if (_khedgecount >= 1) then 
+if (_khedgeTcount >= 1) then {_plane addweapon "FIR_Kh29T";};
+if (_khedgeLcount >= 1) then {_plane addweapon "FIR_Kh29L";};
+/*if (_khedgecount >= 1) then 
 {
 	_plane addweapon "JAS_CUP_Vmlauncher_Kh29L_veh";
 	_counter = 0;
@@ -247,7 +258,7 @@ if (_khedgecount >= 1) then
 		_plane addmagazine "JAS_CUP_1Rnd_Kh29L_M";
 		_plane addmagazine "JAS_CUP_1Rnd_Kh29L_M";
 	};
-};
+};*/
 if (_gpodcount >= 1) then 
 {
 	_plane addweapon "JAS_CUP_Vacannon_GSh23L_in_veh";
