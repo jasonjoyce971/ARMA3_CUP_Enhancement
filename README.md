@@ -1,5 +1,25 @@
 # ARMA3_CUP_Enhancement
 
+V3.1.0:
+* AWS Update
+* Added APKWS
+* Added GBU-54
+* Added EGBU-12 II
+* Added EGBU-12 IV
+* Added CBU-105
+* Added AIM-132
+* Added Meteor
+* Added Kh-29L
+* Added Kh-29T
+* Added KAB-500L
+* Added KAB-500KR
+* Added KAB-500SE
+* Fixed AW-159 Loadout Module Bug
+* Tweaked Mi-24 RotorLib XML
+* Tweaked AH-1Z RotorLib XML
+* Tweaked AW-159 RotorLib XML
+* Changed Su-34 FCS to GPS Version
+
 V3.0.0:
 * AH-1Z Handling Update
 * Code Optimisation Milestone
