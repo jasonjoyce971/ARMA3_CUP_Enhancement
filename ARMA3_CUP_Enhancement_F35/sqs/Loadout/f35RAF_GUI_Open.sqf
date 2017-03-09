@@ -22,8 +22,8 @@ _handle= CreateDialog "f35RAF_GUI";
 	{lbAdd[2100,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-9X",
-		"AIM-120",
+		"ASRAAM",
+		"Meteor",
 		"BRIMSTONE",
 		"Sniper XR POD"
     ];
@@ -32,8 +32,8 @@ _handle= CreateDialog "f35RAF_GUI";
 	{lbAdd[2201,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-9X",
-		"AIM-120",
+		"ASRAAM",
+		"Meteor",
 		"BRIMSTONE",
 		"Sniper XR POD"
     ];
@@ -42,52 +42,58 @@ _handle= CreateDialog "f35RAF_GUI";
 	{lbAdd[2101,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-9X",
-		"AIM-120",
+		"ASRAAM",
+		"Meteor",
 		"BRIMSTONE",
 		"AGM-88 HARM",
 		"GBU-10",
 		"GBU-12",
-		"GBU-24A",
-		"GBU-24B",
-		"GBU-24/118",
-		"GBU-31",
-		"GBU-32",
-		"GBU-38"
-    ];
-//Add Hardpoint 4 - left midline
-	{lbAdd[2102,_x]} forEach 
-	[  
-		"Empty",
-		"AIM-9X",
-		"AIM-120",
-		"BRIMSTONE",
-		"AGM-88 HARM",
-		"GBU-10",
-		"GBU-12",
-		"GBU-24A",
-		"GBU-24B",
-		"GBU-24/118",
-		"GBU-31",
-		"GBU-32",
-		"GBU-38"
-    ];
-//Add Hardpoint 5 - right inboard
-	{lbAdd[2103,_x]} forEach 
-	[  
-		"Empty",
-		"AIM-9X",
-		"AIM-120",
-		"BRIMSTONE",
-		"AGM-88 HARM",
-		"GBU-10",
-		"GBU-12",
+		"EGBU-12 IV",
 		"GBU-24A",
 		"GBU-24B",
 		"GBU-24/118",
 		"GBU-31",
 		"GBU-32",
 		"GBU-38",
+		"GBU-54"
+    ];
+//Add Hardpoint 4 - left midline
+	{lbAdd[2102,_x]} forEach 
+	[  
+		"Empty",
+		"ASRAAM",
+		"Meteor",
+		"BRIMSTONE",
+		"AGM-88 HARM",
+		"GBU-10",
+		"GBU-12",
+		"EGBU-12 IV",
+		"GBU-24A",
+		"GBU-24B",
+		"GBU-24/118",
+		"GBU-31",
+		"GBU-32",
+		"GBU-38",
+		"GBU-54"
+    ];
+//Add Hardpoint 5 - right inboard
+	{lbAdd[2103,_x]} forEach 
+	[  
+		"Empty",
+		"ASRAAM",
+		"Meteor",
+		"BRIMSTONE",
+		"AGM-88 HARM",
+		"GBU-10",
+		"GBU-12",
+		"EGBU-12 IV",
+		"GBU-24A",
+		"GBU-24B",
+		"GBU-24/118",
+		"GBU-31",
+		"GBU-32",
+		"GBU-38",
+		"GBU-54",
 		"Fuel Tank",
 		"Storm Shadow"
     ];
@@ -95,18 +101,20 @@ _handle= CreateDialog "f35RAF_GUI";
 	{lbAdd[2104,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-9X",
-		"AIM-120",
+		"ASRAAM",
+		"Meteor",
 		"BRIMSTONE",
 		"AGM-88 HARM",
 		"GBU-10",
 		"GBU-12",
+		"EGBU-12 IV",
 		"GBU-24A",
 		"GBU-24B",
 		"GBU-24/118",
 		"GBU-31",
 		"GBU-32",
 		"GBU-38",
+		"GBU-54",
 		"Fuel Tank",
 		"Storm Shadow"
     ];
@@ -115,7 +123,9 @@ _handle= CreateDialog "f35RAF_GUI";
 	[  
 		"Empty",
 		"GBU-12",
+		"EGBU-12 IV",
 		"GBU-38",
+		"GBU-54",
 		"Mk82 Snakeye",
 		"Mk82 GPB",
 		"GBU-39 SDB",
@@ -127,7 +137,9 @@ _handle= CreateDialog "f35RAF_GUI";
 	[  
 		"Empty",
 		"GBU-12",
+		"EGBU-12 IV",
 		"GBU-38",
+		"GBU-54",
 		"Mk82 Snakeye",
 		"Mk82 GPB",
 		"GBU-39 SDB",
@@ -140,7 +152,9 @@ _handle= CreateDialog "f35RAF_GUI";
 	[  
 		"Empty",
 		"GBU-12",
+		"EGBU-12 IV",
 		"GBU-38",
+		"GBU-54",
 		"Mk82 Snakeye",
 		"Mk82 GPB",
 		"GBU-39 SDB",
@@ -153,7 +167,9 @@ _handle= CreateDialog "f35RAF_GUI";
 	[  
 		"Empty",
 		"GBU-12",
+		"EGBU-12 IV",
 		"GBU-38",
+		"GBU-54",
 		"Mk82 Snakeye",
 		"Mk82 GPB",
 		"GBU-39 SDB",

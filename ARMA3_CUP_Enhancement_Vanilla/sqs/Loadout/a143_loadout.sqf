@@ -36,6 +36,7 @@ _plane removeMagazines "FIR_AGM65D_1rnd_M";
 _plane removeMagazines "FIR_AGM65G_1rnd_M";
 _plane removeMagazines "FIR_AGM65L_1rnd_M";
 _plane removeMagazines "FIR_AGM88_1rnd_M";
+_plane removeMagazines "FIR_CBU105_1rnd_M";
 
 _plane removeMagazines "FIR_Hydra_7rnd_M";
 _plane removeMagazines "FIR_Zuni_4rnd_M";
@@ -69,6 +70,7 @@ _plane removeWeapon "JAS_FIR_AGM65D";
 _plane removeWeapon "JAS_HYDRA_Launcher";
 _plane removeWeapon "JAS_ZUNI_Launcher";
 _plane removeweapon "FIR_AGM88";
+_plane removeweapon "FIR_CBU105";
 
 _plane removeweapon "Laserdesignator_mounted";
 
@@ -158,21 +160,25 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 14:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_mk82_gp_1rnd_M";
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M";
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
 		};
 		case 18:
+		{
+			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M";
+		};
+		case 19:
 		{
 			_plane addmagazine "FIR_LITENING_1_1rnd_M";
 			_plane setVariable ["TGT_POD","yes",true];
@@ -246,17 +252,21 @@ sleep 0.3;
 		};
 		case 14:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_mk82_gp_1rnd_M";
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
 		case 17:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+		};
+		case 18:
 		{
 			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M";
 		};
@@ -328,17 +338,21 @@ sleep 0.3;
 		};
 		case 14:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_mk82_gp_1rnd_M";
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
 		case 17:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+		};
+		case 18:
 		{
 			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M";
 		};
@@ -410,17 +424,21 @@ sleep 0.3;
 		};
 		case 14:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_mk82_gp_1rnd_M";
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
 		case 17:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+		};
+		case 18:
 		{
 			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M";
 		};
@@ -517,7 +535,7 @@ else
 			else
 			{
 				_plane vehiclechat "found custom loadout data. loading..";
-				_loadcustom1 = ["custom1"]execVM "FIR_A143_Rework_Cfg\sqs\Loadout\A143_Custom_Apply.sqf";
+				_loadcustom1 = ["custom1"]execVM "ARMA3_CUP_Enhancement_Vanilla\sqs\Loadout\A143_Custom_Apply.sqf";
 			};		
 		};
 
@@ -530,7 +548,7 @@ else
 			else
 			{
 				_plane vehiclechat "found custom loadout data. loading..";
-				_loadcustom1 = ["custom2"]execVM "FIR_A143_Rework_Cfg\sqs\Loadout\A143_Custom_Apply.sqf";
+				_loadcustom1 = ["custom2"]execVM "ARMA3_CUP_Enhancement_Vanilla\sqs\Loadout\A143_Custom_Apply.sqf";
 			};			
 		};
 
@@ -543,7 +561,7 @@ else
 			else
 			{
 				_plane vehiclechat "found custom loadout data. loading..";
-				_loadcustom1 = ["custom3"]execVM "FIR_A143_Rework_Cfg\sqs\Loadout\A143_Custom_Apply.sqf";
+				_loadcustom1 = ["custom3"]execVM "ARMA3_CUP_Enhancement_Vanilla\sqs\Loadout\A143_Custom_Apply.sqf";
 			};	
 		};
 	};
@@ -572,6 +590,7 @@ _hydracount = {_x == "FIR_Hydra_7_Pod_1rnd_M"} count magazines _plane;
 _zunicount = {_x == "FIR_Zuni_5_Pod_1rnd_M"} count magazines _plane;
 _agm88count = {_x == "FIR_AGM88_1rnd_M"} count magazines _plane;
 //_TGPCount =  {_x == "Laserbatteries"} count magazines _plane;
+_cbu105count = {_x == "FIR_CBU105_1rnd_M"} count magazines _plane;
 
 if (_aim9count >= 1) then {_plane addweapon "FIR_AIM9L";};
 if (_aim9xcount >= 1) then {_plane addweapon "FIR_AIM9X";};
@@ -589,6 +608,7 @@ if (_agm65gcount >= 1) then {_plane addweapon "JAS_FIR_AGM65G"};
 if (_agm65lcount >= 1) then {_plane addweapon "JAS_FIR_AGM65L";};
 if (_agm88count >= 1) then {_plane addweapon "FIR_AGM88";};
 //if (_TGPCount >= 1) then {_plane addweapon "Laserdesignator_mounted";};
+if (_cbu105count >= 1) then {_plane addweapon "FIR_CBU105";};
 
 if (_hydracount >= 1) then 
 {

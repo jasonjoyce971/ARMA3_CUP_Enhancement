@@ -1734,6 +1734,42 @@ class cfgMagazines
 	class 38Rnd_80mm_rockets;
 	class 2Rnd_LG_Scalpel;
 	class 2Rnd_Missile_AA_03_F;
+	class JAS_FIR_PavewayIV_1rnd_M_int: VehicleMagazine
+	{
+		scope=2;
+		displayName="Paveway IV Internal Bay";
+		displayNameShort="Laser Guided";
+		count=1;
+		ammo="FIR_PAVEWAY_IV";
+		initSpeed=0;
+	};
+	class JAS_FIR_EGBU12_1rnd_M_int: VehicleMagazine
+	{
+		scope=2;
+		displayName="EGBU-12 Internal Bay";
+		displayNameShort="Laser Guided";
+		count=1;
+		ammo="FIR_EGBU12";
+		initSpeed=0;
+	};
+	class JAS_FIR_CBU105_1rnd_M_int: VehicleMagazine
+	{
+		scope=2;
+		displayName="CBU-105 Internal Bay";
+		displayNameShort="WCMD SFW";
+		count=1;
+		ammo="FIR_CBU105";
+		initSpeed=0;
+	};
+	class JAS_FIR_gbu54_1rnd_M_int: VehicleMagazine
+	{
+		scope=2;
+		displayName="GBU-54 Internal Bay";
+		displayNameShort="LJDAM";
+		count=1;
+		ammo="FIR_gbu54";
+		initSpeed=0;
+	};
 	class JAS_R77_1rnd_M : VehicleMagazine
 	{
 		scope = 2;
@@ -1975,6 +2011,12 @@ class cfgMagazines
 		count = 1;
 	};
 	class JAS_FIR_Hydra_SMKW_Pod_1rnd_M : VehicleMagazine
+	{
+		scope = 1;
+		ammo = "FIR_Hydra_7_Pod";
+		count = 1;
+	};
+	class JAS_FIR_Hydra_APKWS_Pod_1rnd_M : VehicleMagazine
 	{
 		scope = 1;
 		ammo = "FIR_Hydra_7_Pod";
@@ -2665,6 +2707,204 @@ class cfgWeapons
 	class Missiles_Scalpel;
 	class Missile_AA_03_Plane_CAS_02_F;
 	class CannonCore;
+	class JAS_FIR_PAVEWAY_IV_int: Mk82BombLauncher
+	{
+		autofire=0;
+		ballisticsComputer=8;
+		scope=2;
+		holdsterAnimValue=1;
+		displayName="Paveway IV Internal Bay";
+		displayNameMagazine="PavewayIV";
+		shortNameMagazine="PavewayIV";
+		cursoraim="bomb";
+		sounds[]=
+		{
+			"StandardSound"
+		};
+		class StandardSound
+		{
+			begin1[]=
+			{
+				"\FIR_AirWeaponSystem_US\sound\Release_Bomb",
+				1.5848932,
+				1.1,
+				2100
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			weaponSoundEffect="DefaultRifle";
+		};
+		initspeed=10;
+		magazineReloadTime=0.5;
+		reloadTime=0.5;
+		aiDispersionCoefX=1;
+		aiDispersionCoefY=1;
+		aiRateOfFire=4;
+		aiRateOfFireDistance=300;
+		minRange=100;
+		minRangeProbab=0.55000001;
+		midRange=1000;
+		midRangeProbab=0.85000002;
+		maxRange=2000;
+		maxRangeProbab=0.2;
+		maxLeadSpeed=0;
+		magazines[]=
+		{
+			"JAS_FIR_PavewayIV_1rnd_M_int"
+		};
+	};
+	class JAS_FIR_EGBU12_int: Mk82BombLauncher
+	{
+		autofire=0;
+		ballisticsComputer=8;
+		scope=2;
+		holdsterAnimValue=1;
+		displayName="EGBU-12 Enhanced PaveWay II";
+		displayNameMagazine="EGBU";
+		shortNameMagazine="EGBU";
+		cursoraim="bomb";
+		sounds[]=
+		{
+			"StandardSound"
+		};
+		class StandardSound
+		{
+			begin1[]=
+			{
+				"\FIR_AirWeaponSystem_US\sound\Release_Bomb",
+				1.5848932,
+				1.1,
+				2100
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			weaponSoundEffect="DefaultRifle";
+		};
+		initspeed=10;
+		magazineReloadTime=0.5;
+		reloadTime=0.5;
+		aiDispersionCoefX=1;
+		aiDispersionCoefY=1;
+		aiRateOfFire=4;
+		aiRateOfFireDistance=300;
+		minRange=100;
+		minRangeProbab=0.55000001;
+		midRange=1000;
+		midRangeProbab=0.85000002;
+		maxRange=2000;
+		maxRangeProbab=0.2;
+		maxLeadSpeed=0;
+		magazines[]=
+		{
+			"JAS_FIR_EGBU12_1rnd_M_int"
+		};
+	};
+	class JAS_FIR_CBU105_int: Mk82BombLauncher
+	{
+		autofire=0;
+		canlock=0;
+		ballisticsComputer=8;
+		scope=2;
+		holdsterAnimValue=1;
+		displayName="CBU-105 Internal Bay";
+		displayNameMagazine="WCMD SFW";
+		shortNameMagazine="SFW";
+		cursoraim="bomb";
+		sounds[]=
+		{
+			"StandardSound"
+		};
+		class StandardSound
+		{
+			begin1[]=
+			{
+				"\FIR_AirWeaponSystem_US\sound\Release_Bomb",
+				1.5848932,
+				1.1,
+				2100
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			weaponSoundEffect="DefaultRifle";
+		};
+		initspeed=10;
+		magazineReloadTime=0.5;
+		reloadTime=0.5;
+		aiDispersionCoefX=1;
+		aiDispersionCoefY=1;
+		aiRateOfFire=4;
+		aiRateOfFireDistance=300;
+		minRange=100;
+		minRangeProbab=0.55000001;
+		midRange=1000;
+		midRangeProbab=0.85000002;
+		maxRange=2000;
+		maxRangeProbab=0.2;
+		maxLeadSpeed=0;
+		magazines[]=
+		{
+			"JAS_FIR_CBU105_1rnd_M_int"
+		};
+	};
+	class JAS_FIR_GBU54_int: Mk82BombLauncher
+	{
+		autofire=0;
+		ballisticsComputer=8;
+		scope=2;
+		holdsterAnimValue=1;
+		displayName="GBU-54 Internal Bay";
+		displayNameMagazine="GBU54";
+		shortNameMagazine="GBU54 LJDAM";
+		cursoraim="bomb";
+		sounds[]=
+		{
+			"StandardSound"
+		};
+		canLock=2;
+		class StandardSound
+		{
+			begin1[]=
+			{
+				"\FIR_AirWeaponSystem_US\sound\Release_Bomb",
+				1.5848932,
+				1.1,
+				2100
+			};
+			soundBegin[]=
+			{
+				"begin1",
+				1
+			};
+			weaponSoundEffect="DefaultRifle";
+		};
+		initspeed=10;
+		magazineReloadTime=0.5;
+		reloadTime=0.5;
+		aiDispersionCoefX=1;
+		aiDispersionCoefY=1;
+		aiRateOfFire=4;
+		aiRateOfFireDistance=300;
+		minRange=100;
+		minRangeProbab=0.55000001;
+		midRange=1000;
+		midRangeProbab=0.85000002;
+		maxRange=2000;
+		maxRangeProbab=0.2;
+		maxLeadSpeed=0;
+		magazines[]=
+		{
+			"JAS_FIR_gbu54_1rnd_M_int"
+		};
+	};
 	class JAS_R77_LAU : MissileLauncher
 	{
 		scope = 2;

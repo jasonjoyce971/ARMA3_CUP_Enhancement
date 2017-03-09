@@ -9,6 +9,7 @@ _hardpoint3 = _this select 3;
 _hardpoint4 = _this select 4;
 _hardpoint5 = _this select 5;
 _hardpoint6 = _this select 6;
+_atakaCount = 0;
 
 Switch (_hardpoint1) Do
 	{

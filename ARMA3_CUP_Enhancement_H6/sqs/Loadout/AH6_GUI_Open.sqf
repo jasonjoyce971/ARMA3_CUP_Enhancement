@@ -24,6 +24,7 @@ _handle= CreateDialog "AH6_GUI";
 		"Empty",
 		"HYDRA x7",
 		"HYDRA x19",
+		"APKWS x7",
 		"AGM-114K x2",
 		"AGM-114N x2"
     ];
@@ -34,6 +35,7 @@ _handle= CreateDialog "AH6_GUI";
 		"Empty",
 		"HYDRA x7",
 		"HYDRA x19",
+		"APKWS x7",
 		"AGM-114K x2",
 		"AGM-114N x2"
     ];

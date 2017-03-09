@@ -3689,15 +3689,20 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
+					class hp1_APKWS
+					{
+						name="APKWS x7";
+						value=3;
+					};
 					class hp1_AGM114K
 					{
 						name="AGM-114K x2";
-						value=3;
+						value=4;
 					};
 					class hp1_AGM114N
 					{
 						name="AGM-114N x2";
-						value=4;
+						value=5;
 					};
 				};
 			};
@@ -3724,15 +3729,20 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
+					class hp1_APKWS
+					{
+						name="APKWS x7";
+						value=3;
+					};
 					class hp2_AGM114K
 					{
 						name="AGM-114K x2";
-						value=3;
+						value=4;
 					};
 					class hp2_AGM114N
 					{
 						name="AGM-114N x2";
-						value=4;
+						value=5;
 					};
 				};
 			};

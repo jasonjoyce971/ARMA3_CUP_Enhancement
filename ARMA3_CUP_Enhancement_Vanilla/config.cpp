@@ -2848,18 +2848,23 @@ class CfgVehicles
 					};
 					class hp4_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=14;
+					};
+					class hp4_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=15;
 					};
 					class hp4_82s
 					{
 						name="Mk82 Snakeye";
-						value=15;
+						value=16;
 					};
 					class hp4_82
 					{
 						name="Mk82 GPB";
-						value=16;
+						value=17;
 					};
 				};
 			};
@@ -2943,18 +2948,23 @@ class CfgVehicles
 					};
 					class hp5_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=14;
+					};
+					class hp5_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=15;
 					};
 					class hp5_82s
 					{
 						name="Mk82 Snakeye";
-						value=15;
+						value=16;
 					};
 					class hp5_82
 					{
 						name="Mk82 GPB";
-						value=16;
+						value=17;
 					};
 				};
 			};
@@ -3038,18 +3048,23 @@ class CfgVehicles
 					};
 					class hp6_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=14;
+					};
+					class hp4_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=15;
 					};
 					class hp6_82s
 					{
 						name="Mk82 Snakeye";
-						value=15;
+						value=16;
 					};
 					class hp6_82
 					{
 						name="Mk82 GPB";
-						value=16;
+						value=17;
 					};
 				};
 			};
@@ -3301,28 +3316,33 @@ class CfgVehicles
 					};
 					class hp2_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=13;
+					};
+					class hp2_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=14;
 					};
 					class hp2_82s
 					{
 						name="Mk82 Snakeye";
-						value=14;
+						value=15;
 					};
 					class hp2_82
 					{
 						name="Mk82 GPB";
-						value=15;
+						value=16;
 					};
 					class hp2_HYDRA
 					{
 						name="HYDRA x7";
-						value=16;
+						value=17;
 					};
 					class hp2_ZUNI
 					{
 						name="ZUNI x4";
-						value=17;
+						value=18;
 					};
 				};
 			};
@@ -3401,28 +3421,33 @@ class CfgVehicles
 					};
 					class hp3_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=13;
+					};
+					class hp3_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=14;
 					};
 					class hp3_82s
 					{
 						name="Mk82 Snakeye";
-						value=14;
+						value=15;
 					};
 					class hp3_82
 					{
 						name="Mk82 GPB";
-						value=15;
+						value=16;
 					};
 					class hp3_HYDRA
 					{
 						name="HYDRA x7";
-						value=16;
+						value=17;
 					};
 					class hp3_ZUNI
 					{
 						name="ZUNI x4";
-						value=17;
+						value=18;
 					};
 				};
 			};
@@ -3501,33 +3526,38 @@ class CfgVehicles
 					};
 					class hp4_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=13;
+					};
+					class hp4_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=14;
 					};
 					class hp4_82s
 					{
 						name="Mk82 Snakeye";
-						value=14;
+						value=15;
 					};
 					class hp4_82
 					{
 						name="Mk82 GPB";
-						value=15;
+						value=16;
 					};
 					class hp4_HYDRA
 					{
 						name="HYDRA x7";
-						value=16;
+						value=17;
 					};
 					class hp4_ZUNI
 					{
 						name="ZUNI x4";
-						value=17;
+						value=18;
 					};
 					class hp4_lantirn
 					{
 						name="LANTIRN POD";
-						value=18;
+						value=19;
 					};
 				};
 			};
@@ -3606,28 +3636,33 @@ class CfgVehicles
 					};
 					class hp5_103
 					{
-						name="CBU-103 WCMD";
+						name="CBU-103 CEM WCMD";
 						value=13;
+					};
+					class hp5_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=14;
 					};
 					class hp5_82s
 					{
 						name="Mk82 Snakeye";
-						value=14;
+						value=15;
 					};
 					class hp5_82
 					{
 						name="Mk82 GPB";
-						value=15;
+						value=16;
 					};
 					class hp5_HYDRA
 					{
 						name="HYDRA x7";
-						value=16;
+						value=17;
 					};
 					class hp5_ZUNI
 					{
 						name="ZUNI x4";
-						value=17;
+						value=18;
 					};
 				};
 			};

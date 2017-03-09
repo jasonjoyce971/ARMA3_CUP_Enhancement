@@ -370,9 +370,13 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 16:
+		{
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+		};
+		case 17:
 		{
 			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
@@ -448,9 +452,13 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 16:
+		{
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+		};
+		case 17:
 		{
 			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
@@ -526,9 +534,13 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 16:
+		{
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+		};
+		case 17:
 		{
 			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
@@ -604,9 +616,13 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+			_plane addmagazine "FIR_CBU105_1rnd_M";
 		};
 		case 16:
+		{
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M";
+		};
+		case 17:
 		{
 			_plane addmagazine "FIR_mk82_gp_1rnd_M";
 		};
@@ -640,6 +656,7 @@ _gbu24Acount = {_x == "FIR_GBU24A_1rnd_M"} count magazines _plane;
 _gbu24Bcount = {_x == "FIR_GBU24B_1rnd_M"} count magazines _plane;
 _gbu24118count = {_x == "FIR_GBU24A_BLU118_1rnd_M"} count magazines _plane;
 _laseCount = {_x == "FIR_SniperXRPod_2_1rnd_M"} count magazines _plane;
+_cbu105count = {_x == "FIR_CBU105_1rnd_M"} count magazines _plane;
 
 if (_aim9count >= 1) then {_plane addweapon "FIR_AIM9L";};
 if (_aim9xcount >= 1) then {_plane addweapon "FIR_AIM9X";};
@@ -661,6 +678,7 @@ if (_blu107count >= 1) then {_plane addweapon "FIR_BLU107";};
 if (_gbu24Acount >= 1) then {_plane addweapon "JAS_FIR_GBU24A";};
 if (_gbu24Bcount >= 1) then {_plane addweapon "JAS_FIR_GBU24B";};
 if (_gbu24118count >= 1) then {_plane addweapon "JAS_FIR_GBU24_118";};
+if (_cbu105count >= 1) then {_plane addweapon "FIR_CBU105";};
 if (_laseCount >= 1) then 
 {
 	_plane addmagazine "Laserbatteries";

@@ -75,13 +75,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
+		};
+		case 4:
+		{
 			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire K
 		};
-		case 4:
+		case 5:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
-		case 5:
+		case 6:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
 		};
@@ -109,13 +113,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M";
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
 		};
@@ -143,13 +151,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M";
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
 		};
@@ -177,13 +189,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M";
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
 		};
@@ -211,13 +227,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114K_1rnd_M"; // Hellfire Combi
 		};
@@ -245,13 +265,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114K_1rnd_M"; // Hellfire Combi
 		};
@@ -279,13 +303,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114K_1rnd_M"; // Hellfire Combi
 		};
@@ -313,13 +341,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114K_1rnd_M"; // Hellfire Combi
 		};
@@ -347,13 +379,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
 		};
@@ -381,13 +417,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
 		};
@@ -415,13 +455,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
 		};
@@ -449,13 +493,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
 		};
@@ -483,13 +531,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114K_1rnd_M"; // Hellfire Combi
 		};
@@ -517,81 +569,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M"; // Hellfire Combi
-		};
-	};
-	
-	sleep 0.3;
-
-	Switch (_hardpoint5) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
 			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
-		case 4:
+		case 5:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M"; // Hellfire Combi
-		};
-	};
-	
-	sleep 0.3;
-
-	Switch (_hardpoint6) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 5:
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114K_1rnd_M"; // Hellfire Combi
 		};
@@ -619,13 +607,93 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M"; // Hellfire Combi
+		};
+	};
+	
+	sleep 0.3;
+
+	Switch (_hardpoint6) Do
+	{
+		case -1:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M";
+		};
+		case 0:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M";
+		};
+		case 1:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M";
+		};
+		case 2:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M";
+		};
+		case 3:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M";
+		};
+		case 4:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M"; // Hellfire Combi
+		};
+	};
+	
+	sleep 0.3;
+
+	Switch (_hardpoint5) Do
+	{
+		case -1:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M";
+		};
+		case 0:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M";
+		};
+		case 1:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M";
+		};
+		case 2:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M";
+		};
+		case 3:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M";
+		};
+		case 4:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
 		};
@@ -653,13 +721,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
 		};
@@ -687,13 +759,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
 		};
@@ -721,13 +797,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
 		};
@@ -741,12 +821,7 @@ sleep 0.3;
 
 _windercount = {_x == "FIR_AIM9L_1rnd_M"} count magazines _plane;
 _hydra7count = {_x == "FIR_Hydra_7_Pod_1rnd_M"} count magazines _plane;
-_hydra19count = {_x == "FIR_JLAU_3_Pod_1rnd_M"} count magazines _plane;
-_hellfirecount = {_x == "CUP_1Rnd_AGM114K_Hellfire_II_M"} count magazines _plane;
-_sidearmcount = {_x == "JAS_AGM122_1rnd_M"} count magazines _plane;
-
-_windercount = {_x == "FIR_AIM9L_1rnd_M"} count magazines _plane;
-_hydra7count = {_x == "FIR_Hydra_7_Pod_1rnd_M"} count magazines _plane;
+_APKWS7count = {_x == "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"} count magazines _plane;
 _hydra19count = {_x == "FIR_JLAU_3_Pod_1rnd_M"} count magazines _plane;
 _hellfireKcount = {_x == "JAS_AGM114K_1rnd_M"} count magazines _plane;
 _hellfireNcount = {_x == "JAS_AGM114N_1rnd_M"} count magazines _plane;
@@ -774,6 +849,18 @@ if (_hydra7count >= 1) then
 	{
 		_counter7 = _counter7 + 1;
 		_plane addmagazineturret ["FIR_Hydra_7rnd_M",[-1]];
+	};
+};
+
+if (_APKWS7count >= 1) then 
+{
+	_plane addweaponturret ["FIR_APKWS_Launcher",[-1]];
+	_counter7 = 0;
+
+	while {_counter7 < _APKWS7count} do
+	{
+		_counter7 = _counter7 + 1;
+		_plane addmagazineturret ["FIR_Hydra_APKWS_7rnd_M",[-1]];
 	};
 };
 if (_hydra19count >= 1) then

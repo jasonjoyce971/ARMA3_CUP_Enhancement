@@ -292,7 +292,7 @@ else
 			else
 			{
 				titleText ["Found custom loadout data. Loading..", "PLAIN DOWN",0.5];
-				_loadcustom1 = ["custom1"]execVM "jason_aircraft\sqs\Loadout\L39_Custom_Apply.sqf";
+				_loadcustom1 = ["custom1"]execVM "ARMA3_CUP_Enhancement_L39\sqs\Loadout\L39_Custom_Apply.sqf";
 			};		
 		};
 
@@ -305,7 +305,7 @@ else
 			else
 			{
 				titleText ["Found custom loadout data. Loading..", "PLAIN DOWN",0.5];
-				_loadcustom1 = ["custom2"]execVM "jason_aircraft\sqs\Loadout\L39_Custom_Apply.sqf";
+				_loadcustom1 = ["custom2"]execVM "ARMA3_CUP_Enhancement_L39\sqs\Loadout\L39_Custom_Apply.sqf";
 			};			
 		};
 
@@ -318,7 +318,7 @@ else
 			else
 			{
 				titleText ["Found custom loadout data. Loading..", "PLAIN DOWN",0.5];
-				_loadcustom1 = ["custom3"]execVM "jason_aircraft\sqs\Loadout\L39_Custom_Apply.sqf";
+				_loadcustom1 = ["custom3"]execVM "ARMA3_CUP_Enhancement_L39\sqs\Loadout\L39_Custom_Apply.sqf";
 			};	
 		};
 	};

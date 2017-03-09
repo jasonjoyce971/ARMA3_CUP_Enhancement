@@ -127,7 +127,7 @@ class CfgHints
 			// Optional hint subtitle, filled by arguments from 'arguments' param
 			displayNameShort = "Ground attack STOVL";
 			// Structured text, filled by arguments from 'arguments' param
-			description = "The Harrier chassis was produced in the US as the AV-8 and the UK as the Harrier throughout the 70s and 80s and was the worlds first true STOVL attack craft. Designed to operate from LHDs or the UKs Invincible class aircraft carriers, the Harrier saw nearly 20 years service before being phased out and replaced by the F-35. The last remaining harriers in service are with the USMC and will be replaced by 2020. Due to the nature of its deployment, the AV-8 cannot compare to the A-10 in the ground attack role. It can however take off from airfields that the A-10 can only dream of making it a lot easier to deploy.<br/><br/>Payload Options:<br/><br/>%2AIM-9. The UK GR9 variant has 2 extra hardpoints dedicated to these missiles<br/>%2AIM-120 (USMC Only)<br/>%2AGM-65D<br/>%2AGM-65G<br/>%2AGM-65L<br/>%2AGM-88 (USMC Only)<br/>%2CRV-7 Rockets (UK Only)<br/>%2Mk82 GPB<br/>%2Mk82 SNAKE<br/>%2Mk84 GPB<br/>%2GBU-10<br/>%2GBU-12<br/>%2GBU-24<br/>%2GBU-31 (USMC Only)<br/>%2GBU-32 (USMC Only)<br/>%2GBU-38 (USMC Only)<br/>%2CBU-87 (USMC Only)<br/>%2CBU-89 (USMC Only)<br/>%2CBU-97 (USMC Only)<br/>%2CBU-103 (USMC Only)<br/><br/>Factions:<br/><br/>%2USMC<br/>%2UK";
+			description = "The Harrier chassis was produced in the US as the AV-8 and the UK as the Harrier throughout the 70s and 80s and was the worlds first true STOVL attack craft. Designed to operate from LHDs or the UKs Invincible class aircraft carriers, the Harrier saw nearly 20 years service before being phased out and replaced by the F-35. The last remaining harriers in service are with the USMC and will be replaced by 2020. Due to the nature of its deployment, the AV-8 cannot compare to the A-10 in the ground attack role. It can however take off from airfields that the A-10 can only dream of making it a lot easier to deploy.<br/><br/>Payload Options:<br/><br/>%2AIM-9. The UK GR9 variant has 2 extra hardpoints dedicated to these missiles<br/>%2AIM-120 (USMC Only)<br/>%2AGM-65D<br/>%2AGM-65G<br/>%2AGM-65L<br/>%2AGM-88 (USMC Only)<br/>%2CRV-7 Rockets (UK Only)<br/>%2Mk82 GPB<br/>%2Mk82 SNAKE<br/>%2Mk84 GPB<br/>%2GBU-10<br/>%2GBU-12<br/>%2EGBU-12 II<br/>%2GBU-24<br/>%2GBU-31 (USMC Only)<br/>%2GBU-32 (USMC Only)<br/>%2GBU-38 (USMC Only)<br/>%2GBU-54 (USMC Only)<br/>%2CBU-87 (USMC Only)<br/>%2CBU-89 (USMC Only)<br/>%2CBU-97 (USMC Only)<br/>%2CBU-103 (USMC Only)<br/><br/>Factions:<br/><br/>%2USMC<br/>%2UK";
 			// Optional structured text, filled by arguments from 'arguments' param (first argument
 			// is %11, see notes bellow), grey color of text
 			tip = "";
@@ -1772,15 +1772,20 @@ class CfgVehicles
 						name="AIM-120";
 						value=2;
 					};
+					class hp1_APKWS
+					{
+						name="APKWS x7";
+						value=3;
+					};
 					class hp1_ecm
 					{
 						name="ECM Pod";
-						value=3;
+						value=4;
 					};
 					class hp1_tgp
 					{
 						name="Sniper XR TGP";
-						value=4;
+						value=5;
 					};
 				};
 			};
@@ -1807,15 +1812,20 @@ class CfgVehicles
 						name="AIM-120";
 						value=2;
 					};
+					class hp2_APKWS
+					{
+						name="APKWS x7";
+						value=3;
+					};
 					class hp2_ecm
 					{
 						name="ECM Pod";
-						value=3;
+						value=4;
 					};
 					class hp2_tgp
 					{
 						name="Sniper XR TGP";
-						value=4;
+						value=5;
 					};
 				};
 			};
@@ -1872,75 +1882,90 @@ class CfgVehicles
 						name="GBU-12";
 						value=8;
 					};
+					class hp3_E12
+					{
+						name="EGBU-12 II";
+						value=9;
+					};
 					class hp3_24A
 					{
 						name="GBU-24A";
-						value=9;
+						value=10;
 					};
 					class hp3_24B
 					{
 						name="GBU-24B";
-						value=10;
+						value=11;
 					};
 					class hp3_24118
 					{
 						name="GBU-24/118";
-						value=11;
+						value=12;
 					};
 					class hp3_31
 					{
 						name="GBU-31";
-						value=12;
+						value=13;
 					};
 					class hp3_32
 					{
 						name="GBU-32";
-						value=13;
+						value=14;
 					};
 					class hp3_38
 					{
 						name="GBU-38";
-						value=14;
+						value=15;
+					};
+					class hp3_54
+					{
+						name="GBU-54";
+						value=16;
 					};
 					class hp3_87
 					{
 						name="CBU-87 CEM";
-						value=15;
+						value=17;
 					};
 					class hp3_89
 					{
 						name="CBU-89 GATOR";
-						value=16;
+						value=18;
 					};
 					class hp3_97
 					{
 						name="CBU-97 SFW";
-						value=17;
+						value=19;
 					};
 					class hp3_103
 					{
-						name="CBU-103 WCMD";
-						value=18;
+						name="CBU-103 CEM WCMD";
+						value=20;
+					};
+					class hp3_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=21;
 					};
 					class hp3_82s
 					{
 						name="Mk82 Snakeye";
-						value=19;
+						value=22;
 					};
 					class hp3_82
 					{
 						name="Mk82 GPB";
-						value=20;
+						value=23;
 					};
 					class hp3_84
 					{
 						name="Mk84 GPB";
-						value=21;
+						value=24;
 					};
 					class hp3_tank
 					{
 						name="Drop Tank";
-						value=22;
+						value=25;
 					};
 				};
 			};
@@ -1997,75 +2022,90 @@ class CfgVehicles
 						name="GBU-12";
 						value=8;
 					};
+					class hp4_E12
+					{
+						name="EGBU-12 II";
+						value=9;
+					};
 					class hp4_24A
 					{
 						name="GBU-24A";
-						value=9;
+						value=10;
 					};
 					class hp4_24B
 					{
 						name="GBU-24B";
-						value=10;
+						value=11;
 					};
 					class hp4_24118
 					{
 						name="GBU-24/118";
-						value=11;
+						value=12;
 					};
 					class hp4_31
 					{
 						name="GBU-31";
-						value=12;
+						value=13;
 					};
 					class hp4_32
 					{
 						name="GBU-32";
-						value=13;
+						value=14;
 					};
 					class hp4_38
 					{
 						name="GBU-38";
-						value=14;
+						value=15;
+					};
+					class hp4_54
+					{
+						name="GBU-54";
+						value=16;
 					};
 					class hp4_87
 					{
 						name="CBU-87 CEM";
-						value=15;
+						value=17;
 					};
 					class hp4_89
 					{
 						name="CBU-89 GATOR";
-						value=16;
+						value=18;
 					};
 					class hp4_97
 					{
 						name="CBU-97 SFW";
-						value=17;
+						value=19;
 					};
 					class hp4_103
 					{
-						name="CBU-103 WCMD";
-						value=18;
+						name="CBU-103 CEM WCMD";
+						value=20;
+					};
+					class hp4_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=21;
 					};
 					class hp4_82s
 					{
 						name="Mk82 Snakeye";
-						value=19;
+						value=22;
 					};
 					class hp4_82
 					{
 						name="Mk82 GPB";
-						value=20;
+						value=23;
 					};
 					class hp4_84
 					{
 						name="Mk84 GPB";
-						value=21;
+						value=24;
 					};
 					class hp4_tank
 					{
 						name="Drop Tank";
-						value=22;
+						value=25;
 					};
 				};
 			};
@@ -2142,85 +2182,105 @@ class CfgVehicles
 						name="GBU-12 x3";
 						value=12;
 					};
+					class hp5_E12
+					{
+						name="EGBU-12 II";
+						value=13;
+					};
+					class hp5_E12TER
+					{
+						name="EGBU-12 II x3";
+						value=14;
+					};
 					class hp5_24A
 					{
 						name="GBU-24A";
-						value=13;
+						value=15;
 					};
 					class hp5_24B
 					{
 						name="GBU-24B";
-						value=14;
+						value=16;
 					};
 					class hp5_24118
 					{
 						name="GBU-24/118";
-						value=15;
+						value=17;
 					};
 					class hp5_31
 					{
 						name="GBU-31";
-						value=16;
+						value=18;
 					};
 					class hp5_32
 					{
 						name="GBU-32";
-						value=17;
+						value=19;
 					};
 					class hp5_38
 					{
 						name="GBU-38";
-						value=18;
+						value=20;
+					};
+					class hp5_54
+					{
+						name="GBU-54";
+						value=21;
 					};
 					class hp5_87
 					{
 						name="CBU-87 CEM";
-						value=19;
+						value=22;
 					};
 					class hp5_89
 					{
 						name="CBU-89 GATOR";
-						value=20;
+						value=23;
 					};
 					class hp5_97
 					{
 						name="CBU-97 SFW";
-						value=21;
+						value=24;
 					};
 					class hp5_103
 					{
-						name="CBU-103 WCMD";
-						value=22;
+						name="CBU-103 CEM WCMD";
+						value=25;
+					};
+					class hp5_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=26;
 					};
 					class hp5_82s
 					{
 						name="Mk82 Snakeye";
-						value=23;
+						value=27;
 					};
 					class hp5_82sTER
 					{
 						name="Mk82 Snakeye x3";
-						value=24;
+						value=28;
 					};
 					class hp5_82
 					{
 						name="Mk82 GPB";
-						value=25;
+						value=29;
 					};
 					class hp5_82TER
 					{
 						name="Mk82 GPB x3";
-						value=26;
+						value=30;
 					};
 					class hp5_84
 					{
 						name="Mk84 GPB";
-						value=27;
+						value=31;
 					};
 					class hp5_tank
 					{
 						name="Drop Tank";
-						value=28;
+						value=32;
 					};
 				};
 			};
@@ -2297,85 +2357,105 @@ class CfgVehicles
 						name="GBU-12 x3";
 						value=12;
 					};
+					class hp6_E12
+					{
+						name="EGBU-12 II";
+						value=13;
+					};
+					class hp6_E12TER
+					{
+						name="EGBU-12 II x3";
+						value=14;
+					};
 					class hp6_24A
 					{
 						name="GBU-24A";
-						value=13;
+						value=15;
 					};
 					class hp6_24B
 					{
 						name="GBU-24B";
-						value=14;
+						value=16;
 					};
 					class hp6_24118
 					{
 						name="GBU-24/118";
-						value=15;
+						value=17;
 					};
 					class hp6_31
 					{
 						name="GBU-31";
-						value=16;
+						value=18;
 					};
 					class hp6_32
 					{
 						name="GBU-32";
-						value=17;
+						value=19;
 					};
 					class hp6_38
 					{
 						name="GBU-38";
-						value=18;
+						value=20;
+					};
+					class hp6_54
+					{
+						name="GBU-54";
+						value=21;
 					};
 					class hp6_87
 					{
 						name="CBU-87 CEM";
-						value=19;
+						value=22;
 					};
 					class hp6_89
 					{
 						name="CBU-89 GATOR";
-						value=20;
+						value=23;
 					};
 					class hp6_97
 					{
 						name="CBU-97 SFW";
-						value=21;
+						value=24;
 					};
 					class hp6_103
 					{
-						name="CBU-103 WCMD";
-						value=22;
+						name="CBU-103 CEM WCMD";
+						value=25;
+					};
+					class hp6_105
+					{
+						name="CBU-105 SFW WCMD";
+						value=26;
 					};
 					class hp6_82s
 					{
 						name="Mk82 Snakeye";
-						value=23;
+						value=27;
 					};
 					class hp6_82sTER
 					{
 						name="Mk82 Snakeye x3";
-						value=24;
+						value=28;
 					};
 					class hp6_82
 					{
 						name="Mk82 GPB";
-						value=25;
+						value=29;
 					};
 					class hp6_82TER
 					{
 						name="Mk82 GPB x3";
-						value=26;
+						value=30;
 					};
 					class hp6_84
 					{
 						name="Mk84 GPB";
-						value=27;
+						value=31;
 					};
 					class hp6_tank
 					{
 						name="Drop Tank";
-						value=28;
+						value=32;
 					};
 				};
 			};

@@ -93,9 +93,14 @@ sleep 0.01;
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_ECMPod_1rnd_M"; // ECM
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 10:
+		{
+			_plane addmagazine "FIR_ECMPod_1rnd_M"; // ECM
+			_plane setVariable ["ECMJAMMER","yes",true];
+		};
+		case 11:
 		{
 			_plane addmagazine "FIR_SUU25_Pod_1rnd_M"; // SUU
 		};
@@ -146,9 +151,14 @@ sleep 0.01;
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_ECMPod_1rnd_M"; // ECM
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 10:
+		{
+			_plane addmagazine "FIR_ECMPod_1rnd_M"; // ECM
+			_plane setVariable ["ECMJAMMER","yes",true];
+		};
+		case 11:
 		{
 			_plane addmagazine "FIR_SUU25_Pod_1rnd_M"; // SUU
 		};
@@ -191,41 +201,49 @@ sleep 0.01;
 		};
 		case 7:
 		{
-			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M"; // ZUNI
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // APKWS 7
 		};
 		case 8:
 		{
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M"; // CRV7
+			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M"; // ZUNI
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // 82 SNAKE
+			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M"; // CRV7
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_mk82_gp_1rnd_M"; // 82
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // 82 SNAKE
 		};
 		case 11:
 		{
-			_plane addmagazine "JAS_FIR_mk84_gp_1rnd_M"; // 84
+			_plane addmagazine "FIR_mk82_gp_1rnd_M"; // 82
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_CBU87_1rnd_M"; // CEM
+			_plane addmagazine "JAS_FIR_mk84_gp_1rnd_M"; // 84
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_CBU89_1rnd_M"; // GATOR
+			_plane addmagazine "FIR_CBU87_1rnd_M"; // CEM
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_CBU97_1rnd_M"; // SFW
+			_plane addmagazine "FIR_CBU89_1rnd_M"; // GATOR
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "FIR_CBU97_1rnd_M"; // SFW
 		};
 		case 16:
+		{
+			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+		};
+		case 17:
+		{
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+		};
+		case 18:
 		{
 			_plane addmagazine "CUP_1Rnd_Litening_M"; // TGP
 			_plane setVariable ["TGT_POD","yes",true];
@@ -269,41 +287,49 @@ sleep 0.01;
 		};
 		case 7:
 		{
-			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M"; // ZUNI
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // APKWS 7
 		};
 		case 8:
 		{
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M"; // CRV7
+			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M"; // ZUNI
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // 82 SNAKE
+			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M"; // CRV7
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_mk82_gp_1rnd_M"; // 82
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // 82 SNAKE
 		};
 		case 11:
 		{
-			_plane addmagazine "JAS_FIR_mk84_gp_1rnd_M"; // 84
+			_plane addmagazine "FIR_mk82_gp_1rnd_M"; // 82
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_CBU87_1rnd_M"; // CEM
+			_plane addmagazine "JAS_FIR_mk84_gp_1rnd_M"; // 84
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_CBU89_1rnd_M"; // GATOR
+			_plane addmagazine "FIR_CBU87_1rnd_M"; // CEM
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_CBU97_1rnd_M"; // SFW
+			_plane addmagazine "FIR_CBU89_1rnd_M"; // GATOR
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "FIR_CBU97_1rnd_M"; // SFW
 		};
 		case 16:
+		{
+			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+		};
+		case 17:
+		{
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+		};
+		case 18:
 		{
 			_plane addmagazine "CUP_1Rnd_Litening_M"; // TGP
 			_plane setVariable ["TGT_POD","yes",true];
@@ -355,85 +381,109 @@ sleep 0.01;
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M"; // WCMD
+			_plane addmagazine "JAS_FIR_CBU103_1rnd_M"; // CEM WCMD
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
+			_plane addmagazine "FIR_CBU105_1rnd_M"; // CEM WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU31_1rnd_M"; // 31
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_GBU38_1rnd_M"; // 38
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_SMKW_Pod_1rnd_M"; // HYDRA 7 SMKW
+			_plane addmagazine "FIR_GBU31_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
+			_plane addmagazine "FIR_GBU38_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_SMKO_Pod_1rnd_M"; // HYDRA 7 SMKO
+			_plane addmagazine "FIR_GBU54_1rnd_M"; // 54
 		};
 		case 19:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_SMKP_Pod_1rnd_M"; // HYDRA 7 SMKP
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; // HYDRA 7
 		};
 		case 20:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M"; // HYDRA 19
+			_plane addmagazine "JAS_FIR_Hydra_SMKW_Pod_1rnd_M"; // HYDRA 7 SMKW
 		};
 		case 21:
 		{
-			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 22:
 		{
-			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M"; // ZUNI
+			_plane addmagazine "JAS_FIR_Hydra_SMKO_Pod_1rnd_M"; // HYDRA 7 SMKO
 		};
 		case 23:
 		{
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M"; // CRV 7
+			_plane addmagazine "JAS_FIR_Hydra_SMKP_Pod_1rnd_M"; // HYDRA 7 SMKP
 		};
 		case 24:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; // MAV D SINGLE
+			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M"; // HYDRA 19
 		};
 		case 25:
 		{
-			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for HYDRA 7s
 		};
 		case 26:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; // MAV G
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // APKWS 7
 		};
 		case 27:
 		{
-			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; // TER fit for APKWS 7
 		};
 		case 28:
 		{
-			_plane addmagazine "FIR_AGM65L_1rnd_M"; // MAV L
+			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M"; // ZUNI
 		};
 		case 29:
+		{
+			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M"; // CRV 7
+		};
+		case 30:
+		{
+			_plane addmagazine "FIR_AGM65D_1rnd_M"; // MAV D SINGLE
+		};
+		case 31:
+		{
+			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Ds
+		};
+		case 32:
+		{
+			_plane addmagazine "FIR_AGM65G_1rnd_M"; // MAV G
+		};
+		case 33:
+		{
+			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Gs
+		};
+		case 34:
+		{
+			_plane addmagazine "FIR_AGM65L_1rnd_M"; // MAV L
+		};
+		case 35:
 		{
 			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Ls
 		};
@@ -484,85 +534,110 @@ sleep 0.01;
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M"; // WCMD
+			_plane addmagazine "JAS_FIR_CBU103_1rnd_M"; // CEM WCMD
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
+			_plane addmagazine "FIR_CBU105_1rnd_M"; // CEM WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU31_1rnd_M"; // 31
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_GBU38_1rnd_M"; // 38
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_SMKW_Pod_1rnd_M"; // HYDRA 7 SMKW
+			_plane addmagazine "FIR_GBU31_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
+			_plane addmagazine "FIR_GBU38_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_SMKO_Pod_1rnd_M"; // HYDRA 7 SMKO
+			_plane addmagazine "FIR_GBU54_1rnd_M"; // 54
 		};
 		case 19:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_SMKP_Pod_1rnd_M"; // HYDRA 7 SMKP
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; // HYDRA 7
 		};
 		case 20:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M"; // HYDRA 19
+			_plane addmagazine "JAS_FIR_Hydra_SMKW_Pod_1rnd_M"; // HYDRA 7 SMKW
 		};
 		case 21:
 		{
-			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 22:
 		{
-			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M"; // ZUNI
+			_plane addmagazine "JAS_FIR_Hydra_SMKO_Pod_1rnd_M"; // HYDRA 7 SMKO
 		};
 		case 23:
 		{
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M"; // CRV 7
+			_plane addmagazine "JAS_FIR_Hydra_SMKP_Pod_1rnd_M"; // HYDRA 7 SMKP
 		};
 		case 24:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; // MAV D SINGLE
+			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M"; // HYDRA 19
 		};
 		case 25:
 		{
-			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for HYDRA 7s
 		};
 		case 26:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; // MAV G
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // APKWS 7
 		};
 		case 27:
 		{
-			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; // TER fit for APKWS 7
+			_APKWS = _APKWS + 3;
 		};
 		case 28:
 		{
-			_plane addmagazine "FIR_AGM65L_1rnd_M"; // MAV L
+			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M"; // ZUNI
 		};
 		case 29:
+		{
+			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M"; // CRV 7
+		};
+		case 30:
+		{
+			_plane addmagazine "FIR_AGM65D_1rnd_M"; // MAV D SINGLE
+		};
+		case 31:
+		{
+			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Ds
+		};
+		case 32:
+		{
+			_plane addmagazine "FIR_AGM65G_1rnd_M"; // MAV G
+		};
+		case 33:
+		{
+			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Gs
+		};
+		case 34:
+		{
+			_plane addmagazine "FIR_AGM65L_1rnd_M"; // MAV L
+		};
+		case 35:
 		{
 			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Ls
 		};
@@ -613,45 +688,69 @@ sleep 0.01;
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M"; // WCMD
+			_plane addmagazine "JAS_FIR_CBU103_1rnd_M"; // CEM WCMD
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
+			_plane addmagazine "FIR_CBU105_1rnd_M"; // SFW WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU31_1rnd_M"; // 31
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_GBU38_1rnd_M"; // 38
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_GBU31_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_GBU38_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M"; // ZUNI
+			_plane addmagazine "FIR_GBU54_1rnd_M"; // 54
 		};
 		case 19:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; // HYDRA 7
+		};
+		case 20:
+		{
+			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M"; // HYDRA 19
+		};
+		case 21:
+		{
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for HYDRA 7s
+		};
+		case 22:
+		{
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // APKWS 7
+		};
+		case 23:
+		{
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; // TER fit for APKWS 7
+		};
+		case 24:
+		{
+			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M"; // ZUNI
+		};
+		case 25:
 		{
 			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M"; // CRV 7
 		};
@@ -702,45 +801,69 @@ sleep 0.01;
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M"; // WCMD
+			_plane addmagazine "JAS_FIR_CBU103_1rnd_M"; // CEM WCMD
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
+			_plane addmagazine "FIR_CBU105_1rnd_M"; // SFW WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU31_1rnd_M"; // 31
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_GBU38_1rnd_M"; // 38
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_GBU31_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_GBU38_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M"; // ZUNI
+			_plane addmagazine "FIR_GBU54_1rnd_M"; // 54
 		};
 		case 19:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; // HYDRA 7
+		};
+		case 20:
+		{
+			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M"; // HYDRA 19
+		};
+		case 21:
+		{
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for HYDRA 7s
+		};
+		case 22:
+		{
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // APKWS 7
+		};
+		case 23:
+		{
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; // TER fit for APKWS 7
+		};
+		case 24:
+		{
+			_plane addmagazine "FIR_Zuni_5_Pod_1rnd_M"; // ZUNI
+		};
+		case 25:
 		{
 			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M"; // CRV 7
 		};
@@ -783,23 +906,35 @@ sleep 0.01;
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M"; // WCMD
+			_plane addmagazine "JAS_FIR_CBU103_1rnd_M"; // CEM WCMD
 		};
 		case 8:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
+			_plane addmagazine "FIR_CBU105_1rnd_M"; // SFW WCMD
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_GBU31_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
 		};
 		case 11:
 		{
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+		};
+		case 12:
+		{
+			_plane addmagazine "FIR_GBU31_1rnd_M"; // 31
+		};
+		case 13:
+		{
 			_plane addmagazine "FIR_GBU38_1rnd_M"; // 38
+		};
+		case 14:
+		{
+			_plane addmagazine "FIR_GBU54_1rnd_M"; // 54
 		};
 	};
 	
@@ -844,19 +979,31 @@ sleep 0.01;
 		};
 		case 8:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
+			_plane addmagazine "FIR_CBU105_1rnd_M"; // SFW WCMD
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_GBU31_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
 		};
 		case 11:
 		{
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+		};
+		case 12:
+		{
+			_plane addmagazine "FIR_GBU31_1rnd_M"; // 31
+		};
+		case 13:
+		{
 			_plane addmagazine "FIR_GBU38_1rnd_M"; // 38
+		};
+		case 14:
+		{
+			_plane addmagazine "FIR_GBU54_1rnd_M"; // 54
 		};
 	};
 	
@@ -902,6 +1049,10 @@ sleep 0.01;
 		case 8:
 		{
 			_plane addmagazine "FIR_GBU12_1rnd_M";
+		};
+		case 9:
+		{
+			_plane addmagazine "FIR_EGBU12_1rnd_M";
 		};
 	};
 	
@@ -965,6 +1116,11 @@ sleep 0.01;
 			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 10:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
+		};
+		case 11:
 		{
 			_plane addmagazine "FIR_Empty_1rnd_M";
 			_plane addmagazine "FIR_Empty_1rnd_M";
@@ -1034,6 +1190,11 @@ sleep 0.01;
 			_plane addmagazine "FIR_Empty_1rnd_M";
 			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
+		case 11:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
+		};
 	};
 
 	//right wing TER outboard upper
@@ -1085,81 +1246,105 @@ sleep 0.01;
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
+			_plane addmagazine "FIR_Empty_1rnd_M"; // WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
+			_plane addmagazine "FIR_Empty_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKW
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKR
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKO
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 54
 		};
 		case 19:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKP
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
 		};
 		case 20:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKW
 		};
 		case 21:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 22:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKO
 		};
 		case 23:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKP
 		};
 		case 24:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV D SINGLE
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
 		};
 		case 25:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
 		};
 		case 26:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV G
+			_plane addmagazine "FIR_Empty_1rnd_M"; // APKWS 7
 		};
 		case 27:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // TER fit for APKWS 7
 		};
 		case 28:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
 		};
 		case 29:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
+		};
+		case 30:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV D SINGLE
+		};
+		case 31:
+		{
+			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+		};
+		case 32:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV G
+		};
+		case 33:
+		{
+			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+		};
+		case 34:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+		};
+		case 35:
 		{
 			_plane addmagazine "FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
 		};
@@ -1214,81 +1399,105 @@ sleep 0.01;
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
+			_plane addmagazine "FIR_Empty_1rnd_M"; // WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
+			_plane addmagazine "FIR_Empty_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKW
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKR
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKO
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 54
 		};
 		case 19:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKP
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
 		};
 		case 20:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKW
 		};
 		case 21:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 22:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKO
 		};
 		case 23:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKP
 		};
 		case 24:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV D SINGLE
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
 		};
 		case 25:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
 		};
 		case 26:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV G
+			_plane addmagazine "FIR_Empty_1rnd_M"; // APKWS 7
 		};
 		case 27:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // TER fit for APKWS 7
 		};
 		case 28:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
 		};
 		case 29:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
+		};
+		case 30:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV D SINGLE
+		};
+		case 31:
+		{
+			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+		};
+		case 32:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV G
+		};
+		case 33:
+		{
+			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+		};
+		case 34:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+		};
+		case 35:
 		{
 			_plane addmagazine "FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
 		};
@@ -1343,81 +1552,105 @@ sleep 0.01;
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
+			_plane addmagazine "FIR_Empty_1rnd_M"; // WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
+			_plane addmagazine "FIR_Empty_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKW
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKR
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKO
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 54
 		};
 		case 19:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKP
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
 		};
 		case 20:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKW
 		};
 		case 21:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 22:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKO
 		};
 		case 23:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKP
 		};
 		case 24:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV D SINGLE
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
 		};
 		case 25:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
 		};
 		case 26:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV G
+			_plane addmagazine "FIR_Empty_1rnd_M"; // APKWS 7
 		};
 		case 27:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // TER fit for APKWS 7
 		};
 		case 28:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
 		};
 		case 29:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
+		};
+		case 30:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV D SINGLE
+		};
+		case 31:
+		{
+			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+		};
+		case 32:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV G
+		};
+		case 33:
+		{
+			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+		};
+		case 34:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+		};
+		case 35:
 		{
 			_plane addmagazine "FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
 		};
@@ -1472,81 +1705,105 @@ sleep 0.01;
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
+			_plane addmagazine "FIR_Empty_1rnd_M"; // WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
+			_plane addmagazine "FIR_Empty_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKW
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKR
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKO
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 54
 		};
 		case 19:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKP
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
 		};
 		case 20:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKW
 		};
 		case 21:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 22:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKO
 		};
 		case 23:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKP
 		};
 		case 24:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV D SINGLE
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
 		};
 		case 25:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
 		};
 		case 26:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV G
+			_plane addmagazine "FIR_Empty_1rnd_M"; // APKWS 7
 		};
 		case 27:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // TER fit for APKWS 7
 		};
 		case 28:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
 		};
 		case 29:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
+		};
+		case 30:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV D SINGLE
+		};
+		case 31:
+		{
+			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+		};
+		case 32:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV G
+		};
+		case 33:
+		{
+			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+		};
+		case 34:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+		};
+		case 35:
 		{
 			_plane addmagazine "FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
 		};
@@ -1601,81 +1858,105 @@ sleep 0.01;
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
+			_plane addmagazine "FIR_Empty_1rnd_M"; // WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
+			_plane addmagazine "FIR_Empty_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKW
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKR
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKO
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 54
 		};
 		case 19:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKP
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
 		};
 		case 20:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKW
 		};
 		case 21:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 22:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKO
 		};
 		case 23:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKP
 		};
 		case 24:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV D SINGLE
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
 		};
 		case 25:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
 		};
 		case 26:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV G
+			_plane addmagazine "FIR_Empty_1rnd_M"; // APKWS 7
 		};
 		case 27:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // TER fit for APKWS 7
 		};
 		case 28:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
 		};
 		case 29:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
+		};
+		case 30:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV D SINGLE
+		};
+		case 31:
+		{
+			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+		};
+		case 32:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV G
+		};
+		case 33:
+		{
+			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+		};
+		case 34:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+		};
+		case 35:
 		{
 			_plane addmagazine "FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
 		};
@@ -1730,81 +2011,105 @@ sleep 0.01;
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
+			_plane addmagazine "FIR_Empty_1rnd_M"; // WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
+			_plane addmagazine "FIR_Empty_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKW
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKR
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKO
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 54
 		};
 		case 19:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKP
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
 		};
 		case 20:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKW
 		};
 		case 21:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 22:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKO
 		};
 		case 23:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7 SMKP
 		};
 		case 24:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV D SINGLE
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
 		};
 		case 25:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
 		};
 		case 26:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV G
+			_plane addmagazine "FIR_Empty_1rnd_M"; // APKWS 7
 		};
 		case 27:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // TER fit for APKWS 7
 		};
 		case 28:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
 		};
 		case 29:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
+		};
+		case 30:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV D SINGLE
+		};
+		case 31:
+		{
+			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+		};
+		case 32:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV G
+		};
+		case 33:
+		{
+			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+		};
+		case 34:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+		};
+		case 35:
 		{
 			_plane addmagazine "FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
 		};
@@ -1859,41 +2164,65 @@ sleep 0.01;
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
+			_plane addmagazine "FIR_Empty_1rnd_M"; // WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
+			_plane addmagazine "FIR_Empty_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 54
 		};
 		case 19:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+		};
+		case 20:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+		};
+		case 21:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+		};
+		case 22:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // APKWS 7
+		};
+		case 23:
+		{
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // TER fit for APKWS 7
+		};
+		case 24:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+		};
+		case 25:
 		{
 			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
 		};
@@ -1948,41 +2277,65 @@ sleep 0.01;
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
+			_plane addmagazine "FIR_Empty_1rnd_M"; // WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
+			_plane addmagazine "FIR_Empty_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 54
 		};
 		case 19:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+		};
+		case 20:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+		};
+		case 21:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+		};
+		case 22:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // APKWS 7
+		};
+		case 23:
+		{
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // TER fit for APKWS 7
+		};
+		case 24:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+		};
+		case 25:
 		{
 			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
 		};
@@ -2037,41 +2390,65 @@ sleep 0.01;
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
+			_plane addmagazine "FIR_Empty_1rnd_M"; // WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
+			_plane addmagazine "FIR_Empty_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 54
 		};
 		case 19:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+		};
+		case 20:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+		};
+		case 21:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+		};
+		case 22:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // APKWS 7
+		};
+		case 23:
+		{
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // TER fit for APKWS 7
+		};
+		case 24:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+		};
+		case 25:
 		{
 			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
 		};
@@ -2126,41 +2503,65 @@ sleep 0.01;
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
+			_plane addmagazine "FIR_Empty_1rnd_M"; // WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
+			_plane addmagazine "FIR_Empty_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 54
 		};
 		case 19:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+		};
+		case 20:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+		};
+		case 21:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+		};
+		case 22:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // APKWS 7
+		};
+		case 23:
+		{
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // TER fit for APKWS 7
+		};
+		case 24:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+		};
+		case 25:
 		{
 			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
 		};
@@ -2215,41 +2616,65 @@ sleep 0.01;
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
+			_plane addmagazine "FIR_Empty_1rnd_M"; // WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
+			_plane addmagazine "FIR_Empty_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 54
 		};
 		case 19:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+		};
+		case 20:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+		};
+		case 21:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+		};
+		case 22:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // APKWS 7
+		};
+		case 23:
+		{
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // TER fit for APKWS 7
+		};
+		case 24:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+		};
+		case 25:
 		{
 			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
 		};
@@ -2304,41 +2729,65 @@ sleep 0.01;
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
+			_plane addmagazine "FIR_Empty_1rnd_M"; // WCMD
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 12
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
+			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
+			_plane addmagazine "FIR_Empty_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 31
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 38
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+			_plane addmagazine "FIR_Empty_1rnd_M"; // 54
 		};
 		case 19:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 7
+		};
+		case 20:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // HYDRA 19
+		};
+		case 21:
+		{
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M"; //TER fit for HYDRA 7s
+		};
+		case 22:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // APKWS 7
+		};
+		case 23:
+		{
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"; // TER fit for APKWS 7
+		};
+		case 24:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // ZUNI 4
+		};
+		case 25:
 		{
 			_plane addmagazine "FIR_Empty_1rnd_M"; // CRV 7
 		};

@@ -5,11 +5,7 @@ Private ["_hp1","_hp2","_hp3","_hp4","_hp5","_hp6","_skin"];
 
 _hardpoint1 = _this select 1;
 _hardpoint2 = _this select 2;
-_hardpoint3 = _this select 3;
-_hardpoint4 = _this select 4;
-_hardpoint5 = _this select 5;
-_hardpoint6 = _this select 6;
-_skin = _this select 7;
+_skin = _this select 3;
 
 Switch (_hardpoint1) Do
 	{

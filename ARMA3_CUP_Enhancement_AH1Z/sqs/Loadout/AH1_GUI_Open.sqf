@@ -40,6 +40,7 @@ _handle= CreateDialog "AH1_GUI";
 		"Empty",
 		"HYDRA x7",
 		"HYDRA x19",
+		"APKWS x7",
 		"AGM-114K x4",
 		"AGM-114N x4",
 		"AGM-114 Combi"
@@ -50,6 +51,7 @@ _handle= CreateDialog "AH1_GUI";
 		"Empty",
 		"HYDRA x7",
 		"HYDRA x19",
+		"APKWS x7",
 		"AGM-114K x4",
 		"AGM-114N x4",
 		"AGM-114 Combi"
@@ -60,6 +62,7 @@ _handle= CreateDialog "AH1_GUI";
 		"Empty",
 		"HYDRA x7",
 		"HYDRA x19",
+		"APKWS x7",
 		"AGM-114K x4",
 		"AGM-114N x4",
 		"AGM-114 Combi"
@@ -70,6 +73,7 @@ _handle= CreateDialog "AH1_GUI";
 		"Empty",
 		"HYDRA x7",
 		"HYDRA x19",
+		"APKWS x7",
 		"AGM-114K x4",
 		"AGM-114N x4",
 		"AGM-114 Combi"

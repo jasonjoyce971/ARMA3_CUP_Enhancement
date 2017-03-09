@@ -1181,7 +1181,7 @@ class CfgVehicles
 				radius = 15;
 				shortcut = "";
 				condition = "gunner this == player and isengineon this";
-				statement = "this execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\FIR_AWS_MFD_N_Open.sqf""";
+				statement = "this execVM ""\FIR_AirWeaponSystem_US\Script\TGTSystem\FIR_AWS_MFD_N_Open.sqf""";
 				onlyforplayer = "false";
 			};
 			class FindRadarTGT
@@ -5520,7 +5520,7 @@ class CfgVehicles
 		scope=2;
 		author = "-{GOL}-Jason";
 		displayName="Su-34 Loadout Module";
-		category="GOL_Modules";
+		category="ObjectModifiers";
 		function="JAS_fnc_SU34_Loadout";
 		functionPriority=1;
 		isGlobal=1;
@@ -5670,30 +5670,45 @@ class CfgVehicles
 						name="VIKHIR";
 						value=5;
 					};
-					class hp5_29
+					class hp5_29L
 					{
-						name="Kh-29 'Kedge'";
+						name="Kh-29L 'Kedge'";
 						value=6;
+					};
+					class hp5_29T
+					{
+						name="Kh-29T 'Kedge'";
+						value=7;
 					};
 					class hp5_25
 					{
 						name="Kh-25 'Kegler' ARM";
-						value=7;
+						value=8;
 					};
 					class hp5_fab
 					{
 						name="FAB-250";
-						value=8;
-					};
-					class hp5_kab
-					{
-						name="KAB-250";
 						value=9;
+					};
+					class hp5_kabkr
+					{
+						name="KAB-500KR";
+						value=10;
+					};
+					class hp5_kabse
+					{
+						name="KAB-500SE";
+						value=11;
+					};
+					class hp5_kabl
+					{
+						name="KAB-500L";
+						value=12;
 					};
 					class hp5_rbk
 					{
 						name="RBK-250";
-						value=10;
+						value=13;
 					};
 				};
 			};
@@ -5735,30 +5750,45 @@ class CfgVehicles
 						name="VIKHIR";
 						value=5;
 					};
-					class hp6_29
+					class hp6_29L
 					{
-						name="Kh-29 'Kedge'";
+						name="Kh-29L 'Kedge'";
 						value=6;
+					};
+					class hp6_29T
+					{
+						name="Kh-29T 'Kedge'";
+						value=7;
 					};
 					class hp6_25
 					{
 						name="Kh-25 'Kegler' ARM";
-						value=7;
+						value=8;
 					};
 					class hp6_fab
 					{
 						name="FAB-250";
-						value=8;
-					};
-					class hp6_kab
-					{
-						name="KAB-250";
 						value=9;
+					};
+					class hp6_kabkr
+					{
+						name="KAB-500KR";
+						value=10;
+					};
+					class hp6_kabse
+					{
+						name="KAB-500SE";
+						value=11;
+					};
+					class hp6_kabl
+					{
+						name="KAB-500L";
+						value=12;
 					};
 					class hp6_rbk
 					{
 						name="RBK-250";
-						value=10;
+						value=13;
 					};
 				};
 			};
@@ -5795,30 +5825,45 @@ class CfgVehicles
 						name="VIKHIR";
 						value=4;
 					};
-					class hp7_29
+					class hp7_29L
 					{
-						name="Kh-29 'Kedge'";
+						name="Kh-29L 'Kedge'";
 						value=5;
+					};
+					class hp7_29T
+					{
+						name="Kh-29T 'Kedge'";
+						value=6;
 					};
 					class hp7_25
 					{
 						name="Kh-25 'Kegler' ARM";
-						value=6;
+						value=7;
 					};
 					class hp7_fab
 					{
 						name="FAB-250";
-						value=7;
-					};
-					class hp7_kab
-					{
-						name="KAB-250";
 						value=8;
+					};
+					class hp7_kabkr
+					{
+						name="KAB-500KR";
+						value=9;
+					};
+					class hp7_kabse
+					{
+						name="KAB-500SE";
+						value=10;
+					};
+					class hp7_kabl
+					{
+						name="KAB-500L";
+						value=11;
 					};
 					class hp7_rbk
 					{
 						name="RBK-250";
-						value=9;
+						value=12;
 					};
 				};
 			};
@@ -5855,30 +5900,45 @@ class CfgVehicles
 						name="VIKHIR";
 						value=4;
 					};
-					class hp8_29
+					class hp8_29L
 					{
-						name="Kh-29 'Kedge'";
+						name="Kh-29L 'Kedge'";
 						value=5;
+					};
+					class hp8_29T
+					{
+						name="Kh-29T 'Kedge'";
+						value=6;
 					};
 					class hp8_25
 					{
 						name="Kh-25 'Kegler' ARM";
-						value=6;
+						value=7;
 					};
 					class hp8_fab
 					{
 						name="FAB-250";
-						value=7;
-					};
-					class hp8_kab
-					{
-						name="KAB-250";
 						value=8;
+					};
+					class hp8_kabkr
+					{
+						name="KAB-500KR";
+						value=9;
+					};
+					class hp8_kabse
+					{
+						name="KAB-500SE";
+						value=10;
+					};
+					class hp8_kabl
+					{
+						name="KAB-500L";
+						value=11;
 					};
 					class hp8_rbk
 					{
 						name="RBK-250";
-						value=9;
+						value=12;
 					};
 				};
 			};
@@ -5910,10 +5970,20 @@ class CfgVehicles
 						name="FAB-250";
 						value=3;
 					};
-					class hp9_kab
+					class hp9_kabkr
 					{
-						name="KAB-250";
+						name="KAB-500KR";
 						value=4;
+					};
+					class hp9_kabse
+					{
+						name="KAB-500SE";
+						value=5;
+					};
+					class hp9_kabl
+					{
+						name="KAB-500L";
+						value=6;
 					};
 				};
 			};
@@ -5945,10 +6015,20 @@ class CfgVehicles
 						name="FAB-250";
 						value=3;
 					};
-					class hp10_kab
+					class hp10_kabkr
 					{
-						name="KAB-250";
+						name="KAB-500KR";
 						value=4;
+					};
+					class hp10_kabse
+					{
+						name="KAB-500SE";
+						value=5;
+					};
+					class hp10_kabl
+					{
+						name="KAB-500L";
+						value=6;
 					};
 				};
 			};
@@ -5965,25 +6045,40 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
-					class hp11_29
+					class hp11_29L
 					{
-						name="Kh-29 'Kedge'";
+						name="Kh-29L 'Kedge'";
 						value=1;
+					};
+					class hp11_29T
+					{
+						name="Kh-29T 'Kedge'";
+						value=2;
 					};
 					class hp11_25
 					{
 						name="Kh-25 'Kegler' ARM";
-						value=2;
+						value=3;
 					};
 					class hp11_fab
 					{
 						name="FAB-250";
-						value=3;
-					};
-					class hp11_kab
-					{
-						name="KAB-250";
 						value=4;
+					};
+					class hp11_kabkr
+					{
+						name="KAB-500KR";
+						value=5;
+					};
+					class hp11_kabse
+					{
+						name="KAB-500SE";
+						value=6;
+					};
+					class hp11_kabl
+					{
+						name="KAB-500L";
+						value=7;
 					};
 				};
 			};
@@ -6000,25 +6095,40 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
-					class hp12_29
+					class hp12_29L
 					{
-						name="Kh-29 'Kedge'";
+						name="Kh-29L 'Kedge'";
 						value=1;
+					};
+					class hp12_29T
+					{
+						name="Kh-29T 'Kedge'";
+						value=2;
 					};
 					class hp12_25
 					{
 						name="Kh-25 'Kegler' ARM";
-						value=2;
+						value=3;
 					};
 					class hp12_fab
 					{
 						name="FAB-250";
-						value=3;
-					};
-					class hp12_kab
-					{
-						name="KAB-250";
 						value=4;
+					};
+					class hp12_kabkr
+					{
+						name="KAB-500KR";
+						value=5;
+					};
+					class hp12_kabse
+					{
+						name="KAB-500SE";
+						value=6;
+					};
+					class hp12_kabl
+					{
+						name="KAB-500L";
+						value=7;
 					};
 				};
 			};

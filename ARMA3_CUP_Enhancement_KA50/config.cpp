@@ -104,7 +104,7 @@ class CfgHints
 			// Optional hint subtitle, filled by arguments from 'arguments' param
 			displayNameShort = "Armed Recon Helicopter";
 			// Structured text, filled by arguments from 'arguments' param
-			description = "The Ka-50, NATO designation Hokum, is a single seat armed recon helicopter. Capable of acting as a gunship, the Black Shark is comparable to the AH-64 but the co-axial rotor arrangement means the Black Shark is actually faster and capable of aerobatics that helicopters cannot usually perform. The Ka-52 Alligator is a special variant of the Ka-50. Fitted with a second seat, the Alligator has increased all weather capability although the positioning of the optics suite means it must operate close to the ground. In game terms the Ka-50 has a changeable payload but the Ka-52 does not, this is due to model limitations.<br/><br/>Payload Options:<br/><br/>%2S-8 Rockets<br/>%2S-13 Rockets<br/>%2GSh-23 Pod<br/>%2FAB-250<br/>%2KAB-250<br/>%2Vikhir<br/>%2Kh-29<br/>%2IGLA<br/><br/>Factions:<br/><br/>%2Russian Federation<br/>%2Sahrani Liberation Army";
+			description = "The Ka-50, NATO designation Hokum, is a single seat armed recon helicopter. Capable of acting as a gunship, the Black Shark is comparable to the AH-64 but the co-axial rotor arrangement means the Black Shark is actually faster and capable of aerobatics that helicopters cannot usually perform. The Ka-52 Alligator is a special variant of the Ka-50. Fitted with a second seat, the Alligator has increased all weather capability although the positioning of the optics suite means it must operate close to the ground. In game terms the Ka-50 has a changeable payload but the Ka-52 does not, this is due to model limitations.<br/><br/>Payload Options:<br/><br/>%2S-8 Rockets<br/>%2S-13 Rockets<br/>%2GSh-23 Pod<br/>%2FAB-250<br/>%2Kh-25<br/>%2Vikhir<br/>%2Kh-29T<br/>%2IGLA<br/><br/>Factions:<br/><br/>%2Russian Federation<br/>%2Sahrani Liberation Army";
 			// Optional structured text, filled by arguments from 'arguments' param (first argument
 			// is %11, see notes bellow), grey color of text
 			tip = "";
@@ -10527,35 +10527,40 @@ class CfgVehicles
 						name="S-13 Rockets";
 						value=2;
 					};
-					class hp3_vik
-					{
-						name="VIKHIR x6";
-						value=3;
-					};
 					class hp3_igla
 					{
 						name="IGLA x2";
-						value=4;
+						value=3;
 					};
 					class hp3_kh25
 					{
 						name="Kh-25";
+						value=4;
+					};
+					class hp3_29T
+					{
+						name="Kh-29T";
 						value=5;
 					};
-					class hp3_29
+					class hp3_29L
 					{
-						name="Kh-29 x6";
+						name="Kh-29L";
 						value=6;
+					};
+					class hp3_vik
+					{
+						name="VIKHIR x6";
+						value=7;
 					};
 					class hp3_fab
 					{
 						name="FAB-250";
-						value=7;
+						value=8;
 					};
 					class hp3_kab
 					{
 						name="KAB-250";
-						value=8;
+						value=9;
 					};
 				};
 			};
@@ -10582,35 +10587,40 @@ class CfgVehicles
 						name="S-13 Rockets";
 						value=2;
 					};
-					class hp4_vik
-					{
-						name="VIKHIR x6";
-						value=3;
-					};
 					class hp4_igla
 					{
 						name="IGLA x2";
-						value=4;
+						value=3;
 					};
 					class hp4_kh25
 					{
 						name="Kh-25";
+						value=4;
+					};
+					class hp4_29T
+					{
+						name="Kh-29T";
 						value=5;
 					};
-					class hp4_29
+					class hp4_29L
 					{
-						name="Kh-29 x6";
+						name="Kh-29L";
 						value=6;
+					};
+					class hp4_vik
+					{
+						name="VIKHIR x6";
+						value=7;
 					};
 					class hp4_fab
 					{
 						name="FAB-250";
-						value=7;
+						value=8;
 					};
 					class hp4_kab
 					{
 						name="KAB-250";
-						value=8;
+						value=9;
 					};
 				};
 			};

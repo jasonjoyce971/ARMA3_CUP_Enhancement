@@ -54,7 +54,8 @@ _handle= CreateDialog "JAS_A164_GUI";
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
-		"CBU-103 WCMD",
+		"CBU-103 CEM WCMD",
+		"CBU-105 SFW WCMD",
 		"Mk82Snakeye",
 		"Mk82 GPB"
     ];
@@ -75,7 +76,8 @@ _handle= CreateDialog "JAS_A164_GUI";
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
-		"CBU-103 WCMD",
+		"CBU-103 CEM WCMD",
+		"CBU-105 SFW WCMD",
 		"Mk82Snakeye",
 		"Mk82 GPB"
     ];
@@ -96,7 +98,8 @@ _handle= CreateDialog "JAS_A164_GUI";
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
-		"CBU-103 WCMD",
+		"CBU-103 CEM WCMD",
+		"CBU-105 SFW WCMD",
 		"Mk82Snakeye",
 		"Mk82 GPB"
     ];
@@ -117,7 +120,8 @@ _handle= CreateDialog "JAS_A164_GUI";
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
-		"CBU-103 WCMD",
+		"CBU-103 CEM WCMD",
+		"CBU-105 SFW WCMD",
 		"Mk82Snakeye",
 		"Mk82 GPB"
     ];

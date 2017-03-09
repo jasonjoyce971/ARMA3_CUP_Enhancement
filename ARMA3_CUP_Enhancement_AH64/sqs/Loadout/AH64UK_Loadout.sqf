@@ -37,6 +37,7 @@ _plane removeMagazines "JAS_AGM114L_1rnd_M";
 _plane removeMagazines "JAS_AGM114N_1rnd_M";
 _plane removeMagazines "EAWS_Brimstone_mag1x";
 _plane removeMagazines "JAS_CUP_19Rnd_CRV7_FAT_M";
+_plane removeMagazinesturret ["FIR_Hydra_APKWS_7rnd_M",[-1]];
 
 // Pods
 _plane removeMagazines "FIR_Empty_1rnd_M";
@@ -44,6 +45,7 @@ _plane removeMagazines "FIR_Hydra_7_Pod_1rnd_M";
 _plane removeMagazines "FIR_JLAU_3_Pod_1rnd_M";
 _plane removeMagazines "CUP_1Rnd_CRV7_Pod_19_M";
 _plane removeMagazines "JAS_CUP_1Rnd_AGM_Rack_M";
+_plane removeMagazines "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 
 // Weapons
 _plane removeweapon "FIR_CMLauncher";
@@ -54,6 +56,7 @@ _plane removeWeaponturret ["JAS_CUP_Vmlauncher_CRV7_FAT_veh",[-1]];
 _plane removeweaponturret ["JAS_HellfireLauncher_L",[0]];
 _plane removeweaponturret ["JAS_HellfireLauncher_N",[0]];
 _plane removeWeaponturret ["EAWS_BrimstoneLauncher",[0]];
+_plane removeweaponturret ["FIR_APKWS_Launcher",[-1]];
 
 _plane removeMPEventHandler ["MPHit", 0]; 
 
@@ -140,17 +143,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire L
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Brimstone
 		};
@@ -183,17 +190,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire L
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Brimstone
 		};
@@ -226,17 +237,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire L
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Brimstone
 		};
@@ -269,17 +284,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire L
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Brimstone
 		};
@@ -313,17 +332,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -356,17 +379,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -399,17 +426,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -442,17 +473,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -485,17 +520,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -528,17 +567,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -571,17 +614,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -614,17 +661,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -657,17 +708,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -700,17 +755,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -743,17 +802,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -786,17 +849,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -829,17 +896,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -872,17 +943,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -915,17 +990,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -958,17 +1037,21 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
+			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
 		};
 		case 7:
+		{
+			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
+		};
+		case 8:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
 		};
@@ -988,7 +1071,7 @@ else
 			else
 			{
 				titleText ["found custom loadout data. loading..", "PLAIN DOWN",0.5];
-				_loadcustom1 = ["custom1"]execVM "jason_aircraft\sqs\Loadout\AH64UK_Custom_Apply.sqf";
+				_loadcustom1 = ["custom1"]execVM "ARMA3_CUP_Enhancement_AH64\sqs\Loadout\AH64UK_Custom_Apply.sqf";
 			};		
 		};
 
@@ -1001,7 +1084,7 @@ else
 			else
 			{
 				titleText ["found custom loadout data. loading..", "PLAIN DOWN",0.5];
-				_loadcustom1 = ["custom2"]execVM "jason_aircraft\sqs\Loadout\AH64UK_Custom_Apply.sqf";
+				_loadcustom1 = ["custom2"]execVM "ARMA3_CUP_Enhancement_AH64\sqs\Loadout\AH64UK_Custom_Apply.sqf";
 			};			
 		};
 
@@ -1014,7 +1097,7 @@ else
 			else
 			{
 				titleText ["found custom loadout data. loading..", "PLAIN DOWN",0.5];
-				_loadcustom1 = ["custom3"]execVM "jason_aircraft\sqs\Loadout\AH64UK_Custom_Apply.sqf";
+				_loadcustom1 = ["custom3"]execVM "ARMA3_CUP_Enhancement_AH64\sqs\Loadout\AH64UK_Custom_Apply.sqf";
 			};	
 		};
 	};
@@ -1037,6 +1120,7 @@ _hellfireNcount = {_x == "JAS_AGM114N_1rnd_M"} count magazines _plane;
 _sidearmcount = {_x == "JAS_AGM122_1rnd_M"} count magazines _plane;
 _CRV7count = {_x == "CUP_1Rnd_CRV7_Pod_19_M"} count magazines _plane;
 _brimstonecount = {_x == "EAWS_Brimstone_mag1x"} count magazines _plane;
+_APKWS7count = {_x == "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"} count magazines _plane;
 
 if (_windercount >= 1) then
 {
@@ -1059,6 +1143,18 @@ if (_hydra7count >= 1) then
 	{
 		_counter7 = _counter7 + 1;
 		_plane addmagazineturret ["FIR_Hydra_7rnd_M",[-1]];
+	};
+};
+
+if (_APKWS7count >= 1) then 
+{
+	_plane addweaponturret ["FIR_APKWS_Launcher",[-1]];
+	_counter7 = 0;
+
+	while {_counter7 < _APKWS7count} do
+	{
+		_counter7 = _counter7 + 1;
+		_plane addmagazineturret ["FIR_Hydra_APKWS_7rnd_M",[-1]];
 	};
 };
 if (_hydra19count >= 1) then

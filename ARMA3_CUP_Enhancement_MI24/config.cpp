@@ -3591,7 +3591,7 @@ class CfgVehicles
 		};
 		class RotorLibHelicopterProperties: RotorLibHelicopterProperties
 		{
-			RTDconfig="CUP\AirVehicles\CUP_AirVehicles_Mi24\HIND-GenHeli600-DesktopSim.xml";
+			RTDconfig="ARMA3_CUP_Enhancement_MI24\rotorLib\hind-genheli600-desktopsim.xml";
 			maxTorque=10000;
 			maxMainRotorStress=250000;
 			maxTailRotorStress=30000;
