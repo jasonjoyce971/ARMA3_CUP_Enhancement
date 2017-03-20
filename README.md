@@ -1,5 +1,8 @@
 # ARMA3_CUP_Enhancement
 
+V3.1.1:
+* Fixed F-35 Loadout Module Script Error
+
 V3.1.0:
 * AWS Update
 * Added APKWS
