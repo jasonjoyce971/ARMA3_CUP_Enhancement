@@ -29,8 +29,9 @@ _plane setVariable ["InternalJSOWA","no",true];
 _plane setVariable ["InternalJSOWC","no",true];
 _plane setVariable ["InternalBrimstone","no",true];
 _plane setVariable ["InternalGBU54","no",true];
-_plane setVariable ["InternalCBU105","no",true];
 _plane setVariable ["InternalEGBU12","no",true];
+_plane setVariable ["InternalPAVE4","no",true];
+_plane setVariable ["InternalCBU105","no",true];
 
 Switch (_hardpoint1) Do
 	{
