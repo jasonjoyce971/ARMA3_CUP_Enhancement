@@ -1,5 +1,8 @@
 # ARMA3_CUP_Enhancement
 
+V3.1.2:
+* F-35 Loadout Update
+
 V3.1.1:
 * Fixed F-35 Loadout Module Script Error
 
