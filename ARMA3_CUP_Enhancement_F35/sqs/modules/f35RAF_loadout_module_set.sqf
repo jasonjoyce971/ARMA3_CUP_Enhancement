@@ -32,6 +32,8 @@ _plane setVariable ["InternalGBU54","no",true];
 _plane setVariable ["InternalEGBU12","no",true];
 _plane setVariable ["InternalPAVE4","no",true];
 _plane setVariable ["InternalCBU105","no",true];
+_plane setVariable ["InternalAIM120","no",true];
+_plane setVariable ["InternalASRAAM","no",true];
 
 Switch (_hardpoint1) Do
 	{
@@ -401,37 +403,41 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_AIM132_1rnd_M_int";
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_FIR_PavewayIV_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_gbu38_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_PavewayIV_1rnd_M_int";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_gbu54_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_gbu38_1rnd_M_int";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M_int";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_FIR_mk82_gp_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M_int";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_FIR_gbu39_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_mk82_gp_1rnd_M_int";
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_FIR_gbu53_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_gbu39_1rnd_M_int";
 		};
 		case 9:
+		{
+			_plane addmagazine "JAS_FIR_gbu53_1rnd_M_int";
+		};
+		case 10:
 		{
 			_plane addmagazine "JAS_EAWS_Brimstone_M_int";
 		};
@@ -451,37 +457,41 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_AIM132_1rnd_M_int";
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_FIR_PavewayIV_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_gbu38_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_PavewayIV_1rnd_M_int";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_gbu54_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_gbu38_1rnd_M_int";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M_int";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_FIR_mk82_gp_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M_int";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_FIR_gbu39_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_mk82_gp_1rnd_M_int";
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_FIR_gbu53_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_gbu39_1rnd_M_int";
 		};
 		case 9:
+		{
+			_plane addmagazine "JAS_FIR_gbu53_1rnd_M_int";
+		};
+		case 10:
 		{
 			_plane addmagazine "JAS_EAWS_Brimstone_M_int";
 		};
@@ -501,37 +511,41 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_AIM132_1rnd_M_int";
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_FIR_PavewayIV_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_gbu38_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_PavewayIV_1rnd_M_int";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_gbu54_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_gbu38_1rnd_M_int";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M_int";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_FIR_mk82_gp_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M_int";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_FIR_gbu39_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_mk82_gp_1rnd_M_int";
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_FIR_gbu53_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_gbu39_1rnd_M_int";
 		};
 		case 9:
+		{
+			_plane addmagazine "JAS_FIR_gbu53_1rnd_M_int";
+		};
+		case 10:
 		{
 			_plane addmagazine "JAS_EAWS_Brimstone_M_int";
 		};
@@ -551,37 +565,41 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_AIM132_1rnd_M_int";
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_FIR_PavewayIV_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_gbu38_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_PavewayIV_1rnd_M_int";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_gbu54_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_gbu38_1rnd_M_int";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M_int";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_FIR_mk82_gp_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M_int";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_FIR_gbu39_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_mk82_gp_1rnd_M_int";
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_FIR_gbu53_1rnd_M_int";
+			_plane addmagazine "JAS_FIR_gbu39_1rnd_M_int";
 		};
 		case 9:
+		{
+			_plane addmagazine "JAS_FIR_gbu53_1rnd_M_int";
+		};
+		case 10:
 		{
 			_plane addmagazine "JAS_EAWS_Brimstone_M_int";
 		};
@@ -635,6 +653,7 @@ _JSOWCINTcount = {_x == "JAS_FIR_AGM154C_1rnd_M_int"} count magazines _plane;
 _BRIMINTcount = {_x == "JAS_EAWS_Brimstone_M_int"} count magazines _plane;
 _gbu54INTcount = {_x == "JAS_FIR_gbu54_1rnd_M_int"} count magazines _plane;
 _pave4INTcount = {_x == "JAS_FIR_PavewayIV_1rnd_M_int"} count magazines _plane;
+_asraamINTcount = {_x == "JAS_FIR_AIM132_1rnd_M_int"} count magazines _plane;
 
 if (_agm88count >= 1) then {_plane addweapon "FIR_AGM88";};
 if (_aim9xcount >= 1) then {_plane addweapon "FIR_AIM132";};
@@ -677,6 +696,7 @@ if (_JSOWCINTcount >= 1) then {_plane setVariable ["InternalJSOWC","yes",true];}
 if (_BRIMINTcount >= 1) then {_plane setVariable ["InternalBrimstone","yes",true];};
 if (_gbu54INTcount >= 1) then {_plane setVariable ["InternalGBU54","yes",true];};
 if (_pave4INTcount >= 1) then {_plane setVariable ["InternalPAVE4","yes",true];};
+if (_asraamINTcount >= 1) then {_plane setVariable ["InternalASRAAM","yes",true];};
 
 _fuelcount = {_x == "FIR_f15E_Fueltank_1rnd_M"} count magazines _plane;
 
