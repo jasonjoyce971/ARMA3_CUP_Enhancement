@@ -122,6 +122,7 @@ _handle= CreateDialog "f35RAF_GUI";
 	{lbAdd[2105,_x]} forEach 
 	[  
 		"Empty",
+		"ASRAAM",
 		"GBU-12",
 		"EGBU-12 IV",
 		"GBU-38",
@@ -136,6 +137,7 @@ _handle= CreateDialog "f35RAF_GUI";
 	{lbAdd[2106,_x]} forEach 
 	[  
 		"Empty",
+		"ASRAAM",
 		"GBU-12",
 		"EGBU-12 IV",
 		"GBU-38",
@@ -151,6 +153,7 @@ _handle= CreateDialog "f35RAF_GUI";
 	{lbAdd[2202,_x]} forEach 
 	[  
 		"Empty",
+		"ASRAAM",
 		"GBU-12",
 		"EGBU-12 IV",
 		"GBU-38",
@@ -166,6 +169,7 @@ _handle= CreateDialog "f35RAF_GUI";
 	{lbAdd[2107,_x]} forEach 
 	[  
 		"Empty",
+		"ASRAAM",
 		"GBU-12",
 		"EGBU-12 IV",
 		"GBU-38",

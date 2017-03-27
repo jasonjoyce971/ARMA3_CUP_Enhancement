@@ -2195,80 +2195,85 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp7_120
+					{
+						name="AIM-120";
+						value=1;
+					};
 					class hp7_12
 					{
 						name="GBU-12";
-						value=1;
+						value=2;
 					};
 					class hp7_E12
 					{
 						name="EGBU-12 II";
-						value=2;
+						value=3;
 					};
 					class hp7_38
 					{
 						name="GBU-38";
-						value=3;
+						value=4;
 					};
 					class hp7_54
 					{
 						name="GBU-54";
-						value=4;
+						value=5;
 					};
 					class hp7_82s
 					{
 						name="Mk82 Snakeye";
-						value=5;
+						value=6;
 					};
 					class hp7_82
 					{
 						name="Mk82 GPB";
-						value=6;
+						value=7;
 					};
 					class hp7_87
 					{
 						name="CBU-87 CEM";
-						value=7;
+						value=8;
 					};
 					class hp7_89
 					{
 						name="CBU-89 GATOR";
-						value=8;
+						value=9;
 					};
 					class hp7_97
 					{
 						name="CBU-97 SFW";
-						value=9;
+						value=10;
 					};
 					class hp7_103
 					{
 						name="CBU-103 CEM WCMD";
-						value=10;
+						value=11;
 					};
 					class hp7_105
 					{
 						name="CBU-105 SFW WCMD";
-						value=11;
+						value=12;
 					};
 					class hp7_39
 					{
 						name="GBU-39 SDB";
-						value=12;
+						value=13;
 					};
 					class hp7_53
 					{
 						name="GBU-53 SDB";
-						value=13;
+						value=14;
 					};
 					class hp7_154A
 					{
 						name="AGM-154A JSOW";
-						value=14;
+						value=15;
 					};
 					class hp7_154C
 					{
 						name="AGM-154C JSOW";
-						value=15;
+						value=16;
 					};
 				};
 			};
@@ -2285,80 +2290,85 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp8_120
+					{
+						name="AIM-120";
+						value=1;
+					};
 					class hp8_12
 					{
 						name="GBU-12";
-						value=1;
+						value=2;
 					};
 					class hp8_E12
 					{
 						name="EGBU-12 II";
-						value=2;
+						value=3;
 					};
 					class hp8_38
 					{
 						name="GBU-38";
-						value=3;
+						value=4;
 					};
 					class hp8_54
 					{
 						name="GBU-54";
-						value=4;
+						value=5;
 					};
 					class hp8_82s
 					{
 						name="Mk82 Snakeye";
-						value=5;
+						value=6;
 					};
 					class hp8_82
 					{
 						name="Mk82 GPB";
-						value=6;
+						value=7;
 					};
 					class hp8_87
 					{
 						name="CBU-87 CEM";
-						value=7;
+						value=8;
 					};
 					class hp8_89
 					{
 						name="CBU-89 GATOR";
-						value=8;
+						value=9;
 					};
 					class hp8_97
 					{
 						name="CBU-97 SFW";
-						value=9;
+						value=10;
 					};
 					class hp8_103
 					{
 						name="CBU-103 CEM WCMD";
-						value=10;
+						value=11;
 					};
 					class hp8_105
 					{
 						name="CBU-105 SFW WCMD";
-						value=11;
+						value=12;
 					};
 					class hp8_39
 					{
 						name="GBU-39 SDB";
-						value=12;
+						value=13;
 					};
 					class hp8_53
 					{
 						name="GBU-53 SDB";
-						value=13;
+						value=14;
 					};
 					class hp8_154A
 					{
 						name="AGM-154A JSOW";
-						value=14;
+						value=15;
 					};
 					class hp8_154C
 					{
 						name="AGM-154C JSOW";
-						value=15;
+						value=16;
 					};
 				};
 			};
@@ -2375,80 +2385,85 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp9_120
+					{
+						name="AIM-120";
+						value=1;
+					};
 					class hp9_12
 					{
 						name="GBU-12";
-						value=1;
+						value=2;
 					};
 					class hp9_E12
 					{
 						name="EGBU-12 II";
-						value=2;
+						value=3;
 					};
 					class hp9_38
 					{
 						name="GBU-38";
-						value=3;
+						value=4;
 					};
 					class hp9_54
 					{
 						name="GBU-54";
-						value=4;
+						value=5;
 					};
 					class hp9_82s
 					{
 						name="Mk82 Snakeye";
-						value=5;
+						value=6;
 					};
 					class hp9_82
 					{
 						name="Mk82 GPB";
-						value=6;
+						value=7;
 					};
 					class hp9_87
 					{
 						name="CBU-87 CEM";
-						value=7;
+						value=8;
 					};
 					class hp9_89
 					{
 						name="CBU-89 GATOR";
-						value=8;
+						value=9;
 					};
 					class hp9_97
 					{
 						name="CBU-97 SFW";
-						value=9;
+						value=10;
 					};
 					class hp9_103
 					{
 						name="CBU-103 CEM WCMD";
-						value=10;
+						value=11;
 					};
 					class hp9_105
 					{
 						name="CBU-105 SFW WCMD";
-						value=11;
+						value=12;
 					};
 					class hp9_39
 					{
 						name="GBU-39 SDB";
-						value=12;
+						value=13;
 					};
 					class hp9_53
 					{
 						name="GBU-53 SDB";
-						value=13;
+						value=14;
 					};
 					class hp9_154A
 					{
 						name="AGM-154A JSOW";
-						value=14;
+						value=15;
 					};
 					class hp9_154C
 					{
 						name="AGM-154C JSOW";
-						value=15;
+						value=16;
 					};
 				};
 			};
@@ -2465,80 +2480,85 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp10_120
+					{
+						name="AIM-120";
+						value=1;
+					};
 					class hp10_12
 					{
 						name="GBU-12";
-						value=1;
+						value=2;
 					};
 					class hp10_E12
 					{
 						name="EGBU-12 II";
-						value=2;
+						value=3;
 					};
 					class hp10_38
 					{
 						name="GBU-38";
-						value=3;
+						value=4;
 					};
 					class hp10_54
 					{
 						name="GBU-54";
-						value=4;
+						value=5;
 					};
 					class hp10_82s
 					{
 						name="Mk82 Snakeye";
-						value=5;
+						value=6;
 					};
 					class hp10_82
 					{
 						name="Mk82 GPB";
-						value=6;
+						value=7;
 					};
 					class hp10_87
 					{
 						name="CBU-87 CEM";
-						value=7;
+						value=8;
 					};
 					class hp10_89
 					{
 						name="CBU-89 GATOR";
-						value=8;
+						value=9;
 					};
 					class hp10_97
 					{
 						name="CBU-97 SFW";
-						value=9;
+						value=10;
 					};
 					class hp10_103
 					{
 						name="CBU-103 CEM WCMD";
-						value=10;
+						value=11;
 					};
 					class hp10_105
 					{
 						name="CBU-105 SFW WCMD";
-						value=11;
+						value=12;
 					};
 					class hp10_39
 					{
 						name="GBU-39 SDB";
-						value=12;
+						value=13;
 					};
 					class hp10_53
 					{
 						name="GBU-53 SDB";
-						value=13;
+						value=14;
 					};
 					class hp10_154A
 					{
 						name="AGM-154A JSOW";
-						value=14;
+						value=15;
 					};
 					class hp10_154C
 					{
 						name="AGM-154C JSOW";
-						value=15;
+						value=16;
 					};
 				};
 			};
@@ -3028,50 +3048,55 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp7_ASRAAM
+					{
+						name="ASRAAM";
+						value=1;
+					};
 					class hp7_12
 					{
 						name="GBU-12";
-						value=1;
+						value=2;
 					};
 					class hp7_E12
 					{
 						name="EGBU-12 IV";
-						value=2;
+						value=3;
 					};
 					class hp7_38
 					{
 						name="GBU-38";
-						value=3;
+						value=4;
 					};
 					class hp7_54
 					{
 						name="GBU-54";
-						value=4;
+						value=5;
 					};
 					class hp7_82s
 					{
 						name="Mk82 Snakeye";
-						value=5;
+						value=6;
 					};
 					class hp7_82
 					{
 						name="Mk82 GPB";
-						value=6;
+						value=7;
 					};
 					class hp7_39
 					{
 						name="GBU-39 SDB";
-						value=7;
+						value=8;
 					};
 					class hp7_53
 					{
 						name="GBU-53 SDB";
-						value=8;
+						value=9;
 					};
 					class hp7_brim
 					{
 						name="Brimstone";
-						value=9;
+						value=10;
 					};
 				};
 			};
@@ -3088,50 +3113,55 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp8_ASRAAM
+					{
+						name="ASRAAM";
+						value=1;
+					};
 					class hp8_12
 					{
 						name="GBU-12";
-						value=1;
+						value=2;
 					};
 					class hp8_E12
 					{
 						name="EGBU-12 IV";
-						value=2;
+						value=3;
 					};
 					class hp8_38
 					{
 						name="GBU-38";
-						value=3;
+						value=4;
 					};
 					class hp8_54
 					{
 						name="GBU-54";
-						value=4;
+						value=5;
 					};
 					class hp8_82s
 					{
 						name="Mk82 Snakeye";
-						value=5;
+						value=6;
 					};
 					class hp8_82
 					{
 						name="Mk82 GPB";
-						value=6;
+						value=7;
 					};
 					class hp8_39
 					{
 						name="GBU-39 SDB";
-						value=7;
+						value=8;
 					};
 					class hp8_53
 					{
 						name="GBU-53 SDB";
-						value=8;
+						value=9;
 					};
 					class hp8_brim
 					{
 						name="Brimstone";
-						value=9;
+						value=10;
 					};
 				};
 			};
@@ -3148,50 +3178,55 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp9_ASRAAM
+					{
+						name="ASRAAM";
+						value=1;
+					};
 					class hp9_12
 					{
 						name="GBU-12";
-						value=1;
+						value=2;
 					};
 					class hp9_E12
 					{
 						name="EGBU-12 IV";
-						value=2;
+						value=3;
 					};
 					class hp9_38
 					{
 						name="GBU-38";
-						value=3;
+						value=4;
 					};
 					class hp9_54
 					{
 						name="GBU-54";
-						value=4;
+						value=5;
 					};
 					class hp9_82s
 					{
 						name="Mk82 Snakeye";
-						value=5;
+						value=6;
 					};
 					class hp9_82
 					{
 						name="Mk82 GPB";
-						value=6;
+						value=7;
 					};
 					class hp9_39
 					{
 						name="GBU-39 SDB";
-						value=7;
+						value=8;
 					};
 					class hp9_53
 					{
 						name="GBU-53 SDB";
-						value=8;
+						value=9;
 					};
 					class hp9_brim
 					{
 						name="Brimstone";
-						value=9;
+						value=10;
 					};
 				};
 			};
@@ -3208,50 +3243,55 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp10_ASRAAM
+					{
+						name="ASRAAM";
+						value=1;
+					};
 					class hp10_12
 					{
 						name="GBU-12";
-						value=1;
+						value=2;
 					};
 					class hp10_E12
 					{
 						name="EGBU-12 IV";
-						value=2;
+						value=3;
 					};
 					class hp10_38
 					{
 						name="GBU-38";
-						value=3;
+						value=4;
 					};
 					class hp10_54
 					{
 						name="GBU-54";
-						value=4;
+						value=5;
 					};
 					class hp10_82s
 					{
 						name="Mk82 Snakeye";
-						value=5;
+						value=6;
 					};
 					class hp10_82
 					{
 						name="Mk82 GPB";
-						value=6;
+						value=7;
 					};
 					class hp10_39
 					{
 						name="GBU-39 SDB";
-						value=7;
+						value=8;
 					};
 					class hp10_53
 					{
 						name="GBU-53 SDB";
-						value=8;
+						value=9;
 					};
 					class hp10_brim
 					{
 						name="Brimstone";
-						value=9;
+						value=10;
 					};
 				};
 			};

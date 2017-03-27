@@ -20,6 +20,8 @@ _GBU54 = _plane getVariable "InternalGBU54";
 _CBU105 = _plane getVariable "InternalCBU105";
 _EGBU12 = _plane getVariable "InternalEGBU12";
 _PAVE4 = _plane getVariable "InternalPAVE4";
+_AIM120 = _plane getVariable "InternalAIM120";
+_ASRAAM = _plane getVariable "InternalASRAAM";
 
 //Remove Weapons
 if(_GBU12 == "yes") then {_plane removeweapon "JAS_FIR_GBU12_int";};
@@ -39,6 +41,8 @@ if(_GBU54 == "yes") then {_plane removeweapon "JAS_FIR_GBU54_int";};
 if(_CBU105 == "yes") then {_plane removeweapon "JAS_FIR_CBU105_int"};
 if(_EGBU12 == "yes") then {_plane removeweapon "JAS_FIR_EGBU12_int";};
 if(_PAVE4 == "yes") then {_plane removeweapon "JAS_FIR_PAVEWAY_IV_int";};
+if(_AIM120 == "yes") then {_plane removeweapon "JAS_FIR_AIM120_int";};
+if(_ASRAAM == "yes") then {_plane removeweapon "JAS_FIR_AIM132_int";};
 
 // Animate Doors
 _plane animate ['Hatch_Weaponbay_1_1',0];

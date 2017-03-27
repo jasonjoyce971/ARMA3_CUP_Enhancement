@@ -1734,6 +1734,28 @@ class cfgMagazines
 	class 38Rnd_80mm_rockets;
 	class 2Rnd_LG_Scalpel;
 	class 2Rnd_Missile_AA_03_F;
+	class JAS_FIR_AIM132_1rnd_M_int : VehicleMagazine
+	{
+		scope = 2;
+		displayName = "AIM-132 ASRAAM";
+		displayNameShort = "Short-Range";
+		ammo = "FIR_AIM132";
+		initSpeed = 0;
+		nameSound = "missiles";
+		count = 1;
+		maxLeadSpeed = 300;
+	};
+	class JAS_FIR_AIM120_1rnd_M_int : VehicleMagazine
+	{
+		scope = 2;
+		displayName = "AIM-120C AMRAAM";
+		displayNameShort = "Mid-Range";
+		count = 1;
+		nameSound = "missiles";
+		ammo = "FIR_AIM120";
+		initSpeed = 0;
+		maxLeadSpeed = 300;
+	};
 	class JAS_FIR_PavewayIV_1rnd_M_int: VehicleMagazine
 	{
 		scope=2;
@@ -2707,6 +2729,75 @@ class cfgWeapons
 	class Missiles_Scalpel;
 	class Missile_AA_03_Plane_CAS_02_F;
 	class CannonCore;
+	class JAS_FIR_AIM132_int : MissileLauncher
+	{
+		scope = 2;
+		weaponLockDelay = 2.0;
+		weaponLockSystem = 2;
+		cmImmunity = 0.98;
+		holdsterAnimValue = 1;
+		missileLockCone = 360;
+		lockSeekRadius = 1200;
+		lockingTargetSound[] = {"\FIR_AirWeaponSystem_US\sound\Sidewinder_growling.wss",4,1};
+		lockedTargetSound[] = {"\FIR_AirWeaponSystem_US\sound\Sidewinder_growling.wss",4.5,1.1};
+		/*0.316228*/
+		sounds[] = {"StandardSound"};
+		class StandardSound
+		{
+			begin1[] = {"A3\Sounds_F\weapons\Rockets\missile_2",1.1220185,1.3,1000};
+			soundBegin[] = {"begin1",1};
+			weaponSoundEffect = "DefaultRifle";
+		};
+		displayName = "AIM-132 Internal Bay";
+		displayNameMagazine = "AIM132";
+		shortNameMagazine = "AIM132";
+		magazineReloadTime=0.5;
+		initspeed = 30;
+		reloadTime = 0.5;
+		aiDispersionCoefX=1.0; 
+		aiDispersionCoefY=1.0;
+		aiRateOfFire = 0.5;
+		aiRateOfFireDistance = 800;
+		minRange = 100;
+		minRangeProbab = 0.75;
+		midRange = 1000;
+		midRangeProbab = 0.85;
+		maxRange = 2000;
+		maxRangeProbab = 0.20;
+		magazines[] = {"JAS_FIR_AIM132_1rnd_M_int"};
+	};
+	class JAS_FIR_AIM120_int : MissileLauncher
+	{
+		scope = 2;
+		weaponLockDelay = 0.5;
+		weaponLockSystem = 8;
+		cmImmunity = 0.98;
+		holdsterAnimValue = 1;
+		sounds[] = {"StandardSound"};
+		class StandardSound
+		{
+			begin1[] = {"A3\Sounds_F\weapons\Rockets\titan_1",2.5118864,1,1100};
+			soundBegin[] = {"begin1",1};
+			weaponSoundEffect = "DefaultRifle";
+		};
+		displayName = "AIM-120C Internal Bay";
+		displayNameMagazine = "AIM120C";
+		shortNameMagazine = "AIM120";
+		magazineReloadTime=0.5;
+		initspeed = 30;
+		reloadTime = 0.3;
+		aiDispersionCoefX=1.0; 
+		aiDispersionCoefY=1.0;
+		aiRateOfFire = 0.5;
+		aiRateOfFireDistance = 4000;
+		minRange = 1000;
+		minRangeProbab = 0.04;
+		midRange = 2000;
+		midRangeProbab = 0.80;
+		maxRange = 4000;
+		maxRangeProbab = 0.65;
+		magazines[] = {"JAS_FIR_AIM120_1rnd_M_int"};
+	};
 	class JAS_FIR_PAVEWAY_IV_int: Mk82BombLauncher
 	{
 		autofire=0;
