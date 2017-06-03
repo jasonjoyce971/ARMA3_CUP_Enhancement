@@ -49,6 +49,43 @@ class CfgAddons
 		};
 	};
 };
+/*
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class Components;
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+*/
+class Components;
+class SensorTemplatePassiveRadar;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftPilot: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightPilot: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
 class DefaultEventhandlers;
 class Eventhandlers;
 class CBA_Extended_EventHandlers;
@@ -385,6 +422,157 @@ class CfgVehicles
 		author="-{GOL}-Jason";
 		mapSize=27.48;
 		_generalMacro="JAS_CUP_CH47F_base";
+		/*class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+		};*/
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
+			{
+			};
+			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
+			{
+			};
+		};
 		class RotorLibHelicopterProperties
 		{
 			RTDconfig="ARMA3_CUP_Enhancement_CH47\rotorLib\RTD_Heli_Transport_03.xml";
@@ -2230,7 +2418,8 @@ class CfgVehicles
 		{
 			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_1_co.paa",
 			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_2_co.paa",
-			"cup\airvehicles\cup_airvehicles_ch47\data\ch47f_nalepky_ca.paa"
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47f_nalepky_ca.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_mlod_co.paa"
 		};
 		editorPreview="ARMA3_CUP_Enhancement_CH47\UI\editorpreview\CH47FUSA.jpg";
 	};
@@ -2251,7 +2440,8 @@ class CfgVehicles
 		{
 			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_1_co.paa",
 			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_2_co.paa",
-			"cup\airvehicles\cup_airvehicles_ch47\data\ch47f_nalepky_ca.paa"
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47f_nalepky_ca.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_mlod_co.paa"
 		};
 		editorPreview="ARMA3_CUP_Enhancement_CH47\UI\editorpreview\CH47FUSA.jpg";
 	};
@@ -2274,7 +2464,8 @@ class CfgVehicles
 		{
 			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_1_co.paa",
 			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_2_co.paa",
-			"cup\airvehicles\cup_airvehicles_ch47\data\ch47f_nalepky_ca.paa"
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47f_nalepky_ca.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_mlod_co.paa"
 		};
 		editorPreview="ARMA3_CUP_Enhancement_CH47\UI\editorpreview\CH47FGB.jpg";
 	};
@@ -2296,7 +2487,8 @@ class CfgVehicles
 		{
 			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_1_co.paa",
 			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_2_co.paa",
-			"cup\airvehicles\cup_airvehicles_ch47\data\ch47f_nalepky_ca.paa"
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47f_nalepky_ca.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_mlod_co.paa"
 		};
 		editorPreview="ARMA3_CUP_Enhancement_CH47\UI\editorpreview\CH47FGB.jpg";
 	};
@@ -2318,7 +2510,8 @@ class CfgVehicles
 		{
 			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_1_baf_co.paa",
 			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_2_baf_co.paa",
-			""
+			"",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_mlod_co.paa"
 		};
 		editorPreview="ARMA3_CUP_Enhancement_CH47\UI\editorpreview\CH47FGB.jpg";
 	};
@@ -2340,8 +2533,102 @@ class CfgVehicles
 		{
 			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_1_baf_co.paa",
 			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_2_baf_co.paa",
-			""
+			"",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_mlod_co.paa"
 		};
 		editorPreview="ARMA3_CUP_Enhancement_CH47\UI\editorpreview\CH47FGB.jpg";
+	};
+	class JAS_CUP_I_CH47F_RACS : JAS_CUP_CH47F_base
+	{
+		author = "CUP Aplion/-{GOL}-Jason";
+		scope = 2;
+		displayName = "Chinook CH-47F Troop Transport";
+		faction = "CUP_I_RACS";
+		side = 2;
+		crew = "CUP_I_RACS_Pilot";
+		typicalCargo[] =
+		{
+			"CUP_I_RACS_Pilot",
+			"CUP_I_RACS_Pilot",
+			"CUP_I_RACS_Pilot"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_1_racs_co.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_2_racs_co.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47f_nalepky_racs_ca.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_mlod_racs_co.paa"
+		};
+		editorPreview="CUP\AirVehicles\CUP_AirVehicles_CH47\Data\preview\CUP_I_CH47F_RACS.jpg";
+	};
+	class JAS_CUP_I_CH47F_VIV_RACS: JAS_CUP_CH47F_VIV_Base
+	{
+		author="-{GOL}-Jason";
+		scope=2;
+		displayName="Chinook CH-47F Cargo Transport";
+		faction="CUP_I_RACS";
+		side=2;
+		crew="CUP_I_RACS_Pilot";
+		typicalCargo[]=
+		{
+			"CUP_I_RACS_Pilot",
+			"CUP_I_RACS_Pilot",
+			"CUP_I_RACS_Pilot"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_1_racs_co.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_2_racs_co.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47f_nalepky_racs_ca.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_mlod_racs_co.paa"
+		};
+		editorPreview="CUP\AirVehicles\CUP_AirVehicles_CH47\Data\preview\CUP_I_CH47F_RACS.jpg";
+	};
+	class JAS_CUP_I_CH47F_AAC : JAS_CUP_CH47F_base
+	{
+		author = "CUP Aplion/-{GOL}-Jason";
+		scope = 2;
+		displayName = "CH-47J Troop Transport";
+		faction="GOL_AAC_INDEP";
+		editorSubcategory="GOL_AAC_GIANT";
+		side = 2;
+		crew = "CUP_I_RACS_Pilot";
+		typicalCargo[] =
+		{
+			"CUP_I_RACS_Pilot",
+			"CUP_I_RACS_Pilot",
+			"CUP_I_RACS_Pilot"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_1_racs_co.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_2_racs_co.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47f_nalepky_racs_ca.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_mlod_racs_co.paa"
+		};
+		editorPreview="CUP\AirVehicles\CUP_AirVehicles_CH47\Data\preview\CUP_I_CH47F_RACS.jpg";
+	};
+	class JAS_CUP_I_CH47F_VIV_AAC: JAS_CUP_CH47F_VIV_Base
+	{
+		author="-{GOL}-Jason";
+		scope=2;
+		faction="GOL_AAC_INDEP";
+		editorSubcategory="GOL_AAC_GIANT";
+		side=2;
+		crew="CUP_I_RACS_Pilot";
+		typicalCargo[]=
+		{
+			"CUP_I_RACS_Pilot",
+			"CUP_I_RACS_Pilot",
+			"CUP_I_RACS_Pilot"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_1_racs_co.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_2_racs_co.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47f_nalepky_racs_ca.paa",
+			"cup\airvehicles\cup_airvehicles_ch47\data\ch47_ext_mlod_racs_co.paa"
+		};
+		editorPreview="CUP\AirVehicles\CUP_AirVehicles_CH47\Data\preview\CUP_I_CH47F_RACS.jpg";
 	};
 };

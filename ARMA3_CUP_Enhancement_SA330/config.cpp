@@ -132,6 +132,31 @@ class CfgAddons
 		};
 	};
 }; */
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class Components;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftPilot: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightPilot: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
 class DefaultEventhandlers;
 class Eventhandlers;
 class CBA_Extended_EventHandlers;
@@ -465,6 +490,24 @@ class CfgVehicles
 	};
 	class JAS_CUP_SA330_Base: Helicopter_Base_H
 	{
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
+			{
+			};
+			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
+			{
+			};
+		};
 		scope=0;
 		displayName="SA-330J Puma";
 		model="\cup\airvehicles\cup_airvehicles_sa330\OFrP_Puma_CE";

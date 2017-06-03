@@ -505,7 +505,7 @@
       <ModelConfiguration maxIntegrationStepSizeDeg="1.0" />
 
       <Geometry>
-        <Position x="0.0" y="-0.05" z="0.8720" />
+        <Position x="0.0" y="-0.05" z="2.9720" />
         <Tilt lateralTilt="0.0" longitudinalTilt="0" />
         <Blades radius="4.165" chord="0.171" rootCutout="0.7" count="5" hingeOffset="0.1333" flappingHingeLowerLimit="-5" flappingHingeHigherLimit="10" />
         <Rotation clockwise="false"/>
@@ -881,7 +881,7 @@
     <Rotor type="FGRotorMomentumTheory">
       <InfoPrint printControlInputs="false" printFlappingInfo="false"/>
       <Geometry>
-        <Position x="-0.1" y="-4.9460" z="-0.0080"/>
+        <Position x="-0.1" y="-4.9460" z="2.1"/>
         <Tilt lateralTilt="-105.0" longitudinalTilt="0.0" />
         <Blades radius="0.71" chord="0.050" count="2" hingeOffset="0.0" />
         <Delta3 angle="0" />
@@ -1324,7 +1324,7 @@
       <Features isBrakable="false" isRetractable="false" isSteerable="false"  />
       <Aerodynamics equivalentFlatPlateArea ="0.0" />      
       <Suspension>
-        <MountStation  x="-1.052" y="1.6933" z="-1.75"/>
+        <MountStation  x="-1.052" y="1.6933" z="0.35"/>
         <SliderAxis x="0" y="0" z="1" />
         <SuspensionLength length="0.2" />
         <SpringParameters springConstant="420000" damperConstant="50000" maxCompression="0.18" />
@@ -1340,7 +1340,7 @@
       <Features isBrakable="false" isRetractable="false" isSteerable="false"  />
       <Aerodynamics equivalentFlatPlateArea ="0.0" />
       <Suspension>
-        <MountStation  x="1.052" y="1.6933" z="-1.75"/>
+        <MountStation  x="1.052" y="1.6933" z="0.35"/>
         <SliderAxis x="0" y="0" z="1" />
         <SuspensionLength length="0.2" />
         <SpringParameters springConstant="420000" damperConstant="50000" maxCompression="0.18" />
@@ -1356,7 +1356,7 @@
       <Features isBrakable="false" isRetractable="false" isSteerable="false"  />
       <Aerodynamics equivalentFlatPlateArea ="0.0" />
       <Suspension>
-        <MountStation  x="-1.052" y="-0.6387" z="-1.75"/>
+        <MountStation  x="-1.052" y="-0.6387" z="0.35"/>
         <SliderAxis x="0" y="0" z="1" />
         <SuspensionLength length="0.2" />
         <SpringParameters springConstant="420000" damperConstant="50000" maxCompression="0.18" />
@@ -1372,7 +1372,7 @@
       <Features isBrakable="false" isRetractable="false" isSteerable="false"  />
       <Aerodynamics equivalentFlatPlateArea ="0.0" />
       <Suspension>
-        <MountStation  x="1.052" y="-0.6387" z="-1.75"/>
+        <MountStation  x="1.052" y="-0.6387" z="0.35"/>
         <SliderAxis x="0" y="0" z="1" />
         <SuspensionLength length="0.2" />
         <SpringParameters springConstant="420000" damperConstant="50000" maxCompression="0.18" />
@@ -1388,7 +1388,7 @@
       <Features isBrakable="false" isRetractable="false" isSteerable="false"  />
       <Aerodynamics equivalentFlatPlateArea ="0.0" />
       <Suspension>
-        <MountStation  x="0" y="-4.341" z="-0.65"/>
+        <MountStation  x="0" y="-4.341" z="0.65"/>
         <SliderAxis x="0" y="0" z="1" />
         <SuspensionLength length="0" />
         <SpringParameters springConstant="420000" damperConstant="50000" maxCompression="0" />

@@ -98,6 +98,10 @@ class CfgEditorSubcategories
 	{
 		displayName = "Banshee"; // Name visible in the list
 	};
+	class GOL_AAC_CONDOR // Category class, you point to it in editorSubcategory property
+	{
+		displayName = "Condor"; // Name visible in the list
+	};
 	class GOL_AAC_SPECIAL // Category class, you point to it in editorSubcategory property
 	{
 		displayName = "Specialist Equipment"; // Name visible in the list

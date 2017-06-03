@@ -23,7 +23,7 @@ _hardpoint6 = _this select 6;
 		};		
 		case 1:
 		{
-			_plane addmagazine "FIR_AIM9L_1rnd_M";
+			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
 		};
 	};
 	
@@ -42,7 +42,7 @@ _hardpoint6 = _this select 6;
 		};		
 		case 1:
 		{
-			_plane addmagazine "FIR_AIM9L_1rnd_M";
+			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
 		};
 	};
 	
@@ -993,7 +993,7 @@ _plane_magazine = magazines _plane;
 
 sleep 0.3;
 
-_windercount = {_x == "FIR_AIM9L_1rnd_M"} count magazines _plane;
+_windercount = {_x == "JAS_FIR_AIM9L_1rnd_M"} count magazines _plane;
 _hydra7count = {_x == "FIR_Hydra_7_Pod_1rnd_M"} count magazines _plane;
 _hydra19count = {_x == "FIR_JLAU_3_Pod_1rnd_M"} count magazines _plane;
 _hellfireLcount = {_x == "JAS_AGM114L_1rnd_M"} count magazines _plane;
@@ -1005,13 +1005,13 @@ _APKWS7count = {_x == "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"} count magazines _plane;
 
 if (_windercount >= 1) then
 {
-	_plane addweaponturret ["FIR_AIM9L",[0]];
+	_plane addweaponturret ["JAS_FIR_AIM9L",[0]];
 	/* _counter9m = 0;
 
 	while {_counter9m < _windercount} do
 	{
 		_counter9m = _counter9m + 1;
-		_plane addmagazineturret ["FIR_AIM9L_1rnd_M",[0]];
+		_plane addmagazineturret ["JAS_FIR_AIM9L_1rnd_M",[0]];
 	}; */
 	
 };
@@ -1029,13 +1029,13 @@ if (_hydra7count >= 1) then
 
 if (_APKWS7count >= 1) then 
 {
-	_plane addweaponturret ["FIR_APKWS_Launcher",[-1]];
+	_plane addweaponturret ["JAS_FIR_APKWS_Launcher",[-1]];
 	_counter7 = 0;
 
 	while {_counter7 < _APKWS7count} do
 	{
 		_counter7 = _counter7 + 1;
-		_plane addmagazineturret ["FIR_Hydra_APKWS_7rnd_M",[-1]];
+		_plane addmagazineturret ["JAS_FIR_Hydra_APKWS_7rnd_M",[-1]];
 	};
 };
 if (_hydra19count >= 1) then

@@ -67,6 +67,26 @@ class CfgFunctions
 		};
 	};
 };
+
+// Jets Content -> relates to sensor overhaul
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class Components;
+
 class DefaultEventhandlers;
 class Eventhandlers;
 class CBA_Extended_EventHandlers_base;
@@ -7362,6 +7382,140 @@ class CfgVehicles
 					renderQuality = 2;
 					renderVisionMode = 0;
 					fov = 0.69999999;
+				};
+			};
+		};
+		// JETS
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
 				};
 			};
 		};
