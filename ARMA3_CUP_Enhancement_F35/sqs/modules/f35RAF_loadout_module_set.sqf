@@ -47,11 +47,11 @@ Switch (_hardpoint1) Do
 		};		
 		case 1:
 		{
-			_plane addmagazine "FIR_AIM132_1rnd_M";
+			_plane addmagazine "JAS_FIR_AIM132_1rnd_M";
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_Meteor_1rnd_M";
+			_plane addmagazine "JAS_FIR_Meteor_1rnd_M";
 		};
 		case 3:
 		{
@@ -78,11 +78,11 @@ sleep 0.3;
 		};		
 		case 1:
 		{
-			_plane addmagazine "FIR_AIM132_1rnd_M";
+			_plane addmagazine "JAS_FIR_AIM132_1rnd_M";
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_Meteor_1rnd_M";
+			_plane addmagazine "JAS_FIR_Meteor_1rnd_M";
 		};
 		case 3:
 		{
@@ -109,11 +109,11 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_AIM132_1rnd_M";
+			_plane addmagazine "JAS_FIR_AIM132_1rnd_M";
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_Meteor_1rnd_M";
+			_plane addmagazine "JAS_FIR_Meteor_1rnd_M";
 		};
 		case 3:
 		{
@@ -125,27 +125,27 @@ sleep 0.3;
 		};
 		case 5:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU10_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "FIR_PavewayIV_1rnd_M";
+			_plane addmagazine "JAS_FIR_PavewayIV_1rnd_M";
 		};
 		case 8:
 		{
-			_plane addmagazine "FIR_GBU24A_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU24A_1rnd_M";
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_GBU24B_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU24B_1rnd_M";
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_GBU24A_BLU118_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU24A_BLU118_1rnd_M";
 		};
 		case 11:
 		{
@@ -161,7 +161,7 @@ sleep 0.3;
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_GBU54_1rnd_M";
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M";
 		};
 	};
 	
@@ -179,11 +179,11 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_AIM132_1rnd_M";
+			_plane addmagazine "JAS_FIR_AIM132_1rnd_M";
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_Meteor_1rnd_M";
+			_plane addmagazine "JAS_FIR_Meteor_1rnd_M";
 		};
 		case 3:
 		{
@@ -195,27 +195,27 @@ sleep 0.3;
 		};
 		case 5:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU10_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "FIR_PavewayIV_1rnd_M";
+			_plane addmagazine "JAS_FIR_PavewayIV_1rnd_M";
 		};
 		case 8:
 		{
-			_plane addmagazine "FIR_GBU24A_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU24A_1rnd_M";
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_GBU24B_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU24B_1rnd_M";
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_GBU24A_BLU118_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU24A_BLU118_1rnd_M";
 		};
 		case 11:
 		{
@@ -231,7 +231,7 @@ sleep 0.3;
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_GBU54_1rnd_M";
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M";
 		};
 	};
 
@@ -249,11 +249,11 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_AIM132_1rnd_M";
+			_plane addmagazine "JAS_FIR_AIM132_1rnd_M";
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_Meteor_1rnd_M";
+			_plane addmagazine "JAS_FIR_Meteor_1rnd_M";
 		};
 		case 3:
 		{
@@ -265,27 +265,27 @@ sleep 0.3;
 		};
 		case 5:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU10_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "FIR_PavewayIV_1rnd_M";
+			_plane addmagazine "JAS_FIR_PavewayIV_1rnd_M";
 		};
 		case 8:
 		{
-			_plane addmagazine "FIR_GBU24A_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU24A_1rnd_M";
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_GBU24B_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU24B_1rnd_M";
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_GBU24A_BLU118_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU24A_BLU118_1rnd_M";
 		};
 		case 11:
 		{
@@ -301,7 +301,7 @@ sleep 0.3;
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_GBU54_1rnd_M";
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M";
 		};
 		case 15:
 		{
@@ -327,11 +327,11 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_AIM132_1rnd_M";
+			_plane addmagazine "JAS_FIR_AIM132_1rnd_M";
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_Meteor_1rnd_M";
+			_plane addmagazine "JAS_FIR_Meteor_1rnd_M";
 		};
 		case 3:
 		{
@@ -343,27 +343,27 @@ sleep 0.3;
 		};
 		case 5:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU10_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "FIR_PavewayIV_1rnd_M";
+			_plane addmagazine "JAS_FIR_PavewayIV_1rnd_M";
 		};
 		case 8:
 		{
-			_plane addmagazine "FIR_GBU24A_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU24A_1rnd_M";
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_GBU24B_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU24B_1rnd_M";
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_GBU24A_BLU118_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU24A_BLU118_1rnd_M";
 		};
 		case 11:
 		{
@@ -379,7 +379,7 @@ sleep 0.3;
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_GBU54_1rnd_M";
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M";
 		};
 		case 15:
 		{
@@ -612,13 +612,13 @@ _plane_magazine = magazines _plane;
 sleep 0.3;
 
 _agm88count = {_x == "FIR_AGM88_1rnd_M"} count magazines _plane;
-_aim9xcount = {_x == "FIR_AIM132_1rnd_M"} count magazines _plane;
-_aim120count = {_x == "FIR_Meteor_1rnd_M"} count magazines _plane;
-_gbu10count = {_x == "FIR_GBU10_1rnd_M"} count magazines _plane;
-_gbu12count = {_x == "FIR_GBU12_1rnd_M"} count magazines _plane;
-_gbu24Acount = {_x == "FIR_GBU24A_1rnd_M"} count magazines _plane;
-_gbu24Bcount = {_x == "FIR_GBU24B_1rnd_M"} count magazines _plane;
-_gbu24118count = {_x == "FIR_GBU24A_BLU118_1rnd_M"} count magazines _plane;
+_aim9xcount = {_x == "JAS_FIR_AIM132_1rnd_M"} count magazines _plane;
+_aim120count = {_x == "JAS_FIR_Meteor_1rnd_M"} count magazines _plane;
+_gbu10count = {_x == "JAS_FIR_GBU10_1rnd_M"} count magazines _plane;
+_gbu12count = {_x == "JAS_FIR_GBU12_1rnd_M"} count magazines _plane;
+_gbu24Acount = {_x == "JAS_FIR_GBU24A_1rnd_M"} count magazines _plane;
+_gbu24Bcount = {_x == "JAS_FIR_GBU24B_1rnd_M"} count magazines _plane;
+_gbu24118count = {_x == "JAS_FIR_GBU24A_BLU118_1rnd_M"} count magazines _plane;
 _gbu31count = {_x == "FIR_GBU31_1rnd_M"} count magazines _plane;
 _gbu32count = {_x == "FIR_GBU32_1rnd_M"} count magazines _plane;
 _gbu38count = {_x == "FIR_GBU38_1rnd_M"} count magazines _plane;
@@ -628,15 +628,15 @@ _CBU87count = {_x == "FIR_CBU87_1rnd_M"} count magazines _plane;
 _cbu89count = {_x == "FIR_CBU89_1rnd_M"} count magazines _plane;
 _cbu97count = {_x == "FIR_CBU97_1rnd_M"} count magazines _plane;
 _cbu103count = {_x == "FIR_CBU103_1rnd_M"} count magazines _plane;
-_agm65dcount = {_x == "FIR_AGM65D_1rnd_M"} count magazines _plane;
-_agm65gcount = {_x == "FIR_AGM65G_1rnd_M"} count magazines _plane;
-_agm65lcount = {_x == "FIR_AGM65L_1rnd_M"} count magazines _plane;
+_agm65dcount = {_x == "JAS_FIR_AGM65D_1rnd_M"} count magazines _plane;
+_agm65gcount = {_x == "JAS_FIR_AGM65G_1rnd_M"} count magazines _plane;
+_agm65lcount = {_x == "JAS_FIR_AGM65L_1rnd_M"} count magazines _plane;
 _gbu39count = {_x == "FIR_gbu39_1rnd_M"} count magazines _plane;
 _gbu53count = {_x == "FIR_gbu53_1rnd_M"} count magazines _plane;
 _brimstonecount = {_x == "EAWS_Brimstone_mag1x"} count magazines _plane;
 _scalpcount = {_x == "EAWS_SCALP_mag1x"} count magazines _plane;
-_gbu54count = {_x == "FIR_GBU54_1rnd_M"} count magazines _plane;
-_pave4count = {_x == "FIR_PavewayIV_1rnd_M"} count magazines _plane;
+_gbu54count = {_x == "JAS_FIR_gbu54_1rnd_M"} count magazines _plane;
+_pave4count = {_x == "JAS_FIR_PavewayIV_1rnd_M"} count magazines _plane;
 
 _gbu12INTcount = {_x == "JAS_FIR_GBU12_1rnd_M_int"} count magazines _plane;
 _gbu38INTcount = {_x == "JAS_FIR_gbu38_1rnd_M_int"} count magazines _plane;
@@ -656,10 +656,10 @@ _pave4INTcount = {_x == "JAS_FIR_PavewayIV_1rnd_M_int"} count magazines _plane;
 _asraamINTcount = {_x == "JAS_FIR_AIM132_1rnd_M_int"} count magazines _plane;
 
 if (_agm88count >= 1) then {_plane addweapon "FIR_AGM88";};
-if (_aim9xcount >= 1) then {_plane addweapon "FIR_AIM132";};
-if (_aim120count >= 1) then {_plane addweapon "FIR_Meteor";};
-if (_gbu10count >= 1) then {_plane addweapon "FIR_GBU10";};
-if (_gbu12count >= 1) then {_plane addweapon "FIR_GBU12";};
+if (_aim9xcount >= 1) then {_plane addweapon "JAS_FIR_AIM132_Pylon";};
+if (_aim120count >= 1) then {_plane addweapon "JAS_FIR_Meteor_Launcher";};
+if (_gbu10count >= 1) then {_plane addweapon "JAS_FIR_GBU10";};
+if (_gbu12count >= 1) then {_plane addweapon "JAS_FIR_GBU12";};
 if (_gbu24Acount >= 1) then {_plane addweapon "JAS_FIR_GBU24A";};
 if (_gbu24Bcount >= 1) then {_plane addweapon "JAS_FIR_GBU24B";};
 if (_gbu24118count >= 1) then {_plane addweapon "JAS_FIR_GBU24_118";};
@@ -678,8 +678,8 @@ if (_gbu39count >= 1) then {_plane addweapon "FIR_gbu39";};
 if (_gbu53count >= 1) then {_plane addweapon "FIR_gbu53";};
 if (_brimstonecount >= 1) then {_plane addweapon "EAWS_BrimstoneLauncher";};
 if (_scalpcount >= 1) then {_plane addweapon "EAWS_SCALPLauncher";};
-if (_gbu54count >= 1) then {_plane addweapon "FIR_GBU54";};
-if (_pave4count >= 1) then {_plane addweapon "FIR_PAVEWAY_IV";};
+if (_gbu54count >= 1) then {_plane addweapon "JAS_FIR_GBU54";};
+if (_pave4count >= 1) then {_plane addweapon "JAS_FIR_PAVEWAY_IV";};
 
 if (_gbu12INTcount >= 1) then {_plane setVariable ["InternalGBU12","yes",true];};
 if (_gbu38INTcount >= 1) then {_plane setVariable ["InternalGBU38","yes",true];};

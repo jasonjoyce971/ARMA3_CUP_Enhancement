@@ -76,6 +76,23 @@ class CfgFunctions
 		};
 	};
 };
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class Components;
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
 class DefaultEventhandlers;
 class Eventhandlers;
 class CBA_Extended_EventHandlers_base;
@@ -1114,7 +1131,7 @@ class CfgVehicles
 		side = 1;
 		faction = "CUP_B_USMC";
 		editorPreview = "\ARMA3_CUP_Enhancement_F35\UI\editorpreview\F35B_USMC.jpg";
-		driverWeaponsInfoType="RscOptics_CAS_01_TGP";
+		driverWeaponsInfoType = "RscOptics_CAS_01_TGP";
 		class pilotCamera
 		{
 			class OpticsIn
@@ -1176,8 +1193,193 @@ class CfgVehicles
 			pilotOpticsShowCursor=1;
 			controllable=true;
 		};
+		airBrake = 1;
+		armor = 80;
+		armorLights = 1;
+		armorStructural = 2;
+		camouflage = 100;
+		crewCrashProtection = 0.15;
+		ejectDamageLimit = 0.45;
+		ejectDeadCargo = 0;
+		ejectDeadDriver = 0;
+		ejectSpeed[] = {0,60,0};
+		headGforceLeaningFactor[] = {0.01,0.002,0.01};
+		irScanGround = 1;
+		irScanRangeMax = 5000;
+		irScanRangeMin = 500;
+		irScanToEyeFactor = 2;
+		irTarget = 1;
+		irTargetSize = 1;
+		laserScanner = 1;
+		laserTarget = 0;
+		nvScanner = 0;
+		nvTarget = 0;
+		radarTarget = 1;
+		radarTargetSize = 0.8;
+		radarType = 4;
+		canUseScanners = 1;
+		commanderCanSee = 31;
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=100000;
+							maxRange=100000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						maxTrackableSpeed=1725;
+						angleRangeHorizontal=160;
+						angleRangeVertical=160;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						aimDown=0;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+		};
 		memoryPointDriverOptics="gau22_start";
-		unitInfoType="RscOptics_AV_pilot";
+		//unitInfoType="RscOptics_AV_pilot";
+		unitInfoType = "RscOptics_CAS_Pilot";
 		LESH_canBeTowed = 1;
 		LESH_towFromFront = 1;
 		LESH_AxisOffsetTarget[] = { 0, 4.5, -1.1 };
@@ -1410,6 +1612,165 @@ class CfgVehicles
 			maxYRotSpeed=0.30000001;
 			pilotOpticsShowCursor=1;
 			controllable=true;
+		};
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange = 500;
+							maxRange = 100000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						class GroundTarget
+						{
+							minRange = 500;
+							maxRange = 8000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						maxTrackableSpeed = 1725;
+						angleRangeHorizontal = 160;
+						angleRangeVertical = 160;
+						groundNoiseDistanceCoef = -1;
+						maxGroundNoiseDistance = -1;
+						minSpeedThreshold = 0;
+						maxSpeedThreshold = 0;
+						aimDown = 0;
+						allowsMarking= 1;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
 		};
 		memoryPointDriverOptics="gau22_start";
 		unitInfoType="RscOptics_AV_pilot";

@@ -25,6 +25,7 @@ _plane removeMagazinesturret ["FIR_JLAU_3_19rnd_M",[-1]];
 _plane removeMagazinesturret ["FIR_Hydra_7rnd_M",[-1]];
 _plane removeMagazinesturret ["FIR_Hydra_APKWS_7rnd_M",[-1]];
 _plane removeMagazinesturret ["CUP_2000Rnd_TE1_Red_Tracer_762x51_M134_M",[-1]];
+_plane removeMagazinesturret ["CUP_1200Rnd_TE1_Red_Tracer_GAU19_M",[-1]];
 
 _plane removeMagazines "FIR_240rnd_CMFlare_Chaff_Magazine";
 
@@ -37,8 +38,15 @@ _plane removeweaponturret ["CUP_Vlmg_TwinM134_veh",[-1]];
 _plane removeweaponturret ["JAS_HellfireLauncher_K",[0]];
 _plane removeweaponturret ["JAS_HellfireLauncher_N",[0]];
 _plane removeweaponturret ["FIR_APKWS_Launcher",[-1]];
+_plane removeweaponturret ["CUP_Vhmg_GAU19_veh",[-1]];
+_plane removeweaponturret ["CUP_Vhmg_TwinGAU19_veh",[-1]];
 
 //remove CUP ammo and weapons
+_plane animate ["hideGauL", 1];
+_plane animate ["hideGauR", 1];
+
+// GAU tracker
+_GAUcount = 0;
 
 _plane removeMPEventHandler ["MPHit", 0]; 
 
@@ -74,21 +82,30 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane animate ["hideGauR", 0];
+			_plane addmagazineturret ["CUP_1200Rnd_TE1_Red_Tracer_GAU19_M",[-1]];
+			_GAUcount = _GAUcount + 1;
+			
+			lbSetCurSel [2201, 1];
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
+			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+		};
+		case 6:
 		{
 			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
 		};
@@ -108,21 +125,30 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane animate ["hideGauL", 0];
+			_plane addmagazineturret ["CUP_1200Rnd_TE1_Red_Tracer_GAU19_M",[-1]];
+			_GAUcount = _GAUcount + 1;
+			
+			lbSetCurSel [2100, 1];
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
+			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+		};
+		case 6:
 		{
 			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
 		};
@@ -154,9 +180,13 @@ sleep 0.3;
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
@@ -188,9 +218,13 @@ sleep 0.3;
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
@@ -222,9 +256,13 @@ sleep 0.3;
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
@@ -256,9 +294,13 @@ sleep 0.3;
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
@@ -319,11 +361,15 @@ _plane_magazine = magazines _plane;
 
 sleep 0.3;
 
+//_GAUcount = {_x == "CUP_1200Rnd_TE1_Red_Tracer_GAU19_M"} count magazines _plane;
 _hydra7count = {_x == "FIR_Hydra_7_Pod_1rnd_M"} count magazines _plane;
 _hydra19count = {_x == "FIR_JLAU_3_Pod_1rnd_M"} count magazines _plane;
 _hellfireKcount = {_x == "JAS_AGM114K_1rnd_M"} count magazines _plane;
 _hellfireNcount = {_x == "JAS_AGM114N_1rnd_M"} count magazines _plane;
 _APKWS7count = {_x == "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"} count magazines _plane;
+
+if (_GAUcount == 1) then {_plane addweaponturret ["CUP_Vhmg_GAU19_veh",[-1]];};
+if (_GAUcount == 2) then {_plane addweaponturret ["CUP_Vhmg_TwinGAU19_veh",[-1]];};
 
 if (_hydra7count >= 1) then 
 {

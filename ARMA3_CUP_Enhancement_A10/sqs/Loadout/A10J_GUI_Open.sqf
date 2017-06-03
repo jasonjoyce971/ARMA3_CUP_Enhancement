@@ -136,7 +136,9 @@ _handle= CreateDialog "A10J_GUI";
 		"AGM-65G",
 		"AGM-65G x3",
 		"AGM-65L",
-		"AGM-65L x3"
+		"AGM-65L x3",
+		"AGM-65H",
+		"AGM-65H x3"
     ];
 //Add Hardpoint 6 - left inboard
 	{lbAdd[2104,_x]} forEach 
@@ -176,7 +178,9 @@ _handle= CreateDialog "A10J_GUI";
 		"AGM-65G",
 		"AGM-65G x3",
 		"AGM-65L",
-		"AGM-65L x3"
+		"AGM-65L x3",
+		"AGM-65H",
+		"AGM-65H x3"
     ];
 //Add Hardpoint 7 - right belly outer
 	{lbAdd[2105,_x]} forEach 

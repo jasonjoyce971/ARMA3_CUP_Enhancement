@@ -53,6 +53,31 @@ class CfgAddons
 		};
 	};
 };
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+class Components;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftPilot: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightPilot: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
 class DefaultEventhandlers;
 class Eventhandlers;
 class CBA_Extended_EventHandlers;
@@ -391,6 +416,24 @@ class CfgVehicles
 		side = 1;
 		faction = "CUP_B_GB";
 		dlc = "CUP_Vehicles";
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
+			{
+			};
+			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
+			{
+			};
+		};
 		class RotorLibHelicopterProperties
 		{
 			RTDconfig = "ARMA3_CUP_Enhancement_HC3\rotorLib\RTD_Merlin.xml";
@@ -6910,6 +6953,164 @@ class CfgVehicles
 		model = "\CUP\AirVehicles\CUP_AirVehicles_HC3\CUP_MerlinHC3_BAF";
 		editorPreview="CUP\AirVehicles\CUP_AirVehicles_HC3\Data\preview\CUP_B_Merlin_HC3_GB.jpg";
 		_generalMacro = "CUP_B_Merlin_HM2_GB";
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=1000;
+							maxRange=1000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						maxTrackableSpeed=125;
+						angleRangeHorizontal=180;
+						angleRangeVertical=90;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						aimDown=30;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+		};
 		hiddenSelectionsTextures[]=
 		{
 			"\CUP\AirVehicles\CUP_AirVehicles_HC3\skins\merlinhc3_1_Grey_RN_co.paa",

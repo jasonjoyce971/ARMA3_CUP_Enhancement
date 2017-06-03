@@ -89,11 +89,11 @@ sleep 0.01;
 		};
 		case 8:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; // 12
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 10:
 		{
@@ -147,11 +147,11 @@ sleep 0.01;
 		};
 		case 8:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; // 12
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 10:
 		{
@@ -237,11 +237,11 @@ sleep 0.01;
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; // 12
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 18:
 		{
@@ -323,11 +323,11 @@ sleep 0.01;
 		};
 		case 16:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; // 12
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 18:
 		{
@@ -389,11 +389,11 @@ sleep 0.01;
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
+			_plane addmagazine "JAS_FIR_GBU10_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; // 12
 		};
 		case 13:
 		{
@@ -401,7 +401,7 @@ sleep 0.01;
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
@@ -417,7 +417,7 @@ sleep 0.01;
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_GBU54_1rnd_M"; // 54
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M"; // 54
 		};
 		case 19:
 		{
@@ -465,27 +465,35 @@ sleep 0.01;
 		};
 		case 30:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; // MAV D SINGLE
+			_plane addmagazine "JAS_FIR_AGM65D_1rnd_M"; // MAV D SINGLE
 		};
 		case 31:
 		{
-			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for Mav Ds
 		};
 		case 32:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; // MAV G
+			_plane addmagazine "JAS_FIR_AGM65G_1rnd_M"; // MAV G
 		};
 		case 33:
 		{
-			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for Mav Gs
 		};
 		case 34:
 		{
-			_plane addmagazine "FIR_AGM65L_1rnd_M"; // MAV L
+			_plane addmagazine "JAS_FIR_AGM65L_1rnd_M"; // MAV L
 		};
 		case 35:
 		{
-			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Ls
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for Mav Ls
+		};
+		case 36:
+		{
+			_plane addmagazine "JAS_FIR_AGM65H_1rnd_M"; // MAV H
+		};
+		case 37:
+		{
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for Mav Ls
 		};
 	};
 	
@@ -542,11 +550,11 @@ sleep 0.01;
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
+			_plane addmagazine "JAS_FIR_GBU10_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; // 12
 		};
 		case 13:
 		{
@@ -554,7 +562,7 @@ sleep 0.01;
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
@@ -570,7 +578,7 @@ sleep 0.01;
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_GBU54_1rnd_M"; // 54
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M"; // 54
 		};
 		case 19:
 		{
@@ -607,7 +615,6 @@ sleep 0.01;
 		case 27:
 		{
 			_plane addmagazine "FIR_Triplepylon_1rnd_M"; // TER fit for APKWS 7
-			_APKWS = _APKWS + 3;
 		};
 		case 28:
 		{
@@ -619,27 +626,35 @@ sleep 0.01;
 		};
 		case 30:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; // MAV D SINGLE
+			_plane addmagazine "JAS_FIR_AGM65D_1rnd_M"; // MAV D SINGLE
 		};
 		case 31:
 		{
-			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for Mav Ds
 		};
 		case 32:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; // MAV G
+			_plane addmagazine "JAS_FIR_AGM65G_1rnd_M"; // MAV G
 		};
 		case 33:
 		{
-			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for Mav Gs
 		};
 		case 34:
 		{
-			_plane addmagazine "FIR_AGM65L_1rnd_M"; // MAV L
+			_plane addmagazine "JAS_FIR_AGM65L_1rnd_M"; // MAV L
 		};
 		case 35:
 		{
-			_plane addmagazine "FIR_LAU88_1rnd_M"; //TER fit for Mav Ls
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for Mav Ls
+		};
+		case 36:
+		{
+			_plane addmagazine "JAS_FIR_AGM65H_1rnd_M"; // MAV H
+		};
+		case 37:
+		{
+			_plane addmagazine "FIR_Triplepylon_1rnd_M"; //TER fit for Mav Ls
 		};
 	};
 	
@@ -696,11 +711,11 @@ sleep 0.01;
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
+			_plane addmagazine "JAS_FIR_GBU10_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; // 12
 		};
 		case 13:
 		{
@@ -708,7 +723,7 @@ sleep 0.01;
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
@@ -724,7 +739,7 @@ sleep 0.01;
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_GBU54_1rnd_M"; // 54
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M"; // 54
 		};
 		case 19:
 		{
@@ -809,11 +824,11 @@ sleep 0.01;
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
+			_plane addmagazine "JAS_FIR_GBU10_1rnd_M"; // 10
 		};
 		case 12:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; // 12
 		};
 		case 13:
 		{
@@ -821,7 +836,7 @@ sleep 0.01;
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 15:
 		{
@@ -837,7 +852,7 @@ sleep 0.01;
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_GBU54_1rnd_M"; // 54
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M"; // 54
 		};
 		case 19:
 		{
@@ -914,15 +929,15 @@ sleep 0.01;
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
+			_plane addmagazine "JAS_FIR_GBU10_1rnd_M"; // 10
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; // 12
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 12:
 		{
@@ -934,7 +949,7 @@ sleep 0.01;
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_GBU54_1rnd_M"; // 54
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M"; // 54
 		};
 	};
 	
@@ -983,15 +998,15 @@ sleep 0.01;
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M"; // 10
+			_plane addmagazine "JAS_FIR_GBU10_1rnd_M"; // 10
 		};
 		case 10:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; // 12
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; // 12
 		};
 		case 11:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; // EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; // EGBU
 		};
 		case 12:
 		{
@@ -1003,7 +1018,7 @@ sleep 0.01;
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_GBU54_1rnd_M"; // 54
+			_plane addmagazine "JAS_FIR_gbu54_1rnd_M"; // 54
 		};
 	};
 	
@@ -1044,15 +1059,15 @@ sleep 0.01;
 		};
 		case 7:
 		{
-			_plane addmagazine "FIR_GBU10_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU10_1rnd_M";
 		};
 		case 8:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M";
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M";
 		};
 		case 9:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M";
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M";
 		};
 	};
 	
@@ -1072,8 +1087,8 @@ sleep 0.01;
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_AIM9L_1rnd_M";
-			_plane addmagazine "FIR_AIM9L_1rnd_M";
+			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
+			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
 		};
 		case 2:
 		{
@@ -1142,8 +1157,8 @@ sleep 0.01;
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_AIM9L_1rnd_M";
-			_plane addmagazine "FIR_AIM9L_1rnd_M";
+			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
+			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
 		};
 		case 2:
 		{
@@ -1258,7 +1273,7 @@ sleep 0.01;
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
@@ -1266,7 +1281,7 @@ sleep 0.01;
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
@@ -1330,7 +1345,7 @@ sleep 0.01;
 		};
 		case 31:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "JAS_FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
 		};
 		case 32:
 		{
@@ -1338,7 +1353,7 @@ sleep 0.01;
 		};
 		case 33:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "JAS_FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
 		};
 		case 34:
 		{
@@ -1346,7 +1361,15 @@ sleep 0.01;
 		};
 		case 35:
 		{
-			_plane addmagazine "FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
+			_plane addmagazine "JAS_FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
+		};
+		case 36:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+		};
+		case 37:
+		{
+			_plane addmagazine "JAS_FIR_AGM65H_1rnd_M"; //TER fit for Mav Hs
 		};
 	};
 	
@@ -1411,7 +1434,7 @@ sleep 0.01;
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
@@ -1419,7 +1442,7 @@ sleep 0.01;
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
@@ -1483,7 +1506,7 @@ sleep 0.01;
 		};
 		case 31:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "JAS_FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
 		};
 		case 32:
 		{
@@ -1491,7 +1514,7 @@ sleep 0.01;
 		};
 		case 33:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "JAS_FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
 		};
 		case 34:
 		{
@@ -1499,7 +1522,15 @@ sleep 0.01;
 		};
 		case 35:
 		{
-			_plane addmagazine "FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
+			_plane addmagazine "JAS_FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
+		};
+		case 36:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+		};
+		case 37:
+		{
+			_plane addmagazine "JAS_FIR_AGM65H_1rnd_M"; //TER fit for Mav Hs
 		};
 	};
 	
@@ -1564,7 +1595,7 @@ sleep 0.01;
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
@@ -1572,7 +1603,7 @@ sleep 0.01;
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
@@ -1636,7 +1667,7 @@ sleep 0.01;
 		};
 		case 31:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "JAS_FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
 		};
 		case 32:
 		{
@@ -1644,7 +1675,7 @@ sleep 0.01;
 		};
 		case 33:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "JAS_FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
 		};
 		case 34:
 		{
@@ -1652,7 +1683,15 @@ sleep 0.01;
 		};
 		case 35:
 		{
-			_plane addmagazine "FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
+			_plane addmagazine "JAS_FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
+		};
+		case 36:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+		};
+		case 37:
+		{
+			_plane addmagazine "JAS_FIR_AGM65H_1rnd_M"; //TER fit for Mav Hs
 		};
 	};
 	
@@ -1717,7 +1756,7 @@ sleep 0.01;
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
@@ -1725,7 +1764,7 @@ sleep 0.01;
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
@@ -1789,7 +1828,7 @@ sleep 0.01;
 		};
 		case 31:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "JAS_FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
 		};
 		case 32:
 		{
@@ -1797,7 +1836,7 @@ sleep 0.01;
 		};
 		case 33:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "JAS_FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
 		};
 		case 34:
 		{
@@ -1805,7 +1844,15 @@ sleep 0.01;
 		};
 		case 35:
 		{
-			_plane addmagazine "FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
+			_plane addmagazine "JAS_FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
+		};
+		case 36:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+		};
+		case 37:
+		{
+			_plane addmagazine "JAS_FIR_AGM65H_1rnd_M"; //TER fit for Mav Hs
 		};
 	};
 	
@@ -1870,7 +1917,7 @@ sleep 0.01;
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
@@ -1878,7 +1925,7 @@ sleep 0.01;
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
@@ -1942,7 +1989,7 @@ sleep 0.01;
 		};
 		case 31:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "JAS_FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
 		};
 		case 32:
 		{
@@ -1950,7 +1997,7 @@ sleep 0.01;
 		};
 		case 33:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "JAS_FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
 		};
 		case 34:
 		{
@@ -1958,7 +2005,15 @@ sleep 0.01;
 		};
 		case 35:
 		{
-			_plane addmagazine "FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
+			_plane addmagazine "JAS_FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
+		};
+		case 36:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+		};
+		case 37:
+		{
+			_plane addmagazine "JAS_FIR_AGM65H_1rnd_M"; //TER fit for Mav Hs
 		};
 	};
 	
@@ -2023,7 +2078,7 @@ sleep 0.01;
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
@@ -2031,7 +2086,7 @@ sleep 0.01;
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
@@ -2095,7 +2150,7 @@ sleep 0.01;
 		};
 		case 31:
 		{
-			_plane addmagazine "FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
+			_plane addmagazine "JAS_FIR_AGM65D_1rnd_M"; //TER fit for Mav Ds
 		};
 		case 32:
 		{
@@ -2103,7 +2158,7 @@ sleep 0.01;
 		};
 		case 33:
 		{
-			_plane addmagazine "FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
+			_plane addmagazine "JAS_FIR_AGM65G_1rnd_M"; //TER fit for Mav Gs
 		};
 		case 34:
 		{
@@ -2111,7 +2166,15 @@ sleep 0.01;
 		};
 		case 35:
 		{
-			_plane addmagazine "FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
+			_plane addmagazine "JAS_FIR_AGM65L_1rnd_M"; //TER fit for Mav Ls
+		};
+		case 36:
+		{
+			_plane addmagazine "FIR_Empty_1rnd_M"; // MAV L
+		};
+		case 37:
+		{
+			_plane addmagazine "JAS_FIR_AGM65H_1rnd_M"; //TER fit for Mav Hs
 		};
 	};
 	
@@ -2176,7 +2239,7 @@ sleep 0.01;
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
@@ -2184,7 +2247,7 @@ sleep 0.01;
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
@@ -2289,7 +2352,7 @@ sleep 0.01;
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
@@ -2297,7 +2360,7 @@ sleep 0.01;
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
@@ -2402,7 +2465,7 @@ sleep 0.01;
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
@@ -2410,7 +2473,7 @@ sleep 0.01;
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
@@ -2515,7 +2578,7 @@ sleep 0.01;
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
@@ -2523,7 +2586,7 @@ sleep 0.01;
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
@@ -2628,7 +2691,7 @@ sleep 0.01;
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
@@ -2636,7 +2699,7 @@ sleep 0.01;
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{
@@ -2741,7 +2804,7 @@ sleep 0.01;
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU12_1rnd_M"; //TER fit for LGBs
+			_plane addmagazine "JAS_FIR_GBU12_1rnd_M"; //TER fit for LGBs
 		};
 		case 14:
 		{
@@ -2749,7 +2812,7 @@ sleep 0.01;
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_EGBU12_1rnd_M"; //TER fit for EGBU
+			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M"; //TER fit for EGBU
 		};
 		case 16:
 		{

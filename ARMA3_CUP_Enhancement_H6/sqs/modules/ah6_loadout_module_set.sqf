@@ -19,21 +19,26 @@ Switch (_hardpoint1) Do
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane animate ["hideGauR", 0];
+			_plane addmagazineturret ["CUP_1200Rnd_TE1_Red_Tracer_GAU19_M",[-1]];
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
+			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+		};
+		case 6:
 		{
 			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
 		};
@@ -53,21 +58,26 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane animate ["hideGauL", 0];
+			_plane addmagazineturret ["CUP_1200Rnd_TE1_Red_Tracer_GAU19_M",[-1]];
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
+			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
+			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+		};
+		case 6:
 		{
 			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
 		};
@@ -99,9 +109,13 @@ sleep 0.3;
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
@@ -133,9 +147,13 @@ sleep 0.3;
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
@@ -167,9 +185,13 @@ sleep 0.3;
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
@@ -201,9 +223,13 @@ sleep 0.3;
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
+			_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 5:
+		{
+			_plane addmagazine "JAS_AGM114K_1rnd_M";
+		};
+		case 6:
 		{
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
@@ -215,11 +241,15 @@ _plane_magazine = magazines _plane;
 
 sleep 0.3;
 
+_GAUcount = {_x == "CUP_1200Rnd_TE1_Red_Tracer_GAU19_M"} count magazines _plane;
 _hydra7count = {_x == "FIR_Hydra_7_Pod_1rnd_M"} count magazines _plane;
 _hydra19count = {_x == "FIR_JLAU_3_Pod_1rnd_M"} count magazines _plane;
 _hellfireKcount = {_x == "JAS_AGM114K_1rnd_M"} count magazines _plane;
 _hellfireNcount = {_x == "JAS_AGM114N_1rnd_M"} count magazines _plane;
 _APKWS7count = {_x == "JAS_FIR_Hydra_APKWS_Pod_1rnd_M"} count magazines _plane;
+
+if (_GAUcount == 1) then {_plane addweapon "CUP_Vhmg_GAU19_veh";};
+if (_GAUcount == 2) then {_plane addweapon "CUP_Vhmg_TwinGAU19_veh";};
 
 if (_hydra7count >= 1) then 
 {
@@ -263,7 +293,7 @@ if (_hellfireNcount >= 1) then
 	_plane addweaponturret ["JAS_HellfireLauncher_N",[0]];
 };
 
-Switch (_skin) Do
+/*Switch (_skin) Do
 {
 	case 0: // US Black
 	{
@@ -280,4 +310,4 @@ Switch (_skin) Do
 		_plane setobjecttextureglobal[0, "CUP\AirVehicles\CUP_AirVehicles_AH6\data\ah6_merge1_racs_co.paa"]; 
 		_plane setobjecttextureglobal[1, "CUP\AirVehicles\CUP_AirVehicles_AH6\data\ah6_merge2racs_co.paa"];
 	};
-};
+};*/

@@ -72,6 +72,43 @@ class CfgFunctions
 		};
 	};
 };
+
+class SensorTemplatePassiveRadar;
+class SensorTemplateAntiRadiation;
+class SensorTemplateActiveRadar;
+class SensorTemplateIR;
+class SensorTemplateVisual;
+class SensorTemplateMan;
+class SensorTemplateLaser;
+class SensorTemplateNV;
+/*
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class Components;
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+*/
+class Components;
+class DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
+class VehicleSystemsTemplateLeftPilot: DefaultVehicleSystemsDisplayManagerLeft
+{
+	class components;
+};
+class VehicleSystemsTemplateRightPilot: DefaultVehicleSystemsDisplayManagerRight
+{
+	class components;
+};
 class DefaultEventhandlers;
 class Eventhandlers;
 class CBA_Extended_EventHandlers_base;
@@ -6145,6 +6182,157 @@ class CfgVehicles
 			"\CUP\AirVehicles\CUP_AirVehicles_AW159\data\lynx_base_co.paa",
 			"\CUP\AirVehicles\CUP_AirVehicles_AW159\data\ah64d_details_co.paa"
 		};
+		/*class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+		};*/
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
+			{
+			};
+			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
+			{
+			};
+		};
 		ace_refuel_fuelCapacity=1004;
 		LESH_canBeTowed=1;
 		LESH_towFromFront=1;
@@ -6291,26 +6479,6 @@ class CfgVehicles
 				condition = "this doorPhase ""CargoDoorL"" > 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
 				statement = "this animateDoor [""CargoDoorL"",0];";
 			};
-			class Pack
-			{
-				displayName = "Pack";
-				displayNameDefault = "Pack";
-				position = "PackAction";
-				radius = 10;
-				onlyForPlayer = 1;
-				condition = "(!isEngineOn this) AND {(this animationphase 'mainRotor_unfolded' !=1) AND (driver this == player) AND (speed this < 1)}";
-				statement = "[this,1] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
-			};
-			class unPack
-			{
-				displayName = "UnPack";
-				displayNameDefault = "Unpack";
-				position = "PackAction";
-				radius = 10;
-				onlyForPlayer = 1;
-				condition = "this animationphase ""mainRotor_unfolded"" !=0 AND driver this == player";
-				statement = "[this,0] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
-			};
 			class Gui_Open
 			{
 				displayName = "<t color='#739eff'>Open Dialog</t>";
@@ -6358,7 +6526,7 @@ class CfgVehicles
 		animationList[]=
 		{
 			"hide_radar",
-			0,
+			1,
 			"hide_struts",
 			0
 		};
@@ -6381,18 +6549,204 @@ class CfgVehicles
 			{
 			};
 		};
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=1000;
+							maxRange=1000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						maxTrackableSpeed=125;
+						angleRangeHorizontal=180;
+						angleRangeVertical=90;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						aimDown=30;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
+			{
+			};
+			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
+			{
+			};
+		};
 		class AnimationSources : AnimationSources
 		{
 			class hide_radar
 			{
 				source = "user";
 				animPeriod = 0;
-				initPhase = 1;
+				initPhase = 0;
 			};
 		};
 	};
-	class JAS_CUP_B_Wildcat_Unarmed_RN_Blackcat: JAS_CUP_B_AW159_Unarmed_GB
+	class JAS_CUP_B_Wildcat_Unarmed_RN_Blackcat: JAS_CUP_B_Wildcat_Unarmed_RN_Grey
 	{
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=1000;
+							maxRange=1000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						maxTrackableSpeed=125;
+						angleRangeHorizontal=180;
+						angleRangeVertical=90;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						aimDown=30;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
+			{
+			};
+			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
+			{
+			};
+		};
 		author="$STR_CUP_AUTHOR_STRING";
 		scope=1;
 		scopeCurator=1;
@@ -6420,7 +6774,7 @@ class CfgVehicles
 		animationList[]=
 		{
 			"hide_radar",
-			0,
+			1,
 			"hide_struts",
 			0
 		};
@@ -6446,7 +6800,160 @@ class CfgVehicles
 			{
 				source="user";
 				animPeriod=0;
-				initPhase=1;
+				initPhase=0;
+			};
+		};
+		editorPreview="CUP\AirVehicles\CUP_AirVehicles_AW159\Data\preview\CUP_B_Wildcat_Unarmed_RN_Blackcat.jpg";
+	};
+	class JAS_CUP_B_Wildcat_Unarmed_RDAF: JAS_CUP_B_Wildcat_Unarmed_RN_Grey
+	{
+		author="$STR_CUP_AUTHOR_STRING";
+		scope=1;
+		scopeCurator=1;
+		displayname="AW159 RDAF (Unarmed)";
+		fir_lynxAAC_custom_skin=1;
+		fir_lynxAAC_custom_name="RDAF";
+		fir_lynxAAC_custom_code="JAS_CUP_B_Wildcat_Unarmed_RDAF";
+		fir_lynxAAC_custom_preview_pic="\ARMA3_CUP_Enhancement_AW159\UI\preview\WildcatRDAF.paa";
+		hiddenSelections[]=
+		{
+			"camo1",
+			"camo2"
+		};
+		model="\CUP\AirVehicles\CUP_AirVehicles_AW159\CUP_AW159";
+		picture="\CUP\AirVehicles\CUP_AirVehicles_AW159\data\UI\picture_lynx_ca.paa";
+		icon="\CUP\AirVehicles\CUP_AirVehicles_AW159\data\UI\icon_lynx_ca.paa";
+		hiddenSelectionsTextures[]=
+		{
+			"\CUP\AirVehicles\CUP_AirVehicles_AW159\Skins\lynx_base_rdaf_co.paa",
+			"\CUP\AirVehicles\CUP_AirVehicles_AW159\data\ah64d_details_co.paa"
+		};
+		_generalMacro="CUP_Wildcat_Unarmed_RDAF";
+		faction="CUP_B_GB";
+		crew="CUP_B_BAF_Pilot_DDPM";
+		animationList[]=
+		{
+			"hide_radar",
+			1,
+			"hide_struts",
+			0
+		};
+		typicalCargo[]=
+		{
+			"CUP_B_BAF_Pilot_DDPM"
+		};
+		class Turrets: Turrets
+		{
+			class MainTurret: MainTurret
+			{
+			};
+			class CargoTurret_01: CargoTurret_01
+			{
+			};
+			class CargoTurret_02: CargoTurret_02
+			{
+			};
+		};
+		class AnimationSources: AnimationSources
+		{
+			class hide_radar
+			{
+				source="user";
+				animPeriod=0;
+				initPhase=0;
+			};
+		};
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=1000;
+							maxRange=1000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						maxTrackableSpeed=125;
+						angleRangeHorizontal=180;
+						angleRangeVertical=90;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						aimDown=30;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
+			{
+			};
+			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
+			{
 			};
 		};
 		editorPreview="CUP\AirVehicles\CUP_AirVehicles_AW159\Data\preview\CUP_B_Wildcat_Unarmed_RN_Blackcat.jpg";
@@ -6592,26 +7099,6 @@ class CfgVehicles
 				priority = 0;
 				condition = "this doorPhase ""CargoDoorL"" > 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
 				statement = "this animateDoor [""CargoDoorL"",0];";
-			};
-			class Pack
-			{
-				displayName = "Pack";
-				displayNameDefault = "Pack";
-				position = "PackAction";
-				radius = 10;
-				onlyForPlayer = 1;
-				condition = "(!isEngineOn this) AND {(this animationphase 'mainRotor_unfolded' !=1) AND (driver this == player) AND (speed this < 1)}";
-				statement = "[this,1] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
-			};
-			class unPack
-			{
-				displayName = "UnPack";
-				displayNameDefault = "Unpack";
-				position = "PackAction";
-				radius = 10;
-				onlyForPlayer = 1;
-				condition = "this animationphase ""mainRotor_unfolded"" !=0 AND driver this == player";
-				statement = "[this,0] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
 			};
 			class Gui_Open
 			{
@@ -6859,26 +7346,6 @@ class CfgVehicles
 				condition = "this doorPhase ""CargoDoorL"" > 0.5 AND ((this getCargoIndex player) isEqualTo 1)";
 				statement = "this animateDoor [""CargoDoorL"",0];";
 			};
-			class Pack
-			{
-				displayName = "Pack";
-				displayNameDefault = "Pack";
-				position = "PackAction";
-				radius = 10;
-				onlyForPlayer = 1;
-				condition = "(!isEngineOn this) AND {(this animationphase 'mainRotor_unfolded' !=1) AND (driver this == player) AND (speed this < 1)}";
-				statement = "[this,1] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
-			};
-			class unPack
-			{
-				displayName = "UnPack";
-				displayNameDefault = "Unpack";
-				position = "PackAction";
-				radius = 10;
-				onlyForPlayer = 1;
-				condition = "this animationphase ""mainRotor_unfolded"" !=0 AND driver this == player";
-				statement = "[this,0] execvm ""\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\Scripts\AW159_fold.sqf""";
-			};
 			class Gui_Open
 			{
 				displayName = "<t color='#739eff'>Open Dialog</t>";
@@ -6897,6 +7364,160 @@ class CfgVehicles
 			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf""; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
 			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
+		};
+	};
+	class JAS_CUP_B_Wildcat_Unarmed_RN_Grey_AAC : JAS_CUP_B_Wildcat_Unarmed_RN_Grey
+	{
+		author = "CUP/-{GOL}-Jason";
+		scope = 2;
+		scopeCurator = 2;
+		displayname = "AW159J RN Clean";
+		fir_lynxAAC_custom_skin=2;
+		fir_lynxAAC_custom_name="Wildcat Royal Navy";
+		fir_lynxAAC_custom_code="JAS_CUP_B_Wildcat_Unarmed_RN_Grey";
+		fir_lynxAAC_custom_preview_pic="\ARMA3_CUP_Enhancement_AW159\UI\preview\WildcatRN.paa";
+		editorPreview = "\ARMA3_CUP_Enhancement_AW159\UI\editorpreview\WildcatRN.jpg";
+		hiddenSelections[] =
+		{
+			"camo1",
+			"camo2"
+		};
+		model="\CUP\AirVehicles\CUP_AirVehicles_AW159\CUP_AW159";
+		picture="\CUP\AirVehicles\CUP_AirVehicles_AW159\data\UI\picture_lynx_ca.paa";
+		icon="\CUP\AirVehicles\CUP_AirVehicles_AW159\data\UI\icon_lynx_ca.paa";
+		hiddenSelectionsTextures[] =
+		{
+			"\CUP\AirVehicles\CUP_AirVehicles_AW159\Skins\lynx_base_rn_grey_co.paa",
+			"\CUP\AirVehicles\CUP_AirVehicles_AW159\data\ah64d_details_co.paa"
+		};
+		animationList[]=
+		{
+			"hide_radar",
+			1,
+			"hide_struts",
+			0
+		};
+		_generalMacro = "CUP_Wildcat_Unarmed_RN_Grey";
+		faction = "GOL_AAC_BLUFOR";
+		editorSubcategory="GOL_AAC_RAVEN";
+		crew = "CUP_B_BAF_Pilot_DDPM";
+		typicalCargo[] =
+		{
+			"CUP_B_BAF_Pilot_DDPM"
+		};
+		class Turrets : Turrets
+		{
+			class MainTurret : MainTurret
+			{
+			};
+			class CargoTurret_01 : CargoTurret_01
+			{
+			};
+			class CargoTurret_02 : CargoTurret_02
+			{
+			};
+		};
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=1000;
+							maxRange=1000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						maxTrackableSpeed=125;
+						angleRangeHorizontal=180;
+						angleRangeVertical=90;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						aimDown=30;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
+			{
+			};
+			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
+			{
+			};
+		};
+		class AnimationSources : AnimationSources
+		{
+			class hide_radar
+			{
+				source = "user";
+				animPeriod = 0;
+				initPhase = 0;
+			};
 		};
 	};
 	class JAS_CUP_I_AW159_Unarmed_AAC : JAS_CUP_B_Wildcat_Unarmed_Digital_AAF

@@ -393,6 +393,7 @@ class RscInGameUI
 		};
 	};
 };
+/*
 #include "gui.hpp"
 class JAS_A164_GUI
 {
@@ -1155,6 +1156,7 @@ class JAS_YAK_GUI
 		};
 	};
 };
+*/
 class CfgVehicles
 {
 	class Logic;
@@ -1189,7 +1191,7 @@ class CfgVehicles
 	class B_T_Boat_Transport_01_F;
 	class O_Plane_CAS_02_F;
 	class I_Plane_Fighter_03_AA_F; 
-	class JAS_FIR_A143R: I_Plane_Fighter_03_AA_F
+	/*class JAS_FIR_A143R: I_Plane_Fighter_03_AA_F
 	{
 		scope = 2;
 		author = "Bohimia Interactive /Firewill";
@@ -1219,8 +1221,8 @@ class CfgVehicles
 			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
-	};
-	class JAS_FIR_A143R_AAC: JAS_FIR_A143R
+	};*/
+	/*class JAS_FIR_A143R_AAC: JAS_FIR_A143R
 	{
 		scope = 2;
 		author = "Bohimia Interactive /Firewill";
@@ -1241,7 +1243,7 @@ class CfgVehicles
 			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
         };
-	};
+	};*/
 	class JAS_B_Lifeboat: B_T_Boat_Transport_01_F
 	{
 		author="$STR_A3_Bohemia_Interactive";
@@ -2372,6 +2374,7 @@ class CfgVehicles
 			};
 		};
 	};
+	/*
 	class JAS_FIR_A164J: B_Plane_CAS_01_F
 	{
 		scope=2;
@@ -2453,7 +2456,7 @@ class CfgVehicles
 		displayname="A-164J Wipeout-J";
 		faction="GOL_AAC_BLUFOR";
 		editorSubcategory="GOL_AAC_PHANTOM";
-	};	
+	};
 	class JAS_O_Plane_CAS_02_F: O_Plane_CAS_02_F
 	{
 		author="Bohemia Interactive/-{GOL}-Jason";
@@ -2555,7 +2558,7 @@ class CfgVehicles
 		faction="GOL_AAC_OPFOR";
 		editorSubcategory="GOL_AAC_PHANTOM";
 	};
-	/*class JAS_O_Plane_CAS_02_F_AACX: JAS_O_Plane_CAS_02_F
+	class JAS_O_Plane_CAS_02_F_AACX: JAS_O_Plane_CAS_02_F
 	{
 		author="Bohemia Interactive/-{GOL}-Jason";
 		scope=2;
@@ -2581,7 +2584,7 @@ class CfgVehicles
 			"JAS_R77_1rnd_M"
 		};
 	};*/
-	class JAS_A164_Loadout_Module: Module_F
+	/*class JAS_A164_Loadout_Module: Module_F
 	{
 		scope=2;
 		author = "-{GOL}-Jason";
@@ -3178,8 +3181,8 @@ class CfgVehicles
 				};
 			};
 		};
-	};
-	class JAS_A143_Loadout_Module: Module_F
+	};*/
+	/*class JAS_A143_Loadout_Module: Module_F
 	{
 		scope=2;
 		author = "-{GOL}-Jason";
@@ -3736,8 +3739,8 @@ class CfgVehicles
 				};
 			};
 		};
-	};
-	class JAS_YAK_Loadout_Module: Module_F
+	};*/
+	/*class JAS_YAK_Loadout_Module: Module_F
 	{
 		scope=2;
 		author = "-{GOL}-Jason";
@@ -4209,5 +4212,5 @@ class CfgVehicles
 				};
 			};
 		};
-	};
+	};*/
 };
