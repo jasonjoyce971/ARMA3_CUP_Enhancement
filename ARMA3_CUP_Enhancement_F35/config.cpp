@@ -121,29 +121,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class F35J
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "F-35J Lightning";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Multi-role Strike Fighter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The F-35 is currently under development in 3 variants and is scheduled to replace most current aircraft by 2025. Capable of both fighter and strike missions the F-35 is set to be primarily used by the UK and the USMC although it is also scheduled for deployment by 7 other countries. The 'J' variant in game features adustable payload for mission specific tasks. The J is based on the current B variant and is a Short Take Off Vertical Landing (STOVL) system. It can operate from short airfields and the Landing Helicopter Dock as well as more conventional airbases.<br/><br/>Payload Options:<br/><br/>%2GBU-10<br/>%2GBU-12<br/>%2GBU-24B<br/>%2GBU-31<br/>%2GBU-38<br/>%2Mk82 Snakeye<br/>%2Mk82 GPB<br/>%2GBU-39 SDB<br/>%2GBU-53 SDB<br/>%2GBU-54<br/>%2AIM-9X (USMC Only)<br/>%2AIM-120 (USMC Only)<br/>%2AGM-154A (USMC ONLY)<br/>%2AGM-154C (USMC ONLY)<br/>%2AGM-65D (USMC ONLY)<br/>%2AGM-65G (USMC ONLY)<br/>%2AGM-65L (USMC ONLY)<br/>%2EGBU-12 II (USMC ONLY)<br/>%2CBU-87 (USMC ONLY)<br/>%2CBU-89 (USMC ONLY)<br/>%2CBU-97 (USMC ONLY)<br/>%2CBU-103 (USMC ONLY)<br/>%2CBU-105 (USMC Only)<br/>%2BRIMSTONE (RAF/RN ONLY)<br/>%2STORM SHADOW (RAF/RN ONLY)<br/>%2 EGBU-12 Paveway IV (RAF/RN ONLY)<br/><br/>Factions:<br/><br/>%2USMC<br/>%2UK";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;

@@ -120,29 +120,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class SU25J
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "Su-25J Frogfoot";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Ground Attack Airplane";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The Su-25 is a single seat, ground attack craft similar in role to the more famous A-10. Although capable of carrying a wide selection of weapons, the Su-25 excels at low level strafing runs with gun pods or rockets. The AAC upgrade pack adds the ability to change the payload to suite the mission and brings additional weapons such as the RBK cluster bomb, S-13 rocket system and Kh-25 ARM.<br/><br/>Payload Options:<br/><br/>%2R-73<br/>%2GSh-23 Pod<br/>%2S-8 Rockets<br/>%2S-13 Rockets<br/>%2Kh-25<br/>%2Kh-29<br/>%2Vikhir<br/>%2FAB-250<br/>%2KAB-250<br/>%2RBK-250<br/><br/>Factions:<br/><br/>%2Chernarus Defence Forces<br/>%2Russian Federation<br/>%2Sahrani Liberation Army<br/>%2Takistani Army";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;

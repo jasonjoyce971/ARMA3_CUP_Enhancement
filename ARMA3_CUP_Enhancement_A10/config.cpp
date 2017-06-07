@@ -735,6 +735,40 @@ class CfgVehicles
 			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
+		/*class ACE_SelfActions 
+		{
+			class ECM_ON
+			{
+				displayName = "ECM JAMMER ON";
+				condition = "this getvariable ""ECMJAMMER"" == ""yes"";";
+				statement = "[this] execVM ""\FIR_AirWeaponSystem_US\Script\ECM\ECM_ON.sqf"";";
+			};
+			class A10J_Gui_Open
+			{
+				displayName = "Open Loadout Dialog";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
+				statement = "this execVM ""\ARMA3_CUP_Enhancement_A10\sqs\loadout\A10J_GUI_Open.sqf""";
+			};
+			class Aircraft_MFD_Open_N
+			{
+				displayName = "Open Targetting System";
+				condition = "this getvariable ""TGT_POD"" == ""yes"" and player in this and isengineon this";
+				statement = "this execVM ""\FIR_AirWeaponSystem_US\Script\TGTSystem\FIR_AWS_MFD_N_Open.sqf""";
+			};
+			class CUP_A10J_Eject
+			{
+				displayName = "Pull Ejection Cord";
+				condition = "player in this and isengineon this";
+				statement = "[this, false] spawn CUP_fnc_ejectPlayerFromAircraft";
+			};
+			CODE REFERENCE
+			displayName = "dance"; 							// displayName	String	Text shown to user
+            condition = "[_player] call onDanceFloor"; 		// condition	String (of code)	Condition to show the action
+            exceptions[] = {};								// exceptions	Array (of strings)	Exceptions to canInteractWith conditions (e.g. "notOnMap") (OPTIONAL)
+            statement = "_player switchMove 'TestDance'";	// statement	String (of code)	Statement run when selected
+            icon = "\z\dance.paa";							// icon	String (file path)	Icon shown (OPTIONAL)
+			
+		};*/
 		////////////////////////////////////////////////////////////////////
 		// Jets Content
 		////////////////////////////////////////////////////////////////////
@@ -4844,6 +4878,7 @@ class CfgVehicles
 	class JAS_CUP_B_A10_AAC_6 : JAS_CUP_B_A10_USA
 	{
 		scope = 2;
+		scopeCurator = 2;
 		displayName = "A-10J Thunderbolt II";
 		author = "CUP/-{GOL}-Jason";
 		faction="GOL_AAC_BLUFOR";

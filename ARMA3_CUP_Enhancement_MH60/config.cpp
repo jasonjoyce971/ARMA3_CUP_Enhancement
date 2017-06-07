@@ -5,7 +5,41 @@ class CfgPatches
 		units[]=
 		{
 			"JAS_CUP_B_MH60S_FFV_USMC",
-			"JAS_CUP_B_MH60S_FFV_AAC"
+			"JAS_CUP_B_MH60S_FFV_AAC",
+			"JAS_MH60L_DAP",
+			"JAS_CUP_B_UH60M_US",
+			"JAS_CUP_B_UH60L_US",
+			"JAS_CUP_B_UH60M_FFV_US",
+			"JAS_CUP_B_UH60L_FFV_US",
+			"JAS_CUP_B_UH60M_Unarmed_US",
+			"JAS_CUP_B_UH60L_Unarmed_US",
+			"JAS_CUP_B_UH60M_Unarmed_FFV_US",
+			"JAS_CUP_B_UH60L_Unarmed_FFV_US",
+			"JAS_CUP_B_UH60M_Unarmed_FFV_MEV_US",
+			"JAS_CUP_B_UH60L_Unarmed_FFV_MEV_US",
+			"JAS_CUP_B_MH60L_DAP_4x_AT_USN",
+			"JAS_CUP_I_UH60L_RACS",
+			"JAS_CUP_I_UH60L_FFV_RACS",
+			"JAS_CUP_I_UH60L_Unarmed_RACS",
+			"JAS_CUP_I_UH60L_Unarmed_FFV_Racs",
+			"JAS_CUP_I_UH60L_Unarmed_FFV_MEV_Racs",
+			"JAS_UH60L_DAP_AAC",
+			"JAS_CUP_B_UH60M_US_AAC",
+			"JAS_CUP_B_UH60L_US_AAC",
+			"JAS_CUP_B_UH60M_FFV_US_AAC",
+			"JAS_CUP_B_UH60L_FFV_US_AAC",
+			"JAS_CUP_B_UH60M_Unarmed_US_AAC",
+			"JAS_CUP_B_UH60L_Unarmed_US_AAC",
+			"JAS_CUP_B_UH60M_Unarmed_FFV_US_AAC",
+			"JAS_CUP_B_UH60L_Unarmed_FFV_US_AAC",
+			"JAS_CUP_B_UH60M_Unarmed_FFV_MEV_US_AAC",
+			"JAS_CUP_B_UH60L_Unarmed_FFV_MEV_US_AAC",
+			"JAS_CUP_B_MH60L_DAP_4x_AT_USN_AAC",
+			"JAS_CUP_I_UH60L_RACS_AAC",
+			"JAS_CUP_I_UH60L_FFV_RACS_AAC",
+			"JAS_CUP_I_UH60L_Unarmed_RACS_AAC",
+			"JAS_CUP_I_UH60L_Unarmed_FFV_Racs_AAC",
+			"JAS_CUP_I_UH60L_Unarmed_FFV_MEV_Racs_AAC"
 		};
 		weapons[]=
 		{
@@ -172,29 +206,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class UH60
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "UH-60 Blackhawk";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Utility Helicopter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The UH-60 is the US Armys primary transport chopper. The airframe is robust, the systems are reliable and the platform is easy to adjust to task, traits that have resulted in numerous other variants including the US Navy SH-60 Seahawk.<br/><br/>Factions:<br/><br/>%2NATO<br/>%2US Army<br/>%2USMC (SH-60)<br/>%2Royal Army Corps of Sahrani";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;

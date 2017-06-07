@@ -2048,6 +2048,7 @@ class cfgAmmo
 	};
 	class EAWS_SCALP_ammo : EAWS_Brimstone_ammo
 	{
+		cameraViewAvailable = 1;
 		model = "\ARMA3_CUP_Enhancement_Weapons\wep\SCALP_fly.p3d";
 		proxyShape = "\ARMA3_CUP_Enhancement_Weapons\wep\SCALP.p3d";
 		hit = 30000;
@@ -2351,6 +2352,7 @@ class cfgAmmo
 	};
 	class JAS_BIS_AGM65H : Missile_AGM_02_F
 	{
+		cameraViewAvailable = 1;
 		class Components
 		{
 			class SensorsManagerComponent
@@ -2442,7 +2444,6 @@ class cfgAmmo
 	};
 	class JAS_FIR_AGM65D : Missile_AGM_02_F
 	{
-		cameraViewAvailable = 1;
 		model = "\FIR_AirWeaponSystem_US\data\AGM65\AGM65D.p3d";
 		proxyShape = "\FIR_AirWeaponSystem_US\data\AGM65\AGM65D.p3d";
 		hit = 2100;
@@ -2940,6 +2941,7 @@ class cfgAmmo
 	};
 	class JAS_FIR_KAB500KR : Bo_GBU12_LGB
 	{
+		cameraViewAvailable = 1;
 		model = "\FIR_AirWeaponSystem_US\data\kab500\kab500kr";
 		proxyshape = "\FIR_AirWeaponSystem_US\data\kab500\kab500kr";
 		hit = 15000;
@@ -2995,6 +2997,7 @@ class cfgAmmo
 	};
 	class JAS_FIR_KAB500SE : Bo_GBU12_LGB
 	{
+		cameraViewAvailable = 1;
 		model = "\FIR_AirWeaponSystem_US\data\kab500\kab500se";
 		proxyshape = "\FIR_AirWeaponSystem_US\data\kab500\kab500se";
 		hit = 15000;
@@ -3106,6 +3109,7 @@ class cfgAmmo
 	};
 	class JAS_BIS_KH25MT : Missile_AGM_01_F
 	{
+		cameraViewAvailable = 1;
 		class Components
 		{
 			class SensorsManagerComponent

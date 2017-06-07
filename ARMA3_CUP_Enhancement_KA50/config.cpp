@@ -111,29 +111,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class KA50
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "Ka-50 Black Shark";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Armed Recon Helicopter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The Ka-50, NATO designation Hokum, is a single seat armed recon helicopter. Capable of acting as a gunship, the Black Shark is comparable to the AH-64 but the co-axial rotor arrangement means the Black Shark is actually faster and capable of aerobatics that helicopters cannot usually perform. The Ka-52 Alligator is a special variant of the Ka-50. Fitted with a second seat, the Alligator has increased all weather capability although the positioning of the optics suite means it must operate close to the ground. In game terms the Ka-50 has a changeable payload but the Ka-52 does not, this is due to model limitations.<br/><br/>Payload Options:<br/><br/>%2S-8 Rockets<br/>%2S-13 Rockets<br/>%2GSh-23 Pod<br/>%2FAB-250<br/>%2Kh-25<br/>%2Vikhir<br/>%2Kh-29T<br/>%2IGLA<br/><br/>Factions:<br/><br/>%2Russian Federation<br/>%2Sahrani Liberation Army";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;

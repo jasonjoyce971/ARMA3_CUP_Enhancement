@@ -474,4 +474,9 @@ Switch (_skin) Do
 		_plane setobjecttextureglobal[0, "\a3\air_f_epb\Heli_Light_03\data\heli_light_03_base_co.paa"]; 
 		_plane setobjecttextureglobal[1, "\CUP\AirVehicles\CUP_AirVehicles_AW159\data\ah64d_details_co.paa"];			
 	};
+	case 5: // RDAF
+	{
+		_plane setobjecttextureglobal[0, "\CUP\AirVehicles\CUP_AirVehicles_AW159\Skins\lynx_base_rdaf_co.paa"]; 
+		_plane setobjecttextureglobal[1, "\CUP\AirVehicles\CUP_AirVehicles_AW159\data\ah64d_details_co.paa"];			
+	};
 };

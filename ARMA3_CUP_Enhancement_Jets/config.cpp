@@ -21,9 +21,31 @@ class CfgPatches
 		units[]=
 		{
 			"JAS_B_RAH66_DYNO_F",
+			"JAS_B_RAH66_DYNO_AAC",
 			"JAS_FIR_A164J_DYNO",
+			"JAS_FIR_A164J_DYNO_AAC",
 			"JAS_Plane_Fighter_01_Base_F_DYNO",
-			"JAS_Plane_Fighter_02_F_DYNO"
+			"JAS_Plane_Fighter_01_Stealth_F_DYNO",
+			"JAS_Plane_Fighter_01_Base_F_DYNO_AAC",
+			"JAS_Plane_Fighter_01_Stealth_F_DYNO_AAC",
+			"JAS_Plane_Fighter_02_F_DYNO",
+			"JAS_Plane_Fighter_02_Stealth_DYNO",
+			"JAS_Plane_Fighter_02_F_DYNO_AAC",
+			"JAS_Plane_Fighter_02_Stealth_DYNO_AAC",
+			"JAS_Plane_Fighter_04_F_DYNO",
+			"JAS_Plane_Fighter_04_F_DYNO_AAC",
+			"JAS_O_Plane_CAS_02_DYNO",
+			"JAS_O_Plane_CAS_02_DYNO_AAC",
+			"JAS_FIR_A143R",
+			"JAS_FIR_A143R_AAC",
+			"JAS_B_B_Heli_Light_01_F_AAC",
+			"JAS_O_Heli_Attack_02_dynamicLoadout_F",
+			"JAS_O_Heli_Attack_02_dynamicLoadout_F_AAC",
+			"JAS_VTOL_02_infantry_dynamicLoadout_F",
+			"JAS_VTOL_02_infantry_dynamicLoadout_F_AAC",
+			"JAS_VTOL_02_vehicle_dynamicLoadout_F",
+			"JAS_VTOL_02_vehicle_dynamicLoadout_F_AAC",
+			"JAS_Heli_light_03_dynamicLoadout_F"
 		};
 		weapons[]=
 		{
@@ -26207,7 +26229,7 @@ class CfgVehicles
 		};
 		class eventhandlers
 		{
-			Init="[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEADRUS.sqf"";";
+			Init="[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
 			fired="fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};

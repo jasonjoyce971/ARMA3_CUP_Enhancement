@@ -185,29 +185,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class SA330
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "SA-330 Puma";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Transport Helicopter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The Puma is the eternal bridsmaid of helicopter fleets around the world. Often forgotten about while people focus on its more famous stablemates, the Puma has quietly been transporting men for over 40 years in most theatres of war.<br/><br/>Factions:<br/><br/>%2United Kingdom<br/>%2Royal Army Corps of Sahrani";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;

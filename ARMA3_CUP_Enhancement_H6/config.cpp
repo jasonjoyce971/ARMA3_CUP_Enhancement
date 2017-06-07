@@ -4,14 +4,14 @@ class CfgPatches
 	{
 		units[]=
 		{
-			"JAS_CUP_B_MH6J_USA",
+			"JAS_CUP_I_MH6J_AAC",
 			"JAS_CUP_I_MH6J_RACS",
 			"JAS_CUP_B_MH6J_AAC",
-			"JAS_CUP_B_MH6J_SOAR",
-			"JAS_CUP_B_AH6J_USA",
-			"JAS_CUP_I_AH6J_RACS",
-			"JAS_CUP_B_AH6J_AAC",
-			"JAS_CUP_B_AH6J_SOAR"
+			"JAS_CUP_B_MH6J_USA",
+			"JAS_CUP_I_AH6M_AAC",
+			"JAS_CUP_I_AH6M_RACS",
+			"JAS_CUP_B_AH6M_AAC",
+			"JAS_CUP_B_AH6M_USA"
 		};
 		weapons[]=
 		{
@@ -121,29 +121,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class H6J
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "H-6J Littlebird";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Multi-role Light Helicopter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The Littlebird first entered service during Vietnam as the OH-6 Cayuse. Originally intended as an observation platform for artillery and recon, the aircraft was intentionally designed to be fast and light. In 1980, the creation of the 160th Special Operations Aviation Regiment exposed the need for fast, light transports capable of landing where conventional helicopters could not. Boeing won the contract to upgrade the original Hughes chassis and the MH-6 was born. Attack variants came later on the specific request of 160SOAR, giving the regiment a fleet of helicopters that could be deployed by airlift at a moments notice. The Mission Enhanced Littlebird program ensures that the MH-6 and its siblings will remain in service for years to come.<br/><br/>The AAC upgrade pack adds AFM to the CUP H-6 family across all of its variants.<br/><br/>Variants:<br/><br/>MH-6 Transport<br/>AH-6 Light Attack<br/><br/>AH-6 Payload Options<br/><br/>HYDRA 70mm FFAR<br/>AGM-114K<br/>AGM-114N<br/><br/>Factions:<br/><br/>%2US Army<br/>%2Royal Army Corps of Sahrani";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;
@@ -3146,6 +3124,18 @@ class CfgVehicles
 		fir_ah6US_custom_code="JAS_CUP_I_AH6J_RACS";
 		fir_ah6US_custom_preview_pic="\ARMA3_CUP_Enhancement_H6\UI\preview\AH6RACS.paa";
 		editorPreview = "\ARMA3_CUP_Enhancement_H6\UI\editorpreview\AH6RACS.jpg";
+		hiddenSelections[] =
+		{
+			"camo1",
+			"camo2",
+			"camo_weapons"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"CUP\AirVehicles\CUP_AirVehicles_AH6\data\ah6_hull_racs_co.paa",
+			"CUP\AirVehicles\CUP_AirVehicles_AH6\data\ah6_interior_co.paa",
+			"CUP\AirVehicles\CUP_AirVehicles_AH6\Data\ah6_weapons_co.paa"
+		};
 	};
 
 	class JAS_CUP_B_MH6J_USA : JAS_CUP_AH6_BASE

@@ -132,30 +132,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		// Topic title (displayed only in topic listbox in Field Manual)
-		class AV8
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "AV-8 Harrier";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Ground attack STOVL";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The Harrier chassis was produced in the US as the AV-8 and the UK as the Harrier throughout the 70s and 80s and was the worlds first true STOVL attack craft. Designed to operate from LHDs or the UKs Invincible class aircraft carriers, the Harrier saw nearly 20 years service before being phased out and replaced by the F-35. The last remaining harriers in service are with the USMC and will be replaced by 2020. Due to the nature of its deployment, the AV-8 cannot compare to the A-10 in the ground attack role. It can however take off from airfields that the A-10 can only dream of making it a lot easier to deploy.<br/><br/>Payload Options:<br/><br/>%2AIM-9. The UK GR9 variant has 2 extra hardpoints dedicated to these missiles<br/>%2AIM-120 (USMC Only)<br/>%2AGM-65D<br/>%2AGM-65G<br/>%2AGM-65L<br/>%2AGM-88 (USMC Only)<br/>%2CRV-7 Rockets (UK Only)<br/>%2Mk82 GPB<br/>%2Mk82 SNAKE<br/>%2Mk84 GPB<br/>%2GBU-10<br/>%2GBU-12<br/>%2EGBU-12 II<br/>%2GBU-24<br/>%2GBU-31 (USMC Only)<br/>%2GBU-32 (USMC Only)<br/>%2GBU-38 (USMC Only)<br/>%2GBU-54 (USMC Only)<br/>%2CBU-87 (USMC Only)<br/>%2CBU-89 (USMC Only)<br/>%2CBU-97 (USMC Only)<br/>%2CBU-103 (USMC Only)<br/><br/>Factions:<br/><br/>%2USMC<br/>%2UK";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;

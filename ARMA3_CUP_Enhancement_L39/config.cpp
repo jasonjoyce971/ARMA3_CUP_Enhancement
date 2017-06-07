@@ -113,29 +113,6 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class L39
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "L-39 Albatros";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Light attack craft";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The L-39 entered service as a jet trainer in the 1970s. Numerous upgrades were made to the platform but it wasn't until the ZA variant that the L-39 was given weapons. The airframe however is small and frail and thus the payload is tiny when compared to other ground attack craft. The L-159 ALCA is developed from the L-39 and is much more capable, featuring enhanced avionics and a sturdier frame.<br/><br/>Payload Options:<br/>%2GSh-23 Gun Pods<br/>%2R-60 Missiles<br/>%2S-5 Rockets<br/>%2S-8 Rockets<br/>%2FAB-250<br/>%2 KAB-250<br/>%2RBK-250<br/><br/>Factions:<br/><br/>%2ACR<br/>%2TKA<br/>%2AAF";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
 class RscInGameUI
 {
 	class RscUnitInfo;
