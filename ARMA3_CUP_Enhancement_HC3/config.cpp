@@ -106,29 +106,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class AW101
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "AW101 Merlin";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Transport Helicopter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The Merlin was designed in a joint venture between Agusta from Italy and Westland from the UK on the request of their respective governments to produce a new naval utility helicopter. The original designation EWI01 was lost to a typo and became EW101 which became AW101. The model name Merlin is only officially used by 4 countries, Britain, Denmark, Norway and Portugal but has become more commonly used since the platforms introduction in 1999. The Royal Navy use their Merlins for a variety of tasks including Anti-Submarine warfare, Airborne Early Warning and SAR but the systems primary function is medium lift transport. For a chopper of its capability, the Merlin is suprisingly easy to fly and is quite durable leading to its place as the RAFs prefered mass insertion chopper.<br/><br/>Factions:<br/><br/>%2United Kingdom<br/>%2Altis Armed Forces (Vanilla Variant)";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;

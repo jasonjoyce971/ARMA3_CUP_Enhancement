@@ -123,29 +123,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class SU34J
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "Su-34J Fullback";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Air Superiority Airplane";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The Su-34 is a twin seat strike fighter designed seize air superiority in the local airspace. While capable of interception tasks, the Fullback is not a dogfighter, relying instead on missiles to eliminate air targets. Ground targets however are easy prey. The WSO station has a complete suite of optics and when used in conjunction with guided munitions, can be trusted to knock out any ground installation or vehicle.<br/><br/>Payload Options:<br/><br/>%2R-73<br/>%2GSh-23 Pod<br/>%2S-8 Rockets<br/>%2Kh-25<br/>%2Kh-29<br/>%2Vikhir<br/>%2FAB-250<br/>%2KAB-250<br/>%2RBK-250<br/><br/>Factions:<br/><br/>%2Chernarus Defence Force<br/>%2Russian Federation<br/>%2Sahrani Liberation Army<br/>%2Altis Armed Forces";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;

@@ -114,29 +114,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class CH47
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "CH-47 Chinook";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Heavy Lift Transport Helicopter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The CH-47 has been in service for decades and perhaps the most easily recognised helicopter in existence due to its tandem rotor system. Its load capacity and ruggedness has seen the Chinook deployed in every NATO warzone since Vietnam and in extreme conditions such as Afghanistan, it is actually prefered over more advanced systems. The vanilla Helicopters DLC introduced the 'Huron' as a fictional future upgrade for the Chinook.<br/><br/>In game terms the Chinook is pretty simple in its employment, it transports men and material. The AAC upgrade pack takes the stock CUP Chinook variants and adds AFM.<br/><br/>Factions:<br/><br/>%2US Army<br/>%2UK";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;

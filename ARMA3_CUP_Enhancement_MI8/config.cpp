@@ -8,12 +8,13 @@ class CfgPatches
 			"JAS_CUP_O_Mi8_AAC",
 			"JAS_CUP_B_Mi17_CDF",
 			"JAS_CUP_I_Mi17_UN",
+			"JAS_CUP_I_Mi17_UN_AAC",
 			"JAS_CUP_O_Mi17_TK",
-			"JAS_CUP_B_Mi171Sh_ACR",
 			"JAS_CUP_O_Mi17_AAC",
+			"JAS_CUP_B_Mi171Sh_ACR",
 			"JAS_CUP_O_Mi8_SLA_2",
 			"JAS_CUP_O_Mi8_RU",
-			"JAS_CUP_I_Mi17_UN_AAC",
+			"JAS_CUP_B_Mi17_AAC",
 			"JAS_MI8_Loadout_Module",
 			"JAS_MI17_Loadout_Module"
 		};
@@ -136,29 +137,6 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class MI8
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "Mi-8/Mi-17 Hip";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Transport Helicopter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The Mi-8 and its development successor the Mi-17 are the main transport helicopter of the old eastern bloc. The Mi-8 still stands as the most produced helicopter of all time and has been sold to over 70 countries. As a military asset, the Mi-8 family is capable of deploying up to 14 soldiers into the hottest HLS using the external weapon systems.<br/><br/>Payload Options:<br/><br/>%2 S-8 Rockets<br/>%2S-13 Rockets<br/>%2GSh-23 Pod (Mi-17 Only)<br/><br/>Factions:<br/><br/>Chernarus Defence Force (Mi-17)<br/>%2Czech Republic (Mi-17)<br/>%2ChDKZ (Mi-8)<br/>%2CSAT (Both)<br/>%2Russian Federation (Mi-8)<br/>%2Sahrani Liberation Army (Mi-8)<br/>%2Takistani Army (Mi-17)<br/>%2United Nations (Mi-17)";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
 class RscInGameUI
 {
 	class RscUnitInfo;

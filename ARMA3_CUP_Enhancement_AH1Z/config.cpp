@@ -115,29 +115,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class AH1Z
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "AH-1Z Viper";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Attack Helicopter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The AH-1Z is the culmination of successive upgrades to the original AH-1 Cobra. The Cobra saw action in Vietnam and throughout the Cold War era until it was eventually phased out of US Army use to make way for the AH-64. The USMC however, prefered the AH-1 since it was easier to stow, maintain and operate at sea. The USMC AH-1 fleet then was upgraded to the W variant Super Cobra and subsequently the Z variant Viper. The platform is comparable to the AH-64 in most aspects, but is still prefered by the USMC simply due to its size.<br/><br/>Payload Options:<br/><br/>%2AIM-9<br/>%2HYDRA Rockets<br/>%2APKWS Rockets<br/>%2AGM-114K<br/><br/>Factions:<br/><br/>%2USMC<br/>%2Altis Armed Forces";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;

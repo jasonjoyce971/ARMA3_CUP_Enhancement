@@ -4,24 +4,27 @@ class CfgPatches
 	{
 		units[]=
 		{
-			"JAS_CUP_O_Mi24_P_RU",
-			"JAS_CUP_O_Mi24_V_RU",
 			"JAS_CUP_B_Mi24_D_CDF",
+			"JAS_CUP_B_Mi24_D_AAC",
 			"JAS_CUP_O_Mi24_D_TK",
+			"JAS_CUP_O_Mi24_D_AAC",
+			"JAS_CUP_I_Mi24_D_UN",
+			"JAS_CUP_I_Mi24_D_AAF",
+			"JAS_CUP_I_Mi24_D_ION",
+			"JAS_CUP_O_Mi24_P_RU",
+			"JAS_CUP_O_Mi24_P_AAC",
+			"JAS_CUP_O_Mi24_V_RU",
+			"JAS_CUP_O_Mi24_V_AAC",
 			"JAS_CUP_B_Mi35_CZ",
 			"JAS_CUP_B_Mi35_CZ_Des",
 			"JAS_CUP_B_Mi35_CZ_Ram",
 			"JAS_CUP_B_Mi35_CZ_Tiger",
 			"JAS_CUP_B_Mi35_CZ_Dark",
-			"JAS_CUP_I_Mi24_D_UN",
-			"JAS_CUP_I_Mi24_D_AAF",
-			"JAS_CUP_I_Mi24_D_ION",
+			"JAS_CUP_B_Mi35_AAC",
 			"JAS_CUP_I_Mi24_Mk3_ION",
 			"JAS_CUP_I_Mi24_Mk4_ION",
-			"JAS_CUP_O_Mi24_D_AAC",
-			"JAS_CUP_O_Mi24_P_AAC",
-			"JAS_CUP_O_Mi24_V_AAC",
-			"JAS_CUP_B_Mi24_D_AAC",
+			"JAS_CUP_I_Mi24_Mk3_AAC",
+			"JAS_CUP_I_Mi24_Mk4_AAC",
 			"JAS_MI24D_Loadout_Module",
 			"JAS_MI24P_Loadout_Module",
 			"JAS_MI24V_Loadout_Module",
@@ -180,29 +183,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class MI24
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "Mi-24/Mi-35 Hind";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Assault Helicopter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "Instantly recognised wherever it goes, the Hind is neither gunship nor transport chopper. Instead it is capable of punching its way through a defensive line like a gunship, then land a load of 8 soldiers into the hole it made. This unique trait has led to the Hind being dubbed the worlds only Assault Helicopter. After entering service in 1969, the Hind has given birth to over 50 sub-variants and is in operation in over 50 countries. In game there are 6 variants:<br/>D variant - original soviet issue<br/>P variant - introduces AT-6 and features a fixed forward firing autocannon<br/>V variant - retains AT-6 but reverts to the original gimbal cannon mount<br/>Mi-35 - not strictly speaking a variant, this is the designation of the export V variant<br/>Super III - introduces the AT-9 along with an avionics upgrade<br/>Super IV - Super III avionics with upgraded engine protection<br/>The Hinds only real weakness is its own weight, it can be quite a handful to fly especially when fully loaded.<br/><br/>Payload Options:<br/><br/>%2GSh-23 Pod<br/>%2AT-2 (D variant only)<br/>%2IGLA<br/>%2FAB-250<br/>%2KAB-250<br/>%2AT-6 (P + V + Mi-35 + Super variants only)<br/>%2AT-9 (Super variants only)<br/><br/>Factions:<br/><br/>%2Chernarus Defence Force (D variant)<br/>%2Czech Republic (Mi-35)<br/>%2Russian Federation (P + V Variants)<br/>%2Takistani Army (D variant)<br/>%2Altis Armed Forces (D variant)<br/>%2ION PMC (D, Super III + Super IV variants)<br/>%2United Nations (D variant)";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;

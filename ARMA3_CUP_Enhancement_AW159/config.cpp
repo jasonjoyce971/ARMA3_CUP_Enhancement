@@ -4,18 +4,16 @@ class CfgPatches
 	{
 		units[]=
 		{
+			"JAS_CUP_AW159_Unarmed_Base",
 			"JAS_CUP_B_AW159_Unarmed_GB",
-			"JAS_CUP_B_AW159_Hellfire_GB",
-			"JAS_CUP_B_AW159_Cannon_GB",
 			"JAS_CUP_B_Wildcat_Unarmed_RN_Grey",
-			"JAS_CUP_B_AW159_Hellfire_RN_Grey",
-			"JAS_CUP_B_AW159_Cannon_RN_Grey",
+			"JAS_CUP_B_Wildcat_Unarmed_RN_Blackcat",
+			"JAS_CUP_B_Wildcat_Unarmed_RDAF",
 			"JAS_CUP_B_Wildcat_Unarmed_Digital_AAF",
-			"JAS_CUP_B_Wildcat_Hellfire_Armed_Digital_AAF",
-			"JAS_CUP_B_Wildcat_Cannon_Armed_Digital_AAF",
+			"JAS_CUP_B_Wildcat_Unarmed_Green_AAF",
 			"JAS_CUP_B_AW159_Unarmed_AAC",
-			"JAS_CUP_B_AW159_Hellfire_AAC",
-			"JAS_CUP_B_AW159_Cannon_AAC"
+			"JAS_CUP_B_Wildcat_Unarmed_RN_Grey_AAC",
+			"JAS_CUP_I_AW159_Unarmed_AAC"
 		};
 		weapons[]=
 		{
@@ -137,29 +135,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class AW159
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "AW159 Wildcat";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Utility Helicopter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The AW159 came about as an upgrade to the Westland Lynx. Almost everything about the Lynx has been modified and the Wildcat now only shares its basic shape and legendary speed with its predecessor. The Wildcats charm lies in its versatility, it can transport, sling load, provide recon, kill tanks or barrage areas depending on the variant deployed.<br/><br/>Variants:<br/><br/>%2Clean - Basic Transport<br/>%2Anti-Tank - Tank Hunting Gunship<br/>%2General Purpose - Multirole Direct Action Penetrator<br/><br/>Factions:<br/><br/>%2NATO<br/>%2United Kingdom<br/>%2Altis Armed Forces";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class RscInGameUI
 {
 	class RscUnitInfo;
@@ -6810,7 +6786,7 @@ class CfgVehicles
 		author="$STR_CUP_AUTHOR_STRING";
 		scope=1;
 		scopeCurator=1;
-		displayname="AW159 RDAF (Unarmed)";
+		displayname="AW159 RDAF";
 		fir_lynxAAC_custom_skin=1;
 		fir_lynxAAC_custom_name="RDAF";
 		fir_lynxAAC_custom_code="JAS_CUP_B_Wildcat_Unarmed_RDAF";
@@ -7691,6 +7667,11 @@ class CfgVehicles
 					{
 						name="AAF Green";
 						value=4;
+					};
+					class RDAF
+					{
+						name="RDAF";
+						value=5;
 					};
 				};
 			};

@@ -122,30 +122,6 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		// Topic title (displayed only in topic listbox in Field Manual)
-		class AH64
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "AH-64 Apache";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Ground attack helicopter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The AH-64 entered life as a replacement for the USAF AH-1 Cobra. Born to kill soviet tanks during the cold war, the Apache went through the same process as the A-10. It is a purpose built tank hunter and possibly the best helicopter in this role in the world. Nimble and fast with a huge capacity for damage output, the Apache is the epitome of the helicopter gunship.<br/><br/>Payload Options:<br/><br/>%2AIM-9L Sidewinder<br/>%2AGM-122 Sidearm (US Army Only)<br/>%2HYDRA Rockets<br/>%2CRV-7 Rockets<br/>%2APKWS Rockets<br/>%2AGM-114L 'Longbow' Hellfire II<br/>%2AGM-114N Hellfire II (Thermobaric Warhead)<br/>%2Brimstone (UK AAC Only)<br/><br/>Factions:<br/><br/>%2US Army<br/>%2UK AAC";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
 class RscInGameUI
 {
 	class RscUnitInfo;

@@ -115,29 +115,7 @@ class RscObject;
 class RscHTML;
 class RscTextCheckbox;
 class RscEdit;
-class CfgHints
-{
-	class AWSAIRCRAFT
-	{
-		class CH53
-		{
-			// Hint title, filled by arguments from 'arguments' param
-			displayName = "CH-53 Stallion";
-			// Optional hint subtitle, filled by arguments from 'arguments' param
-			displayNameShort = "Transport Helicopter";
-			// Structured text, filled by arguments from 'arguments' param
-			description = "The CH-53 originated in Vietnam as the 'Jolly Green Giant' of the US Air Force or the 'Sea Stallion' of the USMC. The 53 was designed to offer greater lift capability than the Chinook and offered greater speed and defensive capability. After Vietnam and through the 80s, the Air Force pushed their 53s down a specialised CSAR path that would see the introduction of the Pave Low. The USMC however stuck with their beloved Stallions, upgrading them repeatedly. The Pave Low was retired in 2008 while the latest 'Super' Stallion remains in service with the USMC to this day.<br/><br/>Factions:<br/><br/>%2Germany<br/>%2USMC";
-			// Optional structured text, filled by arguments from 'arguments' param (first argument
-			// is %11, see notes bellow), grey color of text
-			tip = "";
-			arguments[] = {};
-			// Optional image
-			image = "\ARMA3_CUP_Enhancement_Systems\presentation\picture.paa";
-			// optional parameter for not showing of image in context hint in mission (default false))
-			noImage = false;
-		};
-	};
-};
+
 class CfgVehicles
 {
 	class AllVehicles;
