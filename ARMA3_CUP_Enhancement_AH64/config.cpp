@@ -7333,6 +7333,247 @@ class CfgVehicles
 				};
 			};
 		};
+		class Components: Components
+		{
+			class TransportPylonsComponent
+			{
+				UIPicture="\CUP\AirVehicles\CUP_AirVehicles_AH64\Data\UI\CUP_AH64_3DEN_CA.paa";
+				class presets
+				{
+					class Empty
+					{
+						displayName="Empty";
+						attachment[]={};
+					};
+					class AntiTank
+					{
+						displayName="Anti-Tank";
+						attachment[]=
+						{
+							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_L_1rnd_PYLON_M"
+						};
+					};
+					class KSS
+					{
+						displayName="Killer-Scout (SEAD)";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_AGM122_1rnd_PYLON_M",
+							"JAS_AGM122_1rnd_PYLON_M"
+						};
+					};
+					class KSA
+					{
+						displayName="Killer-Scout (AA)";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class AD
+					{
+						displayName="Area Denial";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M"
+						};
+					};
+					class CAS
+					{
+						displayName="Close Air Support";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class PCAS
+					{
+						displayName="Precision Close Air Support";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class SCAS
+					{
+						displayName="SEAD Close Air Support";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_AGM122_1rnd_PYLON_M",
+							"JAS_AGM122_1rnd_PYLON_M"
+						};
+					};
+					class ASCAS
+					{
+						displayName="Anti-Structure Close Air Support";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_FIR_Hellfire_N_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_N_1rnd_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class RCAS
+					{
+						displayName="Rocket Close Air Support";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+				};
+				class pylons
+				{
+					class pylonLeft1
+					{
+						hardpoints[]=
+						{
+							"JAS_AH64_PYLON"
+						};
+						attachment="JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M";
+						priority=5;
+						UIposition[]={0.58999997,0.34999999};
+						turret[]={0};
+						bay=1;
+					};
+					class pylonLeft2: pylonLeft1
+					{
+						UIposition[]={0.56999999,0.40000001};
+						priority=4;
+						attachment="JAS_FIR_Hellfire_L_1rnd_PYLON_M";
+					};
+					class pylonRight1: pylonLeft1
+					{
+						UIposition[]={0.079999998,0.40000001};
+						mirroredMissilePos=2;
+					};
+					class pylonRight2: pylonRight1
+					{
+						UIposition[]={0.059999999,0.34999999};
+						mirroredMissilePos=1;
+						priority=4;
+					};
+					class pylonWingL: pylonLeft1
+					{
+						hardpoints[]=
+						{
+							"JAS_AH64_WINGTIP",
+							"JAS_SIDEARM_PYLON"
+						};
+						UIposition[]={0.62,0.30000001};
+						attachment="";
+					};
+					class pylonWingR: pylonWingL
+					{
+						mirroredMissilePos=5;
+						UIposition[]=
+						{"0.0.4",0.30000001};
+						attachment="";
+					};
+				};
+			};
+		};
+		memoryPointDriverOptics="gunnerview";
+		class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName="WFOV";
+					initAngleX=0;
+					minAngleX=0;
+					maxAngleX=0;
+					initAngleY=0;
+					minAngleY=0;
+					maxAngleY=0;
+					initFov="(30 / 120)";
+					minFov="(30 / 120)";
+					maxFov="(30 / 120)";
+					directionStabilized=1;
+					visionMode[]=
+					{
+						"Normal",
+						"Ti"
+					};
+					thermalMode[]={0,1};
+					gunnerOpticsModel="CUP\AirVehicles\CUP_AirVehicles_AH1Z\optika_AH1Z.p3d";
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera2",
+						"OpticsBlur2"
+					};
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName="MFOV";
+					initFov="(15 / 120)";
+					minFov="(15 / 120)";
+					maxFov="(15 / 120)";
+					gunnerOpticsModel="CUP\AirVehicles\CUP_AirVehicles_AH1Z\optika_AH1Z.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName="NFOV";
+					initFov="(3.75 / 120)";
+					minFov="(3.75 / 120)";
+					maxFov="(3.75 / 120)";
+					gunnerOpticsModel="CUP\AirVehicles\CUP_AirVehicles_AH1Z\optika_AH1Z.p3d";
+				};
+				showMiniMapInOptics=1;
+				showUAVViewInOptics=0;
+				showSlingLoadManagerInOptics=0;
+			};
+			//minTurn=-160;
+			//maxTurn=160;
+			minTurn=-70;
+			maxTurn=70;
+			initTurn=0;
+			minElev=-10;
+			maxElev=90;
+			initElev=0;
+			maxXRotSpeed=0.30000001;
+			maxYRotSpeed=0.30000001;
+			pilotOpticsShowCursor=1;
+			controllable=1;
+		};
 		editorPreview = "\ARMA3_CUP_Enhancement_AH64\UI\editorpreview\AH64D.jpg";
 		class UserActions
 		{
@@ -7390,6 +7631,196 @@ class CfgVehicles
 					"Laserbatteries"
 				};
 			};
+		};
+		class Components: Components
+		{
+			class TransportPylonsComponent
+			{
+				UIPicture="\CUP\AirVehicles\CUP_AirVehicles_AH64\Data\UI\CUP_AH64_3DEN_CA.paa";
+				class presets
+				{
+					class Empty
+					{
+						displayName="Empty";
+						attachment[]={};
+					};
+					class AntiTank
+					{
+						displayName="Anti-Tank";
+						attachment[]=
+						{
+							"JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M",
+							"JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M",
+							"JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M",
+							"JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M"
+						};
+					};
+					class KS
+					{
+						displayName="Killer-Scout";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M",
+							"JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class PCAS
+					{
+						displayName="Precision Close Air Support";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M",
+							"JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class ASCAS
+					{
+						displayName="Anti-Structure Close Air Support";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_FIR_Hellfire_N_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_N_1rnd_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class RCAS
+					{
+						displayName="Rocket Close Air Support";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+				};
+				class pylons
+				{
+					class pylonLeft1
+					{
+						hardpoints[]=
+						{
+							"JAS_AH64_PYLON","JAS_WAH64_PYLON"
+						};
+						attachment="JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M";
+						priority=5;
+						UIposition[]={0.58999997,0.34999999};
+						turret[]={0};
+						bay=1;
+					};
+					class pylonLeft2: pylonLeft1
+					{
+						UIposition[]={0.56999999,0.40000001};
+						priority=4;
+						attachment="JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M";
+					};
+					class pylonRight1: pylonLeft1
+					{
+						UIposition[]={0.079999998,0.40000001};
+						mirroredMissilePos=2;
+					};
+					class pylonRight2: pylonRight1
+					{
+						UIposition[]={0.059999999,0.34999999};
+						mirroredMissilePos=1;
+						priority=4;
+					};
+					class pylonWingL: pylonLeft1
+					{
+						hardpoints[]=
+						{
+							"JAS_WAH64_WINGTIP"
+						};
+						UIposition[]={0.62,0.30000001};
+						attachment="";
+					};
+					class pylonWingR: pylonWingL
+					{
+						mirroredMissilePos=5;
+						UIposition[]=
+						{"0.0.4",0.30000001};
+						attachment="";
+					};
+				};
+			};
+		};
+		memoryPointDriverOptics="gunnerview";
+		class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName="WFOV";
+					initAngleX=0;
+					minAngleX=0;
+					maxAngleX=0;
+					initAngleY=0;
+					minAngleY=0;
+					maxAngleY=0;
+					initFov="(30 / 120)";
+					minFov="(30 / 120)";
+					maxFov="(30 / 120)";
+					directionStabilized=1;
+					visionMode[]=
+					{
+						"Normal",
+						"Ti"
+					};
+					thermalMode[]={0,1};
+					gunnerOpticsModel="CUP\AirVehicles\CUP_AirVehicles_AH1Z\optika_AH1Z.p3d";
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera2",
+						"OpticsBlur2"
+					};
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName="MFOV";
+					initFov="(15 / 120)";
+					minFov="(15 / 120)";
+					maxFov="(15 / 120)";
+					gunnerOpticsModel="CUP\AirVehicles\CUP_AirVehicles_AH1Z\optika_AH1Z.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName="NFOV";
+					initFov="(3.75 / 120)";
+					minFov="(3.75 / 120)";
+					maxFov="(3.75 / 120)";
+					gunnerOpticsModel="CUP\AirVehicles\CUP_AirVehicles_AH1Z\optika_AH1Z.p3d";
+				};
+				showMiniMapInOptics=1;
+				showUAVViewInOptics=0;
+				showSlingLoadManagerInOptics=0;
+			};
+			//minTurn=-160;
+			//maxTurn=160;
+			minTurn=-70;
+			maxTurn=70;
+			initTurn=0;
+			minElev=-10;
+			maxElev=90;
+			initElev=0;
+			maxXRotSpeed=0.30000001;
+			maxYRotSpeed=0.30000001;
+			pilotOpticsShowCursor=1;
+			controllable=1;
 		};
 		hiddenSelectionsTextures[]=
 		{
@@ -7578,30 +8009,40 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
-					class hp3_crv7
+					class hp3_crv7FAT
 					{
-						name="CRV-7 x19";
+						name="CRV-7 FAT x19";
 						value=3;
+					};
+					class hp3_crv7HE
+					{
+						name="CRV-7 HE x19";
+						value=4;
+					};
+					class hp3_crv7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=5;
 					};
 					class hp3_APKWS
 					{
 						name="APKWS x7";
-						value=4;
+						value=6;
 					};
 					class hp3_114L
 					{
 						name="AGM-114L";
-						value=5;
+						value=7;
 					};
 					class hp3_114N
 					{
 						name="AGM-114N";
-						value=6;
+						value=8;
 					};
 					class hp3_114C
 					{
 						name="AGM-114 Mixed";
-						value=7;
+						value=9;
 					};
 				};
 			};
@@ -7628,30 +8069,40 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
-					class hp4_crv7
+					class hp4_crv7FAT
 					{
-						name="CRV-7 x19";
+						name="CRV-7 FAT x19";
 						value=3;
+					};
+					class hp4_crv7HE
+					{
+						name="CRV-7 HE x19";
+						value=4;
+					};
+					class hp4_crv7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=5;
 					};
 					class hp4_APKWS
 					{
 						name="APKWS x7";
-						value=4;
+						value=6;
 					};
 					class hp4_114L
 					{
 						name="AGM-114L";
-						value=5;
+						value=7;
 					};
 					class hp4_114N
 					{
 						name="AGM-114N";
-						value=6;
+						value=8;
 					};
 					class hp4_114C
 					{
 						name="AGM-114 Mixed";
-						value=7;
+						value=9;
 					};
 				};
 			};
@@ -7678,30 +8129,40 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
-					class hp5_crv7
+					class hp5_crv7FAT
 					{
-						name="CRV-7 x19";
+						name="CRV-7 FAT x19";
 						value=3;
+					};
+					class hp5_crv7HE
+					{
+						name="CRV-7 HE x19";
+						value=4;
+					};
+					class hp5_crv7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=5;
 					};
 					class hp5_APKWS
 					{
 						name="APKWS x7";
-						value=4;
+						value=6;
 					};
 					class hp5_114L
 					{
 						name="AGM-114L";
-						value=5;
+						value=7;
 					};
 					class hp5_114N
 					{
 						name="AGM-114N";
-						value=6;
+						value=8;
 					};
 					class hp5_114C
 					{
 						name="AGM-114 Mixed";
-						value=7;
+						value=9;
 					};
 				};
 			};
@@ -7728,30 +8189,40 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
-					class hp6_crv7
+					class hp6_crv7FAT
 					{
-						name="CRV-7 x19";
+						name="CRV-7 FAT x19";
 						value=3;
+					};
+					class hp6_crv7HE
+					{
+						name="CRV-7 HE x19";
+						value=4;
+					};
+					class hp6_crv7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=5;
 					};
 					class hp6_APKWS
 					{
 						name="APKWS x7";
-						value=4;
+						value=6;
 					};
 					class hp6_114L
 					{
 						name="AGM-114L";
-						value=5;
+						value=7;
 					};
 					class hp6_114N
 					{
 						name="AGM-114N";
-						value=6;
+						value=8;
 					};
 					class hp6_114C
 					{
 						name="AGM-114 Mixed";
-						value=7;
+						value=9;
 					};
 				};
 			};
@@ -7861,35 +8332,45 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
-					class hp3_crv7
+					class hp3_crv7FAT
 					{
-						name="CRV-7 x19";
+						name="CRV-7 FAT x19";
 						value=3;
+					};
+					class hp3_crv7HE
+					{
+						name="CRV-7 HE x19";
+						value=4;
+					};
+					class hp3_crv7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=5;
 					};
 					class hp3_APKWS
 					{
 						name="APKWS x7";
-						value=4;
+						value=6;
 					};
 					class hp3_114L
 					{
 						name="AGM-114L";
-						value=5;
+						value=7;
 					};
 					class hp3_114N
 					{
 						name="AGM-114N";
-						value=6;
+						value=8;
 					};
 					class hp3_114C
 					{
 						name="AGM-114 Mixed";
-						value=7;
+						value=9;
 					};
 					class hp3_brim
 					{
 						name="Brimstone";
-						value=8;
+						value=10;
 					};
 				};
 			};
@@ -7916,35 +8397,45 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
-					class hp4_crv7
+					class hp4_crv7FAT
 					{
-						name="CRV-7 x19";
+						name="CRV-7 FAT x19";
 						value=3;
+					};
+					class hp4_crv7HE
+					{
+						name="CRV-7 HE x19";
+						value=4;
+					};
+					class hp4_crv7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=5;
 					};
 					class hp4_APKWS
 					{
 						name="APKWS x7";
-						value=4;
+						value=6;
 					};
 					class hp4_114L
 					{
 						name="AGM-114L";
-						value=5;
+						value=7;
 					};
 					class hp4_114N
 					{
 						name="AGM-114N";
-						value=6;
+						value=8;
 					};
 					class hp4_114C
 					{
 						name="AGM-114 Mixed";
-						value=7;
+						value=9;
 					};
 					class hp4_brim
 					{
 						name="Brimstone";
-						value=8;
+						value=10;
 					};
 				};
 			};
@@ -7971,35 +8462,45 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
-					class hp5_crv7
+					class hp5_crv7FAT
 					{
-						name="CRV-7 x19";
+						name="CRV-7 FAT x19";
 						value=3;
 					};
-					class hp4_APKWS
+					class hp5_crv7HE
+					{
+						name="CRV-7 HE x19";
+						value=4;
+					};
+					class hp5_crv7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=5;
+					};
+					class hp5_APKWS
 					{
 						name="APKWS x7";
-						value=4;
+						value=6;
 					};
 					class hp5_114L
 					{
 						name="AGM-114L";
-						value=5;
+						value=7;
 					};
 					class hp5_114N
 					{
 						name="AGM-114N";
-						value=6;
+						value=8;
 					};
 					class hp5_114C
 					{
 						name="AGM-114 Mixed";
-						value=7;
+						value=9;
 					};
 					class hp5_brim
 					{
 						name="Brimstone";
-						value=8;
+						value=10;
 					};
 				};
 			};
@@ -8026,35 +8527,45 @@ class CfgVehicles
 						name="HYDRA x19";
 						value=2;
 					};
-					class hp6_crv7
+					class hp6_crv7FAT
 					{
-						name="CRV-7 x19";
+						name="CRV-7 FAT x19";
 						value=3;
+					};
+					class hp6_crv7HE
+					{
+						name="CRV-7 HE x19";
+						value=4;
+					};
+					class hp6_crv7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=5;
 					};
 					class hp6_APKWS
 					{
 						name="APKWS x7";
-						value=4;
+						value=6;
 					};
 					class hp6_114L
 					{
 						name="AGM-114L";
-						value=5;
+						value=7;
 					};
 					class hp6_114N
 					{
 						name="AGM-114N";
-						value=6;
+						value=8;
 					};
 					class hp6_114C
 					{
 						name="AGM-114 Mixed";
-						value=7;
+						value=9;
 					};
 					class hp6_brim
 					{
 						name="Brimstone";
-						value=8;
+						value=10;
 					};
 				};
 			};

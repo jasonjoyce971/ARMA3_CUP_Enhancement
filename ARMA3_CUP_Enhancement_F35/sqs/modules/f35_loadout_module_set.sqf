@@ -35,6 +35,9 @@ _plane setVariable ["InternalCBU105","no",true];
 _plane setVariable ["InternalAIM120","no",true];
 _plane setVariable ["InternalASRAAM","no",true];
 
+_plane addmagazine "Laserbatteries";
+_plane addweapon "Laserdesignator_mounted";
+
 Switch (_hardpoint1) Do
 	{
 		case -1:
@@ -53,11 +56,11 @@ Switch (_hardpoint1) Do
 		{
 			_plane addmagazine "JAS_FIR_AIM120B_1rnd_M";
 		};
-		case 3:
+		/*case 3:
 		{
 			_plane addmagazine "FIR_SniperXRPod_2_1rnd_M";
 			_plane setVariable ["TGT_POD","yes",true];
-		};
+		};*/
 	};
 	
 sleep 0.3;
@@ -80,11 +83,11 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_FIR_AIM120B_1rnd_M";
 		};
-		case 3:
+		/*case 3:
 		{
 			_plane addmagazine "FIR_SniperXRPod_2_1rnd_M";
 			_plane setVariable ["TGT_POD","yes",true];
-		};
+		};*/
 	};
 
 sleep 0.3;
@@ -689,7 +692,7 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_FIR_AIM120_1rnd_M_int";
 		};
-		case 2:
+		/*case 2:
 		{
 			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
 		};
@@ -748,7 +751,7 @@ sleep 0.3;
 		case 16:
 		{
 			_plane addmagazine "JAS_FIR_AGM154C_1rnd_M_int";
-		};
+		};*/
 	};
 	
 sleep 0.3;
@@ -767,7 +770,7 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_FIR_AIM120_1rnd_M_int";
 		};
-		case 2:
+		/*case 2:
 		{
 			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
 		};
@@ -826,7 +829,7 @@ sleep 0.3;
 		case 16:
 		{
 			_plane addmagazine "JAS_FIR_AGM154C_1rnd_M_int";
-		};
+		};*/
 	};
 
 sleep 1;
@@ -943,9 +946,9 @@ Switch (_fuelcount) Do
 	};
 };
 
-_TGP = _plane getVariable "TGT_POD";
+/*_TGP = _plane getVariable "TGT_POD";
 if (_TGP == "yes") then
 {
 	_plane addmagazine "Laserbatteries";
 	_plane addweapon "Laserdesignator_mounted";
-};
+};*/

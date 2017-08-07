@@ -23,7 +23,7 @@ _plane removeMagazines "FIR_Hydra_7_Pod_1rnd_M";
 _plane removemagazines "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 _plane removeMagazinesturret ["FIR_JLAU_3_19rnd_M",[-1]];
 _plane removeMagazinesturret ["FIR_Hydra_7rnd_M",[-1]];
-_plane removeMagazinesturret ["FIR_Hydra_APKWS_7rnd_M",[-1]];
+_plane removeMagazinesturret ["FIR_Hydra_APKWS_7rnd_M",[0]];
 _plane removeMagazinesturret ["CUP_2000Rnd_TE1_Red_Tracer_762x51_M134_M",[-1]];
 _plane removeMagazinesturret ["CUP_1200Rnd_TE1_Red_Tracer_GAU19_M",[-1]];
 
@@ -37,7 +37,7 @@ _plane removeweaponturret ["FIR_RKT_Launcher",[-1]];
 _plane removeweaponturret ["CUP_Vlmg_TwinM134_veh",[-1]];
 _plane removeweaponturret ["JAS_HellfireLauncher_K",[0]];
 _plane removeweaponturret ["JAS_HellfireLauncher_N",[0]];
-_plane removeweaponturret ["FIR_APKWS_Launcher",[-1]];
+_plane removeweaponturret ["FIR_APKWS_Launcher",[0]];
 _plane removeweaponturret ["CUP_Vhmg_GAU19_veh",[-1]];
 _plane removeweaponturret ["CUP_Vhmg_TwinGAU19_veh",[-1]];
 
@@ -384,13 +384,13 @@ if (_hydra7count >= 1) then
 };
 if (_APKWS7count >= 1) then 
 {
-	_plane addweaponturret ["FIR_APKWS_Launcher",[-1]];
+	_plane addweaponturret ["FIR_APKWS_Launcher",[0]];
 	_counter7 = 0;
 
 	while {_counter7 < _APKWS7count} do
 	{
 		_counter7 = _counter7 + 1;
-		_plane addmagazineturret ["FIR_Hydra_APKWS_7rnd_M",[-1]];
+		_plane addmagazineturret ["FIR_Hydra_APKWS_7rnd_M",[0]];
 	};
 };
 if (_hydra19count >= 1) then

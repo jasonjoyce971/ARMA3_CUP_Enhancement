@@ -23,8 +23,8 @@ _handle= CreateDialog "f35_GUI";
 	[  
 		"Empty",
 		"AIM-9X",
-		"AIM-120",
-		"Sniper XR POD"
+		"AIM-120"
+		//"Sniper XR POD"
     ];
 	
 	//Add Hardpoint 2 - left outboard 
@@ -32,8 +32,8 @@ _handle= CreateDialog "f35_GUI";
 	[  
 		"Empty",
 		"AIM-9X",
-		"AIM-120",
-		"Sniper XR POD"
+		"AIM-120"
+		//"Sniper XR POD"
     ];
 	
 //Add Hardpoint 3 - right midline
@@ -197,8 +197,8 @@ _handle= CreateDialog "f35_GUI";
 	{lbAdd[2202,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-120",
-		"GBU-12",
+		"AIM-120"
+		/*"GBU-12",
 		"EGBU-12 II",
 		"GBU-38",
 		"GBU-54",
@@ -212,15 +212,15 @@ _handle= CreateDialog "f35_GUI";
 		"GBU-39 SDB",
 		"GBU-53 SDB",
 		"AGM-154A JSOW (CEM)",
-		"AGM-154C JSOW (GPB)"
+		"AGM-154C JSOW (GPB)"*/
     ];
 	
 //Add Hardpoint 10 - internal right inner
 	{lbAdd[2107,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-120",
-		"GBU-12",
+		"AIM-120"
+		/*"GBU-12",
 		"EGBU-12 II",
 		"GBU-38",
 		"GBU-54",
@@ -234,6 +234,6 @@ _handle= CreateDialog "f35_GUI";
 		"GBU-39 SDB",
 		"GBU-53 SDB",
 		"AGM-154A JSOW (CEM)",
-		"AGM-154C JSOW (GPB)"
+		"AGM-154C JSOW (GPB)"*/
     ];
 

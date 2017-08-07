@@ -853,7 +853,6 @@ class CfgVehicles
 			};
 		};
 
-
 		expansion = 3;
 		dlc = "CUP_Vehicles";
 		scope = 0;
@@ -5568,8 +5567,8 @@ class CfgVehicles
 		faction = "CUP_O_SLA";
 		weapons[] =
 		{
-			"JAS_CUP_Vacannon_2A42_veh",
 			"FIR_MasterArm",
+			"JAS_CUP_Vacannon_2A42_veh",
 			"Laserdesignator_mounted",
 			"FIR_CMLauncher"
 		};
@@ -5801,8 +5800,8 @@ class CfgVehicles
 		};
 		weapons[] =
 		{
-			"JAS_CUP_Vacannon_2A42_veh",
 			"FIR_MasterArm",
+			"JAS_CUP_Vacannon_2A42_veh",
 			"Laserdesignator_mounted",
 			"FIR_CMLauncher"
 		};

@@ -56,7 +56,7 @@ sleep 0.01;
 		{
 			_plane addmagazine "JAS_FIR_Meteor_1rnd_M";
 		};
-		case 3:
+		/*case 3:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x";
 		};
@@ -64,7 +64,7 @@ sleep 0.01;
 		{
 			_plane addmagazine "FIR_SniperXRPod_2_1rnd_M";
 			_plane setVariable ["TGT_POD","yes",true];
-		};
+		};*/
 	};
 	
 sleep 0.3;
@@ -87,7 +87,7 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_FIR_Meteor_1rnd_M";
 		};
-		case 3:
+		/*case 3:
 		{
 			_plane addmagazine "EAWS_Brimstone_mag1x";
 		};
@@ -95,7 +95,7 @@ sleep 0.3;
 		{
 			_plane addmagazine "FIR_SniperXRPod_2_1rnd_M";
 			_plane setVariable ["TGT_POD","yes",true];
-		};
+		};*/
 	};
 
 sleep 0.3;
@@ -516,7 +516,7 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_FIR_AIM132_1rnd_M_int";
 		};
-		case 2:
+		/*case 2:
 		{
 			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
 		};
@@ -551,7 +551,7 @@ sleep 0.3;
 		case 10:
 		{
 			_plane addmagazine "JAS_EAWS_Brimstone_M_int";
-		};
+		};*/
 	};
 	
 sleep 0.3;
@@ -570,7 +570,7 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_FIR_AIM132_1rnd_M_int";
 		};
-		case 2:
+		/*case 2:
 		{
 			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
 		};
@@ -605,7 +605,7 @@ sleep 0.3;
 		case 10:
 		{
 			_plane addmagazine "JAS_EAWS_Brimstone_M_int";
-		};
+		};*/
 	};
 	
 sleep 0.01;

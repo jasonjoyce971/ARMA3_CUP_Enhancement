@@ -651,15 +651,15 @@ class CfgVehicles
 		unitInfoType = "RscOptics_CAS_Pilot";
 		weapons[] =
 		{
-			"JAS_CUP_Vacannon_GAU8_veh",
 			"FIR_MasterArm",
-			"FIR_CMLauncher"
+			"FIR_CMLauncher",
+			"JAS_CUP_Vacannon_GAU8_veh"
 			//"Laserdesignator_mounted"
 		};
 		magazines[] =
 		{
-			"JAS_CUP_1350Rnd_TE1_Red_Tracer_30mm_GAU8_M",
-			"FIR_240rnd_CMFlare_Chaff_Magazine"
+			"FIR_240rnd_CMFlare_Chaff_Magazine",
+			"JAS_CUP_1350Rnd_TE1_Red_Tracer_30mm_GAU8_M"
 			//"Laserbatteries"
 		};
 		hiddenSelectionsTextures[] =
@@ -925,6 +925,228 @@ class CfgVehicles
 						componentType="SensorsDisplayComponent";
 						range[]={4000,2000,16000,8000};
 						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class TransportPylonsComponent
+			{
+				UIPicture="\A3\Air_F_EPC\Plane_CAS_01\Data\UI\Plane_CAS_01_3DEN_CA.paa";
+				class presets
+				{
+					class default
+					{
+						displayName="FEBA Multi-Role";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_Mx2",
+							"JAS_FIR_Litening_std_P_1rnd_M",
+							"JAS_PylonRack_3Rnd_MAV_H",
+							"JAS_FIR_EGBU12_P_3rnd_M",
+							"JAS_FIR_CBU105_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_CBU103_PYLON_M",
+							"JAS_FIR_EGBU12_P_3rnd_M",
+							"JAS_PylonRack_3Rnd_MAV_D",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_FIR_ECMPod_P_1rnd_M"
+						};
+					};
+					class CAS
+					{
+						displayName="Close Air Support (Day)";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_Mx2",
+							"JAS_FIR_Litening_std_P_1rnd_M",
+							"JAS_PylonRack_3Rnd_MAV_L",
+							"JAS_FIR_APKWS_P_21rnd_M",
+							"JAS_FIR_GBU12_PYLON_M",
+							"JAS_FIR_GBU12_PYLON_M",
+							"JAS_FIR_GBU12_PYLON_M",
+							"JAS_FIR_APKWS_P_21rnd_M",
+							"JAS_PylonRack_3Rnd_MAV_D",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_FIR_ECMPod_P_1rnd_M"
+						};
+					};
+					class CAS2
+					{
+						displayName="Close Air Support (Night)";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_Mx2",
+							"JAS_FIR_Litening_std_P_1rnd_M",
+							"JAS_PylonRack_3Rnd_MAV_L",
+							"JAS_FIR_APKWS_P_21rnd_M",
+							"JAS_FIR_GBU12_PYLON_M",
+							"JAS_FIR_GBU12_PYLON_M",
+							"JAS_FIR_GBU12_PYLON_M",
+							"JAS_FIR_APKWS_P_21rnd_M",
+							"JAS_PylonRack_3Rnd_MAV_D",
+							"JAS_FIR_SUU25_PYLON_M",
+							"JAS_FIR_ECMPod_P_1rnd_M"
+						};
+					};
+					class BAI
+					{
+						displayName="Battlefield Interdiction (Infrastructure)";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_Mx2",
+							"JAS_FIR_Litening_std_P_1rnd_M",
+							"JAS_PylonRack_3Rnd_MAV_L",
+							"JAS_FIR_GBU12_P_3rnd_M",
+							"JAS_FIR_CBU87_PYLON_M",
+							"JAS_FIR_CBU97_PYLON_M",
+							"JAS_FIR_CBU87_PYLON_M",
+							"JAS_FIR_GBU12_P_3rnd_M",
+							"JAS_PylonRack_3Rnd_MAV_L",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M",
+							"JAS_FIR_ECMPod_P_1rnd_M"
+						};
+					};
+					class BAI2
+					{
+						displayName="Battlefield Interdiction (Convoys)";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_Mx2",
+							"JAS_FIR_Litening_std_P_1rnd_M",
+							"JAS_PylonRack_3Rnd_MAV_H",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_KEP_M",
+							"JAS_FIR_CBU97_PYLON_M",
+							"JAS_FIR_CBU97_PYLON_M",
+							"JAS_FIR_CBU97_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_KEP_M",
+							"JAS_PylonRack_3Rnd_MAV_D",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_FIR_ECMPod_P_1rnd_M"
+						};
+					};
+					class BAI3
+					{
+						displayName="Battlefield Interdiction (Structures)";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_Mx2",
+							"JAS_FIR_Litening_std_P_1rnd_M",
+							"JAS_PylonRack_3Rnd_MAV_L",
+							"JAS_FIR_GBU31_PYLON_M",
+							"JAS_FIR_GBU31_PYLON_M",
+							"JAS_FIR_MK84_GP_PYLON_M",
+							"JAS_FIR_GBU31_PYLON_M",
+							"JAS_FIR_GBU31_PYLON_M",
+							"JAS_PylonRack_3Rnd_MAV_L",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M",
+							"JAS_FIR_ECMPod_P_1rnd_M"
+						};
+					};
+					class AFAC
+					{
+						displayName="Airborne Forward Air Controller";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_Mx2",
+							"JAS_FIR_Litening_std_P_1rnd_M",
+							"JAS_FIR_Hydra_P_7rnd_M_Red",
+							"JAS_FIR_Hydra_P_7rnd_MPurple",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_Hydra_P_7rnd_MPurple",
+							"JAS_FIR_Hydra_P_7rnd_M_Red",
+							"JAS_FIR_SUU25_PYLON_M",
+							"JAS_FIR_ECMPod_P_1rnd_M"
+						};
+					};
+				};
+				class pylons
+				{
+					class pylons1
+					{
+						attachment="JAS_FIR_AIM9L_PYLON_Mx2";
+						hardpoints[]=
+						{
+							"JAS_A10_111"
+						};
+						maxweight=1200;
+						priority=1;
+						UIposition[]={0.34999999,0.024999955};
+					};
+					class pylons2: pylons1
+					{
+						attachment="JAS_FIR_Litening_std_P_1rnd_M";
+						hardpoints[]=
+						{
+							"JAS_A10_210"
+						};
+						UIposition[]={0.345,0.074999965};
+					};
+					class pylons3: pylons1
+					{
+						attachment="JAS_PylonRack_3Rnd_MAV_H";
+						hardpoints[]=
+						{
+							"JAS_A10_39"
+						};
+						UIposition[]={0.34,0.124999975};
+					};
+					class pylons4: pylons1
+					{
+						attachment="JAS_FIR_GBU12_P_3rnd_M";
+						hardpoints[]=
+						{
+							"JAS_A10_48"
+						};
+						UIposition[]={0.33000001,0.174999985};
+					};
+					class pylons5: pylons1
+					{
+						attachment="JAS_FIR_CBU105_PYLON_M";
+						hardpoints[]=
+						{
+							"JAS_A10_57"
+						};
+						UIposition[]={0.33000001,0.224999995};
+					};
+					class pylons6: pylons1
+					{
+						attachment="JAS_FIR_CBU87_PYLON_M";
+						hardpoints[]=
+						{
+							"JAS_A10_6"
+						};
+						UIposition[]={0.33000001,0.275000005};
+					};
+					class pylons7: pylons5
+					{
+						attachment="JAS_FIR_CBU105_PYLON_M";
+						UIposition[]={0.33000001,0.325000015};
+						mirroredMissilePos=5;
+					};
+					class pylons8: pylons4
+					{
+						attachment="JAS_FIR_GBU12_P_3rnd_M";
+						UIposition[]={0.33000001,0.375000025};
+						mirroredMissilePos=4;
+					};
+					class pylons9: pylons3
+					{
+						attachment="JAS_PylonRack_3Rnd_MAV_D";
+						UIposition[]={0.34,0.425000035};
+						mirroredMissilePos=3;
+					};
+					class pylons10: pylons2
+					{
+						attachment="JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M";
+						UIposition[]={0.345,0.475000045};
+						mirroredMissilePos=2;
+					};
+					class pylons11: pylons1
+					{
+						attachment="JAS_FIR_ECMPod_P_1rnd_M";
+						UIposition[]={0.34999999,0.525000055};
+						mirroredMissilePos=1;
 					};
 				};
 			};
@@ -5232,55 +5454,65 @@ class CfgVehicles
 						name="ZUNI x4";
 						value=8;
 					};
-					class hp3_crv7
+					class hp3_crv7FAT
 					{
-						name="CRV7 x19";
+						name="CRV7 FAT x19";
 						value=9;
+					};
+					class hp3_crv7HE
+					{
+						name="CRV7 HE x19";
+						value=10;
+					};
+					class hp3_crv7KEP
+					{
+						name="CRV7 KEP x19";
+						value=11;
 					};
 					class hp3_82s
 					{
 						name="Mk82 Snakeye";
-						value=10;
+						value=12;
 					};
 					class hp3_82
 					{
 						name="Mk82 GPB";
-						value=11;
+						value=13;
 					};
 					class hp3_84
 					{
 						name="Mk84 GPB";
-						value=12;
+						value=14;
 					};
 					class hp3_87
 					{
 						name="CBU-87 CEM";
-						value=13;
+						value=15;
 					};
 					class hp3_89
 					{
 						name="CBU-89 GATOR";
-						value=14;
+						value=16;
 					};
 					class hp3_97
 					{
 						name="CBU-97 SFW";
-						value=15;
+						value=17;
 					};
 					class hp3_12
 					{
 						name="GBU-12";
-						value=16;
+						value=18;
 					};
 					class hp3_E12
 					{
 						name="EGBU-12 II";
-						value=17;
+						value=19;
 					};
 					class hp3_tgp
 					{
 						name="Lightning II POD";
-						value=18;
+						value=20;
 					};
 				};
 			};
@@ -5337,55 +5569,65 @@ class CfgVehicles
 						name="ZUNI x4";
 						value=8;
 					};
-					class hp4_crv7
+					class hp4_crv7FAT
 					{
-						name="CRV7 x19";
+						name="CRV7 FAT x19";
 						value=9;
+					};
+					class hp4_crv7HE
+					{
+						name="CRV7 HE x19";
+						value=10;
+					};
+					class hp4_crv7KEP
+					{
+						name="CRV7 KEP x19";
+						value=11;
 					};
 					class hp4_82s
 					{
 						name="Mk82 Snakeye";
-						value=10;
+						value=12;
 					};
 					class hp4_82
 					{
 						name="Mk82 GPB";
-						value=11;
+						value=13;
 					};
 					class hp4_84
 					{
 						name="Mk84 GPB";
-						value=12;
+						value=14;
 					};
 					class hp4_87
 					{
 						name="CBU-87 CEM";
-						value=13;
+						value=15;
 					};
 					class hp4_89
 					{
 						name="CBU-89 GATOR";
-						value=14;
+						value=16;
 					};
 					class hp4_97
 					{
 						name="CBU-97 SFW";
-						value=15;
+						value=17;
 					};
 					class hp4_12
 					{
 						name="GBU-12";
-						value=16;
+						value=18;
 					};
 					class hp4_E12
 					{
 						name="EGBU-12 II";
-						value=17;
+						value=19;
 					};
 					class hp4_tgp
 					{
 						name="Lightning II POD";
-						value=18;
+						value=20;
 					};
 				};
 			};
@@ -5542,50 +5784,60 @@ class CfgVehicles
 						name="ZUNI x4";
 						value=28;
 					};
-					class hp5_crv7
+					class hp5_crv7FAT
 					{
-						name="CRV7 x19";
+						name="CRV7 FAT x19";
 						value=29;
+					};
+					class hp5_crv7HE
+					{
+						name="CRV7 HE x19";
+						value=30;
+					};
+					class hp5_crv7KEP
+					{
+						name="CRV7 KEP x19";
+						value=31;
 					};
 					class hp5_65D
 					{
 						name="AGM-65D";
-						value=30;
+						value=32;
 					};
 					class hp5_65Dter
 					{
 						name="AGM-65D x3";
-						value=31;
+						value=33;
 					};
 					class hp5_65G
 					{
 						name="AGM-65G";
-						value=32;
+						value=34;
 					};
 					class hp5_65Gter
 					{
 						name="AGM-65G x3";
-						value=33;
+						value=35;
 					};
 					class hp5_65L
 					{
 						name="AGM-65L";
-						value=34;
+						value=36;
 					};
 					class hp5_65Lter
 					{
 						name="AGM-65L x3";
-						value=35;
+						value=37;
 					};
 					class hp5_65H
 					{
 						name="AGM-65H";
-						value=36;
+						value=38;
 					};
 					class hp5_65Hter
 					{
 						name="AGM-65H x3";
-						value=37;
+						value=39;
 					};
 				};
 			};
@@ -5742,50 +5994,60 @@ class CfgVehicles
 						name="ZUNI x4";
 						value=28;
 					};
-					class hp6_crv7
+					class hp6_crv7FAT
 					{
-						name="CRV7 x19";
+						name="CRV7 FAT x19";
 						value=29;
+					};
+					class hp6_crv7HE
+					{
+						name="CRV7 HE x19";
+						value=30;
+					};
+					class hp6_crv7KEP
+					{
+						name="CRV7 KEP x19";
+						value=31;
 					};
 					class hp6_65D
 					{
 						name="AGM-65D";
-						value=30;
+						value=32;
 					};
 					class hp6_65Dter
 					{
 						name="AGM-65D x3";
-						value=31;
+						value=33;
 					};
 					class hp6_65G
 					{
 						name="AGM-65G";
-						value=32;
+						value=34;
 					};
 					class hp6_65Gter
 					{
 						name="AGM-65G x3";
-						value=33;
+						value=35;
 					};
 					class hp6_65L
 					{
 						name="AGM-65L";
-						value=34;
+						value=36;
 					};
 					class hp6_65Lter
 					{
 						name="AGM-65L x3";
-						value=35;
+						value=37;
 					};
 					class hp6_65H
 					{
 						name="AGM-65H";
-						value=36;
+						value=38;
 					};
 					class hp6_65Hter
 					{
 						name="AGM-65H x3";
-						value=37;
+						value=39;
 					};
 				};
 			};
@@ -5922,10 +6184,20 @@ class CfgVehicles
 						name="ZUNI x4";
 						value=24;
 					};
-					class hp7_crv7
+					class hp7_crv7FAT
 					{
-						name="CRV7 x19";
+						name="CRV7 FAT x19";
 						value=25;
+					};
+					class hp7_crv7HE
+					{
+						name="CRV7 HE x19";
+						value=26;
+					};
+					class hp7_crv7KEP
+					{
+						name="CRV7 KEP x19";
+						value=27;
 					};
 				};
 			};
@@ -6062,10 +6334,20 @@ class CfgVehicles
 						name="ZUNI x4";
 						value=24;
 					};
-					class hp8_crv7
+					class hp8_crv7FAT
 					{
-						name="CRV7 x19";
+						name="CRV7 FAT x19";
 						value=25;
+					};
+					class hp8_crv7HE
+					{
+						name="CRV7 HE x19";
+						value=26;
+					};
+					class hp8_crv7KEP
+					{
+						name="CRV7 KEP x19";
+						value=27;
 					};
 				};
 			};

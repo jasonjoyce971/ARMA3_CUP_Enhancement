@@ -5103,12 +5103,15 @@ class CfgVehicles
 		displayname="RAH-66J Commanche";
 		weapons[]=
 		{
-			"JAS_Master_Arm",
+			//"JAS_Master_Arm",
+			"FIR_MasterArm",
+			"FIR_CMLauncher",
 			"missiles_DAR"
 		};
 		magazines[]=
 		{
-			"FakeMagazine",
+			//"FakeMagazine",
+			"FIR_240rnd_CMFlare_Chaff_Magazine",
 			"PylonRack_12Rnd_missiles",
 			"PylonRack_12Rnd_missiles"
 		};
@@ -5118,13 +5121,14 @@ class CfgVehicles
 			{
 				weapons[]=
 				{
-					"JAS_Master_Arm",
+					//"JAS_Master_Arm",
+					"FIR_MasterArm",
 					"gatling_20mm",
 					"Laserdesignator_mounted"
 				};
 				magazines[]=
 				{
-					"FakeMagazine",
+					//"FakeMagazine",
 					"1000Rnd_20mm_shells",
 					"Laserbatteries"
 				};
@@ -10697,14 +10701,15 @@ class CfgVehicles
 		displayname="A-164J Wipeout";
 		weapons[]=
 		{
-			"JAS_Master_Arm",
+			//"JAS_Master_Arm",
+			"FIR_MasterArm",
 			"JAS_Gatling_30mm_Plane_CAS_01_F",
 			"Laserdesignator_pilotCamera",
 			"FIR_CMLauncher"
 		};
 		magazines[]=
 		{
-			"FakeMagazine",
+			//"FakeMagazine",
 			"JAS_1000Rnd_Gatling_30mm_Plane_CAS_01_F",
 			"Laserbatteries",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
@@ -24273,14 +24278,15 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"JAS_Master_Arm",
+			//"JAS_Master_Arm",
+			"FIR_MasterArm",
 			"weapon_Fighter_Gun20mm_AA",
 			"Laserdesignator_pilotCamera",
 			"FIR_CMLauncher"
 		};
 		magazines[]=
 		{
-			"FakeMagazine",
+			//"FakeMagazine",
 			"magazine_Fighter01_Gun20mm_AA_x450",
 			"Laserbatteries",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
@@ -24633,14 +24639,15 @@ class CfgVehicles
 	{
 		weapons[]=
 		{
-			"JAS_Master_Arm",
+			//"JAS_Master_Arm",
+			"FIR_MasterArm",
 			"weapon_Fighter_Gun20mm_AA",
 			"Laserdesignator_pilotCamera",
 			"FIR_CMLauncher"
 		};
 		magazines[]=
 		{
-			"FakeMagazine",
+			//"FakeMagazine",
 			"magazine_Fighter01_Gun20mm_AA_x450",
 			"Laserbatteries",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
@@ -24987,14 +24994,15 @@ class CfgVehicles
 	{
 		weapons[]=
 		{
-			"JAS_Master_Arm",
+			//"JAS_Master_Arm",
+			"FIR_MasterArm",
 			"weapon_Fighter_Gun_30mm",
 			"Laserdesignator_pilotCamera",
 			"FIR_CMLauncher"
 		};
 		magazines[]=
 		{
-			"FakeMagazine",
+			//"FakeMagazine",
 			"magazine_Fighter02_Gun30mm_AA_x180",
 			"Laserbatteries",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
@@ -25363,14 +25371,15 @@ class CfgVehicles
 	{
 		weapons[]=
 		{
-			"JAS_Master_Arm",
+			//"JAS_Master_Arm",
+			"FIR_MasterArm",
 			"weapon_Fighter_Gun_30mm",
 			"Laserdesignator_pilotCamera",
 			"FIR_CMLauncher"
 		};
 		magazines[]=
 		{
-			"FakeMagazine",
+			//"FakeMagazine",
 			"magazine_Fighter02_Gun30mm_AA_x180",
 			"Laserbatteries",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
@@ -25731,14 +25740,15 @@ class CfgVehicles
 	{
 		magazines[] = 
 		{
-			"JAS_Master_Arm",
+			//"JAS_Master_Arm",
+			"FIR_MasterArm",
 			"magazine_Fighter04_Gun20mm_AA_x250",
 			"Laserbatteries",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 		weapons[] = 
 		{
-			"FakeMagazine",
+			//"FakeMagazine",
 			"weapon_Fighter_Gun20mm_AA",
 			"Laserdesignator_pilotCamera",
 			"FIR_CMLauncher"
@@ -25990,14 +26000,15 @@ class CfgVehicles
 		faction="OPF_F";
 		weapons[]=
 		{
-			"JAS_Master_Arm",
+			//"JAS_Master_Arm",
+			"FIR_MasterArm",
 			"JAS_Cannon_30mm_Plane_CAS_02_F",
 			"Laserdesignator_pilotCamera",
 			"FIR_CMLauncher"
 		};
 		magazines[]=
 		{
-			"FakeMagazine",
+			//"FakeMagazine",
 			"JAS_500Rnd_Gatling_30mm_Plane_CAS_02_F",
 			"Laserbatteries",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
@@ -26251,13 +26262,14 @@ class CfgVehicles
 		};
 		weapons[] = 
 		{
-			"JAS_Master_Arm",
+			//"JAS_Master_Arm",
+			"FIR_MasterArm",
 			"Laserdesignator_pilotCamera",
 			"FIR_CMLauncher"
 		};	
 		magazines[] = 
 		{
-			"FakeMagazine",
+			//"FakeMagazine",
 			"Laserbatteries",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
@@ -26283,7 +26295,7 @@ class CfgVehicles
 					{
 						hardpoints[]=
 						{
-							"JAS_ALCA_AAM","DAGR","JAS_ALCA_AGM"
+							"JAS_ALCA_AAM","DAGR","JAS_ALCA_AGM","JAS_CRV7"
 						};
 						priority=4;
 						attachment="";
@@ -26294,7 +26306,7 @@ class CfgVehicles
 					{
 						hardpoints[]=
 						{
-							"JAS_ALCA_GPOD","DAGR","JAS_ALCA_AGM"
+							"JAS_ALCA_GPOD","DAGR","JAS_ALCA_AGM","JAS_CRV7"
 						};
 						priority=3;
 						attachment="";
@@ -26582,6 +26594,7 @@ class CfgVehicles
 		};
 		weapons[] = 
 		{
+			"FIR_MasterArm",
 			"FIR_CMLauncher"
 		};
 		class Turrets: Turrets
@@ -26590,6 +26603,7 @@ class CfgVehicles
 			{
 				weapons[]=
 				{
+					"FIR_MasterArm",
 					"gatling_30mm"
 				};
 				magazines[]=
@@ -27134,6 +27148,7 @@ class CfgVehicles
 		};
 		weapons[] = 
 		{
+			"FIR_MasterArm",
 			"M134_minigun",
 			"FIR_CMLauncher"
 		};

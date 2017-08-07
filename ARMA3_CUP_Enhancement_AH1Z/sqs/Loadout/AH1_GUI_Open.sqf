@@ -42,8 +42,7 @@ _handle= CreateDialog "AH1_GUI";
 		"HYDRA x19",
 		"APKWS x7",
 		"AGM-114K x4",
-		"AGM-114N x4",
-		"AGM-114 Combi"
+		"AGM-114N x4"
     ];
 //Add Hardpoint 4 - left midline
 	{lbAdd[2102,_x]} forEach 
@@ -53,8 +52,7 @@ _handle= CreateDialog "AH1_GUI";
 		"HYDRA x19",
 		"APKWS x7",
 		"AGM-114K x4",
-		"AGM-114N x4",
-		"AGM-114 Combi"
+		"AGM-114N x4"
     ];
 //Add Hardpoint 5 - right inboard
 	{lbAdd[2103,_x]} forEach 
@@ -64,8 +62,7 @@ _handle= CreateDialog "AH1_GUI";
 		"HYDRA x19",
 		"APKWS x7",
 		"AGM-114K x4",
-		"AGM-114N x4",
-		"AGM-114 Combi"
+		"AGM-114N x4"
     ];
 //Add Hardpoint 6 - left inboard
 	{lbAdd[2104,_x]} forEach 
@@ -75,6 +72,5 @@ _handle= CreateDialog "AH1_GUI";
 		"HYDRA x19",
 		"APKWS x7",
 		"AGM-114K x4",
-		"AGM-114N x4",
-		"AGM-114 Combi"
+		"AGM-114N x4"
     ];

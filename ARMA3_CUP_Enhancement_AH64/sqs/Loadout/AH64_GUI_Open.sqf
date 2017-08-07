@@ -40,11 +40,12 @@ _handle= CreateDialog "AH64_GUI";
 		"Empty",
 		"HYDRA x7",
 		"HYDRA x19",
-		"CRV-7 x19",
+		"CRV-7 FAT x19",
+		"CRV-7 HE x19",
+		"CRV-7 KEP x19",
 		"APKWS x7",
 		"AGM-114L x4",
-		"AGM-114N x4",
-		"AGM-114 Combi"
+		"AGM-114N x4"
     ];
 //Add Hardpoint 4 - left midline
 	{lbAdd[2102,_x]} forEach 
@@ -52,11 +53,12 @@ _handle= CreateDialog "AH64_GUI";
 		"Empty",
 		"HYDRA x7",
 		"HYDRA x19",
-		"CRV-7 x19",
+		"CRV-7 FAT x19",
+		"CRV-7 HE x19",
+		"CRV-7 KEP x19",
 		"APKWS x7",
 		"AGM-114L x4",
-		"AGM-114N x4",
-		"AGM-114 Combi"
+		"AGM-114N x4"
     ];
 //Add Hardpoint 5 - right inboard
 	{lbAdd[2103,_x]} forEach 
@@ -64,11 +66,12 @@ _handle= CreateDialog "AH64_GUI";
 		"Empty",
 		"HYDRA x7",
 		"HYDRA x19",
-		"CRV-7 x19",
+		"CRV-7 FAT x19",
+		"CRV-7 HE x19",
+		"CRV-7 KEP x19",
 		"APKWS x7",
 		"AGM-114L x4",
-		"AGM-114N x4",
-		"AGM-114 Combi"
+		"AGM-114N x4"
     ];
 //Add Hardpoint 6 - left inboard
 	{lbAdd[2104,_x]} forEach 
@@ -76,9 +79,10 @@ _handle= CreateDialog "AH64_GUI";
 		"Empty",
 		"HYDRA x7",
 		"HYDRA x19",
-		"CRV-7 x19",
+		"CRV-7 FAT x19",
+		"CRV-7 HE x19",
+		"CRV-7 KEP x19",
 		"APKWS x7",
 		"AGM-114L x4",
-		"AGM-114N x4",
-		"AGM-114 Combi"
+		"AGM-114N x4"
     ];

@@ -23,7 +23,9 @@ _handle= CreateDialog "GR9_GUI";
 	[  
 		"Empty",
 		"AIM-9L",
-		"CRV7 x19",
+		"CRV7 FAT x19",
+		"CRV7 HE x19",
+		"CRV7 KEP x19",
 		"ECM POD",
 		"Sniper XR POD"
     ];
@@ -33,7 +35,9 @@ _handle= CreateDialog "GR9_GUI";
 	[  
 		"Empty",
 		"AIM-9L",
-		"CRV7 x19",
+		"CRV7 FAT x19",
+		"CRV7 HE x19",
+		"CRV7 KEP x19",
 		"ECM POD",
 		"Sniper XR POD"
     ];

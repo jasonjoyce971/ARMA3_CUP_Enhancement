@@ -5734,7 +5734,7 @@ class CfgVehicles
 		//liftForceCoef = 2.5;
 		liftForceCoef = 3.5;
 		radarType = 4;
-		lockDetectionSystem = "CM_Lock_Radar + CM_Lock_Laser + CM_Lock_IR";
+		lockDetectionSystem = "4+8";
 		incommingMisslieDetectionSystem = "CM_Missile";
 		selectionHRotorStill = "mainRotorStatic";
 		selectionHRotorMove = "mainRotorBlurred";
@@ -5906,11 +5906,12 @@ class CfgVehicles
 		backRotorSpeed = 3;
 		weapons[] =
 		{
-			"CMFlareLauncher"
+			"FIR_MasterArm",
+			"FIR_CMLauncher"
 		};
 		magazines[] =
 		{
-			"168Rnd_CMFlare_Chaff_Magazine"
+			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 		insideSoundCoef = 0.2;
 		attenuationEffectType = "HeliAttenuation";
@@ -7150,6 +7151,7 @@ class CfgVehicles
 				gunnerGetOutAction = "GetOutHigh";
 				weapons[] =
 				{
+					"FIR_MasterArm",
 					"CUP_Vacannon_M197_veh"
 				};
 				magazines[] =
@@ -7496,6 +7498,180 @@ class CfgVehicles
 					};
 				};
 			};
+			class TransportPylonsComponent
+			{
+				UIPicture="\CUP\AirVehicles\CUP_AirVehicles_AH1Z\Data\UI\CUP_AH1Z_3DEN_CA.paa";
+				class presets
+				{
+					class Empty
+					{
+						displayName="Empty";
+						attachment[]={};
+					};
+					class AntiTank
+					{
+						displayName="Anti-Tank";
+						attachment[]=
+						{
+							"",
+							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
+							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
+							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
+							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
+							""
+						};
+					};
+					class MultiRole
+					{
+						displayName="Multi-Role";
+						attachment[]=
+						{
+							"CUP_PylonPod_1Rnd_AIM_9L_Sidewinder_M",
+							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
+							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
+							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"CUP_PylonPod_1Rnd_AIM_9L_Sidewinder_M"
+						};
+					};
+					class Escort
+					{
+						displayName="Escort";
+						attachment[]=
+						{
+							"",
+							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							""
+						};
+					};
+				};
+				class pylons
+				{
+					class pylons1
+					{
+						hardpoints[]=
+						{
+							"JAS_AH1Z_WINGTIP"
+						};
+						attachment="JAS_FIR_AIM9L_PYLON_M";
+						bay=-1;
+						priority=1;
+						UIposition[]=
+						{
+							"0.0.4",
+							0.30000001
+						};
+						turret[]={0};
+					};
+					class pylons2
+					{
+						hardpoints[]=
+						{
+							"JAS_AH1Z_PYLON"
+						};
+						attachment="CUP_PylonPod_19Rnd_Rocket_FFAR_M";
+						bay=-1;
+						priority=5;
+						UIposition[]={0.059999999,0.34999999};
+						turret[]={0};
+					};
+					class pylons3: pylons2
+					{
+						hardpoints[]=
+						{
+							"JAS_AH1Z_PYLON"
+						};
+						attachment="CUP_PylonPod_19Rnd_Rocket_FFAR_M";
+						priority=4;
+						UIposition[]={0.079999998,0.40000001};
+						turret[]={1};
+					};
+					class pylons4: pylons3
+					{
+						priority=4;
+						UIposition[]={0.56999999,0.40000001};
+						mirroredMissilePos=3;
+					};
+					class pylons5: pylons2
+					{
+						priority=5;
+						UIposition[]={0.58999997,0.34999999};
+						mirroredMissilePos=2;
+					};
+					class pylons6: pylons1
+					{
+						UIposition[]={0.62,0.30000001};
+						mirroredMissilePos=1;
+					};
+				};
+			};
+		};
+		memoryPointDriverOptics="gunnerview";
+		class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName="WFOV";
+					initAngleX=0;
+					minAngleX=0;
+					maxAngleX=0;
+					initAngleY=0;
+					minAngleY=0;
+					maxAngleY=0;
+					initFov="(30 / 120)";
+					minFov="(30 / 120)";
+					maxFov="(30 / 120)";
+					directionStabilized=1;
+					visionMode[]=
+					{
+						"Normal",
+						"Ti"
+					};
+					thermalMode[]={0,1};
+					gunnerOpticsModel="CUP\AirVehicles\CUP_AirVehicles_AH1Z\optika_AH1Z.p3d";
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera2",
+						"OpticsBlur2"
+					};
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName="MFOV";
+					initFov="(15 / 120)";
+					minFov="(15 / 120)";
+					maxFov="(15 / 120)";
+					gunnerOpticsModel="CUP\AirVehicles\CUP_AirVehicles_AH1Z\optika_AH1Z.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName="NFOV";
+					initFov="(3.75 / 120)";
+					minFov="(3.75 / 120)";
+					maxFov="(3.75 / 120)";
+					gunnerOpticsModel="CUP\AirVehicles\CUP_AirVehicles_AH1Z\optika_AH1Z.p3d";
+				};
+				showMiniMapInOptics=1;
+				showUAVViewInOptics=0;
+				showSlingLoadManagerInOptics=0;
+			};
+			//minTurn=-160;
+			//maxTurn=160;
+			minTurn=-70;
+			maxTurn=70;
+			initTurn=0;
+			minElev=-10;
+			maxElev=90;
+			initElev=0;
+			maxXRotSpeed=0.30000001;
+			maxYRotSpeed=0.30000001;
+			pilotOpticsShowCursor=1;
+			controllable=1;
 		};
 	};
 	class JAS_CUP_B_AH1Z_USMC : JAS_CUP_B_AH1Z_BASE

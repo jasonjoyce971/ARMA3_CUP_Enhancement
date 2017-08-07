@@ -2644,6 +2644,7 @@ class CfgVehicles
 		transportSoldier=13;
 		weapons[]=
 		{
+			"FIR_MasterArm",
 			"FIR_CMLauncher"
 		};
 		magazines[]=
@@ -2850,6 +2851,7 @@ class CfgVehicles
 		accuracy=1000;
 		weapons[]=
 		{
+			"FIR_MasterArm",
 			"FIR_CMLauncher"
 		};
 		magazines[]=

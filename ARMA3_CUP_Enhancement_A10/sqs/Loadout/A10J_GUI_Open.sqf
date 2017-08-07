@@ -18,38 +18,34 @@ _handle= CreateDialog "A10J_GUI";
 		"Custom Slot 3"
     ];
 
-//Add Hardpoint 1 - right outboard
+//Add Hardpoint 1 - right outboard - pylon JAS_A10_111
 	{lbAdd[2100,_x]} forEach 
 	[  
 		"Empty",
 		"AIM-9L x2",
 		"Mk82 Snakeye",
 		"Mk82 GPB",
-		"Mk84 GPB",
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"GBU-12",
 		"EGBU-12 II",
-		"ECM POD",
-		"SUU-25 x8"
+		"ECM POD"
     ];
 	
-	//Add Hardpoint 2 - left outboard 
+	//Add Hardpoint 2 - left outboard - pylon JAS_A10_111
 	{lbAdd[2201,_x]} forEach 
 	[  
 		"Empty",
 		"AIM-9L x2",
 		"Mk82 Snakeye",
 		"Mk82 GPB",
-		"Mk84 GPB",
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"GBU-12",
 		"EGBU-12 II",
-		"ECM POD",
-		"SUU-25 x8"
+		"ECM POD"
     ];
 	
 //Add Hardpoint 3 - right midline
@@ -61,19 +57,21 @@ _handle= CreateDialog "A10J_GUI";
 		"HYDRA SMK R x7",
 		"HYDRA SMK O x7",
 		"HYDRA SMK P x7",
-		"HYDRA HE x19",
+		"HYDRA HE x21",
 		"APKWS HYDRA x7",
 		"ZUNI x4",
-		"CRV7 x19",
+		"CRV-7 FAT x19",
+		"CRV-7 HE x19",
+		"CRV-7 KEP x19",
 		"Mk82 Snakeye",
 		"Mk82 GPB",
-		"Mk84 GPB",
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"GBU-12",
 		"EGBU-12 II",
-		"Lightning II POD"
+		"Lightning II POD",
+		"SUU-25 x8"
     ];
 //Add Hardpoint 4 - left midline
 	{lbAdd[2102,_x]} forEach 
@@ -84,19 +82,21 @@ _handle= CreateDialog "A10J_GUI";
 		"HYDRA SMK R x7",
 		"HYDRA SMK O x7",
 		"HYDRA SMK P x7",
-		"HYDRA x19",
+		"HYDRA x21",
 		"APKWS HYDRA x7",
 		"ZUNI x4",
-		"CRV7 x19",
+		"CRV-7 FAT x19",
+		"CRV-7 HE x19",
+		"CRV-7 KEP x19",
 		"Mk82 Snakeye",
 		"Mk82 GPB",
-		"Mk84 GPB",
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"GBU-12",
 		"EGBU-12 II",
-		"Lightning II POD"
+		"Lightning II POD",
+		"SUU-25 x8"
     ];
 //Add Hardpoint 5 - right inboard
 	{lbAdd[2103,_x]} forEach 
@@ -125,20 +125,21 @@ _handle= CreateDialog "A10J_GUI";
 		"HYDRA SMK R x7",
 		"HYDRA SMK O x7",
 		"HYDRA SMK P x7",
-		"HYDRA x19",
 		"HYDRA x21",
 		"APKWS HYDRA x7",
 		"APKWS HYDRA x21",
 		"ZUNI x4",
-		"CRV7 x19",
+		"CRV7 FAT x19",
+		"CRV7 HE x19",
+		"CRV7 KEP x19",
 		"AGM-65D",
 		"AGM-65D x3",
-		"AGM-65G",
-		"AGM-65G x3",
+		"AGM-65H",
+		"AGM-65H x3",
 		"AGM-65L",
 		"AGM-65L x3",
-		"AGM-65H",
-		"AGM-65H x3"
+		"AGM-65G",
+		"AGM-65K"
     ];
 //Add Hardpoint 6 - left inboard
 	{lbAdd[2104,_x]} forEach 
@@ -167,20 +168,21 @@ _handle= CreateDialog "A10J_GUI";
 		"HYDRA SMK R x7",
 		"HYDRA SMK O x7",
 		"HYDRA SMK P x7",
-		"HYDRA x19",
 		"HYDRA x21",
 		"APKWS HYDRA x7",
 		"APKWS HYDRA x21",
 		"ZUNI x4",
-		"CRV7 x19",
+		"CRV7 FAT x19",
+		"CRV7 HE x19",
+		"CRV7 KEP x19",
 		"AGM-65D",
 		"AGM-65D x3",
-		"AGM-65G",
-		"AGM-65G x3",
+		"AGM-65H",
+		"AGM-65H x3",
 		"AGM-65L",
 		"AGM-65L x3",
-		"AGM-65H",
-		"AGM-65H x3"
+		"AGM-65G",
+		"AGM-65K"
     ];
 //Add Hardpoint 7 - right belly outer
 	{lbAdd[2105,_x]} forEach 
@@ -205,12 +207,13 @@ _handle= CreateDialog "A10J_GUI";
 		"GBU-38",
 		"GBU-54",
 		"HYDRA x7",
-		"HYDRA x19",
 		"HYDRA x21",
 		"APKWS HYDRA x7",
 		"APKWS HYDRA x21",
 		"ZUNI x4",
-		"CRV7 x19"
+		"CRV7 FAT x19",
+		"CRV7 HE x19",
+		"CRV7 KEP x19"
     ];
 //Add Hardpoint 8 - left belly outer
 	{lbAdd[2106,_x]} forEach 
@@ -235,12 +238,13 @@ _handle= CreateDialog "A10J_GUI";
 		"GBU-38",
 		"GBU-54",
 		"HYDRA x7",
-		"HYDRA x19",
 		"HYDRA x21",
 		"APKWS HYDRA x7",
 		"APKWS HYDRA x21",
 		"ZUNI x4",
-		"CRV7 x19"
+		"CRV7 FAT x19",
+		"CRV7 HE x19",
+		"CRV7 KEP x19"
     ];
 	
 	//Add Hardpoint 9 - right belly inner

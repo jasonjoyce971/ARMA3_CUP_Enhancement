@@ -4358,11 +4358,12 @@ class CfgVehicles
 		memoryPointGun="muzzle_1";
 		weapons[]=
 		{
-			"CMFlareLauncher"
+			"FIR_MasterArm",
+			"FIR_CMLauncher"
 		};
 		magazines[]=
 		{
-			"120Rnd_CMFlare_Chaff_Magazine"
+			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 		HeadAimDown=-5.1999998;
 		threat[]={1,1,0.5};
@@ -4718,6 +4719,7 @@ class CfgVehicles
 				turretInfoType="RscOptics_UAV_gunner";
 				weapons[]=
 				{
+					"FIR_MasterArm",
 					"Laserdesignator_mounted"
 				};
 				magazines[]=
