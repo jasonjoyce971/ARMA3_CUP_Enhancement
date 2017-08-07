@@ -310,14 +310,22 @@ _skin = _this select 10;
 		};
 		case 2:
 		{
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M";
+			_plane addmagazine "JAS_CUP_1Rnd_CRV7_Pod_19_M";
 		};
 		case 3:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_CRV7_Pod_19_M_add1";
+		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_CRV7_Pod_19_M_add2";
+		};
+		case 5:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M";
 			_plane setVariable ["ECMJAMMER","yes",true];
 		};
-		case 4:
+		case 6:
 		{
 			_plane addmagazine "FIR_SniperXRPod_2_1rnd_M";
 			_plane setVariable ["TGT_POD","yes",true];
@@ -342,14 +350,22 @@ sleep 0.3;
 		};
 		case 2:
 		{
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M";
+			_plane addmagazine "JAS_CUP_1Rnd_CRV7_Pod_19_M";
 		};
 		case 3:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_CRV7_Pod_19_M_add1";
+		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_CRV7_Pod_19_M_add2";
+		};
+		case 5:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M";
 			_plane setVariable ["ECMJAMMER","yes",true];
 		};
-		case 4:
+		case 6:
 		{
 			_plane addmagazine "FIR_SniperXRPod_2_1rnd_M";
 			_plane setVariable ["TGT_POD","yes",true];
@@ -396,8 +412,11 @@ _mk82gpcount = {_x == "FIR_mk82_gp_1rnd_M"} count magazines _plane;
 _agm65dcount = {_x == "JAS_FIR_AGM65D_1rnd_M"} count magazines _plane;
 _agm65gcount = {_x == "JAS_FIR_AGM65G_1rnd_M"} count magazines _plane;
 _agm65lcount = {_x == "JAS_FIR_AGM65L_1rnd_M"} count magazines _plane;
-_CRV7count = {_x == "CUP_1Rnd_CRV7_Pod_19_M"} count magazines _plane;
 _84count = {_x == "FIR_mk84_gp_1rnd_M"} count magazines _plane;
+
+_CRV7FATcount = {_x == "JAS_CUP_1Rnd_CRV7_Pod_19_M"} count magazines _plane;
+_CRV7HEcount = {_x == "JAS_CUP_1Rnd_CRV7_Pod_19_M_add1"} count magazines _plane;
+_CRV7KEPcount = {_x == "JAS_CUP_1Rnd_CRV7_Pod_19_M_add2"} count magazines _plane;
 
 if (_aim9xcount >= 1) then {_plane addweapon "JAS_FIR_AIM9L";};
 if (_gbu10count >= 1) then {_plane addweapon "FIR_GBU10";};
@@ -411,15 +430,40 @@ if (_84count >= 1) then {_plane addweapon "FIR_mk84";};
 if (_agm65dcount >= 1) then {_plane addweapon "JAS_FIR_AGM65D";};
 if (_agm65gcount >= 1) then {_plane addweapon "JAS_FIR_AGM65G";};
 if (_agm65lcount >= 1) then {_plane addweapon "JAS_FIR_AGM65L";};
-if (_CRV7count >= 1) then 
+
+if (_CRV7FATcount >= 1) then 
 {
 	_plane addweapon "JAS_CUP_Vmlauncher_CRV7_FAT_veh";
-	_counter = 1;
+	_counter = 0;
 
-	while {_counter <= _CRV7count} do
+	while {_counter <= _CRV7FATcount} do
 	{
 		_counter = _counter + 1;
 		_plane addmagazine "JAS_CUP_19Rnd_CRV7_FAT_M";
+	};
+};
+
+if (_CRV7HEcount >= 1) then 
+{
+	_plane addweapon "JAS_CUP_Vmlauncher_CRV7_FAT_veh";
+	_counter = 0;
+
+	while {_counter <= _CRV7HEcount} do
+	{
+		_counter = _counter + 1;
+		_plane addmagazine "JAS_CUP_19Rnd_CRV7_HE_M";
+	};
+};
+
+if (_CRV7KEPcount >= 1) then 
+{
+	_plane addweapon "JAS_CUP_Vmlauncher_CRV7_FAT_veh";
+	_counter = 0;
+
+	while {_counter <= _CRV7KEPcount} do
+	{
+		_counter = _counter + 1;
+		_plane addmagazine "JAS_CUP_19Rnd_CRV7_KEP_M";
 	};
 };
 

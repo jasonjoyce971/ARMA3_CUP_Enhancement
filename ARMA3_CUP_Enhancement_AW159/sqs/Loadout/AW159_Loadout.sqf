@@ -27,7 +27,6 @@ _plane removeMagazines "JAS_CUP_12Rnd_CRV7_FAT_M";
 _plane removeMagazines "CUP_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M";
 _plane removeMagazines "JAS_AGM114K_1rnd_M";
 _plane removeMagazines "JAS_AGM114N_1rnd_M";
-_plane removeMagazinesturret ["JAS_CUP_12Rnd_CRV7_FAT_M",[-1]];
 _plane removeMagazinesturret ["CUP_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M",[-1]];
 _plane removeMagazinesturret ["JAS_AGM114K_1rnd_M",[-1]];
 _plane removeMagazinesturret ["JAS_AGM114N_1rnd_M",[-1]];
@@ -56,7 +55,6 @@ _plane removeWeapon "JAS_HellfireLauncher_K";
 _plane removeWeapon "JAS_HellfireLauncher_N";
 _plane removeWeapon "FIR_MasterArm";
 _plane removeweaponturret ["CUP_Vacannon_M621_AW159_veh",[-1]];
-_plane removeweaponturret ["JAS_CUP_Vmlauncher_CRV7_FAT_veh",[-1]];
 _plane removeweaponturret ["JAS_HellfireLauncher_K",[-1]];
 _plane removeweaponturret ["JAS_HellfireLauncher_N",[-1]];
 _plane removeweaponturret ["FIR_MasterArm",[-1]];
@@ -545,13 +543,13 @@ if (_gpodcount >= 1) then
 
 if (_CRV7count >= 1) then 
 {
-	_plane addweaponturret ["JAS_CUP_Vmlauncher_CRV7_FAT_veh",[-1]];
+	_plane addweaponturret ["JAS_CUP_Vmlauncher_CRV7_FAT_veh",[0]];
 	_counter = 0;
 
 	while {_counter < _CRV7count} do
 	{
 		_counter = _counter + 1;
-		_plane addmagazineturret ["JAS_CUP_12Rnd_CRV7_FAT_M",[-1]];
+		_plane addmagazineturret ["JAS_CUP_12Rnd_CRV7_FAT_M",[0]];
 	};
 };
 

@@ -1366,12 +1366,14 @@ class CfgVehicles
 		{
 			"FIR_MasterArm",
 			"JAS_CUP_Vacannon_GAU22_veh",
-			"FIR_CMLauncher"
+			"FIR_CMLauncher",
+			"Laserdesignator_mounted"
 		};
 		magazines[] =
 		{
 			"JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M",
-			"FIR_240rnd_CMFlare_Chaff_Magazine"
+			"FIR_240rnd_CMFlare_Chaff_Magazine",
+			"Laserbatteries"
 		};
 		hiddenSelectionsTextures[] =
 		{
@@ -1497,7 +1499,8 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "";
-				condition = "this getvariable ""TGT_POD"" == ""yes"" and player in this and isengineon this";
+				//condition = "this getvariable ""TGT_POD"" == ""yes"" and player in this and isengineon this";
+				condition = "player in this and isengineon this";
 				statement = "this execVM ""\FIR_AirWeaponSystem_US\Script\TGTSystem\FIR_AWS_MFD_N_Open.sqf""";
 				onlyforplayer = "false";
 			};
@@ -1760,12 +1763,14 @@ class CfgVehicles
 		{
 			"FIR_MasterArm",
 			"JAS_CUP_Vacannon_GAU22_veh",
-			"FIR_CMLauncher"
+			"FIR_CMLauncher",
+			"Laserdesignator_mounted"
 		};
 		magazines[] =
 		{
 			"JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M",
-			"FIR_240rnd_CMFlare_Chaff_Magazine"
+			"FIR_240rnd_CMFlare_Chaff_Magazine",
+			"Laserbatteries"
 		};
 		hiddenSelectionsTextures[] =
 		{
@@ -1891,7 +1896,8 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "";
-				condition = "this getvariable ""TGT_POD"" == ""yes"" and player in this and isengineon this";
+				//condition = "this getvariable ""TGT_POD"" == ""yes"" and player in this and isengineon this";
+				condition = "player in this and isengineon this";
 				statement = "this execVM ""\FIR_AirWeaponSystem_US\Script\TGTSystem\FIR_AWS_MFD_N_Open.sqf""";
 				onlyforplayer = "false";
 			};
@@ -1954,11 +1960,11 @@ class CfgVehicles
 						name="AIM-120";
 						value=2;
 					};
-					class hp1_TGP
+					/*class hp1_TGP
 					{
 						name="Sniper XR Pod";
 						value=3;
-					};
+					};*/
 				};
 			};
 			class HP2
@@ -1984,11 +1990,11 @@ class CfgVehicles
 						name="AIM-120";
 						value=2;
 					};
-					class hp2_TGP
+					/*class hp2_TGP
 					{
 						name="Sniper XR Pod";
 						value=3;
-					};
+					};*/
 				};
 			};
 			class HP3
@@ -2729,7 +2735,7 @@ class CfgVehicles
 						name="AIM-120";
 						value=1;
 					};
-					class hp9_12
+					/*class hp9_12
 					{
 						name="GBU-12";
 						value=2;
@@ -2803,7 +2809,7 @@ class CfgVehicles
 					{
 						name="AGM-154C JSOW";
 						value=16;
-					};
+					};*/
 				};
 			};
 			class HP10
@@ -2824,7 +2830,7 @@ class CfgVehicles
 						name="AIM-120";
 						value=1;
 					};
-					class hp10_12
+					/*class hp10_12
 					{
 						name="GBU-12";
 						value=2;
@@ -2898,7 +2904,7 @@ class CfgVehicles
 					{
 						name="AGM-154C JSOW";
 						value=16;
-					};
+					};*/
 				};
 			};
 		};
@@ -2967,7 +2973,7 @@ class CfgVehicles
 						name="Meteor";
 						value=2;
 					};
-					class hp1_brim
+					/*class hp1_brim
 					{
 						name="Brimstone";
 						value=3;
@@ -2976,7 +2982,7 @@ class CfgVehicles
 					{
 						name="Sniper XR Pod";
 						value=4;
-					};
+					};*/
 				};
 			};
 			class HP2
@@ -3002,7 +3008,7 @@ class CfgVehicles
 						name="Meteor";
 						value=2;
 					};
-					class hp2_brim
+					/*class hp2_brim
 					{
 						name="Brimstone";
 						value=3;
@@ -3011,7 +3017,7 @@ class CfgVehicles
 					{
 						name="Sniper XR Pod";
 						value=4;
-					};
+					};*/
 				};
 			};
 			class HP3
@@ -3522,7 +3528,7 @@ class CfgVehicles
 						name="ASRAAM";
 						value=1;
 					};
-					class hp9_12
+					/*class hp9_12
 					{
 						name="GBU-12";
 						value=2;
@@ -3566,7 +3572,7 @@ class CfgVehicles
 					{
 						name="Brimstone";
 						value=10;
-					};
+					};*/
 				};
 			};
 			class HP10
@@ -3587,7 +3593,7 @@ class CfgVehicles
 						name="ASRAAM";
 						value=1;
 					};
-					class hp10_12
+					/*class hp10_12
 					{
 						name="GBU-12";
 						value=2;
@@ -3631,7 +3637,7 @@ class CfgVehicles
 					{
 						name="Brimstone";
 						value=10;
-					};
+					};*/
 				};
 			};
 		};

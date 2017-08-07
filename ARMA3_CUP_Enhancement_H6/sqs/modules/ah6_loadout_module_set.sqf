@@ -264,13 +264,13 @@ if (_hydra7count >= 1) then
 };
 if (_APKWS7count >= 1) then 
 {
-	_plane addweaponturret ["FIR_APKWS_Launcher",[-1]];
+	_plane addweaponturret ["FIR_APKWS_Launcher",[0]];
 	_counter7 = 0;
 
 	while {_counter7 < _APKWS7count} do
 	{
 		_counter7 = _counter7 + 1;
-		_plane addmagazineturret ["FIR_Hydra_APKWS_7rnd_M",[-1]];
+		_plane addmagazineturret ["FIR_Hydra_APKWS_7rnd_M",[0]];
 	};
 };
 if (_hydra19count >= 1) then

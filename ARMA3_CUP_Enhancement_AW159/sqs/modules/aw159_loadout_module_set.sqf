@@ -414,13 +414,13 @@ if (_gpodcount >= 1) then
 
 if (_CRV7count >= 1) then 
 {
-	_plane addweaponturret ["JAS_CUP_Vmlauncher_CRV7_FAT_veh",[-1]];
+	_plane addweaponturret ["JAS_CUP_Vmlauncher_CRV7_FAT_veh",[0]];
 	_counter = 0;
 
 	while {_counter < _CRV7count} do
 	{
 		_counter = _counter + 1;
-		_plane addmagazineturret ["JAS_CUP_12Rnd_CRV7_FAT_M",[-1]];
+		_plane addmagazineturret ["JAS_CUP_12Rnd_CRV7_FAT_M",[0]];
 	};
 };
 

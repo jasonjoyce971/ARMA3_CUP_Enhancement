@@ -676,11 +676,11 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"CMFlareLauncher"
+			"FIR_CMLauncher"
 		};
 		magazines[]=
 		{
-			"168Rnd_CMFlare_Chaff_Magazine"
+			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 		lockDetectionSystem="1 + 8 + 4";
 		incomingMissileDetectionSystem=16;

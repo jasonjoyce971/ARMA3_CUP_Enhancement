@@ -43,975 +43,283 @@ sleep 0.01;
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonWingR", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonWingR", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M";
 		};		
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
+			_plane setPylonLoadOut ["pylonWingR", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
 		};
 	};
 	
-	sleep 0.3;
+sleep 0.3;
 	
-	// left wingtip
 	Switch (_hardpoint2) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonWingL", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonWingL", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M";
 		};		
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
+			_plane setPylonLoadOut ["pylonWingL", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
 		};
 	};
-	
-	sleep 0.3;
-	
-	// right outboard pylon
+
+sleep 0.3;
+
 	Switch (_hardpoint3) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight2", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight2", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight2", "JAS_FIR_Hydra_P_7rnd_M", true, []];
+			//_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight2", "JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M", true, []];
+			//_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
 		};
 		case 3:
 		{
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M";
+			_plane setPylonLoadOut ["pylonRight2", "JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight2", "JAS_CUP_PylonPod_19Rnd_CRV7_HE_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire L
+			_plane setPylonLoadOut ["pylonRight2", "JAS_CUP_PylonPod_19Rnd_CRV7_KEP_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+			_plane setPylonLoadOut ["pylonRight2", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
+			_plane setPylonLoadOut ["pylonRight2", "JAS_FIR_Hellfire_L_1rnd_PYLON_M", true, []];
+			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire K
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Brimstone
+			_plane setPylonLoadOut ["pylonRight2", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, []];
+			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+		};
+		case 9:
+		{
+			_plane setPylonLoadOut ["pylonRight2", "JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M", true, []];
+			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
 	};
 	
-	sleep 0.3;
-	
-	// left outboard pylon
+sleep 0.3;
+
 	Switch (_hardpoint4) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft1", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft1", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_FIR_Hydra_P_7rnd_M", true, []];
+			//_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M", true, []];
+			//_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
 		};
 		case 3:
 		{
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M";
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_CUP_PylonPod_19Rnd_CRV7_HE_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire L
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_CUP_PylonPod_19Rnd_CRV7_KEP_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_FIR_Hellfire_L_1rnd_PYLON_M", true, []];
+			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire K
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Brimstone
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, []];
+			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+		};
+		case 9:
+		{
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M", true, []];
+			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
 	};
-	
-	sleep 0.3;
-	
-	// right inboard pylon
+
+sleep 0.3;
+
 	Switch (_hardpoint5) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight1", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight1", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight1", "JAS_FIR_Hydra_P_7rnd_M", true, []];
+			//_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight1", "JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M", true, []];
+			//_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
 		};
 		case 3:
 		{
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M";
+			_plane setPylonLoadOut ["pylonRight1", "JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight1", "JAS_CUP_PylonPod_19Rnd_CRV7_HE_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire L
+			_plane setPylonLoadOut ["pylonRight1", "JAS_CUP_PylonPod_19Rnd_CRV7_KEP_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+			_plane setPylonLoadOut ["pylonRight1", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
+			_plane setPylonLoadOut ["pylonRight1", "JAS_FIR_Hellfire_L_1rnd_PYLON_M", true, []];
+			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire K
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Brimstone
+			_plane setPylonLoadOut ["pylonRight1", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, []];
+			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+		};
+		case 9:
+		{
+			_plane setPylonLoadOut ["pylonRight1", "JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M", true, []];
+			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
 	};
 	
-	sleep 0.3;
-	
-	// left inboard pylon
+sleep 0.3;
+
 	Switch (_hardpoint6) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft2", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft2", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M";
 		};
 		case 1:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft2", "JAS_FIR_Hydra_P_7rnd_M", true, []];
+			//_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft2", "JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M", true, []];
+			//_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
 		};
 		case 3:
 		{
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M";
+			_plane setPylonLoadOut ["pylonLeft2", "JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft2", "JAS_CUP_PylonPod_19Rnd_CRV7_HE_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire L
+			_plane setPylonLoadOut ["pylonLeft2", "JAS_CUP_PylonPod_19Rnd_CRV7_KEP_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
+			_plane setPylonLoadOut ["pylonLeft2", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire Combi
+			_plane setPylonLoadOut ["pylonLeft2", "JAS_FIR_Hellfire_L_1rnd_PYLON_M", true, []];
+			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire K
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Brimstone
+			_plane setPylonLoadOut ["pylonLeft2", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, []];
+			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
-	};
-	
-	sleep 0.3;
-	
-	// Missile proxies
-	// right outboard pylon outer top slot
-	Switch (_hardpoint3) Do
-	{
-		case -1:
+		case 9:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// left outboard pylon outer top slot
-	Switch (_hardpoint4) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// right outboard pylon inner top slot
-	Switch (_hardpoint3) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// left outboard pylon inner top slot
-	Switch (_hardpoint4) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// right outboard pylon outer bottom slot
-	Switch (_hardpoint3) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// left outboard pylon outer bottom slot
-	Switch (_hardpoint4) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// right outboard pylon inner bottom slot
-	Switch (_hardpoint3) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// left outboard pylon inner bottom slot
-	Switch (_hardpoint4) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// right inboard pylon outer top slot
-	Switch (_hardpoint5) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// left inboard pylon outer top slot
-	Switch (_hardpoint6) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// right inboard pylon inner top slot
-	Switch (_hardpoint5) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// left inboard pylon inner top slot
-	Switch (_hardpoint6) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// right inboard pylon outer bottom slot
-	Switch (_hardpoint5) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// left inboard pylon outer bottom slot
-	Switch (_hardpoint6) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// right inboard pylon inner bottom slot
-	Switch (_hardpoint5) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
-		};
-	};
-	
-	sleep 0.3;
-	
-	// left inboard pylon inner bottom slot
-	Switch (_hardpoint6) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 4:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_AGM114L_1rnd_M"; // Hellfire L
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire N
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M"; // Hellfire Combi
-		};
-		case 8:
-		{
-			_plane addmagazine "EAWS_Brimstone_mag1x"; // Brimstone
+			_plane setPylonLoadOut ["pylonLeft2", "JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M", true, []];
+			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
 	};
 	

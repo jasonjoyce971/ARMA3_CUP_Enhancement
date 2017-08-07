@@ -3668,6 +3668,7 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
+			"FIR_MasterArm",
 			"FIR_CMLauncher"
 		};
 		magazines[]=
@@ -3681,6 +3682,7 @@ class CfgVehicles
 			{
 				weapons[]=
 				{
+					"FIR_MasterArm",
 					"CUP_Vacannon_Yakb_veh",
 					"LaserDesignator_mounted"
 				};
@@ -3940,6 +3942,7 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
+			"FIR_MasterArm",
 			"FIR_CMLauncher",
 			"CUP_Vacannon_GSh302K_veh"
 		};
@@ -3955,6 +3958,7 @@ class CfgVehicles
 			{
 				weapons[]=
 				{
+					"FIR_MasterArm",
 					"LaserDesignator_mounted"
 				};
 				magazines[]=
@@ -4188,6 +4192,7 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
+			"FIR_MasterArm",
 			"FIR_CMLauncher"
 		};
 		magazines[]=
@@ -4235,6 +4240,7 @@ class CfgVehicles
 			{
 				weapons[]=
 				{
+					"FIR_MasterArm",
 					"CUP_Vacannon_Yakb_veh",
 					"LaserDesignator_mounted"
 				};
@@ -4487,6 +4493,7 @@ class CfgVehicles
 		cargoPreciseGetInOut[]={2};
 		weapons[]=
 		{
+			"FIR_MasterArm",
 			"FIR_CMLauncher"
 		};
 		magazines[]=
@@ -4714,6 +4721,7 @@ class CfgVehicles
 				animationSourceGun="Gun_VRot";
 				weapons[]=
 				{
+					"FIR_MasterArm",
 					"CUP_Vacannon_GI2_veh",
 					"LaserDesignator_mounted"
 				};

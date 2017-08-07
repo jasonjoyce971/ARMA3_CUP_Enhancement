@@ -166,6 +166,8 @@ _plane addweapon "FIR_CMLauncher";
 _plane addmagazine "FIR_240rnd_CMFlare_Chaff_Magazine";
 _plane addmagazine "JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M";
 
+_plane addmagazine "Laserbatteries";
+_plane addweapon "Laserdesignator_mounted";
 
 /* -1 is Default Texture. -1 is not choose, mean blank in the combo box. */
 
@@ -195,11 +197,11 @@ if (_preset == -1 or _preset == 0) then
 		{
 			_plane addmagazine "JAS_FIR_AIM120B_1rnd_M";
 		};
-		case 3:
+		/*case 3:
 		{
 			_plane addmagazine "FIR_SniperXRPod_2_1rnd_M";
 			_plane setVariable ["TGT_POD","yes",true];
-		};
+		};*/
 	};
 	
 sleep 0.3;
@@ -222,11 +224,11 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_FIR_AIM120B_1rnd_M";
 		};
-		case 3:
+		/*case 3:
 		{
 			_plane addmagazine "FIR_SniperXRPod_2_1rnd_M";
 			_plane setVariable ["TGT_POD","yes",true];
-		};
+		};*/
 	};
 
 sleep 0.3;
@@ -831,7 +833,7 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_FIR_AIM120_1rnd_M_int";
 		};
-		case 2:
+		/*case 2:
 		{
 			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
 		};
@@ -890,7 +892,7 @@ sleep 0.3;
 		case 16:
 		{
 			_plane addmagazine "JAS_FIR_AGM154C_1rnd_M_int";
-		};
+		};*/
 	};
 	
 sleep 0.3;
@@ -909,7 +911,7 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_FIR_AIM120_1rnd_M_int";
 		};
-		case 2:
+		/*case 2:
 		{
 			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
 		};
@@ -968,7 +970,7 @@ sleep 0.3;
 		case 16:
 		{
 			_plane addmagazine "JAS_FIR_AGM154C_1rnd_M_int";
-		};
+		};*/
 	};
 }
 else 
@@ -1134,11 +1136,11 @@ Switch (_fuelcount) Do
 	};
 };
 
-_TGP = _plane getVariable "TGT_POD";
+/*_TGP = _plane getVariable "TGT_POD";
 if (_TGP == "yes") then
 {
 	_plane addmagazine "Laserbatteries";
 	_plane addweapon "Laserdesignator_mounted";
-};
+};*/
 
 titleText ["Loading is Completed!", "PLAIN DOWN",0.5];

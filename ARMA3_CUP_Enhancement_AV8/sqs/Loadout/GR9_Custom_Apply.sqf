@@ -334,14 +334,22 @@ sleep 0.01;
 		};
 		case 2:
 		{
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M";
+			_plane addmagazine "JAS_CUP_1Rnd_CRV7_Pod_19_M";
 		};
 		case 3:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_CRV7_Pod_19_M_add1";
+		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_CRV7_Pod_19_M_add2";
+		};
+		case 5:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M";
 			_plane setVariable ["ECMJAMMER","yes",true];
 		};
-		case 4:
+		case 6:
 		{
 			_plane addmagazine "FIR_SniperXRPod_2_1rnd_M";
 			_plane setVariable ["TGT_POD","yes",true];
@@ -366,14 +374,22 @@ sleep 0.3;
 		};
 		case 2:
 		{
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_19_M";
+			_plane addmagazine "JAS_CUP_1Rnd_CRV7_Pod_19_M";
 		};
 		case 3:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_CRV7_Pod_19_M_add1";
+		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_CRV7_Pod_19_M_add2";
+		};
+		case 5:
 		{
 			_plane addmagazine "FIR_ECMPod_1rnd_M";
 			_plane setVariable ["ECMJAMMER","yes",true];
 		};
-		case 4:
+		case 6:
 		{
 			_plane addmagazine "FIR_SniperXRPod_2_1rnd_M";
 			_plane setVariable ["TGT_POD","yes",true];

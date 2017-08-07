@@ -1289,6 +1289,8 @@ class CfgVehicles
 			pilotOpticsShowCursor=1;
 			controllable=true;
 		};
+		// VTOL TWEAKS
+		waterEffect = "VTOLWater";
 	};
 	class JAS_CUP_B_AV8B_USMC : JAS_CUP_AV8B_Base
 	{
@@ -1306,14 +1308,14 @@ class CfgVehicles
 		threat[] = { 1, 0.69999999, 1 };
 		weapons[] =
 		{
-			"JAS_FIR_GAU12",
 			"FIR_MasterArm",
-			"FIR_CMLauncher"
+			"FIR_CMLauncher",
+			"JAS_FIR_GAU12"
 		};
 		magazines[] =
 		{
-			"JAS_FIR_GAU12_300rnd_M",
-			"FIR_240rnd_CMFlare_Chaff_Magazine"
+			"FIR_240rnd_CMFlare_Chaff_Magazine",
+			"JAS_FIR_GAU12_300rnd_M"
 		};
 		hiddenSelections[] =
 		{
@@ -1788,13 +1790,13 @@ class CfgVehicles
 		weapons[] =
 		{
 			"FIR_MasterArm",
-			"FIR_GAU12",
-			"FIR_CMLauncher"
+			"FIR_CMLauncher",
+			"FIR_GAU12"
 		};
 		magazines[] =
 		{
-			"FIR_GAU12_300rnd_M",
-			"FIR_240rnd_CMFlare_Chaff_Magazine"
+			"FIR_240rnd_CMFlare_Chaff_Magazine",
+			"FIR_GAU12_300rnd_M"
 		};
 		class Library
 		{
@@ -2107,20 +2109,15 @@ class CfgVehicles
 						name="AIM-120";
 						value=2;
 					};
-					class hp1_APKWS
-					{
-						name="APKWS x7";
-						value=3;
-					};
 					class hp1_ecm
 					{
 						name="ECM Pod";
-						value=4;
+						value=3;
 					};
 					class hp1_tgp
 					{
 						name="Sniper XR TGP";
-						value=5;
+						value=4;
 					};
 				};
 			};
@@ -2147,20 +2144,15 @@ class CfgVehicles
 						name="AIM-120";
 						value=2;
 					};
-					class hp2_APKWS
-					{
-						name="APKWS x7";
-						value=3;
-					};
 					class hp2_ecm
 					{
 						name="ECM Pod";
-						value=4;
+						value=3;
 					};
 					class hp2_tgp
 					{
 						name="Sniper XR TGP";
-						value=5;
+						value=4;
 					};
 				};
 			};
@@ -2187,120 +2179,140 @@ class CfgVehicles
 						name="AIM-120";
 						value=2;
 					};
+					class hp3_APKWS
+					{
+						name="APKWS x19";
+						value=3;
+					};
+					class hp3_CRV7FAT
+					{
+						name="CRV-7 FAT x19";
+						value=4;
+					};
+					class hp3_CRV7HE
+					{
+						name="CRV-7 HE x19";
+						value=5;
+					};
+					class hp3_CRV7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=6;
+					};
 					class hp3_AGM65D
 					{
 						name="AGM-65D";
-						value=3;
+						value=7;
 					};
 					class hp3_AGM65G
 					{
 						name="AGM-65G";
-						value=4;
+						value=8;
 					};
 					class hp3_AGM65L
 					{
 						name="AGM-65L";
-						value=5;
+						value=9;
 					};
 					class hp3_AGM88
 					{
 						name="AGM-88 HARM";
-						value=6;
+						value=10;
 					};
 					class hp3_10
 					{
 						name="GBU-10";
-						value=7;
+						value=11;
 					};
 					class hp3_12
 					{
 						name="GBU-12";
-						value=8;
+						value=12;
 					};
 					class hp3_E12
 					{
 						name="EGBU-12 II";
-						value=9;
+						value=13;
 					};
 					class hp3_24A
 					{
 						name="GBU-24A";
-						value=10;
+						value=14;
 					};
 					class hp3_24B
 					{
 						name="GBU-24B";
-						value=11;
+						value=15;
 					};
 					class hp3_24118
 					{
 						name="GBU-24/118";
-						value=12;
+						value=16;
 					};
 					class hp3_31
 					{
 						name="GBU-31";
-						value=13;
+						value=17;
 					};
 					class hp3_32
 					{
 						name="GBU-32";
-						value=14;
+						value=18;
 					};
 					class hp3_38
 					{
 						name="GBU-38";
-						value=15;
+						value=19;
 					};
 					class hp3_54
 					{
 						name="GBU-54";
-						value=16;
+						value=20;
 					};
 					class hp3_87
 					{
 						name="CBU-87 CEM";
-						value=17;
+						value=21;
 					};
 					class hp3_89
 					{
 						name="CBU-89 GATOR";
-						value=18;
+						value=22;
 					};
 					class hp3_97
 					{
 						name="CBU-97 SFW";
-						value=19;
+						value=23;
 					};
 					class hp3_103
 					{
 						name="CBU-103 CEM WCMD";
-						value=20;
+						value=24;
 					};
 					class hp3_105
 					{
 						name="CBU-105 SFW WCMD";
-						value=21;
+						value=25;
 					};
 					class hp3_82s
 					{
 						name="Mk82 Snakeye";
-						value=22;
+						value=26;
 					};
 					class hp3_82
 					{
 						name="Mk82 GPB";
-						value=23;
+						value=27;
 					};
 					class hp3_84
 					{
 						name="Mk84 GPB";
-						value=24;
+						value=28;
 					};
 					class hp3_tank
 					{
 						name="Drop Tank";
-						value=25;
+						value=29;
 					};
 				};
 			};
@@ -2327,120 +2339,140 @@ class CfgVehicles
 						name="AIM-120";
 						value=2;
 					};
+					class hp4_APKWS
+					{
+						name="APKWS x19";
+						value=3;
+					};
+					class hp4_CRV7FAT
+					{
+						name="CRV-7 FAT x19";
+						value=4;
+					};
+					class hp4_CRV7HE
+					{
+						name="CRV-7 HE x19";
+						value=5;
+					};
+					class hp4_CRV7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=6;
+					};
 					class hp4_AGM65D
 					{
 						name="AGM-65D";
-						value=3;
+						value=7;
 					};
 					class hp4_AGM65G
 					{
 						name="AGM-65G";
-						value=4;
+						value=8;
 					};
 					class hp4_AGM65L
 					{
 						name="AGM-65L";
-						value=5;
+						value=9;
 					};
 					class hp4_AGM88
 					{
 						name="AGM-88 HARM";
-						value=6;
+						value=10;
 					};
 					class hp4_10
 					{
 						name="GBU-10";
-						value=7;
+						value=11;
 					};
 					class hp4_12
 					{
 						name="GBU-12";
-						value=8;
+						value=12;
 					};
 					class hp4_E12
 					{
 						name="EGBU-12 II";
-						value=9;
+						value=13;
 					};
 					class hp4_24A
 					{
 						name="GBU-24A";
-						value=10;
+						value=14;
 					};
 					class hp4_24B
 					{
 						name="GBU-24B";
-						value=11;
+						value=15;
 					};
 					class hp4_24118
 					{
 						name="GBU-24/118";
-						value=12;
+						value=16;
 					};
 					class hp4_31
 					{
 						name="GBU-31";
-						value=13;
+						value=17;
 					};
 					class hp4_32
 					{
 						name="GBU-32";
-						value=14;
+						value=18;
 					};
 					class hp4_38
 					{
 						name="GBU-38";
-						value=15;
+						value=19;
 					};
 					class hp4_54
 					{
 						name="GBU-54";
-						value=16;
+						value=20;
 					};
 					class hp4_87
 					{
 						name="CBU-87 CEM";
-						value=17;
+						value=21;
 					};
 					class hp4_89
 					{
 						name="CBU-89 GATOR";
-						value=18;
+						value=22;
 					};
 					class hp4_97
 					{
 						name="CBU-97 SFW";
-						value=19;
+						value=23;
 					};
 					class hp4_103
 					{
 						name="CBU-103 CEM WCMD";
-						value=20;
+						value=24;
 					};
 					class hp4_105
 					{
 						name="CBU-105 SFW WCMD";
-						value=21;
+						value=25;
 					};
 					class hp4_82s
 					{
 						name="Mk82 Snakeye";
-						value=22;
+						value=26;
 					};
 					class hp4_82
 					{
 						name="Mk82 GPB";
-						value=23;
+						value=27;
 					};
 					class hp4_84
 					{
 						name="Mk84 GPB";
-						value=24;
+						value=28;
 					};
 					class hp4_tank
 					{
 						name="Drop Tank";
-						value=25;
+						value=29;
 					};
 				};
 			};
@@ -2467,155 +2499,175 @@ class CfgVehicles
 						name="AIM-120";
 						value=2;
 					};
+					class hp5_APKWS
+					{
+						name="APKWS x19";
+						value=3;
+					};
+					class hp5_CRV7FAT
+					{
+						name="CRV-7 FAT x19";
+						value=4;
+					};
+					class hp5_CRV7HE
+					{
+						name="CRV-7 HE x19";
+						value=5;
+					};
+					class hp5_CRV7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=6;
+					};
 					class hp5_AGM65D
 					{
 						name="AGM-65D";
-						value=3;
+						value=7;
 					};
 					class hp5_AGM65DTER
 					{
 						name="AGM-65D x3";
-						value=4;
+						value=8;
 					};
 					class hp5_AGM65G
 					{
 						name="AGM-65G";
-						value=5;
+						value=9;
 					};
 					class hp5_AGM65GTER
 					{
 						name="AGM-65G x3";
-						value=6;
+						value=10;
 					};
 					class hp5_AGM65L
 					{
 						name="AGM-65L";
-						value=7;
+						value=11;
 					};
 					class hp5_AGM65LTER
 					{
 						name="AGM-65L x3";
-						value=8;
+						value=12;
 					};
 					class hp5_AGM88
 					{
 						name="AGM-88 HARM";
-						value=9;
+						value=13;
 					};
 					class hp5_10
 					{
 						name="GBU-10";
-						value=10;
+						value=14;
 					};
 					class hp5_12
 					{
 						name="GBU-12";
-						value=11;
+						value=15;
 					};
 					class hp5_12TER
 					{
 						name="GBU-12 x3";
-						value=12;
+						value=16;
 					};
 					class hp5_E12
 					{
 						name="EGBU-12 II";
-						value=13;
+						value=17;
 					};
 					class hp5_E12TER
 					{
 						name="EGBU-12 II x3";
-						value=14;
+						value=18;
 					};
 					class hp5_24A
 					{
 						name="GBU-24A";
-						value=15;
+						value=19;
 					};
 					class hp5_24B
 					{
 						name="GBU-24B";
-						value=16;
+						value=20;
 					};
 					class hp5_24118
 					{
 						name="GBU-24/118";
-						value=17;
+						value=21;
 					};
 					class hp5_31
 					{
 						name="GBU-31";
-						value=18;
+						value=22;
 					};
 					class hp5_32
 					{
 						name="GBU-32";
-						value=19;
+						value=23;
 					};
 					class hp5_38
 					{
 						name="GBU-38";
-						value=20;
+						value=24;
 					};
 					class hp5_54
 					{
 						name="GBU-54";
-						value=21;
+						value=25;
 					};
 					class hp5_87
 					{
 						name="CBU-87 CEM";
-						value=22;
+						value=26;
 					};
 					class hp5_89
 					{
 						name="CBU-89 GATOR";
-						value=23;
+						value=27;
 					};
 					class hp5_97
 					{
 						name="CBU-97 SFW";
-						value=24;
+						value=28;
 					};
 					class hp5_103
 					{
 						name="CBU-103 CEM WCMD";
-						value=25;
+						value=29;
 					};
 					class hp5_105
 					{
 						name="CBU-105 SFW WCMD";
-						value=26;
+						value=30;
 					};
 					class hp5_82s
 					{
 						name="Mk82 Snakeye";
-						value=27;
+						value=31;
 					};
 					class hp5_82sTER
 					{
 						name="Mk82 Snakeye x3";
-						value=28;
+						value=32;
 					};
 					class hp5_82
 					{
 						name="Mk82 GPB";
-						value=29;
+						value=33;
 					};
 					class hp5_82TER
 					{
 						name="Mk82 GPB x3";
-						value=30;
+						value=34;
 					};
 					class hp5_84
 					{
 						name="Mk84 GPB";
-						value=31;
+						value=35;
 					};
 					class hp5_tank
 					{
 						name="Drop Tank";
-						value=32;
+						value=36;
 					};
 				};
 			};
@@ -2642,155 +2694,175 @@ class CfgVehicles
 						name="AIM-120";
 						value=2;
 					};
+					class hp6_APKWS
+					{
+						name="APKWS x19";
+						value=3;
+					};
+					class hp6_CRV7FAT
+					{
+						name="CRV-7 FAT x19";
+						value=4;
+					};
+					class hp6_CRV7HE
+					{
+						name="CRV-7 HE x19";
+						value=5;
+					};
+					class hp6_CRV7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=6;
+					};
 					class hp6_AGM65D
 					{
 						name="AGM-65D";
-						value=3;
+						value=7;
 					};
 					class hp6_AGM65DTER
 					{
 						name="AGM-65D x3";
-						value=4;
+						value=8;
 					};
 					class hp6_AGM65G
 					{
 						name="AGM-65G";
-						value=5;
+						value=9;
 					};
 					class hp6_AGM65GTER
 					{
 						name="AGM-65G x3";
-						value=6;
+						value=10;
 					};
 					class hp6_AGM65L
 					{
 						name="AGM-65L";
-						value=7;
+						value=11;
 					};
 					class hp6_AGM65LTER
 					{
 						name="AGM-65L x3";
-						value=8;
+						value=12;
 					};
 					class hp6_AGM88
 					{
 						name="AGM-88 HARM";
-						value=9;
+						value=13;
 					};
 					class hp6_10
 					{
 						name="GBU-10";
-						value=10;
+						value=14;
 					};
 					class hp6_12
 					{
 						name="GBU-12";
-						value=11;
+						value=15;
 					};
 					class hp6_12TER
 					{
 						name="GBU-12 x3";
-						value=12;
+						value=16;
 					};
 					class hp6_E12
 					{
 						name="EGBU-12 II";
-						value=13;
+						value=17;
 					};
 					class hp6_E12TER
 					{
 						name="EGBU-12 II x3";
-						value=14;
+						value=18;
 					};
 					class hp6_24A
 					{
 						name="GBU-24A";
-						value=15;
+						value=19;
 					};
 					class hp6_24B
 					{
 						name="GBU-24B";
-						value=16;
+						value=20;
 					};
 					class hp6_24118
 					{
 						name="GBU-24/118";
-						value=17;
+						value=21;
 					};
 					class hp6_31
 					{
 						name="GBU-31";
-						value=18;
+						value=22;
 					};
 					class hp6_32
 					{
 						name="GBU-32";
-						value=19;
+						value=23;
 					};
 					class hp6_38
 					{
 						name="GBU-38";
-						value=20;
+						value=24;
 					};
 					class hp6_54
 					{
 						name="GBU-54";
-						value=21;
+						value=25;
 					};
 					class hp6_87
 					{
 						name="CBU-87 CEM";
-						value=22;
+						value=26;
 					};
 					class hp6_89
 					{
 						name="CBU-89 GATOR";
-						value=23;
+						value=27;
 					};
 					class hp6_97
 					{
 						name="CBU-97 SFW";
-						value=24;
+						value=28;
 					};
 					class hp6_103
 					{
 						name="CBU-103 CEM WCMD";
-						value=25;
+						value=29;
 					};
 					class hp6_105
 					{
 						name="CBU-105 SFW WCMD";
-						value=26;
+						value=30;
 					};
 					class hp6_82s
 					{
 						name="Mk82 Snakeye";
-						value=27;
+						value=31;
 					};
 					class hp6_82sTER
 					{
 						name="Mk82 Snakeye x3";
-						value=28;
+						value=32;
 					};
 					class hp6_82
 					{
 						name="Mk82 GPB";
-						value=29;
+						value=33;
 					};
 					class hp6_82TER
 					{
 						name="Mk82 GPB x3";
-						value=30;
+						value=34;
 					};
 					class hp6_84
 					{
 						name="Mk84 GPB";
-						value=31;
+						value=35;
 					};
 					class hp6_tank
 					{
 						name="Drop Tank";
-						value=32;
+						value=36;
 					};
 				};
 			};
@@ -2890,20 +2962,30 @@ class CfgVehicles
 						name="AIM-9L";
 						value=1;
 					};
-					class hp1_crv7
+					class hp1_crv7FAT
 					{
-						name="CRV-7 x19";
+						name="CRV-7 FAT x19";
 						value=2;
+					};
+					class hp1_crv7HE
+					{
+						name="CRV-7 HE x19";
+						value=3;
+					};
+					class hp1_crv7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=4;
 					};
 					class hp1_ecm
 					{
 						name="ECM Pod";
-						value=3;
+						value=5;
 					};
 					class hp1_tgp
 					{
 						name="Sniper XR TGP";
-						value=4;
+						value=6;
 					};
 				};
 			};
@@ -2925,20 +3007,30 @@ class CfgVehicles
 						name="AIM-9L";
 						value=1;
 					};
-					class hp2_crv7
+					class hp2_crv7FAT
 					{
-						name="CRV-7 x19";
+						name="CRV-7 FAT x19";
 						value=2;
+					};
+					class hp2_crv7HE
+					{
+						name="CRV-7 HE x19";
+						value=3;
+					};
+					class hp2_crv7KEP
+					{
+						name="CRV-7 KEP x19";
+						value=4;
 					};
 					class hp2_ecm
 					{
 						name="ECM Pod";
-						value=3;
+						value=5;
 					};
 					class hp2_tgp
 					{
 						name="Sniper XR TGP";
-						value=4;
+						value=6;
 					};
 				};
 			};

@@ -869,8 +869,8 @@ class CfgVehicles
 		};
 		weapons[]=
 		{
-			"JAS_CUP_Vacannon_GSh302K_veh",
 			"FIR_MasterArm",
+			"JAS_CUP_Vacannon_GSh302K_veh",
 			"Laserdesignator_mounted",
 			"FIR_CMLauncher"
 		};
