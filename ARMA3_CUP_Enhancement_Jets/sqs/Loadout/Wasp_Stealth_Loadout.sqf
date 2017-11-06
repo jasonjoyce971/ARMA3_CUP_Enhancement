@@ -121,6 +121,14 @@ if (_preset == -1 or _preset == 0) then
 		{
 			_plane setPylonLoadOut ["pylonBayCenter1", "JAS_FIR_AIM120_PYLON_M_int", true, []];
 		};
+		case 9:
+		{
+			_plane setPylonLoadOut ["pylonBayCenter1", "JAS_PylonMissile_1Rnd_BombCluster_01_F", true, []];
+		};
+		case 10:
+		{
+			_plane setPylonLoadOut ["pylonBayCenter1", "JAS_PylonMissile_1Rnd_BombCluster_03_F", true, []];
+		};
 	};
 	
 sleep 0.3;
@@ -166,6 +174,14 @@ sleep 0.3;
 		case 8:
 		{
 			_plane setPylonLoadOut ["pylonBayCenter2", "JAS_FIR_AIM120_PYLON_M_int", true, []];
+		};
+		case 9:
+		{
+			_plane setPylonLoadOut ["pylonBayCenter2", "JAS_PylonMissile_1Rnd_BombCluster_01_F", true, []];
+		};
+		case 10:
+		{
+			_plane setPylonLoadOut ["pylonBayCenter2", "JAS_PylonMissile_1Rnd_BombCluster_03_F", true, []];
 		};
 	};
 
@@ -249,6 +265,14 @@ sleep 0.3;
 		{
 			_plane setPylonLoadOut ["pylonBayCenter5", "JAS_FIR_AIM120_PYLON_M_int", true, []];
 		};
+		case 9:
+		{
+			_plane setPylonLoadOut ["pylonBayCenter5", "JAS_PylonMissile_1Rnd_BombCluster_01_F", true, []];
+		};
+		case 10:
+		{
+			_plane setPylonLoadOut ["pylonBayCenter5", "JAS_PylonMissile_1Rnd_BombCluster_03_F", true, []];
+		};
 	};
 	
 sleep 0.3;
@@ -295,6 +319,14 @@ sleep 0.3;
 		{
 			_plane setPylonLoadOut ["pylonBayCenter6", "JAS_FIR_AIM120_PYLON_M_int", true, []];
 		};
+		case 9:
+		{
+			_plane setPylonLoadOut ["pylonBayCenter6", "JAS_PylonMissile_1Rnd_BombCluster_01_F", true, []];
+		};
+		case 10:
+		{
+			_plane setPylonLoadOut ["pylonBayCenter6", "JAS_PylonMissile_1Rnd_BombCluster_03_F", true, []];
+		};
 	};
 	
 	Switch (_hardpoint7) Do
@@ -310,10 +342,6 @@ sleep 0.3;
 		case 1:
 		{
 			_plane setPylonLoadOut ["pylonBayRight1", "JAS_FIR_AIM9L_PYLON_M", true, []];
-		};
-		case 2:
-		{
-			_plane setPylonLoadOut ["pylonBayRight1", "JAS_FIR_AIM120_PYLON_M_int", true, []];
 		};
 	};
 	
@@ -332,10 +360,6 @@ sleep 0.3;
 		case 1:
 		{
 			_plane setPylonLoadOut ["pylonBayLeft1", "JAS_FIR_AIM9L_PYLON_M", true, []];
-		};
-		case 2:
-		{
-			_plane setPylonLoadOut ["pylonBayLeft1", "JAS_FIR_AIM120_PYLON_M_int", true, []];
 		};
 	};
 }

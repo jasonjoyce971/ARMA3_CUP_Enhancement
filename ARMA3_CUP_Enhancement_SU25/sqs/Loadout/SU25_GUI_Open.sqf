@@ -22,6 +22,7 @@ _handle= CreateDialog "SU25_GUI";
 	{lbAdd[2100,_x]} forEach 
 	[  
 		"Empty",
+		"S-5 Rockets",
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
 		"R-73"
@@ -31,6 +32,7 @@ _handle= CreateDialog "SU25_GUI";
 	{lbAdd[2201,_x]} forEach 
 	[  
 		"Empty",
+		"S-5 Rockets",
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
 		"R-73"
@@ -40,60 +42,89 @@ _handle= CreateDialog "SU25_GUI";
 	{lbAdd[2101,_x]} forEach 
 	[  
 		"Empty",
+		"S-5 Rockets",
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
-		"KH-25",
-		"R-73",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
-		"Kh-29T",		//Pod = JAS_CUP_Vikhr_Rack_6Rnd_M, mag = JAS_CUP_1Rnd_Kh29L_M, wpn = JAS_CUP_Vmlauncher_Kh29L_veh
-		"Kh-29L",
-		"FAB-250",
-		"KAB-500L"
-    ];
-//Add Hardpoint 4 - left mid/out
-	{lbAdd[2102,_x]} forEach 
-	[  
-		"Empty",
-		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
-		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
-		"KH-25",
-		"R-73",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
-		"Kh-29T",		//Pod = JAS_CUP_Vikhr_Rack_6Rnd_M, mag = JAS_CUP_1Rnd_Kh29L_M, wpn = JAS_CUP_Vmlauncher_Kh29L_veh
-		"Kh-29L",
-		"FAB-250",
-		"KAB-500L"
-    ];
-//Add Hardpoint 5 - right mid
-	{lbAdd[2103,_x]} forEach 
-	[  
-		"Empty",
-		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
-		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
-		"KH-25",
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MS",
+		"Kh-25ML",
+		"Kh-25MT",
+		"Kh-25MTP",
 		"R-73",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
 		"Kh-29T",		//Pod = JAS_CUP_Vikhr_Rack_6Rnd_M, mag = JAS_CUP_1Rnd_Kh29L_M, wpn = JAS_CUP_Vmlauncher_Kh29L_veh
 		"Kh-29L",
 		"FAB-250",
 		"KAB-500L",
+		"KAB-500KR"
+    ];
+//Add Hardpoint 4 - left mid/out
+	{lbAdd[2102,_x]} forEach 
+	[  
+		"Empty",
+		"S-5 Rockets",
+		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
+		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MS",
+		"Kh-25ML",
+		"Kh-25MT",
+		"Kh-25MTP",
+		"R-73",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
+		"Kh-29T",		//Pod = JAS_CUP_Vikhr_Rack_6Rnd_M, mag = JAS_CUP_1Rnd_Kh29L_M, wpn = JAS_CUP_Vmlauncher_Kh29L_veh
+		"Kh-29L",
+		"FAB-250",
+		"KAB-500L",
+		"KAB-500KR"
+    ];
+//Add Hardpoint 5 - right mid
+	{lbAdd[2103,_x]} forEach 
+	[  
+		"Empty",
+		"S-5 Rockets",
+		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
+		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MS",
+		"Kh-25ML",
+		"Kh-25MT",
+		"Kh-25MTP",
+		"R-73",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
+		"Kh-29T",		//Pod = JAS_CUP_Vikhr_Rack_6Rnd_M, mag = JAS_CUP_1Rnd_Kh29L_M, wpn = JAS_CUP_Vmlauncher_Kh29L_veh
+		"Kh-29L",
+		"FAB-250",
+		"KAB-500L",
+		"KAB-500KR",
 		"RBK-250"
     ];
 //Add Hardpoint 6 - left mid
 	{lbAdd[2104,_x]} forEach 
 	[  
 		"Empty",
+		"S-5 Rockets",
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
-		"KH-25",
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MS",
+		"Kh-25ML",
+		"Kh-25MT",
+		"Kh-25MTP",
 		"R-73",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
 		"Kh-29T",		//Pod = JAS_CUP_Vikhr_Rack_6Rnd_M, mag = JAS_CUP_1Rnd_Kh29L_M, wpn = JAS_CUP_Vmlauncher_Kh29L_veh
 		"Kh-29L",
 		"FAB-250",
 		"KAB-500L",
+		"KAB-500KR",
 		"RBK-250"
     ];
 //Add Hardpoint 7 - right mid in
 	{lbAdd[2105,_x]} forEach 
 	[  
 		"Empty",
+		"S-5 Rockets",
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
 		"GSh-23",
@@ -102,12 +133,14 @@ _handle= CreateDialog "SU25_GUI";
 		"Kh-29L",
 		"FAB-250",
 		"KAB-500L",
+		"KAB-500KR",
 		"RBK-250"
     ];
 //Add Hardpoint 8 - left mid in
 	{lbAdd[2106,_x]} forEach 
 	[  
 		"Empty",
+		"S-5 Rockets",
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
 		"GSh-23",
@@ -116,6 +149,7 @@ _handle= CreateDialog "SU25_GUI";
 		"Kh-29L",
 		"FAB-250",
 		"KAB-500L",
+		"KAB-500KR",
 		"RBK-250"
     ];
 	
@@ -123,11 +157,13 @@ _handle= CreateDialog "SU25_GUI";
 	{lbAdd[2202,_x]} forEach 
 	[  
 		"Empty",
+		"S-5 Rockets",
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
 		"GSh-23",
 		"FAB-250",
 		"KAB-500L",
+		"KAB-500KR",
 		"RBK-250"
     ];
 	
@@ -135,11 +171,13 @@ _handle= CreateDialog "SU25_GUI";
 	{lbAdd[2107,_x]} forEach 
 	[  
 		"Empty",
+		"S-5 Rockets",
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
 		"GSh-23",
 		"FAB-250",
 		"KAB-500L",
+		"KAB-500KR",
 		"RBK-250"
     ];
 

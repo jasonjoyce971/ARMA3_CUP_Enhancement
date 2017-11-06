@@ -7514,10 +7514,10 @@ class CfgVehicles
 						attachment[]=
 						{
 							"",
-							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
-							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
-							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
-							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
 							""
 						};
 					};
@@ -7528,8 +7528,8 @@ class CfgVehicles
 						{
 							"CUP_PylonPod_1Rnd_AIM_9L_Sidewinder_M",
 							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
-							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
-							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
 							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
 							"CUP_PylonPod_1Rnd_AIM_9L_Sidewinder_M"
 						};
@@ -7559,11 +7559,8 @@ class CfgVehicles
 						attachment="JAS_FIR_AIM9L_PYLON_M";
 						bay=-1;
 						priority=1;
-						UIposition[]=
-						{
-							"0.0.4",
-							0.30000001
-						};
+						//UIposition[]={"0.0.4",0.30000001};
+						UIposition[]={0.059999999,0.30000001};
 						turret[]={0};
 					};
 					class pylons2
@@ -7603,7 +7600,8 @@ class CfgVehicles
 					};
 					class pylons6: pylons1
 					{
-						UIposition[]={0.62,0.30000001};
+						//UIposition[]={0.62,0.30000001};
+						UIposition[]={0.58999997,0.30000001};
 						mirroredMissilePos=1;
 					};
 				};
@@ -7741,7 +7739,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "gunner this == player and ((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
+				condition = "gunner this == player and ((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Carrier_01_base_F""]) < 25) and (damage (nearestObject [this, ""Land_Carrier_01_base_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_AH1Z\sqs\loadout\AH1_GUI_Open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;

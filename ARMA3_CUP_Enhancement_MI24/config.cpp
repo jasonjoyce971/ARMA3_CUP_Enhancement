@@ -8469,20 +8469,10 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
-					class hp1_gsh23
-					{
-						name="GSh-23 Gun Pod";
-						value=1;
-					};
-					class hp1_igla
-					{
-						name="IGLA Pod";
-						value=2;
-					};
 					class hp1_phalanga
 					{
 						name="9M17 Phalanga";
-						value=3;
+						value=1;
 					};
 				};
 			};
@@ -8499,20 +8489,10 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
-					class hp2_gsh23
-					{
-						name="GSh-23 Gun Pod";
-						value=1;
-					};
-					class hp2_igla
-					{
-						name="IGLA Pod";
-						value=2;
-					};
 					class hp2_phalanga
 					{
 						name="9M17 Phalanga";
-						value=3;
+						value=1;
 					};
 				};
 			};
@@ -8554,6 +8534,11 @@ class CfgVehicles
 						name="KAB-250";
 						value=5;
 					};
+					class hp3_IGLA
+					{
+						name="IGLA x2";
+						value=6;
+					};
 				};
 			};
 			class HP4
@@ -8593,6 +8578,11 @@ class CfgVehicles
 					{
 						name="KAB-250";
 						value=5;
+					};
+					class hp4_IGLA
+					{
+						name="IGLA x2";
+						value=6;
 					};
 				};
 			};
@@ -8767,20 +8757,10 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
-					class hp1_gsh23
-					{
-						name="GSh-23 Gun Pod";
-						value=1;
-					};
-					class hp1_igla
-					{
-						name="IGLA Pod";
-						value=2;
-					};
 					class hp1_shturm
 					{
 						name="9K114 Shturm";
-						value=3;
+						value=1;
 					};
 				};
 			};
@@ -8797,20 +8777,10 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
-					class hp2_gsh23
-					{
-						name="GSh-23 Gun Pod";
-						value=1;
-					};
-					class hp2_igla
-					{
-						name="IGLA Pod";
-						value=2;
-					};
 					class hp2_shturm
 					{
 						name="9K114 Shturm";
-						value=3;
+						value=1;
 					};
 				};
 			};
@@ -8852,9 +8822,9 @@ class CfgVehicles
 						name="KAB-250";
 						value=5;
 					};
-					class hp3_shturm
+					class hp3_IGLA
 					{
-						name="9K114 Shturm";
+						name="IGLA x2";
 						value=6;
 					};
 				};
@@ -8897,9 +8867,9 @@ class CfgVehicles
 						name="KAB-250";
 						value=5;
 					};
-					class hp4_shturm
+					class hp4_IGLA
 					{
-						name="9K114 Shturm";
+						name="IGLA x2";
 						value=6;
 					};
 				};
@@ -8942,11 +8912,6 @@ class CfgVehicles
 						name="KAB-250";
 						value=5;
 					};
-					class hp5_shturm
-					{
-						name="9K114 Shturm";
-						value=6;
-					};
 				};
 			};
 			class HP6
@@ -8986,11 +8951,6 @@ class CfgVehicles
 					{
 						name="KAB-250";
 						value=5;
-					};
-					class hp6_shturm
-					{
-						name="9K114 Shturm";
-						value=6;
 					};
 				};
 			};
@@ -9065,20 +9025,10 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
-					class hp1_gsh23
-					{
-						name="GSh-23 Gun Pod";
-						value=1;
-					};
-					class hp1_igla
-					{
-						name="IGLA Pod";
-						value=2;
-					};
 					class hp1_shturm
 					{
 						name="9K114 Shturm";
-						value=3;
+						value=1;
 					};
 				};
 			};
@@ -9095,20 +9045,10 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
-					class hp2_gsh23
-					{
-						name="GSh-23 Gun Pod";
-						value=1;
-					};
-					class hp2_igla
-					{
-						name="IGLA Pod";
-						value=2;
-					};
 					class hp2_shturm
 					{
 						name="9K114 Shturm";
-						value=3;
+						value=1;
 					};
 				};
 			};
@@ -9152,7 +9092,7 @@ class CfgVehicles
 					};
 					class hp3_shturm
 					{
-						name="9K114 Shturm";
+						name="IGLA x2";
 						value=6;
 					};
 				};
@@ -9197,7 +9137,7 @@ class CfgVehicles
 					};
 					class hp4_shturm
 					{
-						name="9K114 Shturm";
+						name="IGLA";
 						value=6;
 					};
 				};
@@ -9240,11 +9180,6 @@ class CfgVehicles
 						name="KAB-250";
 						value=5;
 					};
-					class hp5_shturm
-					{
-						name="9K114 Shturm";
-						value=6;
-					};
 				};
 			};
 			class HP6
@@ -9284,11 +9219,6 @@ class CfgVehicles
 					{
 						name="KAB-250";
 						value=5;
-					};
-					class hp6_shturm
-					{
-						name="9K114 Shturm";
-						value=6;
 					};
 				};
 			};
@@ -9363,20 +9293,10 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
-					class hp1_gsh23
-					{
-						name="GSh-23 Gun Pod";
-						value=1;
-					};
-					class hp1_igla
-					{
-						name="IGLA Pod";
-						value=2;
-					};
 					class hp1_shturm
 					{
 						name="9K114 Shturm";
-						value=3;
+						value=1;
 					};
 				};
 			};
@@ -9393,20 +9313,10 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
-					class hp2_gsh23
-					{
-						name="GSh-23 Gun Pod";
-						value=1;
-					};
-					class hp2_igla
-					{
-						name="IGLA Pod";
-						value=2;
-					};
 					class hp2_shturm
 					{
 						name="9K114 Shturm";
-						value=3;
+						value=1;
 					};
 				};
 			};
@@ -9450,7 +9360,7 @@ class CfgVehicles
 					};
 					class hp3_shturm
 					{
-						name="9K114 Shturm";
+						name="IGLA x2";
 						value=6;
 					};
 				};
@@ -9495,7 +9405,7 @@ class CfgVehicles
 					};
 					class hp4_shturm
 					{
-						name="9K114 Shturm";
+						name="IGLA x2";
 						value=6;
 					};
 				};
@@ -9538,11 +9448,6 @@ class CfgVehicles
 						name="KAB-250";
 						value=5;
 					};
-					class hp5_shturm
-					{
-						name="9K114 Shturm";
-						value=6;
-					};
 				};
 			};
 			class HP6
@@ -9582,11 +9487,6 @@ class CfgVehicles
 					{
 						name="KAB-250";
 						value=5;
-					};
-					class hp6_shturm
-					{
-						name="9K114 Shturm";
-						value=6;
 					};
 				};
 			};

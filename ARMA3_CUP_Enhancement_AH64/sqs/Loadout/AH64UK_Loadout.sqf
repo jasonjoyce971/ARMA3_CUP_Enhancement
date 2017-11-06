@@ -77,6 +77,51 @@ sleep 0.3;
 _plane removeMagazines "FIR_240rnd_CMFlare_Chaff_Magazine";
 _plane removeMagazines "CUP_1200Rnd_TE1_Red_Tracer_30x113mm_M789_HEDP_M";
 
+_plane setPylonLoadOut ["pylonLeft1", "", true, []];
+_plane setPylonLoadOut ["pylonLeft2", "", true, []];
+_plane setPylonLoadOut ["pylonRight1", "", true, []];
+_plane setPylonLoadOut ["pylonRight2", "", true, []];
+_plane setPylonLoadOut ["pylonWingL", "", true, []];
+_plane setPylonLoadOut ["pylonWingR", "", true, []];
+
+_plane setPylonLoadOut ["pylonLeft1", "", true, [0]];
+_plane setPylonLoadOut ["pylonLeft2", "", true, [0]];
+_plane setPylonLoadOut ["pylonRight1", "", true, [0]];
+_plane setPylonLoadOut ["pylonRight2", "", true, [0]];
+_plane setPylonLoadOut ["pylonWingL", "", true, [0]];
+_plane setPylonLoadOut ["pylonWingR", "", true, [0]];
+
+_plane setPylonLoadOut ["pylonLeft1", "", true, [-1]];
+_plane setPylonLoadOut ["pylonLeft2", "", true, [-1]];
+_plane setPylonLoadOut ["pylonRight1", "", true, [-1]];
+_plane setPylonLoadOut ["pylonRight2", "", true, [-1]];
+_plane setPylonLoadOut ["pylonWingL", "", true, [-1]];
+_plane setPylonLoadOut ["pylonWingR", "", true, [-1]];
+
+_plane removeweapon "JAS_FIR_AIM9L_Pylon";
+_plane removeweapon "JAS_HYDRA_Launcher";
+_plane removeweapon "JAS_CUP_Vmlauncher_CRV7_FAT_Pylon";
+_plane removeweapon "JAS_FIR_APKWS_Pylon_Launcher";
+_plane removeweapon "JAS_HellfireLauncher_L_Pylon";
+_plane removeweapon "JAS_HellfireLauncher_N_Pylon";
+_plane removeweapon "JAS_BRIMSTONE_L_Pylon";
+
+_plane removeweaponturret ["JAS_FIR_AIM9L_Pylon",[0]];
+_plane removeweaponturret ["JAS_HYDRA_Launcher",[0]];
+_plane removeweaponturret ["JAS_CUP_Vmlauncher_CRV7_FAT_Pylon",[0]];
+_plane removeweaponturret ["JAS_FIR_APKWS_Pylon_Launcher",[0]];
+_plane removeweaponturret ["JAS_HellfireLauncher_L_Pylon",[0]];
+_plane removeweaponturret ["JAS_HellfireLauncher_N_Pylon",[0]];
+_plane removeweaponturret ["JAS_BRIMSTONE_L_Pylon",[0]];
+
+_plane removeweaponturret ["JAS_FIR_AIM9L_Pylon",[-1]];
+_plane removeweaponturret ["JAS_HYDRA_Launcher",[-1]];
+_plane removeweaponturret ["JAS_CUP_Vmlauncher_CRV7_FAT_Pylon",[-1]];
+_plane removeweaponturret ["JAS_FIR_APKWS_Pylon_Launcher",[-1]];
+_plane removeweaponturret ["JAS_HellfireLauncher_L_Pylon",[-1]];
+_plane removeweaponturret ["JAS_HellfireLauncher_N_Pylon",[-1]];
+_plane removeweaponturret ["JAS_BRIMSTONE_L_Pylon",[-1]];
+
 titleText ["Loading guns and Texture", "PLAIN DOWN",0.5];
 
 // Load default equipment - cannon ammo and CM

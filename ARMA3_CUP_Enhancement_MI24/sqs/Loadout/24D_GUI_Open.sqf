@@ -21,16 +21,16 @@ _handle= CreateDialog "24D_GUI";
 	{lbAdd[2100,_x]} forEach 
 	[  
 		"Empty",
-		"GSh-23",
-		"IGLA",
+		/*"GSh-23",
+		"IGLA",*/
 		"9M17 Phalanga"
     ];
 	//Add Hardpoint 2 - left outboard 
 	{lbAdd[2201,_x]} forEach 
 	[  
 		"Empty",
-		"GSh-23",
-		"IGLA",
+		/*"GSh-23",
+		"IGLA",*/
 		"9M17 Phalanga"
     ];
 //Add Hardpoint 3 - right midline
@@ -41,7 +41,8 @@ _handle= CreateDialog "24D_GUI";
 		"S-8 Rockets",
 		"S-13 Rockets",
 		"FAB-250",
-		"KAB-250"
+		"KAB-250",
+		"IGLA"
     ];
 //Add Hardpoint 4 - left midline
 	{lbAdd[2102,_x]} forEach 
@@ -51,7 +52,8 @@ _handle= CreateDialog "24D_GUI";
 		"S-8 Rockets",
 		"S-13 Rockets",
 		"FAB-250",
-		"KAB-250"
+		"KAB-250",
+		"IGLA"
     ];
 //Add Hardpoint 5 - right inboard
 	{lbAdd[2103,_x]} forEach 

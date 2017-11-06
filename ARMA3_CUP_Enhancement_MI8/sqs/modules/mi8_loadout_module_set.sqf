@@ -21,9 +21,13 @@ Switch (_hardpoint1) Do
 		};		
 		case 1:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+			_plane addmagazine "JAS_CUP_1Rnd_S5_Pod_Small_M";
 		};
 		case 2:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+		};
+		case 3:
 		{
 			_plane addmagazine "JAS_CUP_S13_Pod_Heli_M";
 		};
@@ -43,9 +47,13 @@ sleep 0.3;
 		};		
 		case 1:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+			_plane addmagazine "JAS_CUP_1Rnd_S5_Pod_Small_M";
 		};
 		case 2:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+		};
+		case 3:
 		{
 			_plane addmagazine "JAS_CUP_S13_Pod_Heli_M";
 		};
@@ -65,9 +73,13 @@ sleep 0.3;
 		};		
 		case 1:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+			_plane addmagazine "JAS_CUP_1Rnd_S5_Pod_Small_M";
 		};
 		case 2:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+		};
+		case 3:
 		{
 			_plane addmagazine "JAS_CUP_S13_Pod_Heli_M";
 		};
@@ -87,9 +99,13 @@ sleep 0.3;
 		};		
 		case 1:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+			_plane addmagazine "JAS_CUP_1Rnd_S5_Pod_Small_M";
 		};
 		case 2:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+		};
+		case 3:
 		{
 			_plane addmagazine "JAS_CUP_S13_Pod_Heli_M";
 		};
@@ -102,9 +118,21 @@ _plane_magazine = magazines _plane;
 sleep 0.3;
 
 //need variable track to determine vik or khedge
+_s5count = {_x == "JAS_CUP_1Rnd_S5_Pod_Small_M"} count magazines _plane;
 _s8count = {_x == "JAS_CUP_1Rnd_S8_Pod_Heli_M"} count magazines _plane;
 _s13count = {_x == "JAS_CUP_S13_Pod_Heli_M"} count magazines _plane;
 
+if (_s5count >= 1) then 
+{
+	_plane addweaponturret ["JAS_CUP_57mmLauncher",[-1]];
+	_counter = 0;
+
+	while {_counter < _s5count} do
+	{
+		_counter = _counter + 1;
+		_plane addmagazineturret ["JAS_CUP_16Rnd_57mm",[-1]];
+	};
+};
 if (_s8count >= 1) then 
 {
 	_plane addweaponturret ["JAS_CUP_Vmlauncher_S8_veh",[-1]];

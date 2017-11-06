@@ -102,25 +102,49 @@ sleep 0.3;
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "JAS_KH25MPU_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "FIR_Kh29T_1rnd_M";
+			_plane addmagazine "JAS_KH25R_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "FIR_Kh29_1rnd_M";
+			_plane addmagazine "JAS_KH25MS_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_CUP_Vikhr_Rack_6Rnd_M";
+			_plane addmagazine "JAS_KH25MA_1rnd_M";
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+			_plane addmagazine "JAS_KH25ML_1rnd_M";
 		};
 		case 9:
+		{
+			_plane addmagazine "JAS_KH25MT_1rnd_M";
+		};
+		case 10:
+		{
+			_plane addmagazine "JAS_KH25MTP_1rnd_M";
+		};
+		case 11:
+		{
+			_plane addmagazine "FIR_Kh29T_1rnd_M";
+		};
+		case 12:
+		{
+			_plane addmagazine "FIR_Kh29_1rnd_M";
+		};
+		case 13:
+		{
+			_plane addmagazine "JAS_CUP_Vikhr_Rack_6Rnd_M";
+		};
+		case 14:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 15:
 		{
 			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
@@ -152,25 +176,49 @@ sleep 0.3;
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "JAS_KH25MPU_1rnd_M";
 		};
 		case 5:
 		{
-			_plane addmagazine "FIR_Kh29T_1rnd_M";
+			_plane addmagazine "JAS_KH25R_1rnd_M";
 		};
 		case 6:
 		{
-			_plane addmagazine "FIR_Kh29_1rnd_M";
+			_plane addmagazine "JAS_KH25MS_1rnd_M";
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_CUP_Vikhr_Rack_6Rnd_M";
+			_plane addmagazine "JAS_KH25MA_1rnd_M";
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+			_plane addmagazine "JAS_KH25ML_1rnd_M";
 		};
 		case 9:
+		{
+			_plane addmagazine "JAS_KH25MT_1rnd_M";
+		};
+		case 10:
+		{
+			_plane addmagazine "JAS_KH25MTP_1rnd_M";
+		};
+		case 11:
+		{
+			_plane addmagazine "FIR_Kh29T_1rnd_M";
+		};
+		case 12:
+		{
+			_plane addmagazine "FIR_Kh29_1rnd_M";
+		};
+		case 13:
+		{
+			_plane addmagazine "JAS_CUP_Vikhr_Rack_6Rnd_M";
+		};
+		case 14:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 15:
 		{
 			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
@@ -189,10 +237,25 @@ _fab250count = {_x == "JAS_CUP_1Rnd_FAB250_M"} count magazines _plane;
 _kab250count = {_x == "JAS_FIR_CBU250_1rnd_M"} count magazines _plane;
 _iglacount = {_x == "JAS_CUP_2Rnd_Igla_Rack_M"} count magazines _plane;
 _vikcount = {_x == "JAS_CUP_Vikhr_Rack_6Rnd_M"} count magazines _plane;
-_KH25count = {_x == "JAS_KH25_1rnd_M"} count magazines _plane;
 _khedgeTcount = {_x == "FIR_Kh29T_1rnd_M"} count magazines _plane;
 _khedgeLcount = {_x == "FIR_Kh29_1rnd_M"} count magazines _plane;
 _gpodcount = {_x == "JAS_CUP_2Rnd_GSh23_Pod_Heli_M"} count magazines _plane;
+
+_KH25MPUcount = {_x == "JAS_KH25MPU_1rnd_M"} count magazines _plane;
+_KH25Rcount = {_x == "JAS_KH25R_1rnd_M"} count magazines _plane;
+_KH25MScount = {_x == "JAS_KH25MS_1rnd_M"} count magazines _plane;
+_KH25MAcount = {_x == "JAS_KH25MA_1rnd_M"} count magazines _plane;
+_KH25MLcount = {_x == "JAS_KH25ML_1rnd_M"} count magazines _plane;
+_KH25MTcount = {_x == "JAS_KH25MT_1rnd_M"} count magazines _plane;
+_KH25MTPcount = {_x == "JAS_KH25MTP_1rnd_M"} count magazines _plane;
+
+if (_KH25MPUcount >= 1 || 
+	_KH25Rcount >= 1 ||
+	_KH25MScount >= 1 ||
+	_KH25MAcount >= 1 ||
+	_KH25MLcount >= 1 ||
+	_KH25MTcount >= 1 ||
+	_KH25MTPcount >= 1) then {_plane addweapon "JAS_KH25_LAU";};
 
 if (_s8count >= 1) then 
 {
@@ -240,7 +303,6 @@ if (_vikcount >= 1) then
 		_plane addmagazine "JAS_CUP_6Rnd_AT16_M";
 	};
 };
-if (_KH25count >= 1) then {_plane addweapon "JAS_KH25_LAU";};
 if (_khedgeTcount >= 1) then {_plane addweapon "FIR_Kh29T";};
 if (_khedgeLcount >= 1) then {_plane addweapon "FIR_Kh29L";};
 /*if (_khedgecount >= 1) then 

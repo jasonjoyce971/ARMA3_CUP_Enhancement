@@ -78,7 +78,8 @@ _handle= CreateDialog "JAS_ALCA_GUI";
 		"AGM-65D",
 		"AGM-65H",
 		"AGM-65L",
-		"Mk82"
+		"Mk82",
+		"RBK-500"
     ];
 //Add Hardpoint 6 - left inboard
 	{lbAdd[2104,_x]} forEach 
@@ -90,7 +91,8 @@ _handle= CreateDialog "JAS_ALCA_GUI";
 		"AGM-65D",
 		"AGM-65H",
 		"AGM-65L",
-		"Mk82"
+		"Mk82",
+		"RBK-500"
     ];
 	//Add Hardpoint 9 - internal left inner
 	{lbAdd[2202,_x]} forEach 
@@ -102,5 +104,6 @@ _handle= CreateDialog "JAS_ALCA_GUI";
 		"AGM-65H",
 		"AGM-65L",
 		"CBU-87",
-		"Mk82"
+		"Mk82",
+		"RBK-500"
     ];

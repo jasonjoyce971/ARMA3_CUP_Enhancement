@@ -100,6 +100,10 @@ if (_preset == -1 or _preset == 0) then
 		{
 			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_MK82_GP_PYLON_M", true, []];
 		};
+		case 8:
+		{
+			_plane setPylonLoadOut ["Pylons3", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
+		};
 	};
 	
 	sleep 0.3;
@@ -195,6 +199,10 @@ if (_preset == -1 or _preset == 0) then
 		case 7:
 		{
 			_plane setPylonLoadOut ["Pylons5", "JAS_FIR_MK82_GP_PYLON_M", true, []];
+		};
+		case 8:
+		{
+			_plane setPylonLoadOut ["Pylons5", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
 		};
 	};
 	
@@ -349,6 +357,10 @@ sleep 0.3;
 		case 7:
 		{
 			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_MK82_GP_PYLON_M", true, []];
+		};
+		case 8:
+		{
+			_plane setPylonLoadOut ["Pylons4", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
 		};
 	};
 	

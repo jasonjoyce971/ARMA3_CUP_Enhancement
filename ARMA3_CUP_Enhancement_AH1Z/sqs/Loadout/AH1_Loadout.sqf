@@ -63,6 +63,8 @@ sleep 0.3;
 titleText ["Loading guns and Texture", "PLAIN DOWN",0.5];
 */
 
+removeAllWeapons _plane;
+
 _plane removeMagazines "FIR_240rnd_CMFlare_Chaff_Magazine";
 _plane removeMagazines "CUP_750Rnd_TE2_Red_Tracer_M197_20mm_AP_M";
 
@@ -72,6 +74,41 @@ _plane setPylonLoadOut ["pylons3", "", true, []];
 _plane setPylonLoadOut ["pylons4", "", true, []];
 _plane setPylonLoadOut ["pylons5", "", true, []];
 _plane setPylonLoadOut ["pylons6", "", true, []];
+
+_plane setPylonLoadOut ["pylons1", "", true, [0]];
+_plane setPylonLoadOut ["pylons2", "", true, [0]];
+_plane setPylonLoadOut ["pylons3", "", true, [0]];
+_plane setPylonLoadOut ["pylons4", "", true, [0]];
+_plane setPylonLoadOut ["pylons5", "", true, [0]];
+_plane setPylonLoadOut ["pylons6", "", true, [0]];
+
+_plane setPylonLoadOut ["pylons1", "", true, [-1]];
+_plane setPylonLoadOut ["pylons2", "", true, [-1]];
+_plane setPylonLoadOut ["pylons3", "", true, [-1]];
+_plane setPylonLoadOut ["pylons4", "", true, [-1]];
+_plane setPylonLoadOut ["pylons5", "", true, [-1]];
+_plane setPylonLoadOut ["pylons6", "", true, [-1]];
+
+_plane removeweapon "JAS_FIR_AIM9L_Pylon";
+_plane removeweapon "JAS_AGM122_Pylon";
+_plane removeweapon "JAS_HYDRA_Launcher";
+_plane removeweapon "JAS_FIR_APKWS_Pylon_Launcher";
+_plane removeweapon "JAS_HellfireLauncher_K_Pylon";
+_plane removeweapon "JAS_HellfireLauncher_N_Pylon";
+
+_plane removeweaponturret ["JAS_FIR_AIM9L_Pylon",[-1]];
+_plane removeweaponturret ["JAS_AGM122_Pylon",[-1]];
+_plane removeweaponturret ["JAS_HYDRA_Launcher",[-1]];
+_plane removeweaponturret ["JAS_FIR_APKWS_Pylon_Launcher",[-1]];
+_plane removeweaponturret ["JAS_HellfireLauncher_K_Pylon",[-1]];
+_plane removeweaponturret ["JAS_HellfireLauncher_N_Pylon",[-1]];
+
+_plane removeweaponturret ["JAS_FIR_AIM9L_Pylon",[0]];
+_plane removeweaponturret ["JAS_AGM122_Pylon",[0]];
+_plane removeweaponturret ["JAS_HYDRA_Launcher",[0]];
+_plane removeweaponturret ["JAS_FIR_APKWS_Pylon_Launcher",[0]];
+_plane removeweaponturret ["JAS_HellfireLauncher_K_Pylon",[0]];
+_plane removeweaponturret ["JAS_HellfireLauncher_N_Pylon",[0]];
 
 _plane addmagazine "FIR_240rnd_CMFlare_Chaff_Magazine";
 _plane addmagazine "CUP_750Rnd_TE2_Red_Tracer_M197_20mm_AP_M";
@@ -101,12 +138,12 @@ if (_preset == -1 or _preset == 0) then
 		};		
 		case 1:
 		{
-			_plane setPylonLoadOut ["pylons1", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons1", "JAS_FIR_AIM9L_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
 		};
 		case 2:
 		{
-			_plane setPylonLoadOut ["pylons1", "JAS_AGM122_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons1", "JAS_AGM122_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_AGM122_1rnd_M";
 		};
 	};
@@ -127,12 +164,12 @@ sleep 0.3;
 		};		
 		case 1:
 		{
-			_plane setPylonLoadOut ["pylons6", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons6", "JAS_FIR_AIM9L_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
 		};
 		case 2:
 		{
-			_plane setPylonLoadOut ["pylons6", "JAS_AGM122_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons6", "JAS_AGM122_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_AGM122_1rnd_M";
 		};
 	};
@@ -163,17 +200,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane setPylonLoadOut ["pylons2", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons2", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane setPylonLoadOut ["pylons2", "JAS_FIR_Hellfire_K_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons2", "JAS_FIR_Hellfire_K_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire K
 		};
 		case 5:
 		{
-			_plane setPylonLoadOut ["pylons2", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons2", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
 	};
@@ -204,17 +241,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane setPylonLoadOut ["pylons5", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons5", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane setPylonLoadOut ["pylons5", "JAS_FIR_Hellfire_K_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons5", "JAS_FIR_Hellfire_K_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire K
 		};
 		case 5:
 		{
-			_plane setPylonLoadOut ["pylons5", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons5", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
 	};
@@ -245,17 +282,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane setPylonLoadOut ["pylons3", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons3", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane setPylonLoadOut ["pylons3", "JAS_FIR_Hellfire_K_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons3", "JAS_FIR_Hellfire_K_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire K
 		};
 		case 5:
 		{
-			_plane setPylonLoadOut ["pylons3", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons3", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
 	};
@@ -286,17 +323,17 @@ sleep 0.3;
 		};
 		case 3:
 		{
-			_plane setPylonLoadOut ["pylons4", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons4", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
 		};
 		case 4:
 		{
-			_plane setPylonLoadOut ["pylons4", "JAS_FIR_Hellfire_K_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons4", "JAS_FIR_Hellfire_K_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire K
 		};
 		case 5:
 		{
-			_plane setPylonLoadOut ["pylons4", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylons4", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, [0]];
 			//_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M"; // Hellfire N
 		};
 	};

@@ -33,6 +33,14 @@ Switch (_hardpoint1) Do
 		{
 			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
 		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
+		};
 	};
 	
 sleep 0.3;
@@ -58,6 +66,14 @@ sleep 0.3;
 		case 3:
 		{
 			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
+		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
 	};
 
@@ -85,6 +101,14 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
 		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
+		};
 	};
 	
 sleep 0.3;
@@ -110,6 +134,14 @@ sleep 0.3;
 		case 3:
 		{
 			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
+		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
 	};
 	
@@ -137,6 +169,14 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
 		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
+		};
 	};
 	
 	sleep 0.3;
@@ -163,6 +203,14 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
 		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
+		};
 	};
 
 sleep 1;
@@ -175,6 +223,11 @@ sleep 0.3;
 _s8count = {_x == "JAS_CUP_1Rnd_S8_Pod_Heli_M"} count magazines _plane;
 _s13count = {_x == "JAS_CUP_S13_Pod_Heli_M"} count magazines _plane;
 _gpodcount = {_x == "JAS_CUP_2Rnd_GSh23_Pod_Heli_M"} count magazines _plane;
+_FABcount = {_x == "JAS_CUP_1Rnd_FAB250_M"} count magazines _plane;
+_RBKcount = {_x == "JAS_FIR_CBU250_1rnd_M"} count magazines _plane;
+
+if (_FABcount >= 1) then {_plane addweaponturret ["JAS_CUP_Vblauncher_Fab250_veh",[-1]];};
+if (_RBKcount >= 1) then {_plane addweaponturret ["JAS_FIR_CBU250",[-1]];};
 
 if (_s8count >= 1) then 
 {

@@ -37,6 +37,7 @@ _handle= CreateDialog "SU34_GUI";
 	[  
 		"Empty",
 		"R-73",
+		"R-77",
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets"	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
     ];
@@ -45,6 +46,7 @@ _handle= CreateDialog "SU34_GUI";
 	[  
 		"Empty",
 		"R-73",
+		"R-77",
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets"	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
     ];
@@ -52,14 +54,21 @@ _handle= CreateDialog "SU34_GUI";
 	{lbAdd[2103,_x]} forEach 
 	[  
 		"Empty",
-		"R-73",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
+		"R-73",
+		"R-77",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
 		"GSh-23",
 		"Vikhr",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
 		"Kh-29L",		//Pod = JAS_CUP_Vikhr_Rack_6Rnd_M, mag = FIR_Kh29_1rnd_M, wpn = FIR_Kh29L
 		"Kh-29T",
-		"KH-25",
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MS",
+		"Kh-25MA",
+		"Kh-25ML",
+		"Kh-25MT",
+		"Kh-25MTP",
 		"FAB-250",
 		"KAB-500KR",
 		"KAB-500SE",
@@ -70,14 +79,21 @@ _handle= CreateDialog "SU34_GUI";
 	{lbAdd[2104,_x]} forEach 
 	[  
 		"Empty",
-		"R-73",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
+		"R-73",
+		"R-77",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets",	//Pod = JAS_CUP_S13_Pod_Heli_M, mag = JAS_S13_5rnd_M, wpn = JAS_CUP_Vmlauncher_S13_veh 
 		"GSh-23",
 		"Vikhr",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
 		"Kh-29L",		//Pod = JAS_CUP_Vikhr_Rack_6Rnd_M, mag = FIR_Kh29_1rnd_M, wpn = FIR_Kh29L
 		"Kh-29T",
-		"KH-25",
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MS",
+		"Kh-25MA",
+		"Kh-25ML",
+		"Kh-25MT",
+		"Kh-25MTP",
 		"FAB-250",
 		"KAB-500KR",
 		"KAB-500SE",
@@ -94,7 +110,13 @@ _handle= CreateDialog "SU34_GUI";
 		"Vikhr",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
 		"Kh-29L",		//Pod = JAS_CUP_Vikhr_Rack_6Rnd_M, mag = FIR_Kh29_1rnd_M, wpn = FIR_Kh29L
 		"Kh-29T",
-		"KH-25",
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MS",
+		"Kh-25MA",
+		"Kh-25ML",
+		"Kh-25MT",
+		"Kh-25MTP",
 		"FAB-250",
 		"KAB-500KR",
 		"KAB-500SE",
@@ -111,7 +133,13 @@ _handle= CreateDialog "SU34_GUI";
 		"Vikhr",			//Pod = JAS_CUP_2Rnd_Igla_Rack_M, mag = CUP_2Rnd_Igla_M, wpn = CUP_Vmlauncher_Igla_twice_veh
 		"Kh-29L",		//Pod = JAS_CUP_Vikhr_Rack_6Rnd_M, mag = FIR_Kh29_1rnd_M, wpn = FIR_Kh29L
 		"Kh-29T",
-		"KH-25",
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MS",
+		"Kh-25MA",
+		"Kh-25ML",
+		"Kh-25MT",
+		"Kh-25MTP",
 		"FAB-250",
 		"KAB-500KR",
 		"KAB-500SE",
@@ -123,8 +151,15 @@ _handle= CreateDialog "SU34_GUI";
 	{lbAdd[2202,_x]} forEach 
 	[  
 		"Empty",
+		"R-77",
 		"Fuel Tank",
-		"KH-25",
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MS",
+		"Kh-25MA",
+		"Kh-25ML",
+		"Kh-25MT",
+		"Kh-25MTP",
 		"FAB-250",
 		"KAB-500KR",
 		"KAB-500SE",
@@ -135,8 +170,15 @@ _handle= CreateDialog "SU34_GUI";
 	{lbAdd[2107,_x]} forEach 
 	[  
 		"Empty",
+		"R-77",
 		"Fuel Tank",
-		"KH-25",
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MS",
+		"Kh-25MA",
+		"Kh-25ML",
+		"Kh-25MT",
+		"Kh-25MTP",
 		"FAB-250",
 		"KAB-500KR",
 		"KAB-500SE",
@@ -147,9 +189,16 @@ _handle= CreateDialog "SU34_GUI";
 	{lbAdd[2117,_x]} forEach 
 	[  
 		"Empty",
+		"R-77",
 		"Kh-29L",
 		"Kh-29T",
-		"KH-25",
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MS",
+		"Kh-25MA",
+		"Kh-25ML",
+		"Kh-25MT",
+		"Kh-25MTP",
 		"FAB-250",
 		"KAB-500KR",
 		"KAB-500SE",
@@ -160,9 +209,16 @@ _handle= CreateDialog "SU34_GUI";
 	{lbAdd[2118,_x]} forEach 
 	[  
 		"Empty",
+		"R-77",
 		"Kh-29L",
 		"Kh-29T",
-		"KH-25",
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MS",
+		"Kh-25MA",
+		"Kh-25ML",
+		"Kh-25MT",
+		"Kh-25MTP",
 		"FAB-250",
 		"KAB-500KR",
 		"KAB-500SE",

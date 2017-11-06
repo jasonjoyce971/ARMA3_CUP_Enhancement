@@ -1072,6 +1072,7 @@ class CfgVehicles
 						maxweight=1200;
 						priority=1;
 						UIposition[]={0.34999999,0.024999955};
+						turret[] = {}; // default owner of pylon/weapon, empty for driver
 					};
 					class pylons2: pylons1
 					{
@@ -5244,7 +5245,7 @@ class CfgVehicles
 			"\CUP\AirVehicles\CUP_AirVehicles_A10\data\sti_skins\a10_02_co_winter.paa"
 		};
 	};
-	class JAS_A10_Loadout_Module: Module_F
+	/*class JAS_A10_Loadout_Module: Module_F
 	{
 		scope=2;
 		author = "-{GOL}-Jason";
@@ -6681,5 +6682,5 @@ class CfgVehicles
 				};
 			};
 		};
-	};
+	};*/
 };

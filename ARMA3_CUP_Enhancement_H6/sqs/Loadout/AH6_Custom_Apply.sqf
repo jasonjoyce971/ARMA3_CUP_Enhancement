@@ -27,82 +27,80 @@ _hardpoint2 = _array select 1;
 
 sleep 0.01;
 
-	Switch (_hardpoint1) Do
+	Switch (_hardpoint1) Do // Right
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight1", "", true, []];
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight1", "", true, []];
 		};
 		case 1:
 		{
-			_plane animate ["hideGauR", 0];
-			_plane addmagazineturret ["CUP_1200Rnd_TE1_Red_Tracer_GAU19_M",[-1]];
+			_plane setPylonLoadOut ["pylonRight1", "JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_GAU19R_M", true, []];
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight1", "JAS_FIR_Hydra_P_7rnd_M", true, []];
 		};
 		case 3:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight1", "JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M", true, []];
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonRight1", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, [0]];
 		};
 		case 5:
 		{
-			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+			_plane setPylonLoadOut ["pylonRight1", "JAS_CUP_PylonPod_2Rnd_AGM114K_Hellfire_II_M", true, [0]];
 		};
 		case 6:
 		{
-			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+			_plane setPylonLoadOut ["pylonRight1", "JAS_CUP_PylonPod_2Rnd_AGM114N_Hellfire_II_M", true, [0]];
 		};
 	};
 	
 sleep 0.3;
 	
-	Switch (_hardpoint2) Do
+	Switch (_hardpoint2) Do // Left
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft1", "", true, []];
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft1", "", true, []];
 		};
 		case 1:
 		{
-			_plane animate ["hideGauL", 0];
-			_plane addmagazineturret ["CUP_1200Rnd_TE1_Red_Tracer_GAU19_M",[-1]];
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_GAU19L_M", true, []];
 		};
 		case 2:
 		{
-			_plane addmagazine "FIR_Hydra_7_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_FIR_Hydra_P_7rnd_M", true, []];
 		};
 		case 3:
 		{
-			_plane addmagazine "FIR_JLAU_3_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M", true, []];
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_Hydra_APKWS_Pod_1rnd_M";
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M", true, [0]];
 		};
 		case 5:
 		{
-			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_CUP_PylonPod_2Rnd_AGM114K_Hellfire_II_M", true, [0]];
 		};
 		case 6:
 		{
-			_plane addmagazine "CUP_1Rnd_AGM_2Rack_M";
+			_plane setPylonLoadOut ["pylonLeft1", "JAS_CUP_PylonPod_2Rnd_AGM114N_Hellfire_II_M", true, [0]];
 		};
 	};
-
+/*
 sleep 0.3;
 
 	Switch (_hardpoint1) Do
@@ -254,5 +252,5 @@ sleep 0.3;
 			_plane addmagazine "JAS_AGM114N_1rnd_M";
 		};
 	};
-	
+	*/
 sleep 0.01;

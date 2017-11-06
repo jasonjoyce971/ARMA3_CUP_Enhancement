@@ -29,7 +29,9 @@ _handle= CreateDialog "JAS_WASP_STEALTH_GUI";
 		"Mk82 AIR",
 		"AGM-154A",
 		"AGM-154C",
-		"AIM-120D"
+		"AIM-120D",
+		"CBU-85",
+		"BL-778"
     ];
 	
 	//Add Hardpoint 2 - left outboard 
@@ -43,7 +45,9 @@ _handle= CreateDialog "JAS_WASP_STEALTH_GUI";
 		"Mk82 AIR",
 		"AGM-154A",
 		"AGM-154C",
-		"AIM-120D"
+		"AIM-120D",
+		"CBU-85",
+		"BL-778"
     ];
 	
 //Add Hardpoint 3 - right inboard
@@ -69,7 +73,9 @@ _handle= CreateDialog "JAS_WASP_STEALTH_GUI";
 		"Mk82 AIR",
 		"AGM-154A",
 		"AGM-154C",
-		"AIM-120D"
+		"AIM-120D",
+		"CBU-85",
+		"BL-778"
     ];
 //Add Hardpoint 6 - left mid
 	{lbAdd[2104,_x]} forEach 
@@ -82,20 +88,20 @@ _handle= CreateDialog "JAS_WASP_STEALTH_GUI";
 		"Mk82 AIR",
 		"AGM-154A",
 		"AGM-154C",
-		"AIM-120D"
+		"AIM-120D",
+		"CBU-85",
+		"BL-778"
     ];
 //Add Hardpoint 7 - right inboard
 	{lbAdd[2105,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-9X",
-		"AIM-120D"
+		"AIM-9X"
     ];
 //Add Hardpoint 8 - left inboard
 	{lbAdd[2106,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-9X",
-		"AIM-120D"
+		"AIM-9X"
     ];
 	

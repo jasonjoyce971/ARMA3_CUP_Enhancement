@@ -776,16 +776,131 @@ class CfgVehicles
 			{
 				class Components
 				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
 					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
 					{
 					};
 				};
 			};
-			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
 			{
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
 			};
-			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
 			{
+				defaultDisplay="SensorDisplay";
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
 			};
 		};
 		expansion=3;
@@ -2189,7 +2304,7 @@ class CfgVehicles
 				radius = 15;
 				shortcut = "";
 				condition = "player in this and isengineon this";
-				statement = "this execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\FIR_AWS_MFD_N_Open.sqf""";
+				statement = "this execVM ""\FIR_AirWeaponSystem_US\Script\TGTSystem\FIR_AWS_MFD_N_Open.sqf""";
 				onlyforplayer = "false";
 			};
 			class CUP_F35B_Eject
@@ -2204,36 +2319,6 @@ class CfgVehicles
 				onlyforplayer = 1;
 				showWindow = 0;
 				hideOnUse = 1;
-			};
-			class FindRadarTGT
-			{
-				displayName = "Find Radar Target";
-				position = "pos cano";
-				radius = 15;
-				shortcut = "User5";
-				condition = "currentweapon this == ""JAS_KH25_LAU"" and this getvariable ""SEAD_SET"" == ""no""; ";
-				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\harm.sqf""; ";
-				onlyforplayer = "False";
-			};
-			class ClearRadarTGT
-			{
-				displayName = "Clear Radar Target";
-				position = "pos cano";
-				radius = 15;
-				shortcut = "User5";
-				condition = "currentweapon this == ""JAS_KH25_LAU"" and this getvariable ""SEAD_SET"" == ""yes""; ";
-				statement = "[this] execVM ""\FIR_AirWeaponSystem_US\Script\SEAD\harmoff.sqf""; ";
-				onlyforplayer = "False";
-			};
-			class SearchRDRTGT
-			{
-				displayName = "QIT ON";
-				position = "pos cano";
-				radius = 15;
-				shortcut = "";
-				condition = "currentweapon this == ""JAS_KH25_LAU"";";
-				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\Search_RDRTGT.sqf""; ";
-				onlyforplayer = "False";
 			};
 		};
 		class eventhandlers
@@ -2432,20 +2517,25 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp1_s5
+					{
+						name="S-5 Rockets";
+						value=1;
+					};
 					class hp1_s8
 					{
 						name="S-8 Rockets";
-						value=1;
+						value=2;
 					};
 					class hp1_s13
 					{
 						name="S-13 Rockets";
-						value=2;
+						value=3;
 					};
 					class hp1_r73
 					{
 						name="R-73 Vympel";
-						value=3;
+						value=4;
 					};
 				};
 			};
@@ -2462,20 +2552,25 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp2_s5
+					{
+						name="S-5 Rockets";
+						value=1;
+					};
 					class hp2_s8
 					{
 						name="S-8 Rockets";
-						value=1;
+						value=2;
 					};
 					class hp2_s13
 					{
 						name="S-13 Rockets";
-						value=2;
+						value=3;
 					};
 					class hp2_r73
 					{
 						name="R-73 Vympel";
-						value=3;
+						value=4;
 					};
 				};
 			};
@@ -2492,45 +2587,75 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp3_s5
+					{
+						name="S-5 Rockets";
+						value=1;
+					};
 					class hp3_s8
 					{
 						name="S-8 Rockets";
-						value=1;
+						value=2;
 					};
 					class hp3_s13
 					{
 						name="S-13 Rockets";
-						value=2;
-					};
-					class hp3_25
-					{
-						name="Kh-25 'Kegler' ARM";
 						value=3;
+					};
+					class hp3_25MPU
+					{
+						name="Kh-25MPU";
+						value=4;
+					};
+					class hp3_25R
+					{
+						name="Kh-25R";
+						value=5;
+					};
+					class hp3_25MS
+					{
+						name="Kh-25MS";
+						value=6;
+					};
+					class hp3_25ML
+					{
+						name="Kh-25ML";
+						value=7;
+					};
+					class hp3_25MTP
+					{
+						name="Kh-25MTP";
+						value=8;
 					};
 					class hp3_73
 					{
 						name="R-73 'Vympel''";
-						value=4;
+						value=9;
 					};
 					class hp3_29T
 					{
 						name="Kh-29T 'Kedge'";
-						value=5;
+						value=10;
 					};
 					class hp3_29L
 					{
 						name="Kh-29L 'Kedge'";
-						value=6;
+						value=11;
 					};
 					class hp3_fab
 					{
 						name="FAB-250";
-						value=7;
+						value=12;
 					};
-					class hp3_kab
+					class hp3_kabl
 					{
-						name="KAB-500";
-						value=8;
+						name="KAB-500L";
+						value=13;
+					};
+					class hp3_kabkr
+					{
+						name="KAB-500KR";
+						value=14;
 					};
 				};
 			};
@@ -2547,45 +2672,75 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp4_s5
+					{
+						name="S-5 Rockets";
+						value=1;
+					};
 					class hp4_s8
 					{
 						name="S-8 Rockets";
-						value=1;
+						value=2;
 					};
 					class hp4_s13
 					{
 						name="S-13 Rockets";
-						value=2;
-					};
-					class hp4_25
-					{
-						name="Kh-25 'Kegler' ARM";
 						value=3;
+					};
+					class hp4_25MPU
+					{
+						name="Kh-25MPU";
+						value=4;
+					};
+					class hp4_25R
+					{
+						name="Kh-25R";
+						value=5;
+					};
+					class hp4_25MS
+					{
+						name="Kh-25MS";
+						value=6;
+					};
+					class hp4_25ML
+					{
+						name="Kh-25ML";
+						value=7;
+					};
+					class hp4_25MTP
+					{
+						name="Kh-25MTP";
+						value=8;
 					};
 					class hp4_73
 					{
 						name="R-73 'Vympel''";
-						value=4;
+						value=9;
 					};
 					class hp4_29T
 					{
 						name="Kh-29T 'Kedge'";
-						value=5;
+						value=10;
 					};
 					class hp4_29L
 					{
 						name="Kh-29L 'Kedge'";
-						value=6;
+						value=11;
 					};
 					class hp4_fab
 					{
 						name="FAB-250";
-						value=7;
+						value=12;
 					};
-					class hp4_kab
+					class hp4_kabl
 					{
-						name="KAB-500";
-						value=8;
+						name="KAB-500L";
+						value=13;
+					};
+					class hp4_kabkr
+					{
+						name="KAB-500KR";
+						value=14;
 					};
 				};
 			};
@@ -2602,50 +2757,85 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp5_s5
+					{
+						name="S-5 Rockets";
+						value=1;
+					};
 					class hp5_s8
 					{
 						name="S-8 Rockets";
-						value=1;
+						value=2;
 					};
 					class hp5_s13
 					{
 						name="S-13 Rockets";
-						value=2;
-					};
-					class hp5_25
-					{
-						name="Kh-25 'Kegler' ARM";
 						value=3;
+					};
+					class hp5_25MPU
+					{
+						name="Kh-25MPU";
+						value=4;
+					};
+					class hp5_25R
+					{
+						name="Kh-25R";
+						value=5;
+					};
+					class hp5_25MS
+					{
+						name="Kh-25MS";
+						value=6;
+					};
+					class hp5_25ML
+					{
+						name="Kh-25ML";
+						value=7;
+					};
+					class hp5_25MT
+					{
+						name="Kh-25MT";
+						value=8;
+					};
+					class hp5_25MTP
+					{
+						name="Kh-25MTP";
+						value=9;
 					};
 					class hp5_73
 					{
 						name="R-73 'Vympel''";
-						value=4;
+						value=10;
 					};
 					class hp5_29T
 					{
 						name="Kh-29T 'Kedge'";
-						value=5;
+						value=11;
 					};
 					class hp5_29L
 					{
 						name="Kh-29L 'Kedge'";
-						value=6;
+						value=12;
 					};
 					class hp5_fab
 					{
 						name="FAB-250";
-						value=7;
+						value=13;
 					};
-					class hp5_kab
+					class hp5_kabL
 					{
-						name="KAB-500";
-						value=8;
+						name="KAB-500L";
+						value=14;
+					};
+					class hp5_kabKR
+					{
+						name="KAB-500KR";
+						value=15;
 					};
 					class hp5_rbk
 					{
 						name="RBK-250";
-						value=9;
+						value=16;
 					};
 				};
 			};
@@ -2662,50 +2852,85 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp6_s5
+					{
+						name="S-5 Rockets";
+						value=1;
+					};
 					class hp6_s8
 					{
 						name="S-8 Rockets";
-						value=1;
+						value=2;
 					};
 					class hp6_s13
 					{
 						name="S-13 Rockets";
-						value=2;
-					};
-					class hp6_25
-					{
-						name="Kh-25 'Kegler' ARM";
 						value=3;
+					};
+					class hp6_25MPU
+					{
+						name="Kh-25MPU";
+						value=4;
+					};
+					class hp6_25R
+					{
+						name="Kh-25R";
+						value=5;
+					};
+					class hp6_25MS
+					{
+						name="Kh-25MS";
+						value=6;
+					};
+					class hp6_25ML
+					{
+						name="Kh-25ML";
+						value=7;
+					};
+					class hp6_25MT
+					{
+						name="Kh-25MT";
+						value=8;
+					};
+					class hp6_25MTP
+					{
+						name="Kh-25MTP";
+						value=9;
 					};
 					class hp6_73
 					{
 						name="R-73 'Vympel''";
-						value=4;
+						value=10;
 					};
 					class hp6_29T
 					{
 						name="Kh-29T 'Kedge'";
-						value=5;
+						value=11;
 					};
 					class hp6_29L
 					{
 						name="Kh-29L 'Kedge'";
-						value=6;
+						value=12;
 					};
 					class hp6_fab
 					{
 						name="FAB-250";
-						value=7;
+						value=13;
 					};
-					class hp6_kab
+					class hp6_kabL
 					{
-						name="KAB-500";
-						value=8;
+						name="KAB-500L";
+						value=14;
+					};
+					class hp6_kabKR
+					{
+						name="KAB-500KR";
+						value=15;
 					};
 					class hp6_rbk
 					{
 						name="RBK-250";
-						value=9;
+						value=16;
 					};
 				};
 			};
@@ -2722,50 +2947,60 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp7_s5
+					{
+						name="S-5 Rockets";
+						value=1;
+					};
 					class hp7_s8
 					{
 						name="S-8 Rockets";
-						value=1;
+						value=2;
 					};
 					class hp7_s13
 					{
 						name="S-13 Rockets";
-						value=2;
+						value=3;
 					};
 					class hp7_Gsh
 					{
 						name="GSh-23 Gun Pod";
-						value=3;
+						value=4;
 					};
 					class hp7_vik
 					{
 						name="VIKHIR";
-						value=4;
+						value=5;
 					};
 					class hp7_29T
 					{
 						name="Kh-29T 'Kedge'";
-						value=5;
+						value=6;
 					};
 					class hp7_29L
 					{
 						name="Kh-29L 'Kedge'";
-						value=6;
+						value=7;
 					};
 					class hp7_fab
 					{
 						name="FAB-250";
-						value=7;
-					};
-					class hp7_kab
-					{
-						name="KAB-500";
 						value=8;
+					};
+					class hp7_kabL
+					{
+						name="KAB-500L";
+						value=9;
+					};
+					class hp7_kabKR
+					{
+						name="KAB-500KR";
+						value=10;
 					};
 					class hp7_rbk
 					{
 						name="RBK-250";
-						value=9;
+						value=11;
 					};
 				};
 			};
@@ -2782,50 +3017,60 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp8_s5
+					{
+						name="S-5 Rockets";
+						value=1;
+					};
 					class hp8_s8
 					{
 						name="S-8 Rockets";
-						value=1;
+						value=2;
 					};
 					class hp8_s13
 					{
 						name="S-13 Rockets";
-						value=2;
+						value=3;
 					};
 					class hp8_Gsh
 					{
 						name="GSh-23 Gun Pod";
-						value=3;
+						value=4;
 					};
 					class hp8_vik
 					{
 						name="VIKHIR";
-						value=4;
+						value=5;
 					};
 					class hp8_29T
 					{
 						name="Kh-29T 'Kedge'";
-						value=5;
+						value=6;
 					};
 					class hp8_29L
 					{
 						name="Kh-29L 'Kedge'";
-						value=6;
+						value=7;
 					};
 					class hp8_fab
 					{
 						name="FAB-250";
-						value=7;
-					};
-					class hp8_kab
-					{
-						name="KAB-500";
 						value=8;
+					};
+					class hp8_kabL
+					{
+						name="KAB-500L";
+						value=9;
+					};
+					class hp8_kabKR
+					{
+						name="KAB-500KR";
+						value=10;
 					};
 					class hp8_rbk
 					{
 						name="RBK-250";
-						value=9;
+						value=11;
 					};
 				};
 			};
@@ -2842,35 +3087,45 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp9_s5
+					{
+						name="S-5 Rockets";
+						value=1;
+					};
 					class hp9_s8
 					{
 						name="S-8 Rockets";
-						value=1;
+						value=2;
 					};
 					class hp9_s13
 					{
 						name="S-13 Rockets";
-						value=2;
+						value=3;
 					};
 					class hp9_GSh
 					{
 						name="GSh-23 Gun Pod";
-						value=3;
+						value=4;
 					};
 					class hp9_fab
 					{
 						name="FAB-250";
-						value=4;
-					};
-					class hp9_kab
-					{
-						name="KAB-500";
 						value=5;
+					};
+					class hp9_kabL
+					{
+						name="KAB-500L";
+						value=6;
+					};
+					class hp9_kabKR
+					{
+						name="KAB-500KR";
+						value=7;
 					};
 					class hp9_rbk
 					{
 						name="RBK-250";
-						value=6;
+						value=8;
 					};
 				};
 			};
@@ -2887,35 +3142,45 @@ class CfgVehicles
 						value=0;
 						default=1;
 					};
+					class hp10_s5
+					{
+						name="S-5 Rockets";
+						value=1;
+					};
 					class hp10_s8
 					{
 						name="S-8 Rockets";
-						value=1;
+						value=2;
 					};
 					class hp10_s13
 					{
 						name="S-13 Rockets";
-						value=2;
+						value=3;
 					};
 					class hp10_GSh
 					{
 						name="GSh-23 Gun Pod";
-						value=3;
+						value=4;
 					};
 					class hp10_fab
 					{
 						name="FAB-250";
-						value=4;
-					};
-					class hp10_kab
-					{
-						name="KAB-500";
 						value=5;
+					};
+					class hp10_kabL
+					{
+						name="KAB-500L";
+						value=6;
+					};
+					class hp10_kabKR
+					{
+						name="KAB-500KR";
+						value=7;
 					};
 					class hp10_rbk
 					{
 						name="RBK-250";
-						value=6;
+						value=8;
 					};
 				};
 			};

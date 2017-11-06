@@ -73,7 +73,11 @@ _handle= CreateDialog "JAS_WASP_GUI";
 		"AGM-88",
 		"AGM-154A",
 		"AGM-154C",
-		"GBU-32"
+		"GBU-32",
+		"CBU-85",
+		"CBU-85 x2",
+		"BL-778",
+		"BL-778 x2"
     ];
 //Add Hardpoint 4 - left inboard
 	{lbAdd[2102,_x]} forEach 
@@ -102,34 +106,34 @@ _handle= CreateDialog "JAS_WASP_GUI";
 		"AGM-88",
 		"AGM-154A",
 		"AGM-154C",
-		"GBU-32"
+		"GBU-32",
+		"CBU-85",
+		"CBU-85 x2",
+		"BL-778",
+		"BL-778 x2"
     ];
 //Add Hardpoint 5 - right mid
 	{lbAdd[2103,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-9X",
-		"AIM-120D"
+		"AIM-9X"
     ];
 //Add Hardpoint 6 - left mid
 	{lbAdd[2104,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-9X",
-		"AIM-120D"
+		"AIM-9X"
     ];
 //Add Hardpoint 7 - right inboard
 	{lbAdd[2105,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-9X",
 		"AIM-120D"
     ];
 //Add Hardpoint 8 - left inboard
 	{lbAdd[2106,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-9X",
 		"AIM-120D"
     ];
 	
@@ -148,7 +152,9 @@ _handle= CreateDialog "JAS_WASP_GUI";
 		"AIM-120D",
 		"AGM-154A",
 		"AGM-154C",
-		"GBU-32"
+		"GBU-32",
+		"CBU-85",
+		"BL-778"
     ];
 	
 //Add Hardpoint 10 - right nacelle
@@ -166,7 +172,9 @@ _handle= CreateDialog "JAS_WASP_GUI";
 		"AIM-120D",
 		"AGM-154A",
 		"AGM-154C",
-		"GBU-32"
+		"GBU-32",
+		"CBU-85",
+		"BL-778"
     ];
 
 //Add Hardpoint 11 - right belly
@@ -184,7 +192,9 @@ _handle= CreateDialog "JAS_WASP_GUI";
 		"AIM-120D",
 		"AGM-154A",
 		"AGM-154C",
-		"GBU-32"
+		"GBU-32",
+		"CBU-85",
+		"BL-778"
     ];
 	
 //Add Hardpoint 12 - left belly
@@ -202,5 +212,7 @@ _handle= CreateDialog "JAS_WASP_GUI";
 		"AIM-120D",
 		"AGM-154A",
 		"AGM-154C",
-		"GBU-32"
+		"GBU-32",
+		"CBU-85",
+		"BL-778"
     ];

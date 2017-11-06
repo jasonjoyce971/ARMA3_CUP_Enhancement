@@ -27,7 +27,11 @@ _Smoke = 0; /* 1 is enable*/
 _Smoke_C = ""; /* 1 is enable*/
 _FAEB = 0; /* 1 is enable*/
 _APKWS = 0; /* 1 is enable */
+_tv_mssl = 0; /* 1 is enable*/
+_tv_bomb = 0; /* 1 is enable*/
 
+_tv_mssl = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_TV_Mssl_Guide");
+_tv_bomb = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_TV_Bomb_Guide");
 _Lowdrag = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_LowDrag");
 _gps_bomb = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_GPS_Bomb_Guide");
 _gps_mssl = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_GPS_Mssl_Guide");
@@ -43,6 +47,15 @@ _Smoke_C = getText (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_SMOKE_RKT_C
 _FAEB = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_FAEB");
 _APKWS = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_APKWS");
 
+if (_tv_bomb == 1) then
+{
+	_tv_guide = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\Guide_TV_Bomb.sqf";
+};
+
+if (_tv_mssl == 1) then
+{
+	_tv_guide = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\Guide_TV_MSSL.sqf";
+};
 if (_FAEB == 1) then
 {
 		_firecbu97 = [_missobj] execVM "\FIR_AirWeaponSystem_US\script\BLU118.sqf";

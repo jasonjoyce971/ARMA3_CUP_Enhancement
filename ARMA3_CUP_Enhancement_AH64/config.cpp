@@ -7353,7 +7353,9 @@ class CfgVehicles
 							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
 							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
 							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
-							"JAS_FIR_Hellfire_L_1rnd_PYLON_M"
+							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
+							"",
+							""
 						};
 					};
 					class KSS
@@ -7390,7 +7392,9 @@ class CfgVehicles
 							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
 							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
 							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
-							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M"
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"",
+							""
 						};
 					};
 					class CAS
@@ -7497,14 +7501,15 @@ class CfgVehicles
 							"JAS_AH64_WINGTIP",
 							"JAS_SIDEARM_PYLON"
 						};
-						UIposition[]={0.62,0.30000001};
+						//UIposition[]={0.62,0.30000001};
+						UIposition[]={0.58999997,0.30000001};
 						attachment="";
 					};
 					class pylonWingR: pylonWingL
 					{
 						mirroredMissilePos=5;
-						UIposition[]=
-						{"0.0.4",0.30000001};
+						//UIposition[]={"0.0.4",0.30000001};
+						UIposition[]={0.059999999,0.30000001};
 						attachment="";
 					};
 				};
@@ -7745,14 +7750,14 @@ class CfgVehicles
 						{
 							"JAS_WAH64_WINGTIP"
 						};
-						UIposition[]={0.62,0.30000001};
+						UIposition[]={0.58999997,0.30000001};
 						attachment="";
 					};
 					class pylonWingR: pylonWingL
 					{
 						mirroredMissilePos=5;
 						UIposition[]=
-						{"0.0.4",0.30000001};
+						{0.059999999,0.30000001};
 						attachment="";
 					};
 				};
