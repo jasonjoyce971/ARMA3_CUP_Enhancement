@@ -1,5 +1,69 @@
 # ARMA3_CUP_Enhancement
 
+V4.1.0 CUP Pylons and LOAC DLC Update:
+
+Changelog:
+
+A-10:
+
+* Implemented CUP Pylon System
+
+AH-1Z:
+
+* Implemented CUP Pylon System
+
+AH-64:
+
+* Removed - Loading Script requires complete rebuild for CUP Pylons
+
+AV-8b:
+
+* Implemented CUP Pylon System
+
+AW-159:
+
+* Implemented CUP Pylon System
+* Added Init Script to correctly animate winglets at mission start depending on weapon selection from editor
+
+F-35:
+
+* Implemented CUP Pylon System
+
+H-6:
+
+* Removed - Loading Script requires complete rebuild for CUP Pylons
+
+Jets:
+
+* Added BIS Cluster Bombs to relevant aircraft
+* Fixed incorrect bay animations on F/A-181 Wasp
+* Removed RAH-66 - Loading script requires complete rebuild
+
+Ka-50:
+
+* Added expanded Kh-25 Missile Family
+
+L-39:
+
+* Removed - Weapon systems require complete rebuild after removal of co-pilot turret
+
+MH-60:
+
+* Implemented CUP Pylon System
+
+Mi-24:
+
+* Tweaked nose wheel ground contact
+* Removed AT missile pod options for inboard weapon stations to match real loading options
+
+Su-25:
+
+* Added Expanded Kh-25 Missile Family
+
+Su-34:
+
+* Added Expanded Kh-25 Missile Family
+
 V4.0.0 Jets DLC Update:
 
 Changelog:
