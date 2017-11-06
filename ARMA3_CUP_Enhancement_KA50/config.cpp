@@ -5461,7 +5461,8 @@ class CfgVehicles
 					visionMode[] =
 					{
 						"Normal",
-						"NVG"
+						"NVG",
+						"Ti"
 					};
 					thermalMode[] = { 0, 1 };
 					//gunnerOpticsModel = "CUP\AirVehicles\CUP_AirVehicles_Ka50\optika_ka50_rocket.p3d";
@@ -5621,7 +5622,7 @@ class CfgVehicles
 				showWindow = 0;
 				hideOnUse = 1;
 			};
-			class FindRadarTGT
+			/*class FindRadarTGT
 			{
 				displayName = "Find Radar Target";
 				position = "pos cano";
@@ -5650,7 +5651,7 @@ class CfgVehicles
 				condition = "currentweapon this == ""JAS_KH25_LAU"";";
 				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\Search_RDRTGTChopper.sqf""; ";
 				onlyforplayer = "False";
-			};
+			};*/
 		};
 		class eventhandlers
 		{
@@ -5737,7 +5738,7 @@ class CfgVehicles
 				showWindow = 0;
 				hideOnUse = 1;
 			};
-			class FindRadarTGT
+			/*class FindRadarTGT
 			{
 				displayName = "Find Radar Target";
 				position = "pos cano";
@@ -5766,7 +5767,7 @@ class CfgVehicles
 				condition = "currentweapon this == ""JAS_KH25_LAU"";";
 				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\Search_RDRTGTChopper.sqf""; ";
 				onlyforplayer = "False";
-			};
+			};*/
 		};
 		class eventhandlers
 		{
@@ -5854,7 +5855,7 @@ class CfgVehicles
 				showWindow = 0;
 				hideOnUse = 1;
 			};
-			class FindRadarTGT
+			/*class FindRadarTGT
 			{
 				displayName = "Find Radar Target";
 				position = "pos cano";
@@ -5883,7 +5884,7 @@ class CfgVehicles
 				condition = "currentweapon this == ""JAS_KH25_LAU"";";
 				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\Search_RDRTGTChopper.sqf""; ";
 				onlyforplayer = "False";
-			};
+			};*/
 		};
 		class eventhandlers
 		{

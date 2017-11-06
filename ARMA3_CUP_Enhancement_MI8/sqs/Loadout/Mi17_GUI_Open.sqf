@@ -24,7 +24,9 @@ _handle= CreateDialog "MI17_GUI";
 		"Empty",
 		"S-8 Rockets",
 		"S-13 Rockets",
-		"GSh-23"
+		"GSh-23",
+		"FAB-250",
+		"RBK-250"
     ];
 	
 	//Add Hardpoint 2 - left outboard 
@@ -33,7 +35,9 @@ _handle= CreateDialog "MI17_GUI";
 		"Empty",
 		"S-8 Rockets",
 		"S-13 Rockets",
-		"GSh-23"
+		"GSh-23",
+		"FAB-250",
+		"RBK-250"
     ];
 	
 //Add Hardpoint 3 - right midline
@@ -42,7 +46,9 @@ _handle= CreateDialog "MI17_GUI";
 		"Empty",
 		"S-8 Rockets",
 		"S-13 Rockets",
-		"GSh-23"
+		"GSh-23",
+		"FAB-250",
+		"RBK-250"
     ];
 //Add Hardpoint 4 - left midline
 	{lbAdd[2102,_x]} forEach 
@@ -50,7 +56,9 @@ _handle= CreateDialog "MI17_GUI";
 		"Empty",
 		"S-8 Rockets",
 		"S-13 Rockets",
-		"GSh-23"
+		"GSh-23",
+		"FAB-250",
+		"RBK-250"
     ];
 //Add Hardpoint 5 - right inboard
 	{lbAdd[2103,_x]} forEach 
@@ -58,7 +66,9 @@ _handle= CreateDialog "MI17_GUI";
 		"Empty",
 		"S-8 Rockets",
 		"S-13 Rockets",
-		"GSh-23"
+		"GSh-23",
+		"FAB-250",
+		"RBK-250"
     ];
 //Add Hardpoint 6 - left inboard
 	{lbAdd[2104,_x]} forEach 
@@ -66,5 +76,7 @@ _handle= CreateDialog "MI17_GUI";
 		"Empty",
 		"S-8 Rockets",
 		"S-13 Rockets",
-		"GSh-23"
+		"GSh-23",
+		"FAB-250",
+		"RBK-250"
     ];

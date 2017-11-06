@@ -53,7 +53,7 @@ class CfgAddons
 		};
 	};
 };
-class CfgFunctions
+/*class CfgFunctions
 {
 	class JAS
 	{
@@ -69,7 +69,7 @@ class CfgFunctions
 			};
 		};
 	};
-};
+};*/
 
 class SensorTemplatePassiveRadar;
 class SensorTemplateAntiRadiation;
@@ -4461,7 +4461,8 @@ class CfgVehicles
 			{
 				source="user";
 				animPeriod=0;
-				initPhase=1;
+				//initPhase=1;
+				initPhase = 0;
 				displayName="Add Weapon Struts";
 			};
 			class mainRotor_folded
@@ -6310,6 +6311,58 @@ class CfgVehicles
 			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
 			{
 			};
+			class TransportPylonsComponent
+			{
+				UIPicture="\CUP\AirVehicles\CUP_AirVehicles_AW159\Data\UI\CUP_AW159_3DEN_CA.paa";
+				class presets
+				{
+					class Empty
+					{
+						displayName="Empty";
+						attachment[]={};
+					};
+					class AntiTank
+					{
+						displayName="Anti-Tank";
+						attachment[]=
+						{
+							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
+							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M"
+						};
+					};
+					class GroundSupport
+					{
+						displayName="Close Air Support";
+						attachment[]=
+						{
+							"CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M",
+							"CUP_PylonPod_12Rnd_CRV7_HE_M"
+						};
+					};
+				};
+				class pylons
+				{
+					class pylons1
+					{
+						hardpoints[]=
+						{
+							"JAS_AW159_PYLON"
+						};
+						attachment="CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M";
+						bay=-1;
+						priority=1;
+						UIposition[]={0.059999999,0.34999999};
+						turret[]={0};
+					};
+					class pylons2: pylons1
+					{
+						UIposition[]={0.58999997,0.34999999};
+						turret[]={0};
+						mirroredMissilePos=1;
+						attachment="CUP_PylonPod_12Rnd_CRV7_HE_M";
+					};
+				};
+			};
 		};
 		ace_refuel_fuelCapacity=1004;
 		LESH_canBeTowed=1;
@@ -6327,7 +6380,7 @@ class CfgVehicles
 		fir_lynxAAC_custom_code="JAS_CUP_B_AW159_Unarmed_GB";
 		fir_lynxAAC_custom_preview_pic="\ARMA3_CUP_Enhancement_AW159\UI\preview\WildcatBAF.paa";
 		editorPreview = "\ARMA3_CUP_Enhancement_AW159\UI\editorpreview\WildcatBAF.jpg";
-		displayname = "AW159J AAC Clean";
+		displayname = "AW159J AAC";
 		hiddenSelections[] =
 		{
 			"camo1",
@@ -6463,7 +6516,7 @@ class CfgVehicles
 				position = "pos cano";
 				radius = 15;
 				shortcut = "User6";
-				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1))";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Carrier_01_base_F""]) < 25) and (damage (nearestObject [this, ""Land_Carrier_01_base_F""]) < 1) and (speed this < 1))";
 				statement = "this execVM ""\ARMA3_CUP_Enhancement_AW159\sqs\loadout\AW159_GUI_Open.sqf""";
 				onlyforplayer = "false";
 				priority = 6;
@@ -6472,7 +6525,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			//Init = "[_this select 0,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
-			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf""; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
+			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_AW159\sqs\init\initPylons.sqf""; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf""; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
 			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
@@ -6482,7 +6535,7 @@ class CfgVehicles
 		author = "CUP/-{GOL}-Jason";
 		scope = 2;
 		scopeCurator = 2;
-		displayname = "AW159J RN Clean";
+		displayname = "AW159J RN";
 		fir_lynxAAC_custom_skin=1;
 		fir_lynxAAC_custom_name="Wildcat Royal Navy";
 		fir_lynxAAC_custom_code="JAS_CUP_B_Wildcat_Unarmed_RN_Grey";
@@ -6581,15 +6634,15 @@ class CfgVehicles
 					{
 						class AirTarget
 						{
-							minRange=1000;
-							maxRange=1000;
+							minRange=16000;
+							maxRange=16000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							minRange=10000;
-							maxRange=10000;
+							minRange=16000;
+							maxRange=16000;
 							objectDistanceLimitCoef=-1;
 							viewDistanceLimitCoef=-1;
 						};
@@ -6613,11 +6666,82 @@ class CfgVehicles
 					};
 				};
 			};
-			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
+			/*class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
 			{
 			};
 			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
 			{
+			};*/
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
 			};
 		};
 		class AnimationSources : AnimationSources
@@ -6728,7 +6852,7 @@ class CfgVehicles
 		author="$STR_CUP_AUTHOR_STRING";
 		scope=1;
 		scopeCurator=1;
-		displayname="AW159 RN Blackcat Wildcat (Unarmed)";
+		displayname="AW159 RN Blackcat";
 		fir_lynxAAC_custom_skin=1;
 		fir_lynxAAC_custom_name="Royal Navy Blackcats";
 		fir_lynxAAC_custom_code="JAS_CUP_B_Wildcat_Unarmed_RN_Blackcat";
@@ -6941,7 +7065,7 @@ class CfgVehicles
 		author = "CUP/-{GOL}-Jason";
 		scope = 2;
 		scopeCurator = 2;
-		displayname = "AW159J AAF Clean";
+		displayname = "AW159J AAF";
 		fir_lynxAAC_custom_skin=1;
 		fir_lynxAAC_custom_name="Wildcat Altis Armed Forces";
 		fir_lynxAAC_custom_code="JAS_CUP_B_Wildcat_Unarmed_Digital_AAF";
@@ -7093,7 +7217,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			//Init = "[_this select 0,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
-			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf""; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
+			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_AW159\sqs\init\initPylons.sqf""; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf""; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
 			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
@@ -7103,7 +7227,7 @@ class CfgVehicles
 		author="$STR_CUP_AUTHOR_STRING";
 		scope=1;
 		scopeCurator=1;
-		displayname="AW159 AAF Green Wildcat (Unarmed)";
+		displayname="AW159 AAF Green";
 		fir_lynxAAC_custom_skin=1;
 		fir_lynxAAC_custom_name="Wildcat Altis Armed Forces";
 		fir_lynxAAC_custom_code="JAS_CUP_B_Wildcat_Unarmed_Green_AAF";
@@ -7156,7 +7280,7 @@ class CfgVehicles
 		author = "CUP/-{GOL}-Jason";
 		scope = 2;
 		scopeCurator = 2;
-		displayname = "AW159J";
+		displayname = "AW159J AAC";
 		fir_lynxAAC_custom_skin=2;
 		fir_lynxAAC_custom_name="Wildcat British Army Air Corps";
 		fir_lynxAAC_custom_code="JAS_CUP_B_AW159_Unarmed_AAC";
@@ -7339,7 +7463,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			//Init = "[_this select 0,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
-			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf""; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
+			Init = "if (local (_this select 0)) then {[(_this select 0), """", [], false] call bis_fnc_initVehicle;}; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_AW159\sqs\init\initPylons.sqf""; [_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf""; [_this,JAS_CUP_B_AW159_Unarmed_AACX] call JAS_fnc_ROPE_INIT;AP_CUSTOM_RAPPEL_POINTS = [['JAS_CUP_B_AW159_Unarmed_AACX',[[1.15,1.0,1.25],[-1.15,1.0,1.25]]]];";
 			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
@@ -7349,7 +7473,7 @@ class CfgVehicles
 		author = "CUP/-{GOL}-Jason";
 		scope = 2;
 		scopeCurator = 2;
-		displayname = "AW159J RN Clean";
+		displayname = "AW159J RN";
 		fir_lynxAAC_custom_skin=2;
 		fir_lynxAAC_custom_name="Wildcat Royal Navy";
 		fir_lynxAAC_custom_code="JAS_CUP_B_Wildcat_Unarmed_RN_Grey";
@@ -7503,7 +7627,7 @@ class CfgVehicles
 		author = "CUP/-{GOL}-Jason";
 		scope = 2;
 		scopeCurator = 2;
-		displayname = "AW159J AAC Clean";
+		displayname = "AW159J AAC";
 		fir_lynxAAC_custom_skin=2;
 		fir_lynxAAC_custom_name="Wildcat British Army Air Corps";
 		fir_lynxAAC_custom_code="JAS_CUP_B_AW159_Unarmed_AAC";
@@ -7540,7 +7664,7 @@ class CfgVehicles
 			};
 		};
 	};
-	class JAS_AW159_Loadout_Module: Module_F
+	/*class JAS_AW159_Loadout_Module: Module_F
 	{
 		scope=2;
 		author = "-{GOL}-Jason";
@@ -7702,5 +7826,5 @@ class CfgVehicles
 				};
 			};
 		};
-	};
+	};*/
 };

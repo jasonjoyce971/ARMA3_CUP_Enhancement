@@ -48,7 +48,8 @@ _handle= CreateDialog "JAS_SHKIRA_GUI";
 		"Kh-25MS",
 		"Kh-25ML",
 		"R-73",
-		"R-77"
+		"R-77",
+		"RBK-500"
     ];
 //Add Hardpoint 4 - left outboard
 	{lbAdd[2102,_x]} forEach 
@@ -64,7 +65,8 @@ _handle= CreateDialog "JAS_SHKIRA_GUI";
 		"Kh-25MS",
 		"Kh-25ML",
 		"R-73",
-		"R-77"
+		"R-77",
+		"RBK-500"
     ];
 //Add Hardpoint 5 - right mid
 	{lbAdd[2103,_x]} forEach 
@@ -80,7 +82,8 @@ _handle= CreateDialog "JAS_SHKIRA_GUI";
 		"Kh-25MS",
 		"Kh-25ML",
 		"R-73",
-		"R-77"
+		"R-77",
+		"RBK-500"
     ];
 //Add Hardpoint 6 - left mid
 	{lbAdd[2104,_x]} forEach 
@@ -96,7 +99,8 @@ _handle= CreateDialog "JAS_SHKIRA_GUI";
 		"Kh-25MS",
 		"Kh-25ML",
 		"R-73",
-		"R-77"
+		"R-77",
+		"RBK-500"
     ];
 //Add Hardpoint 7 - right inboard
 	{lbAdd[2105,_x]} forEach 
@@ -143,7 +147,8 @@ _handle= CreateDialog "JAS_SHKIRA_GUI";
 		"Kh-25MS",
 		"Kh-25ML",
 		"R-73",
-		"R-77"
+		"R-77",
+		"RBK-500"
     ];
 	
 //Add Hardpoint 12 - left belly
@@ -160,7 +165,8 @@ _handle= CreateDialog "JAS_SHKIRA_GUI";
 		"Kh-25MS",
 		"Kh-25ML",
 		"R-73",
-		"R-77"
+		"R-77",
+		"RBK-500"
     ];
 	
 	//Add Hardpoint 13 - belly centre
@@ -177,5 +183,6 @@ _handle= CreateDialog "JAS_SHKIRA_GUI";
 		"Kh-25MS",
 		"Kh-25ML",
 		"R-73",
-		"R-77"
+		"R-77",
+		"RBK-500"
     ];

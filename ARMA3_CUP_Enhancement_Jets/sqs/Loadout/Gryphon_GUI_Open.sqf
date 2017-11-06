@@ -94,7 +94,11 @@ _handle= CreateDialog "JAS_GRYPHON_GUI";
 		"IRIS-T",
 		"Meteor",
 		"AIM-120C",
-		"AIM-120C x2"
+		"AIM-120C x2",
+		"CBU-85",
+		"CBU-85 x2",
+		"BL-778",
+		"BL-778 x2"
     ];
 //Add Hardpoint 6 - left inboard
 	{lbAdd[2104,_x]} forEach 
@@ -116,5 +120,9 @@ _handle= CreateDialog "JAS_GRYPHON_GUI";
 		"IRIS-T",
 		"Meteor",
 		"AIM-120C",
-		"AIM-120C x2"
+		"AIM-120C x2",
+		"CBU-85",
+		"CBU-85 x2",
+		"BL-778",
+		"BL-778 x2"
     ];

@@ -71,7 +71,23 @@ sleep 0.01;
 		};
 		case 8: // ARM
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "JAS_KH25MPU_1rnd_M";
+		};
+		case 9: // ARM
+		{
+			_plane addmagazine "JAS_KH25R_1rnd_M";
+		};
+		case 10: // ARM
+		{
+			_plane addmagazine "JAS_KH25MTP_1rnd_M";
+		};
+		case 11: // ARM
+		{
+			_plane addmagazine "JAS_KH25MT_1rnd_M";
+		};
+		case 12: // ARM
+		{
+			_plane addmagazine "JAS_KH25ML_1rnd_M";
 		};
 	};
 	
@@ -117,7 +133,23 @@ sleep 0.3;
 		};
 		case 8: // ARM
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "JAS_KH25MPU_1rnd_M";
+		};
+		case 9: // ARM
+		{
+			_plane addmagazine "JAS_KH25R_1rnd_M";
+		};
+		case 10: // ARM
+		{
+			_plane addmagazine "JAS_KH25MTP_1rnd_M";
+		};
+		case 11: // ARM
+		{
+			_plane addmagazine "JAS_KH25MT_1rnd_M";
+		};
+		case 12: // ARM
+		{
+			_plane addmagazine "JAS_KH25ML_1rnd_M";
 		};
 	};
 
@@ -163,7 +195,23 @@ sleep 0.3;
 		};
 		case 8: // ARM
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "JAS_KH25MPU_1rnd_M";
+		};
+		case 9: // ARM
+		{
+			_plane addmagazine "JAS_KH25R_1rnd_M";
+		};
+		case 10: // ARM
+		{
+			_plane addmagazine "JAS_KH25MTP_1rnd_M";
+		};
+		case 11: // ARM
+		{
+			_plane addmagazine "JAS_KH25MT_1rnd_M";
+		};
+		case 12: // ARM
+		{
+			_plane addmagazine "JAS_KH25ML_1rnd_M";
 		};
 	};
 	
@@ -209,7 +257,23 @@ sleep 0.3;
 		};
 		case 8: // ARM
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "JAS_KH25MPU_1rnd_M";
+		};
+		case 9: // ARM
+		{
+			_plane addmagazine "JAS_KH25R_1rnd_M";
+		};
+		case 10: // ARM
+		{
+			_plane addmagazine "JAS_KH25MTP_1rnd_M";
+		};
+		case 11: // ARM
+		{
+			_plane addmagazine "JAS_KH25MT_1rnd_M";
+		};
+		case 12: // ARM
+		{
+			_plane addmagazine "JAS_KH25ML_1rnd_M";
 		};
 	};
 	

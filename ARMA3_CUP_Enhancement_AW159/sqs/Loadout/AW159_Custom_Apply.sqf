@@ -38,54 +38,55 @@ _hardpoint10 = _array select 9;
 sleep 0.01;
 
 
-	Switch (_hardpoint1) Do
+	Switch (_hardpoint1) Do //Right Pylon
 	{
 		case -1:
 		{
 			_plane animateSource ["hide_radar", 0, true];
 			_plane animateSource ["hide_struts", 0, true];
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylons1", "", true, []];
 		};
 		case 0:
 		{
 			_plane animateSource ["hide_radar", 0, true];
 			_plane animateSource ["hide_struts", 0, true];
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylons1", "", true, []];
 		};		
 		case 1: // Gun Pod
 		{
 			_plane animateSource ["hide_radar", 1, true];
 			_plane animateSource ["hide_struts", 1, true];
-			_plane addweaponturret ["FIR_MasterArm",[-1]];
-			_plane addmagazine "CUP_1Rnd_M621_Pod_Heli_M";
+			_plane setPylonLoadOut ["pylons1", "JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M", true, []];
 		};
-		case 2: // CRV-7
+		case 2: // CRV-7 FAT
 		{
 			_plane animateSource ["hide_radar", 1, true];
 			_plane animateSource ["hide_struts", 1, true];
-			_plane addweaponturret ["FIR_MasterArm",[-1]];
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_12_M";
+			_plane setPylonLoadOut ["pylons1", "JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M", true, [0]];
 		};
-		case 3: // Hellfire K
+		case 3: // CRV-7 HE
 		{
 			_plane animateSource ["hide_radar", 1, true];
 			_plane animateSource ["hide_struts", 1, true];
-			_plane addweaponturret ["FIR_MasterArm",[0]];
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M";
+			_plane setPylonLoadOut ["pylons1", "JAS_CUP_PylonPod_19Rnd_CRV7_HE_M", true, [0]];
 		};
-		case 4: // Hellfire N
+		case 4: // CRV-7 KEP
 		{
 			_plane animateSource ["hide_radar", 1, true];
 			_plane animateSource ["hide_struts", 1, true];
-			_plane addweaponturret ["FIR_MasterArm",[0]];
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M";
+			_plane setPylonLoadOut ["pylons1", "JAS_CUP_PylonPod_19Rnd_CRV7_KEP_M", true, [0]];
 		};
-		case 5: // Hellfire Combi
+		case 5: // Hellfire K
 		{
 			_plane animateSource ["hide_radar", 1, true];
 			_plane animateSource ["hide_struts", 1, true];
-			_plane addweaponturret ["FIR_MasterArm",[0]];
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M";
+			_plane setPylonLoadOut ["pylons1", "JAS_FIR_Hellfire_K_1rnd_PYLON_M", true, [0]];
+		};
+		case 6: // Hellfire N
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons1", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, [0]];
 		};
 	};
 	
@@ -97,328 +98,49 @@ sleep 0.3;
 		{
 			_plane animateSource ["hide_radar", 0, true];
 			_plane animateSource ["hide_struts", 0, true];
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylons2", "", true, []];
 		};
 		case 0:
 		{
 			_plane animateSource ["hide_radar", 0, true];
 			_plane animateSource ["hide_struts", 0, true];
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["pylons2", "", true, []];
 		};		
 		case 1: // Gun Pod
 		{
 			_plane animateSource ["hide_radar", 1, true];
 			_plane animateSource ["hide_struts", 1, true];
-			_plane addweaponturret ["FIR_MasterArm",[-1]];
-			_plane addmagazine "CUP_1Rnd_M621_Pod_Heli_M";
+			_plane setPylonLoadOut ["pylons2", "JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M", true, []];
 		};
-		case 2: // CRV-7
+		case 2: // CRV-7 FAT
 		{
 			_plane animateSource ["hide_radar", 1, true];
 			_plane animateSource ["hide_struts", 1, true];
-			_plane addweaponturret ["FIR_MasterArm",[-1]];
-			_plane addmagazine "CUP_1Rnd_CRV7_Pod_12_M";
+			_plane setPylonLoadOut ["pylons2", "JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M", true, [0]];
 		};
-		case 3: // Hellfire K
+		case 3: // CRV-7 HE
 		{
 			_plane animateSource ["hide_radar", 1, true];
 			_plane animateSource ["hide_struts", 1, true];
-			_plane addweaponturret ["FIR_MasterArm",[0]];
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M";
+			_plane setPylonLoadOut ["pylons2", "JAS_CUP_PylonPod_19Rnd_CRV7_HE_M", true, [0]];
 		};
-		case 4: // Hellfire N
+		case 4: // CRV-7 KEP
 		{
 			_plane animateSource ["hide_radar", 1, true];
 			_plane animateSource ["hide_struts", 1, true];
-			_plane addweaponturret ["FIR_MasterArm",[0]];
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M";
+			_plane setPylonLoadOut ["pylons2", "JAS_CUP_PylonPod_19Rnd_CRV7_KEP_M", true, [0]];
 		};
-		case 5: // Hellfire Combi
+		case 5: // Hellfire K
 		{
 			_plane animateSource ["hide_radar", 1, true];
 			_plane animateSource ["hide_struts", 1, true];
-			_plane addweaponturret ["FIR_MasterArm",[0]];
-			_plane addmagazine "JAS_CUP_1Rnd_AGM_Rack_M";
+			_plane setPylonLoadOut ["pylons2", "JAS_FIR_Hellfire_K_1rnd_PYLON_M", true, [0]];
 		};
-	};
-	
-sleep 0.3;
-
-	// Proxies
-	Switch (_hardpoint1) Do
-	{
-		case -1:
+		case 6: // Hellfire N
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};		
-		case 1: // Gun Pod
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2: // CRV-7
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3: // Hellfire K
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-		case 4: // Hellfire N
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M";
-		};
-		case 5: // Hellfire Combi
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-	};
-	
-sleep 0.3;
-
-	// Proxies
-	Switch (_hardpoint2) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};		
-		case 1: // Gun Pod
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2: // CRV-7
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3: // Hellfire K
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-		case 4: // Hellfire N
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M";
-		};
-		case 5: // Hellfire Combi
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-	};
-
-	sleep 0.3;
-
-	// Proxies
-	Switch (_hardpoint1) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};		
-		case 1: // Gun Pod
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2: // CRV-7
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3: // Hellfire K
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-		case 4: // Hellfire N
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M";
-		};
-		case 5: // Hellfire Combi
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-	};
-	
-	sleep 0.3;
-
-	// Proxies
-	Switch (_hardpoint2) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};		
-		case 1: // Gun Pod
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2: // CRV-7
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3: // Hellfire K
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-		case 4: // Hellfire N
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M";
-		};
-		case 5: // Hellfire Combi
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-	};
-	
-	sleep 0.3;
-
-	// Proxies
-	Switch (_hardpoint1) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};		
-		case 1: // Gun Pod
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2: // CRV-7
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3: // Hellfire K
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-		case 4: // Hellfire N
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M";
-		};
-		case 5: // Hellfire Combi
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M";
-		};
-	};
-	
-	sleep 0.3;
-
-	// Proxies
-	Switch (_hardpoint2) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};		
-		case 1: // Gun Pod
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2: // CRV-7
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3: // Hellfire K
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-		case 4: // Hellfire N
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M";
-		};
-		case 5: // Hellfire Combi
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M";
-		};
-	};
-	
-	sleep 0.3;
-
-	// Proxies
-	Switch (_hardpoint1) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};		
-		case 1: // Gun Pod
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2: // CRV-7
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3: // Hellfire K
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-		case 4: // Hellfire N
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M";
-		};
-		case 5: // Hellfire Combi
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M";
-		};
-	};
-	
-	sleep 0.3;
-
-	// Proxies
-	Switch (_hardpoint2) Do
-	{
-		case -1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 0:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};		
-		case 1: // Gun Pod
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2: // CRV-7
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3: // Hellfire K
-		{
-			_plane addmagazine "JAS_AGM114K_1rnd_M";
-		};
-		case 4: // Hellfire N
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M";
-		};
-		case 5: // Hellfire Combi
-		{
-			_plane addmagazine "JAS_AGM114N_1rnd_M";
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons2", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, [0]];
 		};
 	};
 	

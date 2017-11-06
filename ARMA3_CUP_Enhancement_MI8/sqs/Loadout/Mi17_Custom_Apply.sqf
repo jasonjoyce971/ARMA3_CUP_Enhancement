@@ -60,6 +60,14 @@ sleep 0.01;
 		{
 			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
 		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
+		};
 	};
 	
 sleep 0.3;
@@ -85,6 +93,14 @@ sleep 0.3;
 		case 3:
 		{
 			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
+		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
 	};
 
@@ -112,6 +128,14 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
 		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
+		};
 	};
 	
 sleep 0.3;
@@ -137,6 +161,14 @@ sleep 0.3;
 		case 3:
 		{
 			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
+		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
 	};
 	
@@ -164,6 +196,14 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
 		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
+		};
 	};
 	
 	sleep 0.3;
@@ -189,6 +229,14 @@ sleep 0.3;
 		case 3:
 		{
 			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
+		};
+		case 4:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_FAB250_M";
+		};
+		case 5:
+		{
+			_plane addmagazine "JAS_FIR_CBU250_1rnd_M";
 		};
 	};
 	

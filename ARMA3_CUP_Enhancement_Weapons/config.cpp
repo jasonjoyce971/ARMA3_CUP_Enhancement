@@ -1941,6 +1941,261 @@ class cfgAmmo
 		};
 		FIR_AWS_HARM=1;
 	};
+	class JAS_FIR_KH25MTP : JAS_FIR_KH25
+	{
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent
+					{
+						aimDown = 0;
+						allowsMarking = 1;
+						angleRangeHorizontal = 30;
+						angleRangeVertical = 30;
+						animDirection = "";
+						color[] = {1,0,0,1};
+						componentType = "IRSensorComponent";
+						groundNoiseDistanceCoef = -1;
+						maxFogSeeThrough = 0.995;
+						maxGroundNoiseDistance = -1;
+						maxSpeedThreshold = 0;
+						maxTrackableATL = 1e+010;
+						maxTrackableSpeed = 55;
+						minSpeedThreshold = 0;
+						minTrackableATL = -1e+010;
+						minTrackableSpeed = -1e+010;
+						typeRecognitionDistance = 2000;
+						class AirTarget
+						{
+							maxRange = 13000;
+							minRange = 500;
+							objectDistanceLimitCoef = 1;
+							viewDistanceLimitCoef = 1;
+						};
+						class GroundTarget
+						{
+							maxRange = 13000;
+							minRange = 500;
+							objectDistanceLimitCoef = 1;
+							viewDistanceLimitCoef = 1;
+						};
+					};
+				};
+			};
+		};
+	};
+	class JAS_FIR_KH25MT : JAS_FIR_KH25
+	{
+		cameraViewAvailable = 1;
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class VisualSensorComponent
+					{
+						aimDown = 0;
+						allowsMarking = 1;
+						angleRangeHorizontal = 30;
+						angleRangeVertical = 30;
+						animDirection = "";
+						color[] = {1,0,0,1};
+						componentType = "VisualSensorComponent";
+						groundNoiseDistanceCoef = -1;
+						maxFogSeeThrough = 0.995;
+						maxGroundNoiseDistance = -1;
+						maxSpeedThreshold = 0;
+						maxTrackableATL = 1e+010;
+						maxTrackableSpeed = 55;
+						minSpeedThreshold = 0;
+						minTrackableATL = -1e+010;
+						minTrackableSpeed = -1e+010;
+						typeRecognitionDistance = 2000;
+						class AirTarget
+						{
+							maxRange = 6000;
+							minRange = 500;
+							objectDistanceLimitCoef = 1;
+							viewDistanceLimitCoef = 1;
+						};
+						class GroundTarget
+						{
+							maxRange = 6000;
+							minRange = 500;
+							objectDistanceLimitCoef = 1;
+							viewDistanceLimitCoef = 1;
+						};
+					};
+				};
+			};
+		};
+	};
+	class JAS_FIR_KH25ML : JAS_FIR_KH25
+	{
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class LaserSensorComponent
+					{
+						aimDown = 0;
+						allowsMarking = 1;
+						angleRangeHorizontal = 90;
+						angleRangeVertical = 70;
+						animDirection = "";
+						color[] = {1,1,1,0};
+						componentType = "LaserSensorComponent";
+						groundNoiseDistanceCoef = -1;
+						maxGroundNoiseDistance = -1;
+						maxSpeedThreshold = 0;
+						maxTrackableATL = 1e+010;
+						maxTrackableSpeed = 55;
+						minSpeedThreshold = 0;
+						minTrackableATL = -1e+010;
+						minTrackableSpeed = -1e+010;
+						typeRecognitionDistance = 8000;
+						class AirTarget
+						{
+							maxRange = 13000;
+							minRange = 13000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						class GroundTarget
+						{
+							maxRange = 13000;
+							minRange = 13000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+					};
+				};
+			};
+		};
+	};
+	class JAS_FIR_KH25MA : JAS_FIR_KH25
+	{
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class ActiveRadarSensorComponent 
+					{
+						aimDown = 0;
+						allowsMarking = 1;
+						angleRangeHorizontal = 90;
+						angleRangeVertical = 70;
+						animDirection = "";
+						color[] = {1,1,1,0};
+						componentType = "ActiveRadarSensorComponent ";
+						groundNoiseDistanceCoef = -1;
+						maxGroundNoiseDistance = -1;
+						maxSpeedThreshold = 0;
+						maxTrackableATL = 1e+010;
+						maxTrackableSpeed = 100;
+						minSpeedThreshold = 0;
+						minTrackableATL = -1e+010;
+						minTrackableSpeed = -1e+010;
+						typeRecognitionDistance = 8000;
+						class AirTarget
+						{
+							maxRange = 13000;
+							minRange = 13000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						class GroundTarget
+						{
+							maxRange = 13000;
+							minRange = 13000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+					};
+				};
+			};
+		};
+	};
+	class JAS_FIR_KH25MS : JAS_FIR_KH25
+	{
+		cameraViewAvailable = 1;
+		FIR_AWS_GPS_Mssl_Guide = 1;
+	};
+	class JAS_FIR_KH25R : JAS_FIR_KH25
+	{
+		manualControl = 1;
+		maxControlRange = 6000;
+	};
+	class JAS_FIR_KH25MPU : JAS_FIR_KH25
+	{
+		JAS_AWS_SIDEARM=1;
+		FIR_AWS_HARM = 1;
+		airLock = 0;
+		autoSeekTarget = 1;
+		lockSeekRadius = 100;
+		lockAcquire = 1;
+		cameraViewAvailable = 1;
+		lockType = 0;
+		maneuvrability = 20;
+		missileKeepLockedCone = 120;
+		missileLockCone = 120;
+		missileLockMaxDistance = 13000;
+		missileLockMinDistance = 1;
+		missileLockMaxSpeed = 80;
+		trackLead = 1;
+		weaponLockSystem = 0;
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class PassiveRadarSensorComponent : SensorTemplatePassiveRadar// Original = PassiveRadarSensorComponent
+					{
+						aimDown = 0;
+						allowsMarking = 1;
+						angleRangeHorizontal = 120;
+						angleRangeVertical = 120;
+						animDirection = "";
+						color[] = {1,0,0,1};
+						componentType = "PassiveRadarSensorComponent";
+						groundNoiseDistanceCoef = -1;
+						maxFogSeeThrough = 1;
+						maxGroundNoiseDistance = -1;
+						maxSpeedThreshold = 100;
+						maxTrackableATL = 1e+010;
+						maxTrackableSpeed = 23;
+						minSpeedThreshold = 0;
+						minTrackableATL = -1e+010;
+						minTrackableSpeed = -1e+010;
+						typeRecognitionDistance = 12000;
+						class AirTarget
+						{
+							maxRange = 0;
+							minRange = 0;
+							objectDistanceLimitCoef = 1;
+							viewDistanceLimitCoef = 1;
+						};
+						class GroundTarget
+						{
+							maxRange = 13000;
+							minRange = 100;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+					};
+				};
+			};
+		};
+	};
 	class JAS_CUP_GSH23_gunpod_Dummy : Bo_GBU12_LGB
 	{
 		hit = 0;
@@ -2167,41 +2422,30 @@ class cfgAmmo
 			{
 				class Components
 				{
-					class ActiveRadarSensorComponent 
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
 					{
-						aimDown = 0;
-						allowsMarking = 1;
-						angleRangeHorizontal = 160;
-						angleRangeVertical = 160;
-						animDirection = "";
-						color[] = {1,0,0,1};
-						componentType = "ActiveRadarSensorComponent ";
-						groundNoiseDistanceCoef = -1;
-						maxFogSeeThrough = 1;
-						maxGroundNoiseDistance = 0;
-						maxSpeedThreshold = 120;
-						maxTrackableATL = 1e+010;
-						maxTrackableSpeed = 23;
-						minSpeedThreshold = 27;
-						minTrackableATL = -1e+010;
-						minTrackableSpeed = -1e+010;
-						typeRecognitionDistance = 5000;
 						class AirTarget
 						{
-							maxRange = 0;
-							minRange = 0;
-							objectDistanceLimitCoef = 1;
-							viewDistanceLimitCoef = 1;
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
 						};
 						class GroundTarget
 						{
-							maxRange = 13000;
-							minRange = 50;
-							objectDistanceLimitCoef = -1;
-							viewDistanceLimitCoef = -1;
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
 						};
+						maxFogSeeThrough=1;
+						maxGroundNoiseDistance=2;
+						groundNoiseDistanceCoef=0.1;
+						angleRangeHorizontal=30;
+						angleRangeVertical=30;
+						maxTrackableSpeed=350;
 					};
-					class LaserSensorComponent
+					class LaserSensorComponent: SensorTemplateLaser
 					{
 						aimDown = 0;
 						allowsMarking = 1;
@@ -2497,6 +2741,51 @@ class cfgAmmo
 		};
 	};
 	class JAS_FIR_Hydra_APKWS_Ammo: FIR_Hydra_APKWS_Ammo
+	{
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class LaserSensorComponent
+					{
+						aimDown = 0;
+						allowsMarking = 1;
+						angleRangeHorizontal = 120;
+						angleRangeVertical = 120;
+						animDirection = "";
+						color[] = {1,1,1,0};
+						componentType = "LaserSensorComponent";
+						groundNoiseDistanceCoef = -1;
+						maxGroundNoiseDistance = -1;
+						maxSpeedThreshold = 0;
+						maxTrackableATL = 1e+010;
+						maxTrackableSpeed = 55;
+						minSpeedThreshold = 0;
+						minTrackableATL = -1e+010;
+						minTrackableSpeed = -1e+010;
+						typeRecognitionDistance = 8000;
+						class AirTarget
+						{
+							maxRange = 8000;
+							minRange = 8000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						class GroundTarget
+						{
+							maxRange = 8000;
+							minRange = 8000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+					};
+				};
+			};
+		};
+	};
+	class JAS_FIR_Hydra_APKWS_PYLON_Ammo: JAS_FIR_Hydra_APKWS_Ammo
 	{
 		class Components
 		{
@@ -3504,8 +3793,8 @@ class cfgAmmo
 	};
 	class JAS_BIS_KH25MPU : Missile_AGM_01_F
 	{
-		JAS_AWS_SIDEARM=1;
-		FIR_AWS_HARM = 1;
+		//JAS_AWS_SIDEARM=1;
+		//FIR_AWS_HARM = 1;
 		airLock = 0;
 		autoSeekTarget = 1;
 		lockSeekRadius = 100;
@@ -4935,6 +5224,76 @@ class cfgMagazines
 		ammo="JAS_FIR_KH25";
 		initSpeed=0;
 	};
+	class JAS_KH25MTP_1rnd_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="Kh-25MTP";
+		displayNameShort="IR";
+		count=1;
+		nameSound="missiles";
+		ammo="JAS_FIR_KH25MTP";
+		initSpeed=0;
+	};
+	class JAS_KH25MT_1rnd_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="Kh-25MT";
+		displayNameShort="DTV";
+		count=1;
+		nameSound="missiles";
+		ammo="JAS_FIR_KH25MT";
+		initSpeed=0;
+	};
+	class JAS_KH25ML_1rnd_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="Kh-25ML";
+		displayNameShort="Laser";
+		count=1;
+		nameSound="missiles";
+		ammo="JAS_FIR_KH25ML";
+		initSpeed=0;
+	};
+	class JAS_KH25MA_1rnd_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="Kh-25MA";
+		displayNameShort="Active Radar";
+		count=1;
+		nameSound="missiles";
+		ammo="JAS_FIR_KH25MA";
+		initSpeed=0;
+	};
+	class JAS_KH25MS_1rnd_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="Kh-25MS";
+		displayNameShort="GPS/INS";
+		count=1;
+		nameSound="missiles";
+		ammo="JAS_FIR_KH25MS";
+		initSpeed=0;
+	};
+	class JAS_KH25R_1rnd_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="Kh-25R";
+		displayNameShort="Radio";
+		count=1;
+		nameSound="missiles";
+		ammo="JAS_FIR_KH25R";
+		initSpeed=0;
+	};
+	class JAS_KH25MPU_1rnd_M: VehicleMagazine
+	{
+		scope=2;
+		displayName="Kh-25MPU";
+		displayNameShort="Anti-Radiation";
+		count=1;
+		nameSound="missiles";
+		ammo="JAS_FIR_KH25MPU";
+		initSpeed=0;
+	};
 	class JAS_CUP_1Rnd_S8_Pod_Air_M: VehicleMagazine
 	{
 		scope=2;
@@ -5413,6 +5772,82 @@ class cfgMagazines
 	class FIR_AGM65G_P_1rnd_M;
 	class FIR_AIM9L_P_1rnd_M;
 	class CUP_PylonPod_19Rnd_Rocket_FFAR_M;
+	class CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M;
+	class CUP_PylonPod_1200Rnd_TE1_Red_Tracer_GAU19L_M;
+	class CUP_PylonPod_1200Rnd_TE1_Red_Tracer_GAU19R_M;
+	class PylonMissile_1Rnd_BombCluster_01_F;
+	class PylonMissile_1Rnd_BombCluster_02_F;
+	class PylonMissile_1Rnd_BombCluster_03_F;
+	class PylonRack_2Rnd_BombCluster_01_F;
+	class PylonRack_2Rnd_BombCluster_03_F;
+	class JAS_PylonMissile_1Rnd_BombCluster_01_F : PylonMissile_1Rnd_BombCluster_01_F
+	{
+		hardpoints[]=
+		{
+			"JAS_BIS_CBU85_PYLON"
+		};
+		pylonWeapon = "JAS_BombCluster_01_F";
+	};
+	class JAS_PylonMissile_1Rnd_BombCluster_02_F : PylonMissile_1Rnd_BombCluster_02_F
+	{
+		hardpoints[]=
+		{
+			"JAS_BIS_RBK500_PYLON"
+		};
+		pylonWeapon = "JAS_BombCluster_02_F";
+	};
+	class JAS_PylonMissile_1Rnd_BombCluster_03_F : PylonMissile_1Rnd_BombCluster_03_F
+	{
+		hardpoints[]=
+		{
+			"JAS_BIS_BL778_PYLON"
+		};
+		pylonWeapon = "JAS_BombCluster_03_F";
+	};
+	class JAS_PylonRack_2Rnd_BombCluster_01_F : PylonRack_2Rnd_BombCluster_01_F
+	{
+		hardpoints[]=
+		{
+			"JAS_BIS_CBU85DUAL_PYLON"
+		};
+		pylonWeapon = "JAS_BombCluster_01_F";
+	};
+	class JAS_PylonRack_2Rnd_BombCluster_03_F : PylonRack_2Rnd_BombCluster_03_F
+	{
+		hardpoints[]=
+		{
+			"JAS_BIS_BL778DUAL_PYLON"
+		};
+		pylonWeapon = "JAS_BombCluster_03_F";
+	};
+	class JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_GAU19L_M: CUP_PylonPod_1200Rnd_TE1_Red_Tracer_GAU19L_M
+	{
+		displayName="GAU-19/A";
+		model="\CUP\Weapons\CUP_Weapons_DynamicLoadout\GAU19A\CUP_Gau19_Left.p3d";
+		hardpoints[]=
+		{
+			"JAS_AH6_PYLON_L"
+		};
+		pylonWeapon="JAS_CUP_Vhmg_GAU10_L_veh";
+	};
+	class JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_GAU19R_M: CUP_PylonPod_1200Rnd_TE1_Red_Tracer_GAU19R_M
+	{
+		displayName="GAU-19/A";
+		model="\CUP\Weapons\CUP_Weapons_DynamicLoadout\GAU19A\CUP_Gau19_Right.p3d";
+		hardpoints[]=
+		{
+			"JAS_AH6_PYLON_R"
+		};
+		pylonWeapon="JAS_CUP_Vhmg_GAU10_R_veh";
+	};
+	class JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M: CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M
+	{
+		hardpoints[]=
+		{
+			"JAS_AW159_PYLON"
+		};
+		pylonWeapon="JAS_CUP_Vacannon_M621_AW159_veh";
+	};
 	class JAS_FIR_AGM65G_P_1rnd_M : FIR_AGM65G_P_1rnd_M
 	{
 		hardpoints[] = 
@@ -5439,7 +5874,15 @@ class cfgMagazines
 	};
 	class JAS_FIR_Hydra_P_7rnd_M : FIR_Hydra_P_7rnd_M
 	{
-		hardpoints[] = { "JAS_A10_210", "JAS_A10_39", "JAS_A10_48","JAS_AH1Z_PYLON","JAS_AH64_PYLON"};
+		hardpoints[] = 
+		{ 
+			"JAS_A10_210",
+			"JAS_A10_39",
+			"JAS_A10_48",
+			"JAS_AH1Z_PYLON",
+			"JAS_AH64_PYLON",
+			"JAS_AH6_PYLON"
+		};
 		pylonWeapon="JAS_HYDRA_Launcher";			
 	};
 	class JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M: CUP_PylonPod_19Rnd_Rocket_FFAR_M
@@ -5447,37 +5890,70 @@ class cfgMagazines
 		hardpoints[]=
 		{
 			"JAS_AH1Z_PYLON",
-			"JAS_AH64_PYLON"
+			"JAS_AH64_PYLON",
+			"JAS_AH6_PYLON"
 		};
 		pylonWeapon="JAS_HYDRA_Launcher";
 	};
 	class JAS_FIR_Hydra_P_7rnd_M_White : FIR_Hydra_P_7rnd_M
 	{
-		displayName = "Hydra 70mm RKT SMK";
+		displayName = "Hydra Smoke White";
 		displayNameShort = "RKT SMK W";
 		ammo = "JAS_FIR_Hydra_Rocket_Smoke_Ammo";
-		pylonWeapon = "JAS_HYDRA_SMKW_Launcher";			
+		pylonWeapon = "JAS_HYDRA_SMKW_Launcher";	
+		hardpoints[] = 
+		{
+			"JAS_NATO_BOMB",
+			"JAS_A10_39",
+			"JAS_A10_48",
+			"JAS_A10_57",
+			"JAS_A10_6"
+		};		
 	};
 	class JAS_FIR_Hydra_P_7rnd_M_Red : FIR_Hydra_P_7rnd_M
 	{
-		displayName = "Hydra 70mm RKT SMK";
+		displayName = "Hydra Smoke Red";
 		displayNameShort = "RKT SMK R";
 		ammo = "JAS_FIR_Hydra_Rocket_Smoke_Red_Ammo";
-		pylonWeapon = "JAS_HYDRA_SMKR_Launcher";			
+		pylonWeapon = "JAS_HYDRA_SMKR_Launcher";
+		hardpoints[] = 
+		{
+			"JAS_NATO_BOMB",
+			"JAS_A10_39",
+			"JAS_A10_48",
+			"JAS_A10_57",
+			"JAS_A10_6"
+		};			
 	};
 	class JAS_FIR_Hydra_P_7rnd_M_Orange : FIR_Hydra_P_7rnd_M
 	{
-		displayName = "Hydra 70mm RKT SMK";
+		displayName = "Hydra Smoke Orange";
 		displayNameShort = "RKT SMK O";
 		ammo = "JAS_FIR_Hydra_Rocket_Smoke_Orange_Ammo";
-		pylonWeapon = "JAS_HYDRA_SMKO_Launcher";			
+		pylonWeapon = "JAS_HYDRA_SMKO_Launcher";	
+		hardpoints[] = 
+		{
+			"JAS_NATO_BOMB",
+			"JAS_A10_39",
+			"JAS_A10_48",
+			"JAS_A10_57",
+			"JAS_A10_6"
+		};		
 	};
 	class JAS_FIR_Hydra_P_7rnd_MPurple : FIR_Hydra_P_7rnd_M
 	{
-		displayName = "Hydra 70mm RKT SMK";
+		displayName = "Hydra Smoke Purple";
 		displayNameShort = "RKT SMK P";
 		ammo = "JAS_FIR_Hydra_Rocket_Smoke_Purple_Ammo";
-		pylonWeapon = "JAS_HYDRA_SMKP_Launcher";			
+		pylonWeapon = "JAS_HYDRA_SMKP_Launcher";	
+		hardpoints[] = 
+		{
+			"JAS_NATO_BOMB",
+			"JAS_A10_39",
+			"JAS_A10_48",
+			"JAS_A10_57",
+			"JAS_A10_6"
+		};		
 	};
 	class JAS_FIR_Hydra_P_21rnd_M : FIR_Hydra_P_21rnd_M
 	{
@@ -5487,7 +5963,7 @@ class cfgMagazines
 	class JAS_FIR_APKWS_P_21rnd_M : FIR_Hydra_P_21rnd_M
 	{
 		ammo = "JAS_FIR_Hydra_APKWS_PYLON_Ammo";
-		displayName = "70mm APKWS";
+		displayName = "70mm APKWS x21";
 		hardpoints[] = { "JAS_A10_210", "JAS_A10_39", "JAS_A10_48"};	
 	};
 	class JAS_FIR_Litening_std_P_1rnd_M : FIR_Litening_std_P_1rnd_M
@@ -5509,7 +5985,8 @@ class cfgMagazines
 			"JAS_A10_210",
 			"JAS_A10_39",
 			"JAS_A10_48",
-			"JAS_AH64_PYLON"
+			"JAS_AH64_PYLON",
+			"JAS_AW159_PYLON"
 		};
 		pylonWeapon="JAS_CUP_Vmlauncher_CRV7_FAT_Pylon";
 	};
@@ -5617,7 +6094,7 @@ class cfgMagazines
 	class JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M : JAS_FIR_Hydra_APKWS_Pod_1rnd_M
 	{
 		ammo = "JAS_FIR_Hydra_APKWS_PYLON_Ammo";
-		displayName = "70mm APKWS";
+		displayName = "70mm APKWS x7";
 		count = 7;
         pylonWeapon = "JAS_FIR_APKWS_Pylon_Launcher";
 		model="\fir_airweaponSystem_US\data\rocket\Hydra_7_Pod.p3d";
@@ -5628,7 +6105,8 @@ class cfgMagazines
 			"JAS_A10_39",
 			"JAS_A10_48",
 			"JAS_AH1Z_PYLON",
-			"JAS_AH64_PYLON"
+			"JAS_AH64_PYLON",
+			"JAS_AH6_PYLON"
 		};
 		mass=15;
 	};
@@ -5654,6 +6132,16 @@ class cfgMagazines
 		};
 		mass=49;
 	};
+	class JAS_CUP_PylonPod_2Rnd_AGM114L_Hellfire_II_M: JAS_FIR_Hellfire_L_1rnd_PYLON_M
+	{
+		displayName="2x AGM-114L";
+		model="\CUP\Weapons\CUP_Weapons_DynamicLoadout\AGM114\CUP_AGM114_dual.p3d";
+		count=2;
+		hardpoints[]=
+		{
+			"JAS_HELLFIREL_PYLON"
+		};
+	};
 	class JAS_FIR_Hellfire_N_1rnd_PYLON_M : JAS_AGM114N_1rnd_M
 	{
 		count = 4;
@@ -5661,9 +6149,19 @@ class cfgMagazines
 		model="\CUP\Weapons\CUP_Weapons_DynamicLoadout\AGM114\CUP_AGM114_quad.p3d";
 		hardpoints[]=
 		{
-			"JAS_HELLFIREK_PYLON","JAS_HELLFIREL_PYLON","JAS_AH1Z_PYLON","JAS_AH64_PYLON"
+			"JAS_HELLFIREK_PYLON","JAS_HELLFIREL_PYLON","JAS_AH1Z_PYLON","JAS_AH64_PYLON","JAS_AW159_PYLON"
 		};
 		mass=48;
+	};
+	class JAS_CUP_PylonPod_2Rnd_AGM114N_Hellfire_II_M: JAS_FIR_Hellfire_N_1rnd_PYLON_M
+	{
+		displayName="2x AGM-114N";
+		model="\CUP\Weapons\CUP_Weapons_DynamicLoadout\AGM114\CUP_AGM114_dual.p3d";
+		count=2;
+		hardpoints[]=
+		{
+			"JAS_AH6_PYLON","JAS_HELLFIREL_PYLON"
+		};
 	};
 	class JAS_FIR_Hellfire_K_1rnd_PYLON_M : JAS_AGM114K_1rnd_M
 	{
@@ -5672,9 +6170,19 @@ class cfgMagazines
 		model="\CUP\Weapons\CUP_Weapons_DynamicLoadout\AGM114\CUP_AGM114_quad.p3d";
 		hardpoints[]=
 		{
-			"JAS_HELLFIREK_PYLON","JAS_HELLFIREL_PYLON","JAS_AH1Z_PYLON","JAS_AH64_PYLON"
+			"JAS_HELLFIREK_PYLON","JAS_HELLFIREL_PYLON","JAS_AH1Z_PYLON","JAS_AH64_PYLON","JAS_AW159_PYLON"
 		};
 		mass=48;
+	};
+	class JAS_CUP_PylonPod_2Rnd_AGM114K_Hellfire_II_M: JAS_FIR_Hellfire_K_1rnd_PYLON_M
+	{
+		displayName="2x AGM-114K";
+		model="\CUP\Weapons\CUP_Weapons_DynamicLoadout\AGM114\CUP_AGM114_dual.p3d";
+		count=2;
+		hardpoints[]=
+		{
+			"JAS_AH6_PYLON"
+		};
 	};
 	class JAS_FIR_AIM132_1rnd_PYLON_M : PylonMissile_1Rnd_AAA_missiles
 	{
@@ -6127,7 +6635,7 @@ class cfgMagazines
 		descriptionShort = "GBU-38 JDAM";
 		displayName = "GBU-38";
 		displayNameShort = "GBU-38 JDAM";
-		hardpoints[] = {"JAS_NATO_JDAM","JAS_NATO_NAVY_STRIKE","JAS_NATO_NAVY_BOMB","JAS_A10_39","JAS_A10_48","JAS_A10_57"};
+		hardpoints[] = {"JAS_NATO_JDAM","JAS_NATO_NAVY_STRIKE","JAS_NATO_NAVY_BOMB","JAS_NATO_NAVY_BOMB_INT","JAS_A10_39","JAS_A10_48","JAS_A10_57"};
 		initSpeed = 0;
 		mass = 230;
 		pylonWeapon = "JAS_FIR_GBU38_Pylon";
@@ -6805,6 +7313,14 @@ class cfgWeapons
 	class CannonCore;
 	class FIR_AIM120;
 	class rockets_Skyfire;
+	class CUP_Vacannon_M621_AW159_veh;
+	class JAS_CUP_Vacannon_M621_AW159_veh: CUP_Vacannon_M621_AW159_veh
+	{
+		magazines[]=
+		{
+			"JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M"
+		};
+	};
 	/*class JAS_Master_Arm : RocketPods
 	{
 		CanLock = 0;
@@ -10203,7 +10719,14 @@ class cfgWeapons
 		displayname = "Kh-25 Missiles";
 		magazines[] =
 		{
-			"JAS_KH25_1rnd_M"
+			"JAS_KH25_1rnd_M",
+			"JAS_KH25MPU_1rnd_M",
+			"JAS_KH25R_1rnd_M",
+			"JAS_KH25MS_1rnd_M",
+			"JAS_KH25MA_1rnd_M",
+			"JAS_KH25ML_1rnd_M",
+			"JAS_KH25MT_1rnd_M",
+			"JAS_KH25MTP_1rnd_M"
 		};
 	};
 	class JAS_CUP_Vmlauncher_Kh29L_veh : Missiles_Scalpel
@@ -11261,6 +11784,31 @@ class cfgWeapons
 	class FIR_Meteor;
 	class FIR_PAVEWAY_IV;
 	class Twin_Cannon_20mm;
+	class CUP_Vhmg_GAU10_L_veh;
+	class CUP_Vhmg_GAU10_R_veh;
+	class BombCluster_01_F;
+	class BombCluster_02_F;
+	class BombCluster_03_F;
+	class JAS_BombCluster_01_F : BombCluster_01_F
+	{
+		magazines[] = {"JAS_PylonMissile_1Rnd_BombCluster_01_F","JAS_PylonRack_2Rnd_BombCluster_01_F"};
+	};
+	class JAS_BombCluster_02_F : BombCluster_02_F
+	{
+		magazines[] = {"JAS_PylonMissile_1Rnd_BombCluster_02_F"};
+	};
+	class JAS_BombCluster_03_F : BombCluster_03_F
+	{
+		magazines[] = {"JAS_PylonMissile_1Rnd_BombCluster_03_F","JAS_PylonRack_2Rnd_BombCluster_03_F"};
+	};
+	class JAS_CUP_Vhmg_GAU10_L_veh : CUP_Vhmg_GAU10_L_veh
+	{
+		magazines[] = {"JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_GAU19L_M"};
+	};
+	class JAS_CUP_Vhmg_GAU10_R_veh : CUP_Vhmg_GAU10_R_veh
+	{
+		magazines[] = {"JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_GAU19R_M"};
+	};
 	class JAS_Twin_Cannon_20mm : Twin_Cannon_20mm
 	{
 		ballisticsComputer = 8;

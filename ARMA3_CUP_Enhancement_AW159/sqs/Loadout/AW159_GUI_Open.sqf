@@ -22,18 +22,20 @@ _handle= CreateDialog "AW159_GUI";
 	[  
 		"Empty",
 		"M-621 Cannon",
-		"CRV-7",
+		"CRV-7 FAT",
+		"CRV-7 HE",
+		"CRV-7 KEP",
 		"AGM-114K",
-		"AGM-114N",
-		"AGM-114 Combi"
+		"AGM-114N"
     ];
 	//Add Hardpoint 2 - left outboard 
 	{lbAdd[2201,_x]} forEach 
 	[  
 		"Empty",
 		"M-621 Cannon",
-		"CRV-7",
+		"CRV-7 FAT",
+		"CRV-7 HE",
+		"CRV-7 KEP",
 		"AGM-114K",
-		"AGM-114N",
-		"AGM-114 Combi"
+		"AGM-114N"
     ];

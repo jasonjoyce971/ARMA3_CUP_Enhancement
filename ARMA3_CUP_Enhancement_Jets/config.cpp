@@ -20,8 +20,8 @@ class CfgPatches
 	{
 		units[]=
 		{
-			"JAS_B_RAH66_DYNO_F",
-			"JAS_B_RAH66_DYNO_AAC",
+			//"JAS_B_RAH66_DYNO_F",
+			//"JAS_B_RAH66_DYNO_AAC",
 			"JAS_FIR_A164J_DYNO",
 			"JAS_FIR_A164J_DYNO_AAC",
 			"JAS_Plane_Fighter_01_Base_F_DYNO",
@@ -5097,7 +5097,7 @@ class CfgVehicles
 	//////////////////////////////////////////////////////////////////
 	// Actual vehicles here
 	//////////////////////////////////////////////////////////////////
-	class JAS_B_RAH66_DYNO_F: B_Heli_Attack_01_dynamicLoadout_F // Commanche
+	/*class JAS_B_RAH66_DYNO_F: B_Heli_Attack_01_dynamicLoadout_F // Commanche
 	{
 		author="-{GOL}-Jason";
 		displayname="RAH-66J Commanche";
@@ -5132,7 +5132,7 @@ class CfgVehicles
 					"1000Rnd_20mm_shells",
 					"Laserbatteries"
 				};
-				/*class MFD
+				class MFD
 				{
 					class MFD_Pilot_10
 					{
@@ -10528,7 +10528,7 @@ class CfgVehicles
 							};
 						};
 					};
-				};*/
+				};
 			};
 		};
 		class Components: Components
@@ -10631,12 +10631,12 @@ class CfgVehicles
 						displayName="CAS";
 						attachment[]=
 						{
-							"JAS_FIR_Hellfire_N_1rnd_PYLON_M",
-							"JAS_FIR_Hellfire_N_1rnd_PYLON_M",
+							"JAS_CUP_PylonPod_2Rnd_AGM114N_Hellfire_II_M",
+							"JAS_CUP_PylonPod_2Rnd_AGM114N_Hellfire_II_M",
 							"PylonRack_12Rnd_missiles",
 							"PylonRack_12Rnd_missiles",
-							"JAS_FIR_Hellfire_N_1rnd_PYLON_M",
-							"JAS_FIR_Hellfire_N_1rnd_PYLON_M"
+							"JAS_CUP_PylonPod_2Rnd_AGM114N_Hellfire_II_M",
+							"JAS_CUP_PylonPod_2Rnd_AGM114N_Hellfire_II_M"
 						};
 					};
 					class AT
@@ -10644,12 +10644,12 @@ class CfgVehicles
 						displayName="AT";
 						attachment[]=
 						{
-							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
-							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
+							"JAS_CUP_PylonPod_2Rnd_AGM114L_Hellfire_II_M",
+							"JAS_CUP_PylonPod_2Rnd_AGM114L_Hellfire_II_M",
 							"PylonRack_12Rnd_PG_missiles",
 							"PylonRack_12Rnd_PG_missiles",
-							"JAS_FIR_Hellfire_L_1rnd_PYLON_M",
-							"JAS_FIR_Hellfire_L_1rnd_PYLON_M"
+							"JAS_CUP_PylonPod_2Rnd_AGM114L_Hellfire_II_M",
+							"JAS_CUP_PylonPod_2Rnd_AGM114L_Hellfire_II_M"
 						};
 					};
 					class ESCORT
@@ -10693,7 +10693,7 @@ class CfgVehicles
 	{
 		faction="GOL_AAC_BLUFOR";
 		editorSubcategory="GOL_AAC_ZEUS";
-	};
+	};*/
 	class JAS_FIR_A164J_DYNO: B_Plane_CAS_01_DynamicLoadout_F // Wipeout
 	{
 		scope=2;
@@ -24066,7 +24066,7 @@ class CfgVehicles
 						priority=3;
 						hardpoints[]=
 						{
-							"DAR","DAGR","JAS_NATO_BOMB","JAS_NATO_JDAM"
+							"DAR","DAGR","JAS_NATO_BOMB","JAS_NATO_JDAM","JAS_BIS_CBU85_PYLON","JAS_BIS_BL778_PYLON"
 						};
 						attachment="";
 						maxweight=1050;
@@ -24076,7 +24076,7 @@ class CfgVehicles
 					{
 						hardpoints[]=
 						{
-							"DAR","DAGR","JAS_NATO_BOMB","JAS_NATO_JDAM"
+							"DAR","DAGR","JAS_NATO_BOMB","JAS_NATO_JDAM","JAS_BIS_CBU85_PYLON","JAS_BIS_BL778_PYLON"
 						};
 						priority=2;
 						attachment="";
@@ -24087,7 +24087,7 @@ class CfgVehicles
 					{
 						hardpoints[]=
 						{
-							"DAR","DAGR","JAS_NATO_BOMB","JAS_NATO_JDAM"
+							"DAR","DAGR","JAS_NATO_BOMB","JAS_NATO_JDAM","JAS_BIS_CBU85_PYLON","JAS_BIS_BL778_PYLON"
 						};
 						priority=1;
 						attachment="";
@@ -24305,7 +24305,9 @@ class CfgVehicles
 						hardpoints[] = 
 						{
 							"JAS_NATO_AAM",
-							"JAS_NATO_NAVY_STRIKE"
+							"JAS_NATO_NAVY_STRIKE",
+							"JAS_BIS_CBU85_PYLON",
+							"JAS_BIS_BL778_PYLON"
 						};
 						maxweight = 300;
 						priority = 12;
@@ -24317,7 +24319,9 @@ class CfgVehicles
 						hardpoints[] = 
 						{
 							"JAS_NATO_AAM",
-							"JAS_NATO_NAVY_STRIKE"
+							"JAS_NATO_NAVY_STRIKE",
+							"JAS_BIS_CBU85_PYLON",
+							"JAS_BIS_BL778_PYLON"
 						};
 						maxweight = 300;
 						priority = 11;
@@ -24331,7 +24335,11 @@ class CfgVehicles
 						{
 							"JAS_NATO_AAM",
 							"JAS_NATO_NAVY_STRIKE",
-							"JAS_JDAM_PYLON"
+							"JAS_JDAM_PYLON",
+							"JAS_BIS_CBU85_PYLON",
+							"JAS_BIS_CBU85DUAL_PYLON",
+							"JAS_BIS_BL778_PYLON",
+							"JAS_BIS_BL778DUAL_PYLON"
 						};
 						maxweight = 1050;
 						priority = 10;
@@ -24344,7 +24352,13 @@ class CfgVehicles
 						{
 							"JAS_NATO_AAM",
 							"JAS_NATO_NAVY_STRIKE",
-							"JAS_JDAM_PYLON"
+							"JAS_JDAM_PYLON",
+							"JAS_BIS_CBU85_PYLON",
+							"JAS_BIS_BL778_PYLON",
+							"JAS_BIS_CBU85_PYLON",
+							"JAS_BIS_CBU85DUAL_PYLON",
+							"JAS_BIS_BL778_PYLON",
+							"JAS_BIS_BL778DUAL_PYLON"
 						};
 						maxweight = 1050;
 						priority = 9;
@@ -24354,7 +24368,7 @@ class CfgVehicles
 					class pylonBayCenter1: pylon4
 					{
 						attachment = "";
-						bay = 3;
+						bay = 1;
 						hardpoints[] = {"JAS_NATO_AAM_INT"};
 						maxweight = 1200;
 						priority = 6;
@@ -24363,7 +24377,7 @@ class CfgVehicles
 					class pylonBayCenter2: pylon3
 					{
 						attachment = "";
-						bay = 3;
+						bay = 2;
 						hardpoints[] = {"JAS_NATO_AAM_INT"};
 						maxweight = 1200;
 						priority = 5;
@@ -24373,7 +24387,7 @@ class CfgVehicles
 					{
 						attachment = "";
 						bay = 3;
-						hardpoints[] = {"JAS_NATO_AAM_INT","JAS_NATO_NAVY_BOMB"};
+						hardpoints[] = {"JAS_NATO_AAM_INT","JAS_NATO_NAVY_BOMB_INT","JAS_BIS_CBU85_PYLON","JAS_BIS_BL778_PYLON"};
 						maxweight = 1200;
 						priority = 4;
 						UIposition[] = {0.33,0.4};
@@ -24382,7 +24396,7 @@ class CfgVehicles
 					{
 						attachment = "";
 						bay = 3;
-						hardpoints[] = {"JAS_NATO_AAM_INT","JAS_NATO_NAVY_BOMB"};
+						hardpoints[] = {"JAS_NATO_AAM_INT","JAS_NATO_NAVY_BOMB_INT","JAS_BIS_CBU85_PYLON","JAS_BIS_BL778_PYLON"};
 						maxweight = 1200;
 						priority = 3;
 						UIposition[] = {0.33,0.45};
@@ -24391,7 +24405,7 @@ class CfgVehicles
 					{
 						attachment = "";
 						bay = 3;
-						hardpoints[] = {"JAS_NATO_AAM_INT","JAS_NATO_NAVY_BOMB"};
+						hardpoints[] = {"JAS_NATO_AAM_INT","JAS_NATO_NAVY_BOMB_INT","JAS_BIS_CBU85_PYLON","JAS_BIS_BL778_PYLON"};
 						maxweight = 1200;
 						priority = 2;
 						UIposition[] = {0.33,0.5};
@@ -24400,7 +24414,7 @@ class CfgVehicles
 					{
 						attachment = "";
 						bay = 3;
-						hardpoints[] = {"JAS_NATO_AAM_INT","JAS_NATO_NAVY_BOMB"};
+						hardpoints[] = {"JAS_NATO_AAM_INT","JAS_NATO_NAVY_BOMB_INT","JAS_BIS_CBU85_PYLON","JAS_BIS_BL778_PYLON"};
 						maxweight = 1200;
 						priority = 1;
 						UIposition[] = {0.33,0.55};
@@ -24408,7 +24422,7 @@ class CfgVehicles
 					class pylonBayRight1 : pylon1
 					{
 						attachment = "";
-						bay = 1; // Original == 2
+						bay = 3; // Original == 2
 						hardpoints[] = {"JAS_NATO_AAM_INT"};
 						maxweight = 1200;
 						priority = 8;
@@ -24417,7 +24431,7 @@ class CfgVehicles
 					class pylonBayLeft1 : pylonBayRight1
 					{
 						attachment = "";
-						bay = 2;
+						bay = 3;
 						hardpoints[] = {"JAS_NATO_AAM_INT"};
 						maxweight = 1200;
 						priority = 7;
@@ -24755,7 +24769,7 @@ class CfgVehicles
 					{
 						attachment = "";
 						bay = 3;
-						hardpoints[] = {"JAS_NATO_AAM_INTBAY","JAS_NATO_NAVY_BOMB_INT"};
+						hardpoints[] = {"JAS_NATO_AAM_INTBAY","JAS_NATO_NAVY_BOMB_INT","JAS_BIS_CBU85_PYLON","JAS_BIS_BL778_PYLON"};
 						maxweight = 500;
 						priority = 9;
 						UIposition[] = {0.33,0.3};
@@ -24764,7 +24778,7 @@ class CfgVehicles
 					{
 						attachment = "";
 						bay = 3;
-						hardpoints[] = {"JAS_NATO_AAM_INTBAY","JAS_NATO_NAVY_BOMB_INT"};
+						hardpoints[] = {"JAS_NATO_AAM_INTBAY","JAS_NATO_NAVY_BOMB_INT","JAS_BIS_CBU85_PYLON","JAS_BIS_BL778_PYLON"};
 						maxweight = 500;
 						priority = 9;
 						mirroredMissilePos = 7;
@@ -24793,7 +24807,7 @@ class CfgVehicles
 					{
 						attachment = "";
 						bay = 3;
-						hardpoints[] = {"JAS_NATO_AAM_INTBAY","JAS_NATO_NAVY_BOMB_INT"};
+						hardpoints[] = {"JAS_NATO_AAM_INTBAY","JAS_NATO_NAVY_BOMB_INT","JAS_BIS_CBU85_PYLON","JAS_BIS_BL778_PYLON"};
 						maxweight = 500;
 						priority = 5;
 						UIposition[] = {0.33,0.5};
@@ -24802,7 +24816,7 @@ class CfgVehicles
 					{
 						attachment = "";
 						bay = 3;
-						hardpoints[] = {"JAS_NATO_AAM_INTBAY","JAS_NATO_NAVY_BOMB_INT"};
+						hardpoints[] = {"JAS_NATO_AAM_INTBAY","JAS_NATO_NAVY_BOMB_INT","JAS_BIS_CBU85_PYLON","JAS_BIS_BL778_PYLON"};
 						maxweight = 500;
 						priority = 5;
 						mirroredMissilePos = 11;
@@ -25009,6 +25023,90 @@ class CfgVehicles
 		};
 		class Components: Components
 		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="pilotCameraRotY";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="pilotCameraRotY";
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=100000;
+							maxRange=100000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						maxTrackableSpeed=1725;
+						angleRangeHorizontal=160;
+						angleRangeVertical=160;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						aimDown=0;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
 			class TransportPylonsComponent
 			{
 				UIPicture = "\A3\Air_F_Jets\Plane_Fighter_02\Data\UI\Fighter_02_3DEN_ca.paa";
@@ -25065,7 +25163,7 @@ class CfgVehicles
 					};
 					class pylons3
 					{
-						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB"};
+						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB","JAS_BIS_RBK500_PYLON"};
 						attachment = "";
 						priority = 11;
 						maxweight = 1050;
@@ -25073,7 +25171,7 @@ class CfgVehicles
 					};
 					class pylons4
 					{
-						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB"};
+						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB","JAS_BIS_RBK500_PYLON"};
 						attachment = "";
 						priority = 10;
 						maxweight = 1050;
@@ -25081,7 +25179,7 @@ class CfgVehicles
 					};
 					class pylons5
 					{
-						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB"};
+						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB","JAS_BIS_RBK500_PYLON"};
 						attachment = "";
 						priority = 9;
 						maxweight = 1200;
@@ -25089,7 +25187,7 @@ class CfgVehicles
 					};
 					class pylons6
 					{
-						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB"};
+						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB","JAS_BIS_RBK500_PYLON"};
 						attachment = "";
 						priority = 8;
 						maxweight = 1200;
@@ -25133,7 +25231,7 @@ class CfgVehicles
 					};
 					class pylonBayCenter1
 					{
-						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB"};
+						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB","JAS_BIS_RBK500_PYLON"};
 						priority = 3;
 						attachment = "";
 						maxweight = 750;
@@ -25142,7 +25240,7 @@ class CfgVehicles
 					};
 					class pylonBayCenter2
 					{
-						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB"};
+						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB","JAS_BIS_RBK500_PYLON"};
 						priority = 2;
 						attachment = "";
 						maxweight = 750;
@@ -25151,7 +25249,7 @@ class CfgVehicles
 					};
 					class pylonBayCenter3
 					{
-						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB"};
+						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB","JAS_BIS_RBK500_PYLON"};
 						priority = 1;
 						attachment = "";
 						maxweight = 1200;
@@ -25386,6 +25484,90 @@ class CfgVehicles
 		};
 		class Components: Components
 		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="pilotCameraRotY";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="pilotCameraRotY";
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=100000;
+							maxRange=100000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						maxTrackableSpeed=1725;
+						angleRangeHorizontal=160;
+						angleRangeVertical=160;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						aimDown=0;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
 			class TransportPylonsComponent
 			{
 				UIPicture = "\A3\Air_F_Jets\Plane_Fighter_02\Data\UI\Fighter_02_3DEN_ca.paa";
@@ -25510,7 +25692,7 @@ class CfgVehicles
 					};
 					class pylonBayCenter3
 					{
-						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB"};
+						hardpoints[] = {"JAS_RUS_AAM","JAS_RUS_KH25","JAS_RUS_BOMB","JAS_BIS_RBK500_PYLON"};
 						priority = 1;
 						attachment = "JAS_FIR_KAB500L_x1";
 						maxweight = 1200;
@@ -25741,14 +25923,13 @@ class CfgVehicles
 		magazines[] = 
 		{
 			//"JAS_Master_Arm",
-			"FIR_MasterArm",
 			"magazine_Fighter04_Gun20mm_AA_x250",
 			"Laserbatteries",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 		weapons[] = 
 		{
-			//"FakeMagazine",
+			"FIR_MasterArm",
 			"weapon_Fighter_Gun20mm_AA",
 			"Laserdesignator_pilotCamera",
 			"FIR_CMLauncher"
@@ -25796,7 +25977,7 @@ class CfgVehicles
 					};
 					class pylon5
 					{
-						hardpoints[] = {"JAS_INDEP_AAM","JAS_INDEP_AGM","JAS_INDEP_BOMB"};
+						hardpoints[] = {"JAS_INDEP_AAM","JAS_INDEP_AGM","JAS_INDEP_BOMB","JAS_BIS_CBU85_PYLON","JAS_BIS_CBU85DUAL_PYLON","JAS_BIS_BL778_PYLON","JAS_BIS_BL778DUAL_PYLON"};
 						priority = 3;
 						attachment = "";
 						maxweight = 1200;
@@ -25806,7 +25987,7 @@ class CfgVehicles
 					{
 						UIposition[] = {0.2,0.3};
 						mirroredMissilePos = 5;
-						hardpoints[] = {"JAS_INDEP_AAM","JAS_INDEP_AGM","JAS_INDEP_BOMB"};
+						hardpoints[] = {"JAS_INDEP_AAM","JAS_INDEP_AGM","JAS_INDEP_BOMB","JAS_BIS_CBU85_PYLON","JAS_BIS_CBU85DUAL_PYLON","JAS_BIS_BL778_PYLON","JAS_BIS_BL778DUAL_PYLON"};
 						priority = 3;
 						attachment = "";
 						maxweight = 1200;
@@ -26055,7 +26236,7 @@ class CfgVehicles
 					class pylons5: pylons1
 					{
 						attachment = "";
-						hardpoints[] = {"JAS_YAK_AAM"};
+						hardpoints[] = {"JAS_YAK_AAM","JAS_BIS_RBK500_PYLON"};
 						maxweight = 1200;
 						priority = 1;
 						UIposition[] = {0.33,0.25};
@@ -26063,7 +26244,7 @@ class CfgVehicles
 					class pylons6: pylons5
 					{
 						attachment = "";
-						hardpoints[] = {"JAS_YAK_AAM"};
+						hardpoints[] = {"JAS_YAK_AAM","JAS_BIS_RBK500_PYLON"};
 						maxweight = 1200;
 						mirroredMissilePos = 5;
 						priority = 1;
@@ -26072,7 +26253,7 @@ class CfgVehicles
 					class pylons7: pylons4
 					{
 						attachment = "";
-						hardpoints[] = {"JAS_YAK_AAM"};
+						hardpoints[] = {"JAS_YAK_AAM","JAS_BIS_RBK500_PYLON"};
 						maxweight = 1200;
 						mirroredMissilePos = 4;
 						priority = 2;
@@ -26081,7 +26262,7 @@ class CfgVehicles
 					class pylons8: pylons3
 					{
 						attachment = "";
-						hardpoints[] = {"JAS_YAK_AAM"};
+						hardpoints[] = {"JAS_YAK_AAM","JAS_BIS_RBK500_PYLON"};
 						maxweight = 1050;
 						mirroredMissilePos = 3;
 						priority = 3;
@@ -26090,7 +26271,7 @@ class CfgVehicles
 					class pylons9: pylons2
 					{
 						attachment = "";
-						hardpoints[] = {"JAS_YAK_AAM"};
+						hardpoints[] = {"JAS_YAK_AAM","JAS_BIS_RBK500_PYLON"};
 						maxweight = 500;
 						mirroredMissilePos = 2;
 						priority = 4;
@@ -26099,7 +26280,7 @@ class CfgVehicles
 					class pylons10: pylons1
 					{
 						attachment = "";
-						hardpoints[] = {"JAS_YAK_AAM"};
+						hardpoints[] = {"JAS_YAK_AAM","JAS_BIS_RBK500_PYLON"};
 						maxweight = 150;
 						mirroredMissilePos = 1;
 						priority = 5;
@@ -26306,7 +26487,7 @@ class CfgVehicles
 					{
 						hardpoints[]=
 						{
-							"JAS_ALCA_GPOD","DAGR","JAS_ALCA_AGM","JAS_CRV7"
+							"JAS_ALCA_GPOD","DAGR","JAS_ALCA_AGM","JAS_CRV7","JAS_BIS_RBK500_PYLON"
 						};
 						priority=3;
 						attachment="";
@@ -26321,7 +26502,7 @@ class CfgVehicles
 						UIposition[]={0.30000001,0.2};
 						hardpoints[]=
 						{
-							"JAS_ALCA_GPOD","JAS_ALCA_AGM"
+							"JAS_ALCA_GPOD","JAS_ALCA_AGM","JAS_BIS_RBK500_PYLON"
 						};
 					};
 					class Pylons5: Pylons3
@@ -26831,7 +27012,8 @@ class CfgVehicles
 							"O_BOMB_PYLON",
 							"UNI_SCALPEL",
 							"JAS_RUS_KH25",
-							"JAS_RUS_BOMB"
+							"JAS_RUS_BOMB",
+							"JAS_BIS_RBK500_PYLON"
 						};
 						turret[]={0};
 						UIposition[]={0.34999999,0.16};
@@ -26846,7 +27028,8 @@ class CfgVehicles
 							"O_BOMB_PYLON",
 							"UNI_SCALPEL",
 							"JAS_RUS_KH25",
-							"JAS_RUS_BOMB"
+							"JAS_RUS_BOMB",
+							"JAS_BIS_RBK500_PYLON"
 						};
 						UIposition[]={0.33000001,0.20999999};
 					};
@@ -27023,7 +27206,8 @@ class CfgVehicles
 							"O_BOMB_PYLON",
 							"UNI_SCALPEL",
 							"JAS_RUS_KH25",
-							"JAS_RUS_BOMB"
+							"JAS_RUS_BOMB",
+							"JAS_BIS_RBK500_PYLON"
 						};
 						turret[]={0};
 						UIposition[]={0.34999999,0.16};
@@ -27038,7 +27222,8 @@ class CfgVehicles
 							"O_BOMB_PYLON",
 							"UNI_SCALPEL",
 							"JAS_RUS_KH25",
-							"JAS_RUS_BOMB"
+							"JAS_RUS_BOMB",
+							"JAS_BIS_RBK500_PYLON"
 						};
 						UIposition[]={0.33000001,0.20999999};
 					};

@@ -2868,6 +2868,7 @@ class CfgVehicles
 	class JAS_MH60L_DAP: CUP_MH60L_Dap_4x_Base
 	{
 		author="-{GOL}-Jason";
+		displayName="MH-60L Blackhawk";
 		scope=2;
 		side=1;
 		faction="CUP_B_US_Army";
@@ -2991,7 +2992,7 @@ class CfgVehicles
 			class Hide_ESSS4x: Hide_ESSS2x
 			{
 				DisplayName="Hide ESSS4x";
-				initPhase=0;
+				initPhase=1;
 			};
 			class Hide_FlirTurret
 			{
@@ -4092,13 +4093,14 @@ class CfgVehicles
 				DisplayName="Hide ESSS2x";
 				source="user";
 				animPeriod=0;
+				//initPhase=1;
 				initPhase=1;
 				author="CUP_AUTHOR_STRING";
 			};
 			class Hide_ESSS4x: Hide_ESSS2x
 			{
 				DisplayName="Hide ESSS4x";
-				initPhase=0;
+				initPhase=1;
 			};
 			class Hide_FlirTurret
 			{

@@ -947,7 +947,7 @@ class CfgVehicles
 				initTurn=0;
 				gunnerAction="CUP_L39_pilot_EP1";
 				gunnerInAction="CUP_L39_pilot_EP1";
-				gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UGV_01_Optics_Gunner_F.p3d";
+				//gunnerOpticsModel="A3\drones_f\Weapons_F_Gamma\Reticle\UGV_01_Optics_Gunner_F.p3d";
 				gunnerForceOptics=0;
 				enableManualFire=1;
 				LODTurnedIn=1000;

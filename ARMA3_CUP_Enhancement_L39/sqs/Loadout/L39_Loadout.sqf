@@ -34,6 +34,11 @@ _plane removeMagazinesTurret ["JAS_CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M
 _plane removeMagazinesTurret ["1Rnd_Missile_AA_03_F",[0]];
 _plane removeMagazinesTurret ["JAS_CUP_1Rnd_KAB250_M",[0]];
 _plane removeMagazinesTurret ["JAS_KH25_1rnd_M",[0]];
+_plane removeMagazinesTurret ["JAS_KH25MPU_1rnd_M",[0]];
+_plane removeMagazinesTurret ["JAS_KH25R_1rnd_M",[0]];
+_plane removeMagazinesTurret ["JAS_KH25MTP_1rnd_M",[0]];
+_plane removeMagazinesTurret ["JAS_KH25MT_1rnd_M",[0]];
+_plane removeMagazinesTurret ["JAS_KH25ML_1rnd_M",[0]];
 
 //aircraft mags (safety net)
 _plane removeMagazines "1Rnd_Missile_AA_03_F";
@@ -45,6 +50,11 @@ _plane removeMagazines "JAS_CUP_1Rnd_KAB250_M";
 _plane removeMagazines "JAS_FIR_CBU250_1rnd_M";
 _plane removeMagazines "JAS_CUP_150Rnd_TE2_Green_Tracer_GSh23_23mm_APHE_M"; // ONBOARD MAG
 _plane removeMagazines "JAS_KH25_1rnd_M";
+_plane removeMagazines "JAS_KH25MPU_1rnd_M";
+_plane removeMagazines "JAS_KH25R_1rnd_M";
+_plane removeMagazines "JAS_KH25MTP_1rnd_M";
+_plane removeMagazines "JAS_KH25MT_1rnd_M";
+_plane removeMagazines "JAS_KH25ML_1rnd_M";
 
 //pilot weapons
 _plane removeweaponTurret ["JAS_CUP_Vacannon_GSh23L_in_veh",[-1]];
@@ -133,7 +143,23 @@ if (_preset == -1 or _preset == 0) then
 		};
 		case 8: // ARM
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "JAS_KH25MPU_1rnd_M";
+		};
+		case 9: // ARM
+		{
+			_plane addmagazine "JAS_KH25R_1rnd_M";
+		};
+		case 10: // ARM
+		{
+			_plane addmagazine "JAS_KH25MTP_1rnd_M";
+		};
+		case 11: // ARM
+		{
+			_plane addmagazine "JAS_KH25MT_1rnd_M";
+		};
+		case 12: // ARM
+		{
+			_plane addmagazine "JAS_KH25ML_1rnd_M";
 		};
 	};
 	
@@ -179,7 +205,23 @@ sleep 0.3;
 		};
 		case 8: // ARM
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "JAS_KH25MPU_1rnd_M";
+		};
+		case 9: // ARM
+		{
+			_plane addmagazine "JAS_KH25R_1rnd_M";
+		};
+		case 10: // ARM
+		{
+			_plane addmagazine "JAS_KH25MTP_1rnd_M";
+		};
+		case 11: // ARM
+		{
+			_plane addmagazine "JAS_KH25MT_1rnd_M";
+		};
+		case 12: // ARM
+		{
+			_plane addmagazine "JAS_KH25ML_1rnd_M";
 		};
 	};
 
@@ -225,7 +267,23 @@ sleep 0.3;
 		};
 		case 8: // ARM
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "JAS_KH25MPU_1rnd_M";
+		};
+		case 9: // ARM
+		{
+			_plane addmagazine "JAS_KH25R_1rnd_M";
+		};
+		case 10: // ARM
+		{
+			_plane addmagazine "JAS_KH25MTP_1rnd_M";
+		};
+		case 11: // ARM
+		{
+			_plane addmagazine "JAS_KH25MT_1rnd_M";
+		};
+		case 12: // ARM
+		{
+			_plane addmagazine "JAS_KH25ML_1rnd_M";
 		};
 	};
 	
@@ -271,7 +329,23 @@ sleep 0.3;
 		};
 		case 8: // ARM
 		{
-			_plane addmagazine "JAS_KH25_1rnd_M";
+			_plane addmagazine "JAS_KH25MPU_1rnd_M";
+		};
+		case 9: // ARM
+		{
+			_plane addmagazine "JAS_KH25R_1rnd_M";
+		};
+		case 10: // ARM
+		{
+			_plane addmagazine "JAS_KH25MTP_1rnd_M";
+		};
+		case 11: // ARM
+		{
+			_plane addmagazine "JAS_KH25MT_1rnd_M";
+		};
+		case 12: // ARM
+		{
+			_plane addmagazine "JAS_KH25ML_1rnd_M";
 		};
 	};
 
@@ -340,11 +414,24 @@ _S8count = {_x == "JAS_CUP_1Rnd_S8_Pod_Air_M"} count magazines _plane;
 _FABcount = {_x == "JAS_CUP_1Rnd_FAB250_M"} count magazines _plane;
 _KABcount = {_x == "JAS_CUP_1Rnd_KAB250_M"} count magazines _plane;
 _RBKcount = {_x == "JAS_FIR_CBU250_1rnd_M"} count magazines _plane;
-_ARMcount = {_x == "JAS_KH25_1rnd_M"} count magazines _plane;
+_KH25MPUcount = {_x == "JAS_KH25MPU_1rnd_M"} count magazines _plane;
+_KH25Rcount = {_x == "JAS_KH25R_1rnd_M"} count magazines _plane;
+_KH25MScount = {_x == "JAS_KH25MS_1rnd_M"} count magazines _plane;
+_KH25MAcount = {_x == "JAS_KH25MA_1rnd_M"} count magazines _plane;
+_KH25MLcount = {_x == "JAS_KH25ML_1rnd_M"} count magazines _plane;
+_KH25MTcount = {_x == "JAS_KH25MT_1rnd_M"} count magazines _plane;
+_KH25MTPcount = {_x == "JAS_KH25MTP_1rnd_M"} count magazines _plane;
+
+if (_KH25MPUcount >= 1 || 
+	_KH25Rcount >= 1 ||
+	_KH25MScount >= 1 ||
+	_KH25MAcount >= 1 ||
+	_KH25MLcount >= 1 ||
+	_KH25MTcount >= 1 ||
+	_KH25MTPcount >= 1) then {_plane addweapon "JAS_KH25_LAU";};
 
 if (_R73count >= 1) then {_plane addweaponturret ["JAS_R73_Launcher",[0]];};
 if (_KABcount >= 1) then {_plane addweaponturret ["JAS_CUP_Vblauncher_KAB250_veh",[0]];};
-if (_ARMcount >= 1) then {_plane addweaponturret ["JAS_KH25_LAU",[0]];}; 
 
 if (_RBKcount >= 1) then 
 {

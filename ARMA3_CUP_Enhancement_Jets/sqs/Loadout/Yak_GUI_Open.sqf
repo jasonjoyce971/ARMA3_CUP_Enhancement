@@ -87,7 +87,8 @@ _handle= CreateDialog "JAS_YAK_GUI";
 		"Kh-25MT",
 		"Kh-25MS",
 		"Kh-25ML",
-		"R-73"
+		"R-73",
+		"RBK-500"
     ];
 //Add Hardpoint 6 - left inboard
 	{lbAdd[2104,_x]} forEach 
@@ -106,7 +107,8 @@ _handle= CreateDialog "JAS_YAK_GUI";
 		"Kh-25MT",
 		"Kh-25MS",
 		"Kh-25ML",
-		"R-73"
+		"R-73",
+		"RBK-500"
     ];
 //Add Hardpoint 7 - right wingpit
 	{lbAdd[2105,_x]} forEach 
@@ -125,7 +127,8 @@ _handle= CreateDialog "JAS_YAK_GUI";
 		"Kh-25MT",
 		"Kh-25MS",
 		"Kh-25ML",
-		"R-73"
+		"R-73",
+		"RBK-500"
     ];
 //Add Hardpoint 8 - left wingpit
 	{lbAdd[2106,_x]} forEach 
@@ -144,7 +147,8 @@ _handle= CreateDialog "JAS_YAK_GUI";
 		"Kh-25MT",
 		"Kh-25MS",
 		"Kh-25ML",
-		"R-73"
+		"R-73",
+		"RBK-500"
     ];
 	//Add Rocket Selection 1
 	{lbAdd[2117,_x]} forEach 
@@ -163,7 +167,8 @@ _handle= CreateDialog "JAS_YAK_GUI";
 		"Kh-25MT",
 		"Kh-25MS",
 		"Kh-25ML",
-		"R-73"
+		"R-73",
+		"RBK-500"
     ];
 	//Add Rocket Selection 2
 	{lbAdd[2118,_x]} forEach 
@@ -182,6 +187,7 @@ _handle= CreateDialog "JAS_YAK_GUI";
 		"Kh-25MT",
 		"Kh-25MS",
 		"Kh-25ML",
-		"R-73"
+		"R-73",
+		"RBK-500"
     ];
 	

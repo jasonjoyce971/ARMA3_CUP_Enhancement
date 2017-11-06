@@ -44,6 +44,7 @@ _handle= CreateDialog "AH64_GUI";
 		"CRV-7 HE x19",
 		"CRV-7 KEP x19",
 		"APKWS x7",
+		"AGM-114K x4",
 		"AGM-114L x4",
 		"AGM-114N x4"
     ];
@@ -57,6 +58,7 @@ _handle= CreateDialog "AH64_GUI";
 		"CRV-7 HE x19",
 		"CRV-7 KEP x19",
 		"APKWS x7",
+		"AGM-114K x4",
 		"AGM-114L x4",
 		"AGM-114N x4"
     ];
@@ -70,6 +72,7 @@ _handle= CreateDialog "AH64_GUI";
 		"CRV-7 HE x19",
 		"CRV-7 KEP x19",
 		"APKWS x7",
+		"AGM-114K x4",
 		"AGM-114L x4",
 		"AGM-114N x4"
     ];
@@ -83,6 +86,7 @@ _handle= CreateDialog "AH64_GUI";
 		"CRV-7 HE x19",
 		"CRV-7 KEP x19",
 		"APKWS x7",
+		"AGM-114K x4",
 		"AGM-114L x4",
 		"AGM-114N x4"
     ];

@@ -39,7 +39,8 @@ _handle= CreateDialog "JAS_Y32_GUI";
 		"Kh-25MTP",
 		"Kh-25MT",
 		"Kh-25MS",
-		"Kh-25ML"
+		"Kh-25ML",
+		"RBK-500"
     ];
 	
 	//Add Hardpoint 2 - left outboard 
@@ -63,7 +64,8 @@ _handle= CreateDialog "JAS_Y32_GUI";
 		"Kh-25MTP",
 		"Kh-25MT",
 		"Kh-25MS",
-		"Kh-25ML"
+		"Kh-25ML",
+		"RBK-500"
     ];
 	
 //Add Hardpoint 3 - right midline
@@ -87,7 +89,8 @@ _handle= CreateDialog "JAS_Y32_GUI";
 		"Kh-25MTP",
 		"Kh-25MT",
 		"Kh-25MS",
-		"Kh-25ML"
+		"Kh-25ML",
+		"RBK-500"
     ];
 //Add Hardpoint 4 - left midline
 	{lbAdd[2102,_x]} forEach 
@@ -110,5 +113,6 @@ _handle= CreateDialog "JAS_Y32_GUI";
 		"Kh-25MTP",
 		"Kh-25MT",
 		"Kh-25MS",
-		"Kh-25ML"
+		"Kh-25ML",
+		"RBK-500"
     ];

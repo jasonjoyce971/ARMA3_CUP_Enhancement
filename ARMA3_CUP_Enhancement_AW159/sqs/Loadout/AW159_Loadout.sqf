@@ -22,6 +22,189 @@ _hardpoint10 = lbCurSel 2107;
 
 _plane setVariable ["TGT_POD","no",true];
 
+_plane removeMagazines "FIR_240rnd_CMFlare_Chaff_Magazine";
+
+_plane setPylonLoadOut ["pylons1", "", true, []];
+_plane setPylonLoadOut ["pylons2", "", true, []];
+
+_plane setPylonLoadOut ["pylons1", "", true, [0]];
+_plane setPylonLoadOut ["pylons2", "", true, [0]];
+
+_plane setPylonLoadOut ["pylons1", "", true, [-1]];
+_plane setPylonLoadOut ["pylons2", "", true, [-1]];
+
+_plane removeweapon "JAS_CUP_Vacannon_M621_AW159_veh";
+_plane removeweapon "JAS_CUP_Vmlauncher_CRV7_FAT_Pylon";
+_plane removeweapon "JAS_HellfireLauncher_K_Pylon";
+_plane removeweapon "JAS_HellfireLauncher_N_Pylon";
+
+_plane removeweaponturret ["JAS_CUP_Vacannon_M621_AW159_veh",[0]];
+_plane removeweaponturret ["JAS_CUP_Vmlauncher_CRV7_FAT_Pylon",[0]];
+_plane removeweaponturret ["JAS_HellfireLauncher_K_Pylon",[0]];
+_plane removeweaponturret ["JAS_HellfireLauncher_N_Pylon",[0]];
+
+_plane removeweaponturret ["JAS_CUP_Vacannon_M621_AW159_veh",[-1]];
+_plane removeweaponturret ["JAS_CUP_Vmlauncher_CRV7_FAT_Pylon",[-1]];
+_plane removeweaponturret ["JAS_HellfireLauncher_K_Pylon",[-1]];
+_plane removeweaponturret ["JAS_HellfireLauncher_N_Pylon",[-1]];
+
+_plane addmagazine "FIR_240rnd_CMFlare_Chaff_Magazine";
+
+if (_preset == -1 or _preset == 0) then
+{
+	Switch (_hardpoint1) Do //Right Pylon
+	{
+		case -1:
+		{
+			_plane animateSource ["hide_radar", 0, true];
+			_plane animateSource ["hide_struts", 0, true];
+			_plane setPylonLoadOut ["pylons1", "", true, []];
+		};
+		case 0:
+		{
+			_plane animateSource ["hide_radar", 0, true];
+			_plane animateSource ["hide_struts", 0, true];
+			_plane setPylonLoadOut ["pylons1", "", true, []];
+		};		
+		case 1: // Gun Pod
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons1", "JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M", true, []];
+		};
+		case 2: // CRV-7 FAT
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons1", "JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M", true, [0]];
+		};
+		case 3: // CRV-7 HE
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons1", "JAS_CUP_PylonPod_19Rnd_CRV7_HE_M", true, [0]];
+		};
+		case 4: // CRV-7 KEP
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons1", "JAS_CUP_PylonPod_19Rnd_CRV7_KEP_M", true, [0]];
+		};
+		case 5: // Hellfire K
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons1", "JAS_FIR_Hellfire_K_1rnd_PYLON_M", true, [0]];
+		};
+		case 6: // Hellfire N
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons1", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, [0]];
+		};
+	};
+	
+sleep 0.3;
+	
+	Switch (_hardpoint2) Do
+	{
+		case -1:
+		{
+			_plane animateSource ["hide_radar", 0, true];
+			_plane animateSource ["hide_struts", 0, true];
+			_plane setPylonLoadOut ["pylons2", "", true, []];
+		};
+		case 0:
+		{
+			_plane animateSource ["hide_radar", 0, true];
+			_plane animateSource ["hide_struts", 0, true];
+			_plane setPylonLoadOut ["pylons2", "", true, []];
+		};		
+		case 1: // Gun Pod
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons2", "JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M", true, []];
+		};
+		case 2: // CRV-7 FAT
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons2", "JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M", true, [0]];
+		};
+		case 3: // CRV-7 HE
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons2", "JAS_CUP_PylonPod_19Rnd_CRV7_HE_M", true, [0]];
+		};
+		case 4: // CRV-7 KEP
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons2", "JAS_CUP_PylonPod_19Rnd_CRV7_KEP_M", true, [0]];
+		};
+		case 5: // Hellfire K
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons2", "JAS_FIR_Hellfire_K_1rnd_PYLON_M", true, [0]];
+		};
+		case 6: // Hellfire N
+		{
+			_plane animateSource ["hide_radar", 1, true];
+			_plane animateSource ["hide_struts", 1, true];
+			_plane setPylonLoadOut ["pylons2", "JAS_FIR_Hellfire_N_1rnd_PYLON_M", true, [0]];
+		};
+	};
+}
+else 
+{
+	Switch (_preset) do
+	{
+
+		case 1:
+		{
+			if (isNil {profileNamespace getVariable "AW159_Custom_slot1"}) then
+			{
+				titleText ["You don't have custom loadout data in slot 1!", "PLAIN DOWN",0.5];
+			}
+			else
+			{
+				titleText ["Found custom loadout data. Loading..", "PLAIN DOWN",0.5];
+				_loadcustom1 = ["custom1"]execVM "ARMA3_CUP_Enhancement_AW159\sqs\Loadout\AW159_Custom_Apply.sqf";
+			};		
+		};
+
+		case 2:
+		{
+			if (isNil {profileNamespace getVariable "AW159_Custom_slot2"}) then
+			{
+				titleText ["You don't have custom loadout data in slot 2!", "PLAIN DOWN",0.5];
+			}
+			else
+			{
+				titleText ["Found custom loadout data. Loading..", "PLAIN DOWN",0.5];
+				_loadcustom1 = ["custom2"]execVM "ARMA3_CUP_Enhancement_AW159\sqs\Loadout\AW159_Custom_Apply.sqf";
+			};			
+		};
+
+		case 3:
+		{
+			if (isNil {profileNamespace getVariable "AW159_Custom_slot3"}) then
+			{
+				titleText ["You don't have custom loadout data in slot 3!", "PLAIN DOWN",0.5];
+			}
+			else
+			{
+				titleText ["Found custom loadout data. Loading..", "PLAIN DOWN",0.5];
+				_loadcustom1 = ["custom3"]execVM "ARMA3_CUP_Enhancement_AW159\sqs\Loadout\AW159_Custom_Apply.sqf";
+			};	
+		};
+	};
+};
+
+/*
 // Magazines
 _plane removeMagazines "JAS_CUP_12Rnd_CRV7_FAT_M";
 _plane removeMagazines "CUP_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M";
@@ -75,14 +258,14 @@ titleText ["Loading Guns and Texture", "PLAIN DOWN",0.5];
 _plane addweapon "FIR_CMLauncher";
 _plane addmagazine "FIR_240rnd_CMFlare_Chaff_Magazine";
 
-/* -1 is Default Texture. -1 is not choose, mean blank in the combo box. */
+/* -1 is Default Texture. -1 is not choose, mean blank in the combo box. 
 
 sleep 0.3;
 
 titleText ["Loading Ammo", "PLAIN DOWN",0.5];
 
 sleep 0.3;
-/* if preset is not choosed or no preset, pick up the hardpoint number and rearm. but choose the Preset, Proceed the else part. */
+/* if preset is not choosed or no preset, pick up the hardpoint number and rearm. but choose the Preset, Proceed the else part. 
 if (_preset == -1 or _preset == 0) then
 {
 	Switch (_hardpoint1) Do
@@ -562,7 +745,7 @@ if (_HellKcount >= 1) then
 	{
 		_counterHell = _counterHell + 1;
 		_plane addmagazineturret ["JAS_AGM114K_1rnd_M",[0]];
-	}; */
+	}; 
 };
 if (_HellNcount >= 1) then
 {
@@ -573,7 +756,7 @@ if (_HellNcount >= 1) then
 	{
 		_counterHell = _counterHell + 1;
 		_plane addmagazineturret ["JAS_AGM114K_1rnd_M",[0]];
-	}; */
+	}; 
 };
-
+*/
 titleText ["Loading Complete", "PLAIN DOWN",0.5];

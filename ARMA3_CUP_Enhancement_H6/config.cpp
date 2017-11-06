@@ -867,7 +867,20 @@ class CfgVehicles
 		};
 		class RotorLibHelicopterProperties
 		{
-			RTDconfig = "ARMA3_CUP_Enhancement_H6\rotorLib\RTD_Heli_Light_01.xml";
+			RTDconfig = "ARMA3_CUP_Enhancement_H6\rotorLib\rtd_cup_ah6.xml";
+			autoHoverCorrection[]={-1,2,0};
+			defaultCollective=0.63499999;
+			maxTorque=900;
+			stressDamagePerSec=0.0033333299;
+			maxHorizontalStabilizerLeftStress=10000;
+			maxHorizontalStabilizerRightStress=10000;
+			maxVerticalStabilizerStress=10000;
+			horizontalWingsAngleCollMin=0;
+			horizontalWingsAngleCollMax=0;
+			maxMainRotorStress=31000;
+			maxTailRotorStress=5200;
+			retreatBladeStallWarningSpeed=77.222;
+			/*
 			autoHoverCorrection[] = { 0.28, 2.88, 0 };
 			defaultCollective = 0.635;
 			stressDamagePerSec = 0.0033333332;
@@ -892,6 +905,7 @@ class CfgVehicles
 			throttleIdleToFull=12;
 			throttleFullToIdle=6;
 			rtd_center="rtd_center";
+			*/
 		};
 		expansion = 1;
 		scope = 0;
@@ -3070,6 +3084,118 @@ class CfgVehicles
 				shortcut="";
 				condition="this animationPhase ""hideFLIR"" < 0.5 && this animationPhase ""stowMonitorCopilot"" > 0.5 && gunner this == player AND Alive(this)";
 				statement="this animate [""stowMonitorCopilot"",0]; this animate [""monitorCopilotDisplayOff"", 1]; this animate [""monitorCopilotDisplayOn"", 0];";
+			};
+		};
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: VehicleSystemsTemplateLeftPilot
+			{
+			};
+			class VehicleSystemsDisplayManagerComponentRight: VehicleSystemsTemplateRightPilot
+			{
+			};
+			class TransportPylonsComponent
+			{
+				UIPicture="\CUP\AirVehicles\CUP_AirVehicles_AH6\Data\UI\CUP_AH6_3DEN_CA.paa";
+				class presets
+				{
+					class Empty
+					{
+						displayName="M134 only";
+						attachment[]={};
+					};
+					class CAS1
+					{
+						displayName="Light CAS";
+						attachment[]=
+						{
+							"JAS_FIR_Hydra_P_7rnd_M",
+							"JAS_FIR_Hydra_P_7rnd_M"
+						};
+					};
+					class CAS2
+					{
+						displayName="Heavy CAS";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M"
+						};
+					};
+					class CAS3
+					{
+						displayName="Precision CAS";
+						attachment[]=
+						{
+							"JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M",
+							"JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M"
+						};
+					};
+					class MultiRole
+					{
+						displayName="Killer-Scout";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_2Rnd_AGM114K_Hellfire_II_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M"
+						};
+					};
+					class AntiTank
+					{
+						displayName="Anti-Tank";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_2Rnd_AGM114K_Hellfire_II_M",
+							"JAS_CUP_PylonPod_2Rnd_AGM114K_Hellfire_II_M"
+						};
+					};
+					class AntiStructure
+					{
+						displayName="Anti-Structure";
+						attachment[]=
+						{
+							"JAS_CUP_PylonPod_2Rnd_AGM114N_Hellfire_II_M",
+							"JAS_CUP_PylonPod_2Rnd_AGM114N_Hellfire_II_M"
+						};
+					};
+				};
+				class pylons
+				{
+					class pylonLeft1
+					{
+						hardpoints[]=
+						{
+							"JAS_AH6_PYLON",
+							"JAS_AH6_PYLON_L"
+						};
+						attachment="";
+						priority=5;
+						UIposition[]={0.58999997,0.40000001};
+						turret[]={0};
+					};
+					class pylonRight1: pylonLeft1
+					{
+						hardpoints[]=
+						{
+							"JAS_AH6_PYLON",
+							"JAS_AH6_PYLON_R"
+						};
+						UIposition[]={0.059999999,0.40000001};
+						mirroredMissilePos=1;
+					};
+				};
 			};
 		};
 	};

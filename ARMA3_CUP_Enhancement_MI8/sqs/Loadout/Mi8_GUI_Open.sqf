@@ -22,6 +22,7 @@ _handle= CreateDialog "MI8_GUI";
 	{lbAdd[2100,_x]} forEach 
 	[  
 		"Empty",
+		"S-5 Rockets",
 		"S-8 Rockets",	//Pod = JAS_CUP_1Rnd_S8_Pod_Heli_M, mag = JAS_CUP_40Rnd_S8_M, wpn = JAS_CUP_Vmlauncher_S8_veh
 		"S-13 Rockets"
     ];
@@ -30,6 +31,7 @@ _handle= CreateDialog "MI8_GUI";
 	{lbAdd[2201,_x]} forEach 
 	[  
 		"Empty",
+		"S-5 Rockets",
 		"S-8 Rockets",
 		"S-13 Rockets"
     ];
@@ -38,6 +40,7 @@ _handle= CreateDialog "MI8_GUI";
 	{lbAdd[2101,_x]} forEach 
 	[  
 		"Empty",
+		"S-5 Rockets",
 		"S-8 Rockets",
 		"S-13 Rockets"
     ];
@@ -45,6 +48,7 @@ _handle= CreateDialog "MI8_GUI";
 	{lbAdd[2102,_x]} forEach 
 	[  
 		"Empty",
+		"S-5 Rockets",
 		"S-8 Rockets",
 		"S-13 Rockets"
     ];

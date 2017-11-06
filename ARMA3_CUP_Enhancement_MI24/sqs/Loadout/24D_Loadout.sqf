@@ -90,14 +90,6 @@ if (_preset == -1 or _preset == 0) then
 		};		
 		case 1:
 		{
-			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "JAS_CUP_2Rnd_Igla_Rack_M";
-		};
-		case 3:
-		{
 			_plane addmagazine "JAS_CUP_1Rnd_AT2_DummyRack_M";
 		};
 	};
@@ -115,14 +107,6 @@ sleep 0.3;
 			_plane addmagazine "FIR_Empty_1rnd_M";
 		};		
 		case 1:
-		{
-			_plane addmagazine "JAS_CUP_2Rnd_GSh23_Pod_Heli_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "JAS_CUP_2Rnd_Igla_Rack_M";
-		};
-		case 3:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_AT2_DummyRack_M";
 		};
@@ -160,6 +144,10 @@ sleep 0.3;
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_KAB250_M";
 		};
+		case 6:
+		{
+			_plane addmagazine "JAS_CUP_2Rnd_Igla_Rack_M";
+		};
 	};
 	
 sleep 0.3;
@@ -193,6 +181,10 @@ sleep 0.3;
 		case 5:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_KAB250_M";
+		};
+		case 6:
+		{
+			_plane addmagazine "JAS_CUP_2Rnd_Igla_Rack_M";
 		};
 	};
 
@@ -278,14 +270,6 @@ sleep 0.3;
 		};		
 		case 1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
 			_plane addmagazine "JAS_CUP_1Rnd_AT2_M";
 		};
 	};
@@ -303,14 +287,6 @@ sleep 0.3;
 			_plane addmagazine "FIR_Empty_1rnd_M";
 		};		
 		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_AT2_M";
 		};
@@ -330,14 +306,6 @@ sleep 0.3;
 		};		
 		case 1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
-		{
 			_plane addmagazine "JAS_CUP_1Rnd_AT2_M";
 		};
 	};
@@ -353,16 +321,8 @@ sleep 0.3;
 		case 0:
 		{
 			_plane addmagazine "FIR_Empty_1rnd_M";
-		};		
+		};
 		case 1:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 2:
-		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};
-		case 3:
 		{
 			_plane addmagazine "JAS_CUP_1Rnd_AT2_M";
 		};

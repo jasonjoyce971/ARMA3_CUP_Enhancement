@@ -80,7 +80,9 @@ _handle= CreateDialog "JAS_A164_GUI";
 		"EGBU-12 x3",
 		"GBU-54",
 		"CBU-103",
-		"CBU-105"
+		"CBU-105",
+		"CBU-85",
+		"BL-778"
     ];
 //Add Hardpoint 4 left belly outer//
 	{lbAdd[2102,_x]} forEach 
@@ -111,7 +113,9 @@ _handle= CreateDialog "JAS_A164_GUI";
 		"EGBU-12 x3",
 		"GBU-54",
 		"CBU-103",
-		"CBU-105"
+		"CBU-105",
+		"CBU-85",
+		"BL-778"
     ];
 //Add Hardpoint 5 left belly inner//
 	{lbAdd[2103,_x]} forEach 
@@ -138,7 +142,9 @@ _handle= CreateDialog "JAS_A164_GUI";
 		"EGBU-12",
 		"GBU-54",
 		"CBU-103",
-		"CBU-105"
+		"CBU-105",
+		"CBU-85",
+		"BL-778"
     ];
 //Add Hardpoint 6 right belly inner//
 	{lbAdd[2104,_x]} forEach 
@@ -165,7 +171,9 @@ _handle= CreateDialog "JAS_A164_GUI";
 		"EGBU-12",
 		"GBU-54",
 		"CBU-103",
-		"CBU-105"
+		"CBU-105",
+		"CBU-85",
+		"BL-778"
     ];
 //Add Hardpoint 7 right belly outer//
 	{lbAdd[2105,_x]} forEach 
@@ -196,7 +204,9 @@ _handle= CreateDialog "JAS_A164_GUI";
 		"EGBU-12 x3",
 		"GBU-54",
 		"CBU-103",
-		"CBU-105"
+		"CBU-105",
+		"CBU-85",
+		"BL-778"
     ];
 //Add Hardpoint 8 right inboard//
 	{lbAdd[2106,_x]} forEach 
@@ -227,7 +237,9 @@ _handle= CreateDialog "JAS_A164_GUI";
 		"EGBU-12 x3",
 		"GBU-54",
 		"CBU-103",
-		"CBU-105"
+		"CBU-105",
+		"CBU-85",
+		"BL-778"
     ];
 	
 	//Rockets 9 right midline

@@ -29,7 +29,11 @@ _handle= CreateDialog "L39_GUI";
 		"FAB-250",
 		"KAB-250",
 		"RBK-250",
-		"Kh-25"
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MTP",
+		"Kh-25MT",
+		"Kh-25ML"
     ];
 	
 	//Add Hardpoint 2 - left outboard 
@@ -43,7 +47,11 @@ _handle= CreateDialog "L39_GUI";
 		"FAB-250",
 		"KAB-250",
 		"RBK-250",
-		"Kh-25"
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MTP",
+		"Kh-25MT",
+		"Kh-25ML"
     ];
 	
 //Add Hardpoint 3 - right inboard
@@ -57,7 +65,11 @@ _handle= CreateDialog "L39_GUI";
 		"FAB-250",
 		"KAB-250",
 		"RBK-250",
-		"Kh-25"
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MTP",
+		"Kh-25MT",
+		"Kh-25ML"
     ];
 //Add Hardpoint 4 - left inboard
 	{lbAdd[2102,_x]} forEach 
@@ -70,5 +82,9 @@ _handle= CreateDialog "L39_GUI";
 		"FAB-250",
 		"KAB-250",
 		"RBK-250",
-		"Kh-25"
+		"Kh-25MPU",
+		"Kh-25R",
+		"Kh-25MTP",
+		"Kh-25MT",
+		"Kh-25ML"
     ];

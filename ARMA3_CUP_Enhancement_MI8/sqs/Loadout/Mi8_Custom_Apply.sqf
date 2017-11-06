@@ -50,9 +50,13 @@ sleep 0.01;
 		};		
 		case 1:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+			_plane addmagazine "JAS_CUP_1Rnd_S5_Pod_Small_M";
 		};
 		case 2:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+		};
+		case 3:
 		{
 			_plane addmagazine "JAS_CUP_S13_Pod_Heli_M";
 		};
@@ -72,9 +76,13 @@ sleep 0.3;
 		};		
 		case 1:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+			_plane addmagazine "JAS_CUP_1Rnd_S5_Pod_Small_M";
 		};
 		case 2:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+		};
+		case 3:
 		{
 			_plane addmagazine "JAS_CUP_S13_Pod_Heli_M";
 		};
@@ -94,9 +102,13 @@ sleep 0.3;
 		};		
 		case 1:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+			_plane addmagazine "JAS_CUP_1Rnd_S5_Pod_Small_M";
 		};
 		case 2:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+		};
+		case 3:
 		{
 			_plane addmagazine "JAS_CUP_S13_Pod_Heli_M";
 		};
@@ -116,9 +128,13 @@ sleep 0.3;
 		};		
 		case 1:
 		{
-			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+			_plane addmagazine "JAS_CUP_1Rnd_S5_Pod_Small_M";
 		};
 		case 2:
+		{
+			_plane addmagazine "JAS_CUP_1Rnd_S8_Pod_Heli_M";
+		};
+		case 3:
 		{
 			_plane addmagazine "JAS_CUP_S13_Pod_Heli_M";
 		};

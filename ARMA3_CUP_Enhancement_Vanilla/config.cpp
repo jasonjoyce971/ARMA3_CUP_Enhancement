@@ -1159,6 +1159,15 @@ class JAS_YAK_GUI
 */
 class CfgVehicles
 {
+	// LAND Class DTV Locking Experiment
+	class All {};
+	class Static : All {};
+	class Building : Static
+	{
+		visualTarget = 1; // Enable Visual Targetting
+		visualTargetSize = 1.0; // Range = 100% of Sensor View Distance
+	};
+
 	class Logic;
 	class Module_F: Logic
 	{
