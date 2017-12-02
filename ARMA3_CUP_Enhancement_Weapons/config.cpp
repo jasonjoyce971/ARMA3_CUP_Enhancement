@@ -2534,6 +2534,7 @@ class cfgAmmo
 	class FIR_AGM65G;
 	class JAS_FIR_AGM65K : FIR_AGM65G
 	{	
+		cameraViewAvailable = 1;
 		class Components
 		{
 			class SensorsManagerComponent
@@ -5865,6 +5866,7 @@ class cfgMagazines
 	};
 	class JAS_FIR_Zuni_P_4rnd_M : FIR_Zuni_P_4rnd_M
 	{
+		pylonWeapon = "JAS_ZUNI_Launcher";
 		hardpoints[] = 
 		{ 
 			"JAS_A10_210",
@@ -5963,6 +5965,7 @@ class cfgMagazines
 	class JAS_FIR_APKWS_P_21rnd_M : FIR_Hydra_P_21rnd_M
 	{
 		ammo = "JAS_FIR_Hydra_APKWS_PYLON_Ammo";
+		pylonWeapon = "JAS_FIR_APKWS_Pylon_Launcher";
 		displayName = "70mm APKWS x21";
 		hardpoints[] = { "JAS_A10_210", "JAS_A10_39", "JAS_A10_48"};	
 	};
@@ -9962,7 +9965,8 @@ class cfgWeapons
 		ballisticsComputer=8;
 		magazines[]=
 		{
-			"FIR_Zuni_4rnd_M"
+			"FIR_Zuni_4rnd_M",
+			"JAS_FIR_Zuni_P_4rnd_M"
 		};
 		displayName="Rocket Launcher";
 		modes[]=
@@ -10174,7 +10178,8 @@ class cfgWeapons
 		displayName="Smoke Launcher (White)";
 		magazines[]=
 		{
-			"JAS_FIR_Hydra_Smoke_7rnd_M"
+			"JAS_FIR_Hydra_Smoke_7rnd_M",
+			"JAS_FIR_Hydra_P_7rnd_M_White"
 		};
 	};
 	class JAS_HYDRA_SMKR_Launcher: JAS_HYDRA_Launcher
@@ -10182,7 +10187,8 @@ class cfgWeapons
 		displayName="Smoke Launcher (Red)";
 		magazines[]=
 		{
-			"JAS_FIR_Hydra_Smoke_Red_7rnd_M"
+			"JAS_FIR_Hydra_Smoke_Red_7rnd_M",
+			"JAS_FIR_Hydra_P_7rnd_M_Red"
 		};
 	};
 	class JAS_HYDRA_SMKO_Launcher: JAS_HYDRA_Launcher
@@ -10190,7 +10196,8 @@ class cfgWeapons
 		displayName="Smoke Launcher (Orange)";
 		magazines[]=
 		{
-			"JAS_FIR_Hydra_Smoke_Orange_7rnd_M"
+			"JAS_FIR_Hydra_Smoke_Orange_7rnd_M",
+			"JAS_FIR_Hydra_P_7rnd_M_Orange"
 		};
 	};
 	class JAS_HYDRA_SMKP_Launcher: JAS_HYDRA_Launcher
@@ -10198,7 +10205,8 @@ class cfgWeapons
 		displayName="Smoke Launcher (Purple)";
 		magazines[]=
 		{
-			"JAS_FIR_Hydra_Smoke_Purple_7rnd_M"
+			"JAS_FIR_Hydra_Smoke_Purple_7rnd_M",
+			"JAS_FIR_Hydra_P_7rnd_MPurple"
 		};
 	};
 	class JAS_AGM122: MissileLauncher
@@ -11866,7 +11874,7 @@ class cfgWeapons
 		canlock = 2;
 		ballisticsComputer = 8;
 		holdsterAnimValue = 1;
-		magazines[] = {"FIR_Hydra_APKWS_7rnd_M","JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M"};
+		magazines[] = {"FIR_Hydra_APKWS_7rnd_M","JAS_FIR_Hydra_APKWS_Pod_1rnd_PYLON_M","JAS_FIR_APKWS_P_21rnd_M"};
 		displayName = "70mm APKWS";
 		modes[] = {"Far_AI","Burst"};
 		cursor = "EmptyCursor";
