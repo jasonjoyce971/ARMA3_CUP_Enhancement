@@ -1099,7 +1099,8 @@ class CfgVehicles
 		cost = 999999999;
 		armor = 50;
 	};
-	class CUP_F35B_base;
+
+	/*class CUP_F35B_base;
 	class JAS_CUP_B_F35B_USMC : CUP_F35B_base
 	{
 		scope = 2;
@@ -1512,17 +1513,6 @@ class CfgVehicles
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 	};
-	class JAS_CUP_B_F35B_USMC_AAC : JAS_CUP_B_F35B_USMC
-	{
-		scope = 2;
-		author = "Bohimia Interactive /CUP /-{GOL}-Jason";
-		displayname = "F-35J Lightning II (USMC)";
-		crew = "B_pilot_F";
-		side = 1;
-		faction="GOL_AAC_BLUFOR";
-		editorSubcategory="GOL_AAC_BANSHEE";
-		editorPreview = "\ARMA3_CUP_Enhancement_F35\UI\editorpreview\F35B_USMC.jpg";
-	};
 	class JAS_CUP_B_F35B_RAF : CUP_F35B_base
 	{
 		scope = 2;
@@ -1908,6 +1898,818 @@ class CfgVehicles
 			fired="fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
+	};*/
+
+	class CUP_F35B_dynamic_base;
+	class JAS_CUP_B_F35B_USMC : CUP_F35B_dynamic_base
+	{
+		scope = 2;
+		author = "Bohimia Interactive /CUP /-{GOL}-Jason";
+		displayname = "F-35B-J Lightning II (USMC)";
+		crew = "B_pilot_F";
+		side = 1;
+		faction = "CUP_B_USMC";
+		editorPreview = "\ARMA3_CUP_Enhancement_F35\UI\editorpreview\F35B_USMC.jpg";
+		driverWeaponsInfoType = "RscOptics_CAS_01_TGP";
+		class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName="WFOV";
+					initAngleX=0;
+					minAngleX=0;
+					maxAngleX=0;
+					initAngleY=0;
+					minAngleY=0;
+					maxAngleY=0;
+					initFov="(30 / 120)";
+					minFov="(30 / 120)";
+					maxFov="(30 / 120)";
+					directionStabilized=1;
+					visionMode[]=
+					{
+						"Normal",
+						"Ti"
+					};
+					thermalMode[]={0,1};
+					gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera2",
+						"OpticsBlur2"
+					};
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName="MFOV";
+					initFov="(15 / 120)";
+					minFov="(15 / 120)";
+					maxFov="(15 / 120)";
+					gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName="NFOV";
+					initFov="(3.75 / 120)";
+					minFov="(3.75 / 120)";
+					maxFov="(3.75 / 120)";
+					gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				showMiniMapInOptics=1;
+				showUAVViewInOptics=0;
+				showSlingLoadManagerInOptics=0;
+			};
+			minTurn=-160;
+			maxTurn=160;
+			initTurn=0;
+			minElev=-10;
+			maxElev=90;
+			initElev=0;
+			maxXRotSpeed=0.30000001;
+			maxYRotSpeed=0.30000001;
+			pilotOpticsShowCursor=1;
+			controllable=true;
+		};
+		airBrake = 1;
+		armor = 80;
+		armorLights = 1;
+		armorStructural = 2;
+		camouflage = 100;
+		crewCrashProtection = 0.15;
+		ejectDamageLimit = 0.45;
+		ejectDeadCargo = 0;
+		ejectDeadDriver = 0;
+		ejectSpeed[] = {0,60,0};
+		headGforceLeaningFactor[] = {0.01,0.002,0.01};
+		irScanGround = 1;
+		irScanRangeMax = 5000;
+		irScanRangeMin = 500;
+		irScanToEyeFactor = 2;
+		irTarget = 1;
+		irTargetSize = 1;
+		laserScanner = 1;
+		laserTarget = 0;
+		nvScanner = 0;
+		nvTarget = 0;
+		radarTarget = 1;
+		radarTargetSize = 0.8;
+		radarType = 4;
+		canUseScanners = 1;
+		commanderCanSee = 31;
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=100000;
+							maxRange=100000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=10000;
+							maxRange=10000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						maxTrackableSpeed=1725;
+						angleRangeHorizontal=160;
+						angleRangeVertical=160;
+						groundNoiseDistanceCoef=-1;
+						maxGroundNoiseDistance=-1;
+						minSpeedThreshold=0;
+						maxSpeedThreshold=0;
+						aimDown=0;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+		};
+		memoryPointDriverOptics="gau22_start";
+		//unitInfoType="RscOptics_AV_pilot";
+		unitInfoType = "RscOptics_CAS_Pilot";
+		LESH_canBeTowed = 1;
+		LESH_towFromFront = 1;
+		LESH_AxisOffsetTarget[] = { 0, 4.5, -1.1 };
+		LESH_WheelOffset[] = { 0, -4.5 };
+		weapons[] =
+		{
+			"FIR_MasterArm",
+			"JAS_CUP_Vacannon_GAU22_veh",
+			"FIR_CMLauncher",
+			"Laserdesignator_mounted"
+		};
+		magazines[] =
+		{
+			"JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M",
+			"FIR_240rnd_CMFlare_Chaff_Magazine",
+			"Laserbatteries"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"CUP\AirVehicles\CUP_AirVehicles_F35\data\f35_co.paa"
+		};
+		class UserActions
+		{
+			class ECM_ON
+			{
+				displayName = "ECM JAMMER ON";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User4";
+				condition = "this getvariable ""ECMJAMMER"" == ""yes"";";
+				statement = "[this] execVM ""\FIR_AirWeaponSystem_US\Script\ECM\ECM_ON.sqf"";";
+				onlyforplayer = "False";
+			};
+			class f35_Gui_Open
+			{
+				displayName = "<t color='#739eff'>Open Dialog</t>";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User6";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Carrier_01_base_F""]) < 25) and (damage (nearestObject [this, ""Land_Carrier_01_base_F""]) < 1) and (speed this < 1))";
+				statement = "this execVM ""\ARMA3_CUP_Enhancement_F35\sqs\loadout\f35_GUI_Open.sqf""";
+				onlyforplayer = "false";
+				priority = 6;
+			};
+			class CUP_F35B_Eject
+			{
+				priority = 6;
+				shortcut = "Eject";
+				displayName = "<t color='#FF0000'>Pull Ejection Cord</t>";
+				condition = "player in this and isengineon this";
+				statement = "[this, false] spawn CUP_fnc_ejectPlayerFromAircraft";
+				position = "pilotcontrol";
+				radius = 10;
+				onlyforplayer = 1;
+				showWindow = 0;
+				hideOnUse = 1;
+			};
+			class CUP_F35B_OpenWeaponBay
+			{
+				priority = 1.5;
+				shortcut = "";
+				displayName = "Open Weapon Bay";
+				condition = "player in this and isengineon this and (this animationphase 'Hatch_Weaponbay_1_1' != 1)";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_F35\sqs\F35\baydooropen.sqf"";";
+				position = "pilotcontrol";
+				radius = 10;
+				onlyforplayer = 1;
+				showWindow = 0;
+				hideOnUse = 1;
+			};
+			class CUP_F35B_CloseWeaponBay : CUP_F35B_OpenWeaponBay
+			{
+				displayName = "Close Weapon Bay";
+				condition = "player in this and isengineon this and (this animationphase 'Hatch_Weaponbay_1_1' != 0)";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_F35\sqs\F35\baydoorclose.sqf"";";
+			};
+			class CUP_F35B_VTOLON
+			{
+				priority = 1.5;
+				shortcut = "";
+				displayName = "Vertical Take-off Mode (On)";
+				condition = "player in this and isengineon this and ((getpos this) select 2 < 5) and !(this getvariable ['CUP_AirVehicles_VTOL',false])";
+				statement = "[this, true] call CUP_fnc_VTOL;";
+				position = "pilotcontrol";
+				radius = 10;
+				onlyforplayer = 1;
+				showWindow = 0;
+				hideOnUse = 1;
+			};
+			class CUP_F35B_VTOLOFF : CUP_F35B_VTOLON
+			{
+				displayName = "Vertical Take-off Mode (Off)";
+				condition = "player in this and isengineon this and (this getvariable ['CUP_AirVehicles_VTOL',false]);";
+				statement = "[this, false] call CUP_fnc_VTOL;";
+			};
+			class FindRadarTGT
+			{
+				displayName = "Find Radar Target";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User5";
+				condition = "currentweapon this == ""FIR_AGM88"" and this getvariable ""SEAD_SET"" == ""no""; ";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\harm.sqf""; ";
+				onlyforplayer = "False";
+			};
+			class ClearRadarTGT
+			{
+				displayName = "Clear Radar Target";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User5";
+				condition = "currentweapon this == ""FIR_AGM88"" and this getvariable ""SEAD_SET"" == ""yes""; ";
+				statement = "[this] execVM ""\FIR_AirWeaponSystem_US\Script\SEAD\harmoff.sqf""; ";
+				onlyforplayer = "False";
+			};
+			class SearchRDRTGT
+			{
+				displayName = "QIT ON";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "";
+				condition = "currentweapon this == ""FIR_AGM88"";";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\Search_RDRTGT.sqf""; ";
+				onlyforplayer = "False";
+			};
+			class Fueltank_Jettison
+			{
+				displayName = "Jettison Fueltanks";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User8";
+				condition = "player in this and isengineon this";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\Jettison\droptanks.sqf"";";
+				onlyforplayer = "False";
+			};
+			class Aircraft_MFD_Open_N
+			{
+				displayName = "Open Targetting System";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "";
+				//condition = "this getvariable ""TGT_POD"" == ""yes"" and player in this and isengineon this";
+				condition = "player in this and isengineon this";
+				statement = "this execVM ""\FIR_AirWeaponSystem_US\Script\TGTSystem\FIR_AWS_MFD_N_Open.sqf""";
+				onlyforplayer = "false";
+			};
+		};
+		class eventhandlers
+		{
+			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
+			fired="fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
+			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
+		};
+	};
+	class JAS_CUP_B_F35B_RAF : CUP_F35B_dynamic_base
+	{
+		scope = 2;
+		author = "Bohimia Interactive /CUP /-{GOL}-Jason";
+		displayname = "F-35B-J Lightning II (RAF/RN)";
+		crew = "B_pilot_F";
+		side = 1;
+		faction="CUP_B_GB";
+		editorPreview = "\ARMA3_CUP_Enhancement_F35\UI\editorpreview\F35B_RAF.jpg";
+		driverWeaponsInfoType="RscOptics_CAS_01_TGP";
+		class pilotCamera
+		{
+			class OpticsIn
+			{
+				class Wide
+				{
+					opticsDisplayName="WFOV";
+					initAngleX=0;
+					minAngleX=0;
+					maxAngleX=0;
+					initAngleY=0;
+					minAngleY=0;
+					maxAngleY=0;
+					initFov="(30 / 120)";
+					minFov="(30 / 120)";
+					maxFov="(30 / 120)";
+					directionStabilized=1;
+					visionMode[]=
+					{
+						"Normal",
+						"Ti"
+					};
+					thermalMode[]={0,1};
+					gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_wide_F.p3d";
+					opticsPPEffects[]=
+					{
+						"OpticsCHAbera2",
+						"OpticsBlur2"
+					};
+				};
+				class Medium: Wide
+				{
+					opticsDisplayName="MFOV";
+					initFov="(15 / 120)";
+					minFov="(15 / 120)";
+					maxFov="(15 / 120)";
+					gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_medium_F.p3d";
+				};
+				class Narrow: Wide
+				{
+					opticsDisplayName="NFOV";
+					initFov="(3.75 / 120)";
+					minFov="(3.75 / 120)";
+					maxFov="(3.75 / 120)";
+					gunnerOpticsModel="\A3\Drones_F\Weapons_F_Gamma\Reticle\UAV_Optics_Gunner_narrow_F.p3d";
+				};
+				showMiniMapInOptics=1;
+				showUAVViewInOptics=0;
+				showSlingLoadManagerInOptics=0;
+			};
+			minTurn=-160;
+			maxTurn=160;
+			initTurn=0;
+			minElev=-10;
+			maxElev=90;
+			initElev=0;
+			maxXRotSpeed=0.30000001;
+			maxYRotSpeed=0.30000001;
+			pilotOpticsShowCursor=1;
+			controllable=true;
+		};
+		class Components: Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=8000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=500;
+						aimDown=0;
+						animDirection="PilotCamera_V";
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange = 500;
+							maxRange = 100000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						class GroundTarget
+						{
+							minRange = 500;
+							maxRange = 8000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						maxTrackableSpeed = 1725;
+						angleRangeHorizontal = 160;
+						angleRangeVertical = 160;
+						groundNoiseDistanceCoef = -1;
+						maxGroundNoiseDistance = -1;
+						minSpeedThreshold = 0;
+						maxSpeedThreshold = 0;
+						aimDown = 0;
+						allowsMarking= 1;
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentLeft: DefaultVehicleSystemsDisplayManagerLeft
+			{
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+			class VehicleSystemsDisplayManagerComponentRight: DefaultVehicleSystemsDisplayManagerRight
+			{
+				defaultDisplay="SensorDisplay";
+				class Components
+				{
+					class EmptyDisplay
+					{
+						componentType="EmptyDisplayComponent";
+					};
+					class MinimapDisplay
+					{
+						componentType="MinimapDisplayComponent";
+						resource="RscCustomInfoMiniMap";
+					};
+					class UAVDisplay
+					{
+						componentType="UAVFeedDisplayComponent";
+					};
+					class VehicleDriverDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Driver";
+					};
+					class VehicleMissileDisplay
+					{
+						componentType="TransportFeedDisplayComponent";
+						source="Missile";
+					};
+					class SensorDisplay
+					{
+						componentType="SensorsDisplayComponent";
+						range[]={4000,2000,16000,8000};
+						resource="RscCustomInfoSensors";
+					};
+				};
+			};
+		};
+		memoryPointDriverOptics="gau22_start";
+		unitInfoType="RscOptics_AV_pilot";
+		LESH_canBeTowed = 1;
+		LESH_towFromFront = 1;
+		LESH_AxisOffsetTarget[] = { 0, 4.5, -1.1 };
+		LESH_WheelOffset[] = { 0, -4.5 };
+		weapons[] =
+		{
+			"FIR_MasterArm",
+			"JAS_CUP_Vacannon_GAU22_veh",
+			"FIR_CMLauncher",
+			"Laserdesignator_mounted"
+		};
+		magazines[] =
+		{
+			"JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M",
+			"FIR_240rnd_CMFlare_Chaff_Magazine",
+			"Laserbatteries"
+		};
+		hiddenSelectionsTextures[] =
+		{
+			"CUP\AirVehicles\CUP_AirVehicles_F35\data\f35_baf_co.paa"
+		};
+		class UserActions
+		{
+			class ECM_ON
+			{
+				displayName = "ECM JAMMER ON";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User4";
+				condition = "this getvariable ""ECMJAMMER"" == ""yes"";";
+				statement = "[this] execVM ""\FIR_AirWeaponSystem_US\Script\ECM\ECM_ON.sqf"";";
+				onlyforplayer = "False";
+			};
+			class f35_Gui_Open
+			{
+				displayName = "<t color='#739eff'>Open Dialog</t>";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User6";
+				condition = "((this distance (nearestObject [this, ""FIR_Baseplate""]) < 25) and (damage (nearestObject [this, ""FIR_Baseplate""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Truck_01_ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Truck_01_ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_TentHangar_V1_F""]) < 25) and (damage (nearestObject [this, ""Land_TentHangar_V1_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Hangar_F""]) < 25) and (damage (nearestObject [this, ""Land_Hangar_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 25) and (damage (nearestObject [this, ""B_Slingload_01_Ammo_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_HelipadCivil_F""]) < 25) and (damage (nearestObject [this, ""Land_HelipadCivil_F""]) < 1) and (speed this < 1)) or ((this distance (nearestObject [this, ""Land_Carrier_01_base_F""]) < 25) and (damage (nearestObject [this, ""Land_Carrier_01_base_F""]) < 1) and (speed this < 1))";
+				statement = "this execVM ""\ARMA3_CUP_Enhancement_F35\sqs\loadout\f35RAF_GUI_Open.sqf""";
+				onlyforplayer = "false";
+				priority = 6;
+			};
+			class CUP_F35B_Eject
+			{
+				priority = 6;
+				shortcut = "Eject";
+				displayName = "<t color='#FF0000'>Pull Ejection Cord</t>";
+				condition = "player in this and isengineon this";
+				statement = "[this, false] spawn CUP_fnc_ejectPlayerFromAircraft";
+				position = "pilotcontrol";
+				radius = 10;
+				onlyforplayer = 1;
+				showWindow = 0;
+				hideOnUse = 1;
+			};
+			class CUP_F35B_OpenWeaponBay
+			{
+				priority = 1.5;
+				shortcut = "";
+				displayName = "Open Weapon Bay";
+				condition = "player in this and isengineon this and (this animationphase 'Hatch_Weaponbay_1_1' != 1)";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_F35\sqs\F35\baydooropen.sqf"";";
+				position = "pilotcontrol";
+				radius = 10;
+				onlyforplayer = 1;
+				showWindow = 0;
+				hideOnUse = 1;
+			};
+			class CUP_F35B_CloseWeaponBay : CUP_F35B_OpenWeaponBay
+			{
+				displayName = "Close Weapon Bay";
+				condition = "player in this and isengineon this and (this animationphase 'Hatch_Weaponbay_1_1' != 0)";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_F35\sqs\F35\baydoorclose.sqf"";";
+			};
+			class CUP_F35B_VTOLON
+			{
+				priority = 1.5;
+				shortcut = "";
+				displayName = "Vertical Take-off Mode (On)";
+				condition = "player in this and isengineon this and ((getpos this) select 2 < 5) and !(this getvariable ['CUP_AirVehicles_VTOL',false])";
+				statement = "[this, true] call CUP_fnc_VTOL;";
+				position = "pilotcontrol";
+				radius = 10;
+				onlyforplayer = 1;
+				showWindow = 0;
+				hideOnUse = 1;
+			};
+			class CUP_F35B_VTOLOFF : CUP_F35B_VTOLON
+			{
+				displayName = "Vertical Take-off Mode (Off)";
+				condition = "player in this and isengineon this and (this getvariable ['CUP_AirVehicles_VTOL',false]);";
+				statement = "[this, false] call CUP_fnc_VTOL;";
+			};
+			class FindRadarTGT
+			{
+				displayName = "Find Radar Target";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User5";
+				condition = "currentweapon this == ""FIR_AGM88"" and this getvariable ""SEAD_SET"" == ""no""; ";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\harm.sqf""; ";
+				onlyforplayer = "False";
+			};
+			class ClearRadarTGT
+			{
+				displayName = "Clear Radar Target";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User5";
+				condition = "currentweapon this == ""FIR_AGM88"" and this getvariable ""SEAD_SET"" == ""yes""; ";
+				statement = "[this] execVM ""\FIR_AirWeaponSystem_US\Script\SEAD\harmoff.sqf""; ";
+				onlyforplayer = "False";
+			};
+			class SearchRDRTGT
+			{
+				displayName = "QIT ON";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "";
+				condition = "currentweapon this == ""FIR_AGM88"";";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\SEAD\Search_RDRTGT.sqf""; ";
+				onlyforplayer = "False";
+			};
+			class Fueltank_Jettison
+			{
+				displayName = "Jettison Fueltanks";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "User8";
+				condition = "player in this and isengineon this";
+				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\Jettison\droptanks.sqf"";";
+				onlyforplayer = "False";
+			};
+			class Aircraft_MFD_Open_N
+			{
+				displayName = "Open Targetting System";
+				position = "pos cano";
+				radius = 15;
+				shortcut = "";
+				//condition = "this getvariable ""TGT_POD"" == ""yes"" and player in this and isengineon this";
+				condition = "player in this and isengineon this";
+				statement = "this execVM ""\FIR_AirWeaponSystem_US\Script\TGTSystem\FIR_AWS_MFD_N_Open.sqf""";
+				onlyforplayer = "false";
+			};
+		};
+		class eventhandlers
+		{
+			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
+			fired="fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
+			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
+		};
+	};
+
+	class JAS_CUP_B_F35B_USMC_AAC : JAS_CUP_B_F35B_USMC
+	{
+		scope = 2;
+		author = "Bohimia Interactive /CUP /-{GOL}-Jason";
+		displayname = "F-35J Lightning II (USMC)";
+		crew = "B_pilot_F";
+		side = 1;
+		faction="GOL_AAC_BLUFOR";
+		editorSubcategory="GOL_AAC_BANSHEE";
+		editorPreview = "\ARMA3_CUP_Enhancement_F35\UI\editorpreview\F35B_USMC.jpg";
 	};
 	class JAS_CUP_B_F35B_RAF_AAC : JAS_CUP_B_F35B_RAF
 	{
@@ -1920,6 +2722,7 @@ class CfgVehicles
 		faction="GOL_AAC_BLUFOR";
 		editorSubcategory="GOL_AAC_BANSHEE";
 	};
+
 	class JAS_F35_Loadout_Module: Module_F
 	{
 		scope=2;
