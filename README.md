@@ -1,6 +1,6 @@
 # ARMA3_CUP_Enhancement
 
-V4.1.1 General Maintenance:
+**V4.1.1 General Maintenance:**
 
 Changelog:
 
@@ -8,7 +8,7 @@ A-10:
 
 * Fixed issue with certain rocket systems not having available weapon
 
-V4.1.0 CUP Pylons and LOAC DLC Update:
+**V4.1.0 CUP Pylons and LOAC DLC Update:**
 
 Changelog:
 
@@ -72,7 +72,7 @@ Su-34:
 
 * Added Expanded Kh-25 Missile Family
 
-V4.0.0 Jets DLC Update:
+**V4.0.0 Jets DLC Update:**
 
 Changelog:
 
@@ -226,13 +226,13 @@ A-143:
 
 All helicopters also have their payloads made changeable during operations.
 
-V3.1.2:
+**V3.1.2:**
 * F-35 Loadout Update
 
-V3.1.1:
+**V3.1.1:**
 * Fixed F-35 Loadout Module Script Error
 
-V3.1.0:
+**V3.1.0:**
 * AWS Update
 * Added APKWS
 * Added GBU-54
@@ -252,42 +252,42 @@ V3.1.0:
 * Tweaked AW-159 RotorLib XML
 * Changed Su-34 FCS to GPS Version
 
-V3.0.0:
+**V3.0.0:**
 * AH-1Z Handling Update
 * Code Optimisation Milestone
 
-V2.2.1:
+**V2.2.1:**
 * H-6 Handling Update
 
-V2.2:
+**V2.2:**
 * Fixed Loadout Script Error on USMC F-35
 * Rockets on Vanilla Aircraft can be changed
 * Hellfire K now Laser Guided Only
 * Hellfire N now Laser Guided Only
 * AT-16 Scallion (VIKHIR) now Laser Guided Only
 
-V2.1:
+**V2.1:**
 * AW-159 Updated with adjustable payloads
 * Air to Air Gun Modes added
 
-V2.0.1:
+**V2.0.1:**
 * Hotfix for CUP AW-159 Update
 
-V2.0:
+**V2.0:**
 * Completed re-build from original Jason_Aircraft project
 
-V0.4:
+**V0.4:**
 * AV-8 Module Added
 * AW-159 Module Added
 * CH-47 Module Added
 
-V0.3:
+**V0.3:**
 * AH-1Z Module Added
 * AH-64 Module Added
 * H-6 Module Added
 
-V0.2:
+**V0.2:**
 * A-10 Module Added
 
-V0.1:
+**V0.1:**
 * Initial Systems Upload
