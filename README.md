@@ -1,5 +1,13 @@
 # ARMA3_CUP_Enhancement
 
+V4.1.1 General Maintenance:
+
+Changelog:
+
+A-10:
+
+* Fixed issue with certain rocket systems not having available weapon
+
 V4.1.0 CUP Pylons and LOAC DLC Update:
 
 Changelog:
