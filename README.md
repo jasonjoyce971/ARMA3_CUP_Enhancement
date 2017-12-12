@@ -1,5 +1,19 @@
 # ARMA3_CUP_Enhancement
 
+**V4.1.2 General Maintenance:**
+
+Changelog:
+
+AH-1Z:
+
+* Expanded Editor Loadout Presets  
+* Fixed APKWS not guiding  
+* Fixed AGM-122 not locking 
+
+AH-64:
+
+* Completely restructured Loadout system
+
 **V4.1.1 General Maintenance:**
 
 Changelog:
