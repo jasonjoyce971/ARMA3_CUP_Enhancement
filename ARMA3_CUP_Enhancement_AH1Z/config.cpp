@@ -7526,25 +7526,38 @@ class CfgVehicles
 						displayName="Multi-Role";
 						attachment[]=
 						{
-							"CUP_PylonPod_1Rnd_AIM_9L_Sidewinder_M",
-							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
 							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
 							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
-							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
-							"CUP_PylonPod_1Rnd_AIM_9L_Sidewinder_M"
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_FIR_AIM9L_PYLON_M"
 						};
 					};
-					class Escort
+					class GS
 					{
-						displayName="Escort";
+						displayName="Ground Suppression";
 						attachment[]=
 						{
-							"",
-							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
-							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
-							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
-							"CUP_PylonPod_19Rnd_Rocket_FFAR_M",
-							""
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class CAS
+					{
+						displayName="Close Air Support";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_N_1rnd_PYLON_M",
+							"JAS_CUP_PylonPod_19Rnd_Rocket_FFAR_M",
+							"JAS_FIR_AIM9L_PYLON_M"
 						};
 					};
 				};
@@ -7748,7 +7761,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
-			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
+			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 	};
@@ -7829,7 +7842,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
-			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
+			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 	};
@@ -7908,7 +7921,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
-			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
+			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 	};
@@ -7988,7 +8001,7 @@ class CfgVehicles
 		class eventhandlers
 		{
 			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
-			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\Fire.sqf"";";
+			fired = "fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
 		};
 	};

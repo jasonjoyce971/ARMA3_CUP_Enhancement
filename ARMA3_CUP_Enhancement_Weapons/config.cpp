@@ -1518,21 +1518,27 @@ class cfgAmmo
 	};
 	class JAS_AGM122_P: FIR_AIM9L
 	{
-		airLock=0;
-		irLock=0;
-		laserLock=1;
+		airLock = 0;
+		autoSeekTarget = 1;
+		lockSeekRadius = 100;
+		lockAcquire = 1;
+		cameraViewAvailable = 1;
 		lockType = 0;
-		canLock = 2;
-		missileLockCone = 180;
-		weaponLockSystem = 4;
-		JAS_AWS_SIDEARM=1;
+		maneuvrability = 20;
+		missileKeepLockedCone = 120;
+		missileLockCone = 120;
+		missileLockMaxDistance = 13000;
+		missileLockMinDistance = 1;
+		missileLockMaxSpeed = 80;
+		trackLead = 1;
+		weaponLockSystem = 0;
 		class Components
 		{
 			class SensorsManagerComponent
 			{
 				class Components
 				{
-					class AntiRadiationSensorComponent : SensorTemplateAntiRadiation
+					class PassiveRadarSensorComponent : SensorTemplatePassiveRadar// Original = PassiveRadarSensorComponent
 					{
 						aimDown = 0;
 						allowsMarking = 1;
@@ -1540,7 +1546,7 @@ class cfgAmmo
 						angleRangeVertical = 120;
 						animDirection = "";
 						color[] = {1,0,0,1};
-						componentType = "AntiRadiationSensorComponent";
+						componentType = "PassiveRadarSensorComponent";
 						groundNoiseDistanceCoef = -1;
 						maxFogSeeThrough = 1;
 						maxGroundNoiseDistance = -1;
@@ -1550,7 +1556,7 @@ class cfgAmmo
 						minSpeedThreshold = 0;
 						minTrackableATL = -1e+010;
 						minTrackableSpeed = -1e+010;
-						typeRecognitionDistance = 6000;
+						typeRecognitionDistance = 12000;
 						class AirTarget
 						{
 							maxRange = 0;
@@ -11850,7 +11856,7 @@ class cfgWeapons
 	{
 		canLock = 2;
 		displayName="AGM-122 SIDEARM";
-		weaponLockSystem = 4;
+		weaponLockSystem = 12;
 		initspeed=10;
 		magazineReloadTime=0.5;
 		reloadTime=0.5;
@@ -11858,9 +11864,9 @@ class cfgWeapons
 		aiRateOfFireDistance=500;
 		minRange=100;
 		minRangeProbab=0.039999999;
-		midRange=1000;
+		midRange=2000;
 		midRangeProbab=0.85000002;
-		maxRange=4000;
+		maxRange=8000;
 		maxRangeProbab=0.55000001;
 		maxLeadSpeed=2500;
 		magazines[]=
