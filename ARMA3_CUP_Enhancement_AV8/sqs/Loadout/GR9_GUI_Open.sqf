@@ -127,5 +127,6 @@ _handle= CreateDialog "GR9_GUI";
 	{lbAdd[2202,_x]} forEach 
 	[  
 		"Empty",
-		"Sniper XR POD"
+		"Sniper XR POD",
+		"PL-20 Gun Pod"
     ];

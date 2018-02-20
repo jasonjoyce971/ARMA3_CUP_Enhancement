@@ -25,7 +25,7 @@ _handle= CreateDialog "AV8_GUI";
 		"AIM-9L",
 		"AIM-120",
 		"ECM POD",
-		"Sniper XR POD"
+		"Litening II TGP"
     ];
 	
 	//Add Hardpoint 2 - left outboard 
@@ -35,7 +35,7 @@ _handle= CreateDialog "AV8_GUI";
 		"AIM-9L",
 		"AIM-120",
 		"ECM POD",
-		"Sniper XR POD"
+		"Litening II TGP"
     ];
 	
 //Add Hardpoint 3 - right midline
@@ -44,7 +44,7 @@ _handle= CreateDialog "AV8_GUI";
 		"Empty",
 		"AIM-9L",
 		"AIM-120",
-		"APKWS x19",
+		"APKWS x7",
 		"CRV-7 FAT x19",
 		"CRV-7 HE x19",
 		"CRV-7 KEP x19",
@@ -78,7 +78,7 @@ _handle= CreateDialog "AV8_GUI";
 		"Empty",
 		"AIM-9L",
 		"AIM-120",
-		"APKWS x19",
+		"APKWS x7",
 		"CRV-7 FAT x19",
 		"CRV-7 HE x19",
 		"CRV-7 KEP x19",
@@ -112,14 +112,13 @@ _handle= CreateDialog "AV8_GUI";
 		"Empty",
 		"AIM-9L",
 		"AIM-120",
-		"APKWS x19",
+		"APKWS x7",
 		"CRV-7 FAT x19",
 		"CRV-7 HE x19",
 		"CRV-7 KEP x19",
 		"AGM-65D",
 		"AGM-65D x3",
 		"AGM-65G",
-		"AGM-65G x3",
 		"AGM-65L",
 		"AGM-65L x3",
 		"AGM-88 HARM",
@@ -153,14 +152,13 @@ _handle= CreateDialog "AV8_GUI";
 		"Empty",
 		"AIM-9L",
 		"AIM-120",
-		"APKWS x19",
+		"APKWS x7",
 		"CRV-7 FAT x19",
 		"CRV-7 HE x19",
 		"CRV-7 KEP x19",
 		"AGM-65D",
 		"AGM-65D x3",
 		"AGM-65G",
-		"AGM-65G x3",
 		"AGM-65L",
 		"AGM-65L x3",
 		"AGM-88 HARM",
