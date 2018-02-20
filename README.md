@@ -1,5 +1,18 @@
 # ARMA3_CUP_Enhancement
 
+**V4.1.3 General Maintenance**
+
+Changelog:
+
+AV-8b:
+
+* Updated Pylon Loading System
+* Added Prototype HUD
+
+Systems:
+
+* JDAM Guidance Hotfix
+
 **V4.1.2 General Maintenance:**
 
 Changelog:
