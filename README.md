@@ -1,5 +1,13 @@
 # ARMA3_CUP_Enhancement
 
+**V4.1.4 Harrier Fix**
+
+Changelog:
+
+GR.9:
+
+* Fixed issue where left outboard pylon would not load
+
 **V4.1.3 General Maintenance**
 
 Changelog:
