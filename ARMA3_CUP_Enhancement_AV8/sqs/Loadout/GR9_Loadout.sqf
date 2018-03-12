@@ -549,36 +549,36 @@ sleep 0.3;
 	{
 		case -1:
 		{
-			_plane setPylonLoadOut ["RightWingOut", "", true, []];
+			_plane setPylonLoadOut ["LeftWingOut", "", true, []];
 		};
 		case 0:
 		{
-			_plane setPylonLoadOut ["RightWingOut", "", true, []];
+			_plane setPylonLoadOut ["LeftWingOut", "", true, []];
 		};
 		case 1:
 		{
-			_plane setPylonLoadOut ["RightWingOut", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			_plane setPylonLoadOut ["LeftWingOut", "JAS_FIR_AIM9L_PYLON_M", true, []];
 		};
 		case 2:
 		{
-			_plane setPylonLoadOut ["RightWingOut", "JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M", true, []];
+			_plane setPylonLoadOut ["LeftWingOut", "JAS_CUP_PylonPod_19Rnd_CRV7_FAT_M", true, []];
 		};
 		case 3:
 		{
-			_plane setPylonLoadOut ["RightWingOut", "JAS_CUP_PylonPod_19Rnd_CRV7_HE_M", true, []];
+			_plane setPylonLoadOut ["LeftWingOut", "JAS_CUP_PylonPod_19Rnd_CRV7_HE_M", true, []];
 		};
 		case 4:
 		{
-			_plane setPylonLoadOut ["RightWingOut", "JAS_CUP_PylonPod_19Rnd_CRV7_KEP_M", true, []];
+			_plane setPylonLoadOut ["LeftWingOut", "JAS_CUP_PylonPod_19Rnd_CRV7_KEP_M", true, []];
 		};
 		case 5:
 		{
-			_plane setPylonLoadOut ["RightWingOut", "JAS_FIR_ECMPod_P_1rnd_M", true, []];
+			_plane setPylonLoadOut ["LeftWingOut", "JAS_FIR_ECMPod_P_1rnd_M", true, []];
 			_plane setVariable ["ECMJAMMER","yes",true];
 		};
 		case 6:
 		{
-			_plane setPylonLoadOut ["RightWingOut", "JAS_FIR_SniperXR_2_P_1rnd_M", true, []];
+			_plane setPylonLoadOut ["LeftWingOut", "JAS_FIR_SniperXR_2_P_1rnd_M", true, []];
 			_plane setVariable ["TGT_POD","yes",true];
 		};
 	};	
