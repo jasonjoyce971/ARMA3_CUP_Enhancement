@@ -13059,13 +13059,11 @@ class CfgVehicles
 		weapons[] =
 		{
 			"FIR_MasterArm",
-			"FIR_CMLauncher",
-			"FIR_GAU12"
+			"FIR_CMLauncher"
 		};
 		magazines[] =
 		{
-			"FIR_240rnd_CMFlare_Chaff_Magazine",
-			"FIR_GAU12_300rnd_M"
+			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 		class Library
 		{
@@ -13562,12 +13560,10 @@ class CfgVehicles
 		weapons[] =
 		{
 			"FIR_MasterArm",
-			"FIR_GAU12",
 			"FIR_CMLauncher"
 		};
 		magazines[] =
 		{
-			"FIR_GAU12_300rnd_M",
 			"FIR_240rnd_CMFlare_Chaff_Magazine"
 		};
 		class Library

@@ -6326,8 +6326,8 @@ class CfgVehicles
 						displayName="Anti-Tank";
 						attachment[]=
 						{
-							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M",
-							"CUP_PylonPod_4Rnd_AGM114L_Hellfire_II_M"
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M",
+							"JAS_FIR_Hellfire_K_1rnd_PYLON_M"
 						};
 					};
 					class GroundSupport
@@ -6335,8 +6335,8 @@ class CfgVehicles
 						displayName="Close Air Support";
 						attachment[]=
 						{
-							"CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M",
-							"CUP_PylonPod_12Rnd_CRV7_HE_M"
+							"JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M",
+							"JAS_CUP_PylonPod_19Rnd_CRV7_HE_M"
 						};
 					};
 				};
@@ -6348,7 +6348,7 @@ class CfgVehicles
 						{
 							"JAS_AW159_PYLON"
 						};
-						attachment="CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M";
+						attachment="JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M";
 						bay=-1;
 						priority=1;
 						UIposition[]={0.059999999,0.34999999};
@@ -6359,7 +6359,7 @@ class CfgVehicles
 						UIposition[]={0.58999997,0.34999999};
 						turret[]={0};
 						mirroredMissilePos=1;
-						attachment="CUP_PylonPod_12Rnd_CRV7_HE_M";
+						attachment="JAS_CUP_PylonPod_1200Rnd_TE1_Red_Tracer_M621_20mm_HE_M";
 					};
 				};
 			};
