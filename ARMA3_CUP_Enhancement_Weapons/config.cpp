@@ -229,6 +229,78 @@ class cfgAmmo
 	class Missile_AGM_02_F;
 	class FIR_AIM120;
 	class FIR_AIM9L;
+	class JAS_STORMSHADOW_AMMO : M_Air_AA
+	{
+		//model = "\FIR_AirWeaponSystem_US\data\JSOW\JSOW_fly";
+		//proxyshape = "\FIR_AirWeaponSystem_US\data\JSOW\JSOW";
+		cameraViewAvailable = 1;
+		model = "\ARMA3_CUP_Enhancement_Weapons\wep\SCALP_fly.p3d";
+		proxyShape = "\ARMA3_CUP_Enhancement_Weapons\wep\SCALP.p3d";
+		hit = 8000;
+		indirectHit = 2400;
+		indirectHitRange = 10;
+		timetoLive = 60;
+		maneuvrability = 20;
+		airLock = 0;
+		irLock = 1;
+		laserLock = 1;
+		nvLock = 0;
+		initTime = 0.100000;
+		thrustTime = 10;
+		maxspeed = 300;
+		// maxspeed = 50;		
+		// manualControl = 1;
+		// maxControlRange = 40000;
+		trackOversteer = 1;
+		trackLead = 1;
+		thrust = 200;
+		effectsMissile = "FIR_MissileEffect2";
+		soundHit[] = { "A3\Sounds_F\weapons\Rockets\explosion_missile_01", 3.1622777, 1, 1800 };
+		FIR_AWS_GPS_Mssl_Guide = 1;
+		FIR_AWS_DUAL = 1;
+		FIR_AWS_DUAL_Type = "IR";
+		FIR_AWS_CG = 1;
+		
+		missileLockCone = 180;
+		missileKeepLockedCone = 180;
+		missileLockMaxDistance = 40000;
+		missileLockMinDistance = 50;
+		missileLockMaxSpeed = 550;		
+		class Components
+		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class SomeRadarSensorComponent
+					{
+						componentType = "IRSensorComponent";
+						class AirTarget      // ranges for targets with sky background
+						{
+							minRange = 0;         //minimum possible range in meters  
+							maxRange = 0;       //maximum possible range in meters                 
+							objectDistanceLimitCoef = -1;    //range not limited by obj. view distance
+							viewDistanceLimitCoef = -1;      //range not limited by view distance           
+						};
+						class GroundTarget      // ranges for targets with ground background                           
+						{
+							minRange = 50;
+							maxRange = 40000;
+							objectDistanceLimitCoef = -1;
+							viewDistanceLimitCoef = -1;
+						};
+						typeRecognitionDistance = 40000; // distance how far the target type gets recognized                                          
+						angleRangeHorizontal = 180;     // sensor azimuth coverage in degrees         
+						angleRangeVertical = 240;       // sensor elevation coverage in degrees       
+						groundNoiseDistanceCoef = -1;  // portion of sensor-target-ground distance below which the targets become invisible to the sensor
+						maxGroundNoiseDistance = -1;   // distance from the ground in meters, hard cap, above which the target will be visible even if still below groundNoiseDistanceCoef
+						minSpeedThreshold = -1;        // target speed in km/h above which the target will start to become visible           
+						maxSpeedThreshold = -1;       // target speed above which the target becomes visible even if below groundNoiseDistanceCoef, linearly decreases to minSpeedThreshold         
+					};
+				};
+			};
+		};			
+	};
 	class JAS_FIR_AIM120B : FIR_AIM120
 	{
 		airLock = 2;
@@ -5791,6 +5863,40 @@ class cfgMagazines
 	class FIR_AV8B_Fueltank_L_P_1rnd_M;	
 	class FIR_AV8B_Fueltank_R_P_1rnd_M;
 	class FIR_SniperXR_2_P_1rnd_M;
+	class FIR_GBU53_P_4rnd_M;
+	class FIR_GBU39_P_4rnd_M;
+	class JAS_FIR_GBU39_P_4rnd_M : VehicleMagazine
+	{
+		scope = 2;
+		displayName = "GBU-39 SDB";
+		displayNameShort = "SDB";
+		ammo = "FIR_GBU39";
+		initSpeed = 0;
+		nameSound = "missiles";
+		count = 4;
+		maxLeadSpeed = 300;
+		model = "\FIR_AirWeaponSystem_US\data\proxies\rack_4x_bru61.p3d";
+		hardpoints[] = {"JAS_F35_IN","JAS_F35_INT","JAS_F35RAF_IN","JAS_F35RAF_INT"};
+		pylonWeapon = "JAS_FIR_GBU39";
+		mass = 125;
+		FIR_AWS_SMS_F16_CODE = "FIR_AirWeaponSystem_US\ui\sms\f16\sms_gbu39_ca.paa";	
+	};
+	class JAS_FIR_GBU53_P_4rnd_M : FIR_GBU53_P_4rnd_M
+	{
+		scope = 2;
+		displayName = "GBU-53 SDB II";
+		displayNameShort = "SDB II";
+		ammo = "FIR_GBU53";
+		initSpeed = 0;
+		nameSound = "missiles";
+		count = 4;
+		maxLeadSpeed = 300;
+		model = "\FIR_AirWeaponSystem_US\data\proxies\rack_4x_bru61.p3d";
+		hardpoints[] = {"JAS_F35_IN","JAS_F35_INT","JAS_F35RAF_IN","JAS_F35RAF_INT"};
+		pylonWeapon = "JAS_FIR_GBU53";
+		mass = 125;
+		FIR_AWS_SMS_F16_CODE = "FIR_AirWeaponSystem_US\ui\sms\f16\sms_gbu53_ca.paa";	
+	};
 	class JAS_FIR_SniperXR_2_P_1rnd_M : FIR_SniperXR_2_P_1rnd_M
 	{
 		hardpoints[] = {"JAS_GR9_AA","JAS_GR9_CENTRE"};			
@@ -5882,7 +5988,9 @@ class cfgMagazines
 			"JAS_A10_39",
 			"JAS_AV8_MID",
 			"JAS_AV8_IN",
-			"JAS_GR9_STRIKE"
+			"JAS_GR9_STRIKE",
+			"JAS_F35_MID",
+			"JAS_F35_IN"
 		};	
 		pylonWeapon = "JAS_BIS_weapon_AGM_65GLauncher";	
 	};
@@ -6156,6 +6264,29 @@ class cfgMagazines
 		{
 			"JAS_WAH64_PYLON"
 		};
+		mass=196;
+	};
+	class JAS_FIR_BRIMSTONE_JET2_PYLON_M : EAWS_Brimstone_mag18x
+	{
+		count = 2;
+        pylonWeapon = "JAS_BRIMSTONE_L_Pylon";
+		model="\CUP\Weapons\CUP_Weapons_DynamicLoadout\AGM114\CUP_AGM114_dual.p3d";
+		hardpoints[]=
+		{
+			"JAS_F35RAF_MID","JAS_F35RAF_IN",
+			"JAS_F35RAF_INT"
+		};
+		mass=98;
+	};
+	class JAS_FIR_BRIMSTONE_JET_PYLON_M : EAWS_Brimstone_mag18x
+	{
+		count = 1;
+        pylonWeapon = "JAS_BRIMSTONE_L_Pylon";
+		model="\A3\Weapons_F\DynamicLoadout\PylonPod_1x_Missile_AA_04_F.p3d";
+		hardpoints[]=
+		{
+			"JAS_F35RAF_OUT"
+		};
 		mass=49;
 	};
 	class JAS_FIR_Hellfire_L_1rnd_PYLON_M : JAS_AGM114L_1rnd_M
@@ -6226,7 +6357,7 @@ class cfgMagazines
 		pylonWeapon = "JAS_FIR_AIM132_Pylon";
 		hardpoints[]=
 		{
-			"JAS_ASRAAM_PYLON","JAS_ALCA_AAM"
+			"JAS_ASRAAM_PYLON","JAS_ALCA_AAM","JAS_F35RAF_OUT","JAS_F35RAF_MID","JAS_F35RAF_IN","JAS_F35RAF_INT","JAS_F35RAF_INTAA"
 		};
 		mass=88;
 	};
@@ -6261,7 +6392,13 @@ class cfgMagazines
 			"JAS_A10_6",
 			"JAS_AV8_MID",
 			"JAS_AV8_IN",
-			"JAS_GR9_STRIKE"
+			"JAS_GR9_STRIKE",
+			"JAS_F35_MID",
+			"JAS_F35_IN",
+			"JAS_F35_INT",
+			"JAS_F35RAF_MID",
+			"JAS_F35RAF_IN",
+			"JAS_F35RAF_INT"
 		};
 		initSpeed = 0;
 		mass = 230;
@@ -6325,7 +6462,8 @@ class cfgMagazines
 			"JAS_A10_6",
 			"JAS_AV8_MID",
 			"JAS_AV8_IN",
-			"JAS_GR9_STRIKE"
+			"JAS_GR9_STRIKE",
+			"JAS_F35_IN"
 		};
 		initSpeed = 0;
 		mass = 907;
@@ -6338,7 +6476,8 @@ class cfgMagazines
 		descriptionShort = "GBU-24A 2000lb";
 		displayName = "GBU-24A Paveway III";
 		displayNameShort = "GBU-24A";
-		hardpoints[] = {"JAS_NATO_BOMB","JAS_AV8_MID","JAS_AV8_IN","JAS_GR9_STRIKE"};
+		hardpoints[] = {"JAS_NATO_BOMB","JAS_AV8_MID","JAS_AV8_IN","JAS_GR9_STRIKE","JAS_F35_IN",
+			"JAS_F35RAF_IN"};
 		initSpeed = 0;
 		mass = 1050;
 		pylonWeapon = "JAS_FIR_GBU24A_Pylon";
@@ -6350,7 +6489,8 @@ class cfgMagazines
 		descriptionShort = "GBU-24B 2000lb";
 		displayName = "GBU-24B Paveway III";
 		displayNameShort = "GBU-24B";
-		hardpoints[] = {"JAS_NATO_BOMB","JAS_AV8_MID","JAS_AV8_IN","JAS_GR9_STRIKE"};
+		hardpoints[] = {"JAS_NATO_BOMB","JAS_AV8_MID","JAS_AV8_IN","JAS_GR9_STRIKE","JAS_F35_IN",
+			"JAS_F35RAF_IN"};
 		initSpeed = 0;
 		mass = 1050;
 		pylonWeapon = "JAS_FIR_GBU24B_Pylon";
@@ -6362,7 +6502,8 @@ class cfgMagazines
 		descriptionShort = "GBU-24/118 2000lb";
 		displayName = "GBU-24/118 Paveway III";
 		displayNameShort = "GBU-24/118";
-		hardpoints[] = {"JAS_NATO_BOMB","JAS_AV8_MID","JAS_AV8_IN","JAS_GR9_STRIKE"};
+		hardpoints[] = {"JAS_NATO_BOMB","JAS_AV8_MID","JAS_AV8_IN","JAS_GR9_STRIKE","JAS_F35_IN",
+			"JAS_F35RAF_IN"};
 		initSpeed = 0;
 		mass = 1050;
 		pylonWeapon = "JAS_FIR_GBU24118_Pylon";
@@ -6383,7 +6524,9 @@ class cfgMagazines
 			"JAS_A10_39",
 			"JAS_AV8_MID",
 			"JAS_AV8_IN",
-			"JAS_GR9_STRIKE"
+			"JAS_GR9_STRIKE",
+			"JAS_F35_MID",
+			"JAS_F35_IN"
 		};
 		pylonWeapon = "JAS_BIS_weapon_AGM_65Launcher";
 		mass = 304;
@@ -6463,7 +6606,9 @@ class cfgMagazines
 			"JAS_A10_39",
 			"JAS_AV8_MID",
 			"JAS_AV8_IN",
-			"JAS_GR9_STRIKE"
+			"JAS_GR9_STRIKE",
+			"JAS_F35_MID",
+			"JAS_F35_IN"
 		};
 		pylonWeapon = "JAS_BIS_weapon_AGM_65LLauncher";
 		ammo = "JAS_BIS_AGM65L";
@@ -6515,7 +6660,10 @@ class cfgMagazines
 			"JAS_A10_57",
 			"JAS_A10_6",
 			"JAS_AV8_MID",
-			"JAS_AV8_IN"
+			"JAS_AV8_IN",
+			"JAS_F35_MID",
+			"JAS_F35_IN",
+			"JAS_F35_INT"
 		};
 		initSpeed = 0;
 		mass = 430;
@@ -6538,7 +6686,10 @@ class cfgMagazines
 			"JAS_A10_57",
 			"JAS_A10_6",
 			"JAS_AV8_MID",
-			"JAS_AV8_IN"
+			"JAS_AV8_IN",
+			"JAS_F35_MID",
+			"JAS_F35_IN",
+			"JAS_F35_INT"
 		};
 		initSpeed = 0;
 		mass = 222;
@@ -6563,7 +6714,10 @@ class cfgMagazines
 			"JAS_A10_57",
 			"JAS_A10_6",
 			"JAS_AV8_MID",
-			"JAS_AV8_IN"
+			"JAS_AV8_IN",
+			"JAS_F35_MID",
+			"JAS_F35_IN",
+			"JAS_F35_INT"
 		};
 		initSpeed = 0;
 		mass = 450;
@@ -6705,7 +6859,8 @@ class cfgMagazines
 		descriptionShort = "GBU-31 JDAM";
 		displayName = "GBU-31";
 		displayNameShort = "GBU-31 JDAM";
-		hardpoints[] = {"JAS_NATO_JDAM","JAS_A10_39","JAS_A10_48","JAS_A10_57","JAS_AV8_MID","JAS_AV8_IN"};
+		hardpoints[] = {"JAS_NATO_JDAM","JAS_A10_39","JAS_A10_48","JAS_A10_57","JAS_AV8_MID","JAS_AV8_IN","JAS_F35_IN",
+			"JAS_F35RAF_IN"};
 		initSpeed = 0;
 		mass = 907;
 		pylonWeapon = "JAS_FIR_GBU31_Pylon";
@@ -6716,7 +6871,24 @@ class cfgMagazines
 		descriptionShort = "GBU-38 JDAM";
 		displayName = "GBU-38";
 		displayNameShort = "GBU-38 JDAM";
-		hardpoints[] = {"JAS_NATO_JDAM","JAS_NATO_NAVY_STRIKE","JAS_NATO_NAVY_BOMB","JAS_NATO_NAVY_BOMB_INT","JAS_A10_39","JAS_A10_48","JAS_A10_57","JAS_AV8_MID","JAS_AV8_IN"};
+		hardpoints[] = 
+		{
+			"JAS_NATO_JDAM",
+			"JAS_NATO_NAVY_STRIKE",
+			"JAS_NATO_NAVY_BOMB",
+			"JAS_NATO_NAVY_BOMB_INT",
+			"JAS_A10_39",
+			"JAS_A10_48",
+			"JAS_A10_57",
+			"JAS_AV8_MID",
+			"JAS_AV8_IN",
+			"JAS_F35_MID",
+			"JAS_F35_IN",
+			"JAS_F35_INT",
+			"JAS_F35RAF_MID",
+			"JAS_F35RAF_IN",
+			"JAS_F35RAF_INT"
+		};
 		initSpeed = 0;
 		mass = 230;
 		pylonWeapon = "JAS_FIR_GBU38_Pylon";
@@ -6727,7 +6899,24 @@ class cfgMagazines
 		descriptionShort = "EGBU-12 Paveway";
 		displayName = "EGBU-12 Enhanced Paveway II";
 		displayNameShort = "LSR/GPS Dual";
-		hardpoints[] = {"JAS_NATO_JDAM","JAS_A10_111","JAS_A10_210","JAS_A10_39","JAS_A10_48","JAS_A10_57","JAS_A10_6","JAS_AV8_MID","JAS_AV8_IN"};
+		hardpoints[] = 
+		{
+			"JAS_NATO_JDAM",
+			"JAS_A10_111",
+			"JAS_A10_210",
+			"JAS_A10_39",
+			"JAS_A10_48",
+			"JAS_A10_57",
+			"JAS_A10_6",
+			"JAS_AV8_MID",
+			"JAS_AV8_IN",
+			"JAS_F35_MID",
+			"JAS_F35_IN",
+			"JAS_F35_INT",
+			"JAS_F35RAF_MID",
+			"JAS_F35RAF_IN",
+			"JAS_F35RAF_INT"
+		};
 		initSpeed = 0;
 		mass = 277;
 		pylonWeapon = "JAS_FIR_EGBU12_Pylon";
@@ -6768,7 +6957,20 @@ class cfgMagazines
 		descriptionShort = "GBU-54 LJDAM";
 		displayName = "GBU-54 LJDAM";
 		displayNameShort = "GBU-54";
-		hardpoints[] = {"JAS_NATO_JDAM","JAS_A10_39","JAS_A10_48","JAS_A10_57","JAS_AV8_MID","JAS_AV8_IN"};
+		hardpoints[] = {
+			"JAS_NATO_JDAM",
+			"JAS_A10_39",
+			"JAS_A10_48",
+			"JAS_A10_57",
+			"JAS_AV8_MID",
+			"JAS_AV8_IN",
+			"JAS_F35_MID",
+			"JAS_F35_IN",
+			"JAS_F35_INT",
+			"JAS_F35RAF_MID",
+			"JAS_F35RAF_IN",
+			"JAS_F35RAF_INT"
+		};
 		initSpeed = 0;
 		mass = 227;
 		pylonWeapon = "JAS_FIR_GBU54_Pylon";
@@ -6779,7 +6981,7 @@ class cfgMagazines
 		descriptionShort = "CBU-103 WCMD";
 		displayName = "CBU-103 CEM WCMD";
 		displayNameShort = "CBU-103";
-		hardpoints[] = {"JAS_NATO_JDAM","JAS_A10_39","JAS_A10_48","JAS_A10_57","JAS_AV8_MID","JAS_AV8_IN"};
+		hardpoints[] = {"JAS_NATO_JDAM","JAS_A10_39","JAS_A10_48","JAS_A10_57","JAS_AV8_MID","JAS_AV8_IN","JAS_F35_MID","JAS_F35_IN","JAS_F35_INT"};
 		initSpeed = 0;
 		mass = 431;
 		pylonWeapon = "JAS_FIR_CBU103_Pylon";
@@ -6790,7 +6992,7 @@ class cfgMagazines
 		descriptionShort = "CBU-105 WCMD";
 		displayName = "CBU-105 SFW WCMD";
 		displayNameShort = "CBU-105";
-		hardpoints[] = {"JAS_NATO_JDAM","JAS_A10_39","JAS_A10_48","JAS_A10_57","JAS_AV8_MID","JAS_AV8_IN"};
+		hardpoints[] = {"JAS_NATO_JDAM","JAS_A10_39","JAS_A10_48","JAS_A10_57","JAS_AV8_MID","JAS_AV8_IN","JAS_F35_MID","JAS_F35_IN","JAS_F35_INT"};
 		initSpeed = 0;
 		mass = 450;
 		pylonWeapon = "JAS_FIR_CBU105_Pylon";
@@ -6970,7 +7172,10 @@ class cfgMagazines
 			"JAS_AV8_IN",
 			"JAS_GR9_AA",
 			"JAS_GR9_STRIKE",
-			"JAS_GR9_GEAR"
+			"JAS_GR9_GEAR",
+			"JAS_F35_OUT",
+			"JAS_F35_MID",
+			"JAS_F35_IN"
 		};
 		initSpeed = 0;
 		mass = 86;
@@ -6996,7 +7201,7 @@ class cfgMagazines
 		descriptionShort = "AIM-120D AMRAAM";
 		displayName = "AIM-120D AMRAAM";
 		displayNameShort = "AIM-120D";
-		hardpoints[] = {"JAS_NATO_AAM"};
+		hardpoints[] = {"JAS_NATO_AAM","JAS_F35_OUT","JAS_F35_MID","JAS_F35_IN","JAS_F35_INT","JAS_F35_INTAA"};
 		mass = 152;
 		pylonWeapon = "JAS_FIR_AIM120_Pylon";
 		weight = 152;
@@ -7172,12 +7377,24 @@ class cfgMagazines
 		weight = 675;
 		pylonWeapon = "JAS_FIR_AGM84SLAM_Pylon";
 	};
+	class JAS_STORMSHADOW_PYLON_M : JAS_FIR_AGM84H_PYLON_M
+	{
+		ammo = "JAS_STORMSHADOW_AMMO";
+		model = "\FIR_AirWeaponSystem_US\data\proxies\mssl_1x_aim9l.p3d";
+		hardpoints[] = {"JAS_F35RAF_IN"};
+		descriptionShort = "STORM SHADOW";
+		displayName = "STORM SHADOW";
+		displayNameShort = "STORM SHADOW";
+		mass = 675;
+		weight = 675;
+		pylonWeapon = "JAS_STORMSHADOW_PYLON";
+	};
 	class JAS_FIR_AGM88_PYLON_M : FIR_AGM88_P_1rnd_M
 	{
 		descriptionShort = "AGM-88 HARM";
 		displayName = "AGM-88 HARM";
 		displayNameShort = "AGM-88";
-		hardpoints[] = {"JAS_NATO_NAVY_STRIKE","JAS_AV8_MID","JAS_AV8_IN"};
+		hardpoints[] = {"JAS_NATO_NAVY_STRIKE","JAS_AV8_MID","JAS_AV8_IN","JAS_F35_MID","JAS_F35_IN","JAS_F35RAF_MID","JAS_F35RAF_IN"};
 		initSpeed = 0;
 		mass = 355;
 		pylonWeapon = "JAS_FIR_AGM88_Pylon";
@@ -7280,7 +7497,7 @@ class cfgMagazines
 		descriptionShort = "AGM154A JSOW CEM";
 		displayName = "AGM154A";
 		displayNameShort = "AGM154A JSOW";
-		hardpoints[] = {"JAS_NATO_NAVY_STRIKE","JAS_NATO_NAVY_BOMB","JAS_NATO_NAVY_BOMB_INT"};
+		hardpoints[] = {"JAS_NATO_NAVY_STRIKE","JAS_NATO_NAVY_BOMB","JAS_NATO_NAVY_BOMB_INT","JAS_F35_MID","JAS_F35_IN","JAS_F35_INT"};
 		initSpeed = 0;
 		mass = 497;
 		pylonWeapon = "JAS_FIR_AGM154A_Pylon";
@@ -7291,7 +7508,7 @@ class cfgMagazines
 		descriptionShort = "AGM154C GPB";
 		displayName = "AGM154C";
 		displayNameShort = "AGM154C GPB";
-		hardpoints[] = {"JAS_NATO_NAVY_STRIKE","JAS_NATO_NAVY_BOMB","JAS_NATO_NAVY_BOMB_INT"};
+		hardpoints[] = {"JAS_NATO_NAVY_STRIKE","JAS_NATO_NAVY_BOMB","JAS_NATO_NAVY_BOMB_INT","JAS_F35_MID","JAS_F35_IN","JAS_F35_INT"};
 		initSpeed = 0;
 		mass = 483;
 		pylonWeapon = "JAS_FIR_AGM154C_Pylon";
@@ -7302,7 +7519,8 @@ class cfgMagazines
 		descriptionShort = "GBU-32 1000lb JDAM";
 		displayName = "GBU-32";
 		displayNameShort = "GBU-32 JDAM";
-		hardpoints[] = {"JAS_NATO_NAVY_STRIKE","JAS_NATO_NAVY_BOMB","JAS_AV8_MID","JAS_AV8_IN"};
+		hardpoints[] = {"JAS_NATO_NAVY_STRIKE","JAS_NATO_NAVY_BOMB","JAS_AV8_MID","JAS_AV8_IN","JAS_F35_IN",
+			"JAS_F35RAF_IN"};
 		initSpeed = 0;
 		mass = 450;
 		pylonWeapon = "JAS_FIR_GBU32_Pylon";
@@ -7330,7 +7548,7 @@ class cfgMagazines
 		descriptionShort = "Meteor BVRAAM";
 		displayName = "Meteor BVRAAM";
 		displayNameShort = "Meteor";
-		hardpoints[] = {"JAS_INDEP_AAM"};
+		hardpoints[] = {"JAS_INDEP_AAM","JAS_F35RAF_OUT","JAS_F35RAF_MID","JAS_F35RAF_IN","JAS_F35RAF_INT","JAS_F35RAF_INTAA"};
 		mass = 185;
 		model = "\FIR_AirWeaponSystem_US\data\Meteor\Meteor.p3d";
 		pylonWeapon = "JAS_FIR_Meteor_Launcher";
@@ -11890,6 +12108,75 @@ class cfgWeapons
 	class BombCluster_01_F;
 	class BombCluster_02_F;
 	class BombCluster_03_F;
+	class FIR_GBU53;
+	class FIR_GBU39;
+	class JAS_FIR_GBU39 : FIR_GBU39
+	{
+		autofire = 0;
+		ballisticsComputer = 8;
+		scope = 2;
+		holdsterAnimValue = 1;
+		displayName = "GBU-39 SDB 250lb";
+		displayNameMagazine = "GBU39";
+		shortNameMagazine = "GBU39 SDB";
+		cursoraim = "bomb";
+		canLock = 0;
+		sounds[] = { "StandardSound" };
+		class StandardSound
+		{
+			begin1[] = { "\FIR_AirWeaponSystem_US\sound\Release_Bomb", 1.5848932, 1.1, 2100 };
+			soundBegin[] = { "begin1", 1 };
+			weaponSoundEffect = "DefaultRifle";
+		};
+		initspeed = 10;
+		magazineReloadTime = 0.5;
+		reloadTime = 0.500000;
+		aiDispersionCoefX = 1.0;
+		aiDispersionCoefY = 1.0;
+		aiRateOfFire = 4.0;
+		aiRateOfFireDistance = 300;
+		minRange = 100;
+		minRangeProbab = 0.55;
+		midRange = 1000;
+		midRangeProbab = 0.85;
+		maxRange = 2000;
+		maxRangeProbab = 0.20;
+		maxLeadSpeed = 0;
+		magazines[] = {"JAS_FIR_GBU39_P_4rnd_M"};
+	};
+	class JAS_FIR_GBU53 : FIR_GBU53
+	{
+		autofire = 0;
+		ballisticsComputer = 8;
+		scope = 2;
+		holdsterAnimValue = 1;
+		displayName = "GBU-53 SDB II 250lb";
+		displayNameMagazine = "GBU53";
+		shortNameMagazine = "GBU53 SDB II";
+		cursoraim = "bomb";
+		sounds[] = { "StandardSound" };
+		class StandardSound
+		{
+			begin1[] = { "\FIR_AirWeaponSystem_US\sound\Release_Bomb", 1.5848932, 1.1, 2100 };
+			soundBegin[] = { "begin1", 1 };
+			weaponSoundEffect = "DefaultRifle";
+		};
+		initspeed = 10;
+		magazineReloadTime = 0.5;
+		reloadTime = 0.500000;
+		aiDispersionCoefX = 1.0;
+		aiDispersionCoefY = 1.0;
+		aiRateOfFire = 4.0;
+		aiRateOfFireDistance = 300;
+		minRange = 100;
+		minRangeProbab = 0.55;
+		midRange = 1000;
+		midRangeProbab = 0.85;
+		maxRange = 2000;
+		maxRangeProbab = 0.20;
+		maxLeadSpeed = 0;
+		magazines[] = {"JAS_FIR_GBU53_P_4rnd_M"};
+	};
 	class JAS_BombCluster_01_F : BombCluster_01_F
 	{
 		magazines[] = {"JAS_PylonMissile_1Rnd_BombCluster_01_F","JAS_PylonRack_2Rnd_BombCluster_01_F"};
@@ -12028,7 +12315,7 @@ class cfgWeapons
 	{
 		magazines[]=
 		{
-			"JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M"
+			"JAS_FIR_BRIMSTONE_CHOPPER_PYLON_M","JAS_FIR_BRIMSTONE_JET_PYLON_M","JAS_FIR_BRIMSTONE_JET2_PYLON_M"
 		};
 	};
 	class JAS_HellfireLauncher_L_Pylon: JAS_HellfireLauncher_L
@@ -12341,6 +12628,14 @@ class cfgWeapons
 		displayNameMagazine = "AGM-84 SLAM";
 		shortNameMagazine = "AGM84 SLAM";
 		magazines[] = {"FIR_AGM84H_1rnd_M","JAS_FIR_AGM84SLAM_PYLON_M"};
+	};
+	class JAS_STORMSHADOW_PYLON : JAS_FIR_AGM84H_Pylon
+	{
+		canLock = 0;
+		displayName = "STORM SHADOW";
+		displayNameMagazine = "STORM SHADOW";
+		shortNameMagazine = "STORM SHADOW";
+		magazines[] = {"JAS_STORMSHADOW_PYLON_M"};
 	};
 	class JAS_FIR_AGM88_Pylon : FIR_AGM88
 	{
