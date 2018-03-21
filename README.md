@@ -1,5 +1,22 @@
 # ARMA3_CUP_Enhancement
 
+**V4.1.5 General Maintenance**
+
+Changelog:
+
+AW-159:
+
+* Tweaked AFM
+
+F-35:
+
+* Overhauled Pylon loading system
+* Updated HUD
+
+Weapons:
+
+* Numerous tweaks to enable F-35 update
+
 **V4.1.4 Harrier Fix**
 
 Changelog:
