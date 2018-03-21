@@ -23,8 +23,8 @@ _handle= CreateDialog "f35RAF_GUI";
 	[  
 		"Empty",
 		"ASRAAM",
-		"Meteor"
-		//"BRIMSTONE",
+		"Meteor",
+		"BRIMSTONE"
 		//"Sniper XR POD"
     ];
 	
@@ -33,8 +33,8 @@ _handle= CreateDialog "f35RAF_GUI";
 	[  
 		"Empty",
 		"ASRAAM",
-		"Meteor"
-		//"BRIMSTONE",
+		"Meteor BVRAAM",
+		"BRIMSTONE"
 		//"Sniper XR POD"
     ];
 	
@@ -43,58 +43,46 @@ _handle= CreateDialog "f35RAF_GUI";
 	[  
 		"Empty",
 		"ASRAAM",
-		"Meteor",
-		"BRIMSTONE",
+		"Meteor BVRAAM",
+		"BRIMSTONE x2",
 		"AGM-88 HARM",
-		"GBU-10",
 		"GBU-12",
 		"EGBU-12 IV",
-		"GBU-24A",
-		"GBU-24B",
-		"GBU-24/118",
-		"GBU-31",
-		"GBU-32",
-		"GBU-38",
-		"GBU-54"
+		"GBU-38 JDAM",
+		"GBU-54 LJDAM"
     ];
 //Add Hardpoint 4 - left midline
 	{lbAdd[2102,_x]} forEach 
 	[  
 		"Empty",
 		"ASRAAM",
-		"Meteor",
-		"BRIMSTONE",
+		"Meteor BVRAAM",
+		"BRIMSTONE x2",
 		"AGM-88 HARM",
-		"GBU-10",
 		"GBU-12",
 		"EGBU-12 IV",
-		"GBU-24A",
-		"GBU-24B",
-		"GBU-24/118",
-		"GBU-31",
-		"GBU-32",
-		"GBU-38",
-		"GBU-54"
+		"GBU-38 JDAM",
+		"GBU-54 LJDAM"
     ];
 //Add Hardpoint 5 - right inboard
 	{lbAdd[2103,_x]} forEach 
 	[  
 		"Empty",
 		"ASRAAM",
-		"Meteor",
-		"BRIMSTONE",
+		"Meteor BVRAAM",
+		"BRIMSTONE x2",
 		"AGM-88 HARM",
-		"GBU-10",
 		"GBU-12",
 		"EGBU-12 IV",
 		"GBU-24A",
 		"GBU-24B",
 		"GBU-24/118",
-		"GBU-31",
-		"GBU-32",
-		"GBU-38",
-		"GBU-54",
-		"Fuel Tank",
+		"GBU-31 JDAM",
+		"GBU-32 JDAM",
+		"GBU-38 JDAM",
+		"GBU-39 SDB I",
+		"GBU-53 SDB II",
+		"GBU-54 LJDAM",
 		"Storm Shadow"
     ];
 //Add Hardpoint 6 - left inboard
@@ -102,20 +90,20 @@ _handle= CreateDialog "f35RAF_GUI";
 	[  
 		"Empty",
 		"ASRAAM",
-		"Meteor",
-		"BRIMSTONE",
+		"Meteor BVRAAM",
+		"BRIMSTONE x2",
 		"AGM-88 HARM",
-		"GBU-10",
 		"GBU-12",
 		"EGBU-12 IV",
 		"GBU-24A",
 		"GBU-24B",
 		"GBU-24/118",
-		"GBU-31",
-		"GBU-32",
-		"GBU-38",
-		"GBU-54",
-		"Fuel Tank",
+		"GBU-31 JDAM",
+		"GBU-32 JDAM",
+		"GBU-38 JDAM",
+		"GBU-39 SDB I",
+		"GBU-53 SDB II",
+		"GBU-54 LJDAM",
 		"Storm Shadow"
     ];
 //Add Hardpoint 7 - internal right outer
@@ -123,37 +111,36 @@ _handle= CreateDialog "f35RAF_GUI";
 	[  
 		"Empty",
 		"ASRAAM",
+		"Meteor BVRAAM",
 		"GBU-12",
 		"EGBU-12 IV",
-		"GBU-38",
-		"GBU-54",
-		"Mk82 Snakeye",
-		"Mk82 GPB",
-		"GBU-39 SDB",
-		"GBU-53 SDB",
-		"BRIMSTONE"
+		"GBU-38 JDAM",
+		"GBU-39 SDB I",
+		"GBU-53 SDB II",
+		"GBU-54 LJDAM",
+		"BRIMSTONE x2"
     ];
 //Add Hardpoint 8 - internal left outer
 	{lbAdd[2106,_x]} forEach 
 	[  
 		"Empty",
 		"ASRAAM",
+		"Meteor BVRAAM",
 		"GBU-12",
 		"EGBU-12 IV",
-		"GBU-38",
-		"GBU-54",
-		"Mk82 Snakeye",
-		"Mk82 GPB",
-		"GBU-39 SDB",
-		"GBU-53 SDB",
-		"BRIMSTONE"
+		"GBU-38 JDAM",
+		"GBU-39 SDB I",
+		"GBU-53 SDB II",
+		"GBU-54 LJDAM",
+		"BRIMSTONE x2"
     ];
 	
 	//Add Hardpoint 9 - internal left inner
 	{lbAdd[2202,_x]} forEach 
 	[  
 		"Empty",
-		"ASRAAM"
+		"ASRAAM",
+		"Meteor BVRAAM"
 		/*"GBU-12",
 		"EGBU-12 IV",
 		"GBU-38",
@@ -169,7 +156,8 @@ _handle= CreateDialog "f35RAF_GUI";
 	{lbAdd[2107,_x]} forEach 
 	[  
 		"Empty",
-		"ASRAAM"
+		"ASRAAM",
+		"Meteor BVRAAM"
 		/*"GBU-12",
 		"EGBU-12 IV",
 		"GBU-38",
@@ -181,3 +169,9 @@ _handle= CreateDialog "f35RAF_GUI";
 		"BRIMSTONE"*/
     ];
 
+	//Add Hardpoint 11 - belly centre
+	{lbAdd[21008,_x]} forEach 
+	[  
+		"Empty",
+		"GAU-22 POD"
+    ];

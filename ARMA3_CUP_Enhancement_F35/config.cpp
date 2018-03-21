@@ -401,7 +401,7 @@ class f35_GUI
 		class RscText_1005 : RscText
 		{
 			idc = 1005;
-			text = "Right Internal 1";
+			text = "Internal 1";
 			x = "0.64 * safezoneW + safezoneX";
 			y = "0.412 * safezoneH + safezoneY";
 			w = "0.5 * safezoneW";
@@ -410,7 +410,7 @@ class f35_GUI
 		class RscText_1006 : RscText
 		{
 			idc = 1006;
-			text = "Left Internal 1";
+			text = "Internal 2";
 			x = "0.22 * safezoneW + safezoneX";
 			y = "0.412 * safezoneH + safezoneY";
 			w = "0.5 * safezoneW";
@@ -419,7 +419,7 @@ class f35_GUI
 		class RscText_1102 : RscText
 		{
 			idc = 1102;
-			text = "Right Internal 2";
+			text = "Internal 3";
 			x = "0.64 * safezoneW + safezoneX";
 			y = "0.466 * safezoneH + safezoneY";
 			w = "0.5 * safezoneW";
@@ -428,9 +428,18 @@ class f35_GUI
 		class RscText_1007 : RscText
 		{
 			idc = 1007;
-			text = "Left Internal 2";
+			text = "Internal 4";
 			x = "0.22 * safezoneW + safezoneX";
 			y = "0.466 * safezoneH + safezoneY";
+			w = "0.5 * safezoneW";
+			h = "0.028 * safezoneH";
+		};
+		class RscText_11001 : RscText
+		{
+			idc = 11001;
+			text = "Belly Centreline";
+			x = "0.43 * safezoneW + safezoneX";
+			y = "0.52 * safezoneH + safezoneY";
 			w = "0.5 * safezoneW";
 			h = "0.028 * safezoneH";
 		};
@@ -511,6 +520,14 @@ class f35_GUI
 			idc = 2107;
 			x = "0.22 * safezoneW + safezoneX";
 			y = "0.492 * safezoneH + safezoneY";
+			w = "0.0875 * safezoneW";
+			h = "0.028 * safezoneH";
+		};
+		class hp11 : RscCombo
+		{
+			idc = 21008;
+			x = "0.43 * safezoneW + safezoneX";
+			y = "0.546 * safezoneH + safezoneY";
 			w = "0.0875 * safezoneW";
 			h = "0.028 * safezoneH";
 		};
@@ -777,7 +794,7 @@ class f35RAF_GUI
 		class RscText_1005 : RscText
 		{
 			idc = 1005;
-			text = "Right Internal 1";
+			text = "Internal 1";
 			x = "0.64 * safezoneW + safezoneX";
 			y = "0.412 * safezoneH + safezoneY";
 			w = "0.5 * safezoneW";
@@ -786,7 +803,7 @@ class f35RAF_GUI
 		class RscText_1006 : RscText
 		{
 			idc = 1006;
-			text = "Left Internal 1";
+			text = "Internal 2";
 			x = "0.22 * safezoneW + safezoneX";
 			y = "0.412 * safezoneH + safezoneY";
 			w = "0.5 * safezoneW";
@@ -795,7 +812,7 @@ class f35RAF_GUI
 		class RscText_1102 : RscText
 		{
 			idc = 1102;
-			text = "Right Internal 2";
+			text = "Internal 3";
 			x = "0.64 * safezoneW + safezoneX";
 			y = "0.466 * safezoneH + safezoneY";
 			w = "0.5 * safezoneW";
@@ -804,9 +821,18 @@ class f35RAF_GUI
 		class RscText_1007 : RscText
 		{
 			idc = 1007;
-			text = "Left Internal 2";
+			text = "Internal 4";
 			x = "0.22 * safezoneW + safezoneX";
 			y = "0.466 * safezoneH + safezoneY";
+			w = "0.5 * safezoneW";
+			h = "0.028 * safezoneH";
+		};
+		class RscText_11001 : RscText
+		{
+			idc = 11001;
+			text = "Belly Centreline";
+			x = "0.43 * safezoneW + safezoneX";
+			y = "0.52 * safezoneH + safezoneY";
 			w = "0.5 * safezoneW";
 			h = "0.028 * safezoneH";
 		};
@@ -887,6 +913,14 @@ class f35RAF_GUI
 			idc = 2107;
 			x = "0.22 * safezoneW + safezoneX";
 			y = "0.492 * safezoneH + safezoneY";
+			w = "0.0875 * safezoneW";
+			h = "0.028 * safezoneH";
+		};
+		class hp11 : RscCombo
+		{
+			idc = 21008;
+			x = "0.43 * safezoneW + safezoneX";
+			y = "0.546 * safezoneH + safezoneY";
 			w = "0.0875 * safezoneW";
 			h = "0.028 * safezoneH";
 		};
@@ -2155,6 +2189,280 @@ class CfgVehicles
 					};
 				};
 			};
+			class TransportPylonsComponent
+			{
+				uiPicture="\CUP\AirVehicles\CUP_AirVehicles_F35\data\UI\CUP_F35_3DEN_ca.paa";
+				class Pylons
+				{
+					class Pylons1
+					{
+						hardpoints[]=
+						{
+							"JAS_F35_OUT"
+						};
+						attachment="JAS_FIR_AIM9L_PYLON_M";
+						priority=5;
+						maxweight=200;
+						UIposition[]=
+						{
+							"0.3+0.04",
+							"0.01+0.0"
+						};
+					};
+					class Pylons2: Pylons1
+					{
+						hardpoints[]=
+						{
+							"JAS_F35_MID"
+						};
+						priority=4;
+						attachment="JAS_FIR_AIM120_PYLON_M";
+						maxweight=500;
+						UIposition[]=
+						{
+							"0.3+0.03",
+							"0.01+0.05"
+						};
+					};
+					class Pylons3: Pylons1
+					{
+						hardpoints[]=
+						{
+							"JAS_F35_IN"
+						};
+						priority=3;
+						attachment="JAS_FIR_AGM154A_PYLON_M";
+						maxweight=1100;
+						UIposition[]=
+						{
+							"0.3+0.02",
+							"0.01+0.10"
+						};
+					};
+					class Pylons4: Pylons1 // Internal
+					{
+						hardpoints[]=
+						{
+							"JAS_F35_INT"
+						};
+						priority=2;
+						attachment="JAS_FIR_GBU53_P_4rnd_M";
+						maxweight=1500;
+						UIposition[]=
+						{
+							"0.3+0.01",
+							"0.01+0.17"
+						};
+						bay=2;
+					};
+					class Pylons5: Pylons1 // Internal
+					{
+						hardpoints[]=
+						{
+							"JAS_F35_INTAA"
+						};
+						priority=1;
+						attachment="JAS_FIR_AIM120_PYLON_M";
+						maxweight=1500;
+						UIposition[]=
+						{
+							"0.3+0.01",
+							"0.01+0.22"
+						};
+						bay=2;
+					};
+					class Pylons6: Pylons1 // Belly Centreline
+					{
+						priority=2;
+						attachment="CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M";
+						maxweight=1500;
+						UIposition[]=
+						{
+							"0.3-0.03",
+							"0.01+0.27"
+						};
+						hardpoints[]=
+						{
+							"CUP_F35_CENTER_PYLON"
+						};
+					};
+					class Pylons7: Pylons5 // Internal
+					{
+						bay=1;
+						UIposition[]=
+						{
+							"0.3+0.01",
+							"0.01+0.32"
+						};
+						mirroredMissilePos=5;
+					};
+					class Pylons8: Pylons4 // Internal
+					{
+						bay=1;
+						UIposition[]=
+						{
+							"0.3+0.01",
+							"0.01+0.37"
+						};
+						mirroredMissilePos=4;
+					};
+					class Pylons9: Pylons3
+					{
+						UIposition[]=
+						{
+							"0.3+0.02",
+							"0.01+0.44"
+						};
+						mirroredMissilePos=3;
+					};
+					class Pylons10: Pylons2
+					{
+						UIposition[]=
+						{
+							"0.3+0.03",
+							"0.01+0.49"
+						};
+						mirroredMissilePos=2;
+					};
+					class Pylons11: Pylons1
+					{
+						UIposition[]=
+						{
+							"0.3+0.04",
+							"0.01+0.54"
+						};
+						mirroredMissilePos=1;
+					};
+				};
+				class Bays
+				{
+					class Bay1
+					{
+						bayOpenTime=0.5;
+						openBayWhenWeaponSelected=1;
+						autoCloseWhenEmptyDelay=2;
+					};
+					class Bay2: Bay1
+					{
+					};
+				};
+				class Presets
+				{
+					class Empty
+					{
+						displayName="Empty";
+						attachment[]={};
+					};
+					class MR
+					{
+						displayName="Multi-Role";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AGM88_PYLON_M",
+							"JAS_FIR_CBU103_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_CBU103_PYLON_M",
+							"JAS_FIR_AGM88_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class CAP
+					{
+						displayName="Combat Air Patrol";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class CAS
+					{
+						displayName="Close Air Support";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_PylonRack_MAV_L_x1",
+							"JAS_PylonRack_MAV_L_x1",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_PylonRack_MAV_L_x1",
+							"JAS_PylonRack_MAV_L_x1",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class PGM
+					{
+						displayName="Precision Strike";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class PGM2
+					{
+						displayName="Stand Off Strike";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AGM154C_PYLON_M",
+							"JAS_FIR_AGM154C_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_AGM154C_PYLON_M",
+							"JAS_FIR_AGM154C_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+					class SEAD
+					{
+						displayName="SEAD";
+						attachment[]=
+						{
+							"JAS_FIR_AIM9L_PYLON_M",
+							"JAS_FIR_AGM88_PYLON_M",
+							"JAS_FIR_AGM88_PYLON_M",
+							"JAS_FIR_AGM154C_PYLON_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_AIM120_PYLON_M",
+							"JAS_FIR_AGM154C_PYLON_M",
+							"JAS_FIR_AGM88_PYLON_M",
+							"JAS_FIR_AGM88_PYLON_M",
+							"JAS_FIR_AIM9L_PYLON_M"
+						};
+					};
+				};
+			};
 		};
 		memoryPointDriverOptics="gau22_start";
 		//unitInfoType="RscOptics_AV_pilot";
@@ -2166,13 +2474,13 @@ class CfgVehicles
 		weapons[] =
 		{
 			"FIR_MasterArm",
-			"JAS_CUP_Vacannon_GAU22_veh",
+			//"JAS_CUP_Vacannon_GAU22_veh",
 			"FIR_CMLauncher",
 			"Laserdesignator_mounted"
 		};
 		magazines[] =
 		{
-			"JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M",
+			//"JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M",
 			"FIR_240rnd_CMFlare_Chaff_Magazine",
 			"Laserbatteries"
 		};
@@ -2216,7 +2524,7 @@ class CfgVehicles
 				showWindow = 0;
 				hideOnUse = 1;
 			};
-			class CUP_F35B_OpenWeaponBay
+			/*class CUP_F35B_OpenWeaponBay
 			{
 				priority = 1.5;
 				shortcut = "";
@@ -2253,8 +2561,8 @@ class CfgVehicles
 				displayName = "Vertical Take-off Mode (Off)";
 				condition = "player in this and isengineon this and (this getvariable ['CUP_AirVehicles_VTOL',false]);";
 				statement = "[this, false] call CUP_fnc_VTOL;";
-			};
-			class FindRadarTGT
+			};/*
+			/*class FindRadarTGT
 			{
 				displayName = "Find Radar Target";
 				position = "pos cano";
@@ -2293,7 +2601,7 @@ class CfgVehicles
 				condition = "player in this and isengineon this";
 				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\Jettison\droptanks.sqf"";";
 				onlyforplayer = "False";
-			};
+			};*/
 			class Aircraft_MFD_Open_N
 			{
 				displayName = "Open Targetting System";
@@ -2311,6 +2619,6346 @@ class CfgVehicles
 			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
 			fired="fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
+		};
+		/*class MFD
+		{
+			class AirplaneHUD
+			{
+				enableParallax=1;
+				topLeft="HUD_top_left";
+				topRight="HUD_top_right";
+				bottomLeft="HUD_bottom_left";
+				borderLeft=0;
+				borderRight=0;
+				borderTop=0;
+				borderBottom=0.2;
+				color[]={0.15000001,1,0.15000001,1};
+				helmetMountedDisplay=1;
+				helmetPosition[]={-0.024599999,0.018999999,0.1};
+				helmetRight[]={0.050000001,0,0};
+				helmetDown[]={0,-0.050000001,0};
+				class Bones
+				{
+					class PlaneOrientation
+					{
+						type="fixed";
+						pos[]={0.498,0.38};
+					};
+					class WeaponAim
+					{
+						type="vector";
+						source="weapon";
+						pos0[]={0.498,0.38};
+						pos10[]={1.298,1.38};
+					};
+					class Target
+					{
+						type="vector";
+						source="target";
+						pos0[]={0.498,0.38};
+						pos10[]={1.298,1.38};
+					};
+					class Velocity
+					{
+						type="vector";
+						source="velocity";
+						pos0[]={0.498,0.38};
+						pos10[]={1.298,1.38};
+					};
+					class ILS_H
+					{
+						type="ils";
+						pos0[]={0.5,0.5};
+						pos3[]={0.60500002,0.5};
+					};
+					class ILS_W: ILS_H
+					{
+						pos3[]={0.5,0.60500002};
+					};
+					class Level0
+					{
+						type="horizon";
+						pos0[]=
+						{
+							0.5,
+							"0.38+0.00"
+						};
+						pos10[]={1.3,1.38};
+						angle=0;
+					};
+					class VerticalSpeed
+					{
+						type="linear";
+						source="vspeed";
+						sourceScale=1;
+						min=-100;
+						max=100;
+						minPos[]={0,0.15000001};
+						maxPos[]={0,-0.15000001};
+					};
+					class HorizonIndicatorBank
+					{
+						type="rotational";
+						source="horizonBank";
+						sourceScale=1;
+						center[]={0.064999998,0.12};
+						min=-3.1415901;
+						max=3.1415901;
+						minAngle=0;
+						maxAngle=360;
+						aspectRatio="1 / (0.8 /1)";
+					};
+					class HorizonIndicatorDive: HorizonIndicatorBank
+					{
+						source="horizonDive";
+						min="-3.14159265359 / 2";
+						max="3.14159265359 / 2";
+						minAngle=90;
+						maxAngle=-90;
+					};
+				};
+				class Draw
+				{
+					color[]={0.15000001,1,0.15000001};
+					alpha=1;
+					condition="on";
+					class PlaneOrientationCrosshair
+					{
+						clipTL[]={0,1};
+						clipBR[]={1,0};
+						type="line";
+						width=4;
+						points[]=
+						{
+							
+							{
+								"PlaneOrientation",
+								{0,-0.025},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{0.0099999998,-0.02165},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{0.01732,-0.0125},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{0.02,0},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{0.01732,0.0125},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{0.0099999998,0.02165},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{0,0.025},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{-0.0099999998,0.02165},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{-0.01732,0.0125},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{-0.02,0},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{-0.01732,-0.0125},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{-0.0099999998,-0.02165},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{0,-0.025},
+								1
+							}
+						};
+					};
+					class PlaneMovementCrosshair
+					{
+						clipTL[]={0,1};
+						clipBR[]={1,0};
+						type="line";
+						width=4;
+						points[]=
+						{
+							
+							{
+								"Velocity",
+								{0,-0.025},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.0099999998,-0.02165},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.01732,-0.0125},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.02,0},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.01732,0.0125},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.0099999998,0.02165},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0,0.025},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.0099999998,0.02165},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.01732,0.0125},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.02,0},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.01732,-0.0125},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.0099999998,-0.02165},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0,-0.025},
+								1
+							},
+							{},
+							
+							{
+								"Velocity",
+								{0.039999999,0},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.02,0},
+								1
+							},
+							{},
+							
+							{
+								"Velocity",
+								{-0.039999999,0},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.02,0},
+								1
+							},
+							{},
+							
+							{
+								"Velocity",
+								{0,-0.050000001},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0,-0.025},
+								1
+							},
+							{}
+						};
+					};
+					class MachineGunCrosshairGroup
+					{
+						type="group";
+						condition="mgun";
+						class MachineGunCrosshair
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									"WeaponAim",
+									
+									{
+										0,
+										"-0.05/(0.8 /1)"
+									},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									
+									{
+										0,
+										"-0.015/(0.8 /1)"
+									},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									
+									{
+										-0.050000001,
+										"0.0/(0.8 /1)"
+									},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									
+									{
+										-0.015,
+										"0.0/(0.8 /1)"
+									},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									
+									{
+										0,
+										"0.05/(0.8 /1)"
+									},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									
+									{
+										0,
+										"0.015/(0.8 /1)"
+									},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									
+									{
+										0.050000001,
+										"0.0/(0.8 /1)"
+									},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									
+									{
+										0.015,
+										"0.0/(0.8 /1)"
+									},
+									1
+								}
+							};
+						};
+					};
+					class AAMissileCrosshairGroup
+					{
+						type="group";
+						condition="AAmissile";
+						class AAMissileCrosshair
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									"WeaponAim",
+									{0,-0.3125},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.043400001,-0.30774999},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.085500002,-0.29365599},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.125,-0.270625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.16069999,-0.239375},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.19149999,-0.200875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.2165,-0.15625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.234925,-0.106875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.2462,-0.054249998},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.25,0},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.2462,0.054249998},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.234925,0.106875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.2165,0.15625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.19149999,0.200875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.16069999,0.239375},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.125,0.270625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.085500002,0.29365599},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.043400001,0.30774999},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0,0.3125},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.043400001,0.30774999},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.085500002,0.29365599},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.125,0.270625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.16069999,0.239375},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.19149999,0.200875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.2165,0.15625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.234925,0.106875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.2462,0.054249998},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.25,0},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.2462,-0.054249998},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.234925,-0.106875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.2165,-0.15625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.19149999,-0.200875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.16069999,-0.239375},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.125,-0.270625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.085500002,-0.29365599},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.043400001,-0.30774999},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0,-0.3125},
+									1
+								}
+							};
+						};
+					};
+					class ATMissileCrosshairGroup
+					{
+						condition="ATmissile";
+						type="group";
+						class ATMissileCrosshair
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									"WeaponAim",
+									{-0.15000001,-0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									
+									{
+										-0.15000001,
+										"-0.15+0.02"
+									},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									
+									{
+										-0.15000001,
+										"0.15-0.02"
+									},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{0.15000001,-0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									
+									{
+										0.15000001,
+										"-0.15+0.02"
+									},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{0.15000001,0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									
+									{
+										0.15000001,
+										"0.15-0.02"
+									},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,-0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									
+									{
+										"-0.15+0.02",
+										-0.15000001
+									},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									
+									{
+										"-0.15+0.02",
+										0.15000001
+									},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{0.15000001,-0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									
+									{
+										"0.15-0.02",
+										-0.15000001
+									},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{0.15000001,0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									
+									{
+										"0.15-0.02",
+										0.15000001
+									},
+									1
+								}
+							};
+						};
+					};
+					class BombCrosshairGroup
+					{
+						type="group";
+						condition="bomb";
+						class BombCrosshair
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									"WeaponAim",
+									{0,-0.125},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.01736,-0.1231},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.034200002,-0.117463},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.050000001,-0.10825},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.064280003,-0.095749997},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.0766,-0.080349997},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.086599998,-0.0625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.093970001,-0.042750001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.098480001,-0.0217},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.1,0},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.098480001,0.0217},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.093970001,0.042750001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.086599998,0.0625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.0766,0.080349997},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.064280003,0.095749997},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.050000001,0.10825},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.034200002,0.117463},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.01736,0.1231},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0,0.125},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.01736,0.1231},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.034200002,0.117463},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.050000001,0.10825},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.064280003,0.095749997},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.0766,0.080349997},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.086599998,0.0625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.093970001,0.042750001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.098480001,0.0217},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.1,0},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.098480001,-0.0217},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.093970001,-0.042750001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.086599998,-0.0625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.0766,-0.080349997},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.064280003,-0.095749997},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.050000001,-0.10825},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.034200002,-0.117463},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.01736,-0.1231},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0,-0.125},
+									1
+								},
+								{},
+								
+								{
+									"Velocity",
+									0.001,
+									"WeaponAim",
+									{0,0},
+									1
+								},
+								
+								{
+									"Velocity",
+									{0,0},
+									1
+								}
+							};
+						};
+					};
+					class WeaponName
+					{
+						type="text";
+						source="weapon";
+						sourceScale=1;
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.02,0.85000002},
+							1
+						};
+						right[]=
+						{
+							{0.059999999,0.85000002},
+							1
+						};
+						down[]=
+						{
+							{0.02,0.88999999},
+							1
+						};
+					};
+					class AmmoCount
+					{
+						type="text";
+						source="ammo";
+						sourceScale=1;
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.95999998,0.85000002},
+							1
+						};
+						right[]=
+						{
+							{1,0.85000002},
+							1
+						};
+						down[]=
+						{
+							{0.95999998,0.88999999},
+							1
+						};
+					};
+					class FlapsGroup
+					{
+						type="group";
+						condition="flaps";
+						class FlapsText
+						{
+							type="text";
+							source="static";
+							text="FLAPS";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								
+								{
+									0.090000004,
+									"0.455+0*0.045"
+								},
+								1
+							};
+							right[]=
+							{
+								
+								{
+									0.13,
+									"0.455+0*0.045"
+								},
+								1
+							};
+							down[]=
+							{
+								
+								{
+									0.090000004,
+									"0.495+0*0.045"
+								},
+								1
+							};
+						};
+					};
+					class GearGroup
+					{
+						type="group";
+						condition="ils";
+						class GearText
+						{
+							type="text";
+							source="static";
+							text="GEAR";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								
+								{
+									0.093000002,
+									"0.50+0*0.045"
+								},
+								1
+							};
+							right[]=
+							{
+								
+								{
+									0.133,
+									"0.50+0*0.045"
+								},
+								1
+							};
+							down[]=
+							{
+								
+								{
+									0.093000002,
+									"0.54+0*0.045"
+								},
+								1
+							};
+						};
+					};
+					class PitchNumber
+					{
+						type="text";
+						source="horizonDive";
+						sourceScale=57.295799;
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							
+							{
+								0.13,
+								"0.225+1*0.045"
+							},
+							1
+						};
+						right[]=
+						{
+							
+							{
+								0.17,
+								"0.225+1*0.045"
+							},
+							1
+						};
+						down[]=
+						{
+							
+							{
+								0.13,
+								"0.265+1*0.045"
+							},
+							1
+						};
+					};
+					class PitchText
+					{
+						type="text";
+						source="static";
+						text="PITCH";
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							
+							{
+								0.092,
+								"0.225+1*0.045"
+							},
+							1
+						};
+						right[]=
+						{
+							
+							{
+								0.132,
+								"0.225+1*0.045"
+							},
+							1
+						};
+						down[]=
+						{
+							
+							{
+								0.092,
+								"0.265+1*0.045"
+							},
+							1
+						};
+					};
+					class RollNumber
+					{
+						type="text";
+						source="horizonBank";
+						sourceScale=57.295799;
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							
+							{
+								0.13,
+								"0.27+1*0.045"
+							},
+							1
+						};
+						right[]=
+						{
+							
+							{
+								0.17,
+								"0.27+1*0.045"
+							},
+							1
+						};
+						down[]=
+						{
+							
+							{
+								0.13,
+								"0.31+1*0.045"
+							},
+							1
+						};
+					};
+					class RollText
+					{
+						type="text";
+						source="static";
+						text="ROLL";
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							
+							{
+								0.096000001,
+								"0.27+1*0.045"
+							},
+							1
+						};
+						right[]=
+						{
+							
+							{
+								0.13600001,
+								"0.27+1*0.045"
+							},
+							1
+						};
+						down[]=
+						{
+							
+							{
+								0.096000001,
+								"0.31+1*0.045"
+							},
+							1
+						};
+					};
+					class SpeedNumber
+					{
+						type="text";
+						source="speed";
+						sourceScale=3.5999999;
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.13,0.36000001},
+							1
+						};
+						right[]=
+						{
+							{0.17,0.36000001},
+							1
+						};
+						down[]=
+						{
+							{0.13,0.40000001},
+							1
+						};
+					};
+					class SpeedText
+					{
+						type="text";
+						source="static";
+						text="SPEED";
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.090999998,0.36000001},
+							1
+						};
+						right[]=
+						{
+							{0.131,0.36000001},
+							1
+						};
+						down[]=
+						{
+							{0.090999998,0.40000001},
+							1
+						};
+					};
+					class SpeedSeparator
+					{
+						type="line";
+						width=2;
+						points[]=
+						{
+							
+							{
+								
+								{
+									0.121,
+									"0.36-2*0.045"
+								},
+								1
+							},
+							
+							{
+								
+								{
+									0.121,
+									"0.543+0*0.045"
+								},
+								1
+							}
+						};
+					};
+					class Climb
+					{
+						type="line";
+						width=2;
+						points[]=
+						{
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.875,
+									"0.38-0.16"
+								},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.875,
+									"0.38+0.16"
+								},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.86799997,
+									"0.38-0.15"
+								},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.87400001,
+									"0.38-0.15"
+								},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.866,
+									"0.38-0.12"
+								},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.87400001,
+									"0.38-0.12"
+								},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.866,
+									"0.38-0.09"
+								},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.87400001,
+									"0.38-0.09"
+								},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.866,
+									"0.38-0.06"
+								},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.87400001,
+									"0.38-0.06"
+								},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.866,
+									"0.38-0.03"
+								},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.87400001,
+									"0.38-0.03"
+								},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.85699999,0.38},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.38},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.87400001,
+									"0.38+0.03"
+								},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.866,
+									"0.38+0.03"
+								},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.87400001,
+									"0.38+0.06"
+								},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.866,
+									"0.38+0.06"
+								},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.87400001,
+									"0.38+0.09"
+								},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.866,
+									"0.38+0.09"
+								},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.87400001,
+									"0.38+0.12"
+								},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.866,
+									"0.38+0.12"
+								},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.87400001,
+									"0.38+0.15"
+								},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								
+								{
+									0.86799997,
+									"0.38+0.15"
+								},
+								1
+							}
+						};
+					};
+					class ClimbMinGroup
+					{
+						type="group";
+						clipTL[]={0.81999999,0.40000001};
+						clipBR[]={0.88,0.69};
+						class ClimbMin
+						{
+							type="text";
+							source="static";
+							text=-100;
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								"VerticalSpeed",
+								{0.86000001,0.50999999},
+								1
+							};
+							right[]=
+							{
+								"VerticalSpeed",
+								{0.88499999,0.50999999},
+								1
+							};
+							down[]=
+							{
+								"VerticalSpeed",
+								{0.86000001,0.54000002},
+								1
+							};
+						};
+					};
+					class ClimbMaxGroup
+					{
+						type="group";
+						clipTL[]={0.81999999,0.059999999};
+						clipBR[]={0.88,0.36000001};
+						class ClimbMax
+						{
+							type="text";
+							source="static";
+							text=100;
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								"VerticalSpeed",
+								{0.86000001,0.20999999},
+								1
+							};
+							right[]=
+							{
+								"VerticalSpeed",
+								{0.88499999,0.20999999},
+								1
+							};
+							down[]=
+							{
+								"VerticalSpeed",
+								{0.86000001,0.23999999},
+								1
+							};
+						};
+					};
+					class ClimbText
+					{
+						type="text";
+						source="static";
+						text="CLIMB";
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.85000002,0.72000003},
+							1
+						};
+						right[]=
+						{
+							{0.875,0.72000003},
+							1
+						};
+						down[]=
+						{
+							{0.85000002,0.75},
+							1
+						};
+					};
+					class AltitudeNumber
+					{
+						type="text";
+						source="altitudeAGL";
+						sourceScale=1;
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.82999998,0.36000001},
+							1
+						};
+						right[]=
+						{
+							{0.87,0.36000001},
+							1
+						};
+						down[]=
+						{
+							{0.82999998,0.40000001},
+							1
+						};
+					};
+					class AltitudeText
+					{
+						type="text";
+						source="static";
+						text="AGL";
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.88,0.72000003},
+							1
+						};
+						right[]=
+						{
+							{0.92000002,0.72000003},
+							1
+						};
+						down[]=
+						{
+							{0.88,0.75999999},
+							1
+						};
+					};
+					class AltitudeArrow
+					{
+						type="line";
+						width=3;
+						points[]=
+						{
+							
+							{
+								
+								{
+									"0.875-0.018",
+									"0.38-0.016"
+								},
+								1
+							},
+							
+							{
+								{0.875,0.38},
+								1
+							},
+							
+							{
+								
+								{
+									"0.875-0.018",
+									"0.38+0.016"
+								},
+								1
+							},
+							{},
+							
+							{
+								
+								{
+									"0.88+0.018",
+									"0.38-0.016"
+								},
+								1
+							},
+							
+							{
+								{0.88,0.38},
+								1
+							},
+							
+							{
+								
+								{
+									"0.88+0.018",
+									"0.38+0.016"
+								},
+								1
+							}
+						};
+					};
+					class AltitudeScale
+					{
+						type="scale";
+						horizontal=0;
+						source="altitudeAGL";
+						sourceScale=1;
+						width=4;
+						top=0.70999998;
+						center=0.38;
+						bottom=0.050000001;
+						lineXleft=0.88;
+						lineYright=0.88999999;
+						lineXleftMajor=0.88;
+						lineYrightMajor=0.89999998;
+						majorLineEach=5;
+						numberEach=10;
+						step=10;
+						stepSize=0.025;
+						align="right";
+						scale=1;
+						pos[]={0.91000003,0.69};
+						right[]={0.94999999,0.69};
+						down[]={0.91000003,0.73000002};
+					};
+					class HeadingArrows
+					{
+						type="line";
+						width=3;
+						points[]=
+						{
+							
+							{
+								
+								{
+									"0.5-0.016",
+									"0.915-0.018"
+								},
+								1
+							},
+							
+							{
+								{0.5,0.91500002},
+								1
+							},
+							
+							{
+								
+								{
+									"0.5+0.016",
+									"0.915-0.018"
+								},
+								1
+							},
+							{},
+							
+							{
+								
+								{
+									"0.5-0.016",
+									"0.98+0.018"
+								},
+								1
+							},
+							
+							{
+								{0.5,0.98000002},
+								1
+							},
+							
+							{
+								
+								{
+									"0.5+0.016",
+									"0.98+0.018"
+								},
+								1
+							}
+						};
+					};
+					class HeadingScale
+					{
+						type="scale";
+						horizontal=1;
+						source="heading";
+						sourceScale=1;
+						width=4;
+						top=0.050000001;
+						center=0.5;
+						bottom=0.94999999;
+						lineXleft=0.93000001;
+						lineYright=0.92000002;
+						lineXleftMajor=0.94;
+						lineYrightMajor=0.92000002;
+						majorLineEach=3;
+						numberEach=9;
+						step=5;
+						stepSize=0.02;
+						align="center";
+						scale=1;
+						pos[]={0.050000001,0.94};
+						right[]={0.090000004,0.94};
+						down[]={0.050000001,0.98000002};
+					};
+					class HorizontalLine
+					{
+						clipTL[]={0.2,0};
+						clipBR[]={0.80000001,0.75999999};
+						class HorizontalLineDraw
+						{
+							type="line";
+							source="Level0";
+							points[]=
+							{
+								
+								{
+									"Level0",
+									
+									{
+										"-6*0.075/2",
+										0
+									},
+									1
+								},
+								
+								{
+									"Level0",
+									
+									{
+										"-5*0.075/2",
+										0
+									},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									
+									{
+										"-4*0.075/2",
+										0
+									},
+									1
+								},
+								
+								{
+									"Level0",
+									
+									{
+										"-3*0.075/2",
+										0
+									},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									
+									{
+										"-2*0.075/2",
+										0
+									},
+									1
+								},
+								
+								{
+									"Level0",
+									
+									{
+										"-1*0.075/2",
+										0
+									},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									
+									{
+										"1*0.075/2",
+										0
+									},
+									1
+								},
+								
+								{
+									"Level0",
+									
+									{
+										"2*0.075/2",
+										0
+									},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									
+									{
+										"3*0.075/2",
+										0
+									},
+									1
+								},
+								
+								{
+									"Level0",
+									
+									{
+										"4*0.075/2",
+										0
+									},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									
+									{
+										"5*0.075/2",
+										0
+									},
+									1
+								},
+								
+								{
+									"Level0",
+									
+									{
+										"6*0.075/2",
+										0
+									},
+									1
+								}
+							};
+						};
+					};
+					class HorizonIndicatorBackground
+					{
+						type="line";
+						width=2;
+						points[]=
+						{
+							
+							{
+								
+								{
+									"-1.4*0.046+0.065",
+									"0.0000*0.046+0.12"
+								},
+								1
+							},
+							
+							{
+								
+								{
+									"1.4*0.046+0.065",
+									"0.0000*0.046+0.12"
+								},
+								1
+							}
+						};
+					};
+					class HorizonIndicator
+					{
+						type="line";
+						width=4;
+						points[]=
+						{
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"-1.2000*0.046",
+									"0.0000*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"-1.0000*0.046",
+									"0.0000*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"-0.9877*0.046",
+									"0.1736*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"-0.9397*0.046",
+									"0.3420*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"-0.8660*0.046",
+									"0.5000*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"-0.7660*0.046",
+									"0.6428*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"-0.6428*0.046",
+									"0.7660*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"-0.5000*0.046",
+									"0.8660*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"-0.3420*0.046",
+									"0.9397*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"-0.1736*0.046",
+									"0.9877*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"-0.0000*0.046",
+									"1.0000*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"0.1736*0.046",
+									"0.9877*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"0.3420*0.046",
+									"0.9397*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"0.5000*0.046",
+									"0.8660*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"0.6428*0.046",
+									"0.7660*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"0.7660*0.046",
+									"0.6428*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"0.8660*0.046",
+									"0.5000*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"0.9397*0.046",
+									"0.3420*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"0.9877*0.046",
+									"0.1736*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"1.0000*0.046",
+									"0.0000*0.046"
+								},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								
+								{
+									"1.2000*0.046",
+									"0.0000*0.046"
+								},
+								1
+							}
+						};
+					};
+					class ILS
+					{
+						condition="ils";
+						class Glideslope
+						{
+							clipTL[]={0,0};
+							clipBR[]={1,1};
+							class ILS
+							{
+								type="line";
+								points[]=
+								{
+									
+									{
+										"ILS_W",
+										{-0.23999999,0},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{0.23999999,0},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{0,0.0272165},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{0,-0.0272165},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{0.12,0.0272165},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{0.12,-0.0272165},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{0.23999999,0.0272165},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{0.23999999,-0.0272165},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{-0.12,0.0272165},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{-0.12,-0.0272165},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{-0.23999999,0.0272165},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{-0.23999999,-0.0272165},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{0,-0.272165},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0,0.272165},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{0.024,0},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{-0.024,0},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{0.024,0.13608199},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{-0.024,0.13608199},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{0.024,0.272165},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{-0.024,0.272165},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{0.024,-0.13608199},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{-0.024,-0.13608199},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{0.024,-0.272165},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{-0.024,-0.272165},
+										1
+									}
+								};
+							};
+						};
+					};
+				};
+			};
+		};*/
+		class MFD
+		{
+			class AirplaneHUD
+			{
+				topLeft="HUD_top_left";
+				topRight="HUD_top_right";
+				bottomLeft="HUD_bottom_left";
+				//topLeft="HUD LH";
+				//topRight="HUD PH";
+				//bottomLeft="HUD LD";
+				borderLeft=0;
+				borderRight=0;
+				borderTop=0;
+				borderBottom=0.2;
+				color[]={0.15000001,1,0.15000001,1};
+				enableParallax=1;
+				helmetMountedDisplay=1;
+				helmetPosition[]={-0.024599999,0.018999999,0.1};
+				helmetRight[]={0.050000001,0,0};
+				helmetDown[]={0,-0.050000001,0};
+				class Bones
+				{
+					class PlaneOrientation
+					{
+						type="fixed";
+						pos[]={0.498,0.38};
+					};
+					class WeaponAim
+					{
+						type="vector";
+						source="weapon";
+						pos0[]={0.498,0.38};
+						pos10[]={1.166,1.215};
+					};
+					class Target
+					{
+						type="vector";
+						source="target";
+						pos0[]={0.498,0.38};
+						pos10[]={1.166,1.215};
+					};
+					class TargetingPodTarget
+					{
+						source="pilotcamera";
+						type="vector";
+						pos0[]={0.498,0.38};
+						pos10[]={1.166,1.215};
+					};
+					class ImpactPoint
+					{
+						type="vector";
+						source="ImpactPoint";
+						pos0[]={0.5,0.38};
+						pos10[]={1.168,1.215};
+					};
+					class NormalizeBombCircle
+					{
+						type="normalizedorsmaller";
+						limit=0.079999998;
+						aspectRatio=1.25;
+					};
+					class Velocity
+					{
+						type="vector";
+						source="velocity";
+						pos0[]={0.498,0.38};
+						pos10[]={1.166,1.215};
+					};
+					class Level0
+					{
+						type="horizon";
+						pos0[]={0.5,0.38};
+						pos10[]={1.168,1.215};
+						angle=0;
+					};
+					class Limit0109
+					{
+						type="limit";
+						limits[]={0.1,0.1,0.89999998,0.89999998};
+					};
+					class VerticalSpeed
+					{
+						type="linear";
+						source="vspeed";
+						sourceScale=1;
+						min=-100;
+						max=100;
+						minPos[]={0,0.15000001};
+						maxPos[]={0,-0.15000001};
+					};
+					class HorizonIndicatorBank
+					{
+						type="rotational";
+						source="horizonBank";
+						sourceScale=1;
+						center[]={0.064999998,0.12};
+						min=-3.1415927;
+						max=3.1415927;
+						minAngle=0;
+						maxAngle=360;
+						aspectRatio=1.25;
+					};
+					class HorizonIndicatorDive: HorizonIndicatorBank
+					{
+						source="horizonDive";
+						min=-1.5707999;
+						max=1.5707999;
+						minAngle=90;
+						maxAngle=-90;
+					};
+					class TerrainBone
+					{
+						type="linear";
+						source="altitudeAGL";
+						sourceScale=1;
+						min=0;
+						max=200;
+						minPos[]={0,0.88};
+						maxPos[]={0,0.38};
+					};
+					class MissileFlightTimeRot1
+					{
+						type="rotational";
+						source="MissileFlightTime";
+						sourceScale=1;
+						center[]={0,0};
+						min=0;
+						max=0.5;
+						minAngle=0;
+						maxAngle=18;
+						aspectRatio=1.25;
+					};
+					class MissileFlightTimeRot2: MissileFlightTimeRot1
+					{
+						maxAngle=36;
+						max=1;
+					};
+					class MissileFlightTimeRot3: MissileFlightTimeRot1
+					{
+						maxAngle=54;
+						max=1.5;
+					};
+					class MissileFlightTimeRot4: MissileFlightTimeRot1
+					{
+						maxAngle=72;
+						max=2;
+					};
+					class MissileFlightTimeRot5: MissileFlightTimeRot1
+					{
+						maxAngle=90;
+						max=2.5;
+					};
+					class MissileFlightTimeRot6: MissileFlightTimeRot1
+					{
+						maxAngle=108;
+						max=3;
+					};
+					class MissileFlightTimeRot7: MissileFlightTimeRot1
+					{
+						maxAngle=126;
+						max=3.5;
+					};
+					class MissileFlightTimeRot8: MissileFlightTimeRot1
+					{
+						maxAngle=144;
+						max=4;
+					};
+					class MissileFlightTimeRot9: MissileFlightTimeRot1
+					{
+						maxAngle=162;
+						max=4.5;
+					};
+					class MissileFlightTimeRot10: MissileFlightTimeRot1
+					{
+						maxAngle=180;
+						max=5;
+					};
+					class MissileFlightTimeRot11: MissileFlightTimeRot1
+					{
+						maxAngle=198;
+						max=5.5;
+					};
+					class MissileFlightTimeRot12: MissileFlightTimeRot1
+					{
+						maxAngle=216;
+						max=6;
+					};
+					class MissileFlightTimeRot13: MissileFlightTimeRot1
+					{
+						maxAngle=234;
+						max=6.5;
+					};
+					class MissileFlightTimeRot14: MissileFlightTimeRot1
+					{
+						maxAngle=252;
+						max=7;
+					};
+					class MissileFlightTimeRot15: MissileFlightTimeRot1
+					{
+						maxAngle=270;
+						max=7.5;
+					};
+					class MissileFlightTimeRot16: MissileFlightTimeRot1
+					{
+						maxAngle=288;
+						max=8;
+					};
+					class MissileFlightTimeRot17: MissileFlightTimeRot1
+					{
+						maxAngle=306;
+						max=8.5;
+					};
+					class MissileFlightTimeRot18: MissileFlightTimeRot1
+					{
+						maxAngle=324;
+						max=9;
+					};
+					class MissileFlightTimeRot19: MissileFlightTimeRot1
+					{
+						maxAngle=342;
+						max=9.5;
+					};
+					class MissileFlightTimeRot20: MissileFlightTimeRot1
+					{
+						maxAngle=360;
+						max=10;
+					};
+					class Airport1
+					{
+						type="vector";
+						source="airportCorner1";
+						pos0[]={0.5,0.38};
+						pos10[]={1.168,1.215};
+					};
+					class Airport2: Airport1
+					{
+						source="airportCorner2";
+					};
+					class Airport3: Airport1
+					{
+						source="airportCorner3";
+					};
+					class Airport4: Airport1
+					{
+						source="airportCorner4";
+					};
+					class ILS_H
+					{
+						type="ils";
+						pos0[]={0.5,0.38};
+						pos3[]={0.70039999,0.38};
+					};
+					class ILS_W: ILS_H
+					{
+						pos3[]={0.5,0.63050002};
+					};
+					class LarAmmoMax
+					{
+						type="linear";
+						source="LarAmmoMax";
+						sourceScale=1;
+						min=0;
+						max=1;
+						minPos[]={0,1};
+						maxPos[]={0,0};
+					};
+					class LarAmmoMin: LarAmmoMax
+					{
+						source="LarAmmoMin";
+					};
+					class LarTargetDist: LarAmmoMax
+					{
+						source="LarTargetDist";
+					};
+				};
+				class Draw
+				{
+					color[]={0.15000001,1,0.15000001};
+					alpha=1;
+					condition="on";
+					class PlaneOrientationCrosshair
+					{
+						clipTL[]={0,1};
+						clipBR[]={1,0};
+						type="line";
+						width=4;
+						points[]=
+						{
+							
+							{
+								"PlaneOrientation",
+								{-0.0099999998,0},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{0.0099999998,0},
+								1
+							},
+							{},
+							
+							{
+								"PlaneOrientation",
+								{0,-0.0125},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{0,0.0125},
+								1
+							},
+							{}
+						};
+					};
+					class PlaneMovementCrosshair
+					{
+						clipTL[]={0,1};
+						clipBR[]={1,0};
+						type="line";
+						width=4;
+						points[]=
+						{
+							
+							{
+								"Velocity",
+								{0,-0.025},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.0099999998,-0.02165},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.01732,-0.0125},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.02,0},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.01732,0.0125},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.0099999998,0.02165},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0,0.025},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.0099999998,0.02165},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.01732,0.0125},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.02,0},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.01732,-0.0125},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.0099999998,-0.02165},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0,-0.025},
+								1
+							},
+							{},
+							
+							{
+								"Velocity",
+								{0.039999999,0},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.02,0},
+								1
+							},
+							{},
+							
+							{
+								"Velocity",
+								{-0.039999999,0},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.02,0},
+								1
+							},
+							{},
+							
+							{
+								"Velocity",
+								{0,-0.050000001},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0,-0.025},
+								1
+							},
+							{}
+						};
+					};
+					class MachineGunCrosshairGroup
+					{
+						type="group";
+						condition="mgun";
+						class MachineGunCrosshair
+						{
+							type="line";
+							width=3;
+							points[]=
+							{
+								
+								{
+									"ImpactPoint",
+									{0,-0.1125},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0,0.1125},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.1},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{-0.090000004,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.079999998,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0.090000004,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.079999998,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0,-0.0024999999},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.0024999999},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{-0.0020000001,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.0020000001,0},
+									1
+								},
+								{}
+							};
+						};
+						class Circle
+						{
+							type="line";
+							width=6;
+							points[]=
+							{
+								
+								{
+									"ImpactPoint",
+									{0,-0.079999998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot1",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot2",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot3",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot4",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot5",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot6",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot7",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot8",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot9",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot10",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot11",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot12",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot13",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot14",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot15",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot16",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot17",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot18",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot19",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot20",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot20",
+									{0,0.064000003},
+									1,
+									"ImpactPoint",
+									1
+								}
+							};
+						};
+						class Circle_Min_Range
+						{
+							type="line";
+							width=3;
+							points[]=
+							{
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.013888,-0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.02736,-0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.039999999,-0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.051424,-0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.061280001,-0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.069279999,-0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.075176001,-0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.078783996,-0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.079999998,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.078783996,0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.075176001,0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.069279999,0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.061280001,0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.051424,0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.039999999,0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.02736,0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.013888,0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.1},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.013888,0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.02736,0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.039999999,0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.051424,0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.061280001,0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.069279999,0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.075176001,0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.078783996,0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.079999998,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.078783996,-0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.075176001,-0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.069279999,-0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.061280001,-0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.051424,-0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.039999999,-0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.02736,-0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.013888,-0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								}
+							};
+						};
+						class Distance
+						{
+							type="text";
+							source="ImpactDistance";
+							sourceScale=0.001;
+							sourcePrecision=1;
+							max=15;
+							align="center";
+							scale=1;
+							pos[]=
+							{
+								"ImpactPoint",
+								{-0.0020000001,0.11},
+								1
+							};
+							right[]=
+							{
+								"ImpactPoint",
+								{0.045000002,0.11},
+								1
+							};
+							down[]=
+							{
+								"ImpactPoint",
+								{-0.0020000001,0.15000001},
+								1
+							};
+						};
+					};
+					class AAMissileCrosshairGroup
+					{
+						type="group";
+						condition="AAmissile";
+						class AAMissileCrosshair
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									"WeaponAim",
+									{0,-0.3125},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.043400001,-0.30774999},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.085500002,-0.29365599},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.125,-0.270625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.16069999,-0.239375},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.19149999,-0.200875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.2165,-0.15625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.234925,-0.106875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.2462,-0.054249998},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.25,0},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.2462,0.054249998},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.234925,0.106875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.2165,0.15625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.19149999,0.200875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.16069999,0.239375},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.125,0.270625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.085500002,0.29365599},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.043400001,0.30774999},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0,0.3125},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.043400001,0.30774999},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.085500002,0.29365599},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.125,0.270625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.16069999,0.239375},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.19149999,0.200875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.2165,0.15625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.234925,0.106875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.2462,0.054249998},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.25,0},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.2462,-0.054249998},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.234925,-0.106875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.2165,-0.15625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.19149999,-0.200875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.16069999,-0.239375},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.125,-0.270625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.085500002,-0.29365599},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.043400001,-0.30774999},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0,-0.3125},
+									1
+								}
+							};
+						};
+					};
+					class ATMissileCrosshairGroup
+					{
+						condition="ATmissile";
+						type="group";
+						class ATMissileCrosshair
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									"WeaponAim",
+									{-0.15000001,-0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,-0.13},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,0.13},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{0.15000001,-0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.15000001,-0.13},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{0.15000001,0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.15000001,0.13},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,-0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.13,-0.15000001},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.13,0.15000001},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{0.15000001,-0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.13,-0.15000001},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{0.15000001,0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.13,0.15000001},
+									1
+								}
+							};
+						};
+					};
+					class RocketCrosshairGroup
+					{
+						type="group";
+						condition="Rocket";
+						class MachineGunCrosshair
+						{
+							type="line";
+							width=3;
+							points[]=
+							{
+								
+								{
+									"ImpactPoint",
+									{0,-0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,-0.025},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0,0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.025},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{-0.039999999,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.02,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0.039999999,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.02,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0.0099999998,-0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.0099999998,-0.050000001},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0,-0.0024999999},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.0024999999},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{-0.0020000001,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.0020000001,0},
+									1
+								},
+								{}
+							};
+						};
+						class Distance
+						{
+							type="text";
+							source="ImpactDistance";
+							sourceScale=0.001;
+							sourcePrecision=1;
+							max=15;
+							align="center";
+							scale=1;
+							pos[]=
+							{
+								"ImpactPoint",
+								{-0.0020000001,0.07},
+								1
+							};
+							right[]=
+							{
+								"ImpactPoint",
+								{0.045000002,0.07},
+								1
+							};
+							down[]=
+							{
+								"ImpactPoint",
+								{-0.0020000001,0.11},
+								1
+							};
+						};
+					};
+					class BombCrosshairGroup
+					{
+						type="group";
+						condition="bomb";
+						class BombCrosshair
+						{
+							width=4;
+							type="line";
+							points[]=
+							{
+								
+								{
+									"ImpactPoint",
+									{0,0.1125},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.1},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{-0.090000004,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.079999998,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0.090000004,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.079999998,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0,-0.0024999999},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.0024999999},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{-0.0020000001,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.0020000001,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.013888,-0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.02736,-0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.039999999,-0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.051424,-0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.061280001,-0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.069279999,-0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.075176001,-0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.078783996,-0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.079999998,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.078783996,0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.075176001,0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.069279999,0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.061280001,0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.051424,0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.039999999,0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.02736,0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.013888,0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.1},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.013888,0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.02736,0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.039999999,0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.051424,0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.061280001,0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.069279999,0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.075176001,0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.078783996,0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.079999998,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.078783996,-0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.075176001,-0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.069279999,-0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.061280001,-0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.051424,-0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.039999999,-0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.02736,-0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.013888,-0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								},
+								{},
+								{},
+								
+								{
+									"ImpactPoint",
+									-1,
+									"Velocity",
+									1,
+									"NormalizeBombCircle",
+									1,
+									"ImpactPoint",
+									1,
+									{0,0},
+									1
+								},
+								
+								{
+									"Velocity",
+									1,
+									"Limit0109",
+									1,
+									{0,0},
+									1
+								}
+							};
+						};
+						class Circle
+						{
+							type="line";
+							width=6;
+							points[]=
+							{
+								
+								{
+									"ImpactPoint",
+									{0,-0.079999998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot1",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot2",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot3",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot4",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot5",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot6",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot7",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot8",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot9",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot10",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot11",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot12",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot13",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot14",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot15",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot16",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot17",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot18",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot19",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot20",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot20",
+									{0,0.064000003},
+									1,
+									"ImpactPoint",
+									1
+								}
+							};
+						};
+						class Distance
+						{
+							type="text";
+							source="ImpactDistance";
+							sourceScale=0.001;
+							sourcePrecision=1;
+							max=15;
+							align="center";
+							scale=1;
+							pos[]=
+							{
+								"ImpactPoint",
+								{-0.0020000001,0.11},
+								1
+							};
+							right[]=
+							{
+								"ImpactPoint",
+								{0.045000002,0.11},
+								1
+							};
+							down[]=
+							{
+								"ImpactPoint",
+								{-0.0020000001,0.15000001},
+								1
+							};
+						};
+					};
+					class WeaponName
+					{
+						type="text";
+						source="weapon";
+						sourceScale=1;
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.050000001,0.85000002},
+							1
+						};
+						right[]=
+						{
+							{0.090000004,0.85000002},
+							1
+						};
+						down[]=
+						{
+							{0.050000001,0.88999999},
+							1
+						};
+					};
+					class AmmoCount
+					{
+						type="text";
+						source="ammo";
+						sourceScale=1;
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.94999999,0.85000002},
+							1
+						};
+						right[]=
+						{
+							{0.99000001,0.85000002},
+							1
+						};
+						down[]=
+						{
+							{0.94999999,0.88999999},
+							1
+						};
+					};
+					class StallGroup
+					{
+						type="group";
+						condition="stall";
+						color[]={1,0,0};
+						blinkingPattern[]={0.2,0.2};
+						blinkingStartsOn=1;
+						class StallText
+						{
+							type="text";
+							source="static";
+							text="STALL";
+							align="center";
+							scale=1;
+							pos[]=
+							{
+								{0.5,0.25},
+								1
+							};
+							right[]=
+							{
+								{0.54000002,0.25},
+								1
+							};
+							down[]=
+							{
+								{0.5,0.28999999},
+								1
+							};
+						};
+					};
+					class PitchNumber
+					{
+						type="text";
+						source="horizonDive";
+						sourceScale=57.29578;
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.13,0.22499999},
+							1
+						};
+						right[]=
+						{
+							{0.17,0.22499999},
+							1
+						};
+						down[]=
+						{
+							{0.13,0.26499999},
+							1
+						};
+					};
+					class PitchText
+					{
+						type="text";
+						source="static";
+						text="PITCH";
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.11,0.22499999},
+							1
+						};
+						right[]=
+						{
+							{0.15000001,0.22499999},
+							1
+						};
+						down[]=
+						{
+							{0.11,0.26499999},
+							1
+						};
+					};
+					class RollNumber
+					{
+						type="text";
+						source="horizonBank";
+						sourceScale=57.29578;
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.13,0.27000001},
+							1
+						};
+						right[]=
+						{
+							{0.17,0.27000001},
+							1
+						};
+						down[]=
+						{
+							{0.13,0.31},
+							1
+						};
+					};
+					class RollText
+					{
+						type="text";
+						source="static";
+						text="ROLL";
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.11,0.27000001},
+							1
+						};
+						right[]=
+						{
+							{0.15000001,0.27000001},
+							1
+						};
+						down[]=
+						{
+							{0.11,0.31},
+							1
+						};
+					};
+					class SpeedNumber
+					{
+						type="text";
+						source="speed";
+						sourceScale=3.5999999;
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.13,0.36000001},
+							1
+						};
+						right[]=
+						{
+							{0.17,0.36000001},
+							1
+						};
+						down[]=
+						{
+							{0.13,0.40000001},
+							1
+						};
+					};
+					class SpeedText
+					{
+						type="text";
+						source="static";
+						text="SPEED";
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.11,0.36000001},
+							1
+						};
+						right[]=
+						{
+							{0.15000001,0.36000001},
+							1
+						};
+						down[]=
+						{
+							{0.11,0.40000001},
+							1
+						};
+					};
+					class SpeedSeparator
+					{
+						type="line";
+						width=2;
+						points[]=
+						{
+							
+							{
+								{0.12,0.22499999},
+								1
+							},
+							
+							{
+								{0.12,0.63300002},
+								1
+							}
+						};
+					};
+					class FlapsGroup
+					{
+						type="group";
+						condition="flaps";
+						class FlapsText
+						{
+							type="text";
+							source="static";
+							text="FLAPS";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								{0.11,0.44999999},
+								1
+							};
+							right[]=
+							{
+								{0.15000001,0.44999999},
+								1
+							};
+							down[]=
+							{
+								{0.11,0.49000001},
+								1
+							};
+						};
+					};
+					class GearGroup
+					{
+						type="group";
+						condition="ils";
+						class GearText
+						{
+							type="text";
+							source="static";
+							text="GEAR";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								{0.11,0.495},
+								1
+							};
+							right[]=
+							{
+								{0.15000001,0.495},
+								1
+							};
+							down[]=
+							{
+								{0.11,0.53500003},
+								1
+							};
+						};
+					};
+					class ILS
+					{
+						condition="ils";
+						class Glideslope
+						{
+							clipTL[]={0,0};
+							clipBR[]={1,1};
+							class ILS
+							{
+								type="line";
+								points[]=
+								{
+									
+									{
+										"ILS_W",
+										{-0.23999999,0},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{0.23999999,0},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{-0.23999999,-0.029999999},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{-0.23999999,0.029999999},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{-0.12,-0.022500001},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{-0.12,0.022500001},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{0,-0.029999999},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{0,0.029999999},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{0.12,-0.022500001},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{0.12,0.022500001},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{0.23999999,-0.029999999},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{0.23999999,0.029999999},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{0,-0.30000001},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0,0.30000001},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{-0.024,-0.30000001},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0.024,-0.30000001},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{-0.017999999,-0.15000001},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0.017999999,-0.15000001},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{-0.024,0},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0.024,0},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{-0.017999999,0.15000001},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0.017999999,0.15000001},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{-0.024,0.30000001},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0.024,0.30000001},
+										1
+									}
+								};
+							};
+							class airport
+							{
+								type="line";
+								points[]=
+								{
+									
+									{
+										"airport1",
+										1
+									},
+									
+									{
+										"airport2",
+										1
+									},
+									
+									{
+										"airport4",
+										1
+									},
+									
+									{
+										"airport3",
+										1
+									},
+									
+									{
+										"airport1",
+										1
+									}
+								};
+							};
+						};
+					};
+					class LightsGroup
+					{
+						type="group";
+						condition="lights";
+						class LightsText
+						{
+							type="text";
+							source="static";
+							text="LLS";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								{0.11,0.54000002},
+								1
+							};
+							right[]=
+							{
+								{0.15000001,0.54000002},
+								1
+							};
+							down[]=
+							{
+								{0.11,0.57999998},
+								1
+							};
+						};
+					};
+					class CollisionLightsGroup
+					{
+						type="group";
+						condition="collisionlights";
+						class CollisionLightsText
+						{
+							type="text";
+							source="static";
+							text="COLL";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								{0.11,0.58499998},
+								1
+							};
+							right[]=
+							{
+								{0.15000001,0.58499998},
+								1
+							};
+							down[]=
+							{
+								{0.11,0.625},
+								1
+							};
+						};
+					};
+					class Climb
+					{
+						type="line";
+						width=1;
+						points[]=
+						{
+							
+							{
+								"VerticalSpeed",
+								{0.875,0.22},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.875,0.54000002},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.86900002,0.23},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.23},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.25999999},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.25999999},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.28999999},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.28999999},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.31999999},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.31999999},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.34999999},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.34999999},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.85500002,0.38},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.38},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.41},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.41},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.44},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.44},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.47},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.47},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.5},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.5},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.52999997},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.86900002,0.52999997},
+								1
+							}
+						};
+					};
+					class ClimbMinGroup
+					{
+						type="group";
+						clipTL[]={0,0.40000001};
+						clipBR[]={1,0.75999999};
+						class ClimbMin
+						{
+							type="text";
+							source="static";
+							text="-100";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								"VerticalSpeed",
+								{0.866,0.51749998},
+								1
+							};
+							right[]=
+							{
+								"VerticalSpeed",
+								{0.89099997,0.51749998},
+								1
+							};
+							down[]=
+							{
+								"VerticalSpeed",
+								{0.866,0.54250002},
+								1
+							};
+						};
+					};
+					class ClimbMaxGroup
+					{
+						type="group";
+						clipTL[]={0,0};
+						clipBR[]={1,0.36000001};
+						class ClimbMax
+						{
+							type="text";
+							source="static";
+							text="100";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								"VerticalSpeed",
+								{0.866,0.2175},
+								1
+							};
+							right[]=
+							{
+								"VerticalSpeed",
+								{0.89099997,0.2175},
+								1
+							};
+							down[]=
+							{
+								"VerticalSpeed",
+								{0.866,0.24250001},
+								1
+							};
+						};
+					};
+					class ClimbText
+					{
+						type="text";
+						source="static";
+						text="CLIMB";
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.87,0.72100002},
+							1
+						};
+						right[]=
+						{
+							{0.89499998,0.72100002},
+							1
+						};
+						down[]=
+						{
+							{0.87,0.74599999},
+							1
+						};
+					};
+					class TerrainGroup
+					{
+						type="group";
+						clipTL[]={0,0};
+						clipBR[]={1,0.69999999};
+						class TerrainLine
+						{
+							type="line";
+							width=1;
+							points[]=
+							{
+								
+								{
+									"TerrainBone",
+									{0.74000001,0},
+									1
+								},
+								
+								{
+									"TerrainBone",
+									{0.90899998,0},
+									1
+								}
+							};
+						};
+						class TerrainText
+						{
+							type="text";
+							source="static";
+							text="TERRAIN";
+							align="right";
+							scale=1;
+							pos[]=
+							{
+								"TerrainBone",
+								{0.74000001,0.003},
+								1
+							};
+							right[]=
+							{
+								"TerrainBone",
+								{0.76499999,0.003},
+								1
+							};
+							down[]=
+							{
+								"TerrainBone",
+								{0.74000001,0.028000001},
+								1
+							};
+						};
+						class TerrainNumber
+						{
+							type="text";
+							source="altitudeAGL";
+							sourceScale=1;
+							align="right";
+							scale=1;
+							pos[]=
+							{
+								"TerrainBone",
+								{0.74000001,-0.043000001},
+								1
+							};
+							right[]=
+							{
+								"TerrainBone",
+								{0.77999997,-0.043000001},
+								1
+							};
+							down[]=
+							{
+								"TerrainBone",
+								{0.74000001,-0.003},
+								1
+							};
+						};
+					};
+					class AltitudeNumber
+					{
+						type="text";
+						source="altitudeASL";
+						sourceScale=1;
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.84500003,0.36000001},
+							1
+						};
+						right[]=
+						{
+							{0.88499999,0.36000001},
+							1
+						};
+						down[]=
+						{
+							{0.84500003,0.40000001},
+							1
+						};
+					};
+					class AltitudeText
+					{
+						type="text";
+						source="static";
+						text="ASL";
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.88,0.72000003},
+							1
+						};
+						right[]=
+						{
+							{0.92000002,0.72000003},
+							1
+						};
+						down[]=
+						{
+							{0.88,0.75999999},
+							1
+						};
+					};
+					class AltitudeArrow
+					{
+						type="line";
+						width=3;
+						points[]=
+						{
+							
+							{
+								{0.85699999,0.36399999},
+								1
+							},
+							
+							{
+								{0.875,0.38},
+								1
+							},
+							
+							{
+								{0.85699999,0.396},
+								1
+							},
+							{},
+							
+							{
+								{0.898,0.36399999},
+								1
+							},
+							
+							{
+								{0.88,0.38},
+								1
+							},
+							
+							{
+								{0.898,0.396},
+								1
+							}
+						};
+					};
+					class AltitudeScale
+					{
+						type="scale";
+						horizontal=0;
+						source="altitudeASL";
+						sourceScale=1;
+						min=0;
+						width=4;
+						top=0.70999998;
+						center=0.38;
+						bottom=0.050000001;
+						lineXleft=0.88;
+						lineYright=0.88999999;
+						lineXleftMajor=0.88;
+						lineYrightMajor=0.89999998;
+						majorLineEach=5;
+						numberEach=10;
+						step=10;
+						stepSize=0.025;
+						align="right";
+						scale=1;
+						pos[]={0.91000003,0.69};
+						right[]={0.94999999,0.69};
+						down[]={0.91000003,0.73000002};
+					};
+					class HeadingArrows
+					{
+						type="line";
+						width=3;
+						points[]=
+						{
+							
+							{
+								{0.484,0.89700001},
+								1
+							},
+							
+							{
+								{0.5,0.91500002},
+								1
+							},
+							
+							{
+								{0.51599997,0.89700001},
+								1
+							},
+							{},
+							
+							{
+								{0.484,0.99800003},
+								1
+							},
+							
+							{
+								{0.5,0.98000002},
+								1
+							},
+							
+							{
+								{0.51599997,0.99800003},
+								1
+							}
+						};
+					};
+					class HeadingScale
+					{
+						type="scale";
+						horizontal=1;
+						source="heading";
+						sourceScale=1;
+						width=4;
+						top=0.050000001;
+						center=0.5;
+						bottom=0.94999999;
+						lineXleft=0.93000001;
+						lineYright=0.92000002;
+						lineXleftMajor=0.94;
+						lineYrightMajor=0.92000002;
+						majorLineEach=3;
+						numberEach=9;
+						step=5;
+						stepSize=0.02;
+						align="center";
+						scale=1;
+						pos[]={0.050000001,0.94};
+						right[]={0.090000004,0.94};
+						down[]={0.050000001,0.98000002};
+					};
+					class HorizontalLine
+					{
+						clipTL[]={0.2,0};
+						clipBR[]={0.80000001,0.75999999};
+						class HorizontalLineDraw
+						{
+							type="line";
+							source="Level0";
+							points[]=
+							{
+								
+								{
+									"Level0",
+									{-0.22499999,0},
+									1
+								},
+								
+								{
+									"Level0",
+									{-0.1875,0},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									{-0.15000001,0},
+									1
+								},
+								
+								{
+									"Level0",
+									{-0.1125,0},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									{-0.075000003,0},
+									1
+								},
+								
+								{
+									"Level0",
+									{-0.037500001,0},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									{0.037500001,0},
+									1
+								},
+								
+								{
+									"Level0",
+									{0.075000003,0},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									{0.1125,0},
+									1
+								},
+								
+								{
+									"Level0",
+									{0.15000001,0},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									{0.1875,0},
+									1
+								},
+								
+								{
+									"Level0",
+									{0.22499999,0},
+									1
+								}
+							};
+						};
+					};
+					class HorizonIndicatorBackground
+					{
+						type="line";
+						width=1;
+						points[]=
+						{
+							
+							{
+								{0.00059999502,0.12},
+								1
+							},
+							
+							{
+								{0.1294,0.12},
+								1
+							}
+						};
+					};
+					class HorizonIndicator
+					{
+						type="line";
+						width=4;
+						points[]=
+						{
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.055199999,0},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.046,0},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.045434199,0.0079856003},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.043226201,0.015732},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.039836001,0.023},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.035236001,0.029568801},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.029568801,0.035236001},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.023,0.039836001},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.015732,0.043226201},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.0079856003,0.045434199},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0,0.046},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.0079856003,0.045434199},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.015732,0.043226201},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.023,0.039836001},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.029568801,0.035236001},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.035236001,0.029568801},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.039836001,0.023},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.043226201,0.015732},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.045434199,0.0079856003},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.046,0},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.055199999,0},
+								1
+							}
+						};
+					};
+					class RadarBoxes
+					{
+						type="radar";
+						pos0[]={0.498,0.38};
+						pos10[]={1.166,1.215};
+						width=4;
+						points[]=
+						{
+							
+							{
+								{-0.0020000001,-0.0024999999},
+								1
+							},
+							
+							{
+								{0.0020000001,-0.0024999999},
+								1
+							},
+							
+							{
+								{0.0020000001,0.0024999999},
+								1
+							},
+							
+							{
+								{-0.0020000001,0.0024999999},
+								1
+							},
+							
+							{
+								{-0.0020000001,-0.0024999999},
+								1
+							}
+						};
+					};
+					class TargetDiamond
+					{
+						class shape
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0.02,0.025},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{-0.02,0.025},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{-0.02,-0.025},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0.02,-0.025},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0.02,0.025},
+									1
+								}
+							};
+						};
+					};
+					class TargetLocked
+					{
+						condition="missilelocked";
+						class shape
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0,-0.037500001},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0.029999999,0},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0,0.037500001},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{-0.029999999,0},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0,-0.037500001},
+									1
+								}
+							};
+						};
+					};
+					class TargetingPodDir
+					{
+						type="line";
+						width=3;
+						points[]=
+						{
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.020805599,0.0051731099},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.020805599,-0.0051731099},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0176381,-0.0147318},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0117854,-0.0220477},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0041384902,-0.026007},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0041384902,-0.026007},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0117854,-0.0220477},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0176381,-0.0147318},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.020805599,-0.0051731099},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.020805599,0.0051731202},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0176381,0.0147318},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0117854,0.0220477},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0041384902,0.026007},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0041384902,0.026007},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0117854,0.0220477},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0176381,0.0147318},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.020805599,0.0051731002},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.020805599,-0.0051731202},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0176381,-0.0147318},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0117854,-0.0220477},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0041384902,-0.026007},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0041385,-0.026007},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0117854,-0.0220477},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0176381,-0.0147318},
+								1
+							},
+							{},
+							{}
+						};
+					};
+					class LAR
+					{
+						type="group";
+						condition="AAmissile";
+						class Lines
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									{0.23,0.25},
+									1
+								},
+								
+								{
+									{0.20999999,0.25},
+									1
+								},
+								
+								{
+									{0.20999999,0.55000001},
+									1
+								},
+								
+								{
+									{0.23,0.55000001},
+									1
+								},
+								{},
+								
+								{
+									{0.23,0.47499999},
+									1
+								},
+								
+								{
+									{0.20999999,0.47499999},
+									1
+								},
+								{},
+								
+								{
+									{0.23,0.40000001},
+									1
+								},
+								
+								{
+									{0.20999999,0.40000001},
+									1
+								},
+								{},
+								
+								{
+									{0.23,0.32499999},
+									1
+								},
+								
+								{
+									{0.20999999,0.32499999},
+									1
+								},
+								{},
+								
+								{
+									"LarTargetDist",
+									-0.30000001,
+									{0.19,0.56999999},
+									1
+								},
+								
+								{
+									"LarTargetDist",
+									-0.30000001,
+									{0.20999999,0.55000001},
+									1
+								},
+								
+								{
+									"LarTargetDist",
+									-0.30000001,
+									{0.19,0.52999997},
+									1
+								},
+								{}
+							};
+						};
+						class Poly
+						{
+							type="polygon";
+							points[]=
+							{
+								
+								{
+									
+									{
+										"LarAmmoMin",
+										-0.30000001,
+										{0.211,0.55000001},
+										1
+									},
+									
+									{
+										"LarAmmoMax",
+										-0.30000001,
+										{0.211,0.55000001},
+										1
+									},
+									
+									{
+										"LarAmmoMax",
+										-0.30000001,
+										{0.228,0.55000001},
+										1
+									},
+									
+									{
+										"LarAmmoMin",
+										-0.30000001,
+										{0.228,0.55000001},
+										1
+									}
+								}
+							};
+						};
+						class TopText
+						{
+							type="text";
+							source="LarTop";
+							sourceScale=0.001;
+							scale=1;
+							pos[]=
+							{
+								
+								{
+									"_EVAL(0.21+0.03)",
+									"_EVAL(0.25-0.02)"
+								},
+								1
+							};
+							right[]=
+							{
+								
+								{
+									"_EVAL(0.21+0.07)",
+									"_EVAL(0.25-0.02)"
+								},
+								1
+							};
+							down[]=
+							{
+								
+								{
+									"_EVAL(0.21+0.03)",
+									"_EVAL(0.25+0.02)"
+								},
+								1
+							};
+							align="right";
+						};
+						class MiddleText: TopText
+						{
+							source="LarTop";
+							sourcePrecision=-1;
+							sourceScale=0.00050000002;
+							pos[]=
+							{
+								
+								{
+									"_EVAL(0.21+0.03)",
+									"_EVAL(0.25-0.02+0.3*0.5)"
+								},
+								1
+							};
+							right[]=
+							{
+								
+								{
+									"_EVAL(0.21+0.07)",
+									"_EVAL(0.25-0.02+0.3*0.5)"
+								},
+								1
+							};
+							down[]=
+							{
+								
+								{
+									"_EVAL(0.21+0.03)",
+									"_EVAL(0.25+0.02+0.3*0.5)"
+								},
+								1
+							};
+						};
+						class SpeedText: TopText
+						{
+							source="LarTargetSpeed";
+							align="left";
+							sourceScale=3.5999999;
+							pos[]=
+							{
+								"LarTargetDist",
+								-0.30000001,
+								{0.18000001,0.52999997},
+								1
+							};
+							right[]=
+							{
+								"LarTargetDist",
+								-0.30000001,
+								{0.22,0.52999997},
+								1
+							};
+							down[]=
+							{
+								"LarTargetDist",
+								-0.30000001,
+								{0.18000001,0.56999999},
+								1
+							};
+						};
+					};
+				};
+			};
 		};
 	};
 	class JAS_CUP_B_F35B_RAF : CUP_F35B_dynamic_base
@@ -2542,6 +9190,298 @@ class CfgVehicles
 					};
 				};
 			};
+			class TransportPylonsComponent
+			{
+				uiPicture="\CUP\AirVehicles\CUP_AirVehicles_F35\data\UI\CUP_F35_3DEN_ca.paa";
+				class Pylons
+				{
+					class Pylons1
+					{
+						hardpoints[]=
+						{
+							"JAS_F35RAF_OUT"
+						};
+						attachment="JAS_FIR_AIM132_1rnd_PYLON_M";
+						priority=5;
+						maxweight=200;
+						UIposition[]=
+						{
+							"0.3+0.04",
+							"0.01+0.0"
+						};
+					};
+					class Pylons2: Pylons1
+					{
+						hardpoints[]=
+						{
+							"JAS_F35RAF_MID"
+						};
+						priority=4;
+						attachment="JAS_FIR_BRIMSTONE_JET2_PYLON_M";
+						maxweight=500;
+						UIposition[]=
+						{
+							"0.3+0.03",
+							"0.01+0.05"
+						};
+					};
+					class Pylons3: Pylons1
+					{
+						hardpoints[]=
+						{
+							"JAS_F35RAF_IN"
+						};
+						priority=3;
+						attachment="JAS_STORMSHADOW_PYLON_M";
+						maxweight=1100;
+						UIposition[]=
+						{
+							"0.3+0.02",
+							"0.01+0.10"
+						};
+					};
+					class Pylons4: Pylons1 // Internal
+					{
+						hardpoints[]=
+						{
+							"JAS_F35RAF_INT"
+						};
+						priority=2;
+						attachment="JAS_FIR_GBU53_P_4rnd_M";
+						maxweight=1500;
+						UIposition[]=
+						{
+							"0.3+0.01",
+							"0.01+0.17"
+						};
+						bay=2;
+					};
+					class Pylons5: Pylons1 // Internal
+					{
+						hardpoints[]=
+						{
+							"JAS_F35RAF_INTAA"
+						};
+						priority=1;
+						attachment="JAS_FIR_Meteor_PYLON_M";
+						maxweight=1500;
+						UIposition[]=
+						{
+							"0.3+0.01",
+							"0.01+0.22"
+						};
+						bay=2;
+					};
+					class Pylons6: Pylons1 // Belly Centreline
+					{
+						priority=2;
+						attachment="CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M";
+						maxweight=1500;
+						UIposition[]=
+						{
+							"0.3-0.03",
+							"0.01+0.27"
+						};
+						hardpoints[]=
+						{
+							"CUP_F35_CENTER_PYLON"
+						};
+					};
+					class Pylons7: Pylons5 // Internal
+					{
+						bay=1;
+						UIposition[]=
+						{
+							"0.3+0.01",
+							"0.01+0.32"
+						};
+						mirroredMissilePos=5;
+					};
+					class Pylons8: Pylons4 // Internal
+					{
+						bay=1;
+						UIposition[]=
+						{
+							"0.3+0.01",
+							"0.01+0.37"
+						};
+						mirroredMissilePos=4;
+					};
+					class Pylons9: Pylons3
+					{
+						UIposition[]=
+						{
+							"0.3+0.02",
+							"0.01+0.44"
+						};
+						mirroredMissilePos=3;
+					};
+					class Pylons10: Pylons2
+					{
+						UIposition[]=
+						{
+							"0.3+0.03",
+							"0.01+0.49"
+						};
+						mirroredMissilePos=2;
+					};
+					class Pylons11: Pylons1
+					{
+						UIposition[]=
+						{
+							"0.3+0.04",
+							"0.01+0.54"
+						};
+						mirroredMissilePos=1;
+					};
+				};
+				class Bays
+				{
+					class Bay1
+					{
+						bayOpenTime=0.5;
+						openBayWhenWeaponSelected=1;
+						autoCloseWhenEmptyDelay=2;
+					};
+					class Bay2: Bay1
+					{
+					};
+				};
+				class Presets
+				{
+					class Empty
+					{
+						displayName="Empty";
+						attachment[]={};
+					};
+					class MR
+					{
+						displayName="Multi-Role";
+						attachment[]=
+						{
+							"JAS_FIR_AIM132_1rnd_PYLON_M",
+							"JAS_FIR_AGM88_PYLON_M",
+							"JAS_FIR_BRIMSTONE_JET2_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_BRIMSTONE_JET2_PYLON_M",
+							"JAS_FIR_AGM88_PYLON_M",
+							"JAS_FIR_AIM132_1rnd_PYLON_M"
+						};
+					};
+					class CAP
+					{
+						displayName="Combat Air Patrol";
+						attachment[]=
+						{
+							"JAS_FIR_AIM132_1rnd_PYLON_M",
+							"JAS_FIR_AIM132_1rnd_PYLON_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"JAS_FIR_AIM132_1rnd_PYLON_M",
+							"JAS_FIR_AIM132_1rnd_PYLON_M"
+						};
+					};
+					class CAS
+					{
+						displayName="Close Air Support";
+						attachment[]=
+						{
+							"JAS_FIR_AIM132_1rnd_PYLON_M",
+							"JAS_FIR_BRIMSTONE_JET2_PYLON_M",
+							"JAS_FIR_BRIMSTONE_JET2_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_BRIMSTONE_JET2_PYLON_M",
+							"JAS_FIR_BRIMSTONE_JET2_PYLON_M",
+							"JAS_FIR_AIM132_1rnd_PYLON_M"
+						};
+					};
+					class PGM
+					{
+						displayName="Precision Strike";
+						attachment[]=
+						{
+							"JAS_FIR_AIM132_1rnd_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_AIM132_1rnd_PYLON_M"
+						};
+					};
+					class PGM2
+					{
+						displayName="Stand Off Strike";
+						attachment[]=
+						{
+							"JAS_FIR_AIM132_1rnd_PYLON_M",
+							"JAS_FIR_BRIMSTONE_JET2_PYLON_M",
+							"JAS_STORMSHADOW_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_STORMSHADOW_PYLON_M",
+							"JAS_FIR_BRIMSTONE_JET2_PYLON_M",
+							"JAS_FIR_AIM132_1rnd_PYLON_M"
+						};
+					};
+					class HSTRIKE
+					{
+						displayName="Heavy Strike";
+						attachment[]=
+						{
+							"JAS_FIR_AIM132_1rnd_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_GBU24A_BLU118_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_GBU24A_BLU118_PYLON_M",
+							"JAS_FIR_EGBU12_PYLON_M",
+							"JAS_FIR_AIM132_1rnd_PYLON_M"
+						};
+					};
+					class SEAD
+					{
+						displayName="SEAD";
+						attachment[]=
+						{
+							"JAS_FIR_AIM132_1rnd_PYLON_M",
+							"JAS_FIR_AGM88_PYLON_M",
+							"JAS_FIR_AGM88_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M",
+							"JAS_FIR_Meteor_PYLON_M",
+							"JAS_FIR_GBU53_P_4rnd_M",
+							"JAS_FIR_AGM88_PYLON_M",
+							"JAS_FIR_AGM88_PYLON_M",
+							"JAS_FIR_AIM132_1rnd_PYLON_M"
+						};
+					};
+				};
+			};
 		};
 		memoryPointDriverOptics="gau22_start";
 		unitInfoType="RscOptics_AV_pilot";
@@ -2552,13 +9492,13 @@ class CfgVehicles
 		weapons[] =
 		{
 			"FIR_MasterArm",
-			"JAS_CUP_Vacannon_GAU22_veh",
+			//"JAS_CUP_Vacannon_GAU22_veh",
 			"FIR_CMLauncher",
 			"Laserdesignator_mounted"
 		};
 		magazines[] =
 		{
-			"JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M",
+			//"JAS_CUP_220Rnd_TE1_White_Tracer_25mm_GAU22_M",
 			"FIR_240rnd_CMFlare_Chaff_Magazine",
 			"Laserbatteries"
 		};
@@ -2602,7 +9542,7 @@ class CfgVehicles
 				showWindow = 0;
 				hideOnUse = 1;
 			};
-			class CUP_F35B_OpenWeaponBay
+			/*class CUP_F35B_OpenWeaponBay
 			{
 				priority = 1.5;
 				shortcut = "";
@@ -2679,7 +9619,7 @@ class CfgVehicles
 				condition = "player in this and isengineon this";
 				statement = "[this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\Jettison\droptanks.sqf"";";
 				onlyforplayer = "False";
-			};
+			};*/
 			class Aircraft_MFD_Open_N
 			{
 				displayName = "Open Targetting System";
@@ -2697,6 +9637,3863 @@ class CfgVehicles
 			Init = "[_this select 0] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\initSEAD.sqf"";";
 			fired="fcs = [_this] execVM ""\ARMA3_CUP_Enhancement_Systems\sqs\init\fcs.sqf"";";
 			class CBA_Extended_EventHandlers: CBA_Extended_EventHandlers_base {};
+		};
+		class MFD
+		{
+			class AirplaneHUD
+			{
+				topLeft="HUD_top_left";
+				topRight="HUD_top_right";
+				bottomLeft="HUD_bottom_left";
+				//topLeft="HUD LH";
+				//topRight="HUD PH";
+				//bottomLeft="HUD LD";
+				borderLeft=0;
+				borderRight=0;
+				borderTop=0;
+				borderBottom=0.2;
+				color[]={0.15000001,1,0.15000001,1};
+				helmetMountedDisplay=1;
+				helmetPosition[]={-0.024599999,0.018999999,0.1};
+				helmetRight[]={0.050000001,0,0};
+				helmetDown[]={0,-0.050000001,0};
+				enableParallax=1;
+				class Bones
+				{
+					class PlaneOrientation
+					{
+						type="fixed";
+						pos[]={0.498,0.38};
+					};
+					class WeaponAim
+					{
+						type="vector";
+						source="weapon";
+						pos0[]={0.498,0.38};
+						pos10[]={1.166,1.215};
+					};
+					class Target
+					{
+						type="vector";
+						source="target";
+						pos0[]={0.498,0.38};
+						pos10[]={1.166,1.215};
+					};
+					class TargetingPodTarget
+					{
+						source="pilotcamera";
+						type="vector";
+						pos0[]={0.498,0.38};
+						pos10[]={1.166,1.215};
+					};
+					class ImpactPoint
+					{
+						type="vector";
+						source="ImpactPoint";
+						pos0[]={0.5,0.38};
+						pos10[]={1.168,1.215};
+					};
+					class NormalizeBombCircle
+					{
+						type="normalizedorsmaller";
+						limit=0.079999998;
+						aspectRatio=1.25;
+					};
+					class Velocity
+					{
+						type="vector";
+						source="velocity";
+						pos0[]={0.498,0.38};
+						pos10[]={1.166,1.215};
+					};
+					class Level0
+					{
+						type="horizon";
+						pos0[]={0.5,0.38};
+						pos10[]={1.168,1.215};
+						angle=0;
+					};
+					class Limit0109
+					{
+						type="limit";
+						limits[]={0.1,0.1,0.89999998,0.89999998};
+					};
+					class VerticalSpeed
+					{
+						type="linear";
+						source="vspeed";
+						sourceScale=1;
+						min=-100;
+						max=100;
+						minPos[]={0,0.15000001};
+						maxPos[]={0,-0.15000001};
+					};
+					class HorizonIndicatorBank
+					{
+						type="rotational";
+						source="horizonBank";
+						sourceScale=1;
+						center[]={0.064999998,0.12};
+						min=-3.1415927;
+						max=3.1415927;
+						minAngle=0;
+						maxAngle=360;
+						aspectRatio=1.25;
+					};
+					class HorizonIndicatorDive: HorizonIndicatorBank
+					{
+						source="horizonDive";
+						min=-1.5707999;
+						max=1.5707999;
+						minAngle=90;
+						maxAngle=-90;
+					};
+					class TerrainBone
+					{
+						type="linear";
+						source="altitudeAGL";
+						sourceScale=1;
+						min=0;
+						max=200;
+						minPos[]={0,0.88};
+						maxPos[]={0,0.38};
+					};
+					class MissileFlightTimeRot1
+					{
+						type="rotational";
+						source="MissileFlightTime";
+						sourceScale=1;
+						center[]={0,0};
+						min=0;
+						max=0.5;
+						minAngle=0;
+						maxAngle=18;
+						aspectRatio=1.25;
+					};
+					class MissileFlightTimeRot2: MissileFlightTimeRot1
+					{
+						maxAngle=36;
+						max=1;
+					};
+					class MissileFlightTimeRot3: MissileFlightTimeRot1
+					{
+						maxAngle=54;
+						max=1.5;
+					};
+					class MissileFlightTimeRot4: MissileFlightTimeRot1
+					{
+						maxAngle=72;
+						max=2;
+					};
+					class MissileFlightTimeRot5: MissileFlightTimeRot1
+					{
+						maxAngle=90;
+						max=2.5;
+					};
+					class MissileFlightTimeRot6: MissileFlightTimeRot1
+					{
+						maxAngle=108;
+						max=3;
+					};
+					class MissileFlightTimeRot7: MissileFlightTimeRot1
+					{
+						maxAngle=126;
+						max=3.5;
+					};
+					class MissileFlightTimeRot8: MissileFlightTimeRot1
+					{
+						maxAngle=144;
+						max=4;
+					};
+					class MissileFlightTimeRot9: MissileFlightTimeRot1
+					{
+						maxAngle=162;
+						max=4.5;
+					};
+					class MissileFlightTimeRot10: MissileFlightTimeRot1
+					{
+						maxAngle=180;
+						max=5;
+					};
+					class MissileFlightTimeRot11: MissileFlightTimeRot1
+					{
+						maxAngle=198;
+						max=5.5;
+					};
+					class MissileFlightTimeRot12: MissileFlightTimeRot1
+					{
+						maxAngle=216;
+						max=6;
+					};
+					class MissileFlightTimeRot13: MissileFlightTimeRot1
+					{
+						maxAngle=234;
+						max=6.5;
+					};
+					class MissileFlightTimeRot14: MissileFlightTimeRot1
+					{
+						maxAngle=252;
+						max=7;
+					};
+					class MissileFlightTimeRot15: MissileFlightTimeRot1
+					{
+						maxAngle=270;
+						max=7.5;
+					};
+					class MissileFlightTimeRot16: MissileFlightTimeRot1
+					{
+						maxAngle=288;
+						max=8;
+					};
+					class MissileFlightTimeRot17: MissileFlightTimeRot1
+					{
+						maxAngle=306;
+						max=8.5;
+					};
+					class MissileFlightTimeRot18: MissileFlightTimeRot1
+					{
+						maxAngle=324;
+						max=9;
+					};
+					class MissileFlightTimeRot19: MissileFlightTimeRot1
+					{
+						maxAngle=342;
+						max=9.5;
+					};
+					class MissileFlightTimeRot20: MissileFlightTimeRot1
+					{
+						maxAngle=360;
+						max=10;
+					};
+					class Airport1
+					{
+						type="vector";
+						source="airportCorner1";
+						pos0[]={0.5,0.38};
+						pos10[]={1.168,1.215};
+					};
+					class Airport2: Airport1
+					{
+						source="airportCorner2";
+					};
+					class Airport3: Airport1
+					{
+						source="airportCorner3";
+					};
+					class Airport4: Airport1
+					{
+						source="airportCorner4";
+					};
+					class ILS_H
+					{
+						type="ils";
+						pos0[]={0.5,0.38};
+						pos3[]={0.70039999,0.38};
+					};
+					class ILS_W: ILS_H
+					{
+						pos3[]={0.5,0.63050002};
+					};
+					class LarAmmoMax
+					{
+						type="linear";
+						source="LarAmmoMax";
+						sourceScale=1;
+						min=0;
+						max=1;
+						minPos[]={0,1};
+						maxPos[]={0,0};
+					};
+					class LarAmmoMin: LarAmmoMax
+					{
+						source="LarAmmoMin";
+					};
+					class LarTargetDist: LarAmmoMax
+					{
+						source="LarTargetDist";
+					};
+				};
+				class Draw
+				{
+					color[]={0.15000001,1,0.15000001};
+					alpha=1;
+					condition="on";
+					class PlaneOrientationCrosshair
+					{
+						clipTL[]={0,1};
+						clipBR[]={1,0};
+						type="line";
+						width=4;
+						points[]=
+						{
+							
+							{
+								"PlaneOrientation",
+								{-0.0099999998,0},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{0.0099999998,0},
+								1
+							},
+							{},
+							
+							{
+								"PlaneOrientation",
+								{0,-0.0125},
+								1
+							},
+							
+							{
+								"PlaneOrientation",
+								{0,0.0125},
+								1
+							},
+							{}
+						};
+					};
+					class PlaneMovementCrosshair
+					{
+						clipTL[]={0,1};
+						clipBR[]={1,0};
+						type="line";
+						width=4;
+						points[]=
+						{
+							
+							{
+								"Velocity",
+								{0,-0.025},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.0099999998,-0.02165},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.01732,-0.0125},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.02,0},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.01732,0.0125},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.0099999998,0.02165},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0,0.025},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.0099999998,0.02165},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.01732,0.0125},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.02,0},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.01732,-0.0125},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.0099999998,-0.02165},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0,-0.025},
+								1
+							},
+							{},
+							
+							{
+								"Velocity",
+								{0.039999999,0},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0.02,0},
+								1
+							},
+							{},
+							
+							{
+								"Velocity",
+								{-0.039999999,0},
+								1
+							},
+							
+							{
+								"Velocity",
+								{-0.02,0},
+								1
+							},
+							{},
+							
+							{
+								"Velocity",
+								{0,-0.050000001},
+								1
+							},
+							
+							{
+								"Velocity",
+								{0,-0.025},
+								1
+							},
+							{}
+						};
+					};
+					class MachineGunCrosshairGroup
+					{
+						type="group";
+						condition="mgun";
+						class MachineGunCrosshair
+						{
+							type="line";
+							width=3;
+							points[]=
+							{
+								
+								{
+									"ImpactPoint",
+									{0,-0.1125},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0,0.1125},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.1},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{-0.090000004,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.079999998,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0.090000004,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.079999998,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0,-0.0024999999},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.0024999999},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{-0.0020000001,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.0020000001,0},
+									1
+								},
+								{}
+							};
+						};
+						class Circle
+						{
+							type="line";
+							width=6;
+							points[]=
+							{
+								
+								{
+									"ImpactPoint",
+									{0,-0.079999998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot1",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot2",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot3",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot4",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot5",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot6",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot7",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot8",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot9",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot10",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot11",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot12",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot13",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot14",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot15",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot16",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot17",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot18",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot19",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot20",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot20",
+									{0,0.064000003},
+									1,
+									"ImpactPoint",
+									1
+								}
+							};
+						};
+						class Circle_Min_Range
+						{
+							type="line";
+							width=3;
+							points[]=
+							{
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.013888,-0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.02736,-0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.039999999,-0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.051424,-0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.061280001,-0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.069279999,-0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.075176001,-0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.078783996,-0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.079999998,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.078783996,0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.075176001,0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.069279999,0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.061280001,0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.051424,0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.039999999,0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.02736,0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.013888,0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.1},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.013888,0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.02736,0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.039999999,0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.051424,0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.061280001,0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.069279999,0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.075176001,0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.078783996,0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.079999998,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.078783996,-0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.075176001,-0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.069279999,-0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.061280001,-0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.051424,-0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.039999999,-0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.02736,-0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.013888,-0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								}
+							};
+						};
+						class Distance
+						{
+							type="text";
+							source="ImpactDistance";
+							sourceScale=0.001;
+							sourcePrecision=1;
+							max=15;
+							align="center";
+							scale=1;
+							pos[]=
+							{
+								"ImpactPoint",
+								{-0.0020000001,0.11},
+								1
+							};
+							right[]=
+							{
+								"ImpactPoint",
+								{0.045000002,0.11},
+								1
+							};
+							down[]=
+							{
+								"ImpactPoint",
+								{-0.0020000001,0.15000001},
+								1
+							};
+						};
+					};
+					class AAMissileCrosshairGroup
+					{
+						type="group";
+						condition="AAmissile";
+						class AAMissileCrosshair
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									"WeaponAim",
+									{0,-0.3125},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.043400001,-0.30774999},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.085500002,-0.29365599},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.125,-0.270625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.16069999,-0.239375},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.19149999,-0.200875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.2165,-0.15625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.234925,-0.106875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.2462,-0.054249998},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.25,0},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.2462,0.054249998},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.234925,0.106875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.2165,0.15625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.19149999,0.200875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.16069999,0.239375},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.125,0.270625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.085500002,0.29365599},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.043400001,0.30774999},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0,0.3125},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.043400001,0.30774999},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.085500002,0.29365599},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.125,0.270625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.16069999,0.239375},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.19149999,0.200875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.2165,0.15625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.234925,0.106875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.2462,0.054249998},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.25,0},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.2462,-0.054249998},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.234925,-0.106875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.2165,-0.15625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.19149999,-0.200875},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.16069999,-0.239375},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.125,-0.270625},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.085500002,-0.29365599},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.043400001,-0.30774999},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0,-0.3125},
+									1
+								}
+							};
+						};
+					};
+					class ATMissileCrosshairGroup
+					{
+						condition="ATmissile";
+						type="group";
+						class ATMissileCrosshair
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									"WeaponAim",
+									{-0.15000001,-0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,-0.13},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,0.13},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{0.15000001,-0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.15000001,-0.13},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{0.15000001,0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.15000001,0.13},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,-0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.13,-0.15000001},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{-0.15000001,0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{-0.13,0.15000001},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{0.15000001,-0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.13,-0.15000001},
+									1
+								},
+								{},
+								
+								{
+									"WeaponAim",
+									{0.15000001,0.15000001},
+									1
+								},
+								
+								{
+									"WeaponAim",
+									{0.13,0.15000001},
+									1
+								}
+							};
+						};
+					};
+					class RocketCrosshairGroup
+					{
+						type="group";
+						condition="Rocket";
+						class MachineGunCrosshair
+						{
+							type="line";
+							width=3;
+							points[]=
+							{
+								
+								{
+									"ImpactPoint",
+									{0,-0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,-0.025},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0,0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.025},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{-0.039999999,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.02,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0.039999999,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.02,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0.0099999998,-0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.0099999998,-0.050000001},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0,-0.0024999999},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.0024999999},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{-0.0020000001,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.0020000001,0},
+									1
+								},
+								{}
+							};
+						};
+						class Distance
+						{
+							type="text";
+							source="ImpactDistance";
+							sourceScale=0.001;
+							sourcePrecision=1;
+							max=15;
+							align="center";
+							scale=1;
+							pos[]=
+							{
+								"ImpactPoint",
+								{-0.0020000001,0.07},
+								1
+							};
+							right[]=
+							{
+								"ImpactPoint",
+								{0.045000002,0.07},
+								1
+							};
+							down[]=
+							{
+								"ImpactPoint",
+								{-0.0020000001,0.11},
+								1
+							};
+						};
+					};
+					class BombCrosshairGroup
+					{
+						type="group";
+						condition="bomb";
+						class BombCrosshair
+						{
+							width=4;
+							type="line";
+							points[]=
+							{
+								
+								{
+									"ImpactPoint",
+									{0,0.1125},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.1},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{-0.090000004,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.079999998,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0.090000004,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.079999998,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0,-0.0024999999},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.0024999999},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{-0.0020000001,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.0020000001,0},
+									1
+								},
+								{},
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.013888,-0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.02736,-0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.039999999,-0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.051424,-0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.061280001,-0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.069279999,-0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.075176001,-0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.078783996,-0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.079999998,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.078783996,0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.075176001,0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.069279999,0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.061280001,0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.051424,0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.039999999,0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.02736,0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0.013888,0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,0.1},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.013888,0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.02736,0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.039999999,0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.051424,0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.061280001,0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.069279999,0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.075176001,0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.078783996,0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.079999998,0},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.078783996,-0.01736},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.075176001,-0.034200002},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.069279999,-0.050000001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.061280001,-0.064280003},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.051424,-0.0766},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.039999999,-0.086599998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.02736,-0.093970001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{-0.013888,-0.098480001},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								},
+								{},
+								{},
+								
+								{
+									"ImpactPoint",
+									-1,
+									"Velocity",
+									1,
+									"NormalizeBombCircle",
+									1,
+									"ImpactPoint",
+									1,
+									{0,0},
+									1
+								},
+								
+								{
+									"Velocity",
+									1,
+									"Limit0109",
+									1,
+									{0,0},
+									1
+								}
+							};
+						};
+						class Circle
+						{
+							type="line";
+							width=6;
+							points[]=
+							{
+								
+								{
+									"ImpactPoint",
+									{0,-0.079999998},
+									1
+								},
+								
+								{
+									"ImpactPoint",
+									{0,-0.1},
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot1",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot2",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot3",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot4",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot5",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot6",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot7",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot8",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot9",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot10",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot11",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot12",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot13",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot14",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot15",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot16",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot17",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot18",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot19",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot20",
+									{0,0.079999998},
+									1,
+									"ImpactPoint",
+									1
+								},
+								
+								{
+									"MissileFlightTimeRot20",
+									{0,0.064000003},
+									1,
+									"ImpactPoint",
+									1
+								}
+							};
+						};
+						class Distance
+						{
+							type="text";
+							source="ImpactDistance";
+							sourceScale=0.001;
+							sourcePrecision=1;
+							max=15;
+							align="center";
+							scale=1;
+							pos[]=
+							{
+								"ImpactPoint",
+								{-0.0020000001,0.11},
+								1
+							};
+							right[]=
+							{
+								"ImpactPoint",
+								{0.045000002,0.11},
+								1
+							};
+							down[]=
+							{
+								"ImpactPoint",
+								{-0.0020000001,0.15000001},
+								1
+							};
+						};
+					};
+					class WeaponName
+					{
+						type="text";
+						source="weapon";
+						sourceScale=1;
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.050000001,0.85000002},
+							1
+						};
+						right[]=
+						{
+							{0.090000004,0.85000002},
+							1
+						};
+						down[]=
+						{
+							{0.050000001,0.88999999},
+							1
+						};
+					};
+					class AmmoCount
+					{
+						type="text";
+						source="ammo";
+						sourceScale=1;
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.94999999,0.85000002},
+							1
+						};
+						right[]=
+						{
+							{0.99000001,0.85000002},
+							1
+						};
+						down[]=
+						{
+							{0.94999999,0.88999999},
+							1
+						};
+					};
+					class StallGroup
+					{
+						type="group";
+						condition="stall";
+						color[]={1,0,0};
+						blinkingPattern[]={0.2,0.2};
+						blinkingStartsOn=1;
+						class StallText
+						{
+							type="text";
+							source="static";
+							text="STALL";
+							align="center";
+							scale=1;
+							pos[]=
+							{
+								{0.5,0.25},
+								1
+							};
+							right[]=
+							{
+								{0.54000002,0.25},
+								1
+							};
+							down[]=
+							{
+								{0.5,0.28999999},
+								1
+							};
+						};
+					};
+					class PitchNumber
+					{
+						type="text";
+						source="horizonDive";
+						sourceScale=57.29578;
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.13,0.22499999},
+							1
+						};
+						right[]=
+						{
+							{0.17,0.22499999},
+							1
+						};
+						down[]=
+						{
+							{0.13,0.26499999},
+							1
+						};
+					};
+					class PitchText
+					{
+						type="text";
+						source="static";
+						text="PITCH";
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.11,0.22499999},
+							1
+						};
+						right[]=
+						{
+							{0.15000001,0.22499999},
+							1
+						};
+						down[]=
+						{
+							{0.11,0.26499999},
+							1
+						};
+					};
+					class RollNumber
+					{
+						type="text";
+						source="horizonBank";
+						sourceScale=57.29578;
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.13,0.27000001},
+							1
+						};
+						right[]=
+						{
+							{0.17,0.27000001},
+							1
+						};
+						down[]=
+						{
+							{0.13,0.31},
+							1
+						};
+					};
+					class RollText
+					{
+						type="text";
+						source="static";
+						text="ROLL";
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.11,0.27000001},
+							1
+						};
+						right[]=
+						{
+							{0.15000001,0.27000001},
+							1
+						};
+						down[]=
+						{
+							{0.11,0.31},
+							1
+						};
+					};
+					class SpeedNumber
+					{
+						type="text";
+						source="speed";
+						sourceScale=3.5999999;
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.13,0.36000001},
+							1
+						};
+						right[]=
+						{
+							{0.17,0.36000001},
+							1
+						};
+						down[]=
+						{
+							{0.13,0.40000001},
+							1
+						};
+					};
+					class SpeedText
+					{
+						type="text";
+						source="static";
+						text="SPEED";
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.11,0.36000001},
+							1
+						};
+						right[]=
+						{
+							{0.15000001,0.36000001},
+							1
+						};
+						down[]=
+						{
+							{0.11,0.40000001},
+							1
+						};
+					};
+					class SpeedSeparator
+					{
+						type="line";
+						width=2;
+						points[]=
+						{
+							
+							{
+								{0.12,0.22499999},
+								1
+							},
+							
+							{
+								{0.12,0.63300002},
+								1
+							}
+						};
+					};
+					class FlapsGroup
+					{
+						type="group";
+						condition="flaps";
+						class FlapsText
+						{
+							type="text";
+							source="static";
+							text="FLAPS";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								{0.11,0.44999999},
+								1
+							};
+							right[]=
+							{
+								{0.15000001,0.44999999},
+								1
+							};
+							down[]=
+							{
+								{0.11,0.49000001},
+								1
+							};
+						};
+					};
+					class GearGroup
+					{
+						type="group";
+						condition="ils";
+						class GearText
+						{
+							type="text";
+							source="static";
+							text="GEAR";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								{0.11,0.495},
+								1
+							};
+							right[]=
+							{
+								{0.15000001,0.495},
+								1
+							};
+							down[]=
+							{
+								{0.11,0.53500003},
+								1
+							};
+						};
+					};
+					class ILS
+					{
+						condition="ils";
+						class Glideslope
+						{
+							clipTL[]={0,0};
+							clipBR[]={1,1};
+							class ILS
+							{
+								type="line";
+								points[]=
+								{
+									
+									{
+										"ILS_W",
+										{-0.23999999,0},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{0.23999999,0},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{-0.23999999,-0.029999999},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{-0.23999999,0.029999999},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{-0.12,-0.022500001},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{-0.12,0.022500001},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{0,-0.029999999},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{0,0.029999999},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{0.12,-0.022500001},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{0.12,0.022500001},
+										1
+									},
+									{},
+									
+									{
+										"ILS_W",
+										{0.23999999,-0.029999999},
+										1
+									},
+									
+									{
+										"ILS_W",
+										{0.23999999,0.029999999},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{0,-0.30000001},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0,0.30000001},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{-0.024,-0.30000001},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0.024,-0.30000001},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{-0.017999999,-0.15000001},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0.017999999,-0.15000001},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{-0.024,0},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0.024,0},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{-0.017999999,0.15000001},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0.017999999,0.15000001},
+										1
+									},
+									{},
+									
+									{
+										"ILS_H",
+										{-0.024,0.30000001},
+										1
+									},
+									
+									{
+										"ILS_H",
+										{0.024,0.30000001},
+										1
+									}
+								};
+							};
+							class airport
+							{
+								type="line";
+								points[]=
+								{
+									
+									{
+										"airport1",
+										1
+									},
+									
+									{
+										"airport2",
+										1
+									},
+									
+									{
+										"airport4",
+										1
+									},
+									
+									{
+										"airport3",
+										1
+									},
+									
+									{
+										"airport1",
+										1
+									}
+								};
+							};
+						};
+					};
+					class LightsGroup
+					{
+						type="group";
+						condition="lights";
+						class LightsText
+						{
+							type="text";
+							source="static";
+							text="LLS";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								{0.11,0.54000002},
+								1
+							};
+							right[]=
+							{
+								{0.15000001,0.54000002},
+								1
+							};
+							down[]=
+							{
+								{0.11,0.57999998},
+								1
+							};
+						};
+					};
+					class CollisionLightsGroup
+					{
+						type="group";
+						condition="collisionlights";
+						class CollisionLightsText
+						{
+							type="text";
+							source="static";
+							text="COLL";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								{0.11,0.58499998},
+								1
+							};
+							right[]=
+							{
+								{0.15000001,0.58499998},
+								1
+							};
+							down[]=
+							{
+								{0.11,0.625},
+								1
+							};
+						};
+					};
+					class Climb
+					{
+						type="line";
+						width=1;
+						points[]=
+						{
+							
+							{
+								"VerticalSpeed",
+								{0.875,0.22},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.875,0.54000002},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.86900002,0.23},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.23},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.25999999},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.25999999},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.28999999},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.28999999},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.31999999},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.31999999},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.34999999},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.34999999},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.85500002,0.38},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.38},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.41},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.41},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.44},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.44},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.47},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.47},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.5},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.86500001,0.5},
+								1
+							},
+							{},
+							
+							{
+								"VerticalSpeed",
+								{0.87400001,0.52999997},
+								1
+							},
+							
+							{
+								"VerticalSpeed",
+								{0.86900002,0.52999997},
+								1
+							}
+						};
+					};
+					class ClimbMinGroup
+					{
+						type="group";
+						clipTL[]={0,0.40000001};
+						clipBR[]={1,0.75999999};
+						class ClimbMin
+						{
+							type="text";
+							source="static";
+							text="-100";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								"VerticalSpeed",
+								{0.866,0.51749998},
+								1
+							};
+							right[]=
+							{
+								"VerticalSpeed",
+								{0.89099997,0.51749998},
+								1
+							};
+							down[]=
+							{
+								"VerticalSpeed",
+								{0.866,0.54250002},
+								1
+							};
+						};
+					};
+					class ClimbMaxGroup
+					{
+						type="group";
+						clipTL[]={0,0};
+						clipBR[]={1,0.36000001};
+						class ClimbMax
+						{
+							type="text";
+							source="static";
+							text="100";
+							align="left";
+							scale=1;
+							pos[]=
+							{
+								"VerticalSpeed",
+								{0.866,0.2175},
+								1
+							};
+							right[]=
+							{
+								"VerticalSpeed",
+								{0.89099997,0.2175},
+								1
+							};
+							down[]=
+							{
+								"VerticalSpeed",
+								{0.866,0.24250001},
+								1
+							};
+						};
+					};
+					class ClimbText
+					{
+						type="text";
+						source="static";
+						text="CLIMB";
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.87,0.72100002},
+							1
+						};
+						right[]=
+						{
+							{0.89499998,0.72100002},
+							1
+						};
+						down[]=
+						{
+							{0.87,0.74599999},
+							1
+						};
+					};
+					class TerrainGroup
+					{
+						type="group";
+						clipTL[]={0,0};
+						clipBR[]={1,0.69999999};
+						class TerrainLine
+						{
+							type="line";
+							width=1;
+							points[]=
+							{
+								
+								{
+									"TerrainBone",
+									{0.74000001,0},
+									1
+								},
+								
+								{
+									"TerrainBone",
+									{0.90899998,0},
+									1
+								}
+							};
+						};
+						class TerrainText
+						{
+							type="text";
+							source="static";
+							text="TERRAIN";
+							align="right";
+							scale=1;
+							pos[]=
+							{
+								"TerrainBone",
+								{0.74000001,0.003},
+								1
+							};
+							right[]=
+							{
+								"TerrainBone",
+								{0.76499999,0.003},
+								1
+							};
+							down[]=
+							{
+								"TerrainBone",
+								{0.74000001,0.028000001},
+								1
+							};
+						};
+						class TerrainNumber
+						{
+							type="text";
+							source="altitudeAGL";
+							sourceScale=1;
+							align="right";
+							scale=1;
+							pos[]=
+							{
+								"TerrainBone",
+								{0.74000001,-0.043000001},
+								1
+							};
+							right[]=
+							{
+								"TerrainBone",
+								{0.77999997,-0.043000001},
+								1
+							};
+							down[]=
+							{
+								"TerrainBone",
+								{0.74000001,-0.003},
+								1
+							};
+						};
+					};
+					class AltitudeNumber
+					{
+						type="text";
+						source="altitudeASL";
+						sourceScale=1;
+						align="left";
+						scale=1;
+						pos[]=
+						{
+							{0.84500003,0.36000001},
+							1
+						};
+						right[]=
+						{
+							{0.88499999,0.36000001},
+							1
+						};
+						down[]=
+						{
+							{0.84500003,0.40000001},
+							1
+						};
+					};
+					class AltitudeText
+					{
+						type="text";
+						source="static";
+						text="ASL";
+						align="right";
+						scale=1;
+						pos[]=
+						{
+							{0.88,0.72000003},
+							1
+						};
+						right[]=
+						{
+							{0.92000002,0.72000003},
+							1
+						};
+						down[]=
+						{
+							{0.88,0.75999999},
+							1
+						};
+					};
+					class AltitudeArrow
+					{
+						type="line";
+						width=3;
+						points[]=
+						{
+							
+							{
+								{0.85699999,0.36399999},
+								1
+							},
+							
+							{
+								{0.875,0.38},
+								1
+							},
+							
+							{
+								{0.85699999,0.396},
+								1
+							},
+							{},
+							
+							{
+								{0.898,0.36399999},
+								1
+							},
+							
+							{
+								{0.88,0.38},
+								1
+							},
+							
+							{
+								{0.898,0.396},
+								1
+							}
+						};
+					};
+					class AltitudeScale
+					{
+						type="scale";
+						horizontal=0;
+						source="altitudeASL";
+						sourceScale=1;
+						min=0;
+						width=4;
+						top=0.70999998;
+						center=0.38;
+						bottom=0.050000001;
+						lineXleft=0.88;
+						lineYright=0.88999999;
+						lineXleftMajor=0.88;
+						lineYrightMajor=0.89999998;
+						majorLineEach=5;
+						numberEach=10;
+						step=10;
+						stepSize=0.025;
+						align="right";
+						scale=1;
+						pos[]={0.91000003,0.69};
+						right[]={0.94999999,0.69};
+						down[]={0.91000003,0.73000002};
+					};
+					class HeadingArrows
+					{
+						type="line";
+						width=3;
+						points[]=
+						{
+							
+							{
+								{0.484,0.89700001},
+								1
+							},
+							
+							{
+								{0.5,0.91500002},
+								1
+							},
+							
+							{
+								{0.51599997,0.89700001},
+								1
+							},
+							{},
+							
+							{
+								{0.484,0.99800003},
+								1
+							},
+							
+							{
+								{0.5,0.98000002},
+								1
+							},
+							
+							{
+								{0.51599997,0.99800003},
+								1
+							}
+						};
+					};
+					class HeadingScale
+					{
+						type="scale";
+						horizontal=1;
+						source="heading";
+						sourceScale=1;
+						width=4;
+						top=0.050000001;
+						center=0.5;
+						bottom=0.94999999;
+						lineXleft=0.93000001;
+						lineYright=0.92000002;
+						lineXleftMajor=0.94;
+						lineYrightMajor=0.92000002;
+						majorLineEach=3;
+						numberEach=9;
+						step=5;
+						stepSize=0.02;
+						align="center";
+						scale=1;
+						pos[]={0.050000001,0.94};
+						right[]={0.090000004,0.94};
+						down[]={0.050000001,0.98000002};
+					};
+					class HorizontalLine
+					{
+						clipTL[]={0.2,0};
+						clipBR[]={0.80000001,0.75999999};
+						class HorizontalLineDraw
+						{
+							type="line";
+							source="Level0";
+							points[]=
+							{
+								
+								{
+									"Level0",
+									{-0.22499999,0},
+									1
+								},
+								
+								{
+									"Level0",
+									{-0.1875,0},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									{-0.15000001,0},
+									1
+								},
+								
+								{
+									"Level0",
+									{-0.1125,0},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									{-0.075000003,0},
+									1
+								},
+								
+								{
+									"Level0",
+									{-0.037500001,0},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									{0.037500001,0},
+									1
+								},
+								
+								{
+									"Level0",
+									{0.075000003,0},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									{0.1125,0},
+									1
+								},
+								
+								{
+									"Level0",
+									{0.15000001,0},
+									1
+								},
+								{},
+								
+								{
+									"Level0",
+									{0.1875,0},
+									1
+								},
+								
+								{
+									"Level0",
+									{0.22499999,0},
+									1
+								}
+							};
+						};
+					};
+					class HorizonIndicatorBackground
+					{
+						type="line";
+						width=1;
+						points[]=
+						{
+							
+							{
+								{0.00059999502,0.12},
+								1
+							},
+							
+							{
+								{0.1294,0.12},
+								1
+							}
+						};
+					};
+					class HorizonIndicator
+					{
+						type="line";
+						width=4;
+						points[]=
+						{
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.055199999,0},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.046,0},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.045434199,0.0079856003},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.043226201,0.015732},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.039836001,0.023},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.035236001,0.029568801},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.029568801,0.035236001},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.023,0.039836001},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.015732,0.043226201},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{-0.0079856003,0.045434199},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0,0.046},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.0079856003,0.045434199},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.015732,0.043226201},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.023,0.039836001},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.029568801,0.035236001},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.035236001,0.029568801},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.039836001,0.023},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.043226201,0.015732},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.045434199,0.0079856003},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.046,0},
+								1
+							},
+							
+							{
+								"HorizonIndicatorBank",
+								{0.055199999,0},
+								1
+							}
+						};
+					};
+					class RadarBoxes
+					{
+						type="radar";
+						pos0[]={0.498,0.38};
+						pos10[]={1.166,1.215};
+						width=4;
+						points[]=
+						{
+							
+							{
+								{-0.0020000001,-0.0024999999},
+								1
+							},
+							
+							{
+								{0.0020000001,-0.0024999999},
+								1
+							},
+							
+							{
+								{0.0020000001,0.0024999999},
+								1
+							},
+							
+							{
+								{-0.0020000001,0.0024999999},
+								1
+							},
+							
+							{
+								{-0.0020000001,-0.0024999999},
+								1
+							}
+						};
+					};
+					class TargetDiamond
+					{
+						class shape
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0.02,0.025},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{-0.02,0.025},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{-0.02,-0.025},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0.02,-0.025},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0.02,0.025},
+									1
+								}
+							};
+						};
+					};
+					class TargetLocked
+					{
+						condition="missilelocked";
+						class shape
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0,-0.037500001},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0.029999999,0},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0,0.037500001},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{-0.029999999,0},
+									1
+								},
+								
+								{
+									"Target",
+									1,
+									"Limit0109",
+									1,
+									{0,-0.037500001},
+									1
+								}
+							};
+						};
+					};
+					class TargetingPodDir
+					{
+						type="line";
+						width=3;
+						points[]=
+						{
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.020805599,0.0051731099},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.020805599,-0.0051731099},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0176381,-0.0147318},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0117854,-0.0220477},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0041384902,-0.026007},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0041384902,-0.026007},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0117854,-0.0220477},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0176381,-0.0147318},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.020805599,-0.0051731099},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.020805599,0.0051731202},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0176381,0.0147318},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0117854,0.0220477},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0041384902,0.026007},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0041384902,0.026007},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0117854,0.0220477},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0176381,0.0147318},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.020805599,0.0051731002},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.020805599,-0.0051731202},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0176381,-0.0147318},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0117854,-0.0220477},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{0.0041384902,-0.026007},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0041385,-0.026007},
+								1
+							},
+							{},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0117854,-0.0220477},
+								1
+							},
+							
+							{
+								"TargetingPodTarget",
+								1,
+								{-0.0176381,-0.0147318},
+								1
+							},
+							{},
+							{}
+						};
+					};
+					class LAR
+					{
+						type="group";
+						condition="AAmissile";
+						class Lines
+						{
+							type="line";
+							width=4;
+							points[]=
+							{
+								
+								{
+									{0.23,0.25},
+									1
+								},
+								
+								{
+									{0.20999999,0.25},
+									1
+								},
+								
+								{
+									{0.20999999,0.55000001},
+									1
+								},
+								
+								{
+									{0.23,0.55000001},
+									1
+								},
+								{},
+								
+								{
+									{0.23,0.47499999},
+									1
+								},
+								
+								{
+									{0.20999999,0.47499999},
+									1
+								},
+								{},
+								
+								{
+									{0.23,0.40000001},
+									1
+								},
+								
+								{
+									{0.20999999,0.40000001},
+									1
+								},
+								{},
+								
+								{
+									{0.23,0.32499999},
+									1
+								},
+								
+								{
+									{0.20999999,0.32499999},
+									1
+								},
+								{},
+								
+								{
+									"LarTargetDist",
+									-0.30000001,
+									{0.19,0.56999999},
+									1
+								},
+								
+								{
+									"LarTargetDist",
+									-0.30000001,
+									{0.20999999,0.55000001},
+									1
+								},
+								
+								{
+									"LarTargetDist",
+									-0.30000001,
+									{0.19,0.52999997},
+									1
+								},
+								{}
+							};
+						};
+						class Poly
+						{
+							type="polygon";
+							points[]=
+							{
+								
+								{
+									
+									{
+										"LarAmmoMin",
+										-0.30000001,
+										{0.211,0.55000001},
+										1
+									},
+									
+									{
+										"LarAmmoMax",
+										-0.30000001,
+										{0.211,0.55000001},
+										1
+									},
+									
+									{
+										"LarAmmoMax",
+										-0.30000001,
+										{0.228,0.55000001},
+										1
+									},
+									
+									{
+										"LarAmmoMin",
+										-0.30000001,
+										{0.228,0.55000001},
+										1
+									}
+								}
+							};
+						};
+						class TopText
+						{
+							type="text";
+							source="LarTop";
+							sourceScale=0.001;
+							scale=1;
+							pos[]=
+							{
+								
+								{
+									"_EVAL(0.21+0.03)",
+									"_EVAL(0.25-0.02)"
+								},
+								1
+							};
+							right[]=
+							{
+								
+								{
+									"_EVAL(0.21+0.07)",
+									"_EVAL(0.25-0.02)"
+								},
+								1
+							};
+							down[]=
+							{
+								
+								{
+									"_EVAL(0.21+0.03)",
+									"_EVAL(0.25+0.02)"
+								},
+								1
+							};
+							align="right";
+						};
+						class MiddleText: TopText
+						{
+							source="LarTop";
+							sourcePrecision=-1;
+							sourceScale=0.00050000002;
+							pos[]=
+							{
+								
+								{
+									"_EVAL(0.21+0.03)",
+									"_EVAL(0.25-0.02+0.3*0.5)"
+								},
+								1
+							};
+							right[]=
+							{
+								
+								{
+									"_EVAL(0.21+0.07)",
+									"_EVAL(0.25-0.02+0.3*0.5)"
+								},
+								1
+							};
+							down[]=
+							{
+								
+								{
+									"_EVAL(0.21+0.03)",
+									"_EVAL(0.25+0.02+0.3*0.5)"
+								},
+								1
+							};
+						};
+						class SpeedText: TopText
+						{
+							source="LarTargetSpeed";
+							align="left";
+							sourceScale=3.5999999;
+							pos[]=
+							{
+								"LarTargetDist",
+								-0.30000001,
+								{0.18000001,0.52999997},
+								1
+							};
+							right[]=
+							{
+								"LarTargetDist",
+								-0.30000001,
+								{0.22,0.52999997},
+								1
+							};
+							down[]=
+							{
+								"LarTargetDist",
+								-0.30000001,
+								{0.18000001,0.56999999},
+								1
+							};
+						};
+					};
+				};
+			};
 		};
 	};
 
@@ -2723,7 +13520,7 @@ class CfgVehicles
 		editorSubcategory="GOL_AAC_BANSHEE";
 	};
 
-	class JAS_F35_Loadout_Module: Module_F
+	/*class JAS_F35_Loadout_Module: Module_F
 	{
 		scope=2;
 		author = "-{GOL}-Jason";
@@ -2763,11 +13560,11 @@ class CfgVehicles
 						name="AIM-120";
 						value=2;
 					};
-					/*class hp1_TGP
+					class hp1_TGP
 					{
 						name="Sniper XR Pod";
 						value=3;
-					};*/
+					};
 				};
 			};
 			class HP2
@@ -2793,11 +13590,11 @@ class CfgVehicles
 						name="AIM-120";
 						value=2;
 					};
-					/*class hp2_TGP
+					class hp2_TGP
 					{
 						name="Sniper XR Pod";
 						value=3;
-					};*/
+					};
 				};
 			};
 			class HP3
@@ -3538,7 +14335,7 @@ class CfgVehicles
 						name="AIM-120";
 						value=1;
 					};
-					/*class hp9_12
+					class hp9_12
 					{
 						name="GBU-12";
 						value=2;
@@ -3612,7 +14409,7 @@ class CfgVehicles
 					{
 						name="AGM-154C JSOW";
 						value=16;
-					};*/
+					};
 				};
 			};
 			class HP10
@@ -3633,7 +14430,7 @@ class CfgVehicles
 						name="AIM-120";
 						value=1;
 					};
-					/*class hp10_12
+					class hp10_12
 					{
 						name="GBU-12";
 						value=2;
@@ -3707,7 +14504,7 @@ class CfgVehicles
 					{
 						name="AGM-154C JSOW";
 						value=16;
-					};*/
+					};
 				};
 			};
 		};
@@ -3776,7 +14573,7 @@ class CfgVehicles
 						name="Meteor";
 						value=2;
 					};
-					/*class hp1_brim
+					class hp1_brim
 					{
 						name="Brimstone";
 						value=3;
@@ -3785,7 +14582,7 @@ class CfgVehicles
 					{
 						name="Sniper XR Pod";
 						value=4;
-					};*/
+					};
 				};
 			};
 			class HP2
@@ -3811,7 +14608,7 @@ class CfgVehicles
 						name="Meteor";
 						value=2;
 					};
-					/*class hp2_brim
+					class hp2_brim
 					{
 						name="Brimstone";
 						value=3;
@@ -3820,7 +14617,7 @@ class CfgVehicles
 					{
 						name="Sniper XR Pod";
 						value=4;
-					};*/
+					};
 				};
 			};
 			class HP3
@@ -4331,7 +15128,7 @@ class CfgVehicles
 						name="ASRAAM";
 						value=1;
 					};
-					/*class hp9_12
+					class hp9_12
 					{
 						name="GBU-12";
 						value=2;
@@ -4375,7 +15172,7 @@ class CfgVehicles
 					{
 						name="Brimstone";
 						value=10;
-					};*/
+					};
 				};
 			};
 			class HP10
@@ -4396,7 +15193,7 @@ class CfgVehicles
 						name="ASRAAM";
 						value=1;
 					};
-					/*class hp10_12
+					class hp10_12
 					{
 						name="GBU-12";
 						value=2;
@@ -4440,7 +15237,7 @@ class CfgVehicles
 					{
 						name="Brimstone";
 						value=10;
-					};*/
+					};
 				};
 			};
 		};
@@ -4468,5 +15265,5 @@ class CfgVehicles
 				};
 			};
 		};
-	};
+	};*/
 };

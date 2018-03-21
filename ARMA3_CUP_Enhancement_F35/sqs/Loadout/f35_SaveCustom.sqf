@@ -15,22 +15,23 @@ _hardpoint7 = lbCurSel 2105;
 _hardpoint8 = lbCurSel 2106;
 _hardpoint9 = lbCurSel 2202;
 _hardpoint10 = lbCurSel 2107;
+_hardpoint11 = lbCurSel 21008;
 
 switch (_customslot) do
 {
 	case "custom_1":
 	{
-		profileNamespace setVariable ["f35_Custom_slot1",[_hardpoint1,_hardpoint2,_hardpoint3,_hardpoint4,_hardpoint5,_hardpoint6,_hardpoint7,_hardpoint8,_hardpoint9,_hardpoint10]];
+		profileNamespace setVariable ["f35_Custom_slot1",[_hardpoint1,_hardpoint2,_hardpoint3,_hardpoint4,_hardpoint5,_hardpoint6,_hardpoint7,_hardpoint8,_hardpoint9,_hardpoint10,_hardpoint11]];
 		titleText ["Custom Slot 1 is Saved", "PLAIN DOWN",0.5];
 	};
 	case "custom_2":
 	{
-		profileNamespace setVariable ["f35_Custom_slot2",[_hardpoint1,_hardpoint2,_hardpoint3,_hardpoint4,_hardpoint5,_hardpoint6,_hardpoint7,_hardpoint8,_hardpoint9,_hardpoint10]];
+		profileNamespace setVariable ["f35_Custom_slot2",[_hardpoint1,_hardpoint2,_hardpoint3,_hardpoint4,_hardpoint5,_hardpoint6,_hardpoint7,_hardpoint8,_hardpoint9,_hardpoint10,_hardpoint11]];
 		titleText ["Custom Slot 2 is Saved", "PLAIN DOWN",0.5];
 	};
 	case "custom_3":
 	{
-		profileNamespace setVariable ["f35_Custom_slot3",[_hardpoint1,_hardpoint2,_hardpoint3,_hardpoint4,_hardpoint5,_hardpoint6,_hardpoint7,_hardpoint8,_hardpoint9,_hardpoint10]];
+		profileNamespace setVariable ["f35_Custom_slot3",[_hardpoint1,_hardpoint2,_hardpoint3,_hardpoint4,_hardpoint5,_hardpoint6,_hardpoint7,_hardpoint8,_hardpoint9,_hardpoint10,_hardpoint11]];
 		titleText ["Custom Slot 3 is Saved", "PLAIN DOWN",0.5];
 	};
 };

@@ -32,804 +32,771 @@ _hardpoint7 = _array select 6;
 _hardpoint8 = _array select 7;
 _hardpoint9 = _array select 8;
 _hardpoint10 = _array select 9;
+_hardpoint11 = _array select 10;
 
 
 
 sleep 0.01;
 
 
+	//right outboard - 1
 	Switch (_hardpoint1) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons1", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // NO SELECTION
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};		
+			_plane setPylonLoadOut ["Pylons1", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // EMPTY
+		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
+			_plane setPylonLoadOut ["Pylons1", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			//_plane addmagazine "CUP_1Rnd_Sidewinder_A10_Pod_M"; // WINDERS
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_FIR_AIM120B_1rnd_M";
+			_plane setPylonLoadOut ["Pylons1", "JAS_FIR_AIM120_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // SNAKE
 		};
-		/*case 3:
-		{
-			_plane addmagazine "FIR_SniperXRPod_2_1rnd_M";
-			_plane setVariable ["TGT_POD","yes",true];
-		};*/
 	};
 	
-sleep 0.3;
-	
+	//left outboard - 2
 	Switch (_hardpoint2) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons11", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // NO SELECTION
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
-		};		
+			_plane setPylonLoadOut ["Pylons11", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // EMPTY
+		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
+			_plane setPylonLoadOut ["Pylons11", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			//_plane addmagazine "CUP_1Rnd_Sidewinder_A10_Pod_M"; // WINDERS
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_FIR_AIM120B_1rnd_M";
+			_plane setPylonLoadOut ["Pylons11", "JAS_FIR_AIM120_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // SNAKE
 		};
-		/*case 3:
-		{
-			_plane addmagazine "FIR_SniperXRPod_2_1rnd_M";
-			_plane setVariable ["TGT_POD","yes",true];
-		};*/
 	};
-
-sleep 0.3;
-
+	
+	//right wing midline/rocket slot - 3
 	Switch (_hardpoint3) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // NO SELECTION
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // EMPTY
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			//_plane addmagazine "CUP_1Rnd_Sidewinder_A10_Pod_M"; // WINDERS
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_FIR_AIM120B_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_AIM120_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // SNAKE
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_AGM65D_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_PylonRack_MAV_D_x1", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_AGM65G_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_AGM65G_P_1rnd_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_FIR_AGM65L_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_PylonRack_MAV_L_x1", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 6:
 		{
-			_plane addmagazine "FIR_AGM88_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_AGM88_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_FIR_GBU10_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_GBU12_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_FIR_GBU12_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_EGBU12_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_GBU38_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 10:
 		{
-			_plane addmagazine "JAS_FIR_GBU24A_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_gbu54_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 11:
 		{
-			_plane addmagazine "JAS_FIR_GBU24B_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_CBU87_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 12:
 		{
-			_plane addmagazine "JAS_FIR_GBU24A_BLU118_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_CBU89_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU31_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_CBU97_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_gbu32_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_CBU103_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_gbu38_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_CBU105_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 16:
 		{
-			_plane addmagazine "JAS_FIR_gbu54_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_AGM154A_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_CBU87_1rnd_M";
-		};
-		case 18:
-		{
-			_plane addmagazine "FIR_CBU89_1rnd_M";
-		};
-		case 19:
-		{
-			_plane addmagazine "FIR_CBU97_1rnd_M";
-		};
-		case 20:
-		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M";
-		};
-		case 21:
-		{
-			_plane addmagazine "FIR_CBU105_1rnd_M";
-		};
-		case 22:
-		{
-			_plane addmagazine "FIR_AGM154A_1rnd_M";
-		};
-		case 23:
-		{
-			_plane addmagazine "FIR_AGM154C_1rnd_M";
+			_plane setPylonLoadOut ["Pylons2", "JAS_FIR_AGM154C_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 	};
 	
-sleep 0.3;
-
+	//left wing midline/rocket slot - 4
 	Switch (_hardpoint4) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // NO SELECTION
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // EMPTY
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			//_plane addmagazine "CUP_1Rnd_Sidewinder_A10_Pod_M"; // WINDERS
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_FIR_AIM120B_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_AIM120_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // SNAKE
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_AGM65D_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_PylonRack_MAV_D_x1", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_AGM65G_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_AGM65G_P_1rnd_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_FIR_AGM65L_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_PylonRack_MAV_L_x1", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 6:
 		{
-			_plane addmagazine "FIR_AGM88_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_AGM88_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_FIR_GBU10_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_GBU12_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_FIR_GBU12_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_EGBU12_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_GBU38_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 10:
 		{
-			_plane addmagazine "JAS_FIR_GBU24A_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_gbu54_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 11:
 		{
-			_plane addmagazine "JAS_FIR_GBU24B_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_CBU87_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 12:
 		{
-			_plane addmagazine "JAS_FIR_GBU24A_BLU118_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_CBU89_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU31_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_CBU97_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_gbu32_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_CBU103_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_gbu38_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_CBU105_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 16:
 		{
-			_plane addmagazine "JAS_FIR_gbu54_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_AGM154A_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_CBU87_1rnd_M";
-		};
-		case 18:
-		{
-			_plane addmagazine "FIR_CBU89_1rnd_M";
-		};
-		case 19:
-		{
-			_plane addmagazine "FIR_CBU97_1rnd_M";
-		};
-		case 20:
-		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M";
-		};
-		case 21:
-		{
-			_plane addmagazine "FIR_CBU105_1rnd_M";
-		};
-		case 22:
-		{
-			_plane addmagazine "FIR_AGM154A_1rnd_M";
-		};
-		case 23:
-		{
-			_plane addmagazine "FIR_AGM154C_1rnd_M";
+			_plane setPylonLoadOut ["Pylons10", "JAS_FIR_AGM154C_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 	};
-
-sleep 0.3;
-
+	
+	//right inboard slot - 5
 	Switch (_hardpoint5) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // NO SELECTION
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // EMPTY
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			//_plane addmagazine "CUP_1Rnd_Sidewinder_A10_Pod_M"; // WINDERS
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_FIR_AIM120B_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_AIM120_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // SNAKE
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_AGM65D_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_PylonRack_MAV_D_x1", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_AGM65G_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_AGM65G_P_1rnd_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_FIR_AGM65L_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_PylonRack_MAV_L_x1", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 6:
 		{
-			_plane addmagazine "FIR_AGM88_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_AGM88_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_FIR_GBU10_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_GBU10_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_FIR_GBU12_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_GBU12_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_EGBU12_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 10:
 		{
-			_plane addmagazine "JAS_FIR_GBU24A_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_GBU24A_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 11:
 		{
-			_plane addmagazine "JAS_FIR_GBU24B_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_GBU24B_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 12:
 		{
-			_plane addmagazine "JAS_FIR_GBU24A_BLU118_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_GBU24A_BLU118_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU31_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_GBU31_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_gbu32_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_GBU32_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_gbu38_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_GBU38_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 16:
 		{
-			_plane addmagazine "JAS_FIR_gbu54_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_GBU39_P_4rnd_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_CBU87_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_GBU53_P_4rnd_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_CBU89_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_gbu54_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 19:
 		{
-			_plane addmagazine "FIR_CBU97_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_CBU87_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 20:
 		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_CBU89_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 21:
 		{
-			_plane addmagazine "FIR_CBU105_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_CBU97_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 22:
 		{
-			_plane addmagazine "FIR_F15E_Fueltank_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_CBU103_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 23:
 		{
-			_plane addmagazine "FIR_AGM154A_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_CBU105_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 24:
 		{
-			_plane addmagazine "FIR_AGM154C_1rnd_M";
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_AGM154A_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
+		};
+		case 25:
+		{
+			_plane setPylonLoadOut ["Pylons3", "JAS_FIR_AGM154C_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 	};
 	
-sleep 0.3;
-
+	//left inboard slot - 6
 	Switch (_hardpoint6) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // NO SELECTION
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // EMPTY
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_AIM9L_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			//_plane addmagazine "CUP_1Rnd_Sidewinder_A10_Pod_M"; // WINDERS
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_FIR_AIM120B_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_AIM120_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // SNAKE
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_AGM65D_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_PylonRack_MAV_D_x1", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_AGM65G_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_AGM65G_P_1rnd_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_FIR_AGM65L_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_PylonRack_MAV_L_x1", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 6:
 		{
-			_plane addmagazine "FIR_AGM88_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_AGM88_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_FIR_GBU10_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_GBU10_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_FIR_GBU12_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_GBU12_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_EGBU12_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 10:
 		{
-			_plane addmagazine "JAS_FIR_GBU24A_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_GBU24A_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 11:
 		{
-			_plane addmagazine "JAS_FIR_GBU24B_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_GBU24B_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 12:
 		{
-			_plane addmagazine "JAS_FIR_GBU24A_BLU118_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_GBU24A_BLU118_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 13:
 		{
-			_plane addmagazine "FIR_GBU31_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_GBU31_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 14:
 		{
-			_plane addmagazine "FIR_gbu32_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_GBU32_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 15:
 		{
-			_plane addmagazine "FIR_gbu38_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_GBU38_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 16:
 		{
-			_plane addmagazine "JAS_FIR_gbu54_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_GBU39_P_4rnd_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 17:
 		{
-			_plane addmagazine "FIR_CBU87_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_GBU53_P_4rnd_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 18:
 		{
-			_plane addmagazine "FIR_CBU89_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_gbu54_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 19:
 		{
-			_plane addmagazine "FIR_CBU97_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_CBU87_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 20:
 		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_CBU89_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 21:
 		{
-			_plane addmagazine "FIR_CBU105_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_CBU97_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 22:
 		{
-			_plane addmagazine "FIR_F15E_Fueltank_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_CBU103_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 23:
 		{
-			_plane addmagazine "FIR_AGM154A_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_CBU105_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 24:
 		{
-			_plane addmagazine "FIR_AGM154C_1rnd_M";
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_AGM154A_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
+		};
+		case 25:
+		{
+			_plane setPylonLoadOut ["Pylons9", "JAS_FIR_AGM154C_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 	};
 	
+	//right outer belly - 7
 	Switch (_hardpoint7) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons4", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // NO SELECTION
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons4", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // EMPTY
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_AIM120_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_AIM120_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // SNAKE
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_GBU12_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_EGBU12_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_gbu38_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_GBU38_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_FIR_gbu54_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_GBU39_P_4rnd_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_GBU53_P_4rnd_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_FIR_mk82_gp_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_gbu54_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_FIR_CBU87_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_CBU87_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_FIR_CBU89_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_CBU89_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 10:
 		{
-			_plane addmagazine "JAS_FIR_CBU97_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_CBU97_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 11:
 		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_CBU103_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 12:
 		{
-			_plane addmagazine "JAS_FIR_CBU105_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_CBU105_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 13:
 		{
-			_plane addmagazine "JAS_FIR_gbu39_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_AGM154A_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 14:
 		{
-			_plane addmagazine "JAS_FIR_gbu53_1rnd_M_int";
-		};
-		case 15:
-		{
-			_plane addmagazine "JAS_FIR_AGM154A_1rnd_M_int";
-		};
-		case 16:
-		{
-			_plane addmagazine "JAS_FIR_AGM154C_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons4", "JAS_FIR_AGM154C_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 	};
 	
-sleep 0.3;
-	
+	//left outer belly - 8
 	Switch (_hardpoint8) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons8", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // NO SELECTION
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons8", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // EMPTY
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_AIM120_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_AIM120_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // SNAKE
 		};
 		case 2:
 		{
-			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_GBU12_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 3:
 		{
-			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_EGBU12_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 4:
 		{
-			_plane addmagazine "JAS_FIR_gbu38_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_GBU38_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 5:
 		{
-			_plane addmagazine "JAS_FIR_gbu54_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_GBU39_P_4rnd_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 6:
 		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_GBU53_P_4rnd_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 7:
 		{
-			_plane addmagazine "JAS_FIR_mk82_gp_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_gbu54_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 8:
 		{
-			_plane addmagazine "JAS_FIR_CBU87_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_CBU87_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 9:
 		{
-			_plane addmagazine "JAS_FIR_CBU89_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_CBU89_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 10:
 		{
-			_plane addmagazine "JAS_FIR_CBU97_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_CBU97_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 11:
 		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_CBU103_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 12:
 		{
-			_plane addmagazine "JAS_FIR_CBU105_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_CBU105_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 13:
 		{
-			_plane addmagazine "JAS_FIR_gbu39_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_AGM154A_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 		case 14:
 		{
-			_plane addmagazine "JAS_FIR_gbu53_1rnd_M_int";
-		};
-		case 15:
-		{
-			_plane addmagazine "JAS_FIR_AGM154A_1rnd_M_int";
-		};
-		case 16:
-		{
-			_plane addmagazine "JAS_FIR_AGM154C_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons8", "JAS_FIR_AGM154C_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_Hydra_SMKR_Pod_1rnd_M"; // HYDRA 7 SMKR
 		};
 	};
 	
-sleep 0.3;
-
+	//right inner belly - 9
 	Switch (_hardpoint9) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons5", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // NO SELECTION
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons5", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // EMPTY
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_AIM120_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons5", "JAS_FIR_AIM120_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // SNAKE
 		};
-		/*case 2:
-		{
-			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
-		};
-		case 3:
-		{
-			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M_int";
-		};
-		case 4:
-		{
-			_plane addmagazine "JAS_FIR_gbu38_1rnd_M_int";
-		};
-		case 5:
-		{
-			_plane addmagazine "JAS_FIR_gbu54_1rnd_M_int";
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M_int";
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_FIR_mk82_gp_1rnd_M_int";
-		};
-		case 8:
-		{
-			_plane addmagazine "JAS_FIR_CBU87_1rnd_M_int";
-		};
-		case 9:
-		{
-			_plane addmagazine "JAS_FIR_CBU89_1rnd_M_int";
-		};
-		case 10:
-		{
-			_plane addmagazine "JAS_FIR_CBU97_1rnd_M_int";
-		};
-		case 11:
-		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M_int";
-		};
-		case 12:
-		{
-			_plane addmagazine "JAS_FIR_CBU105_1rnd_M_int";
-		};
-		case 13:
-		{
-			_plane addmagazine "JAS_FIR_gbu39_1rnd_M_int";
-		};
-		case 14:
-		{
-			_plane addmagazine "JAS_FIR_gbu53_1rnd_M_int";
-		};
-		case 15:
-		{
-			_plane addmagazine "JAS_FIR_AGM154A_1rnd_M_int";
-		};
-		case 16:
-		{
-			_plane addmagazine "JAS_FIR_AGM154C_1rnd_M_int";
-		};*/
 	};
 	
-sleep 0.3;
-
+	//left inner belly - 10
 	Switch (_hardpoint10) Do
 	{
 		case -1:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons7", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // NO SELECTION
 		};
 		case 0:
 		{
-			_plane addmagazine "FIR_Empty_1rnd_M";
+			_plane setPylonLoadOut ["Pylons7", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // EMPTY
 		};
 		case 1:
 		{
-			_plane addmagazine "JAS_FIR_AIM120_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons7", "JAS_FIR_AIM120_PYLON_M", true, []];
+			//_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M"; // SNAKE
 		};
-		/*case 2:
+	};
+	
+	//centre belly - 11
+	Switch (_hardpoint11) Do
+	{
+		case -1:
 		{
-			_plane addmagazine "JAS_FIR_GBU12_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons6", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // NO SELECTION
 		};
-		case 3:
+		case 0:
 		{
-			_plane addmagazine "JAS_FIR_EGBU12_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons6", "", true, []];
+			//_plane addmagazine "FIR_Empty_1rnd_M"; // EMPTY
 		};
-		case 4:
+		case 1:
 		{
-			_plane addmagazine "JAS_FIR_gbu38_1rnd_M_int";
+			_plane setPylonLoadOut ["Pylons6", "CUP_PylonWeapon_220Rnd_TE1_Red_Tracer_GAU22_M", true, []];
+			//_plane addmagazine "CUP_1Rnd_Sidewinder_A10_Pod_M"; // WINDERS
 		};
-		case 5:
-		{
-			_plane addmagazine "JAS_FIR_gbu54_1rnd_M_int";
-		};
-		case 6:
-		{
-			_plane addmagazine "JAS_FIR_mk82_snakeye_1rnd_M_int";
-		};
-		case 7:
-		{
-			_plane addmagazine "JAS_FIR_mk82_gp_1rnd_M_int";
-		};
-		case 8:
-		{
-			_plane addmagazine "JAS_FIR_CBU87_1rnd_M_int";
-		};
-		case 9:
-		{
-			_plane addmagazine "JAS_FIR_CBU89_1rnd_M_int";
-		};
-		case 10:
-		{
-			_plane addmagazine "JAS_FIR_CBU97_1rnd_M_int";
-		};
-		case 11:
-		{
-			_plane addmagazine "JAS_FIR_CBU103_1rnd_M_int";
-		};
-		case 12:
-		{
-			_plane addmagazine "JAS_FIR_CBU105_1rnd_M_int";
-		};
-		case 13:
-		{
-			_plane addmagazine "JAS_FIR_gbu39_1rnd_M_int";
-		};
-		case 14:
-		{
-			_plane addmagazine "JAS_FIR_gbu53_1rnd_M_int";
-		};
-		case 15:
-		{
-			_plane addmagazine "JAS_FIR_AGM154A_1rnd_M_int";
-		};
-		case 16:
-		{
-			_plane addmagazine "JAS_FIR_AGM154C_1rnd_M_int";
-		};*/
 	};
 	
 sleep 0.01;

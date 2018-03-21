@@ -23,7 +23,7 @@ _handle= CreateDialog "f35_GUI";
 	[  
 		"Empty",
 		"AIM-9X",
-		"AIM-120"
+		"AIM-120D"
 		//"Sniper XR POD"
     ];
 	
@@ -32,7 +32,7 @@ _handle= CreateDialog "f35_GUI";
 	[  
 		"Empty",
 		"AIM-9X",
-		"AIM-120"
+		"AIM-120D"
 		//"Sniper XR POD"
     ];
 	
@@ -41,21 +41,15 @@ _handle= CreateDialog "f35_GUI";
 	[  
 		"Empty",
 		"AIM-9X",
-		"AIM-120",
+		"AIM-120D",
 		"AGM-65D",
 		"AGM-65G",
 		"AGM-65L",
 		"AGM-88 HARM",
-		"GBU-10",
 		"GBU-12",
 		"EGBU-12 II",
-		"GBU-24A",
-		"GBU-24B",
-		"GBU-24/118",
-		"GBU-31",
-		"GBU-32",
-		"GBU-38",
-		"GBU-54",
+		"GBU-38 JDAM",
+		"GBU-54 LJDAM",
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
@@ -69,21 +63,15 @@ _handle= CreateDialog "f35_GUI";
 	[  
 		"Empty",
 		"AIM-9X",
-		"AIM-120",
+		"AIM-120D",
 		"AGM-65D",
 		"AGM-65G",
 		"AGM-65L",
 		"AGM-88 HARM",
-		"GBU-10",
 		"GBU-12",
 		"EGBU-12 II",
-		"GBU-24A",
-		"GBU-24B",
-		"GBU-24/118",
-		"GBU-31",
-		"GBU-32",
-		"GBU-38",
-		"GBU-54",
+		"GBU-38 JDAM",
+		"GBU-54 LJDAM",
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
@@ -97,7 +85,7 @@ _handle= CreateDialog "f35_GUI";
 	[  
 		"Empty",
 		"AIM-9X",
-		"AIM-120",
+		"AIM-120D",
 		"AGM-65D",
 		"AGM-65G",
 		"AGM-65L",
@@ -108,16 +96,17 @@ _handle= CreateDialog "f35_GUI";
 		"GBU-24A",
 		"GBU-24B",
 		"GBU-24/118",
-		"GBU-31",
-		"GBU-32",
-		"GBU-38",
-		"GBU-54",
+		"GBU-31 JDAM",
+		"GBU-32 JDAM",
+		"GBU-38 JDAM",
+		"GBU-39 SDB I",
+		"GBU-53 SDB II",
+		"GBU-54 LJDAM",
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"CBU-103 CEM WCMD",
 		"CBU-105 SFW WCMD",
-		"Fuel Tank",
 		"AGM-154A JSOW (CEM)",
 		"AGM-154C JSOW (GPB)"
     ];
@@ -126,7 +115,7 @@ _handle= CreateDialog "f35_GUI";
 	[  
 		"Empty",
 		"AIM-9X",
-		"AIM-120",
+		"AIM-120D",
 		"AGM-65D",
 		"AGM-65G",
 		"AGM-65L",
@@ -137,16 +126,17 @@ _handle= CreateDialog "f35_GUI";
 		"GBU-24A",
 		"GBU-24B",
 		"GBU-24/118",
-		"GBU-31",
-		"GBU-32",
-		"GBU-38",
-		"GBU-54",
+		"GBU-31 JDAM",
+		"GBU-32 JDAM",
+		"GBU-38 JDAM",
+		"GBU-39 SDB I",
+		"GBU-53 SDB II",
+		"GBU-54 LJDAM",
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"CBU-103 CEM WCMD",
 		"CBU-105 SFW WCMD",
-		"Fuel Tank",
 		"AGM-154A JSOW (CEM)",
 		"AGM-154C JSOW (GPB)"
     ];
@@ -154,20 +144,18 @@ _handle= CreateDialog "f35_GUI";
 	{lbAdd[2105,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-120",
+		"AIM-120D",
 		"GBU-12",
 		"EGBU-12 II",
-		"GBU-38",
-		"GBU-54",
-		"Mk82 Snakeye",
-		"Mk82 GPB",
+		"GBU-38 JDAM",
+		"GBU-39 SDB I",
+		"GBU-53 SDB II",
+		"GBU-54 LJDAM",
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"CBU-103 CEM WCMD",
 		"CBU-105 SFW WCMD",
-		"GBU-39 SDB",
-		"GBU-53 SDB",
 		"AGM-154A JSOW (CEM)",
 		"AGM-154C JSOW (GPB)"
     ];
@@ -175,20 +163,18 @@ _handle= CreateDialog "f35_GUI";
 	{lbAdd[2106,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-120",
+		"AIM-120D",
 		"GBU-12",
 		"EGBU-12 II",
-		"GBU-38",
-		"GBU-54",
-		"Mk82 Snakeye",
-		"Mk82 GPB",
+		"GBU-38 JDAM",
+		"GBU-39 SDB I",
+		"GBU-53 SDB II",
+		"GBU-54 LJDAM",
 		"CBU-87 CEM",
 		"CBU-89 GATOR",
 		"CBU-97 SFW",
 		"CBU-103 CEM WCMD",
 		"CBU-105 SFW WCMD",
-		"GBU-39 SDB",
-		"GBU-53 SDB",
 		"AGM-154A JSOW (CEM)",
 		"AGM-154C JSOW (GPB)"
     ];
@@ -197,7 +183,7 @@ _handle= CreateDialog "f35_GUI";
 	{lbAdd[2202,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-120"
+		"AIM-120D"
 		/*"GBU-12",
 		"EGBU-12 II",
 		"GBU-38",
@@ -219,7 +205,7 @@ _handle= CreateDialog "f35_GUI";
 	{lbAdd[2107,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-120"
+		"AIM-120D"
 		/*"GBU-12",
 		"EGBU-12 II",
 		"GBU-38",
@@ -236,4 +222,11 @@ _handle= CreateDialog "f35_GUI";
 		"AGM-154A JSOW (CEM)",
 		"AGM-154C JSOW (GPB)"*/
     ];
-
+	
+	//Add Hardpoint 11 - belly centre
+	{lbAdd[21008,_x]} forEach 
+	[  
+		"Empty",
+		"GAU-22 POD"
+    ];
+	

@@ -4251,7 +4251,7 @@ class CfgVehicles
 		simulation="Helicopterrtd";
 		class RotorLibHelicopterProperties
 		{
-			RTDconfig = "ARMA3_CUP_Enhancement_AW159\rotorLib\RTD_Lynx.xml";
+			RTDconfig = "ARMA3_CUP_Enhancement_AW159\rotorLib\rtd_lynx.xml";
 			autoHoverCorrection[] = { 6.5, 0, 0 };
 			defaultCollective = 0.60500002;
 			retreatBladeStallWarningSpeed = 92.583;
@@ -4269,6 +4269,10 @@ class CfgVehicles
 		slingLoadMaxCargoMass=1500;
 		slingLoadOperator=1;
 		liftForceCoef=2.5;
+		bodyFrictionCoef = 0.7;
+		cyclicAsideForceCoef = 1.0;
+		cyclicForwardForceCoef = 1.0;
+		backRotorForceCoef = 1.0;
 		class Exhausts
 		{
 			class Exhaust1
@@ -4286,7 +4290,7 @@ class CfgVehicles
 		};
 		memoryPointDriverOptics="slingCamera";
 		mapSize=20;
-		mainBladeRadius=0;
+		mainBladeRadius=7.0;
 		tailBladeRadius=0;
 		crew="B_Helipilot_F";
 		crewVulnerable=1;
@@ -4339,6 +4343,7 @@ class CfgVehicles
 		radarType=4;
 		enableManualFire=0;
 		maxSpeed=293;
+		maxFordingDepth = 0.55;
 		accuracy=1.5;
 		cost=10000000;
 		armor=60;
