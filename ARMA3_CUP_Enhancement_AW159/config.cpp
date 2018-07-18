@@ -4290,8 +4290,8 @@ class CfgVehicles
 		};
 		memoryPointDriverOptics="slingCamera";
 		mapSize=20;
-		mainBladeRadius=7.0;
-		tailBladeRadius=0;
+		mainBladeRadius=6.1999998;
+		tailBladeRadius=1.2;
 		crew="B_Helipilot_F";
 		crewVulnerable=1;
 		typicalCargo[]=
@@ -4350,7 +4350,7 @@ class CfgVehicles
 		damageResistance=0.0055499999;
 		vehicleClass="Air";
 		laserScanner=1;
-		MainRotorSpeed=0.5;
+		MainRotorSpeed=-0.5;
 		backRotorSpeed=3;
 		altFullForce=4170;
 		altNoForce=5370;

@@ -116,13 +116,13 @@ _handle= CreateDialog "JAS_WASP_GUI";
 	{lbAdd[2103,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-9X"
+		"AIM-120D"
     ];
 //Add Hardpoint 6 - left mid
 	{lbAdd[2104,_x]} forEach 
 	[  
 		"Empty",
-		"AIM-9X"
+		"AIM-120D"
     ];
 //Add Hardpoint 7 - right inboard
 	{lbAdd[2105,_x]} forEach 

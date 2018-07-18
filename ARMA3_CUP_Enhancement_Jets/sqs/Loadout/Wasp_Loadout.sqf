@@ -439,7 +439,7 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane setPylonLoadOut ["pylonBayCenter1", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylonBayCenter1", "JAS_FIR_AIM120_PYLON_M_int", true, []];
 		};
 	};
 	
@@ -457,7 +457,7 @@ sleep 0.3;
 		};
 		case 1:
 		{
-			_plane setPylonLoadOut ["pylonBayCenter2", "JAS_FIR_AIM9L_PYLON_M", true, []];
+			_plane setPylonLoadOut ["pylonBayCenter2", "JAS_FIR_AIM120_PYLON_M_int", true, []];
 		};
 	};
 	

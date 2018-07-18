@@ -27,12 +27,12 @@ class CfgPatches
 			"JAS_O_Lifeboat",
 			"JAS_SDV_01_F",
 			"JAS_SDV_02_F",
-			"JAS_SDV_03_F",
-			"JAS_FIR_A164J",
-			"JAS_FIR_A164J_AAC",
-			"JAS_FIR_A143J",
-			"JAS_FIR_A143J_AAC",
-			"JAS_O_Plane_CAS_02_F"
+			"JAS_SDV_03_F"
+			//"JAS_FIR_A164J",
+			//"JAS_FIR_A164J_AAC",
+			//"JAS_FIR_A143J",
+			//"JAS_FIR_A143J_AAC",
+			//"JAS_O_Plane_CAS_02_F"
 
 		};
 		weapons[]=
@@ -1199,7 +1199,23 @@ class CfgVehicles
 	class SDV_01_base_F;
 	class B_T_Boat_Transport_01_F;
 	class O_Plane_CAS_02_F;
-	class I_Plane_Fighter_03_AA_F; 
+	class I_Plane_Fighter_03_AA_F;
+	class C_IDAP_UAV_06_antimine_F;
+	class JAS_NATO_UAV_06_antimine_F: C_IDAP_UAV_06_antimine_F
+	{
+		side=1;
+		faction="BLU_F";
+	};
+	class JAS_CSAT_UAV_06_antimine_F: C_IDAP_UAV_06_antimine_F
+	{
+		side=0;
+		faction="OPF_F";
+	}; 
+	class JAS_AAF_UAV_06_antimine_F: C_IDAP_UAV_06_antimine_F
+	{
+		side=2;
+		faction="IND_F";
+	};
 	/*class JAS_FIR_A143R: I_Plane_Fighter_03_AA_F
 	{
 		scope = 2;
