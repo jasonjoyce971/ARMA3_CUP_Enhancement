@@ -24293,6 +24293,95 @@ class CfgVehicles
 		};
 		class Components: Components
 		{
+			class SensorsManagerComponent
+			{
+				class Components
+				{
+					class IRSensorComponent: SensorTemplateIR
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=5000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=5000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=360;
+						angleRangeVertical=90;
+						maxTrackableSpeed=400;
+					};
+					class VisualSensorComponent: SensorTemplateVisual
+					{
+						class AirTarget
+						{
+							minRange=500;
+							maxRange=4000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=1;
+						};
+						class GroundTarget
+						{
+							minRange=500;
+							maxRange=3000;
+							objectDistanceLimitCoef=1;
+							viewDistanceLimitCoef=1;
+						};
+						angleRangeHorizontal=26;
+						angleRangeVertical=20;
+						maxTrackableSpeed=100;
+						aimDown=1;
+						animDirection="mainGun";
+					};
+					class PassiveRadarSensorComponent: SensorTemplatePassiveRadar
+					{
+						class GroundTarget
+						{
+							minRange=8000;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						typeRecognitionDistance=8000;
+						angleRangeHorizontal=45;
+						angleRangeVertical=45;
+						groundNoiseDistanceCoef=-1;
+					};
+					class ActiveRadarSensorComponent: SensorTemplateActiveRadar
+					{
+						class AirTarget
+						{
+							minRange=15000;
+							maxRange=15000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						class GroundTarget
+						{
+							minRange=8000;
+							maxRange=8000;
+							objectDistanceLimitCoef=-1;
+							viewDistanceLimitCoef=-1;
+						};
+						typeRecognitionDistance=8000;
+						angleRangeHorizontal=45;
+						angleRangeVertical=45;
+						groundNoiseDistanceCoef=0.2;
+					};
+					class LaserSensorComponent: SensorTemplateLaser
+					{
+					};
+					class NVSensorComponent: SensorTemplateNV
+					{
+					};
+				};
+			};
 			class TransportPylonsComponent
 			{
 				UIPicture = "\A3\Air_F_Jets\Plane_Fighter_01\Data\UI\Fighter_01_3DEN_CA.paa";
@@ -24364,11 +24453,26 @@ class CfgVehicles
 						priority = 9;
 						UIposition[] = {0.1,0.35};
 					};
+					class pylonBayRight1 : pylon1 // Sidebay
+					{
+						hardpoints[] = {"JAS_NATO_AAM_INTBAY"};
+						priority = 10;
+						attachment = "";
+						maxweight = 1200;
+						UIposition[] = {0.16,0.25};
+						bay = 2;
+					};
+					class pylonBayLeft1 : pylonBayRight1 // Sidebay
+					{
+						UIposition[] = {0.5,0.25};
+						mirroredMissilePos=5;
+						bay=1;
+					};
 					// Internal bays
 					class pylonBayCenter1: pylon4
 					{
 						attachment = "";
-						bay = 1;
+						bay = 3;
 						hardpoints[] = {"JAS_NATO_AAM_INT"};
 						maxweight = 1200;
 						priority = 6;
@@ -24377,7 +24481,7 @@ class CfgVehicles
 					class pylonBayCenter2: pylon3
 					{
 						attachment = "";
-						bay = 2;
+						bay = 3;
 						hardpoints[] = {"JAS_NATO_AAM_INT"};
 						maxweight = 1200;
 						priority = 5;
@@ -24418,24 +24522,6 @@ class CfgVehicles
 						maxweight = 1200;
 						priority = 1;
 						UIposition[] = {0.33,0.55};
-					};
-					class pylonBayRight1 : pylon1
-					{
-						attachment = "";
-						bay = 3; // Original == 2
-						hardpoints[] = {"JAS_NATO_AAM_INT"};
-						maxweight = 1200;
-						priority = 8;
-						UIposition[] = {0.16,0.25};
-					};
-					class pylonBayLeft1 : pylonBayRight1
-					{
-						attachment = "";
-						bay = 3;
-						hardpoints[] = {"JAS_NATO_AAM_INT"};
-						maxweight = 1200;
-						priority = 7;
-						UIposition[] = {0.5,0.25};
 					};
 				};
 				class presets
@@ -24524,23 +24610,23 @@ class CfgVehicles
 				};
 				class Bays
 				{
-					class BayRight1
-					{
-						autoCloseWhenEmptyDelay = 2;
-						bayOpenTime = 0.5;
-						openBayWhenWeaponSelected = 1; // Original == 0 suspect 1 means bay will be open prior to firing
-					};
 					class BayLeft1
 					{
-						autoCloseWhenEmptyDelay = 2;
-						bayOpenTime = 0.5;
-						openBayWhenWeaponSelected = 1; // Original == 0 suspect 1 means bay will be open prior to firing
+						bayOpenTime=0.5;
+						openBayWhenWeaponSelected=0;
+						autoCloseWhenEmptyDelay=2;
+					};
+					class BayRight1
+					{
+						bayOpenTime=0.5;
+						openBayWhenWeaponSelected=0;
+						autoCloseWhenEmptyDelay=2;
 					};
 					class BayCenter1
 					{
-						autoCloseWhenEmptyDelay = 4.5;
-						bayOpenTime = 0.5;
-						openBayWhenWeaponSelected = 1; // Original == 0 suspect 1 means bay will be open prior to firing
+						bayOpenTime=0.5;
+						openBayWhenWeaponSelected=0;
+						autoCloseWhenEmptyDelay=3;
 					};
 				};
 			};
