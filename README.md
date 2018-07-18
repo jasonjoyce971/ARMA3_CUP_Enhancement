@@ -1,5 +1,18 @@
 # ARMA3_CUP_Enhancement
 
+**V4.1.6 General Maintenance**
+
+Changelog:
+
+Jets:
+
+* Tweaked F/A-181 Systems
+* F/A-181 MFD now correctly displays weapon data
+
+Weapons:
+
+* Various tweaks to enable F/A-181 overhaul
+
 **V4.1.5 General Maintenance**
 
 Changelog:
