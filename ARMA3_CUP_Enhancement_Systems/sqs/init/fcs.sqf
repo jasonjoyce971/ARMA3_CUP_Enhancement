@@ -1,5 +1,5 @@
 /*New Fire Control System by Firewill */
-private ["_ammoname","_weapon","_plane","_array","_missobj","_Lowdrag","_gps_bomb","_gps_mssl","_crater","_Cluster","_Gator","_SFW","_ARPB","_HARM","_Smoke","_Smoke_C","_FLR"];
+private ["_ammoname","_weapon","_plane","_array","_missobj","_Lowdrag","_gps_bomb","_gps_mssl","_crater","_Cluster","_Gator","_SFW","_ARPB","_FAEB","_HARM","_Smoke","_Smoke_C","_FLR","_tv_bomb","_tv_mssl","_APKWS"];
 
 _array = _this select 0;
 _weapon = _array select 1;
@@ -7,9 +7,11 @@ _ammoname = _array select 4;
 _magname = _array select 5;
 _plane = _array select 0;
 
-//if (!local _plane) exitwith{};
+/*if (!local _plane) exitwith{};*/
 
 if (_weapon == "FIR_CMLauncher") exitWith {};
+
+
 
 _missobj = nearestobject[_plane, _ammoname];
 
@@ -54,6 +56,7 @@ _Smoke_C = getText (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_SMOKE_RKT_C
 _APKWS = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_APKWS");
 _WP = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_WP");
 _TARPS = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_TARPS");
+_SARH = getnumber (Configfile >> "CfgAmmo" >> _ammoname >> "FIR_AWS_SARH");
 
 //temporary disabled due to shake in Dedi //
 // if (_weapon == "FIR_M61A2" or _weapon == "FIR_GAU8") then
@@ -68,12 +71,12 @@ if (_Lowdrag == 1) then
 
 if (_gps_bomb == 1) then
 {
-	_jdam_guide = [_missobj,_plane,_ammoname] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\Guide_JDAM.sqf";
+	_jdam_guide = [_missobj,_plane,_ammoname] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\GUIDE\Guide_JDAM.sqf";
 };
 
 if (_gps_mssl == 1) then
 {
-	_gps_guide = [_missobj,_plane,_ammoname] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\Guide_GPS_MSSL.sqf";
+	_gps_guide = [_missobj,_plane,_ammoname] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\GUIDE\Guide_GPS_MSSL.sqf";
 };
 
 // if (_cg == 1) then
@@ -83,17 +86,17 @@ if (_gps_mssl == 1) then
 
 if (_tv_bomb == 1) then
 {
-	_tv_guide = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\Guide_TV_Bomb.sqf";
+	_tv_guide = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\GUIDE\Guide_TV_Bomb.sqf";
 };
 
 if (_tv_mssl == 1) then
 {
-	_tv_guide = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\Guide_TV_MSSL.sqf";
+	_tv_guide = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\GUIDE\Guide_TV_MSSL.sqf";
 };
 
 if (_agm65b == 1) then
 {
-	_tv_guide = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\Guide_AGM65B.sqf";
+	_tv_guide = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\GUIDE\Guide_AGM65B.sqf";
 };
 
 if (_TARPS == 1) then
@@ -104,7 +107,7 @@ if (_TARPS == 1) then
 
 if (_APKWS == 1) then
 {
-	_apkws_guide = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\Guide_APKWS.sqf";
+	_apkws_guide = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\GUIDE\Guide_APKWS.sqf";
 };
 
 if (_Cluster == 1) then
@@ -158,6 +161,14 @@ if (_WP == 1) then
 };
 
 
+if (_SARH == 1) then
+{
+	_SARH = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\TGTSystem\GUIDE\Guide_SARH.sqf";
+};
+
+
+
+
 if (_HARM == 1) then
 {
 		_harm_n = [_missobj,_plane] execVM "\FIR_AirWeaponSystem_US\script\SEAD\harm_n.sqf";
@@ -167,26 +178,6 @@ if (_FLR == 1) then
 {
 		_flr = [_missobj] execVM "\FIR_AirWeaponSystem_US\script\SUU25.sqf";
 };
-
-/*if (_Smoke_C == "WHITE") then
-{
-	_smoke_rkt = [_missobj,"white"] execVM "\ARMA3_CUP_Enhancement_Weapons\script\Smoke_RKT.sqf";
-};
-
-if (_Smoke_C == "RED") then
-{
-	_smoke_rkt = [_missobj,"red"] execVM "\ARMA3_CUP_Enhancement_Weapons\script\Smoke_RKT.sqf";
-};
-
-if (_Smoke_C == "ORANGE") then
-{
-	_smoke_rkt = [_missobj,"orange"] execVM "\ARMA3_CUP_Enhancement_Weapons\script\Smoke_RKT.sqf";
-};
-
-if (_Smoke_C == "PURPLE") then
-{
-			_smoke_rkt = [_missobj,"purple"] execVM "\ARMA3_CUP_Enhancement_Weapons\script\Smoke_RKT.sqf";
-};*/
 
 switch (_crater) do
 {  

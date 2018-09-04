@@ -54,6 +54,7 @@ _plane removeweapon "JAS_BIS_weapon_AGM_KH25MTP";
 _plane removeweapon "JAS_BIS_weapon_AGM_KH25MT";
 _plane removeweapon "JAS_BIS_weapon_AGM_KH25MS";
 _plane removeweapon "JAS_BIS_weapon_AGM_KH25ML";
+_plane removeweapon "JAS_BombCluster_02_F";
 
 _plane addmagazine "FIR_240rnd_CMFlare_Chaff_Magazine";
 _plane addweapon "FIR_CMLauncher";
@@ -251,7 +252,7 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane setPylonLoadOut ["pylons7", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
+			_plane setPylonLoadOut ["pylons4", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
 		};
 	};
 	
@@ -465,7 +466,7 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane setPylonLoadOut ["pylons7", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
+			_plane setPylonLoadOut ["pylons5", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
 		};
 	};
 	
@@ -539,7 +540,7 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane setPylonLoadOut ["pylons7", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
+			_plane setPylonLoadOut ["pylons6", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
 		};
 	};
 	
@@ -613,7 +614,7 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane setPylonLoadOut ["pylons7", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
+			_plane setPylonLoadOut ["pylons3", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
 		};
 	};
 
@@ -687,7 +688,7 @@ sleep 0.3;
 		};
 		case 15:
 		{
-			_plane setPylonLoadOut ["pylons7", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
+			_plane setPylonLoadOut ["pylons8", "JAS_PylonMissile_1Rnd_BombCluster_02_F", true, []];
 		};
 	};
 	
