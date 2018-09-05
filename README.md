@@ -1,5 +1,17 @@
 # ARMA3_CUP_Enhancement
 
+**V4.1.7 General Maintenance**
+
+Changelog:
+
+Weapons:
+
+* Added Shkira MFD data to applicable weapons
+
+Systems:
+
+* Repaired fcs.sqf to cover changes to AWS
+
 **V4.1.6 General Maintenance**
 
 Changelog:
